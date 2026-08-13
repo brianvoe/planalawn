@@ -1,16 +1,3 @@
-<template>
-  <label class="lawn-size">
-    <span>Lawn area (sq ft)</span>
-    <input
-      type="number"
-      min="100"
-      step="100"
-      :value="lawnSqFt"
-      @change="onChange"
-    />
-  </label>
-</template>
-
 <script lang="ts">
 export default {
   name: 'LawnSize',
@@ -58,3 +45,16 @@ export default {
   }
 }
 </style>
+
+<template>
+  <label class="lawn-size">
+    <span>Lawn area (sq ft)</span>
+    <input
+      type="number"
+      min="100"
+      step="100"
+      :value="lawnSqFt"
+      @change="onChange"
+    />
+  </label>
+</template>

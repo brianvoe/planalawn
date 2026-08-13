@@ -1,33 +1,3 @@
-<template>
-  <div class="tasks-page">
-    <div class="container">
-      <header class="page-header">
-        <p class="eyebrow">
-          <font-awesome-icon icon="fa-solid fa-list-check" />
-          Task library
-        </p>
-        <h1>Every job, with its numbers.</h1>
-        <p class="lede">
-          Steps, timing, and how much to put down — worked out for your lawn size.
-        </p>
-      </header>
-
-      <div class="task-grid">
-        <router-link
-          v-for="task in tasks"
-          :key="task.id"
-          class="task-card"
-          :to="`/tasks/${task.id}`"
-        >
-          <span class="cat">{{ task.category }}</span>
-          <h2>{{ task.name }}</h2>
-          <p>{{ task.summary }}</p>
-        </router-link>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import { tasks } from '../data/tasks'
 
@@ -106,3 +76,33 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="tasks-page">
+    <div class="container">
+      <header class="page-header">
+        <p class="eyebrow">
+          <font-awesome-icon icon="fa-solid fa-list-check" />
+          Task library
+        </p>
+        <h1>Every job, with its numbers.</h1>
+        <p class="lede">
+          Steps, timing, and how much to put down — worked out for your lawn size.
+        </p>
+      </header>
+
+      <div class="task-grid">
+        <router-link
+          v-for="task in tasks"
+          :key="task.id"
+          class="task-card"
+          :to="`/tasks/${task.id}`"
+        >
+          <span class="cat">{{ task.category }}</span>
+          <h2>{{ task.name }}</h2>
+          <p>{{ task.summary }}</p>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</template>

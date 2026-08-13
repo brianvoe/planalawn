@@ -1,140 +1,3 @@
-<template>
-  <div class="task-detail-page">
-    <div class="container" v-if="task">
-      <p class="back"><router-link to="/tasks">← All tasks</router-link></p>
-      <header class="page-header">
-        <span class="cat">{{ task.category }}</span>
-        <h1>{{ task.name }}</h1>
-        <p class="lede">{{ task.summary }}</p>
-      </header>
-
-      <div class="timing-box" v-if="evaluation">
-        <h2>Timing</h2>
-        <p>{{ evaluation.reason }}</p>
-        <p class="muted">{{ evaluation.rule.note }}</p>
-        <p v-if="evaluation.soil" class="soil">
-          Soil gate: <strong>{{ evaluation.soil.label }}</strong> — {{ evaluation.soil.detail }}
-        </p>
-        <Conditions
-          v-if="needsSoil"
-          :conditions="conditions"
-          :error="weatherError"
-          :loading="weatherLoading"
-          @refresh="$emit('refresh-weather')"
-        />
-      </div>
-
-      <section class="block">
-        <h2>Why</h2>
-        <p>{{ task.why }}</p>
-      </section>
-
-      <section class="block">
-        <h2>Steps</h2>
-        <ul class="checklist">
-          <li v-for="(step, i) in task.steps" :key="i">
-            <label>
-              <input
-                type="checkbox"
-                :checked="!!log.stepsChecked[i]"
-                @change="toggleStep(i)"
-              />
-              <span>{{ step }}</span>
-            </label>
-          </li>
-        </ul>
-      </section>
-
-      <section class="block log-box">
-        <h2>Your log (saved locally)</h2>
-        <div class="log-actions">
-          <button
-            v-if="!log.lastDoneAt"
-            type="button"
-            class="btn btn--primary"
-            @click="markDone"
-          >
-            Mark done today
-          </button>
-          <template v-else>
-            <p class="done-line">Last done {{ log.lastDoneAt }}</p>
-            <button type="button" class="btn btn--ghost" @click="clearDone">Clear done</button>
-          </template>
-        </div>
-        <label class="notes-label">
-          <span>Notes for this task</span>
-          <textarea
-            :value="log.notes"
-            rows="3"
-            placeholder="What you used, weather, results…"
-            @input="onNotes"
-          />
-        </label>
-      </section>
-
-      <section class="block">
-        <h2>Materials</h2>
-        <ul>
-          <li v-for="m in task.materials" :key="m">{{ m }}</li>
-        </ul>
-      </section>
-
-      <section v-if="task.calculator" class="block">
-        <h2>How much</h2>
-        <SprayerCalculator
-          v-if="task.calculator.type === 'sprayer'"
-          :rate-key="task.calculator.rateKey"
-        />
-        <RateCalculator
-          v-else
-          :mode="task.calculator.type"
-          :rate-key="task.calculator.rateKey"
-          :alt-rate-key="task.calculator.altRateKey"
-        />
-      </section>
-
-      <section v-if="task.prerequisites.length || task.nextTasks.length" class="block links">
-        <div v-if="task.prerequisites.length">
-          <h2>Often after</h2>
-          <div class="chip-row">
-            <router-link
-              v-for="pid in task.prerequisites"
-              :key="pid"
-              class="chip chip--brand"
-              :to="`/tasks/${pid}`"
-            >
-              {{ nameFor(pid) }}
-            </router-link>
-          </div>
-        </div>
-        <div v-if="task.nextTasks.length">
-          <h2>Often next</h2>
-          <div class="chip-row">
-            <router-link
-              v-for="nid in task.nextTasks"
-              :key="nid"
-              class="chip chip--brand"
-              :to="`/tasks/${nid}`"
-            >
-              {{ nameFor(nid) }}
-            </router-link>
-          </div>
-        </div>
-      </section>
-
-      <section class="block caveats">
-        <h2>Caveats</h2>
-        <ul>
-          <li v-for="c in task.caveats" :key="c">{{ c }}</li>
-        </ul>
-      </section>
-    </div>
-    <div v-else class="container">
-      <p>Task not found. <router-link to="/tasks">Back to tasks</router-link></p>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import Conditions from '../components/conditions.vue'
 import RateCalculator from './rate-calculator.vue'
@@ -378,3 +241,140 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="task-detail-page">
+    <div class="container" v-if="task">
+      <p class="back"><router-link to="/tasks">← All tasks</router-link></p>
+      <header class="page-header">
+        <span class="cat">{{ task.category }}</span>
+        <h1>{{ task.name }}</h1>
+        <p class="lede">{{ task.summary }}</p>
+      </header>
+
+      <div class="timing-box" v-if="evaluation">
+        <h2>Timing</h2>
+        <p>{{ evaluation.reason }}</p>
+        <p class="muted">{{ evaluation.rule.note }}</p>
+        <p v-if="evaluation.soil" class="soil">
+          Soil gate: <strong>{{ evaluation.soil.label }}</strong> — {{ evaluation.soil.detail }}
+        </p>
+        <Conditions
+          v-if="needsSoil"
+          :conditions="conditions"
+          :error="weatherError"
+          :loading="weatherLoading"
+          @refresh="$emit('refresh-weather')"
+        />
+      </div>
+
+      <section class="block">
+        <h2>Why</h2>
+        <p>{{ task.why }}</p>
+      </section>
+
+      <section class="block">
+        <h2>Steps</h2>
+        <ul class="checklist">
+          <li v-for="(step, i) in task.steps" :key="i">
+            <label>
+              <input
+                type="checkbox"
+                :checked="!!log.stepsChecked[i]"
+                @change="toggleStep(i)"
+              />
+              <span>{{ step }}</span>
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block log-box">
+        <h2>Your log (saved locally)</h2>
+        <div class="log-actions">
+          <button
+            v-if="!log.lastDoneAt"
+            type="button"
+            class="btn btn--primary"
+            @click="markDone"
+          >
+            Mark done today
+          </button>
+          <template v-else>
+            <p class="done-line">Last done {{ log.lastDoneAt }}</p>
+            <button type="button" class="btn btn--ghost" @click="clearDone">Clear done</button>
+          </template>
+        </div>
+        <label class="notes-label">
+          <span>Notes for this task</span>
+          <textarea
+            :value="log.notes"
+            rows="3"
+            placeholder="What you used, weather, results…"
+            @input="onNotes"
+          />
+        </label>
+      </section>
+
+      <section class="block">
+        <h2>Materials</h2>
+        <ul>
+          <li v-for="m in task.materials" :key="m">{{ m }}</li>
+        </ul>
+      </section>
+
+      <section v-if="task.calculator" class="block">
+        <h2>How much</h2>
+        <SprayerCalculator
+          v-if="task.calculator.type === 'sprayer'"
+          :rate-key="task.calculator.rateKey"
+        />
+        <RateCalculator
+          v-else
+          :mode="task.calculator.type"
+          :rate-key="task.calculator.rateKey"
+          :alt-rate-key="task.calculator.altRateKey"
+        />
+      </section>
+
+      <section v-if="task.prerequisites.length || task.nextTasks.length" class="block links">
+        <div v-if="task.prerequisites.length">
+          <h2>Often after</h2>
+          <div class="chip-row">
+            <router-link
+              v-for="pid in task.prerequisites"
+              :key="pid"
+              class="chip chip--brand"
+              :to="`/tasks/${pid}`"
+            >
+              {{ nameFor(pid) }}
+            </router-link>
+          </div>
+        </div>
+        <div v-if="task.nextTasks.length">
+          <h2>Often next</h2>
+          <div class="chip-row">
+            <router-link
+              v-for="nid in task.nextTasks"
+              :key="nid"
+              class="chip chip--brand"
+              :to="`/tasks/${nid}`"
+            >
+              {{ nameFor(nid) }}
+            </router-link>
+          </div>
+        </div>
+      </section>
+
+      <section class="block caveats">
+        <h2>Caveats</h2>
+        <ul>
+          <li v-for="c in task.caveats" :key="c">{{ c }}</li>
+        </ul>
+      </section>
+    </div>
+    <div v-else class="container">
+      <p>Task not found. <router-link to="/tasks">Back to tasks</router-link></p>
+    </div>
+  </div>
+</template>

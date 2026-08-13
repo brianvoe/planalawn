@@ -1,7 +1,7 @@
 export type StatusTone = 'good' | 'caution' | 'cold' | 'hot' | 'neutral'
 export type Bucket = 'now' | 'soon' | 'later'
 export type ClimateBandId = 'cool' | 'transition' | 'warm'
-export type LocationSource = 'zip' | 'geocode' | 'geolocation'
+export type LocationSource = 'zip' | 'geocode' | 'geolocation' | 'metro'
 export type MixMode = 'perGallon' | 'per1000'
 export type CalculatorType = 'sprayer' | 'coverage' | 'volume'
 export type ProjectPhase = 'maintenance' | 'renovation' | 'establishment'
@@ -9,6 +9,7 @@ export type ProjectPhase = 'maintenance' | 'renovation' | 'establishment'
 export interface ClimateBand {
   id: ClimateBandId
   label: string
+  shortLabel: string
   summary: string
   speciesPriority: string[]
 }
@@ -23,6 +24,8 @@ export interface UserLocation {
   latitude: number | null
   longitude: number | null
   climateBand: ClimateBandId | null
+  metroId: string | null
+  usdaZone: string | null
   promptDismissed: boolean
 }
 
@@ -36,6 +39,8 @@ export interface ResolvedLocation {
   latitude: number
   longitude: number
   climateBand: ClimateBandId | null
+  metroId?: string
+  usdaZone?: string | null
 }
 
 export interface Conditions {

@@ -1,195 +1,3 @@
-<template>
-  <div class="home">
-    <!-- HERO ---------------------------------------------------------------->
-    <header class="hero">
-      <div class="hero__inner container">
-        <div class="hero__copy">
-          <p class="eyebrow">
-            <font-awesome-icon icon="fa-solid fa-temperature-half" />
-            Soil-temp aware
-          </p>
-          <h1>Know what to do next.</h1>
-          <p class="hero__lede">
-            Your soil temperature decides the timing. We read it, then tell you what to
-            put down and how much.
-          </p>
-          <div class="hero__actions">
-            <router-link class="btn btn--primary" to="/calendar">
-              What’s next?
-              <font-awesome-icon icon="fa-solid fa-arrow-right" />
-            </router-link>
-            <router-link class="btn" to="/settings">Set up my lawn</router-link>
-          </div>
-          <p class="hero__meta">
-            Free · no account · {{ cultivarCount }} NTEP cultivars
-          </p>
-        </div>
-
-        <!-- Live panel, floated over the band. Doubles as the real "do now"
-             list, so the hero shows the actual product rather than a mockup. -->
-        <div class="panel">
-          <div class="panel__bar">
-            <span class="panel__dots" aria-hidden="true"><i /><i /><i /></span>
-            <span class="panel__title">Do now</span>
-          </div>
-          <div class="panel__body">
-            <router-link
-              v-for="item in nowItems.slice(0, 3)"
-              :key="item.task.id"
-              class="row"
-              :to="`/tasks/${item.task.id}`"
-            >
-              <span
-                class="status-dot"
-                :class="`status-dot--${item.soil.tone}`"
-                aria-hidden="true"
-              />
-              <span class="row__text">
-                <strong>{{ item.task.name }}</strong>
-                <small>{{ item.reason }}</small>
-              </span>
-              <font-awesome-icon icon="fa-solid fa-arrow-right" class="row__go" />
-            </router-link>
-
-            <p v-if="!nowItems.length" class="row row--empty">
-              <font-awesome-icon icon="fa-solid fa-clock" />
-              <span class="row__text">
-                <strong>Nothing due right now</strong>
-                <small>{{ soilSummary }}</small>
-              </span>
-            </p>
-
-            <router-link class="panel__more" to="/calendar">
-              Full calendar
-              <font-awesome-icon icon="fa-solid fa-arrow-right" />
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- TIMING -------------------------------------------------------------->
-    <section class="band band--tint wave-top">
-      <div class="band__inner container split">
-        <div>
-          <p class="eyebrow">
-            <font-awesome-icon icon="fa-solid fa-calendar-day" />
-            Timing
-          </p>
-          <h2>Soil temp beats the calendar.</h2>
-          <p class="lede">
-            Seed goes down when the ground is ready, not when the bag says September.
-          </p>
-          <ul class="checklist">
-            <li v-for="point in timingPoints" :key="point">
-              <font-awesome-icon icon="fa-solid fa-check" />
-              <span>{{ point }}</span>
-            </li>
-          </ul>
-          <router-link class="btn btn--ghost inline-cta" to="/calendar">
-            See my windows
-            <font-awesome-icon icon="fa-solid fa-arrow-right" />
-          </router-link>
-        </div>
-
-        <Conditions
-          :conditions="conditions"
-          :error="weatherError"
-          :loading="weatherLoading"
-          @refresh="$emit('refresh-weather')"
-        />
-      </div>
-    </section>
-
-    <!-- SEEDS --------------------------------------------------------------->
-    <section class="band band--plain wave-top">
-      <div class="band__inner container">
-        <div class="band__head">
-          <p class="eyebrow">
-            <font-awesome-icon icon="fa-solid fa-seedling" />
-            Seed intel
-          </p>
-          <h2>Not bag marketing. Trial data.</h2>
-          <p class="lede">
-            Every cultivar scored against the nearest NTEP trial site to you — with the
-            depth of evidence shown, never hidden.
-          </p>
-        </div>
-
-        <div class="seed-grid">
-          <router-link
-            v-for="c in topCultivars"
-            :key="c.id"
-            class="card card--link seed-card"
-            to="/seeds"
-          >
-            <div class="seed-card__top">
-              <h3>{{ c.name }}</h3>
-              <span class="chip chip--good">{{ c.fit.score }}</span>
-            </div>
-            <p class="seed-card__label">{{ c.fit.label }}</p>
-            <p class="seed-card__cov">
-              <font-awesome-icon icon="fa-solid fa-check" />
-              All {{ c.fit.coverage.totalFactors }} factors measured
-            </p>
-          </router-link>
-        </div>
-
-        <router-link class="btn btn--ghost inline-cta" to="/seeds">
-          Compare blends and cultivars
-          <font-awesome-icon icon="fa-solid fa-arrow-right" />
-        </router-link>
-      </div>
-    </section>
-
-    <!-- FEATURE GRID -------------------------------------------------------->
-    <section class="band band--tint-strong wave-top">
-      <div class="band__inner container">
-        <div class="band__head band__head--center">
-          <h2>Plus everything around it</h2>
-        </div>
-        <div class="feature-grid">
-          <router-link
-            v-for="f in features"
-            :key="f.title"
-            class="feature-card card--link"
-            :to="f.to"
-          >
-            <span class="feature-card__icon">
-              <font-awesome-icon :icon="'fa-solid ' + f.icon" />
-            </span>
-            <span>
-              <h3>{{ f.title }}</h3>
-              <p>{{ f.body }}</p>
-            </span>
-          </router-link>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING CTA --------------------------------------------------------->
-    <section class="band band--dark on-dark wave-top">
-      <div class="band__inner container cta">
-        <h2>Ready when you are.</h2>
-        <p class="lede">
-          Set your square footage and location. Everything else calculates itself.
-        </p>
-        <div class="cta__form">
-          <LawnSize />
-          <router-link class="btn btn--primary" to="/settings">
-            My lawn
-            <font-awesome-icon icon="fa-solid fa-arrow-right" />
-          </router-link>
-        </div>
-        <p class="cta__note">
-          Saved in this browser only — {{ profile.lawnName }} ·
-          {{ lawnSqFt.toLocaleString() }} sq ft
-        </p>
-      </div>
-    </section>
-  </div>
-</template>
-
 <script lang="ts">
 import Conditions from '../components/conditions.vue'
 import LawnSize from '../components/lawn-size.vue'
@@ -566,3 +374,195 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="home">
+    <!-- HERO ---------------------------------------------------------------->
+    <header class="hero">
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="eyebrow">
+            <font-awesome-icon icon="fa-solid fa-temperature-half" />
+            Soil-temp aware
+          </p>
+          <h1>Know what to do next.</h1>
+          <p class="hero__lede">
+            Your soil temperature decides the timing. We read it, then tell you what to
+            put down and how much.
+          </p>
+          <div class="hero__actions">
+            <router-link class="btn btn--primary" to="/calendar">
+              What’s next?
+              <font-awesome-icon icon="fa-solid fa-arrow-right" />
+            </router-link>
+            <router-link class="btn" to="/settings">Set up my lawn</router-link>
+          </div>
+          <p class="hero__meta">
+            Free · no account · {{ cultivarCount }} NTEP cultivars
+          </p>
+        </div>
+
+        <!-- Live panel, floated over the band. Doubles as the real "do now"
+             list, so the hero shows the actual product rather than a mockup. -->
+        <div class="panel">
+          <div class="panel__bar">
+            <span class="panel__dots" aria-hidden="true"><i /><i /><i /></span>
+            <span class="panel__title">Do now</span>
+          </div>
+          <div class="panel__body">
+            <router-link
+              v-for="item in nowItems.slice(0, 3)"
+              :key="item.task.id"
+              class="row"
+              :to="`/tasks/${item.task.id}`"
+            >
+              <span
+                class="status-dot"
+                :class="`status-dot--${item.soil.tone}`"
+                aria-hidden="true"
+              />
+              <span class="row__text">
+                <strong>{{ item.task.name }}</strong>
+                <small>{{ item.reason }}</small>
+              </span>
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="row__go" />
+            </router-link>
+
+            <p v-if="!nowItems.length" class="row row--empty">
+              <font-awesome-icon icon="fa-solid fa-clock" />
+              <span class="row__text">
+                <strong>Nothing due right now</strong>
+                <small>{{ soilSummary }}</small>
+              </span>
+            </p>
+
+            <router-link class="panel__more" to="/calendar">
+              Full calendar
+              <font-awesome-icon icon="fa-solid fa-arrow-right" />
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- TIMING -------------------------------------------------------------->
+    <section class="band band--tint wave-top">
+      <div class="band__inner container split">
+        <div>
+          <p class="eyebrow">
+            <font-awesome-icon icon="fa-solid fa-calendar-day" />
+            Timing
+          </p>
+          <h2>Soil temp beats the calendar.</h2>
+          <p class="lede">
+            Seed goes down when the ground is ready, not when the bag says September.
+          </p>
+          <ul class="checklist">
+            <li v-for="point in timingPoints" :key="point">
+              <font-awesome-icon icon="fa-solid fa-check" />
+              <span>{{ point }}</span>
+            </li>
+          </ul>
+          <router-link class="btn btn--ghost inline-cta" to="/calendar">
+            See my windows
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </router-link>
+        </div>
+
+        <Conditions
+          :conditions="conditions"
+          :error="weatherError"
+          :loading="weatherLoading"
+          @refresh="$emit('refresh-weather')"
+        />
+      </div>
+    </section>
+
+    <!-- SEEDS --------------------------------------------------------------->
+    <section class="band band--plain wave-top">
+      <div class="band__inner container">
+        <div class="band__head">
+          <p class="eyebrow">
+            <font-awesome-icon icon="fa-solid fa-seedling" />
+            Seed intel
+          </p>
+          <h2>Not bag marketing. Trial data.</h2>
+          <p class="lede">
+            Every cultivar scored against the nearest NTEP trial site to you — with the
+            depth of evidence shown, never hidden.
+          </p>
+        </div>
+
+        <div class="seed-grid">
+          <router-link
+            v-for="c in topCultivars"
+            :key="c.id"
+            class="card card--link seed-card"
+            to="/seeds"
+          >
+            <div class="seed-card__top">
+              <h3>{{ c.name }}</h3>
+              <span class="chip chip--good">{{ c.fit.score }}</span>
+            </div>
+            <p class="seed-card__label">{{ c.fit.label }}</p>
+            <p class="seed-card__cov">
+              <font-awesome-icon icon="fa-solid fa-check" />
+              All {{ c.fit.coverage.totalFactors }} factors measured
+            </p>
+          </router-link>
+        </div>
+
+        <router-link class="btn btn--ghost inline-cta" to="/seeds">
+          Compare blends and cultivars
+          <font-awesome-icon icon="fa-solid fa-arrow-right" />
+        </router-link>
+      </div>
+    </section>
+
+    <!-- FEATURE GRID -------------------------------------------------------->
+    <section class="band band--tint-strong wave-top">
+      <div class="band__inner container">
+        <div class="band__head band__head--center">
+          <h2>Plus everything around it</h2>
+        </div>
+        <div class="feature-grid">
+          <router-link
+            v-for="f in features"
+            :key="f.title"
+            class="feature-card card--link"
+            :to="f.to"
+          >
+            <span class="feature-card__icon">
+              <font-awesome-icon :icon="'fa-solid ' + f.icon" />
+            </span>
+            <span>
+              <h3>{{ f.title }}</h3>
+              <p>{{ f.body }}</p>
+            </span>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA --------------------------------------------------------->
+    <section class="band band--dark on-dark wave-top">
+      <div class="band__inner container cta">
+        <h2>Ready when you are.</h2>
+        <p class="lede">
+          Set your square footage and location. Everything else calculates itself.
+        </p>
+        <div class="cta__form">
+          <LawnSize />
+          <router-link class="btn btn--primary" to="/settings">
+            My lawn
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </router-link>
+        </div>
+        <p class="cta__note">
+          Saved in this browser only — {{ profile.lawnName }} ·
+          {{ lawnSqFt.toLocaleString() }} sq ft
+        </p>
+      </div>
+    </section>
+  </div>
+</template>

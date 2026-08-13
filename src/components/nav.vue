@@ -1,48 +1,22 @@
-<template>
-  <nav class="site-nav" aria-label="Primary">
-    <div class="site-nav__inner container">
-      <router-link class="site-nav__brand" to="/">
-        <img class="site-nav__mark" src="/favicon.svg" alt="" width="28" height="28" />
-        Lawn Plan Nerd
-      </router-link>
-
-      <button
-        type="button"
-        class="btn btn--sm site-nav__toggle"
-        :aria-expanded="menuOpen ? 'true' : 'false'"
-        aria-controls="primary-menu"
-        @click="menuOpen = !menuOpen"
-      >
-        <font-awesome-icon :icon="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" />
-        {{ menuOpen ? 'Close' : 'Menu' }}
-      </button>
-
-      <ul id="primary-menu" class="site-nav__links" :class="{ open: menuOpen }">
-        <li><router-link to="/calendar" @click="menuOpen = false">Calendar</router-link></li>
-        <li><router-link to="/tasks" @click="menuOpen = false">Tasks</router-link></li>
-        <li><router-link to="/seeds" @click="menuOpen = false">Seeds</router-link></li>
-        <li><router-link to="/tools/sprayer" @click="menuOpen = false">Sprayer</router-link></li>
-        <li><router-link to="/settings" @click="menuOpen = false">My lawn</router-link></li>
-      </ul>
-
-      <SoilTemp :conditions="conditions" />
-    </div>
-  </nav>
-</template>
-
 <script lang="ts">
+import LocationModal from './location-modal.vue'
 import SoilTemp from './soil-temp.vue'
 import type { PropType } from 'vue'
 import type { Conditions } from '../types'
 
 export default {
   name: 'Nav',
-  components: { SoilTemp },
+  components: { LocationModal, SoilTemp },
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
   },
   data() {
     return { menuOpen: false }
+  },
+  methods: {
+    openLocation() {
+      ;(this.$refs.locationModal as InstanceType<typeof LocationModal> | undefined)?.open()
+    },
   },
 }
 </script>
@@ -131,3 +105,36 @@ export default {
   }
 }
 </style>
+
+<template>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="site-nav__inner container">
+      <router-link class="site-nav__brand" to="/">
+        <img class="site-nav__mark" src="/favicon.svg" alt="" width="28" height="28" />
+        Lawn Plan Nerd
+      </router-link>
+
+      <button
+        type="button"
+        class="btn btn--sm site-nav__toggle"
+        :aria-expanded="menuOpen ? 'true' : 'false'"
+        aria-controls="primary-menu"
+        @click="menuOpen = !menuOpen"
+      >
+        <font-awesome-icon :icon="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" />
+        {{ menuOpen ? 'Close' : 'Menu' }}
+      </button>
+
+      <ul id="primary-menu" class="site-nav__links" :class="{ open: menuOpen }">
+        <li><router-link to="/calendar" @click="menuOpen = false">Calendar</router-link></li>
+        <li><router-link to="/tasks" @click="menuOpen = false">Tasks</router-link></li>
+        <li><router-link to="/seeds" @click="menuOpen = false">Seeds</router-link></li>
+        <li><router-link to="/tools/sprayer" @click="menuOpen = false">Sprayer</router-link></li>
+        <li><router-link to="/settings" @click="menuOpen = false">My lawn</router-link></li>
+      </ul>
+
+      <SoilTemp :conditions="conditions" @click="openLocation" />
+    </div>
+    <LocationModal ref="locationModal" :conditions="conditions" />
+  </nav>
+</template>

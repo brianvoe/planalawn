@@ -1,11 +1,3 @@
-<template>
-  <div class="soil-chip" :title="title">
-    <span class="soil-chip__place">{{ place }}</span>
-    <span class="soil-chip__temp">{{ tempLabel }}</span>
-    <span class="soil-chip__meta">soil 6 cm</span>
-  </div>
-</template>
-
 <script lang="ts">
 import { formatTemp, formatUpdated } from '../services/weather'
 import type { PropType } from 'vue'
@@ -16,19 +8,24 @@ export default {
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
   },
+  emits: ['click'],
   computed: {
-    userLocation(): UserLocation | null {
-      return this.$store.getters.userLocation
+    location(): UserLocation {
+      return this.$store.state.location
     },
     place(): string {
-      return this.userLocation?.city || this.userLocation?.label || 'No location'
+      if (!this.$store.getters.hasLocation) return 'Set location'
+      return this.location.city || this.location.label || 'Set location'
+    },
+    hasTemp(): boolean {
+      return typeof this.conditions?.soilTemp6F === 'number'
     },
     tempLabel(): string {
       return formatTemp(this.conditions?.soilTemp6F)
     },
     title(): string {
-      if (!this.conditions) return 'Set location to load soil temperature'
-      return `Updated ${formatUpdated(this.conditions.fetchedAt)}`
+      if (!this.conditions) return 'Set or change location'
+      return `Updated ${formatUpdated(this.conditions.fetchedAt)} — click to change location`
     },
   },
 }
@@ -48,7 +45,13 @@ export default {
   line-height: 1.2;
   color: var(--color-primary-strong);
   background: var(--color-primary-soft);
+  border: none;
   border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-primary-soft) 70%, var(--color-primary) 12%);
+  }
 
   .soil-chip__place {
     max-width: 7rem;
@@ -71,3 +74,13 @@ export default {
   }
 }
 </style>
+
+<template>
+  <button type="button" class="soil-chip" :title="title" @click="$emit('click')">
+    <span class="soil-chip__place">{{ place }}</span>
+    <template v-if="hasTemp">
+      <span class="soil-chip__temp">{{ tempLabel }}</span>
+      <span class="soil-chip__meta">soil 6 cm</span>
+    </template>
+  </button>
+</template>

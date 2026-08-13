@@ -1,55 +1,3 @@
-<template>
-  <div class="sprayer">
-    <div class="sprayer__controls">
-      <label>
-        <span>Mix mode</span>
-        <select v-model="mode">
-          <option value="perGallon">oz per gallon</option>
-          <option value="per1000">oz per 1000 sq ft</option>
-        </select>
-      </label>
-      <label>
-        <span>Tank size (gal)</span>
-        <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
-      </label>
-      <label v-if="mode === 'perGallon'">
-        <span>Product (fl oz / gal)</span>
-        <input v-model.number="ozPerGallon" type="number" min="0" step="0.1" />
-      </label>
-      <label v-else>
-        <span>Product (fl oz / 1000)</span>
-        <input v-model.number="ozPer1000" type="number" min="0" step="0.1" />
-      </label>
-      <label>
-        <span>Coverage per tank (sq ft)</span>
-        <input v-model.number="coverageLocal" type="number" min="50" step="50" />
-      </label>
-      <LawnSize />
-    </div>
-
-    <div class="sprayer__result">
-      <div class="sprayer__stat">
-        <span>Per tank</span>
-        <strong>{{ result.productOzPerTank.toFixed(1) }} fl oz</strong>
-        <em>in {{ result.waterGallonsPerTank }} gal water</em>
-      </div>
-      <div class="sprayer__stat">
-        <span>Tanks for lawn</span>
-        <strong>{{ result.tanksNeeded.toFixed(2) }}</strong>
-      </div>
-      <div class="sprayer__stat">
-        <span>Total product</span>
-        <strong>{{ result.totalProductOz.toFixed(1) }} fl oz</strong>
-        <em>{{ (result.totalProductOz / 16).toFixed(2) }} pints</em>
-      </div>
-    </div>
-    <p class="sprayer__note">
-      Starting calculator only — confirm concentration and PPE on your product label before mixing.
-      Tank size and coverage save in this browser.
-    </p>
-  </div>
-</template>
-
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
 import { rateTemplates, sprayerMix } from '../data/rates'
@@ -69,6 +17,16 @@ export default {
       ozPerGallon: override.ozPerGallon ?? tmpl.ozPerGallon ?? 2,
       ozPer1000: override.ozPer1000 ?? 2,
     }
+  },
+  watch: {
+    ozPerGallon(v: number) {
+      if (this.mode === 'perGallon') {
+        this.$store.dispatch('setRateOverride', {
+          rateKey: this.rateKey,
+          values: { ozPerGallon: v },
+        })
+      }
+    },
   },
   computed: {
     lawnSqFt(): number {
@@ -107,16 +65,6 @@ export default {
         coverageSqFtPerTank: this.sprayCoverage,
         targetSqFt: this.lawnSqFt,
       })
-    },
-  },
-  watch: {
-    ozPerGallon(v: number) {
-      if (this.mode === 'perGallon') {
-        this.$store.dispatch('setRateOverride', {
-          rateKey: this.rateKey,
-          values: { ozPerGallon: v },
-        })
-      }
     },
   },
 }
@@ -210,3 +158,55 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="sprayer">
+    <div class="sprayer__controls">
+      <label>
+        <span>Mix mode</span>
+        <select v-model="mode">
+          <option value="perGallon">oz per gallon</option>
+          <option value="per1000">oz per 1000 sq ft</option>
+        </select>
+      </label>
+      <label>
+        <span>Tank size (gal)</span>
+        <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
+      </label>
+      <label v-if="mode === 'perGallon'">
+        <span>Product (fl oz / gal)</span>
+        <input v-model.number="ozPerGallon" type="number" min="0" step="0.1" />
+      </label>
+      <label v-else>
+        <span>Product (fl oz / 1000)</span>
+        <input v-model.number="ozPer1000" type="number" min="0" step="0.1" />
+      </label>
+      <label>
+        <span>Coverage per tank (sq ft)</span>
+        <input v-model.number="coverageLocal" type="number" min="50" step="50" />
+      </label>
+      <LawnSize />
+    </div>
+
+    <div class="sprayer__result">
+      <div class="sprayer__stat">
+        <span>Per tank</span>
+        <strong>{{ result.productOzPerTank.toFixed(1) }} fl oz</strong>
+        <em>in {{ result.waterGallonsPerTank }} gal water</em>
+      </div>
+      <div class="sprayer__stat">
+        <span>Tanks for lawn</span>
+        <strong>{{ result.tanksNeeded.toFixed(2) }}</strong>
+      </div>
+      <div class="sprayer__stat">
+        <span>Total product</span>
+        <strong>{{ result.totalProductOz.toFixed(1) }} fl oz</strong>
+        <em>{{ (result.totalProductOz / 16).toFixed(2) }} pints</em>
+      </div>
+    </div>
+    <p class="sprayer__note">
+      Starting calculator only — confirm concentration and PPE on your product label before mixing.
+      Tank size and coverage save in this browser.
+    </p>
+  </div>
+</template>

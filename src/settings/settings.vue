@@ -1,171 +1,7 @@
-<template>
-  <div class="settings-page">
-    <div class="container">
-      <header class="page-header">
-        <p class="eyebrow">
-          <font-awesome-icon icon="fa-solid fa-location-dot" />
-          Local data
-        </p>
-        <h1>My lawn.</h1>
-        <p class="lede">
-          Saved in this browser only — no account, no server. Export a backup if you switch devices.
-        </p>
-      </header>
-
-      <section class="card">
-        <h2>Location</h2>
-        <p class="hint">
-          Used for soil temperature, timing, and NTEP suitability.
-          <span v-if="location.label"> Current: <strong>{{ location.label }}</strong></span>
-        </p>
-        <div class="form-grid">
-          <label>
-            <span>ZIP code</span>
-            <div class="inline">
-              <input v-model="zipInput" type="text" maxlength="5" inputmode="numeric" placeholder="37201" />
-              <button type="button" class="btn" @click="saveZip">Set ZIP</button>
-            </div>
-          </label>
-          <label>
-            <span>Or use GPS</span>
-            <button type="button" class="btn btn--primary" @click="saveGeo">Use my location</button>
-          </label>
-        </div>
-        <p v-if="locStatus" class="status">{{ locStatus }}</p>
-      </section>
-
-      <section class="card">
-        <h2>Lawn profile</h2>
-        <div class="form-grid">
-          <label>
-            <span>Lawn name</span>
-            <input v-model="lawnName" type="text" />
-          </label>
-          <label>
-            <span>Area (sq ft)</span>
-            <input v-model.number="lawnSqFtLocal" type="number" min="100" step="100" />
-          </label>
-          <label>
-            <span>Preferred seed</span>
-            <select v-model="preferredSeed">
-              <option value="">Not set</option>
-              <option value="calypsow">Calypsow</option>
-              <option value="resilience">Resilience II</option>
-            </select>
-          </label>
-          <label>
-            <span>Soil type</span>
-            <select v-model="soilType">
-              <option value="">Unknown</option>
-              <option value="clay">Clay</option>
-              <option value="loam">Loam</option>
-              <option value="sandy">Sandy</option>
-            </select>
-          </label>
-          <label>
-            <span>Sun exposure</span>
-            <select v-model="sunExposure">
-              <option value="">Unknown</option>
-              <option value="full">Full sun</option>
-              <option value="mixed">Mixed</option>
-              <option value="shade">Mostly shade</option>
-            </select>
-          </label>
-          <label class="full">
-            <span>Notes</span>
-            <textarea v-model="profileNotes" rows="3" placeholder="Irrigation quirks, dog spots, shade trees…" />
-          </label>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>Sprayer defaults</h2>
-        <div class="form-grid">
-          <label>
-            <span>Tank size (gal)</span>
-            <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
-          </label>
-          <label>
-            <span>Coverage per tank (sq ft)</span>
-            <input v-model.number="coverageLocal" type="number" min="50" step="50" />
-          </label>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>Project timeline</h2>
-        <p class="hint">Track renovation milestones so you know what already happened.</p>
-        <div class="form-grid">
-          <label>
-            <span>Phase</span>
-            <select v-model="phase">
-              <option value="maintenance">Maintenance</option>
-              <option value="renovation">Renovation</option>
-              <option value="establishment">Establishment</option>
-            </select>
-          </label>
-          <label>
-            <span>Kill applied</span>
-            <input v-model="killAppliedAt" type="date" />
-          </label>
-          <label>
-            <span>Second kill</span>
-            <input v-model="secondKillAt" type="date" />
-          </label>
-          <label>
-            <span>Aerated</span>
-            <input v-model="aeratedAt" type="date" />
-          </label>
-          <label>
-            <span>Topsoil</span>
-            <input v-model="topsoilAt" type="date" />
-          </label>
-          <label>
-            <span>Seeded</span>
-            <input v-model="seededAt" type="date" />
-          </label>
-          <label>
-            <span>First mow</span>
-            <input v-model="firstMowAt" type="date" />
-          </label>
-          <label class="full">
-            <span>Project notes</span>
-            <textarea v-model="projectNotes" rows="3" />
-          </label>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>Backup</h2>
-        <p class="hint">Download or restore your local lawn data as JSON.</p>
-        <div class="actions">
-          <button type="button" class="btn btn--primary" @click="exportData">Export JSON</button>
-          <label class="btn file-btn">
-            Import JSON
-            <input type="file" accept="application/json,.json" hidden @change="importData" />
-          </label>
-          <button type="button" class="btn btn--danger" @click="resetData">Reset all local data</button>
-        </div>
-        <p v-if="status" class="status">{{ status }}</p>
-      </section>
-
-      <section class="card muted-card">
-        <h2>What gets saved</h2>
-        <ul>
-          <li>Lawn profile (size, seed choice, soil/sun, notes)</li>
-          <li>Sprayer tank + coverage habits</li>
-          <li>Custom rate overrides from calculators</li>
-          <li>Task step checks, notes, and “done” dates</li>
-          <li>Project milestone dates</li>
-        </ul>
-        <p>Weather cache is separate and temporary. Nothing is uploaded.</p>
-      </section>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
-import { lookupZip, requestBrowserLocation } from '../services/geolocation'
+import LocationSelect from '../components/location-select.vue'
+import { zoneLine } from '../data/climate'
+import { requestBrowserLocation } from '../services/geolocation'
 import type { AppStore } from '../store/types'
 import type { BackupPayload, Profile, Project, UserLocation } from '../types'
 
@@ -197,12 +33,16 @@ function bindProject<K extends keyof Project>(field: K) {
 
 export default {
   name: 'Settings',
+  components: { LocationSelect },
   data() {
-    return { status: '', locStatus: '', zipInput: '' }
+    return { status: '', locStatus: '' }
   },
   computed: {
     location(): UserLocation {
       return this.$store.state.location
+    },
+    zoneLabel(): string {
+      return zoneLine(this.location)
     },
     lawnName: bindProfile('lawnName'),
     preferredSeed: bindProfile('preferredSeed'),
@@ -249,24 +89,12 @@ export default {
       },
     },
   },
-  created() {
-    this.zipInput = this.location.zip || ''
-  },
   methods: {
-    async saveZip() {
-      try {
-        const loc = await lookupZip(this.zipInput)
-        await this.$store.dispatch('setLocation', loc)
-        this.locStatus = `Location set to ${loc.label}`
-      } catch (e) {
-        this.locStatus = e instanceof Error ? e.message : 'ZIP failed'
-      }
-    },
     async saveGeo() {
       try {
         const loc = await requestBrowserLocation()
         await this.$store.dispatch('setLocation', loc)
-        this.locStatus = 'Location set from GPS'
+        this.locStatus = `Location set to ${loc.label}`
       } catch (e) {
         this.locStatus = e instanceof Error ? e.message : 'GPS failed'
       }
@@ -419,3 +247,169 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="settings-page">
+    <div class="container">
+      <header class="page-header">
+        <p class="eyebrow">
+          <font-awesome-icon icon="fa-solid fa-location-dot" />
+          Local data
+        </p>
+        <h1>My lawn.</h1>
+        <p class="lede">
+          Saved in this browser only — no account, no server. Export a backup if you switch devices.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Location</h2>
+        <p class="hint">
+          Snaps to the nearest big city for soil temperature, timing, and seed scores.
+          <span v-if="location.label">
+            Current: <strong>{{ location.label }}</strong>
+            <span v-if="zoneLabel"> · {{ zoneLabel }}</span>
+          </span>
+        </p>
+        <div class="form-grid">
+          <label>
+            <span>City</span>
+            <LocationSelect />
+          </label>
+          <label>
+            <span>Or use GPS</span>
+            <button type="button" class="btn btn--primary" @click="saveGeo">Use my location</button>
+          </label>
+        </div>
+        <p v-if="locStatus" class="status">{{ locStatus }}</p>
+      </section>
+
+      <section class="card">
+        <h2>Lawn profile</h2>
+        <div class="form-grid">
+          <label>
+            <span>Lawn name</span>
+            <input v-model="lawnName" type="text" />
+          </label>
+          <label>
+            <span>Area (sq ft)</span>
+            <input v-model.number="lawnSqFtLocal" type="number" min="100" step="100" />
+          </label>
+          <label>
+            <span>Preferred seed</span>
+            <select v-model="preferredSeed">
+              <option value="">Not set</option>
+              <option value="calypsow">Calypsow</option>
+              <option value="resilience">Resilience II</option>
+            </select>
+          </label>
+          <label>
+            <span>Soil type</span>
+            <select v-model="soilType">
+              <option value="">Unknown</option>
+              <option value="clay">Clay</option>
+              <option value="loam">Loam</option>
+              <option value="sandy">Sandy</option>
+            </select>
+          </label>
+          <label>
+            <span>Sun exposure</span>
+            <select v-model="sunExposure">
+              <option value="">Unknown</option>
+              <option value="full">Full sun</option>
+              <option value="mixed">Mixed</option>
+              <option value="shade">Mostly shade</option>
+            </select>
+          </label>
+          <label class="full">
+            <span>Notes</span>
+            <textarea v-model="profileNotes" rows="3" placeholder="Irrigation quirks, dog spots, shade trees…" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Sprayer defaults</h2>
+        <div class="form-grid">
+          <label>
+            <span>Tank size (gal)</span>
+            <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
+          </label>
+          <label>
+            <span>Coverage per tank (sq ft)</span>
+            <input v-model.number="coverageLocal" type="number" min="50" step="50" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Project timeline</h2>
+        <p class="hint">Track renovation milestones so you know what already happened.</p>
+        <div class="form-grid">
+          <label>
+            <span>Phase</span>
+            <select v-model="phase">
+              <option value="maintenance">Maintenance</option>
+              <option value="renovation">Renovation</option>
+              <option value="establishment">Establishment</option>
+            </select>
+          </label>
+          <label>
+            <span>Kill applied</span>
+            <input v-model="killAppliedAt" type="date" />
+          </label>
+          <label>
+            <span>Second kill</span>
+            <input v-model="secondKillAt" type="date" />
+          </label>
+          <label>
+            <span>Aerated</span>
+            <input v-model="aeratedAt" type="date" />
+          </label>
+          <label>
+            <span>Topsoil</span>
+            <input v-model="topsoilAt" type="date" />
+          </label>
+          <label>
+            <span>Seeded</span>
+            <input v-model="seededAt" type="date" />
+          </label>
+          <label>
+            <span>First mow</span>
+            <input v-model="firstMowAt" type="date" />
+          </label>
+          <label class="full">
+            <span>Project notes</span>
+            <textarea v-model="projectNotes" rows="3" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Backup</h2>
+        <p class="hint">Download or restore your local lawn data as JSON.</p>
+        <div class="actions">
+          <button type="button" class="btn btn--primary" @click="exportData">Export JSON</button>
+          <label class="btn file-btn">
+            Import JSON
+            <input type="file" accept="application/json,.json" hidden @change="importData" />
+          </label>
+          <button type="button" class="btn btn--danger" @click="resetData">Reset all local data</button>
+        </div>
+        <p v-if="status" class="status">{{ status }}</p>
+      </section>
+
+      <section class="card muted-card">
+        <h2>What gets saved</h2>
+        <ul>
+          <li>Lawn profile (size, seed choice, soil/sun, notes)</li>
+          <li>Sprayer tank + coverage habits</li>
+          <li>Custom rate overrides from calculators</li>
+          <li>Task step checks, notes, and “done” dates</li>
+          <li>Project milestone dates</li>
+        </ul>
+        <p>Weather cache is separate and temporary. Nothing is uploaded.</p>
+      </section>
+    </div>
+  </div>
+</template>

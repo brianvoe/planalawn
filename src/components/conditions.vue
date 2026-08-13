@@ -1,54 +1,3 @@
-<template>
-  <section class="conditions" :class="statusClass">
-    <div class="conditions__top">
-      <div>
-        <h2 class="conditions__title">{{ title }}</h2>
-        <p class="conditions__sub">
-          Soil at {{ soilDepthLabel }} drives seeding more than the calendar date.
-        </p>
-      </div>
-      <button
-        type="button"
-        class="btn btn--sm"
-        :disabled="loading || !hasLocation"
-        @click="$emit('refresh')"
-      >
-        {{ loading ? 'Updating…' : 'Refresh' }}
-      </button>
-    </div>
-
-    <div v-if="!hasLocation" class="conditions__error">
-      Set your location (ZIP or GPS) to load live soil temperature for your lawn.
-    </div>
-    <div v-else-if="error && !conditions" class="conditions__error">
-      {{ error }} — calendar windows still work without live soil temp.
-    </div>
-
-    <div class="conditions__grid">
-      <div class="stat">
-        <span>Soil 6 cm</span>
-        <strong>{{ formatTemp(conditions?.soilTemp6F) }}</strong>
-      </div>
-      <div class="stat">
-        <span>Air</span>
-        <strong>{{ formatTemp(conditions?.airTempF) }}</strong>
-      </div>
-      <div class="stat">
-        <span>Seeding window</span>
-        <strong class="stat__status">
-          <span class="status-dot" :class="`status-dot--${seedStatus.tone}`" aria-hidden="true" />
-          {{ seedStatus.label }}
-        </strong>
-      </div>
-    </div>
-    <p class="conditions__detail">{{ seedStatus.detail }}</p>
-    <p v-if="conditions?.fetchedAt" class="conditions__updated">
-      Updated {{ formatUpdated(conditions.fetchedAt) }}
-      <span v-if="conditions.fromCache"> · cached</span>
-    </p>
-  </section>
-</template>
-
 <script lang="ts">
 import { soilDepthLabel } from '../data/climate'
 import { formatTemp, formatUpdated } from '../services/weather'
@@ -190,3 +139,54 @@ export default {
   }
 }
 </style>
+
+<template>
+  <section class="conditions" :class="statusClass">
+    <div class="conditions__top">
+      <div>
+        <h2 class="conditions__title">{{ title }}</h2>
+        <p class="conditions__sub">
+          Soil at {{ soilDepthLabel }} drives seeding more than the calendar date.
+        </p>
+      </div>
+      <button
+        type="button"
+        class="btn btn--sm"
+        :disabled="loading || !hasLocation"
+        @click="$emit('refresh')"
+      >
+        {{ loading ? 'Updating…' : 'Refresh' }}
+      </button>
+    </div>
+
+    <div v-if="!hasLocation" class="conditions__error">
+      Set your city to load live soil temperature for your lawn.
+    </div>
+    <div v-else-if="error && !conditions" class="conditions__error">
+      {{ error }} — calendar windows still work without live soil temp.
+    </div>
+
+    <div class="conditions__grid">
+      <div class="stat">
+        <span>Soil 6 cm</span>
+        <strong>{{ formatTemp(conditions?.soilTemp6F) }}</strong>
+      </div>
+      <div class="stat">
+        <span>Air</span>
+        <strong>{{ formatTemp(conditions?.airTempF) }}</strong>
+      </div>
+      <div class="stat">
+        <span>Seeding window</span>
+        <strong class="stat__status">
+          <span class="status-dot" :class="`status-dot--${seedStatus.tone}`" aria-hidden="true" />
+          {{ seedStatus.label }}
+        </strong>
+      </div>
+    </div>
+    <p class="conditions__detail">{{ seedStatus.detail }}</p>
+    <p v-if="conditions?.fetchedAt" class="conditions__updated">
+      Updated {{ formatUpdated(conditions.fetchedAt) }}
+      <span v-if="conditions.fromCache"> · cached</span>
+    </p>
+  </section>
+</template>

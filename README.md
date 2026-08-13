@@ -123,6 +123,16 @@ npm run dev    # http://localhost:5050
 npm run build
 ```
 
+### GitHub Pages
+
+`npm run build` writes the static site to `docs/` (GitHub Pages **Deploy from a branch → `/docs`**).
+
+1. In the repo: **Settings → Pages → Source → Deploy from a branch**
+2. Branch `master`, folder `/docs`
+3. Custom domain is `lawnplannerd.com` (`public/CNAME`, copied into `docs/`). Point DNS at GitHub Pages, then add the same domain under **Settings → Pages**.
+
+Commit the `docs/` output after you build so Pages can serve it. The build also copies `index.html` to `404.html` so Vue Router history URLs work.
+
 ### NTEP ingest
 
 ```bash

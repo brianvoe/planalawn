@@ -1,264 +1,3 @@
-<template>
-  <div class="seeds">
-    <header class="seeds-hero">
-          <div class="seeds-hero__inner container">
-        <p class="eyebrow">
-          <font-awesome-icon icon="fa-solid fa-seedling" />
-          Seed intel
-        </p>
-        <h1>Pick seed on evidence.</h1>
-        <p class="lede">
-          Blends and cultivars scored against the NTEP trial sites nearest you.
-        </p>
-        <p class="meta">
-          {{ cultivarCount }} tall fescue cultivars · {{ blends.length }} blends
-          <span v-if="userLocation"> · scoring for {{ userLocation.label || userLocation.city }}</span>
-        </p>
-      </div>
-    </header>
-
-    <div class="seeds__inner container">
-      <div class="tabs" role="tablist">
-        <button
-          v-for="t in tabs"
-          :key="t.id"
-          type="button"
-          class="tab"
-          :class="{ active: tab === t.id }"
-          @click="tab = t.id"
-        >
-          {{ t.label }}
-        </button>
-      </div>
-
-      <!-- BLENDS -->
-      <section v-if="tab === 'blends'" class="panel">
-        <div class="toolbar">
-          <input v-model="blendQuery" type="search" placeholder="Search blends…" />
-          <button type="button" class="btn" @click="showBlendForm = !showBlendForm">
-            {{ showBlendForm ? 'Close' : 'Add my blend' }}
-          </button>
-        </div>
-
-        <div v-if="showBlendForm" class="blend-form card">
-          <h3>Add a blend from your bag label</h3>
-          <div class="form-grid">
-            <label>
-              <span>Name</span>
-              <input v-model="draft.name" type="text" />
-            </label>
-            <label>
-              <span>Manufacturer</span>
-              <input v-model="draft.manufacturer" type="text" />
-            </label>
-            <label class="full">
-              <span>Components (name, optional %)</span>
-              <div v-for="(row, i) in draft.components" :key="i" class="comp-row">
-                <input v-model="row.name" type="text" placeholder="Cultivar name" />
-                <input v-model.number="row.percent" type="number" min="0" max="100" placeholder="%" />
-                <button type="button" class="linkish" @click="draft.components.splice(i, 1)">Remove</button>
-              </div>
-              <button type="button" class="btn btn--ghost" @click="draft.components.push({ name: '', percent: null })">
-                + Cultivar
-              </button>
-            </label>
-          </div>
-          <button type="button" class="btn btn--primary" @click="saveDraft">Save to this browser</button>
-        </div>
-
-        <div class="card-grid">
-          <article
-            v-for="b in filteredBlends"
-            :key="b.id"
-            class="blend-card"
-            :class="{ selected: selectedBlendId === b.id }"
-            @click="selectBlend(b.id)"
-          >
-            <div class="blend-card__top">
-              <span class="tag">{{ b.curated ? 'Curated' : 'Yours' }}</span>
-              <span v-if="fitFor(b)" class="fit" :class="fitClass(fitFor(b)?.score)">
-                {{ fitFor(b)?.label }}
-                <em v-if="fitFor(b)?.score != null">{{ fitFor(b)?.score }}</em>
-              </span>
-            </div>
-            <h3>{{ b.name }}</h3>
-            <p class="mfr">{{ b.manufacturer }}</p>
-            <p>{{ b.summary || b.profile }}</p>
-            <p class="comps">
-              {{ (b.components || []).map((c) => c.name).join(' · ') }}
-            </p>
-          </article>
-        </div>
-
-        <div v-if="selectedBlend" class="detail card">
-          <h2>{{ selectedBlend.name }}</h2>
-          <p class="muted">{{ selectedBlend.notes }}</p>
-
-          <div v-if="selectedFit" class="fit-box">
-            <strong>{{ selectedFit.label }}</strong>
-            <span v-if="selectedFit.score != null">
-              Score {{ selectedFit.score }} / 9
-              <em
-                v-if="selectedFit.coverage"
-                class="coverage"
-                :class="{ 'coverage--partial': !selectedFit.coverage.complete }"
-                :title="coverageTitle(selectedFit.coverage)"
-              >
-                · based on {{ coverageLabel(selectedFit.coverage) }}
-              </em>
-            </span>
-            <ul v-if="selectedFit.strengths?.length">
-              <li v-for="s in selectedFit.strengths" :key="s">{{ s }}</li>
-            </ul>
-            <ul v-if="selectedFit.watchouts?.length" class="warn">
-              <li v-for="w in selectedFit.watchouts" :key="w">{{ w }}</li>
-            </ul>
-          </div>
-
-          <h3>Cultivars in this blend</h3>
-          <div class="comp-table">
-            <div v-for="c in selectedComponents" :key="c.name" class="comp-line">
-              <div>
-                <strong>{{ c.name }}</strong>
-                <span v-if="c.percent"> · {{ c.percent }}%</span>
-                <span v-if="!c.cultivar && !c.fit" class="missing"> · not in NTEP extract</span>
-              </div>
-              <div v-if="c.fit?.score != null" class="fit-mini">
-                {{ c.fit.label }} · {{ c.fit.score }}
-                <span
-                  class="coverage"
-                  :class="{ 'coverage--partial': !c.fit.coverage.complete }"
-                  :title="coverageTitle(c.fit.coverage)"
-                >
-                  {{ c.fit.coverage.factors }}/{{ c.fit.coverage.totalFactors }}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <button
-            v-if="!selectedBlend.curated"
-            type="button"
-            class="btn btn--ghost"
-            @click="removeBlend(selectedBlend.id)"
-          >
-            Delete my blend
-          </button>
-        </div>
-      </section>
-
-      <!-- CULTIVARS -->
-      <section v-if="tab === 'cultivars'" class="panel">
-        <div class="toolbar">
-          <input v-model="cultQuery" type="search" placeholder="Search cultivars…" />
-          <select v-model="sortKey">
-            <option value="fit">Best for my area</option>
-            <option value="name">Name</option>
-            <option value="transition">Transition quality</option>
-            <option value="drought">Drought</option>
-            <option value="brownPatch">Brown patch</option>
-          </select>
-        </div>
-        <div class="data-table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Cultivar</th>
-                <th>Area fit</th>
-                <th>Transition</th>
-                <th>{{ nearestSiteHeader }}</th>
-                <th>Drought</th>
-                <th>Brown patch</th>
-                <th>Color</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="row in cultivarRows" :key="row.id">
-                <td><strong>{{ row.name }}</strong></td>
-                <td>
-                  <span class="fit-cell">
-                    <span class="fit-pill" :class="fitClass(row.fit?.score)">
-                      {{ row.fit?.score ?? '—' }}
-                    </span>
-                    <span
-                      v-if="row.fit?.coverage?.factors"
-                      class="coverage"
-                      :class="{ 'coverage--partial': !row.fit.coverage.complete }"
-                      :title="coverageTitle(row.fit.coverage)"
-                    >
-                      {{ row.fit.coverage.factors }}/{{ row.fit.coverage.totalFactors }}
-                    </span>
-                  </span>
-                </td>
-                <td class="num">{{ fmt(row.metrics?.transitionQuality?.mean) }}</td>
-                <td class="num">{{ fmt(nearestMetric(row)) }}</td>
-                <td class="num">{{ fmt(row.metrics?.droughtQuality?.mean) }}</td>
-                <td class="num">{{ fmt(row.metrics?.brownPatch?.mean) }}</td>
-                <td class="num">{{ fmt(row.metrics?.geneticColor?.mean) }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="hint">
-          Showing {{ cultivarRows.length }} of {{ cultivarCount }} (search to narrow).
-          The fraction under each fit score is how many of the five rating factors had
-          trial data — <strong>4/5</strong> means the score rests on less evidence than
-          <strong>5/5</strong>, not that the grass is worse.
-        </p>
-      </section>
-
-      <!-- COMPARE -->
-      <section v-if="tab === 'compare'" class="panel">
-        <p class="hint">Pick up to 3 blends to compare for your location.</p>
-        <div class="compare-picks">
-          <label v-for="slot in 3" :key="slot">
-            <span>Blend {{ slot }}</span>
-            <select v-model="compareIds[slot - 1]">
-              <option value="">—</option>
-              <option v-for="b in blends" :key="b.id" :value="b.id">{{ b.name }}</option>
-            </select>
-          </label>
-        </div>
-        <div class="compare-grid">
-          <div v-for="b in compareBlends" :key="b.id" class="card">
-            <h3>{{ b.name }}</h3>
-            <p class="fit" :class="fitClass(fitFor(b)?.score)">
-              {{ fitFor(b)?.label }}
-              <strong v-if="fitFor(b)?.score">{{ fitFor(b)?.score }}</strong>
-            </p>
-            <ul>
-              <li v-for="s in fitFor(b)?.strengths || []" :key="s">{{ s }}</li>
-            </ul>
-            <ul class="warn">
-              <li v-for="w in fitFor(b)?.watchouts || []" :key="w">{{ w }}</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- DATA -->
-      <section v-if="tab === 'data'" class="panel card">
-        <h2>NTEP data coverage</h2>
-        <p v-if="ntepMeta">
-          Source: {{ ntepMeta.sourcePdf }} ({{ ntepMeta.trial }}, {{ ntepMeta.year }}).
-          Parsed high-value tables only — regional turf quality, genetic color, brown patch, drought.
-        </p>
-        <h3>Species roadmap</h3>
-        <ul>
-          <li v-for="s in speciesList" :key="s.id">
-            <strong>{{ s.label }}</strong>
-            — {{ s.ntepTrials?.length ? `loaded (${s.ntepTrials.join(', ')})` : s.status || 'pending ingest' }}
-          </li>
-        </ul>
-        <p class="hint">
-          Re-run ingest:
-          <code>.venv/bin/python scripts/ntep/ingest_pdf.py --pdf path/to/report.pdf</code>
-        </p>
-      </section>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import {
   allCultivars,
@@ -845,3 +584,264 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="seeds">
+    <header class="seeds-hero">
+          <div class="seeds-hero__inner container">
+        <p class="eyebrow">
+          <font-awesome-icon icon="fa-solid fa-seedling" />
+          Seed intel
+        </p>
+        <h1>Pick seed on evidence.</h1>
+        <p class="lede">
+          Blends and cultivars scored against the NTEP trial sites nearest you.
+        </p>
+        <p class="meta">
+          {{ cultivarCount }} tall fescue cultivars · {{ blends.length }} blends
+          <span v-if="userLocation"> · scoring for {{ userLocation.label || userLocation.city }}</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="seeds__inner container">
+      <div class="tabs" role="tablist">
+        <button
+          v-for="t in tabs"
+          :key="t.id"
+          type="button"
+          class="tab"
+          :class="{ active: tab === t.id }"
+          @click="tab = t.id"
+        >
+          {{ t.label }}
+        </button>
+      </div>
+
+      <!-- BLENDS -->
+      <section v-if="tab === 'blends'" class="panel">
+        <div class="toolbar">
+          <input v-model="blendQuery" type="search" placeholder="Search blends…" />
+          <button type="button" class="btn" @click="showBlendForm = !showBlendForm">
+            {{ showBlendForm ? 'Close' : 'Add my blend' }}
+          </button>
+        </div>
+
+        <div v-if="showBlendForm" class="blend-form card">
+          <h3>Add a blend from your bag label</h3>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input v-model="draft.name" type="text" />
+            </label>
+            <label>
+              <span>Manufacturer</span>
+              <input v-model="draft.manufacturer" type="text" />
+            </label>
+            <label class="full">
+              <span>Components (name, optional %)</span>
+              <div v-for="(row, i) in draft.components" :key="i" class="comp-row">
+                <input v-model="row.name" type="text" placeholder="Cultivar name" />
+                <input v-model.number="row.percent" type="number" min="0" max="100" placeholder="%" />
+                <button type="button" class="linkish" @click="draft.components.splice(i, 1)">Remove</button>
+              </div>
+              <button type="button" class="btn btn--ghost" @click="draft.components.push({ name: '', percent: null })">
+                + Cultivar
+              </button>
+            </label>
+          </div>
+          <button type="button" class="btn btn--primary" @click="saveDraft">Save to this browser</button>
+        </div>
+
+        <div class="card-grid">
+          <article
+            v-for="b in filteredBlends"
+            :key="b.id"
+            class="blend-card"
+            :class="{ selected: selectedBlendId === b.id }"
+            @click="selectBlend(b.id)"
+          >
+            <div class="blend-card__top">
+              <span class="tag">{{ b.curated ? 'Curated' : 'Yours' }}</span>
+              <span v-if="fitFor(b)" class="fit" :class="fitClass(fitFor(b)?.score)">
+                {{ fitFor(b)?.label }}
+                <em v-if="fitFor(b)?.score != null">{{ fitFor(b)?.score }}</em>
+              </span>
+            </div>
+            <h3>{{ b.name }}</h3>
+            <p class="mfr">{{ b.manufacturer }}</p>
+            <p>{{ b.summary || b.profile }}</p>
+            <p class="comps">
+              {{ (b.components || []).map((c) => c.name).join(' · ') }}
+            </p>
+          </article>
+        </div>
+
+        <div v-if="selectedBlend" class="detail card">
+          <h2>{{ selectedBlend.name }}</h2>
+          <p class="muted">{{ selectedBlend.notes }}</p>
+
+          <div v-if="selectedFit" class="fit-box">
+            <strong>{{ selectedFit.label }}</strong>
+            <span v-if="selectedFit.score != null">
+              Score {{ selectedFit.score }} / 9
+              <em
+                v-if="selectedFit.coverage"
+                class="coverage"
+                :class="{ 'coverage--partial': !selectedFit.coverage.complete }"
+                :title="coverageTitle(selectedFit.coverage)"
+              >
+                · based on {{ coverageLabel(selectedFit.coverage) }}
+              </em>
+            </span>
+            <ul v-if="selectedFit.strengths?.length">
+              <li v-for="s in selectedFit.strengths" :key="s">{{ s }}</li>
+            </ul>
+            <ul v-if="selectedFit.watchouts?.length" class="warn">
+              <li v-for="w in selectedFit.watchouts" :key="w">{{ w }}</li>
+            </ul>
+          </div>
+
+          <h3>Cultivars in this blend</h3>
+          <div class="comp-table">
+            <div v-for="c in selectedComponents" :key="c.name" class="comp-line">
+              <div>
+                <strong>{{ c.name }}</strong>
+                <span v-if="c.percent"> · {{ c.percent }}%</span>
+                <span v-if="!c.cultivar && !c.fit" class="missing"> · not in NTEP extract</span>
+              </div>
+              <div v-if="c.fit?.score != null" class="fit-mini">
+                {{ c.fit.label }} · {{ c.fit.score }}
+                <span
+                  class="coverage"
+                  :class="{ 'coverage--partial': !c.fit.coverage.complete }"
+                  :title="coverageTitle(c.fit.coverage)"
+                >
+                  {{ c.fit.coverage.factors }}/{{ c.fit.coverage.totalFactors }}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            v-if="!selectedBlend.curated"
+            type="button"
+            class="btn btn--ghost"
+            @click="removeBlend(selectedBlend.id)"
+          >
+            Delete my blend
+          </button>
+        </div>
+      </section>
+
+      <!-- CULTIVARS -->
+      <section v-if="tab === 'cultivars'" class="panel">
+        <div class="toolbar">
+          <input v-model="cultQuery" type="search" placeholder="Search cultivars…" />
+          <select v-model="sortKey">
+            <option value="fit">Best for my area</option>
+            <option value="name">Name</option>
+            <option value="transition">Transition quality</option>
+            <option value="drought">Drought</option>
+            <option value="brownPatch">Brown patch</option>
+          </select>
+        </div>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Cultivar</th>
+                <th>Area fit</th>
+                <th>Transition</th>
+                <th>{{ nearestSiteHeader }}</th>
+                <th>Drought</th>
+                <th>Brown patch</th>
+                <th>Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in cultivarRows" :key="row.id">
+                <td><strong>{{ row.name }}</strong></td>
+                <td>
+                  <span class="fit-cell">
+                    <span class="fit-pill" :class="fitClass(row.fit?.score)">
+                      {{ row.fit?.score ?? '—' }}
+                    </span>
+                    <span
+                      v-if="row.fit?.coverage?.factors"
+                      class="coverage"
+                      :class="{ 'coverage--partial': !row.fit.coverage.complete }"
+                      :title="coverageTitle(row.fit.coverage)"
+                    >
+                      {{ row.fit.coverage.factors }}/{{ row.fit.coverage.totalFactors }}
+                    </span>
+                  </span>
+                </td>
+                <td class="num">{{ fmt(row.metrics?.transitionQuality?.mean) }}</td>
+                <td class="num">{{ fmt(nearestMetric(row)) }}</td>
+                <td class="num">{{ fmt(row.metrics?.droughtQuality?.mean) }}</td>
+                <td class="num">{{ fmt(row.metrics?.brownPatch?.mean) }}</td>
+                <td class="num">{{ fmt(row.metrics?.geneticColor?.mean) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hint">
+          Showing {{ cultivarRows.length }} of {{ cultivarCount }} (search to narrow).
+          The fraction under each fit score is how many of the five rating factors had
+          trial data — <strong>4/5</strong> means the score rests on less evidence than
+          <strong>5/5</strong>, not that the grass is worse.
+        </p>
+      </section>
+
+      <!-- COMPARE -->
+      <section v-if="tab === 'compare'" class="panel">
+        <p class="hint">Pick up to 3 blends to compare for your location.</p>
+        <div class="compare-picks">
+          <label v-for="slot in 3" :key="slot">
+            <span>Blend {{ slot }}</span>
+            <select v-model="compareIds[slot - 1]">
+              <option value="">—</option>
+              <option v-for="b in blends" :key="b.id" :value="b.id">{{ b.name }}</option>
+            </select>
+          </label>
+        </div>
+        <div class="compare-grid">
+          <div v-for="b in compareBlends" :key="b.id" class="card">
+            <h3>{{ b.name }}</h3>
+            <p class="fit" :class="fitClass(fitFor(b)?.score)">
+              {{ fitFor(b)?.label }}
+              <strong v-if="fitFor(b)?.score">{{ fitFor(b)?.score }}</strong>
+            </p>
+            <ul>
+              <li v-for="s in fitFor(b)?.strengths || []" :key="s">{{ s }}</li>
+            </ul>
+            <ul class="warn">
+              <li v-for="w in fitFor(b)?.watchouts || []" :key="w">{{ w }}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA -->
+      <section v-if="tab === 'data'" class="panel card">
+        <h2>NTEP data coverage</h2>
+        <p v-if="ntepMeta">
+          Source: {{ ntepMeta.sourcePdf }} ({{ ntepMeta.trial }}, {{ ntepMeta.year }}).
+          Parsed high-value tables only — regional turf quality, genetic color, brown patch, drought.
+        </p>
+        <h3>Species roadmap</h3>
+        <ul>
+          <li v-for="s in speciesList" :key="s.id">
+            <strong>{{ s.label }}</strong>
+            — {{ s.ntepTrials?.length ? `loaded (${s.ntepTrials.join(', ')})` : s.status || 'pending ingest' }}
+          </li>
+        </ul>
+        <p class="hint">
+          Re-run ingest:
+          <code>.venv/bin/python scripts/ntep/ingest_pdf.py --pdf path/to/report.pdf</code>
+        </p>
+      </section>
+    </div>
+  </div>
+</template>

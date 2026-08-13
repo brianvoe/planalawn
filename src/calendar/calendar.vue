@@ -1,65 +1,3 @@
-<template>
-  <div class="calendar-page">
-    <div class="container">
-      <header class="page-header">
-        <p class="eyebrow">
-          <font-awesome-icon icon="fa-solid fa-calendar-day" />
-          Calendar
-        </p>
-        <h1>What to work on next.</h1>
-        <p class="lede">
-          Seeding opens when your soil hits the right band — not when the month says so.
-        </p>
-      </header>
-
-      <Conditions
-        :conditions="conditions"
-        :error="weatherError"
-        :loading="weatherLoading"
-        @refresh="$emit('refresh-weather')"
-      />
-
-      <section class="month-strip" aria-label="Task months">
-        <div
-          v-for="(label, idx) in monthLabels"
-          :key="label"
-          class="month-pill"
-          :class="{ current: idx + 1 === currentMonth }"
-        >
-          <span>{{ label }}</span>
-          <div class="month-pill__dots">
-            <span
-              v-for="t in markersForMonth(idx + 1)"
-              :key="t.id"
-              class="dot"
-              :title="t.name"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section v-for="bucket in bucketOrder" :key="bucket.key" class="bucket">
-        <h2>{{ bucket.label }}</h2>
-        <div v-if="groups[bucket.key].length" class="bucket__list">
-          <router-link
-            v-for="item in groups[bucket.key]"
-            :key="item.task.id"
-            class="card card--link task-row"
-            :to="`/tasks/${item.task.id}`"
-          >
-            <div>
-              <h3>{{ item.task.name }}</h3>
-              <p>{{ item.reason }}</p>
-            </div>
-            <span class="chip" :class="`chip--${item.soil.tone}`">{{ item.soil.label }}</span>
-          </router-link>
-        </div>
-        <p v-else class="empty">Nothing in this bucket right now.</p>
-      </section>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import Conditions from '../components/conditions.vue'
 import { tasks } from '../data/tasks'
@@ -215,3 +153,65 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="calendar-page">
+    <div class="container">
+      <header class="page-header">
+        <p class="eyebrow">
+          <font-awesome-icon icon="fa-solid fa-calendar-day" />
+          Calendar
+        </p>
+        <h1>What to work on next.</h1>
+        <p class="lede">
+          Seeding opens when your soil hits the right band — not when the month says so.
+        </p>
+      </header>
+
+      <Conditions
+        :conditions="conditions"
+        :error="weatherError"
+        :loading="weatherLoading"
+        @refresh="$emit('refresh-weather')"
+      />
+
+      <section class="month-strip" aria-label="Task months">
+        <div
+          v-for="(label, idx) in monthLabels"
+          :key="label"
+          class="month-pill"
+          :class="{ current: idx + 1 === currentMonth }"
+        >
+          <span>{{ label }}</span>
+          <div class="month-pill__dots">
+            <span
+              v-for="t in markersForMonth(idx + 1)"
+              :key="t.id"
+              class="dot"
+              :title="t.name"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section v-for="bucket in bucketOrder" :key="bucket.key" class="bucket">
+        <h2>{{ bucket.label }}</h2>
+        <div v-if="groups[bucket.key].length" class="bucket__list">
+          <router-link
+            v-for="item in groups[bucket.key]"
+            :key="item.task.id"
+            class="card card--link task-row"
+            :to="`/tasks/${item.task.id}`"
+          >
+            <div>
+              <h3>{{ item.task.name }}</h3>
+              <p>{{ item.reason }}</p>
+            </div>
+            <span class="chip" :class="`chip--${item.soil.tone}`">{{ item.soil.label }}</span>
+          </router-link>
+        </div>
+        <p v-else class="empty">Nothing in this bucket right now.</p>
+      </section>
+    </div>
+  </div>
+</template>

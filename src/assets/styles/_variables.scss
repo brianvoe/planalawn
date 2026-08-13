@@ -49,6 +49,11 @@
   --spacing-half: 8px;
   --spacing-quarter: 4px;
   --shadow: 0 1px 2px rgba(22, 36, 28, 0.04), 0 8px 24px rgba(22, 36, 28, 0.05);
+  --modal-overlay-bg: color-mix(in srgb, var(--color-text) 55%, transparent);
+  --modal-overlay-blur: 3px;
+  --modal-panel-radius: calc(var(--border-radius) * 2);
+  --modal-panel-shadow: 0 8px 40px color-mix(in srgb, var(--color-text) 30%, transparent);
+  --speed: 0.3s;
   --input-height: 44px;
   --max-width: 1120px;
 

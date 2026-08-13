@@ -1,26 +1,8 @@
-<template>
-  <div class="app-shell">
-    <Nav :conditions="conditions" />
-    <main class="app-shell__main">
-      <LocationPrompt @location-set="onLocationSet" />
-      <router-view v-slot="{ Component }">
-        <component
-          :is="Component"
-          :conditions="conditions"
-          :weather-error="weatherError"
-          :weather-loading="weatherLoading"
-          @refresh-weather="loadWeather(true)"
-        />
-      </router-view>
-    </main>
-    <Footer />
-  </div>
-</template>
-
 <script lang="ts">
 import Nav from './components/nav.vue'
 import Footer from './components/footer.vue'
 import LocationPrompt from './components/location-prompt.vue'
+import { snapToMetro } from './services/geolocation'
 import { fetchConditions } from './services/weather'
 import type { Conditions, UserLocation } from './types'
 
@@ -34,13 +16,13 @@ export default {
       weatherLoading: false,
     }
   },
-  computed: {
-    userLocation(): UserLocation | null {
-      return this.$store.getters.userLocation
-    },
-    hasLocation(): boolean {
-      return this.$store.getters.hasLocation
-    },
+  created() {
+    const snapped = snapToMetro(this.$store.state.location)
+    if (snapped && snapped.metroId !== this.$store.state.location.metroId) {
+      this.$store.dispatch('setLocation', snapped)
+      return
+    }
+    if (this.hasLocation) this.loadWeather(false)
   },
   watch: {
     userLocation: {
@@ -50,13 +32,15 @@ export default {
       },
     },
   },
-  created() {
-    if (this.hasLocation) this.loadWeather(false)
+  computed: {
+    userLocation(): UserLocation | null {
+      return this.$store.getters.userLocation
+    },
+    hasLocation(): boolean {
+      return this.$store.getters.hasLocation
+    },
   },
   methods: {
-    onLocationSet() {
-      this.loadWeather(true)
-    },
     async loadWeather(force: boolean) {
       if (!this.hasLocation) {
         this.conditions = null
@@ -84,3 +68,22 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="app-shell">
+    <Nav :conditions="conditions" />
+    <main class="app-shell__main">
+      <LocationPrompt />
+      <router-view v-slot="{ Component }">
+        <component
+          :is="Component"
+          :conditions="conditions"
+          :weather-error="weatherError"
+          :weather-loading="weatherLoading"
+          @refresh-weather="loadWeather(true)"
+        />
+      </router-view>
+    </main>
+    <Footer />
+  </div>
+</template>

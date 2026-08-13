@@ -9,7 +9,7 @@ import Sprayer from '../sprayer/sprayer.vue'
 import Settings from '../settings/settings.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: Home },
     { path: '/calendar', name: 'calendar', component: Calendar },

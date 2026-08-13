@@ -1,31 +1,3 @@
-<template>
-  <footer class="site-footer on-dark wave-top">
-    <div class="site-footer__inner container">
-      <div class="site-footer__brand">
-        <strong>Lawn Plan Nerd</strong>
-        <p>Soil-temp-aware lawn timing, rates and seed data for the US.</p>
-        <p class="site-footer__domain">lawnplannerd.com</p>
-      </div>
-
-      <nav class="site-footer__nav" aria-label="Footer">
-        <router-link to="/calendar">Calendar</router-link>
-        <router-link to="/tasks">Tasks</router-link>
-        <router-link to="/seeds">Seeds</router-link>
-        <router-link to="/tools/sprayer">Sprayer</router-link>
-        <router-link to="/settings">My lawn</router-link>
-      </nav>
-    </div>
-
-    <div class="site-footer__fine container">
-      <p>
-        Rates are starting templates — always follow the label on the product you buy.
-        Soil temperature from Open-Meteo; seed scores from NTEP trial data.
-      </p>
-      <p>Your lawn profile stays in this browser unless you export it.</p>
-    </div>
-  </footer>
-</template>
-
 <script lang="ts">
 export default {
   name: 'Footer',
@@ -101,3 +73,31 @@ export default {
   }
 }
 </style>
+
+<template>
+  <footer class="site-footer on-dark wave-top">
+    <div class="site-footer__inner container">
+      <div class="site-footer__brand">
+        <strong>Lawn Plan Nerd</strong>
+        <p>Soil-temp-aware lawn timing, rates and seed data for the US.</p>
+        <p class="site-footer__domain">lawnplannerd.com</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <router-link to="/calendar">Calendar</router-link>
+        <router-link to="/tasks">Tasks</router-link>
+        <router-link to="/seeds">Seeds</router-link>
+        <router-link to="/tools/sprayer">Sprayer</router-link>
+        <router-link to="/settings">My lawn</router-link>
+      </nav>
+    </div>
+
+    <div class="site-footer__fine container">
+      <p>
+        Rates are starting templates — always follow the label on the product you buy.
+        Soil temperature from Open-Meteo; seed scores from NTEP trial data.
+      </p>
+      <p>Your lawn profile stays in this browser unless you export it.</p>
+    </div>
+  </footer>
+</template>

@@ -1,9 +1,3 @@
-<template>
-  <div class="d3-chart">
-    <div ref="chart" class="d3-chart__el" />
-  </div>
-</template>
-
 <script lang="ts">
 import { renderHorizontalBars, renderGroupedHorizontalBars } from '../charts/bars'
 import type { PropType } from 'vue'
@@ -54,3 +48,9 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="d3-chart">
+    <div ref="chart" class="d3-chart__el" />
+  </div>
+</template>

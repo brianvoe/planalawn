@@ -43,6 +43,8 @@ function defaultState(): RootState {
       latitude: null,
       longitude: null,
       climateBand: null,
+      metroId: null,
+      usdaZone: null,
       promptDismissed: false,
     },
     equipment: {

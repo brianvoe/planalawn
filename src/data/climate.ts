@@ -9,12 +9,14 @@ export const climateBands: Record<ClimateBandId, ClimateBand> = {
   cool: {
     id: 'cool',
     label: 'Cool-season core',
+    shortLabel: 'Cool',
     summary: 'Strong cool-season turf climate. Tall fescue, KY bluegrass, and rye mixes are common.',
     speciesPriority: ['kentucky_bluegrass', 'tall_fescue', 'fine_fescue', 'perennial_ryegrass'],
   },
   transition: {
     id: 'transition',
     label: 'Transition zone',
+    shortLabel: 'Transition',
     summary:
       'Summers stress cool-season grasses. Tall fescue is often the best cool-season choice; regional NTEP matters.',
     speciesPriority: ['tall_fescue', 'kentucky_bluegrass', 'bermudagrass', 'perennial_ryegrass'],
@@ -22,6 +24,7 @@ export const climateBands: Record<ClimateBandId, ClimateBand> = {
   warm: {
     id: 'warm',
     label: 'Warm-season core',
+    shortLabel: 'Warm',
     summary:
       'Warm-season grasses dominate. Cool-season tall fescue is usually limited to shade or higher elevations.',
     speciesPriority: ['bermudagrass', 'tall_fescue'],
@@ -37,3 +40,18 @@ export function climateBandFromLat(lat: number | null | undefined): ClimateBand 
 }
 
 export const soilDepthLabel = '6 cm (~2.4 in)'
+
+export function zoneLine(location: {
+  climateBand?: ClimateBandId | null
+  usdaZone?: string | null
+  latitude?: number | null
+} | null | undefined): string {
+  if (!location) return ''
+  const band = location.climateBand
+    ? climateBands[location.climateBand]
+    : climateBandFromLat(location.latitude)
+  const parts: string[] = []
+  if (band) parts.push(band.shortLabel)
+  if (location.usdaZone) parts.push(location.usdaZone)
+  return parts.join(' · ')
+}

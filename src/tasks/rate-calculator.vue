@@ -1,49 +1,3 @@
-<template>
-  <div class="rate-calc">
-    <div class="rate-calc__controls">
-      <LawnSize />
-      <label v-if="showDepth">
-        <span>Depth (inches)</span>
-        <input v-model.number="depthInches" type="number" min="0.1" step="0.1" />
-      </label>
-      <label v-if="showPer1000">
-        <span>Rate / 1000 sq ft ({{ unit }})</span>
-        <input v-model.number="per1000" type="number" min="0" step="0.1" />
-      </label>
-      <label v-if="altOptions.length" class="rate-calc__select">
-        <span>Product template</span>
-        <select v-model="selectedKey">
-          <option v-for="opt in altOptions" :key="opt.id" :value="opt.id">
-            {{ opt.label }}
-          </option>
-        </select>
-      </label>
-    </div>
-
-    <div class="rate-calc__result">
-      <template v-if="mode === 'coverage'">
-        <p>
-          Apply about
-          <strong>{{ amountLabel }}</strong>
-          across
-          <strong>{{ lawnSqFt.toLocaleString() }} sq ft</strong>
-          ({{ per1000 }} {{ unit }} / 1000).
-        </p>
-      </template>
-      <template v-else-if="mode === 'volume'">
-        <p>
-          Roughly
-          <strong>{{ volumeLabel }} cubic yards</strong>
-          at {{ depthInches }}″ over
-          <strong>{{ lawnSqFt.toLocaleString() }} sq ft</strong>.
-        </p>
-      </template>
-      <p v-if="notes" class="rate-calc__notes">{{ notes }}</p>
-      <p class="rate-calc__notes">Edited rates save in this browser for next time.</p>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
 import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../data/rates'
@@ -178,3 +132,49 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="rate-calc">
+    <div class="rate-calc__controls">
+      <LawnSize />
+      <label v-if="showDepth">
+        <span>Depth (inches)</span>
+        <input v-model.number="depthInches" type="number" min="0.1" step="0.1" />
+      </label>
+      <label v-if="showPer1000">
+        <span>Rate / 1000 sq ft ({{ unit }})</span>
+        <input v-model.number="per1000" type="number" min="0" step="0.1" />
+      </label>
+      <label v-if="altOptions.length" class="rate-calc__select">
+        <span>Product template</span>
+        <select v-model="selectedKey">
+          <option v-for="opt in altOptions" :key="opt.id" :value="opt.id">
+            {{ opt.label }}
+          </option>
+        </select>
+      </label>
+    </div>
+
+    <div class="rate-calc__result">
+      <template v-if="mode === 'coverage'">
+        <p>
+          Apply about
+          <strong>{{ amountLabel }}</strong>
+          across
+          <strong>{{ lawnSqFt.toLocaleString() }} sq ft</strong>
+          ({{ per1000 }} {{ unit }} / 1000).
+        </p>
+      </template>
+      <template v-else-if="mode === 'volume'">
+        <p>
+          Roughly
+          <strong>{{ volumeLabel }} cubic yards</strong>
+          at {{ depthInches }}″ over
+          <strong>{{ lawnSqFt.toLocaleString() }} sq ft</strong>.
+        </p>
+      </template>
+      <p v-if="notes" class="rate-calc__notes">{{ notes }}</p>
+      <p class="rate-calc__notes">Edited rates save in this browser for next time.</p>
+    </div>
+  </div>
+</template>

@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "ntep:ingest": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/tf18_24-8.pdf --out src/data/ntep"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/vue-fontawesome": "^3.3.3",
     "d3": "^7.9.0",
+    "slim-select": "^4.0.7",
     "vue": "^3.5.13",
     "vue-router": "^4.6.4",
     "vuex": "^4.1.0"
@@ -23,8 +26,11 @@
     "@types/d3": "^7.4.3",
     "@types/node": "^26.2.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^10.8.1",
+    "eslint-plugin-vue": "^10.10.0",
     "sass": "^1.85.0",
     "typescript": "~5.8.3",
+    "typescript-eslint": "^8.67.0",
     "vite": "^6.2.0",
     "vue-tsc": "^3.3.9"
   }
