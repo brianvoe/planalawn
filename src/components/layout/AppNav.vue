@@ -1,7 +1,10 @@
 <template>
   <nav class="site-nav" aria-label="Primary">
-    <div class="site-nav__inner">
-      <router-link class="site-nav__brand" to="/">Lawn Plan Nerd</router-link>
+    <div class="site-nav__inner container">
+      <router-link class="site-nav__brand" to="/">
+        <img class="site-nav__mark" src="/favicon.svg" alt="" width="28" height="28" />
+        Lawn Plan Nerd
+      </router-link>
 
       <button
         type="button"
@@ -10,7 +13,8 @@
         aria-controls="primary-menu"
         @click="menuOpen = !menuOpen"
       >
-        Menu
+        <font-awesome-icon :icon="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" />
+        {{ menuOpen ? 'Close' : 'Menu' }}
       </button>
 
       <ul id="primary-menu" class="site-nav__links" :class="{ open: menuOpen }">
@@ -26,14 +30,16 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
 import SoilTempChip from './SoilTempChip.vue'
+import type { PropType } from 'vue'
+import type { Conditions } from '../../types'
 
 export default {
   name: 'AppNav',
   components: { SoilTempChip },
   props: {
-    conditions: { type: Object, default: null },
+    conditions: { type: Object as PropType<Conditions | null>, default: null },
   },
   data() {
     return { menuOpen: false }
@@ -41,20 +47,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
-  background: rgba($color-bg, 0.92);
-  border-bottom: 1px solid $color-border;
 
-  &__inner {
-    @include container;
+  .site-nav__inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -62,55 +64,68 @@ export default {
     padding-block: 0.7rem;
   }
 
-  &__brand {
-    font-family: $font-display;
-    font-size: 1.02rem;
-    font-weight: $font-weight-display;
-    letter-spacing: -0.03em;
-    color: $color-ink;
-    text-decoration: none;
+  .site-nav__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     margin-right: auto;
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    text-decoration: none;
   }
 
-  &__toggle {
-    @media (min-width: $bp-lg) {
-      display: none;
+  .site-nav__mark {
+    display: block;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+
+  .site-nav__toggle {
+    display: none;
+
+    @media (max-width: 1023px) {
+      display: inline-flex;
     }
   }
 
-  &__links {
-    display: none;
+  .site-nav__links {
+    display: flex;
     gap: 0.85rem;
-    list-style: none;
+    width: auto;
     margin: 0;
     padding: 0;
-    width: 100%;
-    order: 3;
+    list-style: none;
+    order: 0;
 
-    &.open {
-      display: grid;
-      gap: 0.35rem;
-      padding-bottom: 0.35rem;
-    }
+    @media (max-width: 1023px) {
+      display: none;
+      width: 100%;
+      order: 3;
 
-    @media (min-width: $bp-lg) {
-      display: flex;
-      width: auto;
-      order: 0;
+      &.open {
+        display: grid;
+        gap: 0.35rem;
+        padding-bottom: 0.35rem;
+      }
     }
 
     a {
-      text-decoration: none;
-      color: $color-ink-muted;
       font-size: 0.85rem;
       font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
 
       &.router-link-active {
-        color: $color-ink;
+        color: var(--color-text);
       }
 
       &:hover {
-        color: $color-ink;
+        color: var(--color-text);
       }
     }
   }

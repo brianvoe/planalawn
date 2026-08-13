@@ -49,16 +49,17 @@
   </section>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
 import { soilDepthLabel } from '../../data/climate'
 import { formatTemp, formatUpdated } from '../../services/weather'
 import { seedingWindowStatus } from '../../services/timing'
+import type { PropType } from 'vue'
+import type { Conditions, UserLocation, WindowStatus } from '../../types'
 
 export default {
   name: 'ConditionsBanner',
   props: {
-    conditions: { type: Object, default: null },
+    conditions: { type: Object as PropType<Conditions | null>, default: null },
     error: { type: String, default: null },
     loading: { type: Boolean, default: false },
   },
@@ -67,14 +68,19 @@ export default {
     return { soilDepthLabel }
   },
   computed: {
-    ...mapGetters(['hasLocation', 'userLocation']),
-    title() {
+    hasLocation(): boolean {
+      return this.$store.getters.hasLocation
+    },
+    userLocation(): UserLocation | null {
+      return this.$store.getters.userLocation
+    },
+    title(): string {
       return this.userLocation?.label || this.userLocation?.city || 'Local conditions'
     },
-    seedStatus() {
+    seedStatus(): WindowStatus {
       return seedingWindowStatus(this.conditions?.soilTemp6F)
     },
-    statusClass() {
+    statusClass(): string {
       return `tone-${this.seedStatus.tone}`
     },
   },
@@ -82,107 +88,105 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .conditions {
-  @include card;
   padding: 1.25rem 1.35rem;
-  border-top: 3px solid $color-border;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-border);
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: var(--shadow);
 
   &.tone-good {
-    border-top-color: $status-good;
+    border-top-color: var(--color-success);
   }
 
   &.tone-caution {
-    border-top-color: $status-caution;
+    border-top-color: var(--color-warning);
   }
 
   &.tone-cold {
-    border-top-color: $status-cold;
+    border-top-color: var(--color-info);
   }
 
   &.tone-hot {
-    border-top-color: $status-hot;
+    border-top-color: var(--color-danger);
   }
 
-  &__top {
+  .conditions__top {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
     align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 1rem;
   }
 
-  &__title {
+  .conditions__title {
     margin: 0;
     font-size: 1.2rem;
   }
 
-  &__sub {
+  .conditions__sub {
     margin: 0.25rem 0 0;
     font-size: 0.88rem;
-    color: $color-ink-muted;
+    color: var(--color-text-muted);
   }
 
-  &__error {
-    background: $status-caution-soft;
-    color: $status-caution;
-    padding: 0.65rem 0.8rem;
-    border-radius: $radius-sm;
-    font-size: 0.88rem;
+  .conditions__error {
     margin-bottom: 0.85rem;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.88rem;
+    color: var(--color-warning);
+    background: var(--color-warning-bg);
+    border-radius: var(--border-radius);
   }
 
-  &__grid {
+  .conditions__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
+
+    @media (max-width: 559px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &__detail {
+  .conditions__detail {
     margin: 0.85rem 0 0;
     font-size: 0.9rem;
   }
 
-  &__updated {
+  .conditions__updated {
     margin: 0.45rem 0 0;
     font-size: 0.78rem;
-    color: $color-ink-muted;
-  }
-}
-
-.stat {
-  display: grid;
-  gap: 0.15rem;
-
-  span {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: $color-ink-muted;
-    font-weight: 600;
+    color: var(--color-text-muted);
   }
 
-  strong {
-    font-family: $font-display;
-    font-size: clamp(1rem, 2.5vw, 1.35rem);
-    font-variant-numeric: tabular-nums;
-    line-height: 1.2;
-  }
+  .stat {
+    display: grid;
+    gap: 0.15rem;
 
-  &__status {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 1rem;
-  }
-}
+    span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
 
-@media (max-width: 560px) {
-  .conditions__grid {
-    grid-template-columns: 1fr;
+    strong {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.2;
+    }
+
+    .stat__status {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1rem;
+    }
   }
 }
 </style>

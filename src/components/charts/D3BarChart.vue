@@ -4,44 +4,53 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { renderHorizontalBars, renderGroupedHorizontalBars } from '../../charts/bars'
+import type { PropType } from 'vue'
+import type { BarDatum, ChartOptions, GroupedBarRow } from '../../types'
 
 export default {
   name: 'D3BarChart',
   props: {
-    type: { type: String, default: 'horizontal' }, // horizontal | grouped
-    data: { type: Array, required: true },
-    options: { type: Object, default: () => ({}) },
+    type: { type: String, default: 'horizontal' },
+    data: { type: Array as PropType<BarDatum[] | GroupedBarRow[]>, required: true },
+    options: { type: Object as PropType<ChartOptions>, default: () => ({}) },
+  },
+  data() {
+    return {
+      ro: null as ResizeObserver | null,
+    }
   },
   mounted() {
     this.draw()
-    this._ro = new ResizeObserver(() => this.draw())
-    this._ro.observe(this.$refs.chart)
+    this.ro = new ResizeObserver(() => this.draw())
+    this.ro.observe(this.$refs.chart as Element)
   },
   updated() {
     this.draw()
   },
   beforeUnmount() {
-    this._ro?.disconnect()
+    this.ro?.disconnect()
   },
   methods: {
     draw() {
-      const el = this.$refs.chart
+      const el = this.$refs.chart as Element | undefined
       if (!el) return
       if (this.type === 'grouped') {
-        renderGroupedHorizontalBars(el, this.data, this.options)
+        renderGroupedHorizontalBars(el, this.data as GroupedBarRow[], this.options)
       } else {
-        renderHorizontalBars(el, this.data, this.options)
+        renderHorizontalBars(el, this.data as BarDatum[], this.options)
       }
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
-.d3-chart__el {
-  width: 100%;
-  overflow: hidden;
+<style lang="scss">
+.d3-chart {
+  .d3-chart__el {
+    width: 100%;
+    overflow: hidden;
+  }
 }
 </style>

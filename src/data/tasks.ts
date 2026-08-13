@@ -1,4 +1,6 @@
-export const tasks = [
+import type { Task } from '../types'
+
+export const tasks: Task[] = [
   {
     id: 'lawn-kill',
     name: 'Kill existing grass / weeds',
@@ -177,10 +179,10 @@ export const tasks = [
   },
 ]
 
-export function getTask(id) {
+export function getTask(id: string): Task | null {
   return tasks.find((t) => t.id === id) || null
 }
 
-export function getTasksByCategory(category) {
+export function getTasksByCategory(category: string): Task[] {
   return tasks.filter((t) => t.category === category)
 }

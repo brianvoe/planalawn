@@ -17,25 +17,30 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
 import AppNav from './components/layout/AppNav.vue'
 import AppFooter from './components/layout/AppFooter.vue'
 import LocationPrompt from './components/layout/LocationPrompt.vue'
 import { fetchConditions } from './services/weather'
+import type { Conditions, UserLocation } from './types'
 
 export default {
   name: 'App',
   components: { AppNav, AppFooter, LocationPrompt },
   data() {
     return {
-      conditions: null,
-      weatherError: null,
+      conditions: null as Conditions | null,
+      weatherError: null as string | null,
       weatherLoading: false,
     }
   },
   computed: {
-    ...mapGetters(['userLocation', 'hasLocation']),
+    userLocation(): UserLocation | null {
+      return this.$store.getters.userLocation
+    },
+    hasLocation(): boolean {
+      return this.$store.getters.hasLocation
+    },
   },
   watch: {
     userLocation: {
@@ -52,7 +57,7 @@ export default {
     onLocationSet() {
       this.loadWeather(true)
     },
-    async loadWeather(force) {
+    async loadWeather(force: boolean) {
       if (!this.hasLocation) {
         this.conditions = null
         this.weatherError = 'Set your location to load local soil temperature'
@@ -63,7 +68,7 @@ export default {
       try {
         this.conditions = await fetchConditions(this.userLocation, { force })
       } catch (err) {
-        this.weatherError = err?.message || 'Could not load weather'
+        this.weatherError = err instanceof Error ? err.message : 'Could not load weather'
       } finally {
         this.weatherLoading = false
       }
@@ -72,8 +77,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.app-shell__main {
-  min-height: 60vh;
+<style lang="scss">
+.app-shell {
+  .app-shell__main {
+    min-height: 60vh;
+  }
 }
 </style>

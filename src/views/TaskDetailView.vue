@@ -1,6 +1,6 @@
 <template>
-  <div class="page">
-    <div class="page__inner" v-if="task">
+  <div class="task-detail-page">
+    <div class="container" v-if="task">
       <p class="back"><router-link to="/tasks">← All tasks</router-link></p>
       <header class="page-header">
         <span class="cat">{{ task.category }}</span>
@@ -8,7 +8,7 @@
         <p class="lede">{{ task.summary }}</p>
       </header>
 
-      <div class="timing-box">
+      <div class="timing-box" v-if="evaluation">
         <h2>Timing</h2>
         <p>{{ evaluation.reason }}</p>
         <p class="muted">{{ evaluation.rule.note }}</p>
@@ -129,70 +129,75 @@
         </ul>
       </section>
     </div>
-    <div v-else class="page__inner">
+    <div v-else class="container">
       <p>Task not found. <router-link to="/tasks">Back to tasks</router-link></p>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import ConditionsBanner from '../components/layout/ConditionsBanner.vue'
 import RateCalculator from '../components/rates/RateCalculator.vue'
 import SprayerCalculator from '../components/rates/SprayerCalculator.vue'
 import { getTask } from '../data/tasks'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
+import type { PropType } from 'vue'
+import type { Conditions, EvaluatedTask, Project, Task, TaskLog } from '../types'
+
+const milestoneMap: Record<string, keyof Project> = {
+  'lawn-kill': 'killAppliedAt',
+  aeration: 'aeratedAt',
+  topsoil: 'topsoilAt',
+  seeding: 'seededAt',
+  overseeding: 'seededAt',
+}
 
 export default {
   name: 'TaskDetailView',
   components: { ConditionsBanner, RateCalculator, SprayerCalculator },
   props: {
     id: { type: String, required: true },
-    conditions: { type: Object, default: null },
+    conditions: { type: Object as PropType<Conditions | null>, default: null },
     weatherError: { type: String, default: null },
     weatherLoading: { type: Boolean, default: false },
   },
   emits: ['refresh-weather'],
   computed: {
-    task() {
+    task(): Task | null {
       return getTask(this.id)
     },
-    log() {
+    log(): TaskLog {
       return this.$store.getters.taskLog(this.id)
     },
-    evaluation() {
+    evaluation(): EvaluatedTask | null {
       if (!this.task) return null
       return evaluateTask(this.task, {
         month: new Date().getMonth() + 1,
         soilTempF: this.conditions?.soilTemp6F,
       })
     },
-    needsSoil() {
+    needsSoil(): boolean {
       const rule = timingByTask[this.id]
-      return rule && (rule.soilMinF != null || rule.soilMaxF != null)
+      return Boolean(rule && (rule.soilMinF != null || rule.soilMaxF != null))
     },
   },
   methods: {
-    nameFor(taskId) {
+    nameFor(taskId: string): string {
       return getTask(taskId)?.name || taskId
     },
-    toggleStep(stepIndex) {
+    toggleStep(stepIndex: number) {
       this.$store.dispatch('toggleTaskStep', { taskId: this.id, stepIndex })
     },
-    onNotes(e) {
-      this.$store.dispatch('setTaskNotes', { taskId: this.id, notes: e.target.value })
+    onNotes(e: Event) {
+      this.$store.dispatch('setTaskNotes', {
+        taskId: this.id,
+        notes: (e.target as HTMLTextAreaElement).value,
+      })
     },
     markDone() {
       this.$store.dispatch('markTaskDone', { taskId: this.id })
-      // Mirror key milestones into project timeline when relevant
-      const map = {
-        'lawn-kill': 'killAppliedAt',
-        aeration: 'aeratedAt',
-        topsoil: 'topsoilAt',
-        seeding: 'seededAt',
-        overseeding: 'seededAt',
-      }
-      const field = map[this.id]
+      const field = milestoneMap[this.id]
       if (field && !this.$store.state.project[field]) {
         this.$store.dispatch('updateProject', {
           [field]: new Date().toISOString().slice(0, 10),
@@ -206,157 +211,170 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
-
-.page__inner {
-  @include container;
-  padding-block: 1.5rem 3.5rem;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.back a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.page-header {
-  .cat {
-    @include label-badge;
-    background: $status-neutral-soft;
-    color: $color-ink-muted;
-    text-transform: uppercase;
-    font-size: 0.68rem;
+<style lang="scss">
+.task-detail-page {
+  .container {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 1.5rem 3.5rem;
   }
 
-  h1 {
-    margin: 0.5rem 0;
-  }
-
-  .lede {
-    margin: 0;
-    color: $color-ink-muted;
-    max-width: 40rem;
-  }
-}
-
-.timing-box {
-  @include card;
-  padding: 1.2rem;
-  display: grid;
-  gap: 0.75rem;
-
-  h2 {
-    margin: 0;
-    font-size: 1.1rem;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .muted,
-  .soil {
+  .back a {
     font-size: 0.9rem;
-    color: $color-ink-muted;
-  }
-}
-
-.block {
-  h2 {
-    margin: 0 0 0.65rem;
-    font-size: 1.15rem;
-  }
-
-  ol,
-  ul {
-    margin: 0;
-    padding-left: 1.2rem;
-    display: grid;
-    gap: 0.4rem;
-  }
-}
-
-.checklist {
-  list-style: none;
-  padding-left: 0 !important;
-
-  label {
-    display: flex;
-    gap: 0.65rem;
-    align-items: flex-start;
-    cursor: pointer;
-  }
-
-  input {
-    margin-top: 0.25rem;
-  }
-}
-
-.log-box {
-  @include card;
-  padding: 1.15rem;
-
-  .log-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.65rem;
-    margin-bottom: 0.85rem;
-  }
-
-  .done-line {
-    margin: 0;
     font-weight: 600;
-    color: $status-good;
+    text-decoration: none;
   }
 
-  .notes-label {
-    display: grid;
-    gap: 0.35rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: $color-ink-muted;
-  }
+  .page-header {
+    .cat {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      background: var(--color-bg-soft);
+      border-radius: 999px;
+    }
 
-  textarea {
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.55rem 0.65rem;
-    font: inherit;
-    color: $color-ink;
-    resize: vertical;
+    h1 {
+      margin: 0.5rem 0;
+    }
 
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
+    .lede {
+      margin: 0;
+      max-width: 40rem;
+      color: var(--color-text-muted);
     }
   }
-}
 
-.chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
+  .timing-box {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--shadow);
 
-.chip {
-  text-decoration: none;
-}
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
 
-.caveats li {
-  color: $color-ink-muted;
-}
+    p {
+      margin: 0;
+    }
 
-.links {
-  display: grid;
-  gap: 1rem;
+    .muted,
+    .soil {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+  }
 
-  @media (min-width: $bp-md) {
+  .block {
+    h2 {
+      margin: 0 0 0.65rem;
+      font-size: 1.15rem;
+    }
+
+    ol,
+    ul {
+      display: grid;
+      gap: 0.4rem;
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  }
+
+  .checklist {
+    padding-left: 0 !important;
+    list-style: none;
+
+    label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      cursor: pointer;
+    }
+
+    input {
+      margin-top: 0.25rem;
+    }
+  }
+
+  .log-box {
+    padding: 1.15rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--shadow);
+
+    .log-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .done-line {
+      margin: 0;
+      font-weight: 600;
+      color: var(--color-success);
+    }
+
+    .notes-label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+
+    textarea {
+      padding: 0.55rem 0.65rem;
+      font: inherit;
+      color: var(--color-text);
+      resize: vertical;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .chip {
+    text-decoration: none;
+  }
+
+  .caveats li {
+    color: var(--color-text-muted);
+  }
+
+  .links {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>

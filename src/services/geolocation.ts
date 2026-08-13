@@ -1,14 +1,38 @@
 import { climateBandFromLat } from '../data/climate'
+import type { ResolvedLocation } from '../types'
 
 const GEOCODE = 'https://geocoding-api.open-meteo.com/v1/search'
 const ZIPPO = 'https://api.zippopotam.us/us'
 
-export async function lookupZip(zip) {
+interface ZippoPlace {
+  latitude: string
+  longitude: string
+  'place name': string
+  'state abbreviation': string
+  state: string
+}
+
+interface ZippoResponse {
+  places?: ZippoPlace[]
+}
+
+interface OpenMeteoHit {
+  name: string
+  admin1?: string
+  latitude: number
+  longitude: number
+}
+
+interface OpenMeteoSearch {
+  results?: OpenMeteoHit[]
+}
+
+export async function lookupZip(zip: string): Promise<ResolvedLocation> {
   const clean = String(zip || '').trim().slice(0, 5)
   if (!/^\d{5}$/.test(clean)) throw new Error('Enter a valid 5-digit US ZIP')
   const res = await fetch(`${ZIPPO}/${clean}`)
   if (!res.ok) throw new Error('ZIP not found')
-  const data = await res.json()
+  const data = (await res.json()) as ZippoResponse
   const place = data.places?.[0]
   if (!place) throw new Error('ZIP not found')
   const latitude = parseFloat(place.latitude)
@@ -26,7 +50,7 @@ export async function lookupZip(zip) {
   }
 }
 
-export async function lookupCity(query) {
+export async function lookupCity(query: string): Promise<ResolvedLocation[]> {
   const q = String(query || '').trim()
   if (q.length < 2) throw new Error('Enter a city name')
   const params = new URLSearchParams({
@@ -38,11 +62,11 @@ export async function lookupCity(query) {
   })
   const res = await fetch(`${GEOCODE}?${params}`)
   if (!res.ok) throw new Error('City lookup failed')
-  const data = await res.json()
+  const data = (await res.json()) as OpenMeteoSearch
   const hits = data.results || []
   if (!hits.length) throw new Error('No US cities matched')
   return hits.map((h) => ({
-    source: 'geocode',
+    source: 'geocode' as const,
     city: h.name,
     state: h.admin1 || '',
     latitude: h.latitude,
@@ -52,7 +76,7 @@ export async function lookupCity(query) {
   }))
 }
 
-export function requestBrowserLocation(timeoutMs = 10000) {
+export function requestBrowserLocation(timeoutMs = 10000): Promise<ResolvedLocation> {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
       reject(new Error('Geolocation not supported'))
@@ -76,22 +100,13 @@ export function requestBrowserLocation(timeoutMs = 10000) {
 }
 
 /** Reverse-ish label via Open-Meteo reverse geocoding approximation using nearby search */
-export async function enrichCoords(latitude, longitude) {
-  const params = new URLSearchParams({
-    latitude: String(latitude),
-    longitude: String(longitude),
-    count: '1',
-    language: 'en',
-    format: 'json',
-  })
-  // Open-Meteo doesn't have classic reverse; use nearest place search by lat as name fallback
+export async function enrichCoords(latitude: number, longitude: number) {
   try {
     const res = await fetch(
       `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
         String(Math.round(latitude * 10) / 10),
       )}&count=1&countryCode=US`,
     )
-    // Keep coords authoritative; optional label enrichment skipped if weak
     if (!res.ok) return null
   } catch {
     /* ignore */

@@ -2,10 +2,10 @@
   <div class="home">
     <!-- HERO ---------------------------------------------------------------->
     <header class="hero">
-      <div class="hero__inner">
+      <div class="hero__inner container">
         <div class="hero__copy">
           <p class="eyebrow">
-            <AppIcon name="thermometer" />
+            <font-awesome-icon icon="fa-solid fa-temperature-half" />
             Soil-temp aware
           </p>
           <h1>Know what to do next.</h1>
@@ -16,7 +16,7 @@
           <div class="hero__actions">
             <router-link class="btn btn--primary" to="/calendar">
               What’s next?
-              <AppIcon name="arrow-right" />
+              <font-awesome-icon icon="fa-solid fa-arrow-right" />
             </router-link>
             <router-link class="btn" to="/settings">Set up my lawn</router-link>
           </div>
@@ -48,11 +48,11 @@
                 <strong>{{ item.task.name }}</strong>
                 <small>{{ item.reason }}</small>
               </span>
-              <AppIcon name="arrow-right" class="row__go" />
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="row__go" />
             </router-link>
 
             <p v-if="!nowItems.length" class="row row--empty">
-              <AppIcon name="clock" />
+              <font-awesome-icon icon="fa-solid fa-clock" />
               <span class="row__text">
                 <strong>Nothing due right now</strong>
                 <small>{{ soilSummary }}</small>
@@ -61,7 +61,7 @@
 
             <router-link class="panel__more" to="/calendar">
               Full calendar
-              <AppIcon name="arrow-right" />
+              <font-awesome-icon icon="fa-solid fa-arrow-right" />
             </router-link>
           </div>
         </div>
@@ -69,11 +69,11 @@
     </header>
 
     <!-- TIMING -------------------------------------------------------------->
-    <section class="band band--tint">
-      <div class="band__inner split">
+    <section class="band band--tint wave-top">
+      <div class="band__inner container split">
         <div>
           <p class="eyebrow">
-            <AppIcon name="calendar" />
+            <font-awesome-icon icon="fa-solid fa-calendar-day" />
             Timing
           </p>
           <h2>Soil temp beats the calendar.</h2>
@@ -82,13 +82,13 @@
           </p>
           <ul class="checklist">
             <li v-for="point in timingPoints" :key="point">
-              <AppIcon name="check" />
+              <font-awesome-icon icon="fa-solid fa-check" />
               <span>{{ point }}</span>
             </li>
           </ul>
           <router-link class="btn btn--ghost inline-cta" to="/calendar">
             See my windows
-            <AppIcon name="arrow-right" />
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
           </router-link>
         </div>
 
@@ -102,11 +102,11 @@
     </section>
 
     <!-- SEEDS --------------------------------------------------------------->
-    <section class="band band--plain">
-      <div class="band__inner">
+    <section class="band band--plain wave-top">
+      <div class="band__inner container">
         <div class="band__head">
           <p class="eyebrow">
-            <AppIcon name="sprout" />
+            <font-awesome-icon icon="fa-solid fa-seedling" />
             Seed intel
           </p>
           <h2>Not bag marketing. Trial data.</h2>
@@ -129,7 +129,7 @@
             </div>
             <p class="seed-card__label">{{ c.fit.label }}</p>
             <p class="seed-card__cov">
-              <AppIcon name="check" />
+              <font-awesome-icon icon="fa-solid fa-check" />
               All {{ c.fit.coverage.totalFactors }} factors measured
             </p>
           </router-link>
@@ -137,14 +137,14 @@
 
         <router-link class="btn btn--ghost inline-cta" to="/seeds">
           Compare blends and cultivars
-          <AppIcon name="arrow-right" />
+          <font-awesome-icon icon="fa-solid fa-arrow-right" />
         </router-link>
       </div>
     </section>
 
     <!-- FEATURE GRID -------------------------------------------------------->
-    <section class="band band--tint-strong">
-      <div class="band__inner">
+    <section class="band band--tint-strong wave-top">
+      <div class="band__inner container">
         <div class="band__head band__head--center">
           <h2>Plus everything around it</h2>
         </div>
@@ -155,7 +155,9 @@
             class="feature-card card--link"
             :to="f.to"
           >
-            <span class="feature-card__icon"><AppIcon :name="f.icon" /></span>
+            <span class="feature-card__icon">
+              <font-awesome-icon :icon="'fa-solid ' + f.icon" />
+            </span>
             <span>
               <h3>{{ f.title }}</h3>
               <p>{{ f.body }}</p>
@@ -166,8 +168,8 @@
     </section>
 
     <!-- CLOSING CTA --------------------------------------------------------->
-    <section class="band band--dark on-dark">
-      <div class="band__inner cta">
+    <section class="band band--dark on-dark wave-top">
+      <div class="band__inner container cta">
         <h2>Ready when you are.</h2>
         <p class="lede">
           Set your square footage and location. Everything else calculates itself.
@@ -176,7 +178,7 @@
           <LawnSizeInput />
           <router-link class="btn btn--primary" to="/settings">
             My lawn
-            <AppIcon name="arrow-right" />
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
           </router-link>
         </div>
         <p class="cta__note">
@@ -188,48 +190,48 @@
   </div>
 </template>
 
-<script>
-import { mapState, mapGetters } from 'vuex'
+<script lang="ts">
 import ConditionsBanner from '../components/layout/ConditionsBanner.vue'
 import LawnSizeInput from '../components/layout/LawnSizeInput.vue'
-import AppIcon from '../components/ui/AppIcon.vue'
 import { evaluateAllTasks, groupByBucket } from '../services/timing'
 import { allCultivars } from '../data/seedDb'
 import { scoreCultivarForLocation } from '../services/suitability'
+import type { PropType } from 'vue'
+import type { Conditions, Cultivar, CultivarFit, EvaluatedTask, Profile } from '../types'
 
 const FEATURES = [
   {
-    icon: 'ruler',
+    icon: 'fa-ruler',
     title: 'Rate calculator',
     body: 'Square feet in, pounds and bags out, per product.',
     to: '/tasks',
   },
   {
-    icon: 'spray',
+    icon: 'fa-spray-can',
     title: 'Sprayer mixes',
     body: 'Tank size and coverage into an ounces-per-tank number.',
-    to: '/sprayer',
+    to: '/tools/sprayer',
   },
   {
-    icon: 'tasks',
+    icon: 'fa-list-check',
     title: 'Task playbooks',
     body: 'Kill, aerate, seed, topdress, fertilize, water — each with its own gate.',
     to: '/tasks',
   },
   {
-    icon: 'chart',
+    icon: 'fa-chart-bar',
     title: 'Trial charts',
     body: 'Quality, drought and brown patch ratings side by side.',
     to: '/seeds',
   },
   {
-    icon: 'pin',
+    icon: 'fa-location-dot',
     title: 'Location aware',
     body: 'Your coordinates pick the climate band and nearest trial site.',
     to: '/settings',
   },
   {
-    icon: 'save',
+    icon: 'fa-floppy-disk',
     title: 'Export and restore',
     body: 'Your profile is yours — back it up as a file any time.',
     to: '/settings',
@@ -244,9 +246,9 @@ const TIMING_POINTS = [
 
 export default {
   name: 'HomeView',
-  components: { ConditionsBanner, LawnSizeInput, AppIcon },
+  components: { ConditionsBanner, LawnSizeInput },
   props: {
-    conditions: { type: Object, default: null },
+    conditions: { type: Object as PropType<Conditions | null>, default: null },
     weatherError: { type: String, default: null },
     weatherLoading: { type: Boolean, default: false },
   },
@@ -255,309 +257,312 @@ export default {
     return { features: FEATURES, timingPoints: TIMING_POINTS }
   },
   computed: {
-    ...mapState(['profile']),
-    ...mapGetters(['lawnSqFt']),
-    nowItems() {
+    profile(): Profile {
+      return this.$store.state.profile
+    },
+    lawnSqFt(): number {
+      return this.$store.getters.lawnSqFt
+    },
+    userLocation() {
+      return this.$store.getters.userLocation
+    },
+    nowItems(): EvaluatedTask[] {
       const evaluated = evaluateAllTasks({ soilTempF: this.conditions?.soilTemp6F })
       return groupByBucket(evaluated).now
     },
-    cultivarCount() {
+    cultivarCount(): number {
       return allCultivars.length
     },
-    soilSummary() {
+    soilSummary(): string {
       const soil = this.conditions?.soilTemp6F
       if (soil == null) return 'Set your location to get live soil temperature.'
       return `Soil is ${Math.round(soil)}°F — check what’s coming up.`
     },
-    /**
-     * Best-evidenced cultivars for this user, used as a concrete teaser.
-     * Restricted to complete coverage so the home page never leads with a
-     * score propped up by two data points.
-     */
-    topCultivars() {
+    topCultivars(): (Cultivar & { fit: CultivarFit })[] {
       return allCultivars
-        .map((c) => ({ ...c, fit: scoreCultivarForLocation(c, this.profile.location) }))
+        .map((c) => ({ ...c, fit: scoreCultivarForLocation(c, this.userLocation) }))
         .filter((c) => c.fit.score != null && c.fit.coverage.complete)
-        .sort((a, b) => b.fit.score - a.fit.score)
+        .sort((a, b) => (b.fit.score || 0) - (a.fit.score || 0))
         .slice(0, 3)
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
+<style lang="scss">
+.home {
+  .band {
+    padding-block: clamp(3.5rem, 7vw, 5.5rem);
 
-// --- Bands -----------------------------------------------------------------
-.band {
-  @include section;
+    .band__inner {
+      position: relative;
+    }
 
-  &__inner {
-    @include container;
-    position: relative;
-  }
+    &--plain {
+      --band-fill: var(--color-bg);
+    }
 
-  &--plain {
-    @include wave-top($layer-plain);
-  }
+    &--tint {
+      --band-fill: var(--color-bg-soft);
+    }
 
-  &--tint {
-    @include wave-top($layer-tint);
-  }
+    &--tint-strong {
+      --band-fill: var(--color-primary-soft);
+    }
 
-  &--tint-strong {
-    @include wave-top($layer-tint-strong);
-  }
+    &--dark {
+      --band-fill: var(--color-dark);
+      padding-block-end: clamp(1.25rem, 2.5vw, 2rem);
+    }
 
-  &--dark {
-    @include wave-top($layer-dark);
-    // The footer is the same fill and supplies its own top padding, so the
-    // two would otherwise stack into a large dead gap.
-    padding-block-end: clamp(1.25rem, 2.5vw, 2rem);
-  }
+    .band__head {
+      max-width: 40rem;
+      margin-bottom: 2rem;
 
-  &__head {
-    max-width: 40rem;
-    margin-bottom: 2rem;
+      &--center {
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
 
-    &--center {
-      margin-inline: auto;
-      text-align: center;
+    h2 {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-display);
+      font-weight: var(--font-weight-bold);
+      font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+      letter-spacing: -0.028em;
+      line-height: 1.15;
+      color: var(--heading-ink, var(--color-text));
     }
   }
 
-  h2 {
-    @include section-heading;
+  .inline-cta {
+    margin-top: 1.4rem;
+    padding-inline: 0;
   }
-}
 
-.lede {
-  @include section-lede;
-}
+  .hero {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 6vw, 5rem);
+    background: var(--color-bg);
 
-.inline-cta {
-  margin-top: 1.4rem;
-  padding-inline: 0;
-}
-
-// --- Hero ------------------------------------------------------------------
-.hero {
-  background: $layer-plain;
-  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 6vw, 5rem);
-
-  &__inner {
-    @include container;
-    display: grid;
-    gap: clamp(2rem, 5vw, 3.5rem);
-    align-items: center;
-
-    @media (min-width: $bp-lg) {
+    .hero__inner {
+      display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+      align-items: center;
+      gap: clamp(2rem, 5vw, 3.5rem);
+
+      @media (max-width: 1023px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h1 {
+      margin: 0 0 0.9rem;
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 5.8vw, 3.75rem);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--color-text);
+    }
+
+    .hero__lede {
+      max-width: 34rem;
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--lede-ink, var(--color-text-muted));
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.6rem;
+    }
+
+    .hero__meta {
+      margin: 1rem 0 0;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
     }
   }
 
-  h1 {
-    margin: 0 0 0.9rem;
-    font-family: $font-display;
-    font-size: clamp(2.3rem, 5.8vw, 3.75rem);
-    font-weight: $font-weight-display;
-    line-height: 1.02;
-    letter-spacing: -0.04em;
-    color: $color-ink;
+  .panel {
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--shadow);
+
+    .panel__bar {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.7rem 0.9rem;
+      background: var(--color-surface-alt);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .panel__dots {
+      display: flex;
+      gap: 0.3rem;
+
+      i {
+        width: 0.5rem;
+        height: 0.5rem;
+        background: var(--color-border);
+        border-radius: 999px;
+      }
+    }
+
+    .panel__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .panel__body {
+      padding: 0.4rem 0.9rem 0.9rem;
+    }
+
+    .panel__more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.7rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
   }
 
-  &__lede {
-    @include section-lede;
-    font-size: 1.15rem;
-    max-width: 34rem;
-  }
-
-  &__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 1.6rem;
-  }
-
-  &__meta {
-    margin: 1rem 0 0;
-    font-size: 0.85rem;
-    color: $color-ink-muted;
-  }
-}
-
-// --- Hero panel ------------------------------------------------------------
-// The one element allowed to float above the page.
-.panel {
-  border: 1px solid $color-border;
-  border-radius: $radius-lg;
-  background: $color-surface;
-  box-shadow: $shadow-panel;
-  overflow: hidden;
-
-  &__bar {
+  .row {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    padding: 0.7rem 0.9rem;
-    background: $color-surface-sunken;
-    border-bottom: 1px solid $color-border;
-  }
+    padding: 0.8rem 0;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
 
-  &__dots {
-    display: flex;
-    gap: 0.3rem;
+    &:last-of-type {
+      border-bottom: 0;
+    }
 
-    i {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: $radius-pill;
-      background: $color-border;
+    .row__text {
+      display: grid;
+      min-width: 0;
+      gap: 0.15rem;
+
+      strong {
+        font-size: 0.95rem;
+      }
+
+      small {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        color: var(--color-text-muted);
+      }
+    }
+
+    .row__go {
+      flex: 0 0 auto;
+      margin-left: auto;
+      color: var(--color-text-muted);
+    }
+
+    &:hover .row__go {
+      color: var(--color-primary);
+    }
+
+    &--empty {
+      margin: 0;
+      color: var(--color-text-muted);
     }
   }
 
-  &__title {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $color-ink-muted;
-  }
-
-  &__body {
-    padding: 0.4rem 0.9rem 0.9rem;
-  }
-
-  &__more {
-    display: inline-flex;
+  .split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     align-items: center;
-    gap: 0.35rem;
-    margin-top: 0.7rem;
-    font-size: 0.85rem;
-    font-weight: 600;
+    gap: clamp(1.75rem, 4vw, 3rem);
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .seed-grid,
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-grid {
     text-decoration: none;
   }
-}
 
-.row {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid $color-border-soft;
-  color: inherit;
-  text-decoration: none;
-
-  &:last-of-type {
-    border-bottom: 0;
-  }
-
-  &__text {
-    display: grid;
-    gap: 0.15rem;
-    min-width: 0;
-
-    strong {
-      font-size: 0.95rem;
+  .seed-card {
+    .seed-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
     }
 
-    small {
-      font-size: 0.8rem;
-      line-height: 1.4;
-      color: $color-ink-muted;
+    h3 {
+      margin: 0;
+      font-family: var(--font-family);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .seed-card__label {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    .seed-card__cov {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin: 0.35rem 0 0;
+      font-size: 0.75rem;
+      color: var(--color-success);
     }
   }
 
-  &__go {
-    margin-left: auto;
-    flex: 0 0 auto;
-    color: $color-ink-muted;
-  }
-
-  &:hover &__go {
-    color: $brand;
-  }
-
-  &--empty {
-    margin: 0;
-    color: $color-ink-muted;
-  }
-}
-
-// --- Section layouts -------------------------------------------------------
-.split {
-  display: grid;
-  gap: clamp(1.75rem, 4vw, 3rem);
-  align-items: center;
-
-  @media (min-width: $bp-lg) {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  }
-}
-
-.seed-grid {
-  @include responsive-columns(3, $bp-md, 1rem);
-}
-
-.seed-card {
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-  }
-
-  h3 {
-    margin: 0;
-    font-family: $font-body;
-    font-size: 1.05rem;
-    font-weight: 700;
-  }
-
-  &__label {
-    margin: 0.5rem 0 0;
-    font-size: 0.9rem;
-    color: $color-ink-muted;
-  }
-
-  &__cov {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    margin: 0.35rem 0 0;
-    font-size: 0.75rem;
-    color: $status-good;
-  }
-}
-
-.feature-grid {
-  @include responsive-columns(3, $bp-md, 1rem);
-  text-decoration: none;
-}
-
-// --- Closing CTA -----------------------------------------------------------
-.cta {
-  max-width: 34rem;
-  text-align: center;
-  margin-inline: auto;
-
-  .lede {
+  .cta {
+    max-width: 34rem;
     margin-inline: auto;
-  }
+    text-align: center;
 
-  &__form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    justify-content: center;
-    gap: 0.85rem;
-    margin-top: 1.75rem;
-  }
+    .lede {
+      margin-inline: auto;
+    }
 
-  &__note {
-    margin: 1.1rem 0 0;
-    font-size: 0.8rem;
+    .cta__form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: center;
+      gap: 0.85rem;
+      margin-top: 1.75rem;
+    }
+
+    .cta__note {
+      margin: 1.1rem 0 0;
+      font-size: 0.8rem;
+    }
   }
 }
 </style>

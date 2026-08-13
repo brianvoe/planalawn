@@ -1,9 +1,11 @@
+import type { ClimateBand, ClimateBandId } from '../types'
+
 /**
  * US climate bands for cool-season lawn guidance + NTEP site matching.
  * Simplified USDA-inspired bands — not a full hardiness-zone engine.
  */
 
-export const climateBands = {
+export const climateBands: Record<ClimateBandId, ClimateBand> = {
   cool: {
     id: 'cool',
     label: 'Cool-season core',
@@ -27,7 +29,7 @@ export const climateBands = {
 }
 
 /** Rough lat bands for contiguous US — refined later with ZIP climate data */
-export function climateBandFromLat(lat) {
+export function climateBandFromLat(lat: number | null | undefined): ClimateBand | null {
   if (typeof lat !== 'number') return null
   if (lat >= 42) return climateBands.cool
   if (lat >= 35) return climateBands.transition

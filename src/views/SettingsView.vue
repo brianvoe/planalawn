@@ -1,9 +1,9 @@
 <template>
-  <div class="page">
-    <div class="page__inner">
+  <div class="settings-page">
+    <div class="container">
       <header class="page-header">
         <p class="eyebrow">
-          <AppIcon name="pin" />
+          <font-awesome-icon icon="fa-solid fa-location-dot" />
           Local data
         </p>
         <h1>My lawn.</h1>
@@ -164,28 +164,32 @@
   </div>
 </template>
 
-<script>
-import { mapState, mapGetters } from 'vuex'
+<script lang="ts">
 import { lookupZip, requestBrowserLocation } from '../services/geolocation'
-import AppIcon from '../components/ui/AppIcon.vue'
+import type { AppStore } from '../store/types'
+import type { BackupPayload, Profile, Project, UserLocation } from '../types'
 
-function bindProfile(field) {
+interface StoreThis {
+  $store: AppStore
+}
+
+function bindProfile<K extends keyof Profile>(field: K) {
   return {
-    get() {
+    get(this: StoreThis): Profile[K] {
       return this.$store.state.profile[field]
     },
-    set(v) {
+    set(this: StoreThis, v: Profile[K]) {
       this.$store.dispatch('updateProfile', { [field]: v })
     },
   }
 }
 
-function bindProject(field) {
+function bindProject<K extends keyof Project>(field: K) {
   return {
-    get() {
+    get(this: StoreThis): Project[K] | '' {
       return this.$store.state.project[field] || ''
     },
-    set(v) {
+    set(this: StoreThis, v: Project[K] | '') {
       this.$store.dispatch('updateProject', { [field]: v || null })
     },
   }
@@ -193,39 +197,39 @@ function bindProject(field) {
 
 export default {
   name: 'SettingsView',
-  components: { AppIcon },
   data() {
     return { status: '', locStatus: '', zipInput: '' }
   },
   computed: {
-    ...mapState(['profile', 'equipment', 'project', 'location']),
-    ...mapGetters(['lawnSqFt', 'tankGallons', 'sprayCoverage']),
+    location(): UserLocation {
+      return this.$store.state.location
+    },
     lawnName: bindProfile('lawnName'),
     preferredSeed: bindProfile('preferredSeed'),
     soilType: bindProfile('soilType'),
     sunExposure: bindProfile('sunExposure'),
     profileNotes: bindProfile('notes'),
     lawnSqFtLocal: {
-      get() {
-        return this.lawnSqFt
+      get(): number {
+        return this.$store.getters.lawnSqFt
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('updateProfile', { lawnSqFt: v })
       },
     },
     tankGallonsLocal: {
-      get() {
-        return this.tankGallons
+      get(): number {
+        return this.$store.getters.tankGallons
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('updateEquipment', { tankGallons: v })
       },
     },
     coverageLocal: {
-      get() {
-        return this.sprayCoverage
+      get(): number {
+        return this.$store.getters.sprayCoverage
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('updateEquipment', { sprayCoverageSqFtPerTank: v })
       },
     },
@@ -237,10 +241,10 @@ export default {
     seededAt: bindProject('seededAt'),
     firstMowAt: bindProject('firstMowAt'),
     projectNotes: {
-      get() {
+      get(): string {
         return this.$store.state.project.notes || ''
       },
-      set(v) {
+      set(v: string) {
         this.$store.dispatch('updateProject', { notes: v })
       },
     },
@@ -255,7 +259,7 @@ export default {
         await this.$store.dispatch('setLocation', loc)
         this.locStatus = `Location set to ${loc.label}`
       } catch (e) {
-        this.locStatus = e.message || 'ZIP failed'
+        this.locStatus = e instanceof Error ? e.message : 'ZIP failed'
       }
     },
     async saveGeo() {
@@ -264,20 +268,21 @@ export default {
         await this.$store.dispatch('setLocation', loc)
         this.locStatus = 'Location set from GPS'
       } catch (e) {
-        this.locStatus = e.message || 'GPS failed'
+        this.locStatus = e instanceof Error ? e.message : 'GPS failed'
       }
     },
     exportData() {
       this.$store.dispatch('downloadBackup')
       this.status = 'Exported JSON backup.'
     },
-    importData(e) {
-      const file = e.target.files?.[0]
+    importData(e: Event) {
+      const input = e.target as HTMLInputElement
+      const file = input.files?.[0]
       if (!file) return
       const reader = new FileReader()
       reader.onload = () => {
         try {
-          const payload = JSON.parse(reader.result)
+          const payload = JSON.parse(String(reader.result)) as BackupPayload
           this.$store.dispatch('importBackup', payload)
           this.status = 'Import complete — local data updated.'
         } catch {
@@ -285,7 +290,7 @@ export default {
         }
       }
       reader.readAsText(file)
-      e.target.value = ''
+      input.value = ''
     },
     resetData() {
       if (!confirm('Clear all lawn data saved in this browser?')) return
@@ -296,126 +301,121 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
-
-.page__inner {
-  @include container;
-  padding-block: 2rem 3.5rem;
-  display: grid;
-  gap: 1.25rem;
-}
-
-.page-header {
-  h1 {
-    margin: 0 0 0.5rem;
-  }
-
-  .lede {
-    margin: 0;
-    color: $color-ink-muted;
-    max-width: 42rem;
-  }
-}
-
-.card {
-  @include card;
-  padding: 1.25rem;
-
-  h2 {
-    margin: 0 0 0.85rem;
-    font-size: 1.15rem;
-  }
-}
-
-.hint {
-  margin: -0.35rem 0 0.85rem;
-  font-size: 0.88rem;
-  color: $color-ink-muted;
-}
-
-.form-grid {
-  display: grid;
-  gap: 0.85rem;
-
-  @media (min-width: $bp-md) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  label {
+<style lang="scss">
+.settings-page {
+  .container {
     display: grid;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: $color-ink-muted;
+    gap: 1.25rem;
+    padding-block: 2rem 3.5rem;
+  }
 
-    &.full {
-      @media (min-width: $bp-md) {
+  .page-header {
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 42rem;
+      color: var(--color-text-muted);
+    }
+  }
+
+  .card {
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 1.15rem;
+    }
+  }
+
+  .hint {
+    margin: -0.35rem 0 0.85rem;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+
+      &.full {
         grid-column: 1 / -1;
       }
     }
-  }
 
-  input,
-  select,
-  textarea {
-    @include tap-target;
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.5rem 0.65rem;
-    font: inherit;
-    color: $color-ink;
-    background: $color-surface;
+    input,
+    select,
+    textarea {
+      min-height: var(--input-height);
+      padding: 0.5rem 0.65rem;
+      font: inherit;
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
 
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
+    }
+
+    textarea {
+      resize: vertical;
     }
   }
 
-  textarea {
-    resize: vertical;
-  }
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-}
-
-.inline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  align-items: center;
-}
-
-.file-btn {
-  display: inline-flex;
-  align-items: center;
-}
-
-.status {
-  margin: 0.85rem 0 0;
-  font-size: 0.88rem;
-  color: $status-good;
-}
-
-.muted-card {
-  ul {
-    margin: 0 0 0.75rem;
-    padding-left: 1.15rem;
-    color: $color-ink-muted;
-    display: grid;
-    gap: 0.3rem;
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
   }
 
-  p {
-    margin: 0;
+  .inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .file-btn {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .status {
+    margin: 0.85rem 0 0;
     font-size: 0.88rem;
-    color: $color-ink-muted;
+    color: var(--color-success);
+  }
+
+  .muted-card {
+    ul {
+      display: grid;
+      gap: 0.3rem;
+      margin: 0 0 0.75rem;
+      padding-left: 1.15rem;
+      color: var(--color-text-muted);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+    }
   }
 }
 </style>

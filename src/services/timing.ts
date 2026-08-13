@@ -1,7 +1,8 @@
 import { tasks } from '../data/tasks'
 import { timingByTask, seedingSoilBand, monthLabels } from '../data/timingRules'
+import type { Bucket, EvaluatedTask, SoilGate, StatusTone, Task, TimingRule, WindowStatus } from '../types'
 
-export function monthInList(month, list = []) {
+export function monthInList(month: number, list: number[] = []): boolean {
   return list.includes(month)
 }
 
@@ -10,7 +11,7 @@ export function monthInList(month, list = []) {
  * status vocabulary lives here rather than being re-derived in each view.
  * Valid values: 'good' | 'caution' | 'cold' | 'hot' | 'neutral'.
  */
-export function soilGateStatus(soilTempF, rule) {
+export function soilGateStatus(soilTempF: number | null | undefined, rule: TimingRule): SoilGate {
   if (typeof soilTempF !== 'number') {
     return {
       ok: null,
@@ -47,31 +48,36 @@ export function soilGateStatus(soilTempF, rule) {
 }
 
 /** Semantic color token for a planning bucket. */
-export const bucketTone = {
+export const bucketTone: Record<Bucket, StatusTone> = {
   now: 'good',
   soon: 'caution',
   later: 'neutral',
+}
+
+const emptyRule: TimingRule = {
+  months: [],
+  secondaryMonths: [],
+  soilMinF: null,
+  soilMaxF: null,
+  note: '',
 }
 
 /**
  * Classify a task for "now" planning.
  * bucket: 'now' | 'soon' | 'later'
  */
-export function evaluateTask(task, { month, soilTempF } = {}) {
-  const rule = timingByTask[task.id] || {
-    months: [],
-    secondaryMonths: [],
-    soilMinF: null,
-    soilMaxF: null,
-    note: '',
-  }
+export function evaluateTask(
+  task: Task,
+  { month = new Date().getMonth() + 1, soilTempF }: { month?: number; soilTempF?: number | null } = {},
+): EvaluatedTask {
+  const rule = timingByTask[task.id] || emptyRule
 
   const primary = monthInList(month, rule.months)
   const secondary = monthInList(month, rule.secondaryMonths)
   const inCalendar = primary || secondary
   const soil = soilGateStatus(soilTempF, rule)
 
-  let bucket = 'later'
+  let bucket: Bucket = 'later'
   let reason = rule.note || 'Outside primary season'
 
   if (inCalendar && soil.ok === false) {
@@ -83,16 +89,14 @@ export function evaluateTask(task, { month, soilTempF } = {}) {
       ? `Primary window${soil.ok === true ? ' · soil OK' : ' · soil unchecked'}`
       : `Secondary window${soil.ok === true ? ' · soil OK' : ''}`
   } else if (!inCalendar) {
-    // Approaching: next month is in window
     const next = month === 12 ? 1 : month + 1
     if (monthInList(next, rule.months) || monthInList(next, rule.secondaryMonths)) {
       bucket = 'soon'
       reason = `Coming up in ${monthLabels[next - 1]}`
     } else {
       bucket = 'later'
-      reason = `Typical months: ${[...rule.months, ...rule.secondaryMonths]
-        .map((m) => monthLabels[m - 1])
-        .join(', ') || 'varies'}`
+      const labels = [...rule.months, ...rule.secondaryMonths].map((m) => monthLabels[m - 1])
+      reason = `Typical months: ${labels.join(', ') || 'varies'}`
     }
   }
 
@@ -109,22 +113,24 @@ export function evaluateTask(task, { month, soilTempF } = {}) {
   }
 }
 
-export function evaluateAllTasks(conditions = {}) {
+export function evaluateAllTasks(
+  conditions: { month?: number; soilTempF?: number | null } = {},
+): EvaluatedTask[] {
   const now = new Date()
   const month = conditions.month || now.getMonth() + 1
   const soilTempF = conditions.soilTempF
   return tasks.map((task) => evaluateTask(task, { month, soilTempF }))
 }
 
-export function groupByBucket(evaluated) {
-  const groups = { now: [], soon: [], later: [] }
+export function groupByBucket(evaluated: EvaluatedTask[]): Record<Bucket, EvaluatedTask[]> {
+  const groups: Record<Bucket, EvaluatedTask[]> = { now: [], soon: [], later: [] }
   evaluated.forEach((item) => {
     groups[item.bucket].push(item)
   })
   return groups
 }
 
-export function seedingWindowStatus(soilTempF) {
+export function seedingWindowStatus(soilTempF: number | null | undefined): WindowStatus {
   if (typeof soilTempF !== 'number') {
     return {
       status: 'unknown',

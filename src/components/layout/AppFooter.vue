@@ -1,6 +1,6 @@
 <template>
-  <footer class="site-footer on-dark">
-    <div class="site-footer__inner">
+  <footer class="site-footer on-dark wave-top">
+    <div class="site-footer__inner container">
       <div class="site-footer__brand">
         <strong>Lawn Plan Nerd</strong>
         <p>Soil-temp-aware lawn timing, rates and seed data for the US.</p>
@@ -11,12 +11,12 @@
         <router-link to="/calendar">Calendar</router-link>
         <router-link to="/tasks">Tasks</router-link>
         <router-link to="/seeds">Seeds</router-link>
-        <router-link to="/sprayer">Sprayer</router-link>
+        <router-link to="/tools/sprayer">Sprayer</router-link>
         <router-link to="/settings">My lawn</router-link>
       </nav>
     </div>
 
-    <div class="site-footer__fine">
+    <div class="site-footer__fine container">
       <p>
         Rates are starting templates — always follow the label on the product you buy.
         Soil temperature from Open-Meteo; seed scores from NTEP trial data.
@@ -26,38 +26,32 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'AppFooter',
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
-// Dark on every route, so the home page's closing call to action flows
-// straight into it without a seam.
+<style lang="scss">
 .site-footer {
-  @include wave-top($layer-dark);
-  padding-block: clamp(2.5rem, 5vw, 3.5rem) 2rem;
+  --band-fill: var(--color-dark);
   margin-top: 0;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) 2rem;
 
-  &__inner {
-    @include container;
+  .site-footer__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.5rem 2.5rem;
   }
 
-  &__brand {
+  .site-footer__brand {
     max-width: 22rem;
 
     strong {
-      font-family: $font-display;
+      font-family: var(--font-display);
       font-size: 1.15rem;
-      font-weight: $font-weight-display;
+      font-weight: var(--font-weight-bold);
       letter-spacing: -0.03em;
     }
 
@@ -67,38 +61,36 @@ export default {
       line-height: 1.55;
     }
 
-    // Nested so it outranks the sibling `p` rule above without !important.
     .site-footer__domain {
       font-size: 0.8rem;
       letter-spacing: 0.02em;
-      color: $accent-on-dark;
+      color: var(--color-accent);
     }
   }
 
-  &__nav {
+  .site-footer__nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1.4rem;
     align-content: start;
+    gap: 0.5rem 1.4rem;
 
     a {
       font-size: 0.9rem;
       font-weight: 600;
-      color: $ink-on-dark;
+      color: var(--color-text);
       text-decoration: none;
 
       &:hover {
-        color: $accent-on-dark;
+        color: var(--color-accent);
         text-decoration: underline;
       }
     }
   }
 
-  &__fine {
-    @include container;
+  .site-footer__fine {
     margin-top: 2rem;
     padding-top: 1.25rem;
-    border-top: 1px solid $border-on-dark;
+    border-top: 1px solid var(--color-border);
 
     p {
       margin: 0 0 0.3rem;

@@ -1,3 +1,5 @@
+import type { TimingRule } from '../types'
+
 /**
  * Timing rules for cool-season (tall fescue) lawns in the transition zone.
  * These month windows are still a single national default — they are not yet
@@ -16,7 +18,7 @@ export const seedingSoilBand = {
   label: 'Fall seeding prefers soil ~55–65°F at 6 cm',
 }
 
-export const timingByTask = {
+export const timingByTask: Record<string, TimingRule> = {
   'lawn-kill': {
     months: [8, 9],
     secondaryMonths: [3, 4],
@@ -95,4 +97,4 @@ export const monthLabels = [
   'Oct',
   'Nov',
   'Dec',
-]
+] as const

@@ -50,10 +50,10 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
 import LawnSizeInput from '../layout/LawnSizeInput.vue'
 import { rateTemplates, sprayerMix } from '../../data/rates'
+import type { MixMode, SprayerMixResult } from '../../types'
 
 export default {
   name: 'SprayerCalculator',
@@ -65,32 +65,40 @@ export default {
     const tmpl = rateTemplates[this.rateKey] || rateTemplates.glyphosate
     const override = this.$store.state.rateOverrides[this.rateKey] || {}
     return {
-      mode: tmpl.mixMode || 'perGallon',
+      mode: (tmpl.mixMode || 'perGallon') as MixMode,
       ozPerGallon: override.ozPerGallon ?? tmpl.ozPerGallon ?? 2,
       ozPer1000: override.ozPer1000 ?? 2,
     }
   },
   computed: {
-    ...mapGetters(['lawnSqFt', 'tankGallons', 'sprayCoverage']),
+    lawnSqFt(): number {
+      return this.$store.getters.lawnSqFt
+    },
+    tankGallons(): number {
+      return this.$store.getters.tankGallons
+    },
+    sprayCoverage(): number {
+      return this.$store.getters.sprayCoverage
+    },
     tankGallonsLocal: {
-      get() {
+      get(): number {
         return this.tankGallons
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('updateEquipment', { tankGallons: Number(v) || 2 })
       },
     },
     coverageLocal: {
-      get() {
+      get(): number {
         return this.sprayCoverage
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('updateEquipment', {
           sprayCoverageSqFtPerTank: Number(v) || 1000,
         })
       },
     },
-    result() {
+    result(): SprayerMixResult {
       return sprayerMix({
         mode: this.mode,
         tankGallons: this.tankGallons,
@@ -102,7 +110,7 @@ export default {
     },
   },
   watch: {
-    ozPerGallon(v) {
+    ozPerGallon(v: number) {
       if (this.mode === 'perGallon') {
         this.$store.dispatch('setRateOverride', {
           rateKey: this.rateKey,
@@ -114,15 +122,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .sprayer {
-  @include card;
   padding: 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: var(--shadow);
 
-  &__controls {
+  .sprayer__controls {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem 1.25rem;
@@ -134,69 +142,71 @@ export default {
       gap: 0.3rem;
       font-size: 0.8rem;
       font-weight: 600;
-      color: $color-ink-muted;
+      color: var(--color-text-muted);
     }
 
     input,
     select {
-      @include tap-target;
-      border: 1px solid $color-border-strong;
-      border-radius: $radius-sm;
-      padding: 0.45rem 0.65rem;
-      color: $color-ink;
-      background: $color-surface;
       min-width: 7rem;
+      min-height: var(--input-height);
+      padding: 0.45rem 0.65rem;
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
 
       &:focus-visible {
-        @include focus-ring;
-        border-color: $brand;
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
       }
     }
   }
 
-  &__result {
+  .sprayer__result {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 
-    @media (min-width: $bp-sm) {
-      grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 559px) {
+      grid-template-columns: 1fr;
     }
   }
 
-  &__stat {
-    background: $color-surface-sunken;
-    border-radius: $radius-md;
+  .sprayer__stat {
     padding: 0.85rem;
+    background: var(--color-surface-alt);
+    border-radius: calc(var(--border-radius) * 1.5);
 
     span {
       display: block;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: $color-ink-muted;
-      font-weight: 600;
       margin-bottom: 0.25rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
     }
 
     strong {
-      font-family: $font-display;
+      font-family: var(--font-display);
       font-size: 1.25rem;
       font-variant-numeric: tabular-nums;
     }
 
     em {
       display: block;
-      font-style: normal;
-      font-size: 0.82rem;
-      color: $color-ink-muted;
       margin-top: 0.2rem;
+      font-size: 0.82rem;
+      font-style: normal;
+      color: var(--color-text-muted);
     }
   }
 
-  &__note {
+  .sprayer__note {
     margin: 0.85rem 0 0;
     font-size: 0.82rem;
-    color: $color-ink-muted;
+    color: var(--color-text-muted);
   }
 }
 </style>

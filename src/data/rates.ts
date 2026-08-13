@@ -1,10 +1,12 @@
+import type { RateTemplate, SprayerMixInput, SprayerMixResult } from '../types'
+
 /**
  * Product rate templates — starting guidance for cool-season (tall fescue)
  * lawns. Rates are not region-specific.
  * Always confirm the bag/label you buy.
  */
 
-export const rateTemplates = {
+export const rateTemplates: Record<string, RateTemplate> = {
   seedOverseed: {
     id: 'seedOverseed',
     label: 'Tall fescue overseed',
@@ -66,12 +68,12 @@ export const rateTemplates = {
 }
 
 /** Cubic yards from sq ft and depth inches */
-export function volumeCubicYards(sqFt, depthInches) {
+export function volumeCubicYards(sqFt: number, depthInches: number): number {
   const cuFt = sqFt * (depthInches / 12)
   return cuFt / 27
 }
 
-export function amountFromPer1000(sqFt, per1000) {
+export function amountFromPer1000(sqFt: number, per1000: number): number {
   return (sqFt / 1000) * per1000
 }
 
@@ -86,12 +88,10 @@ export function sprayerMix({
   ozPer1000 = 0,
   coverageSqFtPerTank = 1000,
   targetSqFt = 1000,
-}) {
+}: SprayerMixInput = {}): SprayerMixResult {
   if (mode === 'perGallon') {
     const productOz = tankGallons * ozPerGallon
-    const tanksNeeded = coverageSqFtPerTank
-      ? targetSqFt / coverageSqFtPerTank
-      : 1
+    const tanksNeeded = coverageSqFtPerTank ? targetSqFt / coverageSqFtPerTank : 1
     return {
       productOzPerTank: productOz,
       waterGallonsPerTank: tankGallons,
@@ -101,12 +101,9 @@ export function sprayerMix({
     }
   }
 
-  // per 1000 → scale to tank coverage
   const ozForCoverage =
     coverageSqFtPerTank > 0 ? (ozPer1000 * coverageSqFtPerTank) / 1000 : ozPer1000
-  const tanksNeeded = coverageSqFtPerTank
-    ? targetSqFt / coverageSqFtPerTank
-    : 1
+  const tanksNeeded = coverageSqFtPerTank ? targetSqFt / coverageSqFtPerTank : 1
   return {
     productOzPerTank: ozForCoverage,
     waterGallonsPerTank: tankGallons,

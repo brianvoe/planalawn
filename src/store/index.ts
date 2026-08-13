@@ -1,8 +1,30 @@
+import './types'
 import { createStore } from 'vuex'
 import { loadPersistedState, localStoragePlugin, clearPersistedState } from './persist'
 import { curatedBlendList } from '../data/seedDb'
+import type {
+  BackupPayload,
+  Blend,
+  Equipment,
+  Profile,
+  Project,
+  RateOverride,
+  ResolvedLocation,
+  RootState,
+  TaskLog,
+  UserLocation,
+} from '../types'
 
-function defaultState() {
+function emptyTaskLog(): TaskLog {
+  return {
+    lastDoneAt: null,
+    notes: '',
+    stepsChecked: {},
+    history: [],
+  }
+}
+
+function defaultState(): RootState {
   return {
     profile: {
       lawnName: 'My lawn',
@@ -13,7 +35,6 @@ function defaultState() {
       notes: '',
     },
     location: {
-      // User-resolved US location (geo or ZIP/city)
       source: null,
       zip: '',
       city: '',
@@ -44,12 +65,12 @@ function defaultState() {
   }
 }
 
-function mergeDeep(base, partial) {
+function mergeDeep<T extends Record<string, unknown>>(base: T, partial: unknown): T {
   if (!partial || typeof partial !== 'object') return base
-  const out = { ...base }
-  Object.keys(partial).forEach((key) => {
-    const pv = partial[key]
-    const bv = base[key]
+  const out = { ...base } as T
+  Object.keys(partial as Record<string, unknown>).forEach((key) => {
+    const pv = (partial as Record<string, unknown>)[key]
+    const bv = (base as Record<string, unknown>)[key]
     if (
       pv &&
       typeof pv === 'object' &&
@@ -58,18 +79,18 @@ function mergeDeep(base, partial) {
       typeof bv === 'object' &&
       !Array.isArray(bv)
     ) {
-      out[key] = { ...bv, ...pv }
+      ;(out as Record<string, unknown>)[key] = { ...(bv as object), ...(pv as object) }
     } else if (pv !== undefined) {
-      out[key] = pv
+      ;(out as Record<string, unknown>)[key] = pv
     }
   })
   return out
 }
 
 const persisted = loadPersistedState()
-const initial = mergeDeep(defaultState(), persisted || {})
+const initial = mergeDeep(defaultState() as unknown as Record<string, unknown>, persisted || {}) as unknown as RootState
 
-export default createStore({
+export default createStore<RootState>({
   state: initial,
   plugins: [localStoragePlugin],
   getters: {
@@ -77,19 +98,13 @@ export default createStore({
     preferredSeed: (s) => s.profile.preferredSeed,
     tankGallons: (s) => s.equipment.tankGallons,
     sprayCoverage: (s) => s.equipment.sprayCoverageSqFtPerTank,
-    userLocation: (s) =>
+    userLocation: (s): UserLocation | null =>
       s.location?.latitude != null && s.location?.longitude != null ? s.location : null,
-    hasLocation: (s, getters) => Boolean(getters.userLocation),
+    hasLocation: (_s, getters) => Boolean(getters.userLocation),
     allBlends: (s) => [...curatedBlendList, ...(s.userBlends || [])],
-    taskLog: (s) => (taskId) =>
-      s.taskLogs[taskId] || {
-        lastDoneAt: null,
-        notes: '',
-        stepsChecked: {},
-        history: [],
-      },
+    taskLog: (s) => (taskId: string) => s.taskLogs[taskId] || emptyTaskLog(),
     projectMilestones: (s) => s.project,
-    exportPayload: (s) => ({
+    exportPayload: (s): BackupPayload => ({
       version: 2,
       exportedAt: new Date().toISOString(),
       profile: s.profile,
@@ -102,13 +117,13 @@ export default createStore({
     }),
   },
   mutations: {
-    UPDATE_PROFILE(state, partial) {
+    UPDATE_PROFILE(state, partial: Partial<Profile>) {
       state.profile = { ...state.profile, ...partial }
       if (partial.lawnSqFt != null) {
         state.profile.lawnSqFt = Math.max(100, Number(partial.lawnSqFt) || 5000)
       }
     },
-    SET_LOCATION(state, loc) {
+    SET_LOCATION(state, loc: Partial<UserLocation> | ResolvedLocation) {
       state.location = {
         ...state.location,
         ...loc,
@@ -118,27 +133,22 @@ export default createStore({
     DISMISS_LOCATION_PROMPT(state) {
       state.location = { ...state.location, promptDismissed: true }
     },
-    UPDATE_EQUIPMENT(state, partial) {
+    UPDATE_EQUIPMENT(state, partial: Partial<Equipment>) {
       state.equipment = { ...state.equipment, ...partial }
     },
-    SET_RATE_OVERRIDE(state, { rateKey, values }) {
+    SET_RATE_OVERRIDE(state, { rateKey, values }: { rateKey: string; values: RateOverride }) {
       state.rateOverrides = {
         ...state.rateOverrides,
         [rateKey]: { ...(state.rateOverrides[rateKey] || {}), ...values },
       }
     },
-    CLEAR_RATE_OVERRIDE(state, rateKey) {
+    CLEAR_RATE_OVERRIDE(state, rateKey: string) {
       const next = { ...state.rateOverrides }
       delete next[rateKey]
       state.rateOverrides = next
     },
-    TOGGLE_TASK_STEP(state, { taskId, stepIndex }) {
-      const log = state.taskLogs[taskId] || {
-        lastDoneAt: null,
-        notes: '',
-        stepsChecked: {},
-        history: [],
-      }
+    TOGGLE_TASK_STEP(state, { taskId, stepIndex }: { taskId: string; stepIndex: number }) {
+      const log = state.taskLogs[taskId] || emptyTaskLog()
       const stepsChecked = { ...log.stepsChecked }
       if (stepsChecked[stepIndex]) delete stepsChecked[stepIndex]
       else stepsChecked[stepIndex] = true
@@ -147,33 +157,23 @@ export default createStore({
         [taskId]: { ...log, stepsChecked },
       }
     },
-    SET_TASK_NOTES(state, { taskId, notes }) {
-      const log = state.taskLogs[taskId] || {
-        lastDoneAt: null,
-        notes: '',
-        stepsChecked: {},
-        history: [],
-      }
+    SET_TASK_NOTES(state, { taskId, notes }: { taskId: string; notes: string }) {
+      const log = state.taskLogs[taskId] || emptyTaskLog()
       state.taskLogs = {
         ...state.taskLogs,
         [taskId]: { ...log, notes },
       }
     },
-    MARK_TASK_DONE(state, { taskId, at = null }) {
+    MARK_TASK_DONE(state, { taskId, at = null }: { taskId: string; at?: string | null }) {
       const when = at || new Date().toISOString().slice(0, 10)
-      const log = state.taskLogs[taskId] || {
-        lastDoneAt: null,
-        notes: '',
-        stepsChecked: {},
-        history: [],
-      }
+      const log = state.taskLogs[taskId] || emptyTaskLog()
       const history = [...(log.history || []), when].slice(-20)
       state.taskLogs = {
         ...state.taskLogs,
         [taskId]: { ...log, lastDoneAt: when, history },
       }
     },
-    CLEAR_TASK_DONE(state, taskId) {
+    CLEAR_TASK_DONE(state, taskId: string) {
       const log = state.taskLogs[taskId]
       if (!log) return
       state.taskLogs = {
@@ -181,12 +181,19 @@ export default createStore({
         [taskId]: { ...log, lastDoneAt: null },
       }
     },
-    UPDATE_PROJECT(state, partial) {
+    UPDATE_PROJECT(state, partial: Partial<Project>) {
       state.project = { ...state.project, ...partial }
     },
-    UPSERT_USER_BLEND(state, blend) {
+    UPSERT_USER_BLEND(state, blend: Partial<Blend> & Pick<Blend, 'name' | 'components'>) {
       const id = blend.id || `user-${Date.now()}`
-      const next = { ...blend, id, curated: false }
+      const next: Blend = {
+        manufacturer: 'Custom',
+        species: 'tall_fescue',
+        summary: '',
+        ...blend,
+        id,
+        curated: false,
+      }
       const idx = (state.userBlends || []).findIndex((b) => b.id === id)
       if (idx >= 0) {
         const list = [...state.userBlends]
@@ -196,19 +203,19 @@ export default createStore({
         state.userBlends = [...(state.userBlends || []), next]
       }
     },
-    DELETE_USER_BLEND(state, id) {
+    DELETE_USER_BLEND(state, id: string) {
       state.userBlends = (state.userBlends || []).filter((b) => b.id !== id)
     },
-    IMPORT_STATE(state, payload) {
+    IMPORT_STATE(state, payload: Partial<BackupPayload>) {
       const fresh = defaultState()
-      const merged = mergeDeep(fresh, {
+      const merged = mergeDeep(fresh as unknown as Record<string, unknown>, {
         profile: payload.profile,
         location: payload.location,
         equipment: payload.equipment,
         rateOverrides: payload.rateOverrides,
         taskLogs: payload.taskLogs,
         project: payload.project,
-      })
+      }) as unknown as RootState
       state.profile = merged.profile
       state.location = merged.location
       state.equipment = merged.equipment
@@ -218,51 +225,48 @@ export default createStore({
       state.userBlends = payload.userBlends || []
     },
     RESET_ALL(state) {
-      const fresh = defaultState()
-      Object.keys(fresh).forEach((k) => {
-        state[k] = fresh[k]
-      })
+      Object.assign(state, defaultState())
       clearPersistedState()
     },
   },
   actions: {
-    updateProfile({ commit }, partial) {
+    updateProfile({ commit }, partial: Partial<Profile>) {
       commit('UPDATE_PROFILE', partial)
     },
-    setLocation({ commit }, loc) {
+    setLocation({ commit }, loc: Partial<UserLocation> | ResolvedLocation) {
       commit('SET_LOCATION', loc)
     },
     dismissLocationPrompt({ commit }) {
       commit('DISMISS_LOCATION_PROMPT')
     },
-    updateEquipment({ commit }, partial) {
+    updateEquipment({ commit }, partial: Partial<Equipment>) {
       commit('UPDATE_EQUIPMENT', partial)
     },
-    setRateOverride({ commit }, payload) {
+    setRateOverride({ commit }, payload: { rateKey: string; values: RateOverride }) {
       commit('SET_RATE_OVERRIDE', payload)
     },
-    toggleTaskStep({ commit }, payload) {
+    toggleTaskStep({ commit }, payload: { taskId: string; stepIndex: number }) {
       commit('TOGGLE_TASK_STEP', payload)
     },
-    setTaskNotes({ commit }, payload) {
+    setTaskNotes({ commit }, payload: { taskId: string; notes: string }) {
       commit('SET_TASK_NOTES', payload)
     },
-    markTaskDone({ commit }, payload) {
+    markTaskDone({ commit }, payload: { taskId: string; at?: string | null }) {
       commit('MARK_TASK_DONE', payload)
     },
-    clearTaskDone({ commit }, taskId) {
+    clearTaskDone({ commit }, taskId: string) {
       commit('CLEAR_TASK_DONE', taskId)
     },
-    updateProject({ commit }, partial) {
+    updateProject({ commit }, partial: Partial<Project>) {
       commit('UPDATE_PROJECT', partial)
     },
-    upsertUserBlend({ commit }, blend) {
+    upsertUserBlend({ commit }, blend: Partial<Blend> & Pick<Blend, 'name' | 'components'>) {
       commit('UPSERT_USER_BLEND', blend)
     },
-    deleteUserBlend({ commit }, id) {
+    deleteUserBlend({ commit }, id: string) {
       commit('DELETE_USER_BLEND', id)
     },
-    importBackup({ commit }, payload) {
+    importBackup({ commit }, payload: Partial<BackupPayload>) {
       commit('IMPORT_STATE', payload)
     },
     resetAll({ commit }) {

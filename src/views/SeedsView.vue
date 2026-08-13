@@ -1,9 +1,9 @@
 <template>
   <div class="seeds">
     <header class="seeds-hero">
-      <div class="seeds-hero__inner">
+          <div class="seeds-hero__inner container">
         <p class="eyebrow">
-          <AppIcon name="sprout" />
+          <font-awesome-icon icon="fa-solid fa-seedling" />
           Seed intel
         </p>
         <h1>Pick seed on evidence.</h1>
@@ -17,7 +17,7 @@
       </div>
     </header>
 
-    <div class="seeds__inner">
+    <div class="seeds__inner container">
       <div class="tabs" role="tablist">
         <button
           v-for="t in tabs"
@@ -76,9 +76,9 @@
           >
             <div class="blend-card__top">
               <span class="tag">{{ b.curated ? 'Curated' : 'Yours' }}</span>
-              <span v-if="fitFor(b)" class="fit" :class="fitClass(fitFor(b).score)">
-                {{ fitFor(b).label }}
-                <em v-if="fitFor(b).score != null">{{ fitFor(b).score }}</em>
+              <span v-if="fitFor(b)" class="fit" :class="fitClass(fitFor(b)?.score)">
+                {{ fitFor(b)?.label }}
+                <em v-if="fitFor(b)?.score != null">{{ fitFor(b)?.score }}</em>
               </span>
             </div>
             <h3>{{ b.name }}</h3>
@@ -117,7 +117,7 @@
 
           <h3>Cultivars in this blend</h3>
           <div class="comp-table">
-            <div v-for="c in selectedFit?.components || selectedBlend.components" :key="c.name" class="comp-line">
+            <div v-for="c in selectedComponents" :key="c.name" class="comp-line">
               <div>
                 <strong>{{ c.name }}</strong>
                 <span v-if="c.percent"> · {{ c.percent }}%</span>
@@ -224,7 +224,7 @@
             <h3>{{ b.name }}</h3>
             <p class="fit" :class="fitClass(fitFor(b)?.score)">
               {{ fitFor(b)?.label }}
-              <strong v-if="fitFor(b)?.score">{{ fitFor(b).score }}</strong>
+              <strong v-if="fitFor(b)?.score">{{ fitFor(b)?.score }}</strong>
             </p>
             <ul>
               <li v-for="s in fitFor(b)?.strengths || []" :key="s">{{ s }}</li>
@@ -239,7 +239,7 @@
       <!-- DATA -->
       <section v-if="tab === 'data'" class="panel card">
         <h2>NTEP data coverage</h2>
-        <p>
+        <p v-if="ntepMeta">
           Source: {{ ntepMeta.sourcePdf }} ({{ ntepMeta.trial }}, {{ ntepMeta.year }}).
           Parsed high-value tables only — regional turf quality, genetic color, brown patch, drought.
         </p>
@@ -259,9 +259,7 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-import AppIcon from '../components/ui/AppIcon.vue'
+<script lang="ts">
 import {
   allCultivars,
   buildCultivarIndex,
@@ -277,12 +275,21 @@ import {
   coverageLabel,
   fitRank,
 } from '../services/suitability'
+import type {
+  Blend,
+  BlendComponentFit,
+  BlendFit,
+  Coverage,
+  Cultivar,
+  CultivarFit,
+  NearbySite,
+  ScoreFactor,
+  UserLocation,
+} from '../types'
 
-// The quality column reports a single trial site's rating, so the site it names
-// must be one that measured turf quality — not merely the closest trial site.
 const QUALITY_SITES = siteCodesForMetric('transitionQuality')
 
-const FACTOR_LABELS = {
+const FACTOR_LABELS: Record<ScoreFactor, string> = {
   nearest: 'nearest trial site',
   region: 'regional quality',
   summerStress: 'drought / brown patch',
@@ -290,9 +297,13 @@ const FACTOR_LABELS = {
   national: 'national mean',
 }
 
+interface DraftComponent {
+  name: string
+  percent: number | null
+}
+
 export default {
   name: 'SeedsView',
-  components: { AppIcon },
   data() {
     return {
       tab: 'blends',
@@ -307,33 +318,35 @@ export default {
       sortKey: 'fit',
       selectedBlendId: 'calypsow',
       showBlendForm: false,
-      compareIds: ['calypsow', 'resilience-ii', ''],
+      compareIds: ['calypsow', 'resilience-ii', ''] as string[],
       draft: {
         name: '',
         manufacturer: '',
         components: [
           { name: '', percent: null },
           { name: '', percent: null },
-        ],
+        ] as DraftComponent[],
       },
       cultivarIndex: buildCultivarIndex(),
       ntepMeta,
       speciesList,
-      fitCache: {},
+      fitCache: {} as Record<string, BlendFit>,
     }
   },
   computed: {
-    ...mapGetters(['allBlends', 'userLocation']),
-    blends() {
+    allBlends(): Blend[] {
+      return this.$store.getters.allBlends
+    },
+    userLocation(): UserLocation | null {
+      return this.$store.getters.userLocation
+    },
+    blends(): Blend[] {
       return this.allBlends
     },
-    cultivarCount() {
+    cultivarCount(): number {
       return allCultivars.length
     },
-    /**
-     * Closest trial site with quality ratings, or null when no location is set.
-     */
-    nearestSite() {
+    nearestSite(): NearbySite | null {
       if (!this.userLocation) return null
       return (
         nearestNtepSites(
@@ -344,29 +357,30 @@ export default {
         )[0] || null
       )
     },
-    /**
-     * Names the site the column's numbers actually come from. Without a
-     * location we fall back to the Knoxville trial, so say so rather than
-     * implying the figure is local to the reader.
-     */
-    nearestSiteHeader() {
+    nearestSiteHeader(): string {
       return this.nearestSite ? `Nearest — ${this.nearestSite.name}` : 'Knoxville, TN (default)'
     },
-    filteredBlends() {
+    filteredBlends(): Blend[] {
       const q = this.blendQuery.trim().toLowerCase()
       if (!q) return this.blends
-      return this.blends.filter((b) =>
-        `${b.name} ${b.manufacturer}`.toLowerCase().includes(q),
-      )
+      return this.blends.filter((b) => `${b.name} ${b.manufacturer}`.toLowerCase().includes(q))
     },
-    selectedBlend() {
+    selectedBlend(): Blend | null {
       return this.blends.find((b) => b.id === this.selectedBlendId) || null
     },
-    selectedFit() {
+    selectedFit(): BlendFit | null {
       return this.selectedBlend ? this.fitFor(this.selectedBlend) : null
     },
-    cultivarRows() {
-      let list = searchCultivars(this.cultQuery, allCultivars)
+    selectedComponents(): BlendComponentFit[] {
+      if (this.selectedFit) return this.selectedFit.components
+      return (this.selectedBlend?.components || []).map((c) => ({
+        ...c,
+        cultivar: null,
+        fit: null,
+      }))
+    },
+    cultivarRows(): (Cultivar & { fit: CultivarFit | null })[] {
+      const list = searchCultivars(this.cultQuery, allCultivars)
       const withFit = list.map((c) => ({
         ...c,
         fit: this.userLocation ? scoreCultivarForLocation(c, this.userLocation) : null,
@@ -375,7 +389,6 @@ export default {
         if (this.sortKey === 'name') return a.name.localeCompare(b.name)
         if (this.sortKey === 'fit') {
           const diff = fitRank(b.fit) - fitRank(a.fit)
-          // Fall back to the raw score so ordering stays stable within a tie.
           return diff !== 0 ? diff : (b.fit?.score || 0) - (a.fit?.score || 0)
         }
         if (this.sortKey === 'transition') {
@@ -391,24 +404,20 @@ export default {
       })
       return withFit.slice(0, 80)
     },
-    compareBlends() {
-      return this.compareIds.map((id) => this.blends.find((b) => b.id === id)).filter(Boolean)
+    compareBlends(): Blend[] {
+      return this.compareIds.map((id) => this.blends.find((b) => b.id === id)).filter((b): b is Blend => Boolean(b))
     },
   },
   methods: {
-    fitFor(blend) {
+    fitFor(blend: Blend | null): BlendFit | null {
       if (!blend) return null
       const key = `${blend.id}:${this.userLocation?.latitude}:${this.userLocation?.longitude}`
       if (!this.fitCache[key]) {
-        this.fitCache[key] = scoreBlendForLocation(
-          blend,
-          this.cultivarIndex,
-          this.userLocation,
-        )
+        this.fitCache[key] = scoreBlendForLocation(blend, this.cultivarIndex, this.userLocation)
       }
       return this.fitCache[key]
     },
-    fitClass(score) {
+    fitClass(score: number | null | undefined): string {
       if (score == null) return 'unk'
       if (score >= 6.6) return 'great'
       if (score >= 6.2) return 'good'
@@ -416,19 +425,19 @@ export default {
       return 'low'
     },
     coverageLabel,
-    coverageTitle(coverage) {
+    coverageTitle(coverage: Coverage | null | undefined): string {
       if (!coverage) return ''
       if (coverage.complete) return 'Scored on all five factors.'
       const missing = coverage.missing.map((k) => FACTOR_LABELS[k] || k).join(', ')
       return `Scored on ${coverageLabel(coverage)}. No trial data for: ${missing}.`
     },
-    selectBlend(id) {
+    selectBlend(id: string) {
       this.selectedBlendId = id
     },
-    fmt(v) {
+    fmt(v: number | null | undefined): string {
       return typeof v === 'number' ? v.toFixed(1) : '—'
     },
-    nearestMetric(cultivar) {
+    nearestMetric(cultivar: Cultivar): number | null | undefined {
       const near = this.nearestSite
       if (!near) return cultivar.metrics?.knoxvilleQuality?.mean
       const siteVal = cultivar.metrics?.transitionQuality?.bySite?.[near.code]
@@ -461,7 +470,7 @@ export default {
       }
       this.fitCache = {}
     },
-    removeBlend(id) {
+    removeBlend(id: string) {
       this.$store.dispatch('deleteUserBlend', id)
       if (this.selectedBlendId === id) this.selectedBlendId = 'calypsow'
       this.fitCache = {}
@@ -470,350 +479,369 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
+<style lang="scss">
+.seeds {
+  .seeds-hero {
+    padding: clamp(2rem, 5vw, 3rem) 0 0.5rem;
 
-.seeds-hero {
-  padding: clamp(2rem, 5vw, 3rem) 0 0.5rem;
+    h1 {
+      margin: 0 0 0.65rem;
+      max-width: 18ch;
+      font-size: clamp(1.7rem, 3.8vw, 2.5rem);
+    }
 
-  &__inner {
-    @include container;
-  }
+    .lede {
+      margin: 0 0 0.65rem;
+      max-width: 44rem;
+      color: var(--color-text-muted);
+    }
 
-  h1 {
-    margin: 0 0 0.65rem;
-    font-size: clamp(1.7rem, 3.8vw, 2.5rem);
-    max-width: 18ch;
-  }
-
-  .lede {
-    margin: 0 0 0.65rem;
-    color: $color-ink-muted;
-    max-width: 44rem;
-  }
-
-  .meta {
-    margin: 0;
-    font-size: 0.85rem;
-    color: $color-ink-muted;
-  }
-}
-
-.seeds__inner {
-  @include container;
-  padding-block: 1.25rem 3.5rem;
-}
-
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.25rem;
-}
-
-.tab {
-  @include tap-target;
-  border: 1px solid $color-border-strong;
-  background: $color-surface;
-  border-radius: $radius-pill;
-  padding: 0.4rem 0.95rem;
-  font-weight: 600;
-  font-size: 0.88rem;
-  cursor: pointer;
-  color: $color-ink-muted;
-
-  &:focus-visible {
-    @include focus-ring;
-  }
-
-  &.active {
-    background: $brand;
-    border-color: $brand;
-    color: #fff;
-  }
-}
-
-.toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-bottom: 1rem;
-
-  input,
-  select {
-    @include tap-target;
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.45rem 0.65rem;
-    min-width: 12rem;
-    flex: 1 1 12rem;
-
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
+    .meta {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
     }
   }
-}
 
-.card {
-  margin-bottom: 1rem;
-}
+  .seeds__inner {
+    padding-block: 1.25rem 3.5rem;
+  }
 
-.card-grid {
-  display: grid;
-  gap: 0.85rem;
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
 
-  @media (min-width: $bp-md) {
+  .tab {
+    min-height: var(--input-height);
+    padding: 0.4rem 0.95rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &.active {
+      color: var(--color-white);
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+
+    input,
+    select {
+      flex: 1 1 12rem;
+      min-width: 12rem;
+      min-height: var(--input-height);
+      padding: 0.45rem 0.65rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-}
+    gap: 0.85rem;
 
-.blend-card {
-  @include card;
-  padding: 1rem 1.1rem;
-  cursor: pointer;
-
-  &.selected {
-    border-color: $brand;
-    box-shadow: inset 0 0 0 1px $brand;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &:focus-visible {
-    @include focus-ring;
+  .blend-card {
+    padding: 1rem 1.1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+
+    &.selected {
+      border-color: var(--color-primary);
+      box-shadow: inset 0 0 0 1px var(--color-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .blend-card__top {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.15rem;
+    }
+
+    .mfr,
+    p {
+      margin: 0 0 0.35rem;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+    }
+
+    .comps {
+      font-size: 0.8rem !important;
+    }
   }
 
-  &__top {
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: var(--color-text-muted);
+    background: var(--color-bg-soft);
+    border-radius: 999px;
+  }
+
+  .fit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: var(--color-text-muted);
+    background: var(--color-bg-soft);
+    border-radius: 999px;
+
+    em {
+      font-style: normal;
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    &.great,
+    &.good {
+      color: var(--color-success);
+      background: var(--color-success-bg);
+    }
+
+    &.ok {
+      color: var(--color-warning);
+      background: var(--color-warning-bg);
+    }
+  }
+
+  .fit-box {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0.85rem 0 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--color-surface-alt);
+    border-radius: calc(var(--border-radius) * 1.5);
+
+    ul {
+      margin: 0.25rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .warn {
+      color: var(--color-warning);
+    }
+  }
+
+  .comp-line {
     display: flex;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+
+    .missing {
+      font-style: italic;
+      color: var(--color-text-muted);
+    }
+  }
+
+  .fit-mini {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .fit-cell {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .fit-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-muted);
+    background: var(--color-bg-soft);
+    border-radius: 999px;
+
+    &.great,
+    &.good {
+      color: var(--color-success);
+      background: var(--color-success-bg);
+    }
+  }
+
+  .coverage {
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    cursor: help;
+
+    &--partial {
+      font-weight: 600;
+      color: var(--color-warning);
+    }
+  }
+
+  .muted {
+    color: var(--color-text-muted);
+  }
+
+  .form-grid {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+
+    input {
+      min-height: var(--input-height);
+      padding: 0.45rem 0.65rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .comp-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     margin-bottom: 0.4rem;
   }
 
-  h3 {
-    margin: 0 0 0.2rem;
-    font-size: 1.15rem;
+  .linkish {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
-  .mfr,
-  p {
-    margin: 0 0 0.35rem;
-    color: $color-ink-muted;
-    font-size: 0.88rem;
-  }
+  .compare-picks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 
-  .comps {
-    font-size: 0.8rem !important;
-  }
-}
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
 
-.tag {
-  @include label-badge;
-  background: $status-neutral-soft;
-  color: $status-neutral;
-  font-size: 0.68rem;
-}
+    select {
+      min-width: 12rem;
+      min-height: var(--input-height);
+      padding: 0.45rem 0.65rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
 
-// Suitability badge. `unk` and `low` stay neutral rather than red on purpose:
-// absent trial data is not evidence of a bad cultivar (README principle 4).
-.fit {
-  @include label-badge;
-  font-size: 0.72rem;
-  gap: 0.35rem;
-  background: $status-neutral-soft;
-  color: $status-neutral;
-
-  em {
-    font-style: normal;
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
-  }
-
-  &.great,
-  &.good {
-    background: $status-good-soft;
-    color: $status-good;
-  }
-
-  &.ok {
-    background: $status-caution-soft;
-    color: $status-caution;
-  }
-}
-
-.fit-box {
-  background: $color-surface-sunken;
-  border-radius: $radius-md;
-  padding: 0.85rem 1rem;
-  margin: 0.85rem 0 1rem;
-  display: grid;
-  gap: 0.35rem;
-
-  ul {
-    margin: 0.25rem 0 0;
-    padding-left: 1.1rem;
-  }
-
-  .warn {
-    color: $status-caution;
-  }
-}
-
-.comp-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid $color-border-soft;
-  font-size: 0.9rem;
-
-  .missing {
-    color: $status-neutral;
-    font-style: italic;
-  }
-}
-
-.fit-mini {
-  font-size: 0.8rem;
-  color: $color-ink-muted;
-  white-space: nowrap;
-}
-
-.fit-cell {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.2rem;
-}
-
-.fit-pill {
-  @include label-badge;
-  font-variant-numeric: tabular-nums;
-  background: $status-neutral-soft;
-  color: $status-neutral;
-
-  &.great,
-  &.good {
-    background: $status-good-soft;
-    color: $status-good;
-  }
-}
-
-// Coverage is always present so a score is never read without knowing how much
-// evidence sits behind it. Quiet by default; amber only when evidence is
-// actually missing, so full coverage does not read as a warning.
-.coverage {
-  font-size: 0.7rem;
-  font-style: normal;
-  font-weight: 500;
-  color: $status-neutral;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  cursor: help;
-
-  &--partial {
-    color: $status-caution;
-    font-weight: 600;
-  }
-}
-
-.muted {
-  color: $color-ink-muted;
-}
-
-.form-grid {
-  display: grid;
-  gap: 0.75rem;
-  margin-bottom: 0.85rem;
-
-  label {
-    display: grid;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: $color-ink-muted;
-  }
-
-  input {
-    @include tap-target;
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.45rem 0.65rem;
-
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
     }
   }
 
-  .full {
-    grid-column: 1 / -1;
-  }
-}
-
-.comp-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.linkish {
-  border: none;
-  background: none;
-  text-decoration: underline;
-  cursor: pointer;
-  color: $color-ink-muted;
-}
-
-.compare-picks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-
-  label {
+  .compare-grid {
     display: grid;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: $color-ink-muted;
-  }
-
-  select {
-    @include tap-target;
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.45rem 0.65rem;
-    min-width: 12rem;
-
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
-    }
-  }
-}
-
-.compare-grid {
-  display: grid;
-  gap: 0.85rem;
-
-  @media (min-width: $bp-md) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.88rem;
+    }
+
+    .warn {
+      color: var(--color-warning);
+    }
   }
 
-  ul {
-    margin: 0.5rem 0 0;
-    padding-left: 1.1rem;
-    font-size: 0.88rem;
+  code {
+    font-size: 0.8rem;
   }
-
-  .warn {
-    color: $status-caution;
-  }
-}
-
-code {
-  font-size: 0.8rem;
 }
 </style>

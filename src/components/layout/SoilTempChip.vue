@@ -6,24 +6,27 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
 import { formatTemp, formatUpdated } from '../../services/weather'
+import type { PropType } from 'vue'
+import type { Conditions, UserLocation } from '../../types'
 
 export default {
   name: 'SoilTempChip',
   props: {
-    conditions: { type: Object, default: null },
+    conditions: { type: Object as PropType<Conditions | null>, default: null },
   },
   computed: {
-    ...mapGetters(['userLocation']),
-    place() {
+    userLocation(): UserLocation | null {
+      return this.$store.getters.userLocation
+    },
+    place(): string {
       return this.userLocation?.city || this.userLocation?.label || 'No location'
     },
-    tempLabel() {
+    tempLabel(): string {
       return formatTemp(this.conditions?.soilTemp6F)
     },
-    title() {
+    title(): string {
       if (!this.conditions) return 'Set location to load soil temperature'
       return `Updated ${formatUpdated(this.conditions.fetchedAt)}`
     },
@@ -31,35 +34,39 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .soil-chip {
-  @include label-badge;
-  background: $brand-soft;
-  color: $brand-strong;
+  display: inline-flex;
+  align-items: center;
   gap: 0.45rem;
-  margin-left: auto;
   max-width: 16rem;
+  margin-left: auto;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--color-primary-strong);
+  background: var(--color-primary-soft);
+  border-radius: 999px;
 
-  &__place {
-    opacity: 0.85;
+  .soil-chip__place {
+    max-width: 7rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 7rem;
+    opacity: 0.85;
   }
 
-  &__temp {
+  .soil-chip__temp {
     font-variant-numeric: tabular-nums;
     font-weight: 700;
   }
 
-  &__meta {
+  .soil-chip__meta {
     font-size: 0.65rem;
-    text-transform: uppercase;
     letter-spacing: 0.04em;
+    text-transform: uppercase;
     opacity: 0.75;
   }
 }

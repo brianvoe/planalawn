@@ -44,10 +44,10 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
 import LawnSizeInput from '../layout/LawnSizeInput.vue'
 import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../../data/rates'
+import type { RateTemplate } from '../../types'
 
 export default {
   name: 'RateCalculator',
@@ -63,18 +63,20 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['lawnSqFt']),
-    template() {
+    lawnSqFt(): number {
+      return this.$store.getters.lawnSqFt
+    },
+    template(): RateTemplate | undefined {
       return rateTemplates[this.selectedKey] || rateTemplates[this.rateKey]
     },
     override() {
       return this.$store.state.rateOverrides[this.selectedKey] || {}
     },
     per1000: {
-      get() {
+      get(): number {
         return this.override.per1000 ?? this.template?.per1000 ?? 0
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('setRateOverride', {
           rateKey: this.selectedKey,
           values: { per1000: Number(v) },
@@ -82,51 +84,51 @@ export default {
       },
     },
     depthInches: {
-      get() {
+      get(): number {
         return this.override.depthInches ?? this.template?.depthInches ?? 0.25
       },
-      set(v) {
+      set(v: number) {
         this.$store.dispatch('setRateOverride', {
           rateKey: this.selectedKey,
           values: { depthInches: Number(v) },
         })
       },
     },
-    unit() {
+    unit(): string {
       return this.template?.unit || 'lb'
     },
-    altOptions() {
+    altOptions(): RateTemplate[] {
       const keys = [this.rateKey, this.altRateKey].filter(Boolean)
-      return keys.map((k) => rateTemplates[k]).filter(Boolean)
+      return keys.map((k) => rateTemplates[k]).filter((t): t is RateTemplate => Boolean(t))
     },
-    showPer1000() {
+    showPer1000(): boolean {
       return this.mode === 'coverage'
     },
-    showDepth() {
+    showDepth(): boolean {
       return this.mode === 'volume'
     },
-    notes() {
+    notes(): string {
       return this.template?.notes || ''
     },
-    amountLabel() {
+    amountLabel(): string {
       return `${amountFromPer1000(this.lawnSqFt, this.per1000).toFixed(1)} ${this.unit}`
     },
-    volumeLabel() {
+    volumeLabel(): string {
       return volumeCubicYards(this.lawnSqFt, this.depthInches).toFixed(2)
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .rate-calc {
-  @include card;
   padding: 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: var(--shadow);
 
-  &__controls {
+  .rate-calc__controls {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem 1.25rem;
@@ -138,27 +140,28 @@ export default {
       gap: 0.3rem;
       font-size: 0.8rem;
       font-weight: 600;
-      color: $color-ink-muted;
+      color: var(--color-text-muted);
     }
 
     input,
     select {
-      @include tap-target;
-      border: 1px solid $color-border-strong;
-      border-radius: $radius-sm;
-      padding: 0.45rem 0.65rem;
-      color: $color-ink;
-      background: $color-surface;
       min-width: 7rem;
+      min-height: var(--input-height);
+      padding: 0.45rem 0.65rem;
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
 
       &:focus-visible {
-        @include focus-ring;
-        border-color: $brand;
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
       }
     }
   }
 
-  &__result {
+  .rate-calc__result {
     p {
       margin: 0 0 0.5rem;
       font-size: 1rem;
@@ -169,9 +172,9 @@ export default {
     }
   }
 
-  &__notes {
+  .rate-calc__notes {
     font-size: 0.85rem !important;
-    color: $color-ink-muted;
+    color: var(--color-text-muted);
   }
 }
 </style>

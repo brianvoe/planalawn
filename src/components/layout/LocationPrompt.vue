@@ -1,6 +1,6 @@
 <template>
   <section v-if="show" class="loc-prompt">
-    <div class="loc-prompt__inner">
+    <div class="loc-prompt__inner container">
       <div>
         <h2>Where’s your lawn?</h2>
         <p>
@@ -10,13 +10,13 @@
       </div>
 
       <div class="loc-prompt__actions">
-        <button type="button" class="btn btn--primary" :disabled="busy" @click="useGeo">
+        <button type="button" class="btn btn--primary" :disabled="Boolean(busy)" @click="useGeo">
           {{ busy === 'geo' ? 'Locating…' : 'Use my location' }}
         </button>
         <span class="or">or</span>
         <form class="zip-form" @submit.prevent="useZip">
           <input v-model="zip" type="text" inputmode="numeric" maxlength="5" placeholder="ZIP code" />
-          <button type="submit" class="btn" :disabled="busy">{{ busy === 'zip' ? '…' : 'Set' }}</button>
+          <button type="submit" class="btn" :disabled="Boolean(busy)">{{ busy === 'zip' ? '…' : 'Set' }}</button>
         </form>
         <button type="button" class="linkish" @click="dismiss">Not now</button>
       </div>
@@ -25,20 +25,24 @@
   </section>
 </template>
 
-<script>
-import { mapState, mapGetters } from 'vuex'
+<script lang="ts">
 import { lookupZip, requestBrowserLocation } from '../../services/geolocation'
+import type { UserLocation } from '../../types'
 
 export default {
   name: 'LocationPrompt',
   emits: ['location-set'],
   data() {
-    return { zip: '', busy: null, error: '' }
+    return { zip: '', busy: null as null | 'geo' | 'zip', error: '' }
   },
   computed: {
-    ...mapState(['location']),
-    ...mapGetters(['hasLocation']),
-    show() {
+    location(): UserLocation {
+      return this.$store.state.location
+    },
+    hasLocation(): boolean {
+      return this.$store.getters.hasLocation
+    },
+    show(): boolean {
       return !this.hasLocation && !this.location.promptDismissed
     },
   },
@@ -54,7 +58,7 @@ export default {
         await this.$store.dispatch('setLocation', loc)
         this.$emit('location-set')
       } catch (e) {
-        this.error = e.message || 'Could not get location — try ZIP instead'
+        this.error = e instanceof Error ? e.message : 'Could not get location — try ZIP instead'
       } finally {
         this.busy = null
       }
@@ -67,7 +71,7 @@ export default {
         await this.$store.dispatch('setLocation', loc)
         this.$emit('location-set')
       } catch (e) {
-        this.error = e.message || 'ZIP lookup failed'
+        this.error = e instanceof Error ? e.message : 'ZIP lookup failed'
       } finally {
         this.busy = null
       }
@@ -76,19 +80,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
-
+<style lang="scss">
 .loc-prompt {
-  border-bottom: 1px solid $color-border-soft;
-  background: $brand-soft;
+  background: var(--color-primary-soft);
+  border-bottom: 1px solid var(--color-border);
 
-  &__inner {
-    @include container;
-    padding: 1rem 0;
+  .loc-prompt__inner {
     display: grid;
     gap: 0.85rem;
+    padding: 1rem 0;
 
     h2 {
       margin: 0 0 0.25rem;
@@ -97,53 +97,54 @@ export default {
 
     p {
       margin: 0;
-      color: $color-ink-muted;
-      font-size: 0.92rem;
       max-width: 40rem;
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
     }
   }
 
-  &__actions {
+  .loc-prompt__actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.55rem 0.75rem;
   }
-}
 
-.zip-form {
-  display: inline-flex;
-  gap: 0.35rem;
+  .zip-form {
+    display: inline-flex;
+    gap: 0.35rem;
 
-  input {
-    border: 1px solid $color-border-strong;
-    border-radius: $radius-sm;
-    padding: 0.45rem 0.65rem;
-    width: 6.5rem;
+    input {
+      width: 6.5rem;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
 
-    &:focus-visible {
-      @include focus-ring;
-      border-color: $brand;
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-color: var(--color-primary);
+      }
     }
   }
-}
 
-.or {
-  color: $color-ink-muted;
-  font-size: 0.8rem;
-}
+  .or {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
 
-.linkish {
-  border: none;
-  background: none;
-  color: $color-ink-muted;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 0.85rem;
-}
+  .linkish {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-.err {
-  color: $status-hot !important;
-  font-size: 0.85rem !important;
+  .err {
+    font-size: 0.85rem !important;
+    color: var(--color-danger) !important;
+  }
 }
 </style>

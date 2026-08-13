@@ -1,0 +1,58 @@
+:root {
+  /* ═══════════════════════════════════════════════════════════════════════════
+     COLOR PALETTE — Fairway design tokens (single source of truth)
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  /* ── Neutrals ───────────────────────────────────────────────────────────── */
+  --color-white: #ffffff;
+
+  /* ── Surfaces ───────────────────────────────────────────────────────────── */
+  --color-bg: #f6f8f4;
+  --color-bg-soft: #ecf3ee;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f4f0;
+  --color-border: #dce3dc;
+  --color-dark: #10321f;
+
+  /* ── Text ───────────────────────────────────────────────────────────────── */
+  --color-text: #16241c;
+  --color-text-muted: #5c6b62;
+
+  /* ── Brand ──────────────────────────────────────────────────────────────── */
+  --color-primary: #1a7a43;
+  --color-primary-strong: #14663a;
+  --color-primary-soft: #e3f3e8;
+  --color-accent: #a55e17;
+
+  /* ── Semantic ───────────────────────────────────────────────────────────── */
+  --color-success: #166b3b;
+  --color-warning: #8a5814;
+  --color-info: #265f89;
+  --color-danger: #9e3229;
+
+  --color-success-bg: color-mix(in srgb, var(--color-success) 14%, var(--color-white));
+  --color-warning-bg: color-mix(in srgb, var(--color-warning) 14%, var(--color-white));
+  --color-info-bg: color-mix(in srgb, var(--color-info) 14%, var(--color-white));
+  --color-danger-bg: color-mix(in srgb, var(--color-danger) 14%, var(--color-white));
+  --color-accent-bg: color-mix(in srgb, var(--color-accent) 14%, var(--color-white));
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  --font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'DM Sans', 'Segoe UI', sans-serif;
+  --font-size: 16px;
+  --letter-spacing: 0.01em;
+  --font-weight-bold: 800;
+
+  /* ── Shape & motion ─────────────────────────────────────────────────────── */
+  --border-radius: 8px;
+  --spacing: 16px;
+  --spacing-half: 8px;
+  --spacing-quarter: 4px;
+  --shadow: 0 1px 2px rgba(22, 36, 28, 0.04), 0 8px 24px rgba(22, 36, 28, 0.05);
+  --input-height: 44px;
+  --max-width: 1120px;
+
+  /* Breakpoints cannot be used in @media (hardcode these):
+     sm 560px, md 768px, lg 1024px
+     Desktop-first overrides: max-width 559px / 767px / 1023px */
+}

@@ -1,9 +1,9 @@
 <template>
-  <div class="page">
-    <div class="page__inner">
+  <div class="sprayer-page">
+    <div class="container">
       <header class="page-header">
         <p class="eyebrow">
-          <AppIcon name="spray" />
+          <font-awesome-icon icon="fa-solid fa-spray-can" />
           Tools
         </p>
         <h1>Label rate to tank mix.</h1>
@@ -20,42 +20,39 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import SprayerCalculator from '../components/rates/SprayerCalculator.vue'
-import AppIcon from '../components/ui/AppIcon.vue'
 
 export default {
   name: 'SprayerToolView',
-  components: { SprayerCalculator, AppIcon },
+  components: { SprayerCalculator },
 }
 </script>
 
-<style lang="scss" scoped>
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
-
-.page__inner {
-  @include container;
-  padding-block: 2rem 3.5rem;
-  display: grid;
-  gap: 1.25rem;
-}
-
-.page-header {
-  h1 {
-    margin: 0 0 0.5rem;
+<style lang="scss">
+.sprayer-page {
+  .container {
+    display: grid;
+    gap: 1.25rem;
+    padding-block: 2rem 3.5rem;
   }
 
-  .lede {
+  .page-header {
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 40rem;
+      color: var(--color-text-muted);
+    }
+  }
+
+  .hint {
     margin: 0;
-    color: $color-ink-muted;
-    max-width: 40rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
   }
-}
-
-.hint {
-  margin: 0;
-  font-size: 0.9rem;
-  color: $color-ink-muted;
 }
 </style>

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { trackPageView } from '../analytics'
 import HomeView from '../views/HomeView.vue'
 import CalendarView from '../views/CalendarView.vue'
 import TasksView from '../views/TasksView.vue'
@@ -21,6 +22,10 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 }
   },
+})
+
+router.afterEach((to) => {
+  trackPageView(to.fullPath)
 })
 
 export default router
