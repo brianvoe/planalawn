@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tall_fescue",
+    "label": "Tall fescue",
+    "season": "cool",
+    "ntepTrials": [
+      "tf18"
+    ]
+  },
+  {
+    "id": "kentucky_bluegrass",
+    "label": "Kentucky bluegrass",
+    "season": "cool",
+    "ntepTrials": [],
+    "status": "schema_ready"
+  },
+  {
+    "id": "perennial_ryegrass",
+    "label": "Perennial ryegrass",
+    "season": "cool",
+    "ntepTrials": [],
+    "status": "schema_ready"
+  },
+  {
+    "id": "fine_fescue",
+    "label": "Fine fescue",
+    "season": "cool",
+    "ntepTrials": [],
+    "status": "schema_ready"
+  },
+  {
+    "id": "bermudagrass",
+    "label": "Bermudagrass",
+    "season": "warm",
+    "ntepTrials": [],
+    "status": "schema_ready"
+  }
+]

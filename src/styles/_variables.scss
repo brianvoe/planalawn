@@ -1,0 +1,129 @@
+// ---------------------------------------------------------------------------
+// Design tokens — "Fairway"
+//
+// Tokens are named for the ROLE they play, never for a product or a hue.
+// If a value ever needs to mean two things at once, add a token instead of
+// reusing one; the previous palette was named after two seed blends and the
+// brand green doubled as the "favorable" status color, which made chrome
+// indistinguishable from a rating.
+//
+// Every text/background pair below is verified against WCAG 2.1 AA (>= 4.5:1).
+// ---------------------------------------------------------------------------
+
+// --- Neutrals --------------------------------------------------------------
+$color-bg: #f6f8f4; // page background
+$color-surface: #ffffff; // cards, panels, table bodies
+$color-surface-sunken: #f1f4f0; // table headers, inset wells
+$color-ink: #16241c; // primary text            16.1:1 on surface
+$color-ink-muted: #5c6b62; // secondary text           5.6:1 on surface
+$color-border-soft: #e8ede8; // hairline dividers inside a surface
+$color-border: #dce3dc; // default card/panel edge
+$color-border-strong: #7e8c84; // form controls and other interactive edges
+
+// --- Brand -----------------------------------------------------------------
+// Used for identity and navigation only. Never used to encode data.
+$brand: #1a7a43; // primary buttons, links   5.4:1 with white
+$brand-strong: #14663a; // hover/active, text on soft tint
+$brand-soft: #e3f3e8; // tinted chip background
+$brand-mid: #3c8b60; // focus rings, chart accents
+
+// --- Accent ----------------------------------------------------------------
+// Warm amber. Secondary emphasis; deliberately not a status color.
+$accent: #a55e17;
+$accent-strong: #854b12;
+$accent-soft: #f7ede0;
+
+// --- Status ----------------------------------------------------------------
+// Maps to the vocabulary in services/timing.js:
+//   good    -> seeding window 'open',        soil 'in band',   bucket 'now'
+//   caution -> seeding window 'approaching', bucket 'soon'
+//   cold    -> soil gate 'Too cold'
+//   hot     -> soil gate 'Too warm'
+//   neutral -> 'unknown' / 'closed' / bucket 'later'
+$status-good: #166b3b;
+$status-good-soft: #e3f3e8;
+$status-caution: #8a5814;
+$status-caution-soft: #f9efde;
+$status-cold: #265f89;
+$status-cold-soft: #e4eff7;
+$status-hot: #9e3229;
+$status-hot-soft: #fae9e7;
+$status-neutral: #5c6b62;
+$status-neutral-soft: #edf0ec;
+
+// --- Section layering ------------------------------------------------------
+// Depth is built by stacking tinted bands and separating them with curved
+// dividers, rather than by piling up shadows. A page reads as layered when
+// consecutive sections sit on different fills, so cards always have a fill of
+// their own to lift off of.
+$layer-plain: $color-bg;
+$layer-tint: #ecf3ee;
+$layer-tint-strong: #e1ede6;
+
+// Inverted band, reserved for the closing call to action so it lands once.
+$layer-dark: #10321f;
+$layer-dark-raised: #1b4a30; // cards sitting on the dark band
+$ink-on-dark: #f0f7f2; // 12.9:1 on $layer-dark
+$ink-on-dark-muted: #b8cfc0; //  8.5:1 on $layer-dark
+$accent-on-dark: #e8b877; // lifted amber, 7.7:1 on $layer-dark
+$border-on-dark: rgba(240, 247, 242, 0.18);
+
+// --- Data visualization ----------------------------------------------------
+// Sequential 1-9 ramp for NTEP ratings, light to dark. Sequential (not
+// diverging red-to-green) so that small rating gaps read as small gaps —
+// see design principle 2 in the README.
+$ramp-1: #eef4ef;
+$ramp-2: #dceae0;
+$ramp-3: #c3dccb;
+$ramp-4: #a3cbb0;
+$ramp-5: #7eb794;
+$ramp-6: #5aa179;
+$ramp-7: #3c8b60;
+$ramp-8: #26744b;
+$ramp-9: #14663a;
+$ramp: ($ramp-1, $ramp-2, $ramp-3, $ramp-4, $ramp-5, $ramp-6, $ramp-7, $ramp-8, $ramp-9);
+
+// Categorical series for comparing named blends/cultivars. Ordered for
+// maximum perceptual separation and distinguishable in deuteranopia.
+$series-1: #1a7a43; // green
+$series-2: #265f89; // blue
+$series-3: #a55e17; // amber
+$series-4: #6b4c9a; // purple
+$series-5: #9e3229; // red
+$series: ($series-1, $series-2, $series-3, $series-4, $series-5);
+
+$chart-grid: #e5eae5;
+
+// --- Typography ------------------------------------------------------------
+// Display is a heavy geometric sans; it needs to be set at 800 and tracked
+// tight to carry a headline, so the weight travels with the family token.
+$font-display: 'Plus Jakarta Sans', 'DM Sans', 'Segoe UI', sans-serif;
+$font-body: 'DM Sans', 'Segoe UI', sans-serif;
+$font-weight-display: 800;
+
+// --- Shape & depth ---------------------------------------------------------
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-pill: 999px;
+
+$shadow-soft: 0 1px 2px rgba(22, 36, 28, 0.04), 0 8px 24px rgba(22, 36, 28, 0.05);
+$shadow-lift: 0 2px 4px rgba(22, 36, 28, 0.06), 0 12px 28px rgba(22, 36, 28, 0.08);
+// For the one or two elements that should float above the page, like the hero
+// preview panel. Deliberately scarce.
+$shadow-panel: 0 4px 10px rgba(22, 36, 28, 0.06), 0 30px 70px rgba(22, 36, 28, 0.16);
+
+// Height of the curved divider between sections.
+$wave-h: clamp(38px, 5vw, 76px);
+
+// --- Layout ----------------------------------------------------------------
+$max-width: 1120px;
+$section-pad-y: clamp(3.5rem, 7vw, 5.5rem);
+
+// Minimum hit area for anything tappable. Enforced on buttons and inputs so
+// the desktop-first layout stays usable one-handed in the yard.
+$touch-min: 44px;
+
+$bp-sm: 560px;
+$bp-md: 768px;
+$bp-lg: 1024px;

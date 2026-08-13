@@ -1,0 +1,136 @@
+{
+  "TN1": {
+    "name": "Knoxville, TN",
+    "state": "TN",
+    "climateBand": "transition",
+    "lat": 35.96,
+    "lon": -83.92
+  },
+  "DE1": {
+    "name": "Newark, DE",
+    "state": "DE",
+    "climateBand": "transition",
+    "lat": 39.68,
+    "lon": -75.75
+  },
+  "MD1": {
+    "name": "College Park, MD",
+    "state": "MD",
+    "climateBand": "transition",
+    "lat": 38.99,
+    "lon": -76.94
+  },
+  "NC1": {
+    "name": "Raleigh, NC",
+    "state": "NC",
+    "climateBand": "transition",
+    "lat": 35.78,
+    "lon": -78.64
+  },
+  "VA1": {
+    "name": "Blacksburg, VA",
+    "state": "VA",
+    "climateBand": "transition",
+    "lat": 37.23,
+    "lon": -80.41
+  },
+  "KS1": {
+    "name": "Manhattan, KS",
+    "state": "KS",
+    "climateBand": "transition",
+    "lat": 39.18,
+    "lon": -96.57
+  },
+  "OK1": {
+    "name": "Stillwater, OK",
+    "state": "OK",
+    "climateBand": "transition",
+    "lat": 36.12,
+    "lon": -97.06
+  },
+  "GA1": {
+    "name": "Griffin, GA",
+    "state": "GA",
+    "climateBand": "warm",
+    "lat": 33.25,
+    "lon": -84.28
+  },
+  "MS1": {
+    "name": "Mississippi State, MS",
+    "state": "MS",
+    "climateBand": "warm",
+    "lat": 33.45,
+    "lon": -88.79
+  },
+  "NJ1": {
+    "name": "North Brunswick, NJ",
+    "state": "NJ",
+    "climateBand": "cool",
+    "lat": 40.45,
+    "lon": -74.45
+  },
+  "NJ2": {
+    "name": "Adelphia, NJ",
+    "state": "NJ",
+    "climateBand": "cool",
+    "lat": 40.19,
+    "lon": -74.25
+  },
+  "IN1": {
+    "name": "West Lafayette, IN",
+    "state": "IN",
+    "climateBand": "cool",
+    "lat": 40.42,
+    "lon": -86.91
+  },
+  "OR1": {
+    "name": "Corvallis, OR",
+    "state": "OR",
+    "climateBand": "cool",
+    "lat": 44.56,
+    "lon": -123.26
+  },
+  "CT1": {
+    "name": "Storrs, CT",
+    "state": "CT",
+    "climateBand": "cool",
+    "lat": 41.81,
+    "lon": -72.25
+  },
+  "IA1": {
+    "name": "Ames, IA",
+    "state": "IA",
+    "climateBand": "cool",
+    "lat": 42.03,
+    "lon": -93.62
+  },
+  "MI1": {
+    "name": "East Lansing, MI",
+    "state": "MI",
+    "climateBand": "cool",
+    "lat": 42.73,
+    "lon": -84.48
+  },
+  "NE1": {
+    "name": "Mead, NE",
+    "state": "NE",
+    "climateBand": "cool",
+    "lat": 41.23,
+    "lon": -96.49
+  },
+  "UT1": {
+    "name": "Logan, UT",
+    "state": "UT",
+    "climateBand": "cool",
+    "lat": 41.74,
+    "lon": -111.83
+  },
+  "ON1": {
+    "name": "Guelph, ON",
+    "state": "ON",
+    "country": "CA",
+    "climateBand": "cool",
+    "lat": 43.53,
+    "lon": -80.23
+  }
+}

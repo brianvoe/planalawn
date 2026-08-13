@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+@use 'components';
+@use 'tables';
+@use 'charts';
+
+.section {
+  @include section;
+
+  &__inner {
+    @include container;
+  }
+
+  &__eyebrow {
+    @include label-badge;
+    background: $status-neutral-soft;
+    color: $color-ink-muted;
+    margin-bottom: 0.85rem;
+  }
+
+  &__title {
+    @include section-heading;
+  }
+
+  &__lede {
+    @include section-lede;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.section--alt {
+  background: $color-surface;
+  border-block: 1px solid $color-border-soft;
+}
+
+.callout {
+  @include card;
+  padding: 1.15rem 1.25rem;
+  border-left: 3px solid $brand;
+
+  &--accent {
+    border-left-color: $accent;
+  }
+
+  &--caution {
+    border-left-color: $status-caution;
+  }
+
+  &--neutral {
+    border-left-color: $color-border-strong;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: $color-ink;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.grid-2 {
+  @include responsive-columns(2, $bp-md, 1.25rem);
+}
+
+.grid-3 {
+  @include responsive-columns(3, $bp-md, 1.25rem);
+}

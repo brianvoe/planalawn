@@ -1,0 +1,38 @@
+[
+  {
+    "id": "calypsow",
+    "name": "Calypsow",
+    "manufacturer": "Heritage Professional Products Group",
+    "species": "tall_fescue",
+    "curated": true,
+    "profile": "Stress & resilience",
+    "summary": "Defensive tall fescue blend with strong disease depth and summer-stress focus.",
+    "components": [
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": null },
+      { "name": "Rover", "cultivarId": "rover", "percent": null },
+      { "name": "Avenger III", "cultivarId": "avenger-iii", "percent": null },
+      { "name": "Serenade", "cultivarId": "serenade", "percent": null },
+      { "name": "Raptor LS", "cultivarId": "raptor-ls", "percent": null },
+      { "name": "Dynamite G-LS", "cultivarId": "dynamite-g-ls", "percent": null },
+      { "name": "Spyder 2LS", "cultivarId": "spyder-2ls", "percent": null }
+    ],
+    "notes": "Published cultivar set used for comparison. Unweighted when scoring unless bag percents are added."
+  },
+  {
+    "id": "resilience-ii",
+    "name": "Resilience II",
+    "manufacturer": "Twin City Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "profile": "Balanced turf quality",
+    "summary": "Equal-part elite blend with strong transition-zone and appearance traits.",
+    "components": [
+      { "name": "Daybreak", "cultivarId": "daybreak", "percent": 20 },
+      { "name": "4th Millennium SRP", "cultivarId": "4th-millennium-srp", "percent": 20 },
+      { "name": "Titan GLX", "cultivarId": "titan-glx", "percent": 20 },
+      { "name": "Xanadu", "cultivarId": "xanadu", "percent": 20 },
+      { "name": "Expanse", "cultivarId": "expanse", "percent": 20 }
+    ],
+    "notes": "4th Millennium SRP may be missing from the 2018–2023 NTEP extract — absence is a data gap, not a quality judgment."
+  }
+]

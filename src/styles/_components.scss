@@ -1,0 +1,381 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ---------------------------------------------------------------------------
+// Shared primitives.
+//
+// These are global on purpose. Each of .btn, .card and .block previously
+// existed as a separate scoped copy inside six different view files, so the
+// same element rendered differently depending on which route you were on.
+// ---------------------------------------------------------------------------
+
+// --- Buttons ---------------------------------------------------------------
+.btn {
+  @include tap-target;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-pill;
+  background: $color-surface;
+  color: $color-ink;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: $color-surface-sunken;
+    border-color: $color-ink-muted;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn--primary {
+  background: $brand;
+  border-color: $brand;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: $brand-strong;
+    border-color: $brand-strong;
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: $brand-strong;
+
+  &:hover:not(:disabled) {
+    background: $brand-soft;
+    border-color: transparent;
+  }
+}
+
+.btn--danger {
+  background: $color-surface;
+  border-color: $status-hot;
+  color: $status-hot;
+
+  &:hover:not(:disabled) {
+    background: $status-hot-soft;
+    border-color: $status-hot;
+  }
+}
+
+// Compact variant for dense toolbars. Drops below the 44px tap target, so
+// only use where a full-size control genuinely does not fit.
+.btn--sm {
+  min-height: 34px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+// Full-width on mobile, hugging its label from $bp-sm up.
+.btn--block {
+  width: 100%;
+
+  @media (min-width: $bp-sm) {
+    width: auto;
+  }
+}
+
+// --- Surfaces --------------------------------------------------------------
+.card {
+  @include card;
+  padding: 1.25rem;
+}
+
+.card--flush {
+  padding: 0;
+  overflow: hidden;
+}
+
+// Interactive card — used for tappable task/nav tiles.
+.card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    border-color: $brand-mid;
+    box-shadow: $shadow-lift;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+// --- Page blocks -----------------------------------------------------------
+.block {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+
+  > h2 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+}
+
+.block__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+// --- Eyebrow ---------------------------------------------------------------
+// Small uppercase signpost above a section headline. Uses the accent rather
+// than the brand green so it never reads as a status or a rating.
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.7rem;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+// --- Checklist -------------------------------------------------------------
+// Three-items-max supporting points. Replaces paragraphs of explanation.
+.checklist {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: $color-ink-muted;
+    line-height: 1.5;
+  }
+
+  svg {
+    flex: 0 0 auto;
+    margin-top: 0.15rem;
+    color: $brand;
+  }
+}
+
+// --- Feature card ----------------------------------------------------------
+.feature-card {
+  @include card;
+  display: flex;
+  gap: 0.85rem;
+  padding: 1.1rem;
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-ink;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $color-ink-muted;
+  }
+}
+
+.feature-card__icon {
+  @include icon-tile(38px);
+}
+
+// --- Inverted band ---------------------------------------------------------
+// Scoped overrides so shared primitives keep working on the dark band instead
+// of every dark section re-declaring its own button and card styles.
+.on-dark {
+  color: $ink-on-dark;
+  --heading-ink: #{$ink-on-dark};
+  --lede-ink: #{$ink-on-dark-muted};
+  --label-ink: #{$ink-on-dark-muted};
+
+  h1,
+  h2,
+  h3,
+  strong {
+    color: $ink-on-dark;
+  }
+
+  p,
+  li {
+    color: $ink-on-dark-muted;
+  }
+
+  .eyebrow {
+    color: $accent-on-dark;
+  }
+
+  .btn:not(.btn--primary) {
+    background: transparent;
+    border-color: $border-on-dark;
+    color: $ink-on-dark;
+
+    &:hover:not(:disabled) {
+      background: rgba(240, 247, 242, 0.1);
+      border-color: $ink-on-dark-muted;
+    }
+  }
+
+  .card,
+  .feature-card {
+    background: $layer-dark-raised;
+    border-color: $border-on-dark;
+    box-shadow: none;
+  }
+
+  .checklist svg {
+    color: $accent-on-dark;
+  }
+
+  :focus-visible {
+    @include focus-ring($ink-on-dark);
+  }
+}
+
+// --- Chips -----------------------------------------------------------------
+.chip {
+  @include label-badge;
+  background: $status-neutral-soft;
+  color: $status-neutral;
+}
+
+.chip--brand {
+  background: $brand-soft;
+  color: $brand-strong;
+}
+
+.chip--accent {
+  background: $accent-soft;
+  color: $accent-strong;
+}
+
+.chip--good {
+  background: $status-good-soft;
+  color: $status-good;
+}
+
+.chip--caution {
+  background: $status-caution-soft;
+  color: $status-caution;
+}
+
+.chip--cold {
+  background: $status-cold-soft;
+  color: $status-cold;
+}
+
+.chip--hot {
+  background: $status-hot-soft;
+  color: $status-hot;
+}
+
+// --- Status dot ------------------------------------------------------------
+// Pairs with a text label so status is never conveyed by color alone.
+.status-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: $radius-pill;
+  flex-shrink: 0;
+  background: $status-neutral;
+
+  &--good {
+    background: $status-good;
+  }
+
+  &--caution {
+    background: $status-caution;
+  }
+
+  &--cold {
+    background: $status-cold;
+  }
+
+  &--hot {
+    background: $status-hot;
+  }
+}
+
+// --- Forms -----------------------------------------------------------------
+.field {
+  display: grid;
+  gap: 0.35rem;
+
+  > label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: $color-ink-muted;
+    text-transform: uppercase;
+  }
+}
+
+.input,
+.select {
+  @include tap-target;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  color: $color-ink;
+  font: inherit;
+
+  &:focus-visible {
+    @include focus-ring;
+    border-color: $brand;
+  }
+}
+
+// --- Misc ------------------------------------------------------------------
+.empty {
+  margin: 0;
+  color: $color-ink-muted;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: $color-ink-muted;
+}
