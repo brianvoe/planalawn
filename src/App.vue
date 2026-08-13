@@ -1,6 +1,6 @@
 <template>
   <div class="app-shell">
-    <AppNav :conditions="conditions" />
+    <Nav :conditions="conditions" />
     <main class="app-shell__main">
       <LocationPrompt @location-set="onLocationSet" />
       <router-view v-slot="{ Component }">
@@ -13,20 +13,20 @@
         />
       </router-view>
     </main>
-    <AppFooter />
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
-import AppNav from './components/layout/AppNav.vue'
-import AppFooter from './components/layout/AppFooter.vue'
-import LocationPrompt from './components/layout/LocationPrompt.vue'
+import Nav from './components/nav.vue'
+import Footer from './components/footer.vue'
+import LocationPrompt from './components/location-prompt.vue'
 import { fetchConditions } from './services/weather'
 import type { Conditions, UserLocation } from './types'
 
 export default {
   name: 'App',
-  components: { AppNav, AppFooter, LocationPrompt },
+  components: { Nav, Footer, LocationPrompt },
   data() {
     return {
       conditions: null as Conditions | null,

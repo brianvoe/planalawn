@@ -303,7 +303,7 @@ interface DraftComponent {
 }
 
 export default {
-  name: 'SeedsView',
+  name: 'Seeds',
   data() {
     return {
       tab: 'blends',

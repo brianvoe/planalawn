@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { trackPageView } from '../analytics'
-import HomeView from '../views/HomeView.vue'
-import CalendarView from '../views/CalendarView.vue'
-import TasksView from '../views/TasksView.vue'
-import TaskDetailView from '../views/TaskDetailView.vue'
-import SeedsView from '../views/SeedsView.vue'
-import SprayerToolView from '../views/SprayerToolView.vue'
-import SettingsView from '../views/SettingsView.vue'
+import Home from '../home/home.vue'
+import Calendar from '../calendar/calendar.vue'
+import Tasks from '../tasks/tasks.vue'
+import TaskDetail from '../tasks/task-detail.vue'
+import Seeds from '../seeds/seeds.vue'
+import Sprayer from '../sprayer/sprayer.vue'
+import Settings from '../settings/settings.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', name: 'home', component: HomeView },
-    { path: '/calendar', name: 'calendar', component: CalendarView },
-    { path: '/tasks', name: 'tasks', component: TasksView },
-    { path: '/tasks/:id', name: 'task-detail', component: TaskDetailView, props: true },
-    { path: '/seeds', name: 'seeds', component: SeedsView },
-    { path: '/tools/sprayer', name: 'sprayer', component: SprayerToolView },
-    { path: '/settings', name: 'settings', component: SettingsView },
+    { path: '/', name: 'home', component: Home },
+    { path: '/calendar', name: 'calendar', component: Calendar },
+    { path: '/tasks', name: 'tasks', component: Tasks },
+    { path: '/tasks/:id', name: 'task-detail', component: TaskDetail, props: true },
+    { path: '/seeds', name: 'seeds', component: Seeds },
+    { path: '/tools/sprayer', name: 'sprayer', component: Sprayer },
+    { path: '/settings', name: 'settings', component: Settings },
   ],
   scrollBehavior() {
     return { top: 0 }

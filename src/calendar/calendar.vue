@@ -12,7 +12,7 @@
         </p>
       </header>
 
-      <ConditionsBanner
+      <Conditions
         :conditions="conditions"
         :error="weatherError"
         :loading="weatherLoading"
@@ -61,18 +61,18 @@
 </template>
 
 <script lang="ts">
-import ConditionsBanner from '../components/layout/ConditionsBanner.vue'
+import Conditions from '../components/conditions.vue'
 import { tasks } from '../data/tasks'
 import { timingByTask, monthLabels } from '../data/timingRules'
 import { evaluateAllTasks, groupByBucket } from '../services/timing'
 import type { PropType } from 'vue'
-import type { Bucket, Conditions, EvaluatedTask, Task } from '../types'
+import type { Bucket, Conditions as Weather, EvaluatedTask, Task } from '../types'
 
 export default {
-  name: 'CalendarView',
-  components: { ConditionsBanner },
+  name: 'Calendar',
+  components: { Conditions },
   props: {
-    conditions: { type: Object as PropType<Conditions | null>, default: null },
+    conditions: { type: Object as PropType<Weather | null>, default: null },
     weatherError: { type: String, default: null },
     weatherLoading: { type: Boolean, default: false },
   },

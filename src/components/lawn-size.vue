@@ -13,7 +13,7 @@
 
 <script lang="ts">
 export default {
-  name: 'LawnSizeInput',
+  name: 'LawnSize',
   emits: ['updated'],
   computed: {
     lawnSqFt(): number {

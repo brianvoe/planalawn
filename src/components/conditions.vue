@@ -50,14 +50,14 @@
 </template>
 
 <script lang="ts">
-import { soilDepthLabel } from '../../data/climate'
-import { formatTemp, formatUpdated } from '../../services/weather'
-import { seedingWindowStatus } from '../../services/timing'
+import { soilDepthLabel } from '../data/climate'
+import { formatTemp, formatUpdated } from '../services/weather'
+import { seedingWindowStatus } from '../services/timing'
 import type { PropType } from 'vue'
-import type { Conditions, UserLocation, WindowStatus } from '../../types'
+import type { Conditions, UserLocation, WindowStatus } from '../types'
 
 export default {
-  name: 'ConditionsBanner',
+  name: 'Conditions',
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
     error: { type: String, default: null },

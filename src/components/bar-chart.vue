@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-import { renderHorizontalBars, renderGroupedHorizontalBars } from '../../charts/bars'
+import { renderHorizontalBars, renderGroupedHorizontalBars } from '../charts/bars'
 import type { PropType } from 'vue'
-import type { BarDatum, ChartOptions, GroupedBarRow } from '../../types'
+import type { BarDatum, ChartOptions, GroupedBarRow } from '../types'
 
 export default {
-  name: 'D3BarChart',
+  name: 'BarChart',
   props: {
     type: { type: String, default: 'horizontal' },
     data: { type: Array as PropType<BarDatum[] | GroupedBarRow[]>, required: true },

@@ -11,7 +11,7 @@
           Ounces per tank for your lawn size. Always check it against the bottle you bought.
         </p>
       </header>
-      <SprayerCalculator rate-key="glyphosate" />
+      <Calculator rate-key="glyphosate" />
       <p class="hint">
         Also available inside the
         <router-link to="/tasks/lawn-kill">lawn kill task</router-link>.
@@ -21,11 +21,11 @@
 </template>
 
 <script lang="ts">
-import SprayerCalculator from '../components/rates/SprayerCalculator.vue'
+import Calculator from './calculator.vue'
 
 export default {
-  name: 'SprayerToolView',
-  components: { SprayerCalculator },
+  name: 'Sprayer',
+  components: { Calculator },
 }
 </script>
 

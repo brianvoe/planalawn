@@ -16,9 +16,8 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "types": ["node"],
-    "baseUrl": ".",
     "paths": {
-      "vuex": ["node_modules/vuex/types/index.d.ts"]
+      "vuex": ["./node_modules/vuex/types/index.d.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]

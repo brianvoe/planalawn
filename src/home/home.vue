@@ -92,7 +92,7 @@
           </router-link>
         </div>
 
-        <ConditionsBanner
+        <Conditions
           :conditions="conditions"
           :error="weatherError"
           :loading="weatherLoading"
@@ -175,7 +175,7 @@
           Set your square footage and location. Everything else calculates itself.
         </p>
         <div class="cta__form">
-          <LawnSizeInput />
+          <LawnSize />
           <router-link class="btn btn--primary" to="/settings">
             My lawn
             <font-awesome-icon icon="fa-solid fa-arrow-right" />
@@ -191,13 +191,13 @@
 </template>
 
 <script lang="ts">
-import ConditionsBanner from '../components/layout/ConditionsBanner.vue'
-import LawnSizeInput from '../components/layout/LawnSizeInput.vue'
+import Conditions from '../components/conditions.vue'
+import LawnSize from '../components/lawn-size.vue'
 import { evaluateAllTasks, groupByBucket } from '../services/timing'
 import { allCultivars } from '../data/seedDb'
 import { scoreCultivarForLocation } from '../services/suitability'
 import type { PropType } from 'vue'
-import type { Conditions, Cultivar, CultivarFit, EvaluatedTask, Profile } from '../types'
+import type { Conditions as Weather, Cultivar, CultivarFit, EvaluatedTask, Profile } from '../types'
 
 const FEATURES = [
   {
@@ -245,10 +245,10 @@ const TIMING_POINTS = [
 ]
 
 export default {
-  name: 'HomeView',
-  components: { ConditionsBanner, LawnSizeInput },
+  name: 'Home',
+  components: { Conditions, LawnSize },
   props: {
-    conditions: { type: Object as PropType<Conditions | null>, default: null },
+    conditions: { type: Object as PropType<Weather | null>, default: null },
     weatherError: { type: String, default: null },
     weatherLoading: { type: Boolean, default: false },
   },

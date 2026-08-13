@@ -25,19 +25,19 @@
         <li><router-link to="/settings" @click="menuOpen = false">My lawn</router-link></li>
       </ul>
 
-      <SoilTempChip :conditions="conditions" />
+      <SoilTemp :conditions="conditions" />
     </div>
   </nav>
 </template>
 
 <script lang="ts">
-import SoilTempChip from './SoilTempChip.vue'
+import SoilTemp from './soil-temp.vue'
 import type { PropType } from 'vue'
-import type { Conditions } from '../../types'
+import type { Conditions } from '../types'
 
 export default {
-  name: 'AppNav',
-  components: { SoilTempChip },
+  name: 'Nav',
+  components: { SoilTemp },
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
   },

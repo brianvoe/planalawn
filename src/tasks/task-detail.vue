@@ -15,7 +15,7 @@
         <p v-if="evaluation.soil" class="soil">
           Soil gate: <strong>{{ evaluation.soil.label }}</strong> — {{ evaluation.soil.detail }}
         </p>
-        <ConditionsBanner
+        <Conditions
           v-if="needsSoil"
           :conditions="conditions"
           :error="weatherError"
@@ -136,14 +136,14 @@
 </template>
 
 <script lang="ts">
-import ConditionsBanner from '../components/layout/ConditionsBanner.vue'
-import RateCalculator from '../components/rates/RateCalculator.vue'
-import SprayerCalculator from '../components/rates/SprayerCalculator.vue'
+import Conditions from '../components/conditions.vue'
+import RateCalculator from './rate-calculator.vue'
+import SprayerCalculator from '../sprayer/calculator.vue'
 import { getTask } from '../data/tasks'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
 import type { PropType } from 'vue'
-import type { Conditions, EvaluatedTask, Project, Task, TaskLog } from '../types'
+import type { Conditions as Weather, EvaluatedTask, Project, Task, TaskLog } from '../types'
 
 const milestoneMap: Record<string, keyof Project> = {
   'lawn-kill': 'killAppliedAt',
@@ -154,11 +154,11 @@ const milestoneMap: Record<string, keyof Project> = {
 }
 
 export default {
-  name: 'TaskDetailView',
-  components: { ConditionsBanner, RateCalculator, SprayerCalculator },
+  name: 'TaskDetail',
+  components: { Conditions, RateCalculator, SprayerCalculator },
   props: {
     id: { type: String, required: true },
-    conditions: { type: Object as PropType<Conditions | null>, default: null },
+    conditions: { type: Object as PropType<Weather | null>, default: null },
     weatherError: { type: String, default: null },
     weatherLoading: { type: Boolean, default: false },
   },

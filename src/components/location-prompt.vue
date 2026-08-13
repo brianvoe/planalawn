@@ -26,8 +26,8 @@
 </template>
 
 <script lang="ts">
-import { lookupZip, requestBrowserLocation } from '../../services/geolocation'
-import type { UserLocation } from '../../types'
+import { lookupZip, requestBrowserLocation } from '../services/geolocation'
+import type { UserLocation } from '../types'
 
 export default {
   name: 'LocationPrompt',

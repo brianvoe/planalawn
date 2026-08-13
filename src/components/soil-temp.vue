@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-import { formatTemp, formatUpdated } from '../../services/weather'
+import { formatTemp, formatUpdated } from '../services/weather'
 import type { PropType } from 'vue'
-import type { Conditions, UserLocation } from '../../types'
+import type { Conditions, UserLocation } from '../types'
 
 export default {
-  name: 'SoilTempChip',
+  name: 'SoilTemp',
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
   },

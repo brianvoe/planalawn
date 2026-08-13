@@ -196,7 +196,7 @@ function bindProject<K extends keyof Project>(field: K) {
 }
 
 export default {
-  name: 'SettingsView',
+  name: 'Settings',
   data() {
     return { status: '', locStatus: '', zipInput: '' }
   },

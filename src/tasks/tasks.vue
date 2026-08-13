@@ -32,7 +32,7 @@
 import { tasks } from '../data/tasks'
 
 export default {
-  name: 'TasksView',
+  name: 'Tasks',
   data() {
     return { tasks }
   },

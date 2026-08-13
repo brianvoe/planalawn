@@ -1,7 +1,7 @@
 <template>
   <div class="rate-calc">
     <div class="rate-calc__controls">
-      <LawnSizeInput />
+      <LawnSize />
       <label v-if="showDepth">
         <span>Depth (inches)</span>
         <input v-model.number="depthInches" type="number" min="0.1" step="0.1" />
@@ -45,13 +45,13 @@
 </template>
 
 <script lang="ts">
-import LawnSizeInput from '../layout/LawnSizeInput.vue'
-import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../../data/rates'
-import type { RateTemplate } from '../../types'
+import LawnSize from '../components/lawn-size.vue'
+import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../data/rates'
+import type { RateTemplate } from '../types'
 
 export default {
   name: 'RateCalculator',
-  components: { LawnSizeInput },
+  components: { LawnSize },
   props: {
     mode: { type: String, required: true },
     rateKey: { type: String, required: true },

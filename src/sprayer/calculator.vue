@@ -24,7 +24,7 @@
         <span>Coverage per tank (sq ft)</span>
         <input v-model.number="coverageLocal" type="number" min="50" step="50" />
       </label>
-      <LawnSizeInput />
+      <LawnSize />
     </div>
 
     <div class="sprayer__result">
@@ -51,13 +51,13 @@
 </template>
 
 <script lang="ts">
-import LawnSizeInput from '../layout/LawnSizeInput.vue'
-import { rateTemplates, sprayerMix } from '../../data/rates'
-import type { MixMode, SprayerMixResult } from '../../types'
+import LawnSize from '../components/lawn-size.vue'
+import { rateTemplates, sprayerMix } from '../data/rates'
+import type { MixMode, SprayerMixResult } from '../types'
 
 export default {
-  name: 'SprayerCalculator',
-  components: { LawnSizeInput },
+  name: 'Calculator',
+  components: { LawnSize },
   props: {
     rateKey: { type: String, default: 'glyphosate' },
   },
