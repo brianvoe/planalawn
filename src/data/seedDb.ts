@@ -58,6 +58,34 @@ export const curatedBlendList = curatedBlends as Blend[]
 export const speciesList = speciesListData
 export const ntepSites = sites as Record<string, NtepSite>
 
+export const NTEP_METRICS = [
+  { key: 'transitionQuality', label: 'Transition quality', short: 'Transition' },
+  { key: 'droughtQuality', label: 'Drought quality', short: 'Drought' },
+  { key: 'brownPatch', label: 'Brown patch', short: 'Brown patch' },
+  { key: 'geneticColor', label: 'Genetic color', short: 'Color' },
+  { key: 'nationalMeanQuality', label: 'National mean quality', short: 'National' },
+] as const
+
+export type NtepMetricKey = (typeof NTEP_METRICS)[number]['key']
+
+const EXPERIMENTAL_ENTRY =
+  /(ppg-tf|pst-|dlfps-|ast\d|atf\d|rad-tf|nai-|k18-|jt[\s-]\d|nt-3|se5star|setfm|og-walk|^3b2$|^5lss$|bar[\s-]?fa)/i
+
+/** Named grasses you can ask a dealer for — not experimental entry codes. */
+export function isNamedCultivar(cultivar: Pick<Cultivar, 'id' | 'name'>): boolean {
+  return !EXPERIMENTAL_ENTRY.test(cultivar.id) && !EXPERIMENTAL_ENTRY.test(cultivar.name)
+}
+
+export function metricMean(cultivar: Cultivar, key: string): number | null {
+  const value = cultivar.metrics?.[key]?.mean
+  return typeof value === 'number' ? value : null
+}
+
+export function siteLabel(code: string): string {
+  const site = ntepSites[code]
+  return site ? `${site.name}` : code
+}
+
 /**
  * Site codes a given metric was actually measured at.
  *

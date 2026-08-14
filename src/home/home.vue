@@ -2,7 +2,7 @@
 import Conditions from '../components/conditions.vue'
 import LawnSize from '../components/lawn-size.vue'
 import { evaluateAllTasks, groupByBucket } from '../services/timing'
-import { allCultivars } from '../data/seedDb'
+import { allCultivars, isNamedCultivar } from '../data/seedDb'
 import { scoreCultivarForLocation } from '../services/suitability'
 import type { PropType } from 'vue'
 import type { Conditions as Weather, Cultivar, CultivarFit, EvaluatedTask, Profile } from '../types'
@@ -88,6 +88,7 @@ export default {
     },
     topCultivars(): (Cultivar & { fit: CultivarFit })[] {
       return allCultivars
+        .filter(isNamedCultivar)
         .map((c) => ({ ...c, fit: scoreCultivarForLocation(c, this.userLocation) }))
         .filter((c) => c.fit.score != null && c.fit.coverage.complete)
         .sort((a, b) => (b.fit.score || 0) - (a.fit.score || 0))

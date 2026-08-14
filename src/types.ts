@@ -208,6 +208,8 @@ export interface BlendComponent {
   percent: number | null
 }
 
+export type BlendChannel = 'retail' | 'pro' | 'specialty'
+
 export interface Blend {
   id: string
   name: string
@@ -218,6 +220,8 @@ export interface Blend {
   summary?: string
   components: BlendComponent[]
   notes?: string
+  channel?: BlendChannel
+  buyHint?: string
 }
 
 export type ScoreFactor = 'nearest' | 'region' | 'summerStress' | 'color' | 'national'

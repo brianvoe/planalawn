@@ -5,8 +5,10 @@
     "manufacturer": "Heritage Professional Products Group",
     "species": "tall_fescue",
     "curated": true,
+    "channel": "specialty",
     "profile": "Stress & resilience",
     "summary": "Defensive tall fescue blend with strong disease depth and summer-stress focus.",
+    "buyHint": "Heritage / specialty turf dealers. Ask for Calypsow by name.",
     "components": [
       { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": null },
       { "name": "Rover", "cultivarId": "rover", "percent": null },
@@ -16,7 +18,7 @@
       { "name": "Dynamite G-LS", "cultivarId": "dynamite-g-ls", "percent": null },
       { "name": "Spyder 2LS", "cultivarId": "spyder-2ls", "percent": null }
     ],
-    "notes": "Published cultivar set used for comparison. Unweighted when scoring unless bag percents are added."
+    "notes": "Published cultivar set. Unweighted when scoring unless bag percents are on your tag."
   },
   {
     "id": "resilience-ii",
@@ -24,8 +26,10 @@
     "manufacturer": "Twin City Seed",
     "species": "tall_fescue",
     "curated": true,
+    "channel": "specialty",
     "profile": "Balanced turf quality",
     "summary": "Equal-part elite blend with strong transition-zone and appearance traits.",
+    "buyHint": "Twin City Seed and dealers that stock TCS blends. 5–50 lb bags.",
     "components": [
       { "name": "Daybreak", "cultivarId": "daybreak", "percent": 20 },
       { "name": "4th Millennium SRP", "cultivarId": "4th-millennium-srp", "percent": 20 },
@@ -34,5 +38,38 @@
       { "name": "Expanse", "cultivarId": "expanse", "percent": 20 }
     ],
     "notes": "4th Millennium SRP may be missing from the 2018–2023 NTEP extract — absence is a data gap, not a quality judgment."
+  },
+  {
+    "id": "optimum",
+    "name": "Optimum",
+    "manufacturer": "Mountain View Seeds",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "pro",
+    "profile": "Heat, traffic, disease",
+    "summary": "Four-way of A-LIST / Lateral Spread cultivars aimed at heat, traffic, and brown patch.",
+    "buyHint": "Mountain View Seeds dealers and many SiteOne / pro shops. Confirm the current bag tag.",
+    "components": [
+      { "name": "Avenger III", "cultivarId": "avenger-iii", "percent": null },
+      { "name": "Dynamite G-LS", "cultivarId": "dynamite-g-ls", "percent": null },
+      { "name": "Raptor LS", "cultivarId": "raptor-ls", "percent": null },
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": null }
+    ],
+    "notes": "From the Mountain View Optimum tech sheet. Bag percentages vary by lot."
+  },
+  {
+    "id": "kentucky-31",
+    "name": "Kentucky 31",
+    "manufacturer": "Common / many brands",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "retail",
+    "profile": "Cheap pasture baseline",
+    "summary": "The forage-type fescue still sold at box stores. Coarse, light green, and a useful NTEP check — not an elite lawn blend.",
+    "buyHint": "Any box store or farm co-op. Compare elite blends against this, don’t start here if you want turf-type density.",
+    "components": [
+      { "name": "Kentucky-31", "cultivarId": "kentucky-31", "percent": 100 }
+    ],
+    "notes": "Included as the widely available baseline so ‘best for my zone’ has something cheap to beat."
   }
 ]
