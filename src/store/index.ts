@@ -9,7 +9,6 @@ import type {
   Equipment,
   GrassType,
   Profile,
-  Project,
   RateOverride,
   ResolvedLocation,
   RootState,
@@ -45,16 +44,6 @@ function defaultState(): RootState {
       sprayCoverageSqFtPerTank: 1000,
     },
     rateOverrides: {},
-    project: {
-      phase: 'maintenance',
-      killAppliedAt: null,
-      secondKillAt: null,
-      aeratedAt: null,
-      topsoilAt: null,
-      seededAt: null,
-      firstMowAt: null,
-      notes: '',
-    },
     userBlends: [],
   }
 }
@@ -98,7 +87,6 @@ export default createStore<RootState>({
       s.location?.latitude != null && s.location?.longitude != null ? s.location : null,
     hasLocation: (_s, getters) => Boolean(getters.userLocation),
     allBlends: (s) => [...curatedBlendList, ...(s.userBlends || [])],
-    projectMilestones: (s) => s.project,
     exportPayload: (s): BackupPayload => ({
       version: 2,
       exportedAt: new Date().toISOString(),
@@ -106,7 +94,6 @@ export default createStore<RootState>({
       location: s.location,
       equipment: s.equipment,
       rateOverrides: s.rateOverrides,
-      project: s.project,
       userBlends: s.userBlends,
     }),
   },
@@ -141,9 +128,6 @@ export default createStore<RootState>({
       delete next[rateKey]
       state.rateOverrides = next
     },
-    UPDATE_PROJECT(state, partial: Partial<Project>) {
-      state.project = { ...state.project, ...partial }
-    },
     UPSERT_USER_BLEND(state, blend: Partial<Blend> & Pick<Blend, 'name' | 'components'>) {
       const id = blend.id || `user-${Date.now()}`
       const next: Blend = {
@@ -173,13 +157,11 @@ export default createStore<RootState>({
         location: payload.location,
         equipment: payload.equipment,
         rateOverrides: payload.rateOverrides,
-        project: payload.project,
       }) as unknown as RootState
       state.profile = merged.profile
       state.location = merged.location
       state.equipment = merged.equipment
       state.rateOverrides = merged.rateOverrides || {}
-      state.project = merged.project
       state.userBlends = payload.userBlends || []
     },
     RESET_ALL(state) {
@@ -202,9 +184,6 @@ export default createStore<RootState>({
     },
     setRateOverride({ commit }, payload: { rateKey: string; values: RateOverride }) {
       commit('SET_RATE_OVERRIDE', payload)
-    },
-    updateProject({ commit }, partial: Partial<Project>) {
-      commit('UPDATE_PROJECT', partial)
     },
     upsertUserBlend({ commit }, blend: Partial<Blend> & Pick<Blend, 'name' | 'components'>) {
       commit('UPSERT_USER_BLEND', blend)

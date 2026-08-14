@@ -43,48 +43,38 @@ describe('curated blend catalog', () => {
     })
   })
 
-  it('has at least five blends per climate band', () => {
+  it('has at least three blends per climate band', () => {
     ZONES.forEach((zone) => {
       const n = catalog.filter((b) => b.zones?.includes(zone)).length
-      expect(n, zone).toBeGreaterThanOrEqual(5)
+      expect(n, zone).toBeGreaterThanOrEqual(3)
     })
   })
 
-  it('includes retail, amazon, and pro or specialty in each zone', () => {
-    ZONES.forEach((zone) => {
-      const inZone = catalog.filter((b) => b.zones?.includes(zone))
-      const channels = new Set(inZone.map((b) => b.channel))
-      expect(channels.has('retail'), `${zone} retail`).toBe(true)
-      expect(channels.has('amazon'), `${zone} amazon`).toBe(true)
-      expect(channels.has('pro') || channels.has('specialty'), `${zone} pro/specialty`).toBe(true)
-    })
-  })
-
-  it('covers all four channels across the catalog', () => {
-    const channels = new Set(catalog.map((b) => b.channel))
-    expect(channels.has('retail')).toBe(true)
-    expect(channels.has('amazon')).toBe(true)
-    expect(channels.has('pro')).toBe(true)
-    expect(channels.has('specialty')).toBe(true)
-  })
-
-  it('maps warm-zone bags to bermudagrass', () => {
-    catalog
-      .filter((b) => b.zones?.includes('warm'))
-      .forEach((b) => {
+  it('maps warm-only bags to bermudagrass and cool/transition bags to tall fescue', () => {
+    catalog.forEach((b) => {
+      if (b.zones?.includes('warm') && !b.zones.includes('cool')) {
         expect(b.species, b.id).toBe('bermudagrass')
-      })
+      }
+      if (b.zones?.includes('cool') || (b.zones?.includes('transition') && b.species !== 'bermudagrass')) {
+        expect(b.species, b.id).toBe('tall_fescue')
+      }
+    })
   })
 
-  it('resolves published cultivarIds in that species NTEP index or a known gap', () => {
+  it('resolves every cultivarId in that species NTEP index or a known gap', () => {
     catalog.forEach((blend) => {
       const index = indexFor(blend.species)
-      ;(blend.components || []).forEach((c) => {
-        if (!c.cultivarId) return
+      expect(blend.components?.length, blend.id).toBeGreaterThan(0)
+      let ntepHits = 0
+      blend.components.forEach((c) => {
+        expect(c.cultivarId, `${blend.id} missing cultivarId`).toBeTruthy()
         const key = normalizeKey(c.cultivarId)
+        const inNtep = index.has(key) || index.has(c.cultivarId || '')
         const known = KNOWN_CULTIVAR_GAP_SET.has(key)
-        expect(index.has(key) || index.has(c.cultivarId) || known, `${blend.id} → ${c.cultivarId}`).toBe(true)
+        expect(inNtep || known, `${blend.id} → ${c.cultivarId}`).toBe(true)
+        if (inNtep) ntepHits += 1
       })
+      expect(ntepHits, `${blend.id} needs at least one NTEP-mapped cultivar`).toBeGreaterThan(0)
     })
   })
 })

@@ -8,8 +8,9 @@ export function loadPersistedState(): Partial<RootState> | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
-      const parsed = JSON.parse(raw) as Partial<RootState> & { taskLogs?: unknown }
+      const parsed = JSON.parse(raw) as Partial<RootState> & { taskLogs?: unknown; project?: unknown }
       delete parsed.taskLogs
+      delete parsed.project
       return parsed
     }
   } catch {
@@ -44,7 +45,6 @@ export function persistState(state: RootState): void {
     location: state.location,
     equipment: state.equipment,
     rateOverrides: state.rateOverrides,
-    project: state.project,
     userBlends: state.userBlends,
   }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot))

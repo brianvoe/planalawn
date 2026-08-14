@@ -4,7 +4,6 @@ export type ClimateBandId = 'cool' | 'transition' | 'warm'
 export type LocationSource = 'zip' | 'geocode' | 'geolocation' | 'metro'
 export type MixMode = 'perGallon' | 'per1000'
 export type CalculatorType = 'sprayer' | 'coverage' | 'volume'
-export type ProjectPhase = 'maintenance' | 'renovation' | 'establishment'
 export type GrassType = 'cool' | 'mixed' | 'warm'
 
 export interface ClimateBand {
@@ -299,23 +298,11 @@ export interface RateOverride {
   ozPer1000?: number
 }
 
-export interface Project {
-  phase: ProjectPhase
-  killAppliedAt: string | null
-  secondKillAt: string | null
-  aeratedAt: string | null
-  topsoilAt: string | null
-  seededAt: string | null
-  firstMowAt: string | null
-  notes: string
-}
-
 export interface RootState {
   profile: Profile
   location: UserLocation
   equipment: Equipment
   rateOverrides: Record<string, RateOverride>
-  project: Project
   userBlends: Blend[]
 }
 
@@ -326,7 +313,6 @@ export interface BackupPayload {
   location: UserLocation
   equipment: Equipment
   rateOverrides: Record<string, RateOverride>
-  project: Project
   userBlends: Blend[]
 }
 

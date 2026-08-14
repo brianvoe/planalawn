@@ -1,6 +1,6 @@
 import type { Store } from 'vuex'
 import type { Router } from 'vue-router'
-import type { BackupPayload, Blend, Equipment, GrassType, Profile, Project, RootState, UserLocation } from '../types'
+import type { BackupPayload, Blend, Equipment, GrassType, Profile, RootState, UserLocation } from '../types'
 
 export interface StoreGetters {
   lawnSqFt: number
@@ -12,7 +12,6 @@ export interface StoreGetters {
   userLocation: UserLocation | null
   hasLocation: boolean
   allBlends: Blend[]
-  projectMilestones: Project
   exportPayload: BackupPayload
 }
 
@@ -25,4 +24,4 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export type { RootState, Profile, Equipment, Project, Blend, UserLocation }
+export type { RootState, Profile, Equipment, Blend, UserLocation }

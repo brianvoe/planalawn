@@ -62,7 +62,7 @@ Three linked datasets:
 Commercial blend  →  cultivar list (%)  →  NTEP trial metrics  →  area suitability score
 ```
 
-- **Curated blends** (starting with Calypsow and Resilience II)
+- **Curated blends** with published cultivars that map to NTEP (no marketing-only bags)
 - **User blends** you add from a bag label (saved in-browser)
 - **Cultivar browser** over ingested NTEP JSON
 - **Weighted suitability** for your location:
@@ -75,7 +75,7 @@ Commercial blend  →  cultivar list (%)  →  NTEP trial metrics  →  area sui
 Multi-species support is in the schema (tall fescue loaded first; KY bluegrass, perennial rye, fine fescue, bermuda ready for ingest).
 
 ### 5. My lawn (settings)
-Location (GPS or ZIP), lawn size, equipment defaults, project timeline, import/export backup.
+Location (GPS or ZIP), lawn size, equipment defaults, import/export backup.
 
 ---
 
@@ -157,7 +157,7 @@ Parsed JSON lands in `src/data/ntep/`. We intentionally extract **high-value hom
 | `/tasks` · `/tasks/:id` | Job library, rates, sprayer |
 | `/seeds` | Blends, cultivars, compare, NTEP coverage |
 | `/tools/sprayer` | Standalone tank mix calculator |
-| `/settings` | Location, profile, timeline, JSON backup |
+| `/settings` | Location, profile, JSON backup |
 
 ---
 
@@ -182,7 +182,6 @@ Browser storage key: `grass.store.v1`.
 - Ingest additional NTEP species/cycles the same way as tall fescue
 - Expand curated blend library + better cultivar name matching
 - Richer US climate mapping (beyond simple latitude bands)
-- Tighter calendar ↔ project timeline (renovation sequences)
 - Optional: keep growing D3 views for cultivar/blend comparison
 
 ---

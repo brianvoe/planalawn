@@ -67,6 +67,47 @@
     "notes": "From the Mountain View Optimum tech sheet. Bag percentages vary by lot."
   },
   {
+    "id": "artimuss",
+    "name": "Artimuss",
+    "manufacturer": "Lawn Synergy",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://lawnsynergy.com/products/artimuss-tall-fescue-grass-seed",
+    "companyUrl": "https://lawnsynergy.com",
+    "profile": "Lateral-spread density",
+    "summary": "Equal-part MVS Lateral Spread cultivars sold as a named bag. Blue-tag certified, Gravity SL treated.",
+    "buyHint": "lawnsynergy.com in 25 and 50 lb bags. Confirm the current tag — lots can shift a point or two.",
+    "components": [
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": 24.89 },
+      { "name": "Avenger III", "cultivarId": "avenger-iii", "percent": 24.82 },
+      { "name": "Spyder 2LS", "cultivarId": "spyder-2ls", "percent": 24.76 },
+      { "name": "Dynamite G-LS", "cultivarId": "dynamite-g-ls", "percent": 24.71 }
+    ],
+    "notes": "Published tag from Lawn Synergy. Remainder is inert matter, not filler seed."
+  },
+  {
+    "id": "envy",
+    "name": "Envy",
+    "manufacturer": "Lawn Synergy",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://lawnsynergy.com/products/envy-premium-tall-fescue-grass-seed-blend",
+    "companyUrl": "https://lawnsynergy.com",
+    "profile": "Dark color & density",
+    "summary": "Three-way of NTEP-mapped tall fescues aimed at dark color, density, and brown patch.",
+    "buyHint": "lawnsynergy.com in 10, 25, and 50 lb bags. Aimed at transition-zone lawns.",
+    "components": [
+      { "name": "Firecracker G-LS", "cultivarId": "firecracker-g-ls", "percent": 33.55 },
+      { "name": "Spyder 2LS", "cultivarId": "spyder-2ls", "percent": 33.2 },
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": 31.65 }
+    ],
+    "notes": "Published Lawn Synergy cultivar list. Remainder is inert matter."
+  },
+  {
     "id": "kentucky-31",
     "name": "Kentucky 31",
     "manufacturer": "Pennington",
@@ -83,104 +124,6 @@
       { "name": "Kentucky-31", "cultivarId": "kentucky-31", "percent": 100 }
     ],
     "notes": "Included as the widely available baseline so ‘best for my zone’ has something cheap to beat."
-  },
-  {
-    "id": "scotts-turf-builder-tf",
-    "name": "Turf Builder Tall Fescue Mix",
-    "manufacturer": "Scotts",
-    "species": "tall_fescue",
-    "curated": true,
-    "channel": "retail",
-    "zones": ["cool", "transition"],
-    "url": "https://scottsmiraclegro.com/en-us/brands/scotts/products/grass-seed/scotts-turf-builder-grass-seed-tall-fescue-mix.html",
-    "companyUrl": "https://www.scotts.com",
-    "profile": "Box-store mix",
-    "summary": "Widely sold tall fescue mix with fertilizer in the bag. Cultivar names are not published on the product page.",
-    "buyHint": "Home Depot, Lowe’s, Walmart, and Scotts’ site. Check the tag — lots change.",
-    "components": [],
-    "notes": "Proprietary retail mix. Cultivars are not on the public tag, so this is a buy option without an NTEP fit score."
-  },
-  {
-    "id": "jonathan-green-black-beauty",
-    "name": "Black Beauty Original",
-    "manufacturer": "Jonathan Green",
-    "species": "tall_fescue",
-    "curated": true,
-    "channel": "amazon",
-    "zones": ["cool", "transition"],
-    "url": "https://www.jonathangreen.com/product/black-beauty-original-grass-seed/",
-    "companyUrl": "https://www.jonathangreen.com",
-    "profile": "Dark turf-type fescue",
-    "summary": "100% turf-type tall fescue sold heavily on Amazon. Lot tags rotate among Jonathan Green’s Black Beauty family cultivars.",
-    "buyHint": "Amazon, Ace, and jonathangreen.com. Confirm the current bag tag.",
-    "components": [],
-    "notes": "Cultivar list changes by lot (e.g. Golconda / Toltec / Tonto). Not mapped to NTEP because the published mix is not a fixed formula."
-  },
-  {
-    "id": "turf-saver-rtf",
-    "name": "Turf Saver RTF",
-    "manufacturer": "Barenbrug",
-    "species": "tall_fescue",
-    "curated": true,
-    "channel": "pro",
-    "zones": ["cool", "transition"],
-    "url": "https://www.barusa.com/turf/products/turf-saver-rtf",
-    "companyUrl": "https://www.barusa.com",
-    "profile": "Rhizomatous self-repair",
-    "summary": "Patented RTF tall fescue blend sold through Barenbrug dealers. Rhizomes, not a published NTEP cultivar list.",
-    "buyHint": "Barenbrug distributors, Johnston Seed, and many pro shops.",
-    "components": [],
-    "notes": "The RTF component and companion cultivars are not a stable public tag we can map to the 2018–2023 tall fescue extract."
-  },
-  {
-    "id": "pennington-smart-seed-bermuda",
-    "name": "Smart Seed Bermudagrass",
-    "manufacturer": "Pennington",
-    "species": "bermudagrass",
-    "curated": true,
-    "channel": "retail",
-    "zones": ["warm"],
-    "url": "https://www.pennington.com/all-products/grass-seed/pennington-smart-seed-bermudagrass",
-    "companyUrl": "https://www.pennington.com",
-    "profile": "Box-store bermuda",
-    "summary": "Pennington’s boxed bermuda + fertilizer mix for southern lawns. Cultivar names are not on the product page.",
-    "buyHint": "Home Depot, Lowe’s, and pennington.com. Plant when soil is consistently warm.",
-    "components": [],
-    "notes": "Proprietary retail mix. Cultivars not on the tag — buy option only, no NTEP fit score."
-  },
-  {
-    "id": "scotts-turf-builder-bermuda",
-    "name": "Turf Builder Bermudagrass",
-    "manufacturer": "Scotts",
-    "species": "bermudagrass",
-    "curated": true,
-    "channel": "retail",
-    "zones": ["warm"],
-    "url": "https://scottsmiraclegro.com/en-us/brands/scotts/products/grass-seed/scotts-turf-builder-grass-seed-bermudagrass.html",
-    "companyUrl": "https://www.scotts.com",
-    "profile": "Box-store bermuda",
-    "summary": "Scotts bermuda mix with Root-Building Nutrition. Cultivar names are not published.",
-    "buyHint": "Box stores and Scotts’ site. Late spring / early summer seeding.",
-    "components": [],
-    "notes": "Proprietary retail mix. Cultivars not on the tag — buy option only, no NTEP fit score."
-  },
-  {
-    "id": "yukon",
-    "name": "Yukon Bermudagrass",
-    "manufacturer": "Outsidepride",
-    "species": "bermudagrass",
-    "curated": true,
-    "channel": "amazon",
-    "zones": ["warm", "transition"],
-    "url": "https://www.outsidepride.com/seed/grass-seed/bermuda-grass-seed/yukon-bermuda-grass-seed.html",
-    "companyUrl": "https://www.outsidepride.com",
-    "profile": "Cold-hardy seeded bermuda",
-    "summary": "Named Yukon seed sold online (Outsidepride and Hancock). Strong winter-hardiness reputation; not in the 2019 NTEP bermuda cycle.",
-    "buyHint": "Outsidepride, Amazon, and Hancock Seed. Coated seed is easier to spread.",
-    "components": [
-      { "name": "Yukon", "cultivarId": "yukon", "percent": 100 }
-    ],
-    "notes": "Yukon is a real named cultivar, but it is not in the 2019 National Bermudagrass Test extract — listed as a known data gap."
   },
   {
     "id": "riviera",
@@ -237,19 +180,21 @@
     "notes": "Single named cultivar from the bg19 trial."
   },
   {
-    "id": "common-bermuda",
-    "name": "Common Bermuda (unhulled)",
-    "manufacturer": "Hancock Seed",
+    "id": "sun-queen",
+    "name": "Sun Queen Bermudagrass",
+    "manufacturer": "Pure Seed",
     "species": "bermudagrass",
     "curated": true,
     "channel": "specialty",
     "zones": ["warm"],
-    "url": "https://hancockseed.com/products/hancocks-common-bermuda-grass-seed-unhulled",
-    "companyUrl": "https://hancockseed.com",
-    "profile": "Cheap pasture baseline",
-    "summary": "Unhulled common bermuda — the budget seeded option, coarser than turf-type named cultivars.",
-    "buyHint": "Hancock Seed ships coated or raw. Unhulled is more forgiving on planting date.",
-    "components": [],
-    "notes": "Common bermuda is not a named NTEP entry in the 2019 trial. Included as the cheap seeded baseline for warm-zone shoppers."
+    "url": "https://justinseed.com/product/bermudagrass-sun-queen/",
+    "companyUrl": "https://www.pureseed.com",
+    "profile": "Elite seeded bermuda",
+    "summary": "Pure-Seed Testing seeded bermuda (PST-R6MM). In the 2019 NTEP bermuda trial.",
+    "buyHint": "Justin Seed and Atlas Turf dealers. Often sold coated as PureCoat+.",
+    "components": [
+      { "name": "Sun Queen", "cultivarId": "sun-queen", "percent": 100 }
+    ],
+    "notes": "Single named cultivar from the bg19 trial."
   }
 ]

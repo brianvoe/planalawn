@@ -5,7 +5,7 @@ import { zoneLine } from '../data/climate'
 import { grassTypeLabels, grassTypeOptions, inferGrassType } from '../data/grass'
 import { requestBrowserLocation } from '../services/geolocation'
 import type { AppStore } from '../store/types'
-import type { BackupPayload, GrassType, Profile, Project, UserLocation } from '../types'
+import type { BackupPayload, GrassType, Profile, UserLocation } from '../types'
 
 interface StoreThis {
   $store: AppStore
@@ -18,17 +18,6 @@ function bindProfile<K extends keyof Profile>(field: K) {
     },
     set(this: StoreThis, v: Profile[K]) {
       this.$store.dispatch('updateProfile', { [field]: v })
-    },
-  }
-}
-
-function bindProject<K extends keyof Project>(field: K) {
-  return {
-    get(this: StoreThis): Project[K] | '' {
-      return this.$store.state.project[field] || ''
-    },
-    set(this: StoreThis, v: Project[K] | '') {
-      this.$store.dispatch('updateProject', { [field]: v || null })
     },
   }
 }
@@ -57,11 +46,6 @@ export default {
         { text: 'Full sun', value: 'full' },
         { text: 'Mixed', value: 'mixed' },
         { text: 'Mostly shade', value: 'shade' },
-      ],
-      phaseSelectData: [
-        { text: 'Maintenance', value: 'maintenance' },
-        { text: 'Renovation', value: 'renovation' },
-        { text: 'Establishment', value: 'establishment' },
       ],
     }
   },
@@ -106,21 +90,6 @@ export default {
       },
       set(v: number) {
         this.$store.dispatch('updateEquipment', { sprayCoverageSqFtPerTank: v })
-      },
-    },
-    phase: bindProject('phase'),
-    killAppliedAt: bindProject('killAppliedAt'),
-    secondKillAt: bindProject('secondKillAt'),
-    aeratedAt: bindProject('aeratedAt'),
-    topsoilAt: bindProject('topsoilAt'),
-    seededAt: bindProject('seededAt'),
-    firstMowAt: bindProject('firstMowAt'),
-    projectNotes: {
-      get(): string {
-        return this.$store.state.project.notes || ''
-      },
-      set(v: string) {
-        this.$store.dispatch('updateProject', { notes: v })
       },
     },
     grassTypeSelect: {
@@ -421,49 +390,6 @@ export default {
       </section>
 
       <section class="card">
-        <h2>Project timeline</h2>
-        <p class="hint">Track renovation milestones so you know what already happened.</p>
-        <div class="form-grid">
-          <label>
-            <span>Phase</span>
-            <SlimSelect
-              v-model="phase"
-              :data="phaseSelectData"
-              :settings="{ showSearch: false, allowDeselect: false }"
-            />
-          </label>
-          <label>
-            <span>Kill applied</span>
-            <input v-model="killAppliedAt" type="date" />
-          </label>
-          <label>
-            <span>Second kill</span>
-            <input v-model="secondKillAt" type="date" />
-          </label>
-          <label>
-            <span>Aerated</span>
-            <input v-model="aeratedAt" type="date" />
-          </label>
-          <label>
-            <span>Topsoil</span>
-            <input v-model="topsoilAt" type="date" />
-          </label>
-          <label>
-            <span>Seeded</span>
-            <input v-model="seededAt" type="date" />
-          </label>
-          <label>
-            <span>First mow</span>
-            <input v-model="firstMowAt" type="date" />
-          </label>
-          <label class="full">
-            <span>Project notes</span>
-            <textarea v-model="projectNotes" rows="3" />
-          </label>
-        </div>
-      </section>
-
-      <section class="card">
         <h2>Backup</h2>
         <p class="hint">Download or restore your local lawn data as JSON.</p>
         <div class="actions">
@@ -483,7 +409,7 @@ export default {
           <li>Lawn profile (size, grass type, seed choice, soil/sun, notes)</li>
           <li>Sprayer tank + coverage habits</li>
           <li>Custom rate overrides from calculators</li>
-          <li>Project milestone dates</li>
+          <li>Custom blends you add from a bag tag</li>
         </ul>
         <p>Weather cache is separate and temporary. Nothing is uploaded.</p>
       </section>
