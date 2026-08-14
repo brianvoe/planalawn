@@ -6,7 +6,9 @@ export default {
 
 <style lang="scss">
 .site-footer {
-  --band-fill: var(--color-dark);
+  background: color-mix(in srgb, var(--color-dark) 88%, #000);
+  border-top: 1px solid rgba(240, 247, 242, 0.14);
+  box-shadow: 0 -10px 28px rgba(16, 50, 31, 0.16);
   margin-top: 0;
   padding-block: clamp(2.5rem, 5vw, 3.5rem) 2rem;
 
@@ -75,7 +77,7 @@ export default {
 </style>
 
 <template>
-  <footer class="site-footer on-dark wave-top">
+  <footer class="site-footer on-dark">
     <div class="site-footer__inner container">
       <div class="site-footer__brand">
         <strong>Lawn Plan Nerd</strong>

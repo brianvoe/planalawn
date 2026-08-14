@@ -22,7 +22,8 @@
 
   &:hover {
     border-color: var(--color-primary);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
 
   &:focus-visible {
@@ -187,7 +188,7 @@
   .feature-card {
     background: var(--color-surface);
     border-color: var(--color-border);
-    box-shadow: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   }
 
   .checklist svg {

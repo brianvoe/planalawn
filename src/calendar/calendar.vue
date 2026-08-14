@@ -88,7 +88,7 @@ export default {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) * 2);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
 
     &.current {
       color: var(--color-primary-strong);

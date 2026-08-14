@@ -7,7 +7,11 @@ const LEGACY_PREFS_KEY = 'grass.prefs.v1'
 export function loadPersistedState(): Partial<RootState> | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw) as Partial<RootState>
+    if (raw) {
+      const parsed = JSON.parse(raw) as Partial<RootState> & { taskLogs?: unknown }
+      delete parsed.taskLogs
+      return parsed
+    }
   } catch {
     /* ignore */
   }
@@ -40,7 +44,6 @@ export function persistState(state: RootState): void {
     location: state.location,
     equipment: state.equipment,
     rateOverrides: state.rateOverrides,
-    taskLogs: state.taskLogs,
     project: state.project,
     userBlends: state.userBlends,
   }

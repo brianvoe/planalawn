@@ -13,18 +13,8 @@ import type {
   RateOverride,
   ResolvedLocation,
   RootState,
-  TaskLog,
   UserLocation,
 } from '../types'
-
-function emptyTaskLog(): TaskLog {
-  return {
-    lastDoneAt: null,
-    notes: '',
-    stepsChecked: {},
-    history: [],
-  }
-}
 
 function defaultState(): RootState {
   return {
@@ -55,7 +45,6 @@ function defaultState(): RootState {
       sprayCoverageSqFtPerTank: 1000,
     },
     rateOverrides: {},
-    taskLogs: {},
     project: {
       phase: 'maintenance',
       killAppliedAt: null,
@@ -109,7 +98,6 @@ export default createStore<RootState>({
       s.location?.latitude != null && s.location?.longitude != null ? s.location : null,
     hasLocation: (_s, getters) => Boolean(getters.userLocation),
     allBlends: (s) => [...curatedBlendList, ...(s.userBlends || [])],
-    taskLog: (s) => (taskId: string) => s.taskLogs[taskId] || emptyTaskLog(),
     projectMilestones: (s) => s.project,
     exportPayload: (s): BackupPayload => ({
       version: 2,
@@ -118,7 +106,6 @@ export default createStore<RootState>({
       location: s.location,
       equipment: s.equipment,
       rateOverrides: s.rateOverrides,
-      taskLogs: s.taskLogs,
       project: s.project,
       userBlends: s.userBlends,
     }),
@@ -154,40 +141,6 @@ export default createStore<RootState>({
       delete next[rateKey]
       state.rateOverrides = next
     },
-    TOGGLE_TASK_STEP(state, { taskId, stepIndex }: { taskId: string; stepIndex: number }) {
-      const log = state.taskLogs[taskId] || emptyTaskLog()
-      const stepsChecked = { ...log.stepsChecked }
-      if (stepsChecked[stepIndex]) delete stepsChecked[stepIndex]
-      else stepsChecked[stepIndex] = true
-      state.taskLogs = {
-        ...state.taskLogs,
-        [taskId]: { ...log, stepsChecked },
-      }
-    },
-    SET_TASK_NOTES(state, { taskId, notes }: { taskId: string; notes: string }) {
-      const log = state.taskLogs[taskId] || emptyTaskLog()
-      state.taskLogs = {
-        ...state.taskLogs,
-        [taskId]: { ...log, notes },
-      }
-    },
-    MARK_TASK_DONE(state, { taskId, at = null }: { taskId: string; at?: string | null }) {
-      const when = at || new Date().toISOString().slice(0, 10)
-      const log = state.taskLogs[taskId] || emptyTaskLog()
-      const history = [...(log.history || []), when].slice(-20)
-      state.taskLogs = {
-        ...state.taskLogs,
-        [taskId]: { ...log, lastDoneAt: when, history },
-      }
-    },
-    CLEAR_TASK_DONE(state, taskId: string) {
-      const log = state.taskLogs[taskId]
-      if (!log) return
-      state.taskLogs = {
-        ...state.taskLogs,
-        [taskId]: { ...log, lastDoneAt: null },
-      }
-    },
     UPDATE_PROJECT(state, partial: Partial<Project>) {
       state.project = { ...state.project, ...partial }
     },
@@ -220,14 +173,12 @@ export default createStore<RootState>({
         location: payload.location,
         equipment: payload.equipment,
         rateOverrides: payload.rateOverrides,
-        taskLogs: payload.taskLogs,
         project: payload.project,
       }) as unknown as RootState
       state.profile = merged.profile
       state.location = merged.location
       state.equipment = merged.equipment
       state.rateOverrides = merged.rateOverrides || {}
-      state.taskLogs = merged.taskLogs || {}
       state.project = merged.project
       state.userBlends = payload.userBlends || []
     },
@@ -251,18 +202,6 @@ export default createStore<RootState>({
     },
     setRateOverride({ commit }, payload: { rateKey: string; values: RateOverride }) {
       commit('SET_RATE_OVERRIDE', payload)
-    },
-    toggleTaskStep({ commit }, payload: { taskId: string; stepIndex: number }) {
-      commit('TOGGLE_TASK_STEP', payload)
-    },
-    setTaskNotes({ commit }, payload: { taskId: string; notes: string }) {
-      commit('SET_TASK_NOTES', payload)
-    },
-    markTaskDone({ commit }, payload: { taskId: string; at?: string | null }) {
-      commit('MARK_TASK_DONE', payload)
-    },
-    clearTaskDone({ commit }, taskId: string) {
-      commit('CLEAR_TASK_DONE', taskId)
     },
     updateProject({ commit }, partial: Partial<Project>) {
       commit('UPDATE_PROJECT', partial)

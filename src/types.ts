@@ -286,13 +286,6 @@ export interface RateOverride {
   ozPer1000?: number
 }
 
-export interface TaskLog {
-  lastDoneAt: string | null
-  notes: string
-  stepsChecked: Record<number, boolean>
-  history: string[]
-}
-
 export interface Project {
   phase: ProjectPhase
   killAppliedAt: string | null
@@ -309,7 +302,6 @@ export interface RootState {
   location: UserLocation
   equipment: Equipment
   rateOverrides: Record<string, RateOverride>
-  taskLogs: Record<string, TaskLog>
   project: Project
   userBlends: Blend[]
 }
@@ -321,7 +313,6 @@ export interface BackupPayload {
   location: UserLocation
   equipment: Equipment
   rateOverrides: Record<string, RateOverride>
-  taskLogs: Record<string, TaskLog>
   project: Project
   userBlends: Blend[]
 }

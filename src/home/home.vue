@@ -100,6 +100,7 @@ export default {
 <style lang="scss">
 .home {
   .band {
+    background: var(--band-fill);
     padding-block: clamp(3.5rem, 7vw, 5.5rem);
 
     .band__inner {
@@ -112,15 +113,17 @@ export default {
 
     &--tint {
       --band-fill: var(--color-bg-soft);
+      box-shadow: var(--shadow-section);
     }
 
     &--tint-strong {
       --band-fill: var(--color-primary-soft);
+      box-shadow: var(--shadow-section);
     }
 
     &--dark {
       --band-fill: var(--color-dark);
-      padding-block-end: clamp(1.25rem, 2.5vw, 2rem);
+      box-shadow: 0 -8px 28px rgba(16, 50, 31, 0.14), 0 12px 32px rgba(0, 0, 0, 0.18);
     }
 
     .band__head {
@@ -201,7 +204,7 @@ export default {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) * 2);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
 
     .panel__bar {
       display: flex;
@@ -446,7 +449,7 @@ export default {
     </header>
 
     <!-- TIMING -------------------------------------------------------------->
-    <section class="band band--tint wave-top">
+    <section class="band band--tint">
       <div class="band__inner container split">
         <div>
           <p class="eyebrow">
@@ -479,7 +482,7 @@ export default {
     </section>
 
     <!-- SEEDS --------------------------------------------------------------->
-    <section class="band band--plain wave-top">
+    <section class="band band--plain">
       <div class="band__inner container">
         <div class="band__head">
           <p class="eyebrow">
@@ -520,7 +523,7 @@ export default {
     </section>
 
     <!-- FEATURE GRID -------------------------------------------------------->
-    <section class="band band--tint-strong wave-top">
+    <section class="band band--tint-strong">
       <div class="band__inner container">
         <div class="band__head band__head--center">
           <h2>Plus everything around it</h2>
@@ -545,7 +548,7 @@ export default {
     </section>
 
     <!-- CLOSING CTA --------------------------------------------------------->
-    <section class="band band--dark on-dark wave-top">
+    <section class="band band--dark on-dark">
       <div class="band__inner container cta">
         <h2>Ready when you are.</h2>
         <p class="lede">

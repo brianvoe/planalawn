@@ -7,15 +7,7 @@ import { grassNoteForTask, grassTypeLabels } from '../data/grass'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
 import type { PropType } from 'vue'
-import type { Conditions as Weather, EvaluatedTask, GrassType, Project, Task, TaskLog } from '../types'
-
-const milestoneMap: Record<string, keyof Project> = {
-  'lawn-kill': 'killAppliedAt',
-  aeration: 'aeratedAt',
-  topsoil: 'topsoilAt',
-  seeding: 'seededAt',
-  overseeding: 'seededAt',
-}
+import type { Conditions as Weather, EvaluatedTask, GrassType, Task } from '../types'
 
 export default {
   name: 'TaskDetail',
@@ -30,9 +22,6 @@ export default {
   computed: {
     task(): Task | null {
       return getTask(this.id)
-    },
-    log(): TaskLog {
-      return this.$store.getters.taskLog(this.id)
     },
     evaluation(): EvaluatedTask | null {
       if (!this.task) return null
@@ -59,27 +48,6 @@ export default {
   methods: {
     nameFor(taskId: string): string {
       return getTask(taskId)?.name || taskId
-    },
-    toggleStep(stepIndex: number) {
-      this.$store.dispatch('toggleTaskStep', { taskId: this.id, stepIndex })
-    },
-    onNotes(e: Event) {
-      this.$store.dispatch('setTaskNotes', {
-        taskId: this.id,
-        notes: (e.target as HTMLTextAreaElement).value,
-      })
-    },
-    markDone() {
-      this.$store.dispatch('markTaskDone', { taskId: this.id })
-      const field = milestoneMap[this.id]
-      if (field && !this.$store.state.project[field]) {
-        this.$store.dispatch('updateProject', {
-          [field]: new Date().toISOString().slice(0, 10),
-        })
-      }
-    },
-    clearDone() {
-      this.$store.dispatch('clearTaskDone', this.id)
     },
   },
 }
@@ -133,7 +101,7 @@ export default {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) * 2);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
 
     h2 {
       margin: 0;
@@ -163,67 +131,6 @@ export default {
       gap: 0.4rem;
       margin: 0;
       padding-left: 1.2rem;
-    }
-  }
-
-  .checklist {
-    padding-left: 0 !important;
-    list-style: none;
-
-    label {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
-      cursor: pointer;
-    }
-
-    input {
-      margin-top: 0.25rem;
-    }
-  }
-
-  .log-box {
-    padding: 1.15rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: calc(var(--border-radius) * 2);
-    box-shadow: var(--shadow);
-
-    .log-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.65rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .done-line {
-      margin: 0;
-      font-weight: 600;
-      color: var(--color-success);
-    }
-
-    .notes-label {
-      display: grid;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--color-text-muted);
-    }
-
-    textarea {
-      padding: 0.55rem 0.65rem;
-      font: inherit;
-      color: var(--color-text);
-      resize: vertical;
-      border: 1px solid var(--color-border);
-      border-radius: var(--border-radius);
-
-      &:focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: 2px;
-        border-color: var(--color-primary);
-      }
     }
   }
 
@@ -287,45 +194,9 @@ export default {
 
       <section class="block">
         <h2>Steps</h2>
-        <ul class="checklist">
-          <li v-for="(step, i) in task.steps" :key="i">
-            <label>
-              <input
-                type="checkbox"
-                :checked="!!log.stepsChecked[i]"
-                @change="toggleStep(i)"
-              />
-              <span>{{ step }}</span>
-            </label>
-          </li>
+        <ul>
+          <li v-for="(step, i) in task.steps" :key="i">{{ step }}</li>
         </ul>
-      </section>
-
-      <section class="block log-box">
-        <h2>Your log (saved locally)</h2>
-        <div class="log-actions">
-          <button
-            v-if="!log.lastDoneAt"
-            type="button"
-            class="btn btn--primary"
-            @click="markDone"
-          >
-            Mark done today
-          </button>
-          <template v-else>
-            <p class="done-line">Last done {{ log.lastDoneAt }}</p>
-            <button type="button" class="btn btn--ghost" @click="clearDone">Clear done</button>
-          </template>
-        </div>
-        <label class="notes-label">
-          <span>Notes for this task</span>
-          <textarea
-            :value="log.notes"
-            rows="3"
-            placeholder="What you used, weather, results…"
-            @input="onNotes"
-          />
-        </label>
       </section>
 
       <section class="block">

@@ -47,6 +47,16 @@ export default {
     border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) * 2);
     box-shadow: var(--shadow);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
 
     .cat {
       display: inline-flex;

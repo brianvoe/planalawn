@@ -11,7 +11,7 @@ Lawn Plan Nerd helps you answer the questions that actually matter when you’re
 - **How do I mix the sprayer** for my tank size and yard?
 - **Which seed blend makes sense for my area**, based on real NTEP trial data—not just bag marketing?
 
-No account. No backend required. Your lawn profile, location, task log, and custom blends stay in **your browser**.
+No account. No backend required. Your lawn profile, location, and custom blends stay in **your browser**.
 
 ---
 
@@ -54,7 +54,6 @@ Each job (kill, aerate, seed, topsoil, peat, mulch, fertilize, water) has:
 
 - Why / when / steps / materials
 - Rate or sprayer calculator tied to your lawn size
-- A personal log (checklists, notes, done dates) saved locally
 
 ### 4. Seeds (the research workspace)
 Three linked datasets:
@@ -96,7 +95,7 @@ Location (GPS or ZIP), lawn size, equipment defaults, project timeline, import/e
 | Area | Status |
 |------|--------|
 | Routing, calendar, tasks, sprayer | In place |
-| Vuex + localStorage (profile, location, logs, user blends) | In place |
+| Vuex + localStorage (profile, location, user blends) | In place |
 | US location (geolocation or ZIP) + local soil temp | In place |
 | NTEP PDF → JSON ingest (Python) | In place |
 | Tall fescue 2018–2023 high-value tables | Loaded (132 cultivars, all metrics) |
@@ -155,7 +154,7 @@ Parsed JSON lands in `src/data/ntep/`. We intentionally extract **high-value hom
 |-------|---------|
 | `/` | Home — conditions, next actions, navigation |
 | `/calendar` | Do now / soon / later from season + soil temp |
-| `/tasks` · `/tasks/:id` | Job library, rates, sprayer, personal log |
+| `/tasks` · `/tasks/:id` | Job library, rates, sprayer |
 | `/seeds` | Blends, cultivars, compare, NTEP coverage |
 | `/tools/sprayer` | Standalone tank mix calculator |
 | `/settings` | Location, profile, timeline, JSON backup |

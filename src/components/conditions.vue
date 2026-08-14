@@ -44,7 +44,7 @@ export default {
   border: 1px solid var(--color-border);
   border-top: 3px solid var(--color-border);
   border-radius: calc(var(--border-radius) * 2);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-md);
 
   &.tone-good {
     border-top-color: var(--color-success);

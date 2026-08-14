@@ -323,7 +323,7 @@ export default {
 
     &.selected {
       border-color: var(--color-primary);
-      box-shadow: inset 0 0 0 1px var(--color-primary);
+      box-shadow: var(--shadow), inset 0 0 0 1px var(--color-primary);
     }
 
     &:focus-visible {

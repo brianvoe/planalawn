@@ -28,6 +28,7 @@ export default {
   z-index: 50;
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
 
   .site-nav__inner {

@@ -44,6 +44,7 @@ export default {
 .loc-prompt {
   background: var(--color-primary-soft);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 
   .loc-prompt__inner {
     display: grid;

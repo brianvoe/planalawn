@@ -422,7 +422,6 @@ export default {
           <li>Lawn profile (size, grass type, seed choice, soil/sun, notes)</li>
           <li>Sprayer tank + coverage habits</li>
           <li>Custom rate overrides from calculators</li>
-          <li>Task step checks, notes, and “done” dates</li>
           <li>Project milestone dates</li>
         </ul>
         <p>Weather cache is separate and temporary. Nothing is uploaded.</p>

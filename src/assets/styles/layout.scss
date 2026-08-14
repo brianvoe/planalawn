@@ -74,27 +74,6 @@ body {
   color: var(--lede-ink, var(--color-text-muted));
 }
 
-.wave-top {
-  position: relative;
-  background: var(--band-fill);
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1px;
-    height: clamp(38px, 5vw, 76px);
-    transform: translateY(-100%);
-    background: var(--band-fill);
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C230,8 480,2 720,26 C975,52 1215,96 1440,64 L1440,100 L0,100 Z' fill='%23000'/%3E%3C/svg%3E")
-      0 0 / 100% 100% no-repeat;
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C230,8 480,2 720,26 C975,52 1215,96 1440,64 L1440,100 L0,100 Z' fill='%23000'/%3E%3C/svg%3E")
-      0 0 / 100% 100% no-repeat;
-    pointer-events: none;
-  }
-}
-
 .grid-2,
 .grid-3 {
   display: grid;
