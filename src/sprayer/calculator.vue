@@ -1,12 +1,13 @@
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
+import SlimSelect from 'slim-select/vue'
 import { rateTemplates, sprayerMix } from '../data/rates'
 import type { PropType } from 'vue'
 import type { MixMode, RateTemplate, SprayerMixResult } from '../types'
 
 export default {
   name: 'Calculator',
-  components: { LawnSize },
+  components: { LawnSize, SlimSelect },
   props: {
     rateKey: { type: String, default: 'glyphosate' },
     rateKeys: { type: Array as PropType<string[] | null>, default: null },
@@ -66,6 +67,15 @@ export default {
     productNotes(): string {
       return rateTemplates[this.selectedKey]?.notes || ''
     },
+    productSelectData(): { text: string; value: string }[] {
+      return this.productOptions.map((opt) => ({ text: opt.label, value: opt.id }))
+    },
+    modeSelectData(): { text: string; value: MixMode }[] {
+      return [
+        { text: 'oz per gallon', value: 'perGallon' },
+        { text: 'oz per 1000 sq ft', value: 'per1000' },
+      ]
+    },
     tankGallonsLocal: {
       get(): number {
         return this.tankGallons
@@ -116,13 +126,13 @@ export default {
       display: inline-flex;
       flex-direction: column;
       gap: 0.3rem;
+      min-width: 10rem;
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--color-text-muted);
     }
 
-    input,
-    select {
+    input {
       min-width: 7rem;
       min-height: var(--input-height);
       padding: 0.45rem 0.65rem;
@@ -192,18 +202,19 @@ export default {
     <div class="sprayer__controls">
       <label v-if="productOptions.length > 1">
         <span>Product template</span>
-        <select v-model="selectedKey">
-          <option v-for="opt in productOptions" :key="opt.id" :value="opt.id">
-            {{ opt.label }}
-          </option>
-        </select>
+        <SlimSelect
+          v-model="selectedKey"
+          :data="productSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+        />
       </label>
       <label>
         <span>Mix mode</span>
-        <select v-model="mode">
-          <option value="perGallon">oz per gallon</option>
-          <option value="per1000">oz per 1000 sq ft</option>
-        </select>
+        <SlimSelect
+          v-model="mode"
+          :data="modeSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+        />
       </label>
       <label>
         <span>Tank size (gal)</span>

@@ -1,9 +1,11 @@
 <script lang="ts">
 import BarChart from '../components/bar-chart.vue'
+import SlimSelect from 'slim-select/vue'
 import { ratingColor } from '../charts/bars'
 import {
-  allCultivars,
+  cultivarsForSpecies,
   isNamedCultivar,
+  ntepMetaForSpecies,
   NTEP_METRICS,
   searchCultivars,
   siteCodesForMetric,
@@ -12,20 +14,20 @@ import {
 import { fitRank, nearestNtepSites, scoreCultivarForLocation } from '../services/suitability'
 import { coverageTitle, FACTOR_LABELS, fitTone, fmtRating } from './fit-ui'
 import type { PropType } from 'vue'
-import type { BarDatum, Cultivar, CultivarFit, NearbySite, UserLocation } from '../types'
-
-const QUALITY_SITES = siteCodesForMetric('transitionQuality')
+import type { BarDatum, Cultivar, CultivarFit, NearbySite, SpeciesInfo, UserLocation } from '../types'
 
 type SortKey = 'fit' | 'name' | 'named' | (typeof NTEP_METRICS)[number]['key']
 
 export default {
   name: 'CultivarsPanel',
-  components: { BarChart },
+  components: { BarChart, SlimSelect },
   props: {
     userLocation: { type: Object as PropType<UserLocation | null>, default: null },
     selectedId: { type: String, default: '' },
+    speciesId: { type: String, default: 'tall_fescue' },
+    speciesOptions: { type: Array as PropType<SpeciesInfo[]>, default: () => [] },
   },
-  emits: ['select'],
+  emits: ['select', 'update:speciesId'],
   data() {
     return {
       query: '',
@@ -35,19 +37,30 @@ export default {
     }
   },
   computed: {
+    pool(): Cultivar[] {
+      return cultivarsForSpecies(this.speciesId)
+    },
+    qualitySites(): string[] {
+      return siteCodesForMetric('transitionQuality', this.pool)
+    },
     nearestSite(): NearbySite | null {
       if (!this.userLocation) return null
-      return nearestNtepSites(this.userLocation.latitude, this.userLocation.longitude, 1, QUALITY_SITES)[0] || null
+      return nearestNtepSites(this.userLocation.latitude, this.userLocation.longitude, 1, this.qualitySites)[0] || null
     },
     nearestSiteHeader(): string {
       return this.nearestSite ? `Nearest — ${this.nearestSite.name}` : 'Knoxville, TN'
     },
     cultivarCount(): number {
-      return allCultivars.length
+      return this.pool.length
+    },
+    sourceMeta(): string {
+      const meta = ntepMetaForSpecies(this.speciesId)
+      if (!meta) return ''
+      return `${meta.trial} ${meta.year}`
     },
     rows(): (Cultivar & { fit: CultivarFit | null; named: boolean })[] {
-      const pool = this.namedOnly ? allCultivars.filter(isNamedCultivar) : allCultivars
-      const list = searchCultivars(this.query, pool)
+      const namedPool = this.namedOnly ? this.pool.filter(isNamedCultivar) : this.pool
+      const list = searchCultivars(this.query, namedPool)
       const withFit = list.map((c) => ({
         ...c,
         named: isNamedCultivar(c),
@@ -87,6 +100,17 @@ export default {
           color: ratingColor(value),
         }))
         .sort((a, b) => b.value - a.value)
+    },
+    speciesChoice: {
+      get(): string {
+        return this.speciesId
+      },
+      set(id: string) {
+        this.$emit('update:speciesId', id)
+      },
+    },
+    speciesSelectData(): { text: string; value: string }[] {
+      return this.speciesOptions.map((s) => ({ text: s.label, value: s.id }))
     },
   },
   methods: {
@@ -169,6 +193,14 @@ export default {
 <template>
   <section class="cultivars-panel">
     <div class="toolbar">
+      <div class="toolbar-control">
+        <SlimSelect
+          v-model="speciesChoice"
+          :data="speciesSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+          aria-label="Species"
+        />
+      </div>
       <input v-model="query" class="input" type="search" placeholder="Search cultivars…" />
       <label class="named-toggle">
         <input v-model="namedOnly" type="checkbox" />
@@ -256,7 +288,7 @@ export default {
         </div>
         <div v-if="siteChart.length" class="chart-panel">
           <h3 class="chart-panel__title">Transition quality by site</h3>
-          <p class="chart-panel__meta">2018–2023 NTEP regional turf quality.</p>
+          <p class="chart-panel__meta">{{ sourceMeta }} regional turf quality.</p>
           <BarChart :data="siteChart" :options="{ leftMargin: 130, rowHeight: 30 }" />
         </div>
       </aside>

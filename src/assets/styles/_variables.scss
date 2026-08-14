@@ -60,6 +60,10 @@
   --speed: 0.3s;
   --input-height: 44px;
   --max-width: 1120px;
+  --scrollbar-size: 10px;
+  --scrollbar-track: var(--color-surface-alt);
+  --scrollbar-thumb: color-mix(in srgb, var(--color-primary) 42%, var(--color-border));
+  --scrollbar-thumb-hover: var(--color-primary);
 
   /* Breakpoints cannot be used in @media (hardcode these):
      sm 560px, md 768px, lg 1024px

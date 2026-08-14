@@ -32,7 +32,8 @@
     "id": "bermudagrass",
     "label": "Bermudagrass",
     "season": "warm",
-    "ntepTrials": [],
-    "status": "schema_ready"
+    "ntepTrials": [
+      "bg19"
+    ]
   }
 ]

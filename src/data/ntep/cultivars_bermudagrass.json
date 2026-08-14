@@ -1,0 +1,2562 @@
+{
+  "meta": {
+    "species": "bermudagrass",
+    "trial": "bg19",
+    "year": 2023,
+    "sourcePdf": "bg19_24-11f.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, color, disease, drought)."
+  },
+  "count": 35,
+  "cultivars": [
+    {
+      "id": "astro",
+      "name": "Astro",
+      "aliases": [
+        "ASTRO"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.3,
+            "FL3": 6.8,
+            "KS2": 5.4,
+            "KY1": 5.7,
+            "MD1": 6.1,
+            "MO1": 6.0,
+            "MS1": 4.9,
+            "NC1": 5.8,
+            "OK3": 5.2,
+            "TN1": 6.4,
+            "VA1": 7.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 5.7,
+            "FL3": 6.5,
+            "IN1": 5.3,
+            "KS2": 4.1,
+            "MO1": 6.0,
+            "MS1": 5.7,
+            "NC1": 5.8,
+            "OK1": 5.8,
+            "OK3": 6.0,
+            "TN1": 4.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN1": 6.8,
+            "NC1": 7.7
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.1,
+            "AR1": 6.6,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 18,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "celebration-hybrid",
+      "name": "Celebration Hybrid",
+      "aliases": [
+        "CELEBRATION HYBRID (MSB-1017)",
+        "CELEBRATION HYBRID",
+        "MSB-1017"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.1,
+            "FL3": 6.3,
+            "KS2": 4.9,
+            "KY1": 6.3,
+            "MD1": 7.0,
+            "MO1": 6.7,
+            "MS1": 5.2,
+            "NC1": 5.1,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 7.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.6,
+            "AR1": 7.3,
+            "FL3": 7.7,
+            "IN1": 7.7,
+            "KS2": 6.9,
+            "MO1": 4.7,
+            "MS1": 6.0,
+            "NC1": 6.9,
+            "OK1": 6.4,
+            "OK3": 6.2,
+            "TN1": 4.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 7.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.5,
+            "AR1": 7.4,
+            "KS2": 5.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 13,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "copperhead",
+      "name": "Copperhead",
+      "aliases": [
+        "COPPERHEAD (DLF-460/3048)",
+        "COPPERHEAD",
+        "DLF-460/3048"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.4,
+            "AR1": 5.5,
+            "FL3": 6.0,
+            "KS2": 5.0,
+            "KY1": 6.0,
+            "MD1": 6.7,
+            "MO1": 4.0,
+            "MS1": 4.5,
+            "NC1": 4.9,
+            "OK3": 4.7,
+            "TN1": 6.0,
+            "VA1": 6.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 7.0,
+            "FL3": 6.1,
+            "IN1": 6.1,
+            "KS2": 5.6,
+            "MO1": 3.3,
+            "MS1": 5.0,
+            "NC1": 6.1,
+            "OK1": 6.1,
+            "OK3": 6.0,
+            "TN1": 7.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 4.7,
+            "NC1": 5.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "VA1": 6.4,
+            "IN1": 5.6,
+            "AR1": 5.7,
+            "KS2": 4.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 25,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "fb-1628",
+      "name": "FB 1628",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.5,
+            "AR1": 6.8,
+            "FL3": 6.7,
+            "KS2": 5.1,
+            "KY1": 6.6,
+            "MD1": 7.4,
+            "MO1": 6.5,
+            "MS1": 5.6,
+            "NC1": 6.1,
+            "OK3": 5.2,
+            "TN1": 6.6,
+            "VA1": 7.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.7,
+            "FL3": 7.8,
+            "IN1": 8.4,
+            "KS2": 7.8,
+            "MO1": 5.3,
+            "MS1": 6.3,
+            "NC1": 7.0,
+            "OK1": 7.2,
+            "OK3": 6.9,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.3,
+            "NC1": 7.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.9,
+            "AR1": 7.4,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 19,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "fb-1630",
+      "name": "FB 1630",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 5.9,
+            "FL3": 6.4,
+            "KS2": 4.8,
+            "KY1": 6.6,
+            "MD1": 6.7,
+            "MO1": 4.7,
+            "MS1": 5.1,
+            "NC1": 5.4,
+            "OK3": 4.5,
+            "TN1": 6.5,
+            "VA1": 6.5
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 6.8,
+            "FL3": 7.6,
+            "IN1": 7.3,
+            "KS2": 7.8,
+            "MO1": 4.7,
+            "MS1": 5.7,
+            "NC1": 6.8,
+            "OK1": 6.3,
+            "OK3": 6.0,
+            "TN1": 5.5
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 5.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 6.5,
+            "IN1": 6.1,
+            "AR1": 6.6,
+            "KS2": 4.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 20,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "fb-1902",
+      "name": "FB 1902",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 6.0,
+            "FL3": 5.5,
+            "KS2": 4.9,
+            "KY1": 6.1,
+            "MD1": 5.9,
+            "MO1": 4.6,
+            "MS1": 4.7,
+            "NC1": 4.9,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.1
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.2,
+            "FL3": 7.2,
+            "IN1": 7.1,
+            "KS2": 7.2,
+            "MO1": 5.7,
+            "MS1": 5.0,
+            "NC1": 7.0,
+            "OK1": 6.2,
+            "OK3": 6.1,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 6.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "VA1": 5.3,
+            "IN1": 5.5,
+            "AR1": 6.2,
+            "KS2": 4.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 21,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "fb-1903",
+      "name": "FB 1903",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.1,
+            "AR1": 5.6,
+            "FL3": 6.4,
+            "KS2": 4.5,
+            "KY1": 5.8,
+            "MD1": 6.5,
+            "MO1": 3.8,
+            "MS1": 5.1,
+            "NC1": 6.1,
+            "OK3": 4.4,
+            "TN1": 6.3,
+            "VA1": 5.5
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.8,
+            "FL3": 8.1,
+            "IN1": 7.8,
+            "KS2": 8.6,
+            "MO1": 4.0,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.4,
+            "OK3": 6.4,
+            "TN1": 6.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 4.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "VA1": 5.4,
+            "IN1": 5.4,
+            "AR1": 6.6,
+            "KS2": 4.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 22,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-2013-10s",
+      "name": "JSC 2013-10S",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 6.1,
+            "FL3": 6.4,
+            "KS2": 5.9,
+            "KY1": 6.2,
+            "MD1": 7.3,
+            "MO1": 6.0,
+            "MS1": 4.8,
+            "NC1": 6.3,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.7,
+            "FL3": 7.0,
+            "IN1": 7.2,
+            "KS2": 6.7,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.3,
+            "OK1": 5.9,
+            "OK3": 6.0,
+            "TN1": 5.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.2,
+            "NC1": 7.0
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.3,
+            "AR1": 6.3,
+            "KS2": 5.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 32,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-2013-5s",
+      "name": "JSC 2013-5S",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 6.1,
+            "FL3": 5.7,
+            "KS2": 5.5,
+            "KY1": 6.2,
+            "MD1": 7.5,
+            "MO1": 6.1,
+            "MS1": 4.6,
+            "NC1": 5.0,
+            "OK3": 4.8,
+            "TN1": 6.0,
+            "VA1": 6.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.5,
+            "FL3": 6.7,
+            "IN1": 6.3,
+            "KS2": 7.0,
+            "MO1": 5.7,
+            "MS1": 5.3,
+            "NC1": 7.0,
+            "OK1": 5.9,
+            "OK3": 5.9,
+            "TN1": 6.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.0
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.4,
+            "AR1": 6.4,
+            "KS2": 5.6
+          },
+          "year": 2023
+        }
+      },
+      "entry": 29,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-2013-7s",
+      "name": "JSC 2013-7S",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.0,
+            "FL3": 6.5,
+            "KS2": 5.4,
+            "KY1": 5.9,
+            "MD1": 7.7,
+            "MO1": 6.2,
+            "MS1": 4.8,
+            "NC1": 5.3,
+            "OK3": 4.7,
+            "TN1": 5.9,
+            "VA1": 7.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.8,
+            "FL3": 7.1,
+            "IN1": 6.8,
+            "KS2": 7.4,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.8,
+            "OK1": 6.3,
+            "OK3": 6.0,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 6.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.2,
+            "IN1": 6.2,
+            "AR1": 6.4,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 30,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-2013-8s",
+      "name": "JSC 2013-8S",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.9,
+            "AR1": 5.8,
+            "FL3": 6.2,
+            "KS2": 5.5,
+            "KY1": 6.0,
+            "MD1": 7.4,
+            "MO1": 6.1,
+            "MS1": 4.8,
+            "NC1": 5.5,
+            "OK3": 4.8,
+            "TN1": 6.3,
+            "VA1": 6.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.3,
+            "FL3": 6.6,
+            "IN1": 6.8,
+            "KS2": 6.6,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.1,
+            "OK3": 5.9,
+            "TN1": 6.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 5.8
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.2,
+            "AR1": 6.0,
+            "KS2": 5.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 31,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-77v",
+      "name": "JSC 77V",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 6.3,
+            "FL3": 6.0,
+            "KS2": 5.5,
+            "KY1": 6.5,
+            "MD1": 7.1,
+            "MO1": 6.1,
+            "MS1": 5.2,
+            "NC1": 5.8,
+            "OK3": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 6.7,
+            "FL3": 7.0,
+            "IN1": 6.4,
+            "KS2": 5.5,
+            "MO1": 4.7,
+            "MS1": 5.7,
+            "NC1": 6.0,
+            "OK1": 5.8,
+            "OK3": 5.8,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.0,
+            "NC1": 6.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "VA1": 5.7,
+            "IN1": 6.3,
+            "AR1": 6.4,
+            "KS2": 5.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 15,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "jsc-80v",
+      "name": "JSC 80V",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.5,
+            "AR1": 6.0,
+            "FL3": 6.5,
+            "KS2": 5.9,
+            "KY1": 6.0,
+            "MD1": 6.2,
+            "MO1": 4.9,
+            "MS1": 5.2,
+            "NC1": 6.3,
+            "OK3": 5.2,
+            "TN1": 6.2,
+            "VA1": 7.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "FL3": 6.8,
+            "IN1": 5.6,
+            "KS2": 4.8,
+            "MO1": 6.0,
+            "MS1": 6.0,
+            "NC1": 5.7,
+            "OK1": 5.3,
+            "OK3": 5.2,
+            "TN1": 6.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {
+            "IN1": 5.7,
+            "NC1": 6.7
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 6.5,
+            "IN1": 5.9,
+            "AR1": 6.2,
+            "KS2": 5.5
+          },
+          "year": 2023
+        }
+      },
+      "entry": 16,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "latitude-36",
+      "name": "Latitude 36",
+      "aliases": [
+        "LATITUDE 36"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.7,
+            "FL3": 6.5,
+            "KS2": 5.9,
+            "KY1": 6.5,
+            "MD1": 7.4,
+            "MO1": 7.0,
+            "MS1": 4.9,
+            "NC1": 6.5,
+            "OK3": 5.3,
+            "TN1": 6.3,
+            "VA1": 7.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.2,
+            "FL3": 7.2,
+            "IN1": 6.9,
+            "KS2": 5.3,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.1,
+            "OK1": 6.2,
+            "OK3": 6.1,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 8.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.2,
+            "IN1": 6.6,
+            "AR1": 6.9,
+            "KS2": 5.7
+          },
+          "year": 2023
+        }
+      },
+      "entry": 5,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "monaco",
+      "name": "Monaco",
+      "aliases": [
+        "MONACO"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.2,
+            "FL3": 6.4,
+            "KS2": 5.6,
+            "KY1": 6.4,
+            "MD1": 7.5,
+            "MO1": 5.6,
+            "MS1": 5.1,
+            "NC1": 5.9,
+            "OK3": 4.7,
+            "TN1": 5.9,
+            "VA1": 7.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.6,
+            "KS2": 6.7,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.1,
+            "TN1": 5.5
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 6.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.4,
+            "AR1": 6.4,
+            "KS2": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 35,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "monza",
+      "name": "Monza",
+      "aliases": [
+        "MONZA (JSC 2013-12S)",
+        "MONZA",
+        "JSC 2013-12S"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 5.7,
+            "FL3": 6.4,
+            "KS2": 5.8,
+            "KY1": 6.2,
+            "MD1": 7.5,
+            "MO1": 6.4,
+            "MS1": 5.0,
+            "NC1": 5.9,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 6.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "FL3": 6.7,
+            "IN1": 6.3,
+            "KS2": 6.4,
+            "MO1": 5.0,
+            "MS1": 6.0,
+            "NC1": 6.6,
+            "OK1": 6.2,
+            "OK3": 6.0,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.2,
+            "NC1": 6.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.2,
+            "AR1": 6.0,
+            "KS2": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 33,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "msb-1026",
+      "name": "MSB-1026",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.6,
+            "FL3": 6.4,
+            "KS2": 4.5,
+            "KY1": 6.3,
+            "MD1": 6.5,
+            "MO1": 4.3,
+            "MS1": 5.3,
+            "NC1": 4.6,
+            "OK3": 4.6,
+            "TN1": 6.4,
+            "VA1": 6.6
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 7.2,
+            "FL3": 8.1,
+            "IN1": 7.3,
+            "KS2": 7.6,
+            "MO1": 3.7,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.8,
+            "OK3": 6.4,
+            "TN1": 7.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.2,
+          "bySite": {
+            "IN1": 4.8,
+            "NC1": 6.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.2,
+            "IN1": 6.5,
+            "AR1": 7.3,
+            "KS2": 4.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 11,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "msb-1042",
+      "name": "MSB-1042",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.8,
+            "FL3": 5.6,
+            "KS2": 5.9,
+            "KY1": 6.3,
+            "MD1": 6.6,
+            "MO1": 6.8,
+            "MS1": 4.9,
+            "NC1": 5.7,
+            "OK3": 5.2,
+            "TN1": 6.3,
+            "VA1": 7.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.1,
+            "KS2": 5.5,
+            "MO1": 6.3,
+            "MS1": 5.3,
+            "NC1": 5.8,
+            "OK1": 6.4,
+            "OK3": 6.4,
+            "TN1": 5.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 6.3,
+            "NC1": 8.7
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.6,
+            "AR1": 7.1,
+            "KS2": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 14,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "msb-1048",
+      "name": "MSB-1048",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.8,
+            "FL3": 6.0,
+            "KS2": 4.8,
+            "KY1": 6.2,
+            "MD1": 6.3,
+            "MO1": 6.1,
+            "MS1": 5.0,
+            "NC1": 5.0,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 7.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.0,
+            "FL3": 7.3,
+            "IN1": 7.4,
+            "KS2": 6.9,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.4,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 7.8
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.7,
+            "IN1": 6.2,
+            "AR1": 6.6,
+            "KS2": 5.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 9,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "msb-1050",
+      "name": "MSB-1050",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.8,
+            "FL3": 6.5,
+            "KS2": 4.0,
+            "KY1": 6.4,
+            "MD1": 5.5,
+            "MO1": 6.3,
+            "MS1": 5.7,
+            "NC1": 4.7,
+            "OK3": 3.7,
+            "TN1": 6.2,
+            "VA1": 6.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 6.9,
+            "AR1": 6.5,
+            "FL3": 8.4,
+            "IN1": 7.6,
+            "KS2": 7.5,
+            "MO1": 5.0,
+            "MS1": 6.3,
+            "NC1": 7.2,
+            "OK1": 6.8,
+            "OK3": 6.6,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.1,
+            "NC1": 7.0
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 5.9,
+            "IN1": 6.3,
+            "AR1": 7.5,
+            "KS2": 4.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 12,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "msb-1075",
+      "name": "MSB-1075",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 5.3,
+            "FL3": 6.2,
+            "KS2": 3.3,
+            "KY1": 5.7,
+            "MD1": 4.4,
+            "MO1": 2.9,
+            "MS1": 5.2,
+            "NC1": 3.5,
+            "OK3": 3.7,
+            "TN1": 6.0,
+            "VA1": 5.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.2,
+            "AR1": 6.8,
+            "FL3": 7.6,
+            "IN1": 7.3,
+            "KS2": 8.8,
+            "MO1": 2.3,
+            "MS1": 6.3,
+            "NC1": 6.9,
+            "OK1": 6.7,
+            "OK3": 6.6,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.4,
+            "NC1": 6.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "VA1": 4.1,
+            "IN1": 5.2,
+            "AR1": 5.9,
+            "KS2": 3.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 10,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "okc1406",
+      "name": "OKC1406",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.9,
+            "AR1": 5.9,
+            "FL3": 6.4,
+            "KS2": 5.6,
+            "KY1": 5.7,
+            "MD1": 6.4,
+            "MO1": 5.8,
+            "MS1": 4.8,
+            "NC1": 6.0,
+            "OK3": 4.9,
+            "TN1": 6.3,
+            "VA1": 6.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "FL3": 6.8,
+            "IN1": 6.6,
+            "KS2": 5.2,
+            "MO1": 7.3,
+            "MS1": 6.0,
+            "NC1": 6.1,
+            "OK1": 5.5,
+            "OK3": 5.7,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 7.0,
+            "NC1": 6.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 6.6,
+            "IN1": 6.2,
+            "AR1": 6.4,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 4,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "okc1666",
+      "name": "OKC1666",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 4.8,
+            "AR1": 5.2,
+            "FL3": 5.8,
+            "KS2": 6.3,
+            "KY1": 5.4,
+            "MD1": 5.6,
+            "MO1": 4.7,
+            "MS1": 4.8,
+            "NC1": 4.5,
+            "OK3": 4.9,
+            "TN1": 6.3,
+            "VA1": 7.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 5.7,
+            "FL3": 6.2,
+            "IN1": 5.2,
+            "KS2": 4.1,
+            "MO1": 6.0,
+            "MS1": 5.3,
+            "NC1": 5.3,
+            "OK1": 6.0,
+            "OK3": 6.1,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 6.4,
+            "NC1": 8.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 5.8,
+            "AR1": 6.1,
+            "KS2": 5.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 3,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "okc1682",
+      "name": "OKC1682",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 4.4,
+            "AR1": 6.1,
+            "FL3": 5.8,
+            "KS2": 5.3,
+            "KY1": 6.1,
+            "MD1": 6.8,
+            "MO1": 5.9,
+            "MS1": 4.7,
+            "NC1": 4.6,
+            "OK3": 5.2,
+            "TN1": 6.1,
+            "VA1": 6.5
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.8,
+            "FL3": 7.3,
+            "IN1": 7.1,
+            "KS2": 6.2,
+            "MO1": 6.3,
+            "MS1": 6.0,
+            "NC1": 5.9,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 7.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 5.7,
+            "IN1": 5.9,
+            "AR1": 6.4,
+            "KS2": 5.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 8,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "okc1873",
+      "name": "OKC1873",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "FL3": 6.7,
+            "KS2": 5.2,
+            "KY1": 6.4,
+            "MD1": 6.1,
+            "MO1": 5.5,
+            "MS1": 4.9,
+            "NC1": 5.0,
+            "OK3": 5.0,
+            "TN1": 6.1,
+            "VA1": 6.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.3,
+            "KS2": 5.6,
+            "MO1": 5.0,
+            "MS1": 5.7,
+            "NC1": 6.4,
+            "OK1": 6.0,
+            "OK3": 6.1,
+            "TN1": 5.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.3,
+            "AR1": 7.4,
+            "KS2": 5.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 7,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "okc1876",
+      "name": "OKC1876",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 7.0,
+            "FL3": 6.4,
+            "KS2": 5.0,
+            "KY1": 6.3,
+            "MD1": 7.1,
+            "MO1": 6.2,
+            "MS1": 5.4,
+            "NC1": 5.4,
+            "OK3": 5.0,
+            "TN1": 6.0,
+            "VA1": 7.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.2,
+            "AR1": 7.5,
+            "FL3": 7.1,
+            "IN1": 8.1,
+            "KS2": 6.3,
+            "MO1": 5.7,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.6,
+            "OK3": 6.6,
+            "TN1": 4.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 4.9,
+            "NC1": 6.8
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.7,
+            "AR1": 7.5,
+            "KS2": 5.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 6,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "oks2015-1",
+      "name": "OKS2015-1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 5.8,
+            "FL3": 5.9,
+            "KS2": 5.3,
+            "KY1": 6.1,
+            "MD1": 6.4,
+            "MO1": 4.9,
+            "MS1": 4.7,
+            "NC1": 5.5,
+            "OK3": 4.5,
+            "TN1": 6.4,
+            "VA1": 6.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.7,
+            "FL3": 6.5,
+            "IN1": 6.0,
+            "KS2": 6.1,
+            "MO1": 5.7,
+            "MS1": 5.0,
+            "NC1": 6.2,
+            "OK1": 5.8,
+            "OK3": 5.4,
+            "TN1": 5.5
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 5.2,
+            "NC1": 6.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.0,
+            "AR1": 6.0,
+            "KS2": 5.5
+          },
+          "year": 2023
+        }
+      },
+      "entry": 26,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "oks2015-3",
+      "name": "OKS2015-3",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 5.9,
+            "FL3": 6.0,
+            "KS2": 5.5,
+            "KY1": 6.0,
+            "MD1": 7.2,
+            "MO1": 5.6,
+            "MS1": 4.8,
+            "NC1": 5.9,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 7.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "FL3": 6.6,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.7,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "OK3": 6.2,
+            "TN1": 6.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 5.7
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.1,
+            "AR1": 5.8,
+            "KS2": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 27,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "oks2015-7",
+      "name": "OKS2015-7",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.6,
+            "FL3": 6.3,
+            "KS2": 4.9,
+            "KY1": 5.9,
+            "MD1": 6.7,
+            "MO1": 5.5,
+            "MS1": 4.7,
+            "NC1": 5.6,
+            "OK3": 4.8,
+            "TN1": 6.2,
+            "VA1": 6.6
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 6.3,
+            "FL3": 7.0,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.7,
+            "MS1": 6.0,
+            "NC1": 6.1,
+            "OK1": 6.1,
+            "OK3": 5.9,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.7,
+            "NC1": 5.7
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 6.8,
+            "IN1": 6.0,
+            "AR1": 6.0,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 28,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "pst-r6tm",
+      "name": "PST-R6TM",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "AL1": 4.3,
+            "AR1": 5.5,
+            "FL3": 5.8,
+            "KS2": 4.8,
+            "KY1": 5.6,
+            "MD1": 6.3,
+            "MO1": 3.3,
+            "MS1": 4.5,
+            "NC1": 4.6,
+            "OK3": 4.6,
+            "TN1": 6.1,
+            "VA1": 6.5
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.0,
+            "FL3": 6.1,
+            "IN1": 6.2,
+            "KS2": 5.3,
+            "MO1": 3.7,
+            "MS1": 5.3,
+            "NC1": 6.2,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 4.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 5.4,
+            "AR1": 5.4,
+            "KS2": 5.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 23,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "riviera",
+      "name": "Riviera",
+      "aliases": [
+        "RIVIERA"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.9,
+            "FL3": 5.9,
+            "KS2": 5.9,
+            "KY1": 6.7,
+            "MD1": 7.2,
+            "MO1": 6.0,
+            "MS1": 4.8,
+            "NC1": 6.3,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 6.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.8,
+            "FL3": 6.1,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.1,
+            "OK3": 6.0,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.0
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.5,
+            "AR1": 6.3,
+            "KS2": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 34,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "sun-queen",
+      "name": "Sun Queen",
+      "aliases": [
+        "SUN QUEEN (PST-R6MM)",
+        "SUN QUEEN",
+        "PST-R6MM"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 5.3,
+            "FL3": 5.8,
+            "KS2": 5.1,
+            "KY1": 5.8,
+            "MD1": 6.3,
+            "MO1": 4.1,
+            "MS1": 4.6,
+            "NC1": 4.5,
+            "OK3": 4.6,
+            "TN1": 6.1,
+            "VA1": 6.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.3,
+            "FL3": 6.1,
+            "IN1": 6.2,
+            "KS2": 5.1,
+            "MO1": 3.7,
+            "MS1": 5.3,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 4.9,
+          "bySite": {
+            "IN1": 5.3,
+            "NC1": 4.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 6.8,
+            "IN1": 5.5,
+            "AR1": 5.3,
+            "KS2": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 24,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "tahoma-31",
+      "name": "Tahoma 31",
+      "aliases": [
+        "TAHOMA 31"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.9,
+            "FL3": 6.5,
+            "KS2": 5.3,
+            "KY1": 6.4,
+            "MD1": 7.7,
+            "MO1": 7.5,
+            "MS1": 5.3,
+            "NC1": 6.5,
+            "OK3": 5.4,
+            "TN1": 6.1,
+            "VA1": 7.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.5,
+            "FL3": 7.4,
+            "IN1": 8.0,
+            "KS2": 7.3,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.1,
+            "OK1": 6.4,
+            "OK3": 6.6,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 8.3
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 6.6,
+            "IN1": 6.6,
+            "AR1": 7.4,
+            "KS2": 5.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 17,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "tiftuf",
+      "name": "Tiftuf",
+      "aliases": [
+        "TIFTUF"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 7.1,
+            "FL3": 6.8,
+            "KS2": 5.9,
+            "KY1": 6.6,
+            "MD1": 7.5,
+            "MO1": 7.0,
+            "MS1": 5.2,
+            "NC1": 6.9,
+            "OK3": 5.2,
+            "TN1": 6.4,
+            "VA1": 7.5
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 7.2,
+            "FL3": 6.7,
+            "IN1": 6.4,
+            "KS2": 5.9,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.1,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 8.2
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 6.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "VA1": 7.5,
+            "IN1": 6.9,
+            "AR1": 7.5,
+            "KS2": 5.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 2,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    },
+    {
+      "id": "tifway",
+      "name": "Tifway",
+      "aliases": [
+        "TIFWAY"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 7.0,
+            "FL3": 6.7,
+            "KS2": 5.2,
+            "KY1": 6.2,
+            "MD1": 7.0,
+            "MO1": 5.4,
+            "MS1": 5.1,
+            "NC1": 5.9,
+            "OK3": 4.9,
+            "TN1": 6.1,
+            "VA1": 7.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.8,
+            "FL3": 7.9,
+            "IN1": 7.0,
+            "KS2": 6.7,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "OK3": 6.3,
+            "TN1": 4.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 8.5
+          },
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.3,
+            "IN1": 6.3,
+            "AR1": 7.1,
+            "KS2": 5.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 1,
+      "species": "bermudagrass",
+      "trial": "bg19"
+    }
+  ]
+}

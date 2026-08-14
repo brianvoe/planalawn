@@ -38,9 +38,12 @@ export function ntepMetaForSpecies(speciesId = DEFAULT_SPECIES): NtepMeta | null
   return packsBySpecies[speciesId]?.meta || null
 }
 
-const cultivarList = cultivarsForSpecies()
+/** Warm lawns score bermuda; cool and mixed/transition score tall fescue. */
+export function defaultSpeciesId(grassType: string | null | undefined): string {
+  return grassType === 'warm' ? 'bermudagrass' : DEFAULT_SPECIES
+}
 
-export function buildCultivarIndex(list: Cultivar[] = cultivarList): Record<string, Cultivar> {
+export function buildCultivarIndex(list: Cultivar[]): Record<string, Cultivar> {
   const index: Record<string, Cultivar> = {}
   list.forEach((c) => {
     index[c.id] = c
@@ -52,8 +55,21 @@ export function buildCultivarIndex(list: Cultivar[] = cultivarList): Record<stri
   return index
 }
 
+const indexesBySpecies: Record<string, Record<string, Cultivar>> = {}
+loadedSpecies.forEach((s) => {
+  indexesBySpecies[s.id] = buildCultivarIndex(cultivarsForSpecies(s.id))
+})
+
+export function indexForSpecies(speciesId = DEFAULT_SPECIES): Record<string, Cultivar> {
+  return indexesBySpecies[speciesId] || buildCultivarIndex(cultivarsForSpecies(speciesId))
+}
+
+const cultivarList = cultivarsForSpecies()
+const everyCultivar = loadedSpecies.flatMap((s) => cultivarsForSpecies(s.id))
+
 export const ntepMeta = ntepMetaForSpecies()
 export const allCultivars = cultivarList
+export const cultivarCount = everyCultivar.length
 export const curatedBlendList = curatedBlends as Blend[]
 export const speciesList = speciesListData
 export const ntepSites = sites as Record<string, NtepSite>
@@ -69,7 +85,7 @@ export const NTEP_METRICS = [
 export type NtepMetricKey = (typeof NTEP_METRICS)[number]['key']
 
 const EXPERIMENTAL_ENTRY =
-  /(ppg-tf|pst-|dlfps-|ast\d|atf\d|rad-tf|nai-|k18-|jt[\s-]\d|nt-3|se5star|setfm|og-walk|^3b2$|^5lss$|bar[\s-]?fa)/i
+  /(ppg-tf|pst-|dlfps-|ast\d|atf\d|rad-tf|nai-|k18-|jt[\s-]\d|nt-3|se5star|setfm|og-walk|^3b2$|^5lss$|bar[\s-]?fa|^fb[\s-]?\d|^jsc[\s-]|msb-|okc\d|oks\d)/i
 
 /** Named grasses you can ask a dealer for — not experimental entry codes. */
 export function isNamedCultivar(cultivar: Pick<Cultivar, 'id' | 'name'>): boolean {
@@ -109,6 +125,6 @@ export function searchCultivars(query: string, list: Cultivar[] = cultivarList):
   })
 }
 
-export function getCultivarById(id: string, index = buildCultivarIndex()): Cultivar | null {
+export function getCultivarById(id: string, index = indexForSpecies()): Cultivar | null {
   return index[normalizeKey(id)] || index[id] || null
 }

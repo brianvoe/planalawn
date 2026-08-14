@@ -157,10 +157,11 @@ def split_row_values(line: str, expected: int, has_entry: bool):
     return {"name": name, "entry": entry, "values": [float(v) for v in values]}
 
 
-def pages_for_table(doc, table_num: int, title_hint: str = ""):
+def pages_for_table(doc, table_num: int | str, title_hint: str = ""):
     pages = []
     start = None
-    pat = re.compile(rf"TABLE\s+{table_num}[A-Z]?\.", re.I)
+    label = str(table_num)
+    pat = re.compile(rf"TABLE\s+{re.escape(label)}\.", re.I)
     hint = title_hint.upper()
     for i, page in enumerate(doc):
         text = page.get_text()
@@ -454,6 +455,16 @@ TABLE_LAYOUT = {
         ("droughtQuality", 15, "DROUGHT"),
         ("lpiGroup1", 1, "LPI"),
     ],
+    # 2019 National Bermudagrass Test final report (bg19_24-11f). "A" tables are
+    # seeded + vegetative together. Spring dead spot fills the disease slot
+    # (9 = no disease), same scale as tall fescue brown patch.
+    "bermudagrass": [
+        ("transitionQuality", "15A", "SCHEDULE B"),
+        ("geneticColor", "32A", "GENETIC COLOR"),
+        ("brownPatch", "50A", "SPRING DEAD SPOT"),
+        ("droughtQuality", "23A", "DROUGHT"),
+        ("lpiGroup1", "1A", "LPI"),
+    ],
 }
 
 
@@ -489,8 +500,7 @@ SPECIES_CATALOG = {
         "id": "bermudagrass",
         "label": "Bermudagrass",
         "season": "warm",
-        "ntepTrials": [],
-        "status": "schema_ready",
+        "ntepTrials": ["bg19"],
     },
 }
 
@@ -521,6 +531,24 @@ NTEP_SITES = {
     # Guelph is in Ontario, so `state` holds a province and country is explicit.
     # Distance ranking still works; only the label needs the distinction.
     "ON1": {"name": "Guelph, ON", "state": "ON", "country": "CA", "climateBand": "cool", "lat": 43.53, "lon": -80.23},
+    # 2019 National Bermudagrass Test locations (bg19). Codes already used by
+    # the tall fescue trial keep their existing coords.
+    "AL1": {"name": "Auburn, AL", "state": "AL", "climateBand": "warm", "lat": 32.61, "lon": -85.48},
+    "AR1": {"name": "Fayetteville, AR", "state": "AR", "climateBand": "transition", "lat": 36.06, "lon": -94.16},
+    "CA3": {"name": "Riverside, CA", "state": "CA", "climateBand": "warm", "lat": 33.95, "lon": -117.40},
+    "FL3": {"name": "Jay, FL", "state": "FL", "climateBand": "warm", "lat": 30.95, "lon": -87.15},
+    "FL5": {"name": "Fort Lauderdale, FL", "state": "FL", "climateBand": "warm", "lat": 26.12, "lon": -80.14},
+    "KS2": {"name": "Wichita, KS", "state": "KS", "climateBand": "transition", "lat": 37.69, "lon": -97.34},
+    "KY1": {"name": "Lexington, KY", "state": "KY", "climateBand": "transition", "lat": 38.04, "lon": -84.50},
+    "MO1": {"name": "Columbia, MO", "state": "MO", "climateBand": "transition", "lat": 38.95, "lon": -92.33},
+    "NM1": {"name": "Las Cruces, NM", "state": "NM", "climateBand": "warm", "lat": 32.32, "lon": -106.76},
+    "NM2": {"name": "Las Cruces, NM (salinity)", "state": "NM", "climateBand": "warm", "lat": 32.32, "lon": -106.76},
+    "NC2": {"name": "Raleigh, NC", "state": "NC", "climateBand": "transition", "lat": 35.78, "lon": -78.64},
+    "OK2": {"name": "Stillwater, OK (divot)", "state": "OK", "climateBand": "transition", "lat": 36.12, "lon": -97.06},
+    "OK3": {"name": "Stillwater, OK (1.5 in)", "state": "OK", "climateBand": "transition", "lat": 36.12, "lon": -97.06},
+    "TN2": {"name": "Knoxville, TN (traffic)", "state": "TN", "climateBand": "transition", "lat": 35.96, "lon": -83.92},
+    "TX2": {"name": "College Station, TX (drought)", "state": "TX", "climateBand": "warm", "lat": 30.63, "lon": -96.33},
+    "TX3": {"name": "College Station, TX (shade)", "state": "TX", "climateBand": "warm", "lat": 30.63, "lon": -96.33},
 }
 
 

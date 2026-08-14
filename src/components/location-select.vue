@@ -23,17 +23,24 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.location-select {
+  width: 100%;
+}
+</style>
+
 <template>
-  <SlimSelect
-    class="location-select"
-    v-model="metroId"
-    :data="options"
-    :settings="{
-      showSearch: true,
-      searchPlaceholder: 'Search cities…',
-      placeholderText: 'Choose a city',
-      allowDeselect: false,
-    }"
-    aria-label="City"
-  />
+  <div class="location-select">
+    <SlimSelect
+      v-model="metroId"
+      :data="options"
+      :settings="{
+        showSearch: true,
+        searchPlaceholder: 'Search cities…',
+        placeholderText: 'Choose a city',
+        allowDeselect: false,
+      }"
+      aria-label="City"
+    />
+  </div>
 </template>

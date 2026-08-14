@@ -13,6 +13,7 @@ export const CHANNEL_LABELS = {
   retail: 'Box store',
   pro: 'Pro shop',
   specialty: 'Specialty seed',
+  amazon: 'Amazon',
 } as const
 
 export function fitTone(score: number | null | undefined): string {

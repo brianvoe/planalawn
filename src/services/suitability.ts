@@ -84,6 +84,11 @@ export function coverageLabel(coverage: Coverage | null | undefined): string {
   return `${coverage.factors} of ${coverage.totalFactors} factors`
 }
 
+/** Regional quality tables cover transition and warm-season trial sites. */
+function usesRegionalQuality(climateId: string | null | undefined): boolean {
+  return climateId === 'transition' || climateId === 'warm'
+}
+
 const FIT_TIE_BAND = 0.15
 
 /**
@@ -115,12 +120,14 @@ export function scoreCultivarForLocation(
   const climate = resolveUserClimate(userLocation)
 
   const parts: ScorePart[] = []
+  const regional = usesRegionalQuality(climate?.id)
+
   let nearestScore: number | null = null
   if (nearest && metrics.transitionQuality?.bySite?.[nearest.code] != null) {
     nearestScore = metrics.transitionQuality.bySite[nearest.code]
-  } else if (metrics.knoxvilleQuality?.mean != null && climate?.id === 'transition') {
+  } else if (metrics.knoxvilleQuality?.mean != null && regional) {
     nearestScore = metrics.knoxvilleQuality.mean
-  } else if (metrics.transitionQuality?.mean != null && climate?.id === 'transition') {
+  } else if (metrics.transitionQuality?.mean != null && regional) {
     nearestScore = metrics.transitionQuality.mean
   } else if (metrics.nationalMeanQuality?.mean != null) {
     nearestScore = metrics.nationalMeanQuality.mean
@@ -128,7 +135,7 @@ export function scoreCultivarForLocation(
   if (nearestScore != null) parts.push({ key: 'nearest', weight: 0.35, value: nearestScore })
 
   let regionScore: number | null = null
-  if (climate?.id === 'transition' && metrics.transitionQuality?.mean != null) {
+  if (regional && metrics.transitionQuality?.mean != null) {
     regionScore = metrics.transitionQuality.mean
   } else if (metrics.nationalMeanQuality?.mean != null) {
     regionScore = metrics.nationalMeanQuality.mean

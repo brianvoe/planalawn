@@ -132,5 +132,117 @@
     "climateBand": "cool",
     "lat": 43.53,
     "lon": -80.23
+  },
+  "AL1": {
+    "name": "Auburn, AL",
+    "state": "AL",
+    "climateBand": "warm",
+    "lat": 32.61,
+    "lon": -85.48
+  },
+  "AR1": {
+    "name": "Fayetteville, AR",
+    "state": "AR",
+    "climateBand": "transition",
+    "lat": 36.06,
+    "lon": -94.16
+  },
+  "CA3": {
+    "name": "Riverside, CA",
+    "state": "CA",
+    "climateBand": "warm",
+    "lat": 33.95,
+    "lon": -117.4
+  },
+  "FL3": {
+    "name": "Jay, FL",
+    "state": "FL",
+    "climateBand": "warm",
+    "lat": 30.95,
+    "lon": -87.15
+  },
+  "FL5": {
+    "name": "Fort Lauderdale, FL",
+    "state": "FL",
+    "climateBand": "warm",
+    "lat": 26.12,
+    "lon": -80.14
+  },
+  "KS2": {
+    "name": "Wichita, KS",
+    "state": "KS",
+    "climateBand": "transition",
+    "lat": 37.69,
+    "lon": -97.34
+  },
+  "KY1": {
+    "name": "Lexington, KY",
+    "state": "KY",
+    "climateBand": "transition",
+    "lat": 38.04,
+    "lon": -84.5
+  },
+  "MO1": {
+    "name": "Columbia, MO",
+    "state": "MO",
+    "climateBand": "transition",
+    "lat": 38.95,
+    "lon": -92.33
+  },
+  "NM1": {
+    "name": "Las Cruces, NM",
+    "state": "NM",
+    "climateBand": "warm",
+    "lat": 32.32,
+    "lon": -106.76
+  },
+  "NM2": {
+    "name": "Las Cruces, NM (salinity)",
+    "state": "NM",
+    "climateBand": "warm",
+    "lat": 32.32,
+    "lon": -106.76
+  },
+  "NC2": {
+    "name": "Raleigh, NC",
+    "state": "NC",
+    "climateBand": "transition",
+    "lat": 35.78,
+    "lon": -78.64
+  },
+  "OK2": {
+    "name": "Stillwater, OK (divot)",
+    "state": "OK",
+    "climateBand": "transition",
+    "lat": 36.12,
+    "lon": -97.06
+  },
+  "OK3": {
+    "name": "Stillwater, OK (1.5 in)",
+    "state": "OK",
+    "climateBand": "transition",
+    "lat": 36.12,
+    "lon": -97.06
+  },
+  "TN2": {
+    "name": "Knoxville, TN (traffic)",
+    "state": "TN",
+    "climateBand": "transition",
+    "lat": 35.96,
+    "lon": -83.92
+  },
+  "TX2": {
+    "name": "College Station, TX (drought)",
+    "state": "TX",
+    "climateBand": "warm",
+    "lat": 30.63,
+    "lon": -96.33
+  },
+  "TX3": {
+    "name": "College Station, TX (shade)",
+    "state": "TX",
+    "climateBand": "warm",
+    "lat": 30.63,
+    "lon": -96.33
   }
 }

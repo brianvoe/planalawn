@@ -1,0 +1,2645 @@
+{
+  "meta": {
+    "species": "bermudagrass",
+    "trial": "bg19",
+    "year": 2023,
+    "sourcePdf": "bg19_24-11f.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, color, disease, drought)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "AL1",
+        "AR1",
+        "FL3",
+        "KS2",
+        "KY1",
+        "MD1",
+        "MO1",
+        "MS1",
+        "NC1",
+        "OK3",
+        "TN1",
+        "VA1"
+      ],
+      "rows": [
+        {
+          "name": "TIFTUF",
+          "base": "TIFTUF",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 7.1,
+            "FL3": 6.8,
+            "KS2": 5.9,
+            "KY1": 6.6,
+            "MD1": 7.5,
+            "MO1": 7.0,
+            "MS1": 5.2,
+            "NC1": 6.9,
+            "OK3": 5.2,
+            "TN1": 6.4,
+            "VA1": 7.5
+          }
+        },
+        {
+          "name": "LATITUDE 36",
+          "base": "LATITUDE 36",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.7,
+            "FL3": 6.5,
+            "KS2": 5.9,
+            "KY1": 6.5,
+            "MD1": 7.4,
+            "MO1": 7.0,
+            "MS1": 4.9,
+            "NC1": 6.5,
+            "OK3": 5.3,
+            "TN1": 6.3,
+            "VA1": 7.7
+          }
+        },
+        {
+          "name": "FB 1628",
+          "base": "FB 1628",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.5,
+            "AR1": 6.8,
+            "FL3": 6.7,
+            "KS2": 5.1,
+            "KY1": 6.6,
+            "MD1": 7.4,
+            "MO1": 6.5,
+            "MS1": 5.6,
+            "NC1": 6.1,
+            "OK3": 5.2,
+            "TN1": 6.6,
+            "VA1": 7.2
+          }
+        },
+        {
+          "name": "TAHOMA 31",
+          "base": "TAHOMA 31",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.9,
+            "FL3": 6.5,
+            "KS2": 5.3,
+            "KY1": 6.4,
+            "MD1": 7.7,
+            "MO1": 7.5,
+            "MS1": 5.3,
+            "NC1": 6.5,
+            "OK3": 5.4,
+            "TN1": 6.1,
+            "VA1": 7.4
+          }
+        },
+        {
+          "name": "MSB-1042",
+          "base": "MSB-1042",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.8,
+            "FL3": 5.6,
+            "KS2": 5.9,
+            "KY1": 6.3,
+            "MD1": 6.6,
+            "MO1": 6.8,
+            "MS1": 4.9,
+            "NC1": 5.7,
+            "OK3": 5.2,
+            "TN1": 6.3,
+            "VA1": 7.8
+          }
+        },
+        {
+          "name": "CELEBRATION HYBRID (MSB-1017)",
+          "base": "CELEBRATION HYBRID",
+          "code": "MSB-1017",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.1,
+            "FL3": 6.3,
+            "KS2": 4.9,
+            "KY1": 6.3,
+            "MD1": 7.0,
+            "MO1": 6.7,
+            "MS1": 5.2,
+            "NC1": 5.1,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 7.4
+          }
+        },
+        {
+          "name": "OKC1876",
+          "base": "OKC1876",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 7.0,
+            "FL3": 6.4,
+            "KS2": 5.0,
+            "KY1": 6.3,
+            "MD1": 7.1,
+            "MO1": 6.2,
+            "MS1": 5.4,
+            "NC1": 5.4,
+            "OK3": 5.0,
+            "TN1": 6.0,
+            "VA1": 7.4
+          }
+        },
+        {
+          "name": "TIFWAY",
+          "base": "TIFWAY",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 7.0,
+            "FL3": 6.7,
+            "KS2": 5.2,
+            "KY1": 6.2,
+            "MD1": 7.0,
+            "MO1": 5.4,
+            "MS1": 5.1,
+            "NC1": 5.9,
+            "OK3": 4.9,
+            "TN1": 6.1,
+            "VA1": 7.2
+          }
+        },
+        {
+          "name": "ASTRO",
+          "base": "ASTRO",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.3,
+            "FL3": 6.8,
+            "KS2": 5.4,
+            "KY1": 5.7,
+            "MD1": 6.1,
+            "MO1": 6.0,
+            "MS1": 4.9,
+            "NC1": 5.8,
+            "OK3": 5.2,
+            "TN1": 6.4,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "JSC 80V",
+          "base": "JSC 80V",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.5,
+            "AR1": 6.0,
+            "FL3": 6.5,
+            "KS2": 5.9,
+            "KY1": 6.0,
+            "MD1": 6.2,
+            "MO1": 4.9,
+            "MS1": 5.2,
+            "NC1": 6.3,
+            "OK3": 5.2,
+            "TN1": 6.2,
+            "VA1": 7.4
+          }
+        },
+        {
+          "name": "JSC 2013-10S",
+          "base": "JSC 2013-10S",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 6.1,
+            "FL3": 6.4,
+            "KS2": 5.9,
+            "KY1": 6.2,
+            "MD1": 7.3,
+            "MO1": 6.0,
+            "MS1": 4.8,
+            "NC1": 6.3,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.9
+          }
+        },
+        {
+          "name": "RIVIERA",
+          "base": "RIVIERA",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.9,
+            "FL3": 5.9,
+            "KS2": 5.9,
+            "KY1": 6.7,
+            "MD1": 7.2,
+            "MO1": 6.0,
+            "MS1": 4.8,
+            "NC1": 6.3,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "JSC 77V",
+          "base": "JSC 77V",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 6.3,
+            "FL3": 6.0,
+            "KS2": 5.5,
+            "KY1": 6.5,
+            "MD1": 7.1,
+            "MO1": 6.1,
+            "MS1": 5.2,
+            "NC1": 5.8,
+            "OK3": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.7
+          }
+        },
+        {
+          "name": "MONACO",
+          "base": "MONACO",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.2,
+            "FL3": 6.4,
+            "KS2": 5.6,
+            "KY1": 6.4,
+            "MD1": 7.5,
+            "MO1": 5.6,
+            "MS1": 5.1,
+            "NC1": 5.9,
+            "OK3": 4.7,
+            "TN1": 5.9,
+            "VA1": 7.2
+          }
+        },
+        {
+          "name": "MONZA (JSC 2013-12S)",
+          "base": "MONZA",
+          "code": "JSC 2013-12S",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 5.7,
+            "FL3": 6.4,
+            "KS2": 5.8,
+            "KY1": 6.2,
+            "MD1": 7.5,
+            "MO1": 6.4,
+            "MS1": 5.0,
+            "NC1": 5.9,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "OKC1406",
+          "base": "OKC1406",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.9,
+            "AR1": 5.9,
+            "FL3": 6.4,
+            "KS2": 5.6,
+            "KY1": 5.7,
+            "MD1": 6.4,
+            "MO1": 5.8,
+            "MS1": 4.8,
+            "NC1": 6.0,
+            "OK3": 4.9,
+            "TN1": 6.3,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "JSC 2013-7S",
+          "base": "JSC 2013-7S",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.0,
+            "FL3": 6.5,
+            "KS2": 5.4,
+            "KY1": 5.9,
+            "MD1": 7.7,
+            "MO1": 6.2,
+            "MS1": 4.8,
+            "NC1": 5.3,
+            "OK3": 4.7,
+            "TN1": 5.9,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "OKS2015-3",
+          "base": "OKS2015-3",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 5.9,
+            "FL3": 6.0,
+            "KS2": 5.5,
+            "KY1": 6.0,
+            "MD1": 7.2,
+            "MO1": 5.6,
+            "MS1": 4.8,
+            "NC1": 5.9,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "JSC 2013-8S",
+          "base": "JSC 2013-8S",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 4.9,
+            "AR1": 5.8,
+            "FL3": 6.2,
+            "KS2": 5.5,
+            "KY1": 6.0,
+            "MD1": 7.4,
+            "MO1": 6.1,
+            "MS1": 4.8,
+            "NC1": 5.5,
+            "OK3": 4.8,
+            "TN1": 6.3,
+            "VA1": 6.7
+          }
+        },
+        {
+          "name": "OKC1873",
+          "base": "OKC1873",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "FL3": 6.7,
+            "KS2": 5.2,
+            "KY1": 6.4,
+            "MD1": 6.1,
+            "MO1": 5.5,
+            "MS1": 4.9,
+            "NC1": 5.0,
+            "OK3": 5.0,
+            "TN1": 6.1,
+            "VA1": 6.9
+          }
+        },
+        {
+          "name": "JSC 2013-5S",
+          "base": "JSC 2013-5S",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 6.1,
+            "FL3": 5.7,
+            "KS2": 5.5,
+            "KY1": 6.2,
+            "MD1": 7.5,
+            "MO1": 6.1,
+            "MS1": 4.6,
+            "NC1": 5.0,
+            "OK3": 4.8,
+            "TN1": 6.0,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "MSB-1048",
+          "base": "MSB-1048",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.8,
+            "FL3": 6.0,
+            "KS2": 4.8,
+            "KY1": 6.2,
+            "MD1": 6.3,
+            "MO1": 6.1,
+            "MS1": 5.0,
+            "NC1": 5.0,
+            "OK3": 4.8,
+            "TN1": 6.1,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "FB 1630",
+          "base": "FB 1630",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 5.9,
+            "FL3": 6.4,
+            "KS2": 4.8,
+            "KY1": 6.6,
+            "MD1": 6.7,
+            "MO1": 4.7,
+            "MS1": 5.1,
+            "NC1": 5.4,
+            "OK3": 4.5,
+            "TN1": 6.5,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "OKS2015-7",
+          "base": "OKS2015-7",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.6,
+            "FL3": 6.3,
+            "KS2": 4.9,
+            "KY1": 5.9,
+            "MD1": 6.7,
+            "MO1": 5.5,
+            "MS1": 4.7,
+            "NC1": 5.6,
+            "OK3": 4.8,
+            "TN1": 6.2,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "OKS2015-1",
+          "base": "OKS2015-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 5.8,
+            "FL3": 5.9,
+            "KS2": 5.3,
+            "KY1": 6.1,
+            "MD1": 6.4,
+            "MO1": 4.9,
+            "MS1": 4.7,
+            "NC1": 5.5,
+            "OK3": 4.5,
+            "TN1": 6.4,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "MSB-1026",
+          "base": "MSB-1026",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.6,
+            "FL3": 6.4,
+            "KS2": 4.5,
+            "KY1": 6.3,
+            "MD1": 6.5,
+            "MO1": 4.3,
+            "MS1": 5.3,
+            "NC1": 4.6,
+            "OK3": 4.6,
+            "TN1": 6.4,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "OKC1666",
+          "base": "OKC1666",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "AL1": 4.8,
+            "AR1": 5.2,
+            "FL3": 5.8,
+            "KS2": 6.3,
+            "KY1": 5.4,
+            "MD1": 5.6,
+            "MO1": 4.7,
+            "MS1": 4.8,
+            "NC1": 4.5,
+            "OK3": 4.9,
+            "TN1": 6.3,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "OKC1682",
+          "base": "OKC1682",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 4.4,
+            "AR1": 6.1,
+            "FL3": 5.8,
+            "KS2": 5.3,
+            "KY1": 6.1,
+            "MD1": 6.8,
+            "MO1": 5.9,
+            "MS1": 4.7,
+            "NC1": 4.6,
+            "OK3": 5.2,
+            "TN1": 6.1,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "MSB-1050",
+          "base": "MSB-1050",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.5,
+            "AR1": 6.8,
+            "FL3": 6.5,
+            "KS2": 4.0,
+            "KY1": 6.4,
+            "MD1": 5.5,
+            "MO1": 6.3,
+            "MS1": 5.7,
+            "NC1": 4.7,
+            "OK3": 3.7,
+            "TN1": 6.2,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "FB 1903",
+          "base": "FB 1903",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.1,
+            "AR1": 5.6,
+            "FL3": 6.4,
+            "KS2": 4.5,
+            "KY1": 5.8,
+            "MD1": 6.5,
+            "MO1": 3.8,
+            "MS1": 5.1,
+            "NC1": 6.1,
+            "OK3": 4.4,
+            "TN1": 6.3,
+            "VA1": 5.5
+          }
+        },
+        {
+          "name": "COPPERHEAD (DLF-460/3048)",
+          "base": "COPPERHEAD",
+          "code": "DLF-460/3048",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.4,
+            "AR1": 5.5,
+            "FL3": 6.0,
+            "KS2": 5.0,
+            "KY1": 6.0,
+            "MD1": 6.7,
+            "MO1": 4.0,
+            "MS1": 4.5,
+            "NC1": 4.9,
+            "OK3": 4.7,
+            "TN1": 6.0,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "FB 1902",
+          "base": "FB 1902",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 6.0,
+            "FL3": 5.5,
+            "KS2": 4.9,
+            "KY1": 6.1,
+            "MD1": 5.9,
+            "MO1": 4.6,
+            "MS1": 4.7,
+            "NC1": 4.9,
+            "OK3": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "SUN QUEEN (PST-R6MM)",
+          "base": "SUN QUEEN",
+          "code": "PST-R6MM",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AL1": 4.7,
+            "AR1": 5.3,
+            "FL3": 5.8,
+            "KS2": 5.1,
+            "KY1": 5.8,
+            "MD1": 6.3,
+            "MO1": 4.1,
+            "MS1": 4.6,
+            "NC1": 4.5,
+            "OK3": 4.6,
+            "TN1": 6.1,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "PST-R6TM",
+          "base": "PST-R6TM",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "AL1": 4.3,
+            "AR1": 5.5,
+            "FL3": 5.8,
+            "KS2": 4.8,
+            "KY1": 5.6,
+            "MD1": 6.3,
+            "MO1": 3.3,
+            "MS1": 4.5,
+            "NC1": 4.6,
+            "OK3": 4.6,
+            "TN1": 6.1,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "MSB-1075",
+          "base": "MSB-1075",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {
+            "AL1": 4.6,
+            "AR1": 5.3,
+            "FL3": 6.2,
+            "KS2": 3.3,
+            "KY1": 5.7,
+            "MD1": 4.4,
+            "MO1": 2.9,
+            "MS1": 5.2,
+            "NC1": 3.5,
+            "OK3": 3.7,
+            "TN1": 6.0,
+            "VA1": 5.0
+          }
+        }
+      ],
+      "expected": 13,
+      "pages": [
+        60
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "AL1",
+        "AR1",
+        "FL3",
+        "IN1",
+        "KS2",
+        "MO1",
+        "MS1",
+        "NC1",
+        "OK1",
+        "OK3",
+        "TN1"
+      ],
+      "rows": [
+        {
+          "name": "FB 1628",
+          "base": "FB 1628",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.7,
+            "FL3": 7.8,
+            "IN1": 8.4,
+            "KS2": 7.8,
+            "MO1": 5.3,
+            "MS1": 6.3,
+            "NC1": 7.0,
+            "OK1": 7.2,
+            "OK3": 6.9,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "MSB-1026",
+          "base": "MSB-1026",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 7.2,
+            "FL3": 8.1,
+            "IN1": 7.3,
+            "KS2": 7.6,
+            "MO1": 3.7,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.8,
+            "OK3": 6.4,
+            "TN1": 7.2
+          }
+        },
+        {
+          "name": "MSB-1050",
+          "base": "MSB-1050",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 6.9,
+            "AR1": 6.5,
+            "FL3": 8.4,
+            "IN1": 7.6,
+            "KS2": 7.5,
+            "MO1": 5.0,
+            "MS1": 6.3,
+            "NC1": 7.2,
+            "OK1": 6.8,
+            "OK3": 6.6,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "FB 1903",
+          "base": "FB 1903",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.8,
+            "FL3": 8.1,
+            "IN1": 7.8,
+            "KS2": 8.6,
+            "MO1": 4.0,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.4,
+            "OK3": 6.4,
+            "TN1": 6.2
+          }
+        },
+        {
+          "name": "MSB-1075",
+          "base": "MSB-1075",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.2,
+            "AR1": 6.8,
+            "FL3": 7.6,
+            "IN1": 7.3,
+            "KS2": 8.8,
+            "MO1": 2.3,
+            "MS1": 6.3,
+            "NC1": 6.9,
+            "OK1": 6.7,
+            "OK3": 6.6,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "TAHOMA 31",
+          "base": "TAHOMA 31",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.5,
+            "FL3": 7.4,
+            "IN1": 8.0,
+            "KS2": 7.3,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.1,
+            "OK1": 6.4,
+            "OK3": 6.6,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "CELEBRATION HYBRID (MSB-1017)",
+          "base": "CELEBRATION HYBRID",
+          "code": "MSB-1017",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.6,
+            "AR1": 7.3,
+            "FL3": 7.7,
+            "IN1": 7.7,
+            "KS2": 6.9,
+            "MO1": 4.7,
+            "MS1": 6.0,
+            "NC1": 6.9,
+            "OK1": 6.4,
+            "OK3": 6.2,
+            "TN1": 4.7
+          }
+        },
+        {
+          "name": "FB 1630",
+          "base": "FB 1630",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 6.8,
+            "FL3": 7.6,
+            "IN1": 7.3,
+            "KS2": 7.8,
+            "MO1": 4.7,
+            "MS1": 5.7,
+            "NC1": 6.8,
+            "OK1": 6.3,
+            "OK3": 6.0,
+            "TN1": 5.5
+          }
+        },
+        {
+          "name": "MSB-1048",
+          "base": "MSB-1048",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.0,
+            "FL3": 7.3,
+            "IN1": 7.4,
+            "KS2": 6.9,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.4,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "FB 1902",
+          "base": "FB 1902",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.2,
+            "FL3": 7.2,
+            "IN1": 7.1,
+            "KS2": 7.2,
+            "MO1": 5.7,
+            "MS1": 5.0,
+            "NC1": 7.0,
+            "OK1": 6.2,
+            "OK3": 6.1,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "TIFWAY",
+          "base": "TIFWAY",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.8,
+            "FL3": 7.9,
+            "IN1": 7.0,
+            "KS2": 6.7,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "OK3": 6.3,
+            "TN1": 4.7
+          }
+        },
+        {
+          "name": "OKC1876",
+          "base": "OKC1876",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.2,
+            "AR1": 7.5,
+            "FL3": 7.1,
+            "IN1": 8.1,
+            "KS2": 6.3,
+            "MO1": 5.7,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.6,
+            "OK3": 6.6,
+            "TN1": 4.6
+          }
+        },
+        {
+          "name": "OKC1682",
+          "base": "OKC1682",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.8,
+            "FL3": 7.3,
+            "IN1": 7.1,
+            "KS2": 6.2,
+            "MO1": 6.3,
+            "MS1": 6.0,
+            "NC1": 5.9,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "JSC 2013-7S",
+          "base": "JSC 2013-7S",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.8,
+            "FL3": 7.1,
+            "IN1": 6.8,
+            "KS2": 7.4,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.8,
+            "OK1": 6.3,
+            "OK3": 6.0,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "JSC 2013-8S",
+          "base": "JSC 2013-8S",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.3,
+            "FL3": 6.6,
+            "IN1": 6.8,
+            "KS2": 6.6,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.1,
+            "OK3": 5.9,
+            "TN1": 6.8
+          }
+        },
+        {
+          "name": "LATITUDE 36",
+          "base": "LATITUDE 36",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.2,
+            "FL3": 7.2,
+            "IN1": 6.9,
+            "KS2": 5.3,
+            "MO1": 6.3,
+            "MS1": 6.3,
+            "NC1": 6.1,
+            "OK1": 6.2,
+            "OK3": 6.1,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "MONACO",
+          "base": "MONACO",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.6,
+            "KS2": 6.7,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.1,
+            "TN1": 5.5
+          }
+        },
+        {
+          "name": "JSC 2013-5S",
+          "base": "JSC 2013-5S",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 6.5,
+            "FL3": 6.7,
+            "IN1": 6.3,
+            "KS2": 7.0,
+            "MO1": 5.7,
+            "MS1": 5.3,
+            "NC1": 7.0,
+            "OK1": 5.9,
+            "OK3": 5.9,
+            "TN1": 6.4
+          }
+        },
+        {
+          "name": "OKS2015-3",
+          "base": "OKS2015-3",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "FL3": 6.6,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.7,
+            "MS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "OK3": 6.2,
+            "TN1": 6.7
+          }
+        },
+        {
+          "name": "RIVIERA",
+          "base": "RIVIERA",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.8,
+            "FL3": 6.1,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.1,
+            "OK3": 6.0,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "JSC 2013-10S",
+          "base": "JSC 2013-10S",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.7,
+            "FL3": 7.0,
+            "IN1": 7.2,
+            "KS2": 6.7,
+            "MO1": 5.3,
+            "MS1": 5.7,
+            "NC1": 6.3,
+            "OK1": 5.9,
+            "OK3": 6.0,
+            "TN1": 5.4
+          }
+        },
+        {
+          "name": "OKC1873",
+          "base": "OKC1873",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.3,
+            "KS2": 5.6,
+            "MO1": 5.0,
+            "MS1": 5.7,
+            "NC1": 6.4,
+            "OK1": 6.0,
+            "OK3": 6.1,
+            "TN1": 5.1
+          }
+        },
+        {
+          "name": "TIFTUF",
+          "base": "TIFTUF",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 7.2,
+            "FL3": 6.7,
+            "IN1": 6.4,
+            "KS2": 5.9,
+            "MO1": 5.3,
+            "MS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.1,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "MSB-1042",
+          "base": "MSB-1042",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.8,
+            "FL3": 6.8,
+            "IN1": 7.1,
+            "KS2": 5.5,
+            "MO1": 6.3,
+            "MS1": 5.3,
+            "NC1": 5.8,
+            "OK1": 6.4,
+            "OK3": 6.4,
+            "TN1": 5.2
+          }
+        },
+        {
+          "name": "MONZA (JSC 2013-12S)",
+          "base": "MONZA",
+          "code": "JSC 2013-12S",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "FL3": 6.7,
+            "IN1": 6.3,
+            "KS2": 6.4,
+            "MO1": 5.0,
+            "MS1": 6.0,
+            "NC1": 6.6,
+            "OK1": 6.2,
+            "OK3": 6.0,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "OKS2015-7",
+          "base": "OKS2015-7",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 6.3,
+            "FL3": 7.0,
+            "IN1": 7.0,
+            "KS2": 5.8,
+            "MO1": 5.7,
+            "MS1": 6.0,
+            "NC1": 6.1,
+            "OK1": 6.1,
+            "OK3": 5.9,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "COPPERHEAD (DLF-460/3048)",
+          "base": "COPPERHEAD",
+          "code": "DLF-460/3048",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 7.0,
+            "FL3": 6.1,
+            "IN1": 6.1,
+            "KS2": 5.6,
+            "MO1": 3.3,
+            "MS1": 5.0,
+            "NC1": 6.1,
+            "OK1": 6.1,
+            "OK3": 6.0,
+            "TN1": 7.0
+          }
+        },
+        {
+          "name": "SUN QUEEN (PST-R6MM)",
+          "base": "SUN QUEEN",
+          "code": "PST-R6MM",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.3,
+            "FL3": 6.1,
+            "IN1": 6.2,
+            "KS2": 5.1,
+            "MO1": 3.7,
+            "MS1": 5.3,
+            "NC1": 6.7,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.4
+          }
+        },
+        {
+          "name": "OKC1406",
+          "base": "OKC1406",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "FL3": 6.8,
+            "IN1": 6.6,
+            "KS2": 5.2,
+            "MO1": 7.3,
+            "MS1": 6.0,
+            "NC1": 6.1,
+            "OK1": 5.5,
+            "OK3": 5.7,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "JSC 77V",
+          "base": "JSC 77V",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.2,
+            "AR1": 6.7,
+            "FL3": 7.0,
+            "IN1": 6.4,
+            "KS2": 5.5,
+            "MO1": 4.7,
+            "MS1": 5.7,
+            "NC1": 6.0,
+            "OK1": 5.8,
+            "OK3": 5.8,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "PST-R6TM",
+          "base": "PST-R6TM",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.0,
+            "FL3": 6.1,
+            "IN1": 6.2,
+            "KS2": 5.3,
+            "MO1": 3.7,
+            "MS1": 5.3,
+            "NC1": 6.2,
+            "OK1": 6.3,
+            "OK3": 6.2,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "OKS2015-1",
+          "base": "OKS2015-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.7,
+            "FL3": 6.5,
+            "IN1": 6.0,
+            "KS2": 6.1,
+            "MO1": 5.7,
+            "MS1": 5.0,
+            "NC1": 6.2,
+            "OK1": 5.8,
+            "OK3": 5.4,
+            "TN1": 5.5
+          }
+        },
+        {
+          "name": "JSC 80V",
+          "base": "JSC 80V",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "FL3": 6.8,
+            "IN1": 5.6,
+            "KS2": 4.8,
+            "MO1": 6.0,
+            "MS1": 6.0,
+            "NC1": 5.7,
+            "OK1": 5.3,
+            "OK3": 5.2,
+            "TN1": 6.1
+          }
+        },
+        {
+          "name": "ASTRO",
+          "base": "ASTRO",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 5.7,
+            "FL3": 6.5,
+            "IN1": 5.3,
+            "KS2": 4.1,
+            "MO1": 6.0,
+            "MS1": 5.7,
+            "NC1": 5.8,
+            "OK1": 5.8,
+            "OK3": 6.0,
+            "TN1": 4.8
+          }
+        },
+        {
+          "name": "OKC1666",
+          "base": "OKC1666",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 5.7,
+            "FL3": 6.2,
+            "IN1": 5.2,
+            "KS2": 4.1,
+            "MO1": 6.0,
+            "MS1": 5.3,
+            "NC1": 5.3,
+            "OK1": 6.0,
+            "OK3": 6.1,
+            "TN1": 5.3
+          }
+        }
+      ],
+      "expected": 12,
+      "pages": [
+        192
+      ]
+    },
+    "brownPatch": {
+      "sites": [
+        "IN1",
+        "NC1"
+      ],
+      "rows": [
+        {
+          "name": "ASTRO",
+          "base": "ASTRO",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN1": 6.8,
+            "NC1": 7.7
+          }
+        },
+        {
+          "name": "TAHOMA 31",
+          "base": "TAHOMA 31",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 8.3
+          }
+        },
+        {
+          "name": "OKC1666",
+          "base": "OKC1666",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 6.4,
+            "NC1": 8.3
+          }
+        },
+        {
+          "name": "OKC1406",
+          "base": "OKC1406",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 7.0,
+            "NC1": 6.5
+          }
+        },
+        {
+          "name": "MSB-1042",
+          "base": "MSB-1042",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 6.3,
+            "NC1": 8.7
+          }
+        },
+        {
+          "name": "CELEBRATION HYBRID (MSB-1017)",
+          "base": "CELEBRATION HYBRID",
+          "code": "MSB-1017",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 7.5
+          }
+        },
+        {
+          "name": "MSB-1048",
+          "base": "MSB-1048",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 7.8
+          }
+        },
+        {
+          "name": "TIFWAY",
+          "base": "TIFWAY",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 8.5
+          }
+        },
+        {
+          "name": "LATITUDE 36",
+          "base": "LATITUDE 36",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 8.3
+          }
+        },
+        {
+          "name": "MSB-1075",
+          "base": "MSB-1075",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.4,
+            "NC1": 6.3
+          }
+        },
+        {
+          "name": "FB 1902",
+          "base": "FB 1902",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 6.2
+          }
+        },
+        {
+          "name": "JSC 2013-10S",
+          "base": "JSC 2013-10S",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.2,
+            "NC1": 7.0
+          }
+        },
+        {
+          "name": "MONZA (JSC 2013-12S)",
+          "base": "MONZA",
+          "code": "JSC 2013-12S",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.2,
+            "NC1": 6.3
+          }
+        },
+        {
+          "name": "JSC 77V",
+          "base": "JSC 77V",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 6.0,
+            "NC1": 6.3
+          }
+        },
+        {
+          "name": "TIFTUF",
+          "base": "TIFTUF",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 8.2
+          }
+        },
+        {
+          "name": "FB 1628",
+          "base": "FB 1628",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.3,
+            "NC1": 7.5
+          }
+        },
+        {
+          "name": "FB 1903",
+          "base": "FB 1903",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 6.5,
+            "NC1": 4.5
+          }
+        },
+        {
+          "name": "OKC1682",
+          "base": "OKC1682",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 7.2
+          }
+        },
+        {
+          "name": "JSC 80V",
+          "base": "JSC 80V",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IN1": 5.7,
+            "NC1": 6.7
+          }
+        },
+        {
+          "name": "JSC 2013-7S",
+          "base": "JSC 2013-7S",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 6.3
+          }
+        },
+        {
+          "name": "RIVIERA",
+          "base": "RIVIERA",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.0
+          }
+        },
+        {
+          "name": "OKC1873",
+          "base": "OKC1873",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.5
+          }
+        },
+        {
+          "name": "OKS2015-3",
+          "base": "OKS2015-3",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.4,
+            "NC1": 5.7
+          }
+        },
+        {
+          "name": "MONACO",
+          "base": "MONACO",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 6.2
+          }
+        },
+        {
+          "name": "OKS2015-7",
+          "base": "OKS2015-7",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.7,
+            "NC1": 5.7
+          }
+        },
+        {
+          "name": "MSB-1050",
+          "base": "MSB-1050",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.1,
+            "NC1": 7.0
+          }
+        },
+        {
+          "name": "FB 1630",
+          "base": "FB 1630",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 5.2
+          }
+        },
+        {
+          "name": "JSC 2013-5S",
+          "base": "JSC 2013-5S",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN1": 5.6,
+            "NC1": 6.0
+          }
+        },
+        {
+          "name": "OKS2015-1",
+          "base": "OKS2015-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 5.2,
+            "NC1": 6.2
+          }
+        },
+        {
+          "name": "JSC 2013-8S",
+          "base": "JSC 2013-8S",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 5.5,
+            "NC1": 5.8
+          }
+        },
+        {
+          "name": "OKC1876",
+          "base": "OKC1876",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 4.9,
+            "NC1": 6.8
+          }
+        },
+        {
+          "name": "PST-R6TM",
+          "base": "PST-R6TM",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 5.8,
+            "NC1": 4.5
+          }
+        },
+        {
+          "name": "MSB-1026",
+          "base": "MSB-1026",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "IN1": 4.8,
+            "NC1": 6.3
+          }
+        },
+        {
+          "name": "SUN QUEEN (PST-R6MM)",
+          "base": "SUN QUEEN",
+          "code": "PST-R6MM",
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {
+            "IN1": 5.3,
+            "NC1": 4.2
+          }
+        },
+        {
+          "name": "COPPERHEAD (DLF-460/3048)",
+          "base": "COPPERHEAD",
+          "code": "DLF-460/3048",
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 4.7,
+            "NC1": 5.3
+          }
+        }
+      ],
+      "expected": 3,
+      "pages": [
+        246
+      ]
+    },
+    "droughtQuality": {
+      "sites": [],
+      "rows": [
+        {
+          "name": "TIFTUF",
+          "base": "TIFTUF",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {}
+        },
+        {
+          "name": "OKC1876",
+          "base": "OKC1876",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "FB 1628",
+          "base": "FB 1628",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {}
+        },
+        {
+          "name": "CELEBRATION HYBRID (MSB-1017)",
+          "base": "CELEBRATION HYBRID",
+          "code": "MSB-1017",
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {}
+        },
+        {
+          "name": "MSB-1042",
+          "base": "MSB-1042",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {}
+        },
+        {
+          "name": "FB 1902",
+          "base": "FB 1902",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {}
+        },
+        {
+          "name": "MSB-1050",
+          "base": "MSB-1050",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {}
+        },
+        {
+          "name": "OKC1873",
+          "base": "OKC1873",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {}
+        },
+        {
+          "name": "TAHOMA 31",
+          "base": "TAHOMA 31",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {}
+        },
+        {
+          "name": "TIFWAY",
+          "base": "TIFWAY",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {}
+        },
+        {
+          "name": "FB 1903",
+          "base": "FB 1903",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "MSB-1075",
+          "base": "MSB-1075",
+          "code": null,
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {}
+        },
+        {
+          "name": "MSB-1026",
+          "base": "MSB-1026",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {}
+        },
+        {
+          "name": "MSB-1048",
+          "base": "MSB-1048",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {}
+        },
+        {
+          "name": "FB 1630",
+          "base": "FB 1630",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 2013-10S",
+          "base": "JSC 2013-10S",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 2013-5S",
+          "base": "JSC 2013-5S",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "OKC1682",
+          "base": "OKC1682",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "MONACO",
+          "base": "MONACO",
+          "code": null,
+          "entry": null,
+          "mean": 4.5,
+          "bySite": {}
+        },
+        {
+          "name": "MONZA (JSC 2013-12S)",
+          "base": "MONZA",
+          "code": "JSC 2013-12S",
+          "entry": null,
+          "mean": 4.4,
+          "bySite": {}
+        },
+        {
+          "name": "OKC1406",
+          "base": "OKC1406",
+          "code": null,
+          "entry": null,
+          "mean": 4.3,
+          "bySite": {}
+        },
+        {
+          "name": "LATITUDE 36",
+          "base": "LATITUDE 36",
+          "code": null,
+          "entry": null,
+          "mean": 4.2,
+          "bySite": {}
+        },
+        {
+          "name": "ASTRO",
+          "base": "ASTRO",
+          "code": null,
+          "entry": null,
+          "mean": 4.1,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 2013-8S",
+          "base": "JSC 2013-8S",
+          "code": null,
+          "entry": null,
+          "mean": 4.1,
+          "bySite": {}
+        },
+        {
+          "name": "OKC1666",
+          "base": "OKC1666",
+          "code": null,
+          "entry": null,
+          "mean": 4.1,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 2013-7S",
+          "base": "JSC 2013-7S",
+          "code": null,
+          "entry": null,
+          "mean": 4.0,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 80V",
+          "base": "JSC 80V",
+          "code": null,
+          "entry": null,
+          "mean": 4.0,
+          "bySite": {}
+        },
+        {
+          "name": "PST-R6TM",
+          "base": "PST-R6TM",
+          "code": null,
+          "entry": null,
+          "mean": 3.9,
+          "bySite": {}
+        },
+        {
+          "name": "OKS2015-1",
+          "base": "OKS2015-1",
+          "code": null,
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "SUN QUEEN (PST-R6MM)",
+          "base": "SUN QUEEN",
+          "code": "PST-R6MM",
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "COPPERHEAD (DLF-460/3048)",
+          "base": "COPPERHEAD",
+          "code": "DLF-460/3048",
+          "entry": null,
+          "mean": 3.7,
+          "bySite": {}
+        },
+        {
+          "name": "JSC 77V",
+          "base": "JSC 77V",
+          "code": null,
+          "entry": null,
+          "mean": 3.7,
+          "bySite": {}
+        },
+        {
+          "name": "RIVIERA",
+          "base": "RIVIERA",
+          "code": null,
+          "entry": null,
+          "mean": 3.7,
+          "bySite": {}
+        },
+        {
+          "name": "OKS2015-3",
+          "base": "OKS2015-3",
+          "code": null,
+          "entry": null,
+          "mean": 3.6,
+          "bySite": {}
+        },
+        {
+          "name": "OKS2015-7",
+          "base": "OKS2015-7",
+          "code": null,
+          "entry": null,
+          "mean": 3.5,
+          "bySite": {}
+        }
+      ],
+      "expected": 20,
+      "pages": [
+        132,
+        133
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "VA1",
+        "IN1",
+        "AR1",
+        "KS2"
+      ],
+      "rows": [
+        {
+          "name": "TIFTUF",
+          "base": "TIFTUF",
+          "code": null,
+          "entry": 2,
+          "mean": 7.0,
+          "bySite": {
+            "VA1": 7.5,
+            "IN1": 6.9,
+            "AR1": 7.5,
+            "KS2": 5.9
+          }
+        },
+        {
+          "name": "MSB-1042",
+          "base": "MSB-1042",
+          "code": null,
+          "entry": 14,
+          "mean": 6.8,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.6,
+            "AR1": 7.1,
+            "KS2": 6.0
+          }
+        },
+        {
+          "name": "FB 1628",
+          "base": "FB 1628",
+          "code": null,
+          "entry": 19,
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.9,
+            "AR1": 7.4,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "CELEBRATION HYBRID (MSB-1017)",
+          "base": "CELEBRATION HYBRID",
+          "code": "MSB-1017",
+          "entry": 13,
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.5,
+            "AR1": 7.4,
+            "KS2": 5.2
+          }
+        },
+        {
+          "name": "OKC1876",
+          "base": "OKC1876",
+          "code": null,
+          "entry": 6,
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.7,
+            "AR1": 7.5,
+            "KS2": 5.3
+          }
+        },
+        {
+          "name": "LATITUDE 36",
+          "base": "LATITUDE 36",
+          "code": null,
+          "entry": 5,
+          "mean": 6.6,
+          "bySite": {
+            "VA1": 7.2,
+            "IN1": 6.6,
+            "AR1": 6.9,
+            "KS2": 5.7
+          }
+        },
+        {
+          "name": "RIVIERA",
+          "base": "RIVIERA",
+          "code": null,
+          "entry": 34,
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.5,
+            "AR1": 6.3,
+            "KS2": 6.0
+          }
+        },
+        {
+          "name": "MONACO",
+          "base": "MONACO",
+          "code": null,
+          "entry": 35,
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 6.4,
+            "AR1": 6.4,
+            "KS2": 6.0
+          }
+        },
+        {
+          "name": "OKC1873",
+          "base": "OKC1873",
+          "code": null,
+          "entry": 7,
+          "mean": 6.5,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.3,
+            "AR1": 7.4,
+            "KS2": 5.3
+          }
+        },
+        {
+          "name": "TAHOMA 31",
+          "base": "TAHOMA 31",
+          "code": null,
+          "entry": 17,
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 6.6,
+            "IN1": 6.6,
+            "AR1": 7.4,
+            "KS2": 5.1
+          }
+        },
+        {
+          "name": "JSC 2013-10S",
+          "base": "JSC 2013-10S",
+          "code": null,
+          "entry": 32,
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.3,
+            "AR1": 6.3,
+            "KS2": 5.9
+          }
+        },
+        {
+          "name": "MONZA (JSC 2013-12S)",
+          "base": "MONZA",
+          "code": "JSC 2013-12S",
+          "entry": 33,
+          "mean": 6.4,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.2,
+            "AR1": 6.0,
+            "KS2": 6.0
+          }
+        },
+        {
+          "name": "JSC 2013-5S",
+          "base": "JSC 2013-5S",
+          "code": null,
+          "entry": 29,
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.4,
+            "AR1": 6.4,
+            "KS2": 5.6
+          }
+        },
+        {
+          "name": "JSC 2013-7S",
+          "base": "JSC 2013-7S",
+          "code": null,
+          "entry": 30,
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.2,
+            "IN1": 6.2,
+            "AR1": 6.4,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "ASTRO",
+          "base": "ASTRO",
+          "code": null,
+          "entry": 18,
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.1,
+            "AR1": 6.6,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "OKC1666",
+          "base": "OKC1666",
+          "code": null,
+          "entry": 3,
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.3,
+            "IN1": 5.8,
+            "AR1": 6.1,
+            "KS2": 5.9
+          }
+        },
+        {
+          "name": "OKS2015-3",
+          "base": "OKS2015-3",
+          "code": null,
+          "entry": 27,
+          "mean": 6.3,
+          "bySite": {
+            "VA1": 7.1,
+            "IN1": 6.1,
+            "AR1": 5.8,
+            "KS2": 6.0
+          }
+        },
+        {
+          "name": "JSC 2013-8S",
+          "base": "JSC 2013-8S",
+          "code": null,
+          "entry": 31,
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 6.2,
+            "AR1": 6.0,
+            "KS2": 5.8
+          }
+        },
+        {
+          "name": "MSB-1026",
+          "base": "MSB-1026",
+          "code": null,
+          "entry": 11,
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.2,
+            "IN1": 6.5,
+            "AR1": 7.3,
+            "KS2": 4.8
+          }
+        },
+        {
+          "name": "MSB-1048",
+          "base": "MSB-1048",
+          "code": null,
+          "entry": 9,
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.7,
+            "IN1": 6.2,
+            "AR1": 6.6,
+            "KS2": 5.2
+          }
+        },
+        {
+          "name": "TIFWAY",
+          "base": "TIFWAY",
+          "code": null,
+          "entry": 1,
+          "mean": 6.2,
+          "bySite": {
+            "VA1": 6.3,
+            "IN1": 6.3,
+            "AR1": 7.1,
+            "KS2": 5.0
+          }
+        },
+        {
+          "name": "OKC1406",
+          "base": "OKC1406",
+          "code": null,
+          "entry": 4,
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 6.6,
+            "IN1": 6.2,
+            "AR1": 6.4,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "OKS2015-1",
+          "base": "OKS2015-1",
+          "code": null,
+          "entry": 26,
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 7.0,
+            "IN1": 6.0,
+            "AR1": 6.0,
+            "KS2": 5.5
+          }
+        },
+        {
+          "name": "OKS2015-7",
+          "base": "OKS2015-7",
+          "code": null,
+          "entry": 28,
+          "mean": 6.1,
+          "bySite": {
+            "VA1": 6.8,
+            "IN1": 6.0,
+            "AR1": 6.0,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "JSC 80V",
+          "base": "JSC 80V",
+          "code": null,
+          "entry": 16,
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 6.5,
+            "IN1": 5.9,
+            "AR1": 6.2,
+            "KS2": 5.5
+          }
+        },
+        {
+          "name": "FB 1630",
+          "base": "FB 1630",
+          "code": null,
+          "entry": 20,
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 6.5,
+            "IN1": 6.1,
+            "AR1": 6.6,
+            "KS2": 4.9
+          }
+        },
+        {
+          "name": "MSB-1050",
+          "base": "MSB-1050",
+          "code": null,
+          "entry": 12,
+          "mean": 6.0,
+          "bySite": {
+            "VA1": 5.9,
+            "IN1": 6.3,
+            "AR1": 7.5,
+            "KS2": 4.2
+          }
+        },
+        {
+          "name": "JSC 77V",
+          "base": "JSC 77V",
+          "code": null,
+          "entry": 15,
+          "mean": 5.9,
+          "bySite": {
+            "VA1": 5.7,
+            "IN1": 6.3,
+            "AR1": 6.4,
+            "KS2": 5.1
+          }
+        },
+        {
+          "name": "OKC1682",
+          "base": "OKC1682",
+          "code": null,
+          "entry": 8,
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 5.7,
+            "IN1": 5.9,
+            "AR1": 6.4,
+            "KS2": 5.2
+          }
+        },
+        {
+          "name": "PST-R6TM",
+          "base": "PST-R6TM",
+          "code": null,
+          "entry": 23,
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 6.9,
+            "IN1": 5.4,
+            "AR1": 5.4,
+            "KS2": 5.3
+          }
+        },
+        {
+          "name": "SUN QUEEN (PST-R6MM)",
+          "base": "SUN QUEEN",
+          "code": "PST-R6MM",
+          "entry": 24,
+          "mean": 5.8,
+          "bySite": {
+            "VA1": 6.8,
+            "IN1": 5.5,
+            "AR1": 5.3,
+            "KS2": 5.4
+          }
+        },
+        {
+          "name": "COPPERHEAD (DLF-460/3048)",
+          "base": "COPPERHEAD",
+          "code": "DLF-460/3048",
+          "entry": 25,
+          "mean": 5.6,
+          "bySite": {
+            "VA1": 6.4,
+            "IN1": 5.6,
+            "AR1": 5.7,
+            "KS2": 4.8
+          }
+        },
+        {
+          "name": "FB 1902",
+          "base": "FB 1902",
+          "code": null,
+          "entry": 21,
+          "mean": 5.5,
+          "bySite": {
+            "VA1": 5.3,
+            "IN1": 5.5,
+            "AR1": 6.2,
+            "KS2": 4.8
+          }
+        },
+        {
+          "name": "FB 1903",
+          "base": "FB 1903",
+          "code": null,
+          "entry": 22,
+          "mean": 5.4,
+          "bySite": {
+            "VA1": 5.4,
+            "IN1": 5.4,
+            "AR1": 6.6,
+            "KS2": 4.3
+          }
+        },
+        {
+          "name": "MSB-1075",
+          "base": "MSB-1075",
+          "code": null,
+          "entry": 10,
+          "mean": 4.6,
+          "bySite": {
+            "VA1": 4.1,
+            "IN1": 5.2,
+            "AR1": 5.9,
+            "KS2": 3.2
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        18
+      ]
+    }
+  }
+}

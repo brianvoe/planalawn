@@ -1,12 +1,13 @@
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
+import SlimSelect from 'slim-select/vue'
 import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../data/rates'
 import type { PropType } from 'vue'
 import type { RateTemplate } from '../types'
 
 export default {
   name: 'RateCalculator',
-  components: { LawnSize },
+  components: { LawnSize, SlimSelect },
   props: {
     mode: { type: String, required: true },
     rateKey: { type: String, required: true },
@@ -62,6 +63,9 @@ export default {
       const unique = [...new Set(keys)]
       return unique.map((k) => rateTemplates[k]).filter((t): t is RateTemplate => Boolean(t))
     },
+    productSelectData(): { text: string; value: string }[] {
+      return this.altOptions.map((opt) => ({ text: opt.label, value: opt.id }))
+    },
     showPer1000(): boolean {
       return this.mode === 'coverage'
     },
@@ -99,13 +103,13 @@ export default {
       display: inline-flex;
       flex-direction: column;
       gap: 0.3rem;
+      min-width: 10rem;
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--color-text-muted);
     }
 
-    input,
-    select {
+    input {
       min-width: 7rem;
       min-height: var(--input-height);
       padding: 0.45rem 0.65rem;
@@ -154,11 +158,11 @@ export default {
       </label>
       <label v-if="altOptions.length > 1" class="rate-calc__select">
         <span>Product template</span>
-        <select v-model="selectedKey">
-          <option v-for="opt in altOptions" :key="opt.id" :value="opt.id">
-            {{ opt.label }}
-          </option>
-        </select>
+        <SlimSelect
+          v-model="selectedKey"
+          :data="productSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+        />
       </label>
     </div>
 

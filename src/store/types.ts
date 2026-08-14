@@ -1,4 +1,5 @@
 import type { Store } from 'vuex'
+import type { Router } from 'vue-router'
 import type { BackupPayload, Blend, Equipment, GrassType, Profile, Project, RootState, UserLocation } from '../types'
 
 export interface StoreGetters {
@@ -20,6 +21,7 @@ export type AppStore = Store<RootState> & { getters: StoreGetters }
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $store: AppStore
+    $router: Router
   }
 }
 

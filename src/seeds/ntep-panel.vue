@@ -1,20 +1,22 @@
 <script lang="ts">
 import BarChart from '../components/bar-chart.vue'
+import SlimSelect from 'slim-select/vue'
 import { ratingColor } from '../charts/bars'
-import { allCultivars, isNamedCultivar, NTEP_METRICS, siteCodesForMetric, type NtepMetricKey } from '../data/seedDb'
+import { cultivarsForSpecies, isNamedCultivar, ntepMetaForSpecies, NTEP_METRICS, siteCodesForMetric, type NtepMetricKey } from '../data/seedDb'
 import { nearestNtepSites } from '../services/suitability'
 import { fmtRating } from './fit-ui'
 import type { PropType } from 'vue'
-import type { BarDatum, Cultivar, NearbySite, UserLocation } from '../types'
-
-const QUALITY_SITES = siteCodesForMetric('transitionQuality')
+import type { BarDatum, Cultivar, NearbySite, SpeciesInfo, UserLocation } from '../types'
 
 export default {
   name: 'NtepPanel',
-  components: { BarChart },
+  components: { BarChart, SlimSelect },
   props: {
     userLocation: { type: Object as PropType<UserLocation | null>, default: null },
+    speciesId: { type: String, default: 'tall_fescue' },
+    speciesOptions: { type: Array as PropType<SpeciesInfo[]>, default: () => [] },
   },
+  emits: ['update:speciesId'],
   data() {
     return {
       metric: 'transitionQuality' as NtepMetricKey,
@@ -24,12 +26,18 @@ export default {
     }
   },
   computed: {
+    poolBase(): Cultivar[] {
+      return cultivarsForSpecies(this.speciesId)
+    },
+    qualitySites(): string[] {
+      return siteCodesForMetric('transitionQuality', this.poolBase)
+    },
     nearestSite(): NearbySite | null {
       if (!this.userLocation) return null
-      return nearestNtepSites(this.userLocation.latitude, this.userLocation.longitude, 1, QUALITY_SITES)[0] || null
+      return nearestNtepSites(this.userLocation.latitude, this.userLocation.longitude, 1, this.qualitySites)[0] || null
     },
     pool(): Cultivar[] {
-      return this.namedOnly ? allCultivars.filter(isNamedCultivar) : allCultivars
+      return this.namedOnly ? this.poolBase.filter(isNamedCultivar) : this.poolBase
     },
     ranked(): { cultivar: Cultivar; value: number }[] {
       return this.pool
@@ -57,7 +65,29 @@ export default {
       return this.ntepMetrics.find((m) => m.key === this.metric)?.label || this.metric
     },
     sourceLine(): string {
-      return 'NTEP tall fescue trial tf18, 2023 report (high-value tables: regional quality, color, brown patch, drought).'
+      const meta = ntepMetaForSpecies(this.speciesId)
+      if (!meta) return 'NTEP high-value tables: regional quality, color, disease, drought.'
+      return `NTEP ${this.speciesId.replace(/_/g, ' ')} trial ${meta.trial}, ${meta.year} report (${meta.notes}).`
+    },
+    speciesChoice: {
+      get(): string {
+        return this.speciesId
+      },
+      set(id: string) {
+        this.$emit('update:speciesId', id)
+      },
+    },
+    speciesSelectData(): { text: string; value: string }[] {
+      return this.speciesOptions.map((s) => ({ text: s.label, value: s.id }))
+    },
+    metricSelectData(): { text: string; value: string }[] {
+      return this.ntepMetrics.map((m) => ({ text: m.label, value: m.key }))
+    },
+    viewSelectData(): { text: string; value: string; disabled?: boolean }[] {
+      return [
+        { text: 'National / regional means', value: 'means' },
+        { text: 'Nearest trial site', value: 'sites', disabled: !this.nearestSite },
+      ]
     },
   },
   methods: {
@@ -100,13 +130,31 @@ export default {
     </div>
 
     <div class="toolbar">
-      <select v-model="metric" class="select" :disabled="view === 'sites'">
-        <option v-for="m in ntepMetrics" :key="m.key" :value="m.key">{{ m.label }}</option>
-      </select>
-      <select v-model="view" class="select">
-        <option value="means">National / regional means</option>
-        <option value="sites" :disabled="!nearestSite">Nearest trial site</option>
-      </select>
+      <div class="toolbar-control">
+        <SlimSelect
+          v-model="speciesChoice"
+          :data="speciesSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+          aria-label="Species"
+        />
+      </div>
+      <div class="toolbar-control">
+        <SlimSelect
+          :key="view"
+          v-model="metric"
+          :data="metricSelectData"
+          :settings="{ showSearch: false, allowDeselect: false, disabled: view === 'sites' }"
+          aria-label="Metric"
+        />
+      </div>
+      <div class="toolbar-control">
+        <SlimSelect
+          v-model="view"
+          :data="viewSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+          aria-label="Table view"
+        />
+      </div>
       <label class="named-toggle">
         <input v-model="namedOnly" type="checkbox" />
         Named grasses only

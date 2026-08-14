@@ -32,18 +32,23 @@ export default {
   backdrop-filter: blur(10px);
 
   .site-nav__inner {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 0.65rem 1rem;
     padding-block: 0.7rem;
+
+    @media (max-width: 1023px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .site-nav__brand {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    margin-right: auto;
+    justify-self: start;
     font-family: var(--font-display);
     font-size: 1.02rem;
     font-weight: var(--font-weight-bold);
@@ -65,6 +70,7 @@ export default {
 
     @media (max-width: 1023px) {
       display: inline-flex;
+      margin-left: auto;
     }
   }
 
@@ -75,7 +81,7 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
-    order: 0;
+    justify-self: center;
 
     @media (max-width: 1023px) {
       display: none;
@@ -101,6 +107,66 @@ export default {
 
       &:hover {
         color: var(--color-text);
+      }
+    }
+  }
+
+  .site-nav__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-self: end;
+
+    @media (max-width: 1023px) {
+      margin-left: 0;
+    }
+  }
+
+  .site-nav__lawn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
+
+    &:hover,
+    &.router-link-active {
+      color: var(--color-text);
+    }
+
+    .site-nav__lawn-icon {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      width: 2.15rem;
+      height: 2.15rem;
+      color: var(--color-primary-strong);
+      background: var(--color-primary-soft);
+      border-radius: 999px;
+
+      .site-nav__lawn-icon {
+        display: block;
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+
+      .site-nav__lawn-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      &:hover,
+      &.router-link-active {
+        color: var(--color-primary-strong);
+        background: color-mix(in srgb, var(--color-primary-soft) 70%, var(--color-primary) 12%);
       }
     }
   }
@@ -131,10 +197,15 @@ export default {
         <li><router-link to="/tasks" @click="menuOpen = false">Tasks</router-link></li>
         <li><router-link to="/seeds" @click="menuOpen = false">Seeds</router-link></li>
         <li><router-link to="/tools/sprayer" @click="menuOpen = false">Sprayer</router-link></li>
-        <li><router-link to="/settings" @click="menuOpen = false">My lawn</router-link></li>
       </ul>
 
-      <SoilTemp :conditions="conditions" @click="openLocation" />
+      <div class="site-nav__meta">
+        <router-link to="/settings" class="site-nav__lawn" aria-label="My lawn">
+          <font-awesome-icon class="site-nav__lawn-icon" icon="fa-solid fa-pen-to-square" aria-hidden="true" />
+          <span class="site-nav__lawn-label">My lawn</span>
+        </router-link>
+        <SoilTemp :conditions="conditions" @click="openLocation" />
+      </div>
     </div>
     <LocationModal ref="locationModal" :conditions="conditions" />
   </nav>

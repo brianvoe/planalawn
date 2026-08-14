@@ -2,10 +2,10 @@
 import Conditions from '../components/conditions.vue'
 import LawnSize from '../components/lawn-size.vue'
 import { evaluateAllTasks, groupByBucket } from '../services/timing'
-import { allCultivars, isNamedCultivar } from '../data/seedDb'
+import { cultivarCount, cultivarsForSpecies, defaultSpeciesId, isNamedCultivar } from '../data/seedDb'
 import { scoreCultivarForLocation } from '../services/suitability'
 import type { PropType } from 'vue'
-import type { Conditions as Weather, Cultivar, CultivarFit, EvaluatedTask, Profile } from '../types'
+import type { Conditions as Weather, Cultivar, CultivarFit, EvaluatedTask, GrassType, Profile } from '../types'
 
 const FEATURES = [
   {
@@ -78,8 +78,11 @@ export default {
       const evaluated = evaluateAllTasks({ soilTempF: this.conditions?.soilTemp6F })
       return groupByBucket(evaluated).now
     },
+    grassType(): GrassType | null {
+      return this.$store.getters.grassType
+    },
     cultivarCount(): number {
-      return allCultivars.length
+      return cultivarCount
     },
     soilSummary(): string {
       const soil = this.conditions?.soilTemp6F
@@ -87,7 +90,7 @@ export default {
       return `Soil is ${Math.round(soil)}°F — check what’s coming up.`
     },
     topCultivars(): (Cultivar & { fit: CultivarFit })[] {
-      return allCultivars
+      return cultivarsForSpecies(defaultSpeciesId(this.grassType))
         .filter(isNamedCultivar)
         .map((c) => ({ ...c, fit: scoreCultivarForLocation(c, this.userLocation) }))
         .filter((c) => c.fit.score != null && c.fit.coverage.complete)

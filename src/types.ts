@@ -208,7 +208,8 @@ export interface BlendComponent {
   percent: number | null
 }
 
-export type BlendChannel = 'retail' | 'pro' | 'specialty'
+export type BlendChannel = 'retail' | 'pro' | 'specialty' | 'amazon'
+export type UrlCheckMode = 'strict' | 'lenient'
 
 export interface Blend {
   id: string
@@ -222,6 +223,14 @@ export interface Blend {
   notes?: string
   channel?: BlendChannel
   buyHint?: string
+  /** Product page. Required on curated blends. */
+  url?: string
+  /** Company home page. Required on curated blends. */
+  companyUrl?: string
+  /** Climate bands this bag is meant for. Required on curated blends. */
+  zones?: ClimateBandId[]
+  /** Live URL checks: Amazon/CDN bots often 403 — those are lenient. */
+  urlCheck?: UrlCheckMode
 }
 
 export type ScoreFactor = 'nearest' | 'region' | 'summerStress' | 'color' | 'national'

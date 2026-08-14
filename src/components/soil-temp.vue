@@ -37,7 +37,6 @@ export default {
   align-items: center;
   gap: 0.45rem;
   max-width: 16rem;
-  margin-left: auto;
   padding: 0.35rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;

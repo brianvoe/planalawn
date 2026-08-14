@@ -1,10 +1,11 @@
 <script lang="ts">
 import LocationSelect from '../components/location-select.vue'
+import SlimSelect from 'slim-select/vue'
 import { zoneLine } from '../data/climate'
 import { grassTypeLabels, grassTypeOptions, inferGrassType } from '../data/grass'
 import { requestBrowserLocation } from '../services/geolocation'
 import type { AppStore } from '../store/types'
-import type { BackupPayload, Profile, Project, UserLocation } from '../types'
+import type { BackupPayload, GrassType, Profile, Project, UserLocation } from '../types'
 
 interface StoreThis {
   $store: AppStore
@@ -34,9 +35,35 @@ function bindProject<K extends keyof Project>(field: K) {
 
 export default {
   name: 'Settings',
-  components: { LocationSelect },
+  components: { LocationSelect, SlimSelect },
   data() {
-    return { status: '', locStatus: '', grassTypeOptions }
+    return {
+      status: '',
+      locStatus: '',
+      grassTypeOptions,
+      preferredSeedSelectData: [
+        { text: 'Not set', value: 'none' },
+        { text: 'Calypsow', value: 'calypsow' },
+        { text: 'Resilience II', value: 'resilience' },
+      ],
+      soilTypeSelectData: [
+        { text: 'Unknown', value: 'none' },
+        { text: 'Clay', value: 'clay' },
+        { text: 'Loam', value: 'loam' },
+        { text: 'Sandy', value: 'sandy' },
+      ],
+      sunExposureSelectData: [
+        { text: 'Unknown', value: 'none' },
+        { text: 'Full sun', value: 'full' },
+        { text: 'Mixed', value: 'mixed' },
+        { text: 'Mostly shade', value: 'shade' },
+      ],
+      phaseSelectData: [
+        { text: 'Maintenance', value: 'maintenance' },
+        { text: 'Renovation', value: 'renovation' },
+        { text: 'Establishment', value: 'establishment' },
+      ],
+    }
   },
   computed: {
     location(): UserLocation {
@@ -94,6 +121,44 @@ export default {
       },
       set(v: string) {
         this.$store.dispatch('updateProject', { notes: v })
+      },
+    },
+    grassTypeSelect: {
+      get(): string {
+        return this.grassType || 'auto'
+      },
+      set(v: string) {
+        this.grassType = v === 'auto' ? '' : (v as GrassType)
+      },
+    },
+    grassTypeSelectData(): { text: string; value: string }[] {
+      return [
+        { text: `Auto — ${this.inferredGrassLabel || 'set a city first'}`, value: 'auto' },
+        ...this.grassTypeOptions.map((opt) => ({ text: opt.label, value: opt.id })),
+      ]
+    },
+    preferredSeedSelect: {
+      get(): string {
+        return this.preferredSeed || 'none'
+      },
+      set(v: string) {
+        this.preferredSeed = v === 'none' ? '' : v
+      },
+    },
+    soilTypeSelect: {
+      get(): string {
+        return this.soilType || 'none'
+      },
+      set(v: string) {
+        this.soilType = v === 'none' ? '' : v
+      },
+    },
+    sunExposureSelect: {
+      get(): string {
+        return this.sunExposure || 'none'
+      },
+      set(v: string) {
+        this.sunExposure = v === 'none' ? '' : v
       },
     },
   },
@@ -192,7 +257,6 @@ export default {
     }
 
     input,
-    select,
     textarea {
       min-height: var(--input-height);
       padding: 0.5rem 0.65rem;
@@ -305,38 +369,35 @@ export default {
           </label>
           <label>
             <span>Grass type</span>
-            <select v-model="grassType">
-              <option value="">Auto — {{ inferredGrassLabel || 'set a city first' }}</option>
-              <option v-for="opt in grassTypeOptions" :key="opt.id" :value="opt.id">
-                {{ opt.label }}
-              </option>
-            </select>
+            <SlimSelect
+              v-model="grassTypeSelect"
+              :data="grassTypeSelectData"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
           <label>
             <span>Preferred seed</span>
-            <select v-model="preferredSeed">
-              <option value="">Not set</option>
-              <option value="calypsow">Calypsow</option>
-              <option value="resilience">Resilience II</option>
-            </select>
+            <SlimSelect
+              v-model="preferredSeedSelect"
+              :data="preferredSeedSelectData"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
           <label>
             <span>Soil type</span>
-            <select v-model="soilType">
-              <option value="">Unknown</option>
-              <option value="clay">Clay</option>
-              <option value="loam">Loam</option>
-              <option value="sandy">Sandy</option>
-            </select>
+            <SlimSelect
+              v-model="soilTypeSelect"
+              :data="soilTypeSelectData"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
           <label>
             <span>Sun exposure</span>
-            <select v-model="sunExposure">
-              <option value="">Unknown</option>
-              <option value="full">Full sun</option>
-              <option value="mixed">Mixed</option>
-              <option value="shade">Mostly shade</option>
-            </select>
+            <SlimSelect
+              v-model="sunExposureSelect"
+              :data="sunExposureSelectData"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
           <label class="full">
             <span>Notes</span>
@@ -365,11 +426,11 @@ export default {
         <div class="form-grid">
           <label>
             <span>Phase</span>
-            <select v-model="phase">
-              <option value="maintenance">Maintenance</option>
-              <option value="renovation">Renovation</option>
-              <option value="establishment">Establishment</option>
-            </select>
+            <SlimSelect
+              v-model="phase"
+              :data="phaseSelectData"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
           <label>
             <span>Kill applied</span>

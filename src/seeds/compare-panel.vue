@@ -1,17 +1,18 @@
 <script lang="ts">
 import BarChart from '../components/bar-chart.vue'
+import SlimSelect from 'slim-select/vue'
 import { ratingColor } from '../charts/bars'
+import { indexForSpecies } from '../data/seedDb'
 import { scoreBlendForLocation } from '../services/suitability'
 import { fitTone } from './fit-ui'
 import type { PropType } from 'vue'
-import type { BarDatum, Blend, BlendFit, Cultivar, UserLocation } from '../types'
+import type { BarDatum, Blend, BlendFit, UserLocation } from '../types'
 
 export default {
   name: 'ComparePanel',
-  components: { BarChart },
+  components: { BarChart, SlimSelect },
   props: {
     blends: { type: Array as PropType<Blend[]>, required: true },
-    cultivarIndex: { type: Object as PropType<Record<string, Cultivar>>, required: true },
     userLocation: { type: Object as PropType<UserLocation | null>, default: null },
     ids: { type: Array as PropType<string[]>, required: true },
   },
@@ -46,6 +47,12 @@ export default {
     colorChart(): BarDatum[] {
       return this.traitBars('color')
     },
+    blendSelectData(): { text: string; value: string }[] {
+      return [
+        { text: '—', value: 'none' },
+        ...this.blends.map((b) => ({ text: b.name, value: b.id })),
+      ]
+    },
   },
   methods: {
     fitTone,
@@ -53,7 +60,11 @@ export default {
       if (!blend) return null
       const key = `${blend.id}:${this.userLocation?.latitude}:${this.userLocation?.longitude}`
       if (!this.fitCache[key]) {
-        this.fitCache[key] = scoreBlendForLocation(blend, this.cultivarIndex, this.userLocation)
+        this.fitCache[key] = scoreBlendForLocation(
+          blend,
+          indexForSpecies(blend.species),
+          this.userLocation,
+        )
       }
       return this.fitCache[key]
     },
@@ -65,10 +76,13 @@ export default {
         })
         .filter((d) => d.value > 0)
     },
-    setSlot(index: number, event: Event) {
+    setSlot(index: number, value: string) {
       const next = [...this.ids]
-      next[index] = (event.target as HTMLSelectElement).value
+      next[index] = value === 'none' ? '' : value
       this.$emit('update:ids', next)
+    },
+    slotValue(index: number): string {
+      return this.ids[index] || 'none'
     },
   },
 }
@@ -81,6 +95,11 @@ export default {
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-bottom: 1rem;
+
+    .field {
+      flex: 1 1 12rem;
+      min-width: 12rem;
+    }
   }
 
   .compare-grid {
@@ -122,10 +141,13 @@ export default {
     <div class="compare-picks">
       <label v-for="slot in 3" :key="slot" class="field">
         <span>Blend {{ slot }}</span>
-        <select class="select" :value="ids[slot - 1]" @change="setSlot(slot - 1, $event)">
-          <option value="">—</option>
-          <option v-for="b in blends" :key="b.id" :value="b.id">{{ b.name }}</option>
-        </select>
+        <SlimSelect
+          :model-value="slotValue(slot - 1)"
+          :data="blendSelectData"
+          :settings="{ showSearch: false, allowDeselect: false }"
+          :aria-label="'Blend ' + slot"
+          @update:model-value="setSlot(slot - 1, $event)"
+        />
       </label>
     </div>
 
