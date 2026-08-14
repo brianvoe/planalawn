@@ -2,9 +2,9 @@
 import Conditions from '../components/conditions.vue'
 import { tasks } from '../data/tasks'
 import { timingByTask, monthLabels } from '../data/timingRules'
-import { evaluateAllTasks, groupByBucket } from '../services/timing'
+import { evaluateAllTasks } from '../services/timing'
 import type { PropType } from 'vue'
-import type { Bucket, Conditions as Weather, EvaluatedTask, Task } from '../types'
+import type { Conditions as Weather, EvaluatedTask, Task } from '../types'
 
 export default {
   name: 'Calendar',
@@ -18,31 +18,53 @@ export default {
   data() {
     return {
       monthLabels,
-      bucketOrder: [
-        { key: 'now' as const, label: 'Do now' },
-        { key: 'soon' as const, label: 'Coming up' },
-        { key: 'later' as const, label: 'Out of season / later' },
-      ],
+      selectedMonth: new Date().getMonth() + 1,
     }
   },
   computed: {
     currentMonth(): number {
       return new Date().getMonth() + 1
     },
-    evaluated(): EvaluatedTask[] {
-      return evaluateAllTasks({ soilTempF: this.conditions?.soilTemp6F })
+    isBrowsing(): boolean {
+      return this.selectedMonth !== this.currentMonth
     },
-    groups(): Record<Bucket, EvaluatedTask[]> {
-      return groupByBucket(this.evaluated)
+    selectedMonthLabel(): string {
+      return monthLabels[this.selectedMonth - 1]
+    },
+    monthTasks(): EvaluatedTask[] {
+      return evaluateAllTasks({
+        month: this.selectedMonth,
+        soilTempF: this.isBrowsing ? null : this.conditions?.soilTemp6F,
+      })
+        .filter((item) => item.primary || item.secondary)
+        .sort((a, b) => Number(b.primary) - Number(a.primary))
     },
   },
   methods: {
+    selectMonth(month: number) {
+      this.selectedMonth = month
+    },
+    showThisMonth() {
+      this.selectedMonth = this.currentMonth
+    },
     markersForMonth(month: number): Task[] {
       return tasks.filter((t) => {
         const rule = timingByTask[t.id]
         if (!rule) return false
         return rule.months.includes(month) || rule.secondaryMonths.includes(month)
       })
+    },
+    itemReason(item: EvaluatedTask): string {
+      if (this.isBrowsing) return item.rule.note
+      return item.reason
+    },
+    chipClass(item: EvaluatedTask): string {
+      if (this.isBrowsing) return item.primary ? 'chip--brand' : 'chip--accent'
+      return `chip--${item.soil.tone}`
+    },
+    chipLabel(item: EvaluatedTask): string {
+      if (this.isBrowsing) return item.primary ? 'Primary' : 'Also typical'
+      return item.soil.label
     },
   },
 }
@@ -80,7 +102,11 @@ export default {
   }
 
   .month-pill {
+    display: block;
+    width: 100%;
+    margin: 0;
     padding: 0.45rem 0.35rem;
+    font: inherit;
     font-size: 0.72rem;
     font-weight: 600;
     color: var(--color-text-muted);
@@ -89,10 +115,34 @@ export default {
     border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) * 2);
     box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    appearance: none;
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
 
-    &.current {
+    &:hover {
+      color: var(--color-text);
+      border-color: var(--color-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &.current:not(.selected) {
       color: var(--color-primary-strong);
       border-color: var(--color-primary);
+    }
+
+    &.selected {
+      color: var(--color-primary-strong);
+      background: var(--color-primary-soft);
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow);
     }
 
     .month-pill__dots {
@@ -112,16 +162,9 @@ export default {
     border-radius: 50%;
   }
 
-  .bucket {
-    h2 {
-      margin: 0 0 0.75rem;
-      font-size: 1.25rem;
-    }
-
-    .bucket__list {
-      display: grid;
-      gap: 0.65rem;
-    }
+  .job-list {
+    display: grid;
+    gap: 0.65rem;
   }
 
   .task-row {
@@ -151,6 +194,20 @@ export default {
       flex-shrink: 0;
     }
   }
+
+  .month-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.85rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+
+    strong {
+      color: var(--color-text);
+    }
+  }
 }
 </style>
 
@@ -164,7 +221,7 @@ export default {
         </p>
         <h1>What to work on next.</h1>
         <p class="lede">
-          Seeding opens when your soil hits the right band — not when the month says so.
+          Jobs for the month you pick. This month also checks live soil temperature.
         </p>
       </header>
 
@@ -176,11 +233,18 @@ export default {
       />
 
       <section class="month-strip" aria-label="Task months">
-        <div
+        <button
           v-for="(label, idx) in monthLabels"
           :key="label"
+          type="button"
           class="month-pill"
-          :class="{ current: idx + 1 === currentMonth }"
+          :class="{
+            current: idx + 1 === currentMonth,
+            selected: idx + 1 === selectedMonth,
+          }"
+          :aria-pressed="idx + 1 === selectedMonth"
+          :aria-current="idx + 1 === currentMonth ? 'date' : undefined"
+          @click="selectMonth(idx + 1)"
         >
           <span>{{ label }}</span>
           <div class="month-pill__dots">
@@ -191,26 +255,37 @@ export default {
               :title="t.name"
             />
           </div>
-        </div>
+        </button>
       </section>
 
-      <section v-for="bucket in bucketOrder" :key="bucket.key" class="bucket">
-        <h2>{{ bucket.label }}</h2>
-        <div v-if="groups[bucket.key].length" class="bucket__list">
+      <p class="month-status">
+        <template v-if="isBrowsing">
+          <span><strong>{{ selectedMonthLabel }}</strong> — typical windows, not today’s soil.</span>
+          <button type="button" class="btn btn--ghost btn--sm" @click="showThisMonth">
+            Back to this month
+          </button>
+        </template>
+        <template v-else>
+          <span><strong>{{ selectedMonthLabel }}</strong> · live soil temperature</span>
+        </template>
+      </p>
+
+      <section class="month-jobs" :aria-label="`Jobs in ${selectedMonthLabel}`">
+        <div v-if="monthTasks.length" class="job-list">
           <router-link
-            v-for="item in groups[bucket.key]"
+            v-for="item in monthTasks"
             :key="item.task.id"
             class="card card--link task-row"
             :to="`/tasks/${item.task.id}`"
           >
             <div>
               <h3>{{ item.task.name }}</h3>
-              <p>{{ item.reason }}</p>
+              <p>{{ itemReason(item) }}</p>
             </div>
-            <span class="chip" :class="`chip--${item.soil.tone}`">{{ item.soil.label }}</span>
+            <span class="chip" :class="chipClass(item)">{{ chipLabel(item) }}</span>
           </router-link>
         </div>
-        <p v-else class="empty">Nothing in this bucket right now.</p>
+        <p v-else class="empty">Nothing typically due in {{ selectedMonthLabel }}.</p>
       </section>
     </div>
   </div>
