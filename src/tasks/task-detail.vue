@@ -3,10 +3,11 @@ import Conditions from '../components/conditions.vue'
 import RateCalculator from './rate-calculator.vue'
 import SprayerCalculator from '../sprayer/calculator.vue'
 import { getTask } from '../data/tasks'
+import { grassNoteForTask, grassTypeLabels } from '../data/grass'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
 import type { PropType } from 'vue'
-import type { Conditions as Weather, EvaluatedTask, Project, Task, TaskLog } from '../types'
+import type { Conditions as Weather, EvaluatedTask, GrassType, Project, Task, TaskLog } from '../types'
 
 const milestoneMap: Record<string, keyof Project> = {
   'lawn-kill': 'killAppliedAt',
@@ -43,6 +44,16 @@ export default {
     needsSoil(): boolean {
       const rule = timingByTask[this.id]
       return Boolean(rule && (rule.soilMinF != null || rule.soilMaxF != null))
+    },
+    grassType(): GrassType | null {
+      return this.$store.getters.grassType
+    },
+    grassHint(): string {
+      const note = grassNoteForTask(this.id, this.grassType)
+      if (!note) return ''
+      const label = this.grassType ? grassTypeLabels[this.grassType] : 'your lawn'
+      const inferred = this.$store.getters.grassTypeIsInferred ? ' (inferred from USDA zone)' : ''
+      return `${label}${inferred}: ${note}`
     },
   },
   methods: {
@@ -259,6 +270,7 @@ export default {
         <p v-if="evaluation.soil" class="soil">
           Soil gate: <strong>{{ evaluation.soil.label }}</strong> — {{ evaluation.soil.detail }}
         </p>
+        <p v-if="grassHint" class="soil">{{ grassHint }}</p>
         <Conditions
           v-if="needsSoil"
           :conditions="conditions"
@@ -328,12 +340,14 @@ export default {
         <SprayerCalculator
           v-if="task.calculator.type === 'sprayer'"
           :rate-key="task.calculator.rateKey"
+          :rate-keys="task.calculator.rateKeys"
         />
         <RateCalculator
           v-else
           :mode="task.calculator.type"
           :rate-key="task.calculator.rateKey"
           :alt-rate-key="task.calculator.altRateKey"
+          :rate-keys="task.calculator.rateKeys"
         />
       </section>
 

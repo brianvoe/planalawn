@@ -23,7 +23,7 @@ const FEATURES = [
   {
     icon: 'fa-list-check',
     title: 'Task playbooks',
-    body: 'Kill, aerate, seed, topdress, fertilize, water — each with its own gate.',
+    body: 'Kill, aerate, seed, weeds, grubs, fertilize — each with its own gate.',
     to: '/tasks',
   },
   {

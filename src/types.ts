@@ -5,6 +5,7 @@ export type LocationSource = 'zip' | 'geocode' | 'geolocation' | 'metro'
 export type MixMode = 'perGallon' | 'per1000'
 export type CalculatorType = 'sprayer' | 'coverage' | 'volume'
 export type ProjectPhase = 'maintenance' | 'renovation' | 'establishment'
+export type GrassType = 'cool' | 'mixed' | 'warm'
 
 export interface ClimateBand {
   id: ClimateBandId
@@ -61,6 +62,7 @@ export interface TaskCalculator {
   type: CalculatorType
   rateKey: string
   altRateKey?: string
+  rateKeys?: string[]
 }
 
 export interface Task {
@@ -120,6 +122,7 @@ export interface RateTemplate {
   range?: [number, number]
   mixMode?: MixMode
   ozPerGallon?: number
+  ozPer1000?: number
   rangeOzPerGallon?: [number, number]
   depthInches?: number
 }
@@ -264,6 +267,7 @@ export interface BlendFit {
 export interface Profile {
   lawnName: string
   lawnSqFt: number
+  grassType: GrassType | ''
   preferredSeed: string
   soilType: string
   sunExposure: string

@@ -1,9 +1,11 @@
 import type { Store } from 'vuex'
-import type { BackupPayload, Blend, Equipment, Profile, Project, RootState, TaskLog, UserLocation } from '../types'
+import type { BackupPayload, Blend, Equipment, GrassType, Profile, Project, RootState, TaskLog, UserLocation } from '../types'
 
 export interface StoreGetters {
   lawnSqFt: number
   preferredSeed: string
+  grassType: GrassType | null
+  grassTypeIsInferred: boolean
   tankGallons: number
   sprayCoverage: number
   userLocation: UserLocation | null

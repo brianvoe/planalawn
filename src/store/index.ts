@@ -2,10 +2,12 @@ import './types'
 import { createStore } from 'vuex'
 import { loadPersistedState, localStoragePlugin, clearPersistedState } from './persist'
 import { curatedBlendList } from '../data/seedDb'
+import { resolvedGrassType } from '../data/grass'
 import type {
   BackupPayload,
   Blend,
   Equipment,
+  GrassType,
   Profile,
   Project,
   RateOverride,
@@ -29,6 +31,7 @@ function defaultState(): RootState {
     profile: {
       lawnName: 'My lawn',
       lawnSqFt: 5000,
+      grassType: '',
       preferredSeed: '',
       soilType: '',
       sunExposure: '',
@@ -98,6 +101,8 @@ export default createStore<RootState>({
   getters: {
     lawnSqFt: (s) => s.profile.lawnSqFt,
     preferredSeed: (s) => s.profile.preferredSeed,
+    grassType: (s): GrassType | null => resolvedGrassType(s.profile.grassType, s.location),
+    grassTypeIsInferred: (s) => !s.profile.grassType && Boolean(resolvedGrassType('', s.location)),
     tankGallons: (s) => s.equipment.tankGallons,
     sprayCoverage: (s) => s.equipment.sprayCoverageSqFtPerTank,
     userLocation: (s): UserLocation | null =>

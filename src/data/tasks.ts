@@ -177,6 +177,162 @@ export const tasks: Task[] = [
     calculator: null,
     caveats: ['Adjust for heat, wind, and shade — there is no single daily minute count.'],
   },
+  {
+    id: 'pre-em-spring',
+    name: 'Spring pre-emergent',
+    category: 'weeds',
+    summary:
+      'Crabgrass preventer before seed germinates. Soil temperature — not the calendar — is the cue.',
+    why: 'Stops crabgrass and other summer annuals from starting. Cheaper than chasing clumps in July.',
+    prerequisites: [],
+    nextTasks: ['post-em-grassy'],
+    steps: [
+      'Confirm soil at 6 cm is ~50–55°F and trending up — not already in the 60s.',
+      'Mow, then apply on a dry, calm day.',
+      'Water in if the label says so (most granules need irrigation or rain).',
+      'Stay off until dry; keep pets off per the label.',
+      'Do not seed or overseed until the product’s wait interval is over.',
+    ],
+    materials: ['Pre-emergent granule or liquid (prodiamine, dithiopyr, or pendimethalin type)', 'Spreader or sprayer', 'PPE'],
+    calculator: {
+      type: 'coverage',
+      rateKey: 'preEmGeneric',
+      rateKeys: ['preEmGeneric', 'prodiamineG', 'dithiopyrG', 'pendimethalinG'],
+    },
+    caveats: [
+      'Most crabgrass preventers also block lawn seed. Skip this if you will seed soon.',
+      'Rates are starting templates — concentration on the bag you bought wins.',
+    ],
+  },
+  {
+    id: 'pre-em-fall',
+    name: 'Fall pre-emergent',
+    category: 'weeds',
+    summary:
+      'Winter-annual / Poa preventer in late summer. Conflicts with fall overseeding.',
+    why: 'Poa and henbit germinate as soils cool. A fall barrier helps if you are not seeding.',
+    prerequisites: [],
+    nextTasks: ['post-em-broadleaf'],
+    steps: [
+      'Decide this season: fall seed, or fall pre-em — not both with a typical preventer.',
+      'Apply while soil is still warm enough for the product to bind (often Aug–Sep).',
+      'Water in per label.',
+      'Log the date so you do not seed into the residue.',
+    ],
+    materials: ['Pre-emergent granule or liquid', 'Spreader or sprayer', 'PPE'],
+    calculator: {
+      type: 'coverage',
+      rateKey: 'preEmGeneric',
+      rateKeys: ['preEmGeneric', 'prodiamineG', 'dithiopyrG', 'pendimethalinG'],
+    },
+    caveats: [
+      'If this app is telling you to overseed, skip fall pre-em unless the label allows seeding.',
+      'Split applications and wait intervals are product-specific.',
+    ],
+  },
+  {
+    id: 'post-em-broadleaf',
+    name: 'Post-emergent — broadleaf weeds',
+    category: 'weeds',
+    summary:
+      'Spray dandelion, clover, henbit and other broadleaves while they are growing.',
+    why: 'Dense turf still gets broadleaves. Spot or broadcast after they are up, not before.',
+    prerequisites: [],
+    nextTasks: ['post-em-grassy'],
+    steps: [
+      'Identify broadleaf vs grassy weeds — this pass does not replace a crabgrass killer.',
+      'Spray on a calm day when weeds are actively growing and turf is not drought-stressed.',
+      'Avoid rain in the label’s rainfast window; keep people and pets off until dry.',
+      'Skip seedbeds and new grass until the label says it is safe.',
+    ],
+    materials: ['Broadleaf herbicide (2,4-D / 3-way type)', 'Pump sprayer', 'PPE'],
+    calculator: {
+      type: 'sprayer',
+      rateKey: 'broadleaf3way',
+      rateKeys: ['broadleaf3way', 'twentyFourD'],
+    },
+    caveats: [
+      'High heat + 2,4-D can yellow desirable grass. Morning applications in moderate temps are safer.',
+      'Confirm the mix lists your grass species, especially on mixed or bermuda lawns.',
+    ],
+  },
+  {
+    id: 'post-em-grassy',
+    name: 'Post-emergent — grassy weeds',
+    category: 'weeds',
+    summary:
+      'Crabgrass and foxtail rescue after they have already germinated.',
+    why: 'Pre-em misses happen. Young plants are much easier than mature clumps.',
+    prerequisites: [],
+    nextTasks: [],
+    steps: [
+      'Confirm it is crabgrass/foxtail, not desirable grass going off-color.',
+      'Treat while plants are small; mature clumps often need repeat passes or a different plan.',
+      'Use a product labeled for your grass type (quinclorac-type is common on tall fescue).',
+      'Water and mowing intervals follow the label — don’t assume same-day mow is fine.',
+    ],
+    materials: ['Grassy-weed herbicide (quinclorac-type)', 'Pump sprayer', 'PPE'],
+    calculator: {
+      type: 'sprayer',
+      rateKey: 'quinclorac',
+      rateKeys: ['quinclorac'],
+    },
+    caveats: [
+      'A crabgrass killer safe on fescue can wreck bermuda in a mixed lawn (and the reverse).',
+      'This is not a substitute for spring pre-emergent next year.',
+    ],
+  },
+  {
+    id: 'grub-preventative',
+    name: 'Grub control — preventative',
+    category: 'pests',
+    summary:
+      'Season-ahead grub product, before larvae are large enough to chew roots.',
+    why: 'Preventative actives need time to work. Waiting until the lawn peels up is a different job.',
+    prerequisites: [],
+    nextTasks: ['grub-curative'],
+    steps: [
+      'Apply in the product’s window (often April–June; some actives want earlier).',
+      'Water in so the material reaches the root zone.',
+      'Keep a note of what you used — curative products are a different chemistry later.',
+    ],
+    materials: ['Preventative grub granule (imidacloprid or chlorantraniliprole type)', 'Spreader', 'PPE'],
+    calculator: {
+      type: 'coverage',
+      rateKey: 'imidaclopridG',
+      rateKeys: ['imidaclopridG', 'chlorantraniliproleG'],
+    },
+    caveats: [
+      'Preventative and curative bags are not interchangeable. Match the timing to the active.',
+      'If you had no grub history, this is optional — not every lawn needs an annual insecticide.',
+    ],
+  },
+  {
+    id: 'grub-curative',
+    name: 'Grub control — curative',
+    category: 'pests',
+    summary:
+      'Treat when you already see damage: spongy turf, scattered brown, animals digging.',
+    why: 'Large larvae are feeding now. A curative active (often trichlorfon-type) is the usual rescue.',
+    prerequisites: [],
+    nextTasks: ['grub-preventative'],
+    steps: [
+      'Peel back a square of turf: C-shaped grubs in the root zone confirm the diagnosis.',
+      'Apply a curative product labeled for existing grubs — not last spring’s preventative leftover.',
+      'Water thoroughly so it reaches the larvae.',
+      'Keep people and pets off per the label; plan preventative next season if pressure was high.',
+    ],
+    materials: ['Curative grub product (trichlorfon-type)', 'Spreader or sprayer', 'PPE'],
+    calculator: {
+      type: 'coverage',
+      rateKey: 'trichlorfonG',
+      rateKeys: ['trichlorfonG'],
+    },
+    caveats: [
+      'If you cannot find grubs, brown patches may be drought, fungus, or animals — don’t spray blind.',
+      'Some preventative products do little once larvae are large.',
+    ],
+  },
 ]
 
 export function getTask(id: string): Task | null {

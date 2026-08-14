@@ -1,6 +1,7 @@
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
 import { rateTemplates, amountFromPer1000, volumeCubicYards } from '../data/rates'
+import type { PropType } from 'vue'
 import type { RateTemplate } from '../types'
 
 export default {
@@ -10,6 +11,7 @@ export default {
     mode: { type: String, required: true },
     rateKey: { type: String, required: true },
     altRateKey: { type: String, default: null },
+    rateKeys: { type: Array as PropType<string[] | null>, default: null },
   },
   data() {
     return {
@@ -52,8 +54,13 @@ export default {
       return this.template?.unit || 'lb'
     },
     altOptions(): RateTemplate[] {
-      const keys = [this.rateKey, this.altRateKey].filter(Boolean)
-      return keys.map((k) => rateTemplates[k]).filter((t): t is RateTemplate => Boolean(t))
+      const extra = this.rateKeys
+      const keys =
+        extra && extra.length > 0
+          ? extra
+          : [this.rateKey, this.altRateKey].filter((k): k is string => Boolean(k))
+      const unique = [...new Set(keys)]
+      return unique.map((k) => rateTemplates[k]).filter((t): t is RateTemplate => Boolean(t))
     },
     showPer1000(): boolean {
       return this.mode === 'coverage'
@@ -145,7 +152,7 @@ export default {
         <span>Rate / 1000 sq ft ({{ unit }})</span>
         <input v-model.number="per1000" type="number" min="0" step="0.1" />
       </label>
-      <label v-if="altOptions.length" class="rate-calc__select">
+      <label v-if="altOptions.length > 1" class="rate-calc__select">
         <span>Product template</span>
         <select v-model="selectedKey">
           <option v-for="opt in altOptions" :key="opt.id" :value="opt.id">

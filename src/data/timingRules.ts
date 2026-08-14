@@ -82,6 +82,48 @@ export const timingByTask: Record<string, TimingRule> = {
     soilMaxF: null,
     note: 'Critical after seeding; summer watering is survival, not establishment.',
   },
+  'pre-em-spring': {
+    months: [3, 4],
+    secondaryMonths: [2, 5],
+    soilMinF: 50,
+    soilMaxF: 58,
+    note: 'Before crabgrass germinates. Soil ~50–55°F and rising is the usual cue — too warm and you missed it.',
+  },
+  'pre-em-fall': {
+    months: [8, 9],
+    secondaryMonths: [10],
+    soilMinF: 55,
+    soilMaxF: 75,
+    note: 'Winter annuals / Poa. Skip this pass if you plan to seed this fall.',
+  },
+  'post-em-broadleaf': {
+    months: [4, 5, 10],
+    secondaryMonths: [3, 6, 9, 11],
+    soilMinF: 50,
+    soilMaxF: null,
+    note: 'Weeds actively growing. Avoid drought-stressed turf and hot afternoons.',
+  },
+  'post-em-grassy': {
+    months: [5, 6, 7],
+    secondaryMonths: [8],
+    soilMinF: 60,
+    soilMaxF: null,
+    note: 'Young crabgrass/foxtail is easier than mature clumps. Soil should be warm and weeds growing.',
+  },
+  'grub-preventative': {
+    months: [4, 5, 6],
+    secondaryMonths: [7],
+    soilMinF: 50,
+    soilMaxF: null,
+    note: 'Before larvae are large. Exact month depends on the active (April vs early summer) — read the label.',
+  },
+  'grub-curative': {
+    months: [8, 9],
+    secondaryMonths: [7, 10],
+    soilMinF: 55,
+    soilMaxF: null,
+    note: 'When you see scattered brown, spongy turf, or animals digging. Water the product in.',
+  },
 }
 
 export const monthLabels = [

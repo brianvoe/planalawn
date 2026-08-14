@@ -1,29 +1,48 @@
 <script lang="ts">
 import LawnSize from '../components/lawn-size.vue'
 import { rateTemplates, sprayerMix } from '../data/rates'
-import type { MixMode, SprayerMixResult } from '../types'
+import type { PropType } from 'vue'
+import type { MixMode, RateTemplate, SprayerMixResult } from '../types'
 
 export default {
   name: 'Calculator',
   components: { LawnSize },
   props: {
     rateKey: { type: String, default: 'glyphosate' },
+    rateKeys: { type: Array as PropType<string[] | null>, default: null },
   },
   data() {
-    const tmpl = rateTemplates[this.rateKey] || rateTemplates.glyphosate
-    const override = this.$store.state.rateOverrides[this.rateKey] || {}
+    const initial = this.rateKey
+    const tmpl = rateTemplates[initial] || rateTemplates.glyphosate
+    const override = this.$store.state.rateOverrides[initial] || {}
     return {
+      selectedKey: initial,
       mode: (tmpl.mixMode || 'perGallon') as MixMode,
       ozPerGallon: override.ozPerGallon ?? tmpl.ozPerGallon ?? 2,
-      ozPer1000: override.ozPer1000 ?? 2,
+      ozPer1000: override.ozPer1000 ?? tmpl.ozPer1000 ?? 2,
     }
   },
   watch: {
+    selectedKey(key: string) {
+      const tmpl = rateTemplates[key] || rateTemplates.glyphosate
+      const override = this.$store.state.rateOverrides[key] || {}
+      this.mode = (tmpl.mixMode || 'perGallon') as MixMode
+      this.ozPerGallon = override.ozPerGallon ?? tmpl.ozPerGallon ?? 2
+      this.ozPer1000 = override.ozPer1000 ?? tmpl.ozPer1000 ?? 2
+    },
     ozPerGallon(v: number) {
       if (this.mode === 'perGallon') {
         this.$store.dispatch('setRateOverride', {
-          rateKey: this.rateKey,
+          rateKey: this.selectedKey,
           values: { ozPerGallon: v },
+        })
+      }
+    },
+    ozPer1000(v: number) {
+      if (this.mode === 'per1000') {
+        this.$store.dispatch('setRateOverride', {
+          rateKey: this.selectedKey,
+          values: { ozPer1000: v },
         })
       }
     },
@@ -37,6 +56,15 @@ export default {
     },
     sprayCoverage(): number {
       return this.$store.getters.sprayCoverage
+    },
+    productOptions(): RateTemplate[] {
+      const extra = this.rateKeys
+      const keys = extra && extra.length > 0 ? extra : [this.rateKey]
+      const unique = [...new Set(keys)]
+      return unique.map((k) => rateTemplates[k]).filter((t): t is RateTemplate => Boolean(t))
+    },
+    productNotes(): string {
+      return rateTemplates[this.selectedKey]?.notes || ''
     },
     tankGallonsLocal: {
       get(): number {
@@ -162,6 +190,14 @@ export default {
 <template>
   <div class="sprayer">
     <div class="sprayer__controls">
+      <label v-if="productOptions.length > 1">
+        <span>Product template</span>
+        <select v-model="selectedKey">
+          <option v-for="opt in productOptions" :key="opt.id" :value="opt.id">
+            {{ opt.label }}
+          </option>
+        </select>
+      </label>
       <label>
         <span>Mix mode</span>
         <select v-model="mode">
@@ -204,6 +240,7 @@ export default {
         <em>{{ (result.totalProductOz / 16).toFixed(2) }} pints</em>
       </div>
     </div>
+    <p v-if="productNotes" class="sprayer__note">{{ productNotes }}</p>
     <p class="sprayer__note">
       Starting calculator only — confirm concentration and PPE on your product label before mixing.
       Tank size and coverage save in this browser.

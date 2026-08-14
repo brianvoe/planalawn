@@ -1,6 +1,7 @@
 <script lang="ts">
 import LocationSelect from '../components/location-select.vue'
 import { zoneLine } from '../data/climate'
+import { grassTypeLabels, grassTypeOptions, inferGrassType } from '../data/grass'
 import { requestBrowserLocation } from '../services/geolocation'
 import type { AppStore } from '../store/types'
 import type { BackupPayload, Profile, Project, UserLocation } from '../types'
@@ -35,7 +36,7 @@ export default {
   name: 'Settings',
   components: { LocationSelect },
   data() {
-    return { status: '', locStatus: '' }
+    return { status: '', locStatus: '', grassTypeOptions }
   },
   computed: {
     location(): UserLocation {
@@ -44,8 +45,15 @@ export default {
     zoneLabel(): string {
       return zoneLine(this.location)
     },
+    inferredGrassLabel(): string {
+      const inferred = inferGrassType(this.location)
+      if (!inferred) return ''
+      const zone = this.location.usdaZone ? `USDA ${this.location.usdaZone}` : 'your climate'
+      return `${grassTypeLabels[inferred]} (from ${zone})`
+    },
     lawnName: bindProfile('lawnName'),
     preferredSeed: bindProfile('preferredSeed'),
+    grassType: bindProfile('grassType'),
     soilType: bindProfile('soilType'),
     sunExposure: bindProfile('sunExposure'),
     profileNotes: bindProfile('notes'),
@@ -296,6 +304,15 @@ export default {
             <input v-model.number="lawnSqFtLocal" type="number" min="100" step="100" />
           </label>
           <label>
+            <span>Grass type</span>
+            <select v-model="grassType">
+              <option value="">Auto — {{ inferredGrassLabel || 'set a city first' }}</option>
+              <option v-for="opt in grassTypeOptions" :key="opt.id" :value="opt.id">
+                {{ opt.label }}
+              </option>
+            </select>
+          </label>
+          <label>
             <span>Preferred seed</span>
             <select v-model="preferredSeed">
               <option value="">Not set</option>
@@ -402,7 +419,7 @@ export default {
       <section class="card muted-card">
         <h2>What gets saved</h2>
         <ul>
-          <li>Lawn profile (size, seed choice, soil/sun, notes)</li>
+          <li>Lawn profile (size, grass type, seed choice, soil/sun, notes)</li>
           <li>Sprayer tank + coverage habits</li>
           <li>Custom rate overrides from calculators</li>
           <li>Task step checks, notes, and “done” dates</li>
