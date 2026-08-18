@@ -4,6 +4,9 @@ import BuyLinks from './buy-links.vue'
 import Calibrate from './calibrate.vue'
 import LawnSize from '../components/lawn-size.vue'
 import { spreaderOptions } from '../data/spreaders'
+import { offersFor } from '../data/commerce/offers'
+import { PAID_LINK_NOTE_SHORT, isPaidLink } from '../services/affiliate'
+import { productTile } from './product-tile'
 import { granularPlan, liquidPlan, spotMixOz } from '../services/apply'
 import {
   convertVolume,
@@ -19,6 +22,7 @@ import {
   volumeUnit,
 } from '../services/units'
 import type { PropType } from 'vue'
+import type { ProductTile } from './product-tile'
 import type { SpreaderOption } from '../data/spreaders'
 import type { GranularPlan, LiquidPlan } from '../services/apply'
 import type { MeasureUnit, VolumeUnit } from '../services/units'
@@ -48,6 +52,28 @@ export default {
     return { showCalibrate: false }
   },
   computed: {
+    /** Nothing to buy means no panel; the arithmetic still stands on its own. */
+    hasOffers(): boolean {
+      return offersFor(this.product.id).length > 0
+    },
+    /**
+     * Said here because the button no longer says it itself.
+     *
+     * The rail on a task page carries this above its cards, and the compact
+     * links used in both places deliberately have no per-link marker — so on
+     * this page the sentence has to come from the panel, or an earning link
+     * would sit on screen with only the footer to disclose it.
+     */
+    paidNote(): string {
+      return offersFor(this.product.id).some(isPaidLink) ? PAID_LINK_NOTE_SHORT : ''
+    },
+    /**
+     * No task context here — the calculator is reached from the product list,
+     * not from a job — so the tile falls back to the product's own first job.
+     */
+    tile(): ProductTile {
+      return productTile(this.product)
+    },
     lawnSqFt(): number {
       return this.$store.getters.lawnSqFt
     },
@@ -208,13 +234,125 @@ export default {
 
 <style lang="scss">
 .plan {
+  /*
+   * The numbers you set and the thing you'd set them for, side by side.
+   *
+   * Buying used to sit under the three result cards, which put it below the
+   * fold on an opened row. Beside the inputs it is visible the moment the row
+   * opens, and it costs no height of its own — the inputs are taller than it.
+   */
+  .plan__top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+    gap: 1rem 1.5rem;
+    align-items: start;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--color-border);
+
+    /* Stacks earlier than the rest of the page: the buy panel needs a fixed
+       20rem for its link to stay on one line, and below this the inputs would
+       be squeezed to pay for it. */
+    @media (max-width: 899px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .plan__buy {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem 0.75rem;
+    background: var(--color-surface-alt);
+    border-radius: calc(var(--border-radius) * 1.5);
+
+    /* Lets the pill use whatever the tile leaves rather than forcing the
+       panel wider than the inputs beside it. */
+    .buy-links {
+      min-width: 0;
+    }
+  }
+
+  /* Spans the row rather than sitting in the panel: at 20rem the sentence
+     runs to four lines, and across the full width it is one. */
+  .plan__buy-note {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  /* The same drawn stand-in the task rail uses, so a product looks like itself
+     in both places — and so a licensed photo later lands in both at once. */
+  .plan__buy-tile {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 3rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--tile-ink) 12%, var(--color-white));
+    border: 1px solid color-mix(in srgb, var(--tile-ink) 22%, transparent);
+    border-radius: var(--border-radius);
+
+    svg {
+      width: 58%;
+      height: 58%;
+      color: var(--tile-ink);
+    }
+
+    &--default,
+    &--feed {
+      --tile-ink: var(--color-primary);
+    }
+
+    &--weeds {
+      --tile-ink: var(--color-accent);
+    }
+
+    &--pests {
+      --tile-ink: var(--color-info);
+    }
+
+    &--marked svg {
+      width: 92%;
+      height: 92%;
+      opacity: 0.18;
+    }
+  }
+
+  .plan__buy-analysis {
+    position: absolute;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--tile-ink);
+  }
+
+  /*
+   * What the label says on the left, the constraints it imposes on the right.
+   * They are read differently — the prose start to finish, the list scanned
+   * for the one line that applies — so stacking them made the page long
+   * without making either easier to find.
+   */
+  .plan__detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.7rem 1.75rem;
+    align-items: start;
+    margin-top: 1rem;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .plan__inputs {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1.15rem;
-    padding-bottom: 1.1rem;
-    margin-bottom: 1.1rem;
-    border-bottom: 1px solid var(--color-border);
 
     label {
       display: grid;
@@ -300,11 +438,23 @@ export default {
     }
   }
 
+  .plan__prose {
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+  }
+
   .plan__note {
     margin: 0.9rem 0 0;
     font-size: 0.84rem;
     line-height: 1.55;
     color: var(--color-text-muted);
+  }
+
+  /* Both columns start on the same line, so whichever leads drops its offset. */
+  .plan__prose .plan__note,
+  .plan__detail .plan__facts {
+    margin-top: 0;
   }
 
   .plan__warn {
@@ -358,26 +508,42 @@ export default {
 
 <template>
   <div class="plan">
-    <div class="plan__inputs">
-      <LawnSize />
-      <template v-if="isLiquid">
-        <label>
-          <span>Tank size ({{ vol }})</span>
-          <input v-model.number="tankLocal" type="number" min="0.5" step="0.5" />
+    <div class="plan__top">
+      <div class="plan__inputs">
+        <LawnSize />
+        <template v-if="isLiquid">
+          <label>
+            <span>Tank size ({{ vol }})</span>
+            <input v-model.number="tankLocal" type="number" min="0.5" step="0.5" />
+          </label>
+          <label>
+            <span>Sq ft per tank</span>
+            <input v-model.number="coverageLocal" type="number" min="50" step="50" />
+          </label>
+        </template>
+        <label v-else class="plan__spreader">
+          <span>Spreader</span>
+          <SlimSelect
+            v-model="spreaderLocal"
+            :data="spreaderOptions"
+            :settings="{ showSearch: false, allowDeselect: false }"
+          />
         </label>
-        <label>
-          <span>Sq ft per tank</span>
-          <input v-model.number="coverageLocal" type="number" min="50" step="50" />
-        </label>
-      </template>
-      <label v-else class="plan__spreader">
-        <span>Spreader</span>
-        <SlimSelect
-          v-model="spreaderLocal"
-          :data="spreaderOptions"
-          :settings="{ showSearch: false, allowDeselect: false }"
-        />
-      </label>
+      </div>
+
+      <div v-if="hasOffers" class="plan__buy">
+        <span
+          class="plan__buy-tile"
+          :class="[`plan__buy-tile--${tile.tone}`, { 'plan__buy-tile--marked': tile.analysis }]"
+          aria-hidden="true"
+        >
+          <font-awesome-icon :icon="tile.icon" />
+          <span v-if="tile.analysis" class="plan__buy-analysis">{{ tile.analysis }}</span>
+        </span>
+        <BuyLinks :product-id="product.id" compact />
+      </div>
+
+      <p v-if="paidNote" class="plan__buy-note">{{ paidNote }}</p>
     </div>
 
     <!-- LIQUID ------------------------------------------------------------->
@@ -449,65 +615,67 @@ export default {
       </div>
     </div>
 
-    <BuyLinks :product-id="product.id" />
-
-    <p class="plan__note">{{ rateLine }}. {{ product.notes }}</p>
-    <p v-if="labelWaterNote" class="plan__note">
-      {{ labelWaterNote }}
-      <button type="button" class="linkish" @click="useLabelWater">Use that</button>
-    </p>
-
     <p v-if="turfWarning" class="plan__warn">
       <font-awesome-icon icon="fa-solid fa-triangle-exclamation" />
       <span>{{ turfWarning }} {{ product.grassNote }}</span>
     </p>
 
-    <ul class="plan__facts">
-      <li v-if="byWeight">
-        <font-awesome-icon icon="fa-solid fa-scale-balanced" />
-        <span>
-          Measured by weight, not volume — this is a dry powder, so it wants a gram scale rather
-          than a measuring cup.
-        </span>
-      </li>
-      <li v-if="product.adjuvant">
-        <font-awesome-icon icon="fa-solid fa-flask" />
-        <span>{{ product.adjuvant }}</span>
-      </li>
-      <li v-if="spotMix">
-        <font-awesome-icon icon="fa-solid fa-droplet" />
-        <span>
-          Spot spraying: {{ spotMix }} per {{ volNoun }} on the label — for touch-ups, not for
-          covering the lawn.
-        </span>
-      </li>
-      <li v-if="waterInLine">
-        <font-awesome-icon icon="fa-solid fa-shower" />
-        <span>{{ waterInLine }}</span>
-      </li>
-      <li v-if="product.reentry">
-        <font-awesome-icon icon="fa-solid fa-clock" />
-        <span>{{ product.reentry }}</span>
-      </li>
-      <li v-if="product.maxPerYear">
-        <font-awesome-icon icon="fa-solid fa-calendar-day" />
-        <span>{{ product.maxPerYear }}</span>
-      </li>
-      <li v-if="product.grassNote && !turfWarning">
-        <font-awesome-icon :icon="['lawn', 'grass']" />
-        <span>{{ product.grassNote }}</span>
-      </li>
-      <li v-if="product.labelUrl">
-        <font-awesome-icon icon="fa-solid fa-file-lines" />
-        <span>
-          <a :href="product.labelUrl" target="_blank" rel="noopener">
-            Read the label
-            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-          </a>
-          — it governs, not this page.
-        </span>
-      </li>
-    </ul>
+    <div class="plan__detail">
+      <div class="plan__prose">
+        <p class="plan__note">{{ rateLine }}. {{ product.notes }}</p>
+        <p v-if="labelWaterNote" class="plan__note">
+          {{ labelWaterNote }}
+          <button type="button" class="linkish" @click="useLabelWater">Use that</button>
+        </p>
+      </div>
+
+      <ul class="plan__facts">
+        <li v-if="byWeight">
+          <font-awesome-icon icon="fa-solid fa-scale-balanced" />
+          <span>
+            Measured by weight, not volume — this is a dry powder, so it wants a gram scale rather
+            than a measuring cup.
+          </span>
+        </li>
+        <li v-if="product.adjuvant">
+          <font-awesome-icon icon="fa-solid fa-flask" />
+          <span>{{ product.adjuvant }}</span>
+        </li>
+        <li v-if="spotMix">
+          <font-awesome-icon icon="fa-solid fa-droplet" />
+          <span>
+            Spot spraying: {{ spotMix }} per {{ volNoun }} on the label — for touch-ups, not for
+            covering the lawn.
+          </span>
+        </li>
+        <li v-if="waterInLine">
+          <font-awesome-icon icon="fa-solid fa-shower" />
+          <span>{{ waterInLine }}</span>
+        </li>
+        <li v-if="product.reentry">
+          <font-awesome-icon icon="fa-solid fa-clock" />
+          <span>{{ product.reentry }}</span>
+        </li>
+        <li v-if="product.maxPerYear">
+          <font-awesome-icon icon="fa-solid fa-calendar-day" />
+          <span>{{ product.maxPerYear }}</span>
+        </li>
+        <li v-if="product.grassNote && !turfWarning">
+          <font-awesome-icon :icon="['lawn', 'grass']" />
+          <span>{{ product.grassNote }}</span>
+        </li>
+        <li v-if="product.labelUrl">
+          <font-awesome-icon icon="fa-solid fa-file-lines" />
+          <span>
+            <a :href="product.labelUrl" target="_blank" rel="noopener">
+              Read the label
+              <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+            </a>
+            — it governs, not this page.
+          </span>
+        </li>
+      </ul>
+    </div>
 
     <div v-if="!isLiquid" class="plan__calibrate">
       <Calibrate

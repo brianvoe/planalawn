@@ -1,12 +1,12 @@
 <script lang="ts">
-import BuyLinks from '../apply/buy-links.vue'
 import Conditions from '../components/conditions.vue'
+import ProductCard from '../apply/product-card.vue'
 import RateCalculator from './rate-calculator.vue'
 import MixCalculator from '../apply/mix-calculator.vue'
 import { getTask } from '../data/tasks'
 import { productsForTask } from '../data/products'
 import { offersFor } from '../data/commerce/offers'
-import { PAID_LINK_NOTE, isPaidLink } from '../services/affiliate'
+import { PAID_LINK_NOTE_SHORT, isPaidLink } from '../services/affiliate'
 import { grassNoteForTask, grassTypeLabels } from '../data/grass'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
@@ -23,7 +23,7 @@ interface Neighbour {
 
 export default {
   name: 'TaskDetail',
-  components: { BuyLinks, Conditions, MixCalculator, RateCalculator },
+  components: { Conditions, MixCalculator, ProductCard, RateCalculator },
   props: {
     id: { type: String, required: true },
     conditions: { type: Object as PropType<Weather | null>, default: null },
@@ -61,13 +61,23 @@ export default {
       return productsForTask(this.id)
     },
     /**
+     * Whether there is a second column at all.
+     *
+     * Mowing, watering and the bed jobs have no products and no soil gate, so
+     * the rail would be an empty 21rem holding the prose to two-thirds width
+     * for nothing. Those pages get the full measure instead.
+     */
+    hasRail(): boolean {
+      return this.needsSoil || this.taskProducts.length > 0
+    },
+    /**
      * Whether anything in this section earns, which is what the disclosure
      * hangs on. Carried here rather than on each row so the sentence appears
      * once instead of beside every product.
      */
     paidNote(): string {
       const paid = this.taskProducts.some((p) => offersFor(p.id).some(isPaidLink))
-      return paid ? PAID_LINK_NOTE : ''
+      return paid ? PAID_LINK_NOTE_SHORT : ''
     },
     effort(): string {
       return sequenceFor(this.id).effort || ''
@@ -118,24 +128,75 @@ export default {
   }
 
   /*
-   * The reading and the verdict it feeds sit beside the title rather than
-   * above the steps: they are the answer to "can I do this today", which is
-   * asked before the instructions matter. The job itself then runs full width.
+   * Two columns for the whole page, not just its top.
+   *
+   * The rail carries the two things you want before you have read anything —
+   * the reading that says whether today is the day, and the products the job
+   * needs — so both are on screen at once. Running it the full height is what
+   * keeps that from costing anything: when the split was only over the header,
+   * the rail stood taller than the title beside it and left a hole above
+   * "Why". The reading column is far the longer of the two on every task, so
+   * it sets the height and the rail simply follows it down.
    */
-  .task-top {
+  .task-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(17rem, 24rem);
-    gap: 1.25rem 2rem;
-    align-items: start;
+    gap: 1.5rem 2rem;
 
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
+    /*
+     * The split is stated once, areas and placements together, and only where
+     * it applies. Both ways out of it — a narrow screen, or a job with nothing
+     * to put in the rail — are then just its absence, leaving one column in
+     * source order, which is already the order to read in: the job, when to do
+     * it, what to buy, then how. Placing the children in rules of their own
+     * would leave them naming areas that no longer exist on those two paths,
+     * and a grid item sent to a missing area stacks on top of its siblings.
+     */
+    @media (min-width: 900px) {
+      &:not(.task-layout--solo) {
+        grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+        grid-template-areas:
+          'head rail'
+          'timing rail'
+          'main rail';
+
+        > .page-header {
+          grid-area: head;
+        }
+
+        > .timing-box {
+          grid-area: timing;
+        }
+
+        > .task-rail {
+          grid-area: rail;
+        }
+
+        > .task-main {
+          grid-area: main;
+        }
+      }
     }
   }
 
-  .task-aside {
+  .task-main {
+    display: grid;
+    gap: 1.5rem;
+    align-content: start;
+  }
+
+  /*
+   * Scrolls with the page rather than following it down.
+   *
+   * Pinning it needs a height cap, because feeding and broadleaf weeds list
+   * seven products and the rail is taller than a laptop window — and a cap
+   * means a scrollbar inside a column that is only about 21rem wide, which
+   * reads as a defect rather than an affordance. The products are already the
+   * first thing beside the title, so pinning was buying very little.
+   */
+  .task-rail__inner {
     display: grid;
     gap: 0.7rem;
+    align-content: start;
   }
 
   .page-header {
@@ -226,8 +287,6 @@ export default {
       color: var(--color-text-muted);
     }
 
-    /* Scoped to the headings: the buy links nested below carry their own
-       icon sizing, and a bare descendant rule would shrink it. */
     h3 svg {
       width: 0.8rem;
       height: 0.8rem;
@@ -235,48 +294,43 @@ export default {
     }
   }
 
-  .kit__products {
+  .rail-products {
     display: grid;
     gap: 0.6rem;
-    margin-top: 0.9rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid var(--color-border);
-  }
 
-  .kit__product {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.3rem 0.9rem;
-  }
-
-  .kit__product-name {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.4rem;
-    flex: 1 1 11rem;
-    margin: 0;
-    font-size: 0.9rem;
-
-    span {
-      font-size: 0.76rem;
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 0.4rem 0 0;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       color: var(--color-text-muted);
+
+      svg {
+        width: 0.8rem;
+        height: 0.8rem;
+        color: var(--color-primary-strong);
+      }
     }
   }
 
-  .kit__link {
-    margin: 0.55rem 0 0;
-    font-size: 0.84rem;
+  /* Above the cards rather than below them: a disclosure a reader meets after
+     clicking has done nothing. */
+  .rail-products__note {
+    margin: 0;
+    font-size: 0.76rem;
     line-height: 1.5;
     color: var(--color-text-muted);
   }
 
-  /* Sits above the links rather than below them: a disclosure a reader meets
-     after clicking has done nothing. */
-  .kit__disclosure {
-    margin: 0;
-    font-size: 0.78rem;
+  .rail-products__link {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
   }
 
   .block {
@@ -285,11 +339,8 @@ export default {
       font-size: 1.15rem;
     }
 
-    /* Bulleted prose lists. Nested components bring their own lists and style
-       them themselves, so they are held out rather than left to fight this on
-       specificity. */
     ol,
-    ul:not(.buy-links__list) {
+    ul {
       display: grid;
       gap: 0.4rem;
       margin: 0;
@@ -332,145 +383,155 @@ export default {
   <div class="task-detail-page">
     <div class="container" v-if="task">
       <p class="back"><router-link to="/tasks">← All tasks</router-link></p>
-      <div class="task-top">
+
+      <div class="task-layout" :class="{ 'task-layout--solo': !hasRail }">
         <header class="page-header">
           <span class="cat">{{ task.category }}</span>
           <h1>{{ task.name }}</h1>
           <p class="lede">{{ task.summary }}</p>
         </header>
 
-        <aside class="task-aside">
-          <Conditions
-            v-if="needsSoil"
-            compact
-            :conditions="conditions"
-            :error="weatherError"
-            :loading="weatherLoading"
-            @refresh="$emit('refresh-weather')"
-          />
-          <div class="timing-box" v-if="evaluation">
-            <h2>
-              Timing
-              <span v-if="effort" class="chip">{{ effort }}</span>
-            </h2>
-            <p>{{ evaluation.reason }}</p>
-            <p class="muted">{{ evaluation.rule.note }}</p>
-            <p v-if="needsSoil && evaluation.soil" class="soil">
-              Soil gate: <strong>{{ evaluation.soil.label }}</strong> — {{ evaluation.soil.detail }}
-            </p>
-            <p v-if="grassHint" class="soil">{{ grassHint }}</p>
-          </div>
-        </aside>
-      </div>
+        <div class="timing-box" v-if="evaluation">
+          <h2>
+            Timing
+            <span v-if="effort" class="chip">{{ effort }}</span>
+          </h2>
+          <p>{{ evaluation.reason }}</p>
+          <p class="muted">{{ evaluation.rule.note }}</p>
+          <p v-if="needsSoil && evaluation.soil" class="soil">
+            Soil gate: <strong>{{ evaluation.soil.label }}</strong> —
+            {{ evaluation.soil.detail }}
+          </p>
+          <p v-if="grassHint" class="soil">{{ grassHint }}</p>
+        </div>
 
-      <section class="block">
-        <h2>Why</h2>
-        <p>{{ task.why }}</p>
-      </section>
+        <aside v-if="hasRail" class="task-rail">
+          <div class="task-rail__inner">
+            <Conditions
+              v-if="needsSoil"
+              compact
+              :conditions="conditions"
+              :error="weatherError"
+              :loading="weatherLoading"
+              @refresh="$emit('refresh-weather')"
+            />
 
-      <section class="block">
-        <h2>Steps</h2>
-        <ul>
-          <li v-for="(step, i) in task.steps" :key="i">{{ step }}</li>
-        </ul>
-      </section>
+            <section v-if="taskProducts.length" class="rail-products">
+              <h2>
+                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                What to buy
+              </h2>
+              <p v-if="paidNote" class="rail-products__note">{{ paidNote }}</p>
 
-      <section class="block kit">
-        <h2>What you need</h2>
-        <div class="kit__grid">
-          <div v-if="task.equipment.length">
-            <h3>
-              <font-awesome-icon icon="fa-solid fa-trowel" />
-              Equipment
-            </h3>
-            <ul>
-              <li v-for="m in task.equipment" :key="m">{{ m }}</li>
-            </ul>
-          </div>
-          <div v-if="task.supplies.length">
-            <h3>
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-              Buy before you start
-            </h3>
-            <ul>
-              <li v-for="m in task.supplies" :key="m">{{ m }}</li>
-            </ul>
+              <ProductCard
+                v-for="p in taskProducts"
+                :key="p.id"
+                :product="p"
+                :in-task-id="task.id"
+              />
 
-            <div v-if="taskProducts.length" class="kit__products">
-              <p v-if="paidNote" class="kit__link kit__disclosure">{{ paidNote }}</p>
-
-              <div v-for="p in taskProducts" :key="p.id" class="kit__product">
-                <p class="kit__product-name">
-                  <strong>{{ p.name }}</strong>
-                  <span>{{ p.brand }}</span>
-                </p>
-                <BuyLinks :product-id="p.id" compact />
-              </div>
-
-              <p class="kit__link">
+              <p class="rail-products__link">
                 <router-link :to="{ name: 'calculate', query: { task: task.id } }">
                   Work out how much you need
                 </router-link>
                 — label rates and spreader settings for your lawn.
               </p>
+            </section>
+          </div>
+        </aside>
+
+        <div class="task-main">
+          <section class="block">
+            <h2>Why</h2>
+            <p>{{ task.why }}</p>
+          </section>
+
+          <section class="block">
+            <h2>Steps</h2>
+            <ul>
+              <li v-for="(step, i) in task.steps" :key="i">{{ step }}</li>
+            </ul>
+          </section>
+
+          <section class="block kit" v-if="task.equipment.length || task.supplies.length">
+            <h2>What you need</h2>
+            <div class="kit__grid">
+              <div v-if="task.equipment.length">
+                <h3>
+                  <font-awesome-icon icon="fa-solid fa-trowel" />
+                  Equipment
+                </h3>
+                <ul>
+                  <li v-for="m in task.equipment" :key="m">{{ m }}</li>
+                </ul>
+              </div>
+              <div v-if="task.supplies.length">
+                <h3>
+                  <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                  Buy before you start
+                </h3>
+                <ul>
+                  <li v-for="m in task.supplies" :key="m">{{ m }}</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section v-if="task.calculator" class="block">
-        <h2>How much</h2>
-        <MixCalculator
-          v-if="task.calculator.type === 'sprayer'"
-          :rate-key="task.calculator.rateKey"
-          :rate-keys="task.calculator.rateKeys"
-        />
-        <RateCalculator
-          v-else
-          :mode="task.calculator.type"
-          :rate-key="task.calculator.rateKey"
-          :alt-rate-key="task.calculator.altRateKey"
-          :rate-keys="task.calculator.rateKeys"
-        />
-      </section>
+          <section v-if="task.calculator" class="block">
+            <h2>How much</h2>
+            <MixCalculator
+              v-if="task.calculator.type === 'sprayer'"
+              :rate-key="task.calculator.rateKey"
+              :rate-keys="task.calculator.rateKeys"
+            />
+            <RateCalculator
+              v-else
+              :mode="task.calculator.type"
+              :rate-key="task.calculator.rateKey"
+              :alt-rate-key="task.calculator.altRateKey"
+              :rate-keys="task.calculator.rateKeys"
+            />
+          </section>
 
-      <section v-if="comesAfter.length || comesBefore.length" class="block links">
-        <div v-if="comesAfter.length">
-          <h2>Comes after</h2>
-          <div class="chip-row">
-            <router-link
-              v-for="prev in comesAfter"
-              :key="prev.id"
-              class="chip chip--brand"
-              :to="`/tasks/${prev.id}`"
-            >
-              {{ prev.name }}
-              <small v-if="prev.gap">· {{ prev.gap }}</small>
-            </router-link>
-          </div>
-        </div>
-        <div v-if="comesBefore.length">
-          <h2>Then</h2>
-          <div class="chip-row">
-            <router-link
-              v-for="next in comesBefore"
-              :key="next.id"
-              class="chip chip--brand"
-              :to="`/tasks/${next.id}`"
-            >
-              {{ next.name }}
-              <small v-if="next.gap">· {{ next.gap }}</small>
-            </router-link>
-          </div>
-        </div>
-      </section>
+          <section v-if="comesAfter.length || comesBefore.length" class="block links">
+            <div v-if="comesAfter.length">
+              <h2>Comes after</h2>
+              <div class="chip-row">
+                <router-link
+                  v-for="prev in comesAfter"
+                  :key="prev.id"
+                  class="chip chip--brand"
+                  :to="`/tasks/${prev.id}`"
+                >
+                  {{ prev.name }}
+                  <small v-if="prev.gap">· {{ prev.gap }}</small>
+                </router-link>
+              </div>
+            </div>
+            <div v-if="comesBefore.length">
+              <h2>Then</h2>
+              <div class="chip-row">
+                <router-link
+                  v-for="next in comesBefore"
+                  :key="next.id"
+                  class="chip chip--brand"
+                  :to="`/tasks/${next.id}`"
+                >
+                  {{ next.name }}
+                  <small v-if="next.gap">· {{ next.gap }}</small>
+                </router-link>
+              </div>
+            </div>
+          </section>
 
-      <section class="block caveats">
-        <h2>Caveats</h2>
-        <ul>
-          <li v-for="c in task.caveats" :key="c">{{ c }}</li>
-        </ul>
-      </section>
+          <section class="block caveats">
+            <h2>Caveats</h2>
+            <ul>
+              <li v-for="c in task.caveats" :key="c">{{ c }}</li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
     <div v-else class="container">
       <p>Task not found. <router-link to="/tasks">Back to tasks</router-link></p>

@@ -31,6 +31,18 @@ export const PAID_LINK_NOTE =
   'Buying through these earns this site a commission. It does not change which products ' +
   'are listed or the order they appear in — that follows the label rates and your calendar.'
 
+/**
+ * The same promise for a narrow column.
+ *
+ * In the task rail the full sentence runs to four lines of grey directly above
+ * the first product, which is a lot of throat-clearing in front of the thing
+ * the reader came for. Both halves survive the cut — that it earns, and that
+ * earning does not touch the order — because dropping either is what would
+ * make it misleading.
+ */
+export const PAID_LINK_NOTE_SHORT =
+  'Paid links — a purchase earns a commission. It never changes what is listed, or the order.'
+
 /** Whether this retailer's program is live, i.e. whether its links earn. */
 export function isPaidRetailer(retailer: Retailer): boolean {
   return Boolean(PARTNER_TAGS[retailer])

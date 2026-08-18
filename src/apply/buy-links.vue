@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     affiliateUrl,
-    isPaidLink,
     linkRel,
     label(offer: Offer): string {
       const verb = offer.kind === 'product' ? 'Buy' : 'Find'
@@ -62,8 +61,8 @@ export default {
     margin-top: 0;
 
     .buy-links__link {
-      padding: 0.3rem 0.7rem;
-      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.82rem;
     }
 
     .buy-links__hint {
@@ -89,20 +88,24 @@ export default {
     list-style: none;
   }
 
+  /* Grows to the width it is given, so one listing reads as the call to action
+     it is rather than a pill floating in a card. Several share the row. */
   .buy-links__item {
     display: grid;
-    justify-items: start;
+    justify-items: stretch;
     gap: 0.2rem;
+    flex: 1 1 11rem;
     max-width: 22rem;
   }
 
   .buy-links__link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.5rem 0.85rem;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-text);
     text-decoration: none;
     background: var(--color-surface);
@@ -112,6 +115,38 @@ export default {
     &:hover {
       color: var(--color-primary-strong);
       border-color: var(--color-primary);
+    }
+
+    svg {
+      opacity: 0.55;
+    }
+
+    /* Full strength: this one is part of the button's message, where the
+       trailing arrow is only a footnote about opening a new tab. */
+    .buy-links__cart {
+      opacity: 1;
+    }
+  }
+
+  /*
+   * Amazon's own button colours, because the recognition is the point: the
+   * yellow says where the link goes before the label is read, which is a
+   * fairer signal to a reader than a neutral pill that hides it.
+   *
+   * Colour only. None of their marks are reproduced, and nothing here implies
+   * Amazon endorses the site — their trademark terms allow the former and not
+   * the latter. Each retailer gets its own modifier rather than this being the
+   * base style, so a Home Depot link never inherits an Amazon button.
+   */
+  .buy-links__link--amazon {
+    color: #0f1111;
+    background: #ffd814;
+    border-color: #fcd200;
+
+    &:hover {
+      color: #0f1111;
+      background: #f7ca00;
+      border-color: #f2c200;
     }
   }
 
@@ -125,12 +160,6 @@ export default {
     object-fit: contain;
     background: var(--color-surface-alt);
     border-radius: var(--border-radius);
-  }
-
-  .buy-links__paid {
-    font-size: 0.72rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
   }
 
   .buy-links__pack {
@@ -164,6 +193,7 @@ export default {
       <li v-for="offer in offers" :key="`${offer.retailer}-${offer.url}`" class="buy-links__item">
         <a
           class="buy-links__link"
+          :class="`buy-links__link--${offer.retailer}`"
           :href="affiliateUrl(offer)"
           target="_blank"
           :rel="linkRel(offer)"
@@ -177,12 +207,16 @@ export default {
             width="36"
             height="36"
           />
+          <font-awesome-icon
+            v-if="!offer.imageUrl"
+            class="buy-links__cart"
+            icon="fa-solid fa-cart-shopping"
+          />
           <span>{{ label(offer) }}</span>
           <span v-if="offer.packLb" class="buy-links__pack">{{ offer.packLb }} lb</span>
           <span v-else-if="offer.packFlOz" class="buy-links__pack">
             {{ offer.packFlOz }} fl oz
           </span>
-          <span v-if="isPaidLink(offer)" class="buy-links__paid">(paid link)</span>
           <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
         </a>
         <p v-if="offer.note" class="buy-links__hint">{{ offer.note }}</p>
