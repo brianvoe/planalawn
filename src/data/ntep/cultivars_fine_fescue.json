@@ -1,0 +1,2621 @@
+{
+  "meta": {
+    "species": "fine_fescue",
+    "trial": "ff20",
+    "year": 2024,
+    "sourcePdf": "ff20_25-7.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "count": 43,
+  "cultivars": [
+    {
+      "id": "5z2",
+      "name": "5Z2",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 3.7,
+            "IN1": 4.6,
+            "MI1": 4.5,
+            "MI2": 4.4,
+            "WA1": 5.5
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7,
+            "WA1": 6.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 5.3,
+            "NC1": 8.3,
+            "NJ1": 4.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.3,
+            "NC1": 6.2,
+            "MN1": 5.4,
+            "IA1": 6.1,
+            "KS1": 4.3,
+            "QE1": 5.6
+          },
+          "year": 2024
+        }
+      },
+      "entry": 22,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "accentuate",
+      "name": "Accentuate",
+      "aliases": [
+        "ACCENTUATE (PVF-PDB-2020)",
+        "ACCENTUATE",
+        "PVF-PDB-2020"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.3,
+            "IN1": 3.5,
+            "MI1": 5.6,
+            "MI2": 5.6,
+            "WA1": 5.2
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 5.0,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 5.0,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 6.0,
+            "VA1": 6.3,
+            "NC1": 4.4,
+            "MN1": 6.7,
+            "IA1": 7.8,
+            "KS1": 5.6,
+            "QE1": 7.3
+          },
+          "year": 2024
+        }
+      },
+      "entry": 41,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-fo-131",
+      "name": "Bar Fo 131",
+      "aliases": [
+        "BAR FO 131"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 5.7,
+            "NJ1": 4.5,
+            "IN1": 3.9,
+            "MI1": 4.2,
+            "MI2": 4.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 4.7,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 9.0,
+            "QE1": 6.7,
+            "UT1": 6.3,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 8.0,
+            "NC1": 9.0,
+            "NJ1": 8.3
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.6,
+            "NC1": 4.0,
+            "MN1": 4.3,
+            "IA1": 5.6,
+            "KS1": 4.2,
+            "QE1": 5.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 10,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-frc-123",
+      "name": "Bar FRC 123",
+      "aliases": [
+        "BAR FRC 123"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 5.8,
+            "IN1": 4.5,
+            "MI1": 5.5,
+            "MI2": 6.0,
+            "WA1": 5.5
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.0,
+            "MI1": 6.3,
+            "MN1": 3.3,
+            "NC1": 7.7,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.0,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 9.0,
+            "NC1": 8.3,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.7,
+            "NC1": 3.8,
+            "MN1": 5.2,
+            "IA1": 6.3,
+            "KS1": 4.8,
+            "QE1": 6.0
+          },
+          "year": 2024
+        }
+      },
+      "entry": 9,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-frc-130",
+      "name": "Bar FRC 130",
+      "aliases": [
+        "BAR FRC 130"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.5,
+            "IN1": 4.6,
+            "MI1": 5.6,
+            "MI2": 6.1,
+            "WA1": 5.4
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 3.7,
+            "MI1": 6.3,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 6.3,
+            "MI2": 9.0,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.5,
+            "NC1": 4.1,
+            "MN1": 5.3,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 14,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-frl-122",
+      "name": "Bar FRL 122",
+      "aliases": [
+        "BAR FRL 122"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.0,
+            "IN1": 4.5,
+            "MI1": 5.5,
+            "MI2": 5.9,
+            "WA1": 5.4
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "NC1": 7.3,
+            "QE1": 6.5,
+            "UT1": 6.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.7,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.7,
+            "NC1": 4.6,
+            "MN1": 5.5,
+            "IA1": 6.3,
+            "KS1": 4.6,
+            "QE1": 6.0
+          },
+          "year": 2024
+        }
+      },
+      "entry": 11,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-ft-132",
+      "name": "Bar FT 132",
+      "aliases": [
+        "BAR FT 132"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 4.5,
+            "IN1": 3.2,
+            "MI1": 4.5,
+            "MI2": 4.4,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.4,
+            "VA1": 5.9,
+            "NC1": 3.3,
+            "MN1": 5.1,
+            "IA1": 6.6,
+            "KS1": 5.0,
+            "QE1": 6.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 13,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "bar-ft-135",
+      "name": "Bar FT 135",
+      "aliases": [
+        "BAR FT 135"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 4.2,
+            "IN1": 3.9,
+            "MI1": 5.0,
+            "MI2": 5.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 4.3
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.3,
+            "NC1": 4.9,
+            "MN1": 5.9,
+            "IA1": 7.0,
+            "KS1": 5.1,
+            "QE1": 6.5
+          },
+          "year": 2024
+        }
+      },
+      "entry": 12,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "beacon-ii",
+      "name": "Beacon II",
+      "aliases": [
+        "BEACON II (PPG-FL 128)",
+        "BEACON II",
+        "PPG-FL 128"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 3.5,
+            "IN1": 2.8,
+            "MI1": 5.0,
+            "MI2": 4.8,
+            "WA1": 4.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.7,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.3,
+            "NC1": 8.3,
+            "NJ1": 8.3
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "MD1": 5.9,
+            "VA1": 6.2,
+            "NC1": 4.2,
+            "MN1": 6.6,
+            "IA1": 7.7,
+            "KS1": 5.4,
+            "QE1": 7.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 36,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "blue-hornet",
+      "name": "Blue Hornet",
+      "aliases": [
+        "BLUE HORNET (PPG-FO-102)",
+        "BLUE HORNET",
+        "PPG-FO-102"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.9,
+            "NJ1": 4.6,
+            "IN1": 2.6,
+            "MI1": 4.3,
+            "MI2": 4.3,
+            "WA1": 4.6
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.0,
+            "MI1": 7.7,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.3,
+            "WA1": 4.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.5,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 5.6,
+            "NC1": 2.1,
+            "MN1": 4.8,
+            "IA1": 6.6,
+            "KS1": 5.1,
+            "QE1": 6.3
+          },
+          "year": 2024
+        }
+      },
+      "entry": 33,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "boreal",
+      "name": "Boreal",
+      "aliases": [
+        "BOREAL"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.1,
+          "bySite": {
+            "CT1": 5.2,
+            "NJ1": 4.5,
+            "IN1": 3.6,
+            "MI1": 3.2,
+            "MI2": 3.2,
+            "WA1": 4.9
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 7.0,
+            "QE1": 6.5,
+            "UT1": 4.3,
+            "WA1": 4.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.1,
+          "bySite": {
+            "IN1": 3.5,
+            "MI2": 3.7,
+            "NC1": 6.3,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 4.2,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.4,
+            "NC1": 3.2,
+            "MN1": 3.1,
+            "IA1": 4.7,
+            "KS1": 3.8,
+            "QE1": 4.4
+          },
+          "year": 2024
+        }
+      },
+      "entry": 27,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "brittany-2",
+      "name": "Brittany 2",
+      "aliases": [
+        "BRITTANY 2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 5.8,
+            "IN1": 5.8,
+            "MI1": 6.1,
+            "MI2": 6.8,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 4.7,
+            "MI1": 6.7,
+            "MN1": 3.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.3,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.2,
+          "bySite": {
+            "IN1": 7.0,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.9,
+            "NC1": 5.8,
+            "MN1": 5.7,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.8
+          },
+          "year": 2024
+        }
+      },
+      "entry": 7,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "cardinal-ii",
+      "name": "Cardinal II",
+      "aliases": [
+        "CARDINAL II"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 3.8,
+            "IN1": 4.4,
+            "MI1": 4.2,
+            "MI2": 4.2,
+            "WA1": 5.2
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 4.7,
+            "NC1": 6.7,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.9,
+            "NC1": 5.7,
+            "MN1": 4.8,
+            "IA1": 5.6,
+            "KS1": 3.9,
+            "QE1": 5.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 31,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "compass-ii",
+      "name": "Compass II",
+      "aliases": [
+        "COMPASS II"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.9,
+            "NJ1": 6.2,
+            "IN1": 5.9,
+            "MI1": 6.2,
+            "MI2": 7.0,
+            "WA1": 6.1
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 4.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.7,
+            "MI2": 8.3,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 6.0,
+            "NC1": 5.5,
+            "MN1": 5.6,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 29,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "da5-rhf",
+      "name": "DA5-RHF",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 3.9,
+            "IN1": 3.9,
+            "MI1": 5.6,
+            "MI2": 5.7,
+            "WA1": 5.1
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 7.3,
+            "MN1": 5.7,
+            "NC1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.7,
+            "WA1": 4.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.6,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.7,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.0,
+            "NC1": 5.2,
+            "MN1": 6.6,
+            "IA1": 7.2,
+            "KS1": 4.9,
+            "QE1": 6.7
+          },
+          "year": 2024
+        }
+      },
+      "entry": 38,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "dlf-frr-3128",
+      "name": "DLF-FRR-3128",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 5.7,
+            "NJ1": 4.1,
+            "IN1": 4.0,
+            "MI1": 3.9,
+            "MI2": 3.9,
+            "WA1": 5.2
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 3.7,
+            "NC1": 8.3,
+            "NJ1": 3.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 5.9,
+            "NC1": 4.7,
+            "MN1": 4.4,
+            "IA1": 5.6,
+            "KS1": 4.2,
+            "QE1": 5.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 26,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "dlfps-fl-3104",
+      "name": "DLFPS-FL-3104",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.2,
+            "NJ1": 3.4,
+            "IN1": 2.8,
+            "MI1": 5.0,
+            "MI2": 4.8,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 8.7,
+            "QE1": 7.3,
+            "UT1": 8.3,
+            "WA1": 4.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.0,
+            "NC1": 4.1,
+            "MN1": 6.5,
+            "IA1": 7.6,
+            "KS1": 5.3,
+            "QE1": 7.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 4,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "dlfps-frc-3105",
+      "name": "DLFPS-FRC-3105",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 6.1,
+            "IN1": 5.7,
+            "MI1": 6.1,
+            "MI2": 6.8,
+            "WA1": 6.1
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.0,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.9,
+            "NC1": 5.3,
+            "MN1": 5.5,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 32,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "foxfire-2",
+      "name": "Foxfire 2",
+      "aliases": [
+        "FOXFIRE 2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 4.8,
+            "IN1": 4.7,
+            "MI1": 4.2,
+            "MI2": 4.3,
+            "WA1": 5.6
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 6.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 3.3,
+            "NC1": 7.7,
+            "NJ1": 7.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 4.9,
+            "MN1": 4.2,
+            "IA1": 5.4,
+            "KS1": 4.2,
+            "QE1": 5.0
+          },
+          "year": 2024
+        }
+      },
+      "entry": 8,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "frenzy",
+      "name": "Frenzy",
+      "aliases": [
+        "FRENZY (BYE)",
+        "FRENZY",
+        "BYE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.0,
+            "IN1": 5.3,
+            "MI1": 5.3,
+            "MI2": 5.4,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 6.3,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.6,
+            "VA1": 6.5,
+            "NC1": 6.1,
+            "MN1": 5.6,
+            "IA1": 6.3,
+            "KS1": 4.7,
+            "QE1": 5.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 25,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "gladiator",
+      "name": "Gladiator",
+      "aliases": [
+        "GLADIATOR"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.2,
+            "NJ1": 3.9,
+            "IN1": 2.5,
+            "MI1": 5.1,
+            "MI2": 5.0,
+            "WA1": 4.5
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "MI1": 7.3,
+            "MN1": 6.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 7.7,
+            "NC1": 9.0,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.6,
+            "VA1": 5.8,
+            "NC1": 3.1,
+            "MN1": 6.3,
+            "IA1": 7.6,
+            "KS1": 5.4,
+            "QE1": 7.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 1,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "harbor-mr",
+      "name": "Harbor MR",
+      "aliases": [
+        "HARBOR MR (PPG-FRR 132)",
+        "HARBOR MR",
+        "PPG-FRR 132"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 3.7,
+            "IN1": 4.9,
+            "MI1": 4.7,
+            "MI2": 4.7,
+            "WA1": 5.5
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 4.7,
+            "MI2": 3.7,
+            "NC1": 8.7,
+            "NJ1": 3.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.1,
+            "NC1": 6.6,
+            "MN1": 5.3,
+            "IA1": 5.8,
+            "KS1": 3.9,
+            "QE1": 5.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 35,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "hype",
+      "name": "Hype",
+      "aliases": [
+        "HYPE (5Z5)",
+        "HYPE",
+        "5Z5"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.2,
+            "IN1": 5.1,
+            "MI1": 5.0,
+            "MI2": 5.2,
+            "WA1": 5.9
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 6.7,
+            "NC1": 8.0,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 6.2,
+            "NC1": 5.3,
+            "MN1": 5.0,
+            "IA1": 6.0,
+            "KS1": 4.6,
+            "QE1": 5.6
+          },
+          "year": 2024
+        }
+      },
+      "entry": 24,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "jamestown-vii",
+      "name": "Jamestown VII",
+      "aliases": [
+        "JAMESTOWN VII"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 5.0,
+            "IN1": 5.2,
+            "MI1": 5.3,
+            "MI2": 5.7,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.0,
+            "MI1": 6.0,
+            "MN1": 3.3,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.7,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.0,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.8,
+            "NC1": 5.6,
+            "MN1": 5.2,
+            "IA1": 5.8,
+            "KS1": 4.2,
+            "QE1": 5.4
+          },
+          "year": 2024
+        }
+      },
+      "entry": 17,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "kevin",
+      "name": "Kevin",
+      "aliases": [
+        "KEVIN"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 3.8,
+            "IN1": 4.4,
+            "MI1": 3.8,
+            "MI2": 3.7,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 8.0,
+            "QE1": 7.7,
+            "UT1": 5.7,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 4.9,
+          "bySite": {
+            "IN1": 3.7,
+            "MI2": 3.3,
+            "NC1": 7.3,
+            "NJ1": 5.3
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 5.5,
+            "MN1": 4.2,
+            "IA1": 5.2,
+            "KS1": 3.8,
+            "QE1": 4.7
+          },
+          "year": 2024
+        }
+      },
+      "entry": 15,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "meso",
+      "name": "Meso",
+      "aliases": [
+        "MESO (STB1)",
+        "MESO",
+        "STB1"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 4.7,
+            "IN1": 5.2,
+            "MI1": 4.7,
+            "MI2": 5.0,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 4.3,
+            "NC1": 8.0,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 6.0,
+            "NC1": 5.9,
+            "MN1": 4.8,
+            "IA1": 5.5,
+            "KS1": 4.0,
+            "QE1": 5.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 23,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "navigator-iii",
+      "name": "Navigator III",
+      "aliases": [
+        "NAVIGATOR III (PPG-FRR 127)",
+        "NAVIGATOR III",
+        "PPG-FRR 127"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.9,
+            "IN1": 5.7,
+            "MI1": 5.7,
+            "MI2": 6.1,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "MI1": 7.3,
+            "MN1": 5.7,
+            "NC1": 7.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.5,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 6.3,
+            "NC1": 6.7,
+            "MN1": 5.9,
+            "IA1": 6.3,
+            "KS1": 4.4,
+            "QE1": 5.8
+          },
+          "year": 2024
+        }
+      },
+      "entry": 37,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "ppg-frc-130",
+      "name": "PPG-FRC-130",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.9,
+            "NJ1": 6.5,
+            "IN1": 5.2,
+            "MI1": 6.4,
+            "MI2": 7.2,
+            "WA1": 5.9
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 7.0,
+            "MN1": 4.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 6.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.3,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.7,
+            "NC1": 4.2,
+            "MN1": 5.7,
+            "IA1": 6.5,
+            "KS1": 4.9,
+            "QE1": 6.3
+          },
+          "year": 2024
+        }
+      },
+      "entry": 28,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "ppg-frr-134",
+      "name": "PPG-FRR-134",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 4.8,
+            "IN1": 5.1,
+            "MI1": 5.2,
+            "MI2": 5.4,
+            "WA1": 5.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.0,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 5.7,
+            "NC1": 8.0,
+            "NJ1": 5.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.4,
+            "VA1": 6.2,
+            "NC1": 5.8,
+            "MN1": 5.5,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.8
+          },
+          "year": 2024
+        }
+      },
+      "entry": 30,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "pst-4swtm",
+      "name": "PST-4SWTM",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 3.8,
+            "IN1": 4.1,
+            "MI1": 4.8,
+            "MI2": 5.0,
+            "WA1": 4.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.0,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 5.3,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 6.0,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.3,
+            "NC1": 5.0,
+            "MN1": 5.2,
+            "IA1": 5.8,
+            "KS1": 3.9,
+            "QE1": 5.4
+          },
+          "year": 2024
+        }
+      },
+      "entry": 39,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "pvf-hsy",
+      "name": "PVF-Hsy+",
+      "aliases": [
+        "PVF-HSY+"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.6,
+            "NJ1": 4.8,
+            "IN1": 5.5,
+            "MI1": 5.3,
+            "MI2": 5.4,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 7.3,
+            "NC1": 9.0,
+            "NJ1": 5.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.5,
+            "NC1": 6.6,
+            "MN1": 5.6,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.7
+          },
+          "year": 2024
+        }
+      },
+      "entry": 42,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "pvf-mvp-2020",
+      "name": "PVF-MVP-2020",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.4,
+            "IN1": 5.4,
+            "MI1": 5.9,
+            "MI2": 6.5,
+            "WA1": 5.9
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.7,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 5.7,
+            "MN1": 5.8,
+            "IA1": 6.3,
+            "KS1": 4.6,
+            "QE1": 5.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 43,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "quatro",
+      "name": "Quatro",
+      "aliases": [
+        "QUATRO"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.2,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 4.4,
+            "IN1": 2.6,
+            "MI1": 4.1,
+            "MI2": 4.0,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.3,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.0,
+            "NC1": 8.3,
+            "NJ1": 7.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 5.7,
+            "NC1": 2.3,
+            "MN1": 4.7,
+            "IA1": 6.5,
+            "KS1": 5.0,
+            "QE1": 6.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 5,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "rad-fc59",
+      "name": "Rad-FC59",
+      "aliases": [
+        "RAD-FC59"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 5.0,
+            "IN1": 4.7,
+            "MI1": 5.2,
+            "MI2": 5.7,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.3,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 6.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.7,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.5,
+            "NC1": 4.8,
+            "MN1": 5.1,
+            "IA1": 5.8,
+            "KS1": 4.1,
+            "QE1": 5.4
+          },
+          "year": 2024
+        }
+      },
+      "entry": 16,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "rad-fr64",
+      "name": "Rad-FR64",
+      "aliases": [
+        "RAD-FR64"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.2,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 4.0,
+            "IN1": 3.9,
+            "MI1": 3.5,
+            "MI2": 3.3,
+            "WA1": 5.2
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 9.0,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 6.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 2.3,
+            "NC1": 7.7,
+            "NJ1": 7.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "MD1": 5.2,
+            "VA1": 5.9,
+            "NC1": 4.6,
+            "MN1": 4.0,
+            "IA1": 5.3,
+            "KS1": 4.1,
+            "QE1": 4.9
+          },
+          "year": 2024
+        }
+      },
+      "entry": 21,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "radar-ii",
+      "name": "Radar II",
+      "aliases": [
+        "RADAR II (PPG-FRC 127)",
+        "RADAR II",
+        "PPG-FRC 127"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 5.9,
+            "IN1": 5.9,
+            "MI1": 6.3,
+            "MI2": 7.1,
+            "WA1": 6.0
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 4.3,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 9.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.8,
+            "NC1": 5.8,
+            "MN1": 5.8,
+            "IA1": 6.1,
+            "KS1": 4.4,
+            "QE1": 5.8
+          },
+          "year": 2024
+        }
+      },
+      "entry": 34,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "resolute",
+      "name": "Resolute",
+      "aliases": [
+        "RESOLUTE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 3.7,
+            "IN1": 3.2,
+            "MI1": 5.2,
+            "MI2": 5.1,
+            "WA1": 4.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 4.0,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.7,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 5.7,
+            "VA1": 6.0,
+            "NC1": 4.3,
+            "MN1": 6.5,
+            "IA1": 7.5,
+            "KS1": 5.2,
+            "QE1": 7.0
+          },
+          "year": 2024
+        }
+      },
+      "entry": 6,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "resonance",
+      "name": "Resonance",
+      "aliases": [
+        "RESONANCE (NAI-CHU1)",
+        "RESONANCE",
+        "NAI-CHU1"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.9,
+            "IN1": 5.9,
+            "MI1": 6.2,
+            "MI2": 7.0,
+            "WA1": 5.9
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 5.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 8.3
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.7,
+            "NC1": 5.6,
+            "MN1": 5.5,
+            "IA1": 5.9,
+            "KS1": 4.2,
+            "QE1": 5.6
+          },
+          "year": 2024
+        }
+      },
+      "entry": 18,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "seabreeze-gt",
+      "name": "Seabreeze GT",
+      "aliases": [
+        "SEABREEZE GT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 3.9,
+            "IN1": 3.7,
+            "MI1": 4.1,
+            "MI2": 4.2,
+            "WA1": 4.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 3.7,
+            "NC1": 7.3,
+            "QE1": 7.0,
+            "UT1": 5.7,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN1": 5.0,
+            "MI2": 5.0,
+            "NC1": 8.0,
+            "NJ1": 5.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 4.7,
+            "VA1": 5.4,
+            "NC1": 4.3,
+            "MN1": 4.6,
+            "IA1": 5.6,
+            "KS1": 4.0,
+            "QE1": 5.2
+          },
+          "year": 2024
+        }
+      },
+      "entry": 2,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "shadow-iv",
+      "name": "Shadow IV",
+      "aliases": [
+        "SHADOW IV (PST-4SHAD)",
+        "SHADOW IV",
+        "PST-4SHAD"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 5.9,
+            "NJ1": 4.0,
+            "IN1": 5.0,
+            "MI1": 5.1,
+            "MI2": 5.6,
+            "WA1": 5.2
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 3.7,
+            "NC1": 7.7,
+            "QE1": 6.7,
+            "UT1": 5.7,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 4.7,
+            "MI2": 7.3,
+            "NC1": 7.7,
+            "NJ1": 8.0
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 4.4,
+            "VA1": 5.4,
+            "NC1": 6.1,
+            "MN1": 5.3,
+            "IA1": 5.5,
+            "KS1": 3.5,
+            "QE1": 5.0
+          },
+          "year": 2024
+        }
+      },
+      "entry": 40,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "sphd-20",
+      "name": "SPHD-20",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 3.6,
+            "IN1": 2.9,
+            "MI1": 4.7,
+            "MI2": 4.5,
+            "WA1": 4.8
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 4.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.7,
+            "UT1": 8.0,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.0,
+            "NC1": 8.0,
+            "NJ1": 7.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.1,
+            "NC1": 4.0,
+            "MN1": 6.0,
+            "IA1": 7.2,
+            "KS1": 5.2,
+            "QE1": 6.8
+          },
+          "year": 2024
+        }
+      },
+      "entry": 3,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "sword-ii",
+      "name": "Sword II",
+      "aliases": [
+        "SWORD II (NAI-HAQ1+2)",
+        "SWORD II",
+        "NAI-HAQ1+2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 4.2,
+            "IN1": 3.3,
+            "MI1": 5.4,
+            "MI2": 5.4,
+            "WA1": 5.1
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 4.7,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.3,
+            "WA1": 4.7
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 7.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.2,
+            "NC1": 4.1,
+            "MN1": 6.5,
+            "IA1": 7.6,
+            "KS1": 5.5,
+            "QE1": 7.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 19,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    },
+    {
+      "id": "tenacious",
+      "name": "Tenacious",
+      "aliases": [
+        "TENACIOUS (NAI-HTB2)",
+        "TENACIOUS",
+        "NAI-HTB2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.7,
+            "IN1": 3.9,
+            "MI1": 5.9,
+            "MI2": 6.1,
+            "WA1": 5.3
+          },
+          "year": 2024
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 5.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.3,
+            "WA1": 5.0
+          },
+          "year": 2024
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          },
+          "year": 2024
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.7,
+            "VA1": 6.1,
+            "NC1": 4.4,
+            "MN1": 6.6,
+            "IA1": 7.6,
+            "KS1": 5.4,
+            "QE1": 7.1
+          },
+          "year": 2024
+        }
+      },
+      "entry": 20,
+      "species": "fine_fescue",
+      "trial": "ff20"
+    }
+  ]
+}

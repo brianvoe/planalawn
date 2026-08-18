@@ -134,6 +134,11 @@ Location (GPS or ZIP), lawn size, equipment defaults, import/export backup.
 6. **No invented numbers** — a spreader setting we can't source from the label is a setting we don't
    show. Dials aren't convertible between models, so the honest alternative is a calibration strip.
 7. **Static-first** — ship as a client-side app; grow data via ingest scripts, not a server.
+8. **Money never moves the ranking** — buy links pay the bills, so they are kept structurally
+   incapable of influencing advice. Listings live in `src/data/commerce/`, which the modules that
+   decide what to show and in what order may not import; `offers.test.ts` asserts that boundary
+   rather than trusting it. Every earning link is marked, and the disclosure is wired to the same
+   partner tag the links read, so it cannot claim a relationship that isn't live.
 
 ---
 

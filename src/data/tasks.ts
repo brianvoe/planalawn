@@ -1,6 +1,38 @@
 import type { Task } from '../types'
 
+/**
+ * Every job the site knows about.
+ *
+ * `equipment` and `supplies` are kept apart on purpose. They answer two
+ * different questions on the morning of a job — what do I need to own or rent,
+ * and what do I need to go and buy — and a single mixed list of "materials"
+ * answered neither without reading it twice.
+ */
 export const tasks: Task[] = [
+  {
+    id: 'mowing',
+    name: 'Mowing',
+    category: 'maintenance',
+    summary:
+      'The weekly cut everything else schedules around. Never take more than a third of the blade.',
+    why: 'Height and frequency do more for density and weed pressure than any bag you can buy.',
+    prerequisites: [],
+    nextTasks: [],
+    steps: [
+      'Set tall fescue at 3–4 inches — taller shades out weeds and holds moisture.',
+      'Cut often enough that you remove no more than a third of the blade in one pass.',
+      'Keep the blade sharp; a torn tip browns and invites disease.',
+      'Return clippings unless the lawn is diseased or the row is thick enough to mat.',
+      'On new seed, wait until seedlings reach mowing height and the ground is firm.',
+    ],
+    equipment: ['Mower', 'String trimmer for edges'],
+    supplies: ['Spare or sharpened blade'],
+    calculator: null,
+    caveats: [
+      'Scalping a stressed summer lawn undoes months of work — raise the deck in heat.',
+      'New seedlings need 2–3 mowings before most herbicides are safe.',
+    ],
+  },
   {
     id: 'lawn-kill',
     name: 'Kill existing grass / weeds',
@@ -17,7 +49,8 @@ export const tasks: Task[] = [
       'Wait 7–14+ days (label + visible die-back) before tilling/seeding.',
       'Plan a second pass on survivors if needed before seed.',
     ],
-    materials: ['Non-selective herbicide (glyphosate-type)', 'Pump sprayer', 'PPE'],
+    equipment: ['Pump sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Non-selective herbicide (glyphosate-type)'],
     calculator: { type: 'sprayer', rateKey: 'glyphosate' },
     caveats: [
       'Rates and wait intervals are product-specific — follow the label you buy.',
@@ -39,7 +72,8 @@ export const tasks: Task[] = [
       'Leave cores to break down (or lightly break up).',
       'Overseed and fertilize the same day when possible.',
     ],
-    materials: ['Core aerator (rental or service)', 'Mark irrigation heads'],
+    equipment: ['Core aerator (rental or service)', 'Flags to mark irrigation heads'],
+    supplies: [],
     calculator: null,
     caveats: ['Skip if soil is saturated or frozen.', 'Solid-tine “aeration” is not a substitute for cores.'],
   },
@@ -59,7 +93,11 @@ export const tasks: Task[] = [
       'Light peat or compost topdress for contact.',
       'Keep seedbed consistently moist until established.',
     ],
-    materials: ['Tall fescue blend (Calypsow or Resilience II)', 'Spreader', 'Peat/compost optional'],
+    equipment: ['Broadcast spreader'],
+    supplies: [
+      'Tall fescue blend (Calypsow or Resilience II)',
+      'Peat or compost topdress (optional)',
+    ],
     calculator: { type: 'coverage', rateKey: 'seedOverseed' },
     caveats: [
       'Soil temperature beats calendar date for germination success.',
@@ -82,7 +120,8 @@ export const tasks: Task[] = [
       'Starter fertilizer per bag directions.',
       'Light topdress; begin frequent light watering.',
     ],
-    materials: ['Tall fescue blend', 'Starter fertilizer', 'Rake/roller', 'Topsoil as needed'],
+    equipment: ['Broadcast spreader', 'Rake and lawn roller'],
+    supplies: ['Tall fescue blend', 'Starter fertilizer', 'Topsoil as needed'],
     calculator: { type: 'coverage', rateKey: 'seedNew' },
     caveats: [
       'Do not seed into hot soil just because the calendar says September.',
@@ -103,7 +142,8 @@ export const tasks: Task[] = [
       'Rake smooth; firm lightly — do not leave fluffy seedbed.',
       'Seed promptly so soil does not crust unused.',
     ],
-    materials: ['Screened topsoil or compost blend', 'Rake', 'Wheelbarrow'],
+    equipment: ['Rake', 'Wheelbarrow'],
+    supplies: ['Screened topsoil or compost blend'],
     calculator: { type: 'volume', rateKey: 'topsoil' },
     caveats: ['Depth is a starting template — deep fills may need layered settling.'],
   },
@@ -120,7 +160,8 @@ export const tasks: Task[] = [
       'You should still see some seed — do not bury deeply.',
       'Water immediately to settle the layer.',
     ],
-    materials: ['Sphagnum peat moss', 'Shovel or peat spreader'],
+    equipment: ['Shovel or peat spreader'],
+    supplies: ['Sphagnum peat moss'],
     calculator: { type: 'volume', rateKey: 'peatMoss' },
     caveats: ['A dusting beats a blanket. Too thick smothers seed.'],
   },
@@ -137,7 +178,8 @@ export const tasks: Task[] = [
       'Apply 2–3 inches of mulch.',
       'Keep mulch pulled back from trunks (no volcanoes).',
     ],
-    materials: ['Hardwood or pine mulch', 'Edging tool'],
+    equipment: ['Edging tool', 'Wheelbarrow'],
+    supplies: ['Hardwood or pine mulch'],
     calculator: { type: 'volume', rateKey: 'mulch' },
     caveats: ['Mulch beds ≠ peat topdress on seed.'],
   },
@@ -155,7 +197,8 @@ export const tasks: Task[] = [
       'Water in per bag directions.',
       'Skip heavy nitrogen during peak summer heat.',
     ],
-    materials: ['Starter or maintenance fertilizer', 'Broadcast spreader'],
+    equipment: ['Broadcast spreader'],
+    supplies: ['Starter or maintenance fertilizer'],
     calculator: { type: 'coverage', rateKey: 'starterFert', altRateKey: 'maintFert' },
     caveats: ['Soil test when possible — these are generic starting rates.'],
   },
@@ -173,7 +216,8 @@ export const tasks: Task[] = [
       'Avoid puddling and runoff.',
       'After establishment, water deeply and infrequently.',
     ],
-    materials: ['Hose/sprinklers or irrigation', 'Rain gauge optional'],
+    equipment: ['Hose and sprinklers, or irrigation', 'Rain gauge (optional)'],
+    supplies: [],
     calculator: null,
     caveats: ['Adjust for heat, wind, and shade — there is no single daily minute count.'],
   },
@@ -193,7 +237,8 @@ export const tasks: Task[] = [
       'Stay off until dry; keep pets off per the label.',
       'Do not seed or overseed until the product’s wait interval is over.',
     ],
-    materials: ['Pre-emergent granule or liquid (prodiamine, dithiopyr, or pendimethalin type)', 'Spreader or sprayer', 'PPE'],
+    equipment: ['Spreader or sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Pre-emergent granule or liquid (prodiamine, dithiopyr, or pendimethalin type)'],
     calculator: {
       type: 'coverage',
       rateKey: 'preEmGeneric',
@@ -219,7 +264,8 @@ export const tasks: Task[] = [
       'Water in per label.',
       'Log the date so you do not seed into the residue.',
     ],
-    materials: ['Pre-emergent granule or liquid', 'Spreader or sprayer', 'PPE'],
+    equipment: ['Spreader or sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Pre-emergent granule or liquid'],
     calculator: {
       type: 'coverage',
       rateKey: 'preEmGeneric',
@@ -245,7 +291,8 @@ export const tasks: Task[] = [
       'Avoid rain in the label’s rainfast window; keep people and pets off until dry.',
       'Skip seedbeds and new grass until the label says it is safe.',
     ],
-    materials: ['Broadleaf herbicide (2,4-D / 3-way type)', 'Pump sprayer', 'PPE'],
+    equipment: ['Pump sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Broadleaf herbicide (2,4-D / 3-way type)'],
     calculator: {
       type: 'sprayer',
       rateKey: 'broadleaf3way',
@@ -271,7 +318,8 @@ export const tasks: Task[] = [
       'Use a product labeled for your grass type (quinclorac-type is common on tall fescue).',
       'Water and mowing intervals follow the label — don’t assume same-day mow is fine.',
     ],
-    materials: ['Grassy-weed herbicide (quinclorac-type)', 'Pump sprayer', 'PPE'],
+    equipment: ['Pump sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Grassy-weed herbicide (quinclorac-type)'],
     calculator: {
       type: 'sprayer',
       rateKey: 'quinclorac',
@@ -296,7 +344,8 @@ export const tasks: Task[] = [
       'Water in so the material reaches the root zone.',
       'Keep a note of what you used — curative products are a different chemistry later.',
     ],
-    materials: ['Preventative grub granule (imidacloprid or chlorantraniliprole type)', 'Spreader', 'PPE'],
+    equipment: ['Broadcast spreader', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Preventative grub granule (imidacloprid or chlorantraniliprole type)'],
     calculator: {
       type: 'coverage',
       rateKey: 'imidaclopridG',
@@ -322,7 +371,8 @@ export const tasks: Task[] = [
       'Water thoroughly so it reaches the larvae.',
       'Keep people and pets off per the label; plan preventative next season if pressure was high.',
     ],
-    materials: ['Curative grub product (trichlorfon-type)', 'Spreader or sprayer', 'PPE'],
+    equipment: ['Spreader or sprayer', 'PPE — gloves, eye protection, long sleeves'],
+    supplies: ['Curative grub product (trichlorfon-type)'],
     calculator: {
       type: 'coverage',
       rateKey: 'trichlorfonG',

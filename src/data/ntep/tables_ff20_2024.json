@@ -1,0 +1,2673 @@
+{
+  "meta": {
+    "species": "fine_fescue",
+    "trial": "ff20",
+    "year": 2024,
+    "sourcePdf": "ff20_25-7.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "CT1",
+        "NJ1",
+        "IN1",
+        "MI1",
+        "MI2",
+        "WA1"
+      ],
+      "rows": [
+        {
+          "name": "COMPASS II",
+          "base": "COMPASS II",
+          "code": null,
+          "entry": 29,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.9,
+            "NJ1": 6.2,
+            "IN1": 5.9,
+            "MI1": 6.2,
+            "MI2": 7.0,
+            "WA1": 6.1
+          }
+        },
+        {
+          "name": "RADAR II (PPG-FRC 127)",
+          "base": "RADAR II",
+          "code": "PPG-FRC 127",
+          "entry": 34,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 5.9,
+            "IN1": 5.9,
+            "MI1": 6.3,
+            "MI2": 7.1,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "PPG-FRC-130",
+          "base": "PPG-FRC-130",
+          "code": null,
+          "entry": 28,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.9,
+            "NJ1": 6.5,
+            "IN1": 5.2,
+            "MI1": 6.4,
+            "MI2": 7.2,
+            "WA1": 5.9
+          }
+        },
+        {
+          "name": "DLFPS-FRC-3105",
+          "base": "DLFPS-FRC-3105",
+          "code": null,
+          "entry": 32,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 6.1,
+            "IN1": 5.7,
+            "MI1": 6.1,
+            "MI2": 6.8,
+            "WA1": 6.1
+          }
+        },
+        {
+          "name": "RESONANCE (NAI-CHU1)",
+          "base": "RESONANCE",
+          "code": "NAI-CHU1",
+          "entry": 18,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.9,
+            "IN1": 5.9,
+            "MI1": 6.2,
+            "MI2": 7.0,
+            "WA1": 5.9
+          }
+        },
+        {
+          "name": "BRITTANY 2",
+          "base": "BRITTANY 2",
+          "code": null,
+          "entry": 7,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.8,
+            "NJ1": 5.8,
+            "IN1": 5.8,
+            "MI1": 6.1,
+            "MI2": 6.8,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "PVF-MVP-2020",
+          "base": "PVF-MVP-2020",
+          "code": null,
+          "entry": 43,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.4,
+            "IN1": 5.4,
+            "MI1": 5.9,
+            "MI2": 6.5,
+            "WA1": 5.9
+          }
+        },
+        {
+          "name": "NAVIGATOR III (PPG-FRR 127)",
+          "base": "NAVIGATOR III",
+          "code": "PPG-FRR 127",
+          "entry": 37,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.9,
+            "IN1": 5.7,
+            "MI1": 5.7,
+            "MI2": 6.1,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "BAR FRC 123",
+          "base": "BAR FRC 123",
+          "code": null,
+          "entry": 9,
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 5.8,
+            "IN1": 4.5,
+            "MI1": 5.5,
+            "MI2": 6.0,
+            "WA1": 5.5
+          }
+        },
+        {
+          "name": "FRENZY (BYE)",
+          "base": "FRENZY",
+          "code": "BYE",
+          "entry": 25,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 5.0,
+            "IN1": 5.3,
+            "MI1": 5.3,
+            "MI2": 5.4,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "PVF-HSY+",
+          "base": "PVF-HSY+",
+          "code": null,
+          "entry": 42,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.6,
+            "NJ1": 4.8,
+            "IN1": 5.5,
+            "MI1": 5.3,
+            "MI2": 5.4,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "BAR FRC 130",
+          "base": "BAR FRC 130",
+          "code": null,
+          "entry": 14,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.5,
+            "IN1": 4.6,
+            "MI1": 5.6,
+            "MI2": 6.1,
+            "WA1": 5.4
+          }
+        },
+        {
+          "name": "JAMESTOWN VII",
+          "base": "JAMESTOWN VII",
+          "code": null,
+          "entry": 17,
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 5.0,
+            "IN1": 5.2,
+            "MI1": 5.3,
+            "MI2": 5.7,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "PPG-FRR-134",
+          "base": "PPG-FRR-134",
+          "code": null,
+          "entry": 30,
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 4.8,
+            "IN1": 5.1,
+            "MI1": 5.2,
+            "MI2": 5.4,
+            "WA1": 5.8
+          }
+        },
+        {
+          "name": "HYPE (5Z5)",
+          "base": "HYPE",
+          "code": "5Z5",
+          "entry": 24,
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.2,
+            "IN1": 5.1,
+            "MI1": 5.0,
+            "MI2": 5.2,
+            "WA1": 5.9
+          }
+        },
+        {
+          "name": "BAR FRL 122",
+          "base": "BAR FRL 122",
+          "code": null,
+          "entry": 11,
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 5.0,
+            "IN1": 4.5,
+            "MI1": 5.5,
+            "MI2": 5.9,
+            "WA1": 5.4
+          }
+        },
+        {
+          "name": "TENACIOUS (NAI-HTB2)",
+          "base": "TENACIOUS",
+          "code": "NAI-HTB2",
+          "entry": 20,
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.7,
+            "IN1": 3.9,
+            "MI1": 5.9,
+            "MI2": 6.1,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "RAD-FC59",
+          "base": "RAD-FC59",
+          "code": null,
+          "entry": 16,
+          "mean": 5.3,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 5.0,
+            "IN1": 4.7,
+            "MI1": 5.2,
+            "MI2": 5.7,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "MESO (STB1)",
+          "base": "MESO",
+          "code": "STB1",
+          "entry": 23,
+          "mean": 5.2,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 4.7,
+            "IN1": 5.2,
+            "MI1": 4.7,
+            "MI2": 5.0,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "SHADOW IV (PST-4SHAD)",
+          "base": "SHADOW IV",
+          "code": "PST-4SHAD",
+          "entry": 40,
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 5.9,
+            "NJ1": 4.0,
+            "IN1": 5.0,
+            "MI1": 5.1,
+            "MI2": 5.6,
+            "WA1": 5.2
+          }
+        },
+        {
+          "name": "ACCENTUATE (PVF-PDB-2020)",
+          "base": "ACCENTUATE",
+          "code": "PVF-PDB-2020",
+          "entry": 41,
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 6.7,
+            "NJ1": 4.3,
+            "IN1": 3.5,
+            "MI1": 5.6,
+            "MI2": 5.6,
+            "WA1": 5.2
+          }
+        },
+        {
+          "name": "DA5-RHF",
+          "base": "DA5-RHF",
+          "code": null,
+          "entry": 38,
+          "mean": 5.1,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 3.9,
+            "IN1": 3.9,
+            "MI1": 5.6,
+            "MI2": 5.7,
+            "WA1": 5.1
+          }
+        },
+        {
+          "name": "SWORD II (NAI-HAQ1+2)",
+          "base": "SWORD II",
+          "code": "NAI-HAQ1+2",
+          "entry": 19,
+          "mean": 5.0,
+          "bySite": {
+            "CT1": 6.5,
+            "NJ1": 4.2,
+            "IN1": 3.3,
+            "MI1": 5.4,
+            "MI2": 5.4,
+            "WA1": 5.1
+          }
+        },
+        {
+          "name": "BAR FT 135",
+          "base": "BAR FT 135",
+          "code": null,
+          "entry": 12,
+          "mean": 5.0,
+          "bySite": {
+            "CT1": 6.4,
+            "NJ1": 4.2,
+            "IN1": 3.9,
+            "MI1": 5.0,
+            "MI2": 5.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "FOXFIRE 2",
+          "base": "FOXFIRE 2",
+          "code": null,
+          "entry": 8,
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 4.8,
+            "IN1": 4.7,
+            "MI1": 4.2,
+            "MI2": 4.3,
+            "WA1": 5.6
+          }
+        },
+        {
+          "name": "HARBOR MR (PPG-FRR 132)",
+          "base": "HARBOR MR",
+          "code": "PPG-FRR 132",
+          "entry": 35,
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 3.7,
+            "IN1": 4.9,
+            "MI1": 4.7,
+            "MI2": 4.7,
+            "WA1": 5.5
+          }
+        },
+        {
+          "name": "5Z2",
+          "base": "5Z2",
+          "code": null,
+          "entry": 22,
+          "mean": 4.8,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 3.7,
+            "IN1": 4.6,
+            "MI1": 4.5,
+            "MI2": 4.4,
+            "WA1": 5.5
+          }
+        },
+        {
+          "name": "PST-4SWTM",
+          "base": "PST-4SWTM",
+          "code": null,
+          "entry": 39,
+          "mean": 4.7,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 3.8,
+            "IN1": 4.1,
+            "MI1": 4.8,
+            "MI2": 5.0,
+            "WA1": 4.8
+          }
+        },
+        {
+          "name": "RESOLUTE",
+          "base": "RESOLUTE",
+          "code": null,
+          "entry": 6,
+          "mean": 4.7,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 3.7,
+            "IN1": 3.2,
+            "MI1": 5.2,
+            "MI2": 5.1,
+            "WA1": 4.8
+          }
+        },
+        {
+          "name": "CARDINAL II",
+          "base": "CARDINAL II",
+          "code": null,
+          "entry": 31,
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 3.8,
+            "IN1": 4.4,
+            "MI1": 4.2,
+            "MI2": 4.2,
+            "WA1": 5.2
+          }
+        },
+        {
+          "name": "BAR FO 131",
+          "base": "BAR FO 131",
+          "code": null,
+          "entry": 10,
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 5.7,
+            "NJ1": 4.5,
+            "IN1": 3.9,
+            "MI1": 4.2,
+            "MI2": 4.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "BAR FT 132",
+          "base": "BAR FT 132",
+          "code": null,
+          "entry": 13,
+          "mean": 4.6,
+          "bySite": {
+            "CT1": 6.0,
+            "NJ1": 4.5,
+            "IN1": 3.2,
+            "MI1": 4.5,
+            "MI2": 4.4,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "BEACON II (PPG-FL 128)",
+          "base": "BEACON II",
+          "code": "PPG-FL 128",
+          "entry": 36,
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.3,
+            "NJ1": 3.5,
+            "IN1": 2.8,
+            "MI1": 5.0,
+            "MI2": 4.8,
+            "WA1": 4.8
+          }
+        },
+        {
+          "name": "GLADIATOR",
+          "base": "GLADIATOR",
+          "code": null,
+          "entry": 1,
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.2,
+            "NJ1": 3.9,
+            "IN1": 2.5,
+            "MI1": 5.1,
+            "MI2": 5.0,
+            "WA1": 4.5
+          }
+        },
+        {
+          "name": "DLFPS-FL-3104",
+          "base": "DLFPS-FL-3104",
+          "code": null,
+          "entry": 4,
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 6.2,
+            "NJ1": 3.4,
+            "IN1": 2.8,
+            "MI1": 5.0,
+            "MI2": 4.8,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "DLF-FRR-3128",
+          "base": "DLF-FRR-3128",
+          "code": null,
+          "entry": 26,
+          "mean": 4.5,
+          "bySite": {
+            "CT1": 5.7,
+            "NJ1": 4.1,
+            "IN1": 4.0,
+            "MI1": 3.9,
+            "MI2": 3.9,
+            "WA1": 5.2
+          }
+        },
+        {
+          "name": "KEVIN",
+          "base": "KEVIN",
+          "code": null,
+          "entry": 15,
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 3.8,
+            "IN1": 4.4,
+            "MI1": 3.8,
+            "MI2": 3.7,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "SPHD-20",
+          "base": "SPHD-20",
+          "code": null,
+          "entry": 3,
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 6.1,
+            "NJ1": 3.6,
+            "IN1": 2.9,
+            "MI1": 4.7,
+            "MI2": 4.5,
+            "WA1": 4.8
+          }
+        },
+        {
+          "name": "SEABREEZE GT",
+          "base": "SEABREEZE GT",
+          "code": null,
+          "entry": 2,
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 3.9,
+            "IN1": 3.7,
+            "MI1": 4.1,
+            "MI2": 4.2,
+            "WA1": 4.8
+          }
+        },
+        {
+          "name": "BLUE HORNET (PPG-FO-102)",
+          "base": "BLUE HORNET",
+          "code": "PPG-FO-102",
+          "entry": 33,
+          "mean": 4.4,
+          "bySite": {
+            "CT1": 5.9,
+            "NJ1": 4.6,
+            "IN1": 2.6,
+            "MI1": 4.3,
+            "MI2": 4.3,
+            "WA1": 4.6
+          }
+        },
+        {
+          "name": "QUATRO",
+          "base": "QUATRO",
+          "code": null,
+          "entry": 5,
+          "mean": 4.2,
+          "bySite": {
+            "CT1": 5.8,
+            "NJ1": 4.4,
+            "IN1": 2.6,
+            "MI1": 4.1,
+            "MI2": 4.0,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "RAD-FR64",
+          "base": "RAD-FR64",
+          "code": null,
+          "entry": 21,
+          "mean": 4.2,
+          "bySite": {
+            "CT1": 5.6,
+            "NJ1": 4.0,
+            "IN1": 3.9,
+            "MI1": 3.5,
+            "MI2": 3.3,
+            "WA1": 5.2
+          }
+        },
+        {
+          "name": "BOREAL",
+          "base": "BOREAL",
+          "code": null,
+          "entry": 27,
+          "mean": 4.1,
+          "bySite": {
+            "CT1": 5.2,
+            "NJ1": 4.5,
+            "IN1": 3.6,
+            "MI1": 3.2,
+            "MI2": 3.2,
+            "WA1": 4.9
+          }
+        }
+      ],
+      "expected": 7,
+      "pages": [
+        24
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "CT1",
+        "IA1",
+        "MI1",
+        "MN1",
+        "NC1",
+        "QE1",
+        "UT1",
+        "WA1"
+      ],
+      "rows": [
+        {
+          "name": "RAD-FC59",
+          "base": "RAD-FC59",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.3,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 6.7
+          }
+        },
+        {
+          "name": "RAD-FR64",
+          "base": "RAD-FR64",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 9.0,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 6.3
+          }
+        },
+        {
+          "name": "CARDINAL II",
+          "base": "CARDINAL II",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "BLUE HORNET (PPG-FO-102)",
+          "base": "BLUE HORNET",
+          "code": "PPG-FO-102",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.0,
+            "MI1": 7.7,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.3,
+            "WA1": 4.3
+          }
+        },
+        {
+          "name": "SWORD II (NAI-HAQ1+2)",
+          "base": "SWORD II",
+          "code": "NAI-HAQ1+2",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 4.7,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.3,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "5Z2",
+          "base": "5Z2",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7,
+            "WA1": 6.3
+          }
+        },
+        {
+          "name": "NAVIGATOR III (PPG-FRR 127)",
+          "base": "NAVIGATOR III",
+          "code": "PPG-FRR 127",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "MI1": 7.3,
+            "MN1": 5.7,
+            "NC1": 7.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "GLADIATOR",
+          "base": "GLADIATOR",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "MI1": 7.3,
+            "MN1": 6.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "FOXFIRE 2",
+          "base": "FOXFIRE 2",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 6.3
+          }
+        },
+        {
+          "name": "DA5-RHF",
+          "base": "DA5-RHF",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 7.3,
+            "MN1": 5.7,
+            "NC1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.7,
+            "WA1": 4.3
+          }
+        },
+        {
+          "name": "DLFPS-FL-3104",
+          "base": "DLFPS-FL-3104",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 8.7,
+            "QE1": 7.3,
+            "UT1": 8.3,
+            "WA1": 4.0
+          }
+        },
+        {
+          "name": "TENACIOUS (NAI-HTB2)",
+          "base": "TENACIOUS",
+          "code": "NAI-HTB2",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 5.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "HYPE (5Z5)",
+          "base": "HYPE",
+          "code": "5Z5",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "PVF-HSY+",
+          "base": "PVF-HSY+",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "ACCENTUATE (PVF-PDB-2020)",
+          "base": "ACCENTUATE",
+          "code": "PVF-PDB-2020",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 5.0,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "BAR FT 132",
+          "base": "BAR FT 132",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.0,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "PPG-FRC-130",
+          "base": "PPG-FRC-130",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 7.0,
+            "MN1": 4.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 6.3
+          }
+        },
+        {
+          "name": "FRENZY (BYE)",
+          "base": "FRENZY",
+          "code": "BYE",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "BEACON II (PPG-FL 128)",
+          "base": "BEACON II",
+          "code": "PPG-FL 128",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 7.7,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "RESOLUTE",
+          "base": "RESOLUTE",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 4.0,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 9.0,
+            "QE1": 7.3,
+            "UT1": 7.7,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "SPHD-20",
+          "base": "SPHD-20",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 4.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.7,
+            "UT1": 8.0,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "BAR FT 135",
+          "base": "BAR FT 135",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0,
+            "WA1": 4.3
+          }
+        },
+        {
+          "name": "DLF-FRR-3128",
+          "base": "DLF-FRR-3128",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "KEVIN",
+          "base": "KEVIN",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 8.0,
+            "QE1": 7.7,
+            "UT1": 5.7,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "DLFPS-FRC-3105",
+          "base": "DLFPS-FRC-3105",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "QUATRO",
+          "base": "QUATRO",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.3,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "PPG-FRR-134",
+          "base": "PPG-FRR-134",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.0,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "MESO (STB1)",
+          "base": "MESO",
+          "code": "STB1",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.0,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "COMPASS II",
+          "base": "COMPASS II",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 4.0,
+            "NC1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "BAR FO 131",
+          "base": "BAR FO 131",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 4.7,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 9.0,
+            "QE1": 6.7,
+            "UT1": 6.3,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "PST-4SWTM",
+          "base": "PST-4SWTM",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.0,
+            "NC1": 8.7,
+            "QE1": 7.0,
+            "UT1": 5.3,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "PVF-MVP-2020",
+          "base": "PVF-MVP-2020",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.3,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.7,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "SHADOW IV (PST-4SHAD)",
+          "base": "SHADOW IV",
+          "code": "PST-4SHAD",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "MI1": 6.7,
+            "MN1": 3.7,
+            "NC1": 7.7,
+            "QE1": 6.7,
+            "UT1": 5.7,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "HARBOR MR (PPG-FRR 132)",
+          "base": "HARBOR MR",
+          "code": "PPG-FRR 132",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 4.7
+          }
+        },
+        {
+          "name": "RESONANCE (NAI-CHU1)",
+          "base": "RESONANCE",
+          "code": "NAI-CHU1",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 5.7
+          }
+        },
+        {
+          "name": "RADAR II (PPG-FRC 127)",
+          "base": "RADAR II",
+          "code": "PPG-FRC 127",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 4.3,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "JAMESTOWN VII",
+          "base": "JAMESTOWN VII",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.0,
+            "MI1": 6.0,
+            "MN1": 3.3,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "BAR FRL 122",
+          "base": "BAR FRL 122",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "NC1": 7.3,
+            "QE1": 6.5,
+            "UT1": 6.3,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "BRITTANY 2",
+          "base": "BRITTANY 2",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 4.7,
+            "MI1": 6.7,
+            "MN1": 3.0,
+            "NC1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.3,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "BAR FRC 123",
+          "base": "BAR FRC 123",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.0,
+            "MI1": 6.3,
+            "MN1": 3.3,
+            "NC1": 7.7,
+            "QE1": 6.7,
+            "UT1": 5.3,
+            "WA1": 6.0
+          }
+        },
+        {
+          "name": "SEABREEZE GT",
+          "base": "SEABREEZE GT",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.3,
+            "MI1": 6.0,
+            "MN1": 3.7,
+            "NC1": 7.3,
+            "QE1": 7.0,
+            "UT1": 5.7,
+            "WA1": 5.0
+          }
+        },
+        {
+          "name": "BAR FRC 130",
+          "base": "BAR FRC 130",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 3.7,
+            "MI1": 6.3,
+            "MN1": 4.0,
+            "NC1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.0,
+            "WA1": 5.3
+          }
+        },
+        {
+          "name": "BOREAL",
+          "base": "BOREAL",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 7.0,
+            "QE1": 6.5,
+            "UT1": 4.3,
+            "WA1": 4.0
+          }
+        }
+      ],
+      "expected": 9,
+      "pages": [
+        73
+      ]
+    },
+    "brownPatch": {
+      "sites": [
+        "IN1",
+        "MI2",
+        "NC1",
+        "NJ1"
+      ],
+      "rows": [
+        {
+          "name": "PPG-FRC-130",
+          "base": "PPG-FRC-130",
+          "code": null,
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.3,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          }
+        },
+        {
+          "name": "RAD-FC59",
+          "base": "RAD-FC59",
+          "code": null,
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.7,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "RADAR II (PPG-FRC 127)",
+          "base": "RADAR II",
+          "code": "PPG-FRC 127",
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 9.0
+          }
+        },
+        {
+          "name": "BRITTANY 2",
+          "base": "BRITTANY 2",
+          "code": null,
+          "entry": null,
+          "mean": 8.2,
+          "bySite": {
+            "IN1": 7.0,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "BAR FRC 123",
+          "base": "BAR FRC 123",
+          "code": null,
+          "entry": null,
+          "mean": 8.0,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 9.0,
+            "NC1": 8.3,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "DLFPS-FRC-3105",
+          "base": "DLFPS-FRC-3105",
+          "code": null,
+          "entry": null,
+          "mean": 8.0,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "BAR FRC 130",
+          "base": "BAR FRC 130",
+          "code": null,
+          "entry": null,
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 6.3,
+            "MI2": 9.0,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "PVF-MVP-2020",
+          "base": "PVF-MVP-2020",
+          "code": null,
+          "entry": null,
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          }
+        },
+        {
+          "name": "ACCENTUATE (PVF-PDB-2020)",
+          "base": "ACCENTUATE",
+          "code": "PVF-PDB-2020",
+          "entry": null,
+          "mean": 7.9,
+          "bySite": {
+            "IN1": 5.0,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 9.0
+          }
+        },
+        {
+          "name": "BAR FO 131",
+          "base": "BAR FO 131",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 6.0,
+            "MI2": 8.0,
+            "NC1": 9.0,
+            "NJ1": 8.3
+          }
+        },
+        {
+          "name": "RESONANCE (NAI-CHU1)",
+          "base": "RESONANCE",
+          "code": "NAI-CHU1",
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 9.0,
+            "NC1": 8.7,
+            "NJ1": 8.3
+          }
+        },
+        {
+          "name": "COMPASS II",
+          "base": "COMPASS II",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.7,
+            "MI2": 8.3,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "BAR FRL 122",
+          "base": "BAR FRL 122",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IN1": 5.7,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "JAMESTOWN VII",
+          "base": "JAMESTOWN VII",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.0,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "DA5-RHF",
+          "base": "DA5-RHF",
+          "code": null,
+          "entry": null,
+          "mean": 7.6,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 8.7,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "BLUE HORNET (PPG-FO-102)",
+          "base": "BLUE HORNET",
+          "code": "PPG-FO-102",
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 9.0,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "NAVIGATOR III (PPG-FRR 127)",
+          "base": "NAVIGATOR III",
+          "code": "PPG-FRR 127",
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "RESOLUTE",
+          "base": "RESOLUTE",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "TENACIOUS (NAI-HTB2)",
+          "base": "TENACIOUS",
+          "code": "NAI-HTB2",
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 8.7,
+            "NC1": 9.0,
+            "NJ1": 8.7
+          }
+        },
+        {
+          "name": "BEACON II (PPG-FL 128)",
+          "base": "BEACON II",
+          "code": "PPG-FL 128",
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.3,
+            "NC1": 8.3,
+            "NJ1": 8.3
+          }
+        },
+        {
+          "name": "SWORD II (NAI-HAQ1+2)",
+          "base": "SWORD II",
+          "code": "NAI-HAQ1+2",
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 7.7
+          }
+        },
+        {
+          "name": "QUATRO",
+          "base": "QUATRO",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.0,
+            "NC1": 8.3,
+            "NJ1": 7.7
+          }
+        },
+        {
+          "name": "SHADOW IV (PST-4SHAD)",
+          "base": "SHADOW IV",
+          "code": "PST-4SHAD",
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 4.7,
+            "MI2": 7.3,
+            "NC1": 7.7,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "SPHD-20",
+          "base": "SPHD-20",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 8.0,
+            "NC1": 8.0,
+            "NJ1": 7.7
+          }
+        },
+        {
+          "name": "DLFPS-FL-3104",
+          "base": "DLFPS-FL-3104",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 8.7,
+            "NC1": 8.7,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "PST-4SWTM",
+          "base": "PST-4SWTM",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 6.0,
+            "NC1": 9.0,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "PVF-HSY+",
+          "base": "PVF-HSY+",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN1": 5.3,
+            "MI2": 7.3,
+            "NC1": 9.0,
+            "NJ1": 5.7
+          }
+        },
+        {
+          "name": "GLADIATOR",
+          "base": "GLADIATOR",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 7.7,
+            "NC1": 9.0,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "FRENZY (BYE)",
+          "base": "FRENZY",
+          "code": "BYE",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 6.3,
+            "NC1": 8.3,
+            "NJ1": 8.0
+          }
+        },
+        {
+          "name": "HYPE (5Z5)",
+          "base": "HYPE",
+          "code": "5Z5",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 6.7,
+            "NC1": 8.0,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "MESO (STB1)",
+          "base": "MESO",
+          "code": "STB1",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IN1": 4.3,
+            "MI2": 4.3,
+            "NC1": 8.0,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "SEABREEZE GT",
+          "base": "SEABREEZE GT",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN1": 5.0,
+            "MI2": 5.0,
+            "NC1": 8.0,
+            "NJ1": 5.0
+          }
+        },
+        {
+          "name": "FOXFIRE 2",
+          "base": "FOXFIRE 2",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 3.3,
+            "NC1": 7.7,
+            "NJ1": 7.7
+          }
+        },
+        {
+          "name": "PPG-FRR-134",
+          "base": "PPG-FRR-134",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 5.7,
+            "NC1": 8.0,
+            "NJ1": 5.0
+          }
+        },
+        {
+          "name": "CARDINAL II",
+          "base": "CARDINAL II",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 4.7,
+            "NC1": 6.7,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "5Z2",
+          "base": "5Z2",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IN1": 4.0,
+            "MI2": 5.3,
+            "NC1": 8.3,
+            "NJ1": 4.0
+          }
+        },
+        {
+          "name": "BOREAL",
+          "base": "BOREAL",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "IN1": 3.5,
+            "MI2": 3.7,
+            "NC1": 6.3,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "HARBOR MR (PPG-FRR 132)",
+          "base": "HARBOR MR",
+          "code": "PPG-FRR 132",
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 4.7,
+            "MI2": 3.7,
+            "NC1": 8.7,
+            "NJ1": 3.0
+          }
+        },
+        {
+          "name": "RAD-FR64",
+          "base": "RAD-FR64",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 2.3,
+            "NC1": 7.7,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "KEVIN",
+          "base": "KEVIN",
+          "code": null,
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {
+            "IN1": 3.7,
+            "MI2": 3.3,
+            "NC1": 7.3,
+            "NJ1": 5.3
+          }
+        },
+        {
+          "name": "DLF-FRR-3128",
+          "base": "DLF-FRR-3128",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 3.0,
+            "MI2": 3.7,
+            "NC1": 8.3,
+            "NJ1": 3.7
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        104
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "MD1",
+        "VA1",
+        "NC1",
+        "MN1",
+        "IA1",
+        "KS1",
+        "QE1"
+      ],
+      "rows": [
+        {
+          "name": "ACCENTUATE (PVF-PDB-2020)",
+          "base": "ACCENTUATE",
+          "code": "PVF-PDB-2020",
+          "entry": 41,
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 6.0,
+            "VA1": 6.3,
+            "NC1": 4.4,
+            "MN1": 6.7,
+            "IA1": 7.8,
+            "KS1": 5.6,
+            "QE1": 7.3
+          }
+        },
+        {
+          "name": "BEACON II (PPG-FL 128)",
+          "base": "BEACON II",
+          "code": "PPG-FL 128",
+          "entry": 36,
+          "mean": 6.2,
+          "bySite": {
+            "MD1": 5.9,
+            "VA1": 6.2,
+            "NC1": 4.2,
+            "MN1": 6.6,
+            "IA1": 7.7,
+            "KS1": 5.4,
+            "QE1": 7.2
+          }
+        },
+        {
+          "name": "TENACIOUS (NAI-HTB2)",
+          "base": "TENACIOUS",
+          "code": "NAI-HTB2",
+          "entry": 20,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.7,
+            "VA1": 6.1,
+            "NC1": 4.4,
+            "MN1": 6.6,
+            "IA1": 7.6,
+            "KS1": 5.4,
+            "QE1": 7.1
+          }
+        },
+        {
+          "name": "SWORD II (NAI-HAQ1+2)",
+          "base": "SWORD II",
+          "code": "NAI-HAQ1+2",
+          "entry": 19,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.2,
+            "NC1": 4.1,
+            "MN1": 6.5,
+            "IA1": 7.6,
+            "KS1": 5.5,
+            "QE1": 7.1
+          }
+        },
+        {
+          "name": "DLFPS-FL-3104",
+          "base": "DLFPS-FL-3104",
+          "code": null,
+          "entry": 4,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.0,
+            "NC1": 4.1,
+            "MN1": 6.5,
+            "IA1": 7.6,
+            "KS1": 5.3,
+            "QE1": 7.1
+          }
+        },
+        {
+          "name": "RESOLUTE",
+          "base": "RESOLUTE",
+          "code": null,
+          "entry": 6,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 5.7,
+            "VA1": 6.0,
+            "NC1": 4.3,
+            "MN1": 6.5,
+            "IA1": 7.5,
+            "KS1": 5.2,
+            "QE1": 7.0
+          }
+        },
+        {
+          "name": "DA5-RHF",
+          "base": "DA5-RHF",
+          "code": null,
+          "entry": 38,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.0,
+            "NC1": 5.2,
+            "MN1": 6.6,
+            "IA1": 7.2,
+            "KS1": 4.9,
+            "QE1": 6.7
+          }
+        },
+        {
+          "name": "BAR FT 135",
+          "base": "BAR FT 135",
+          "code": null,
+          "entry": 12,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.3,
+            "NC1": 4.9,
+            "MN1": 5.9,
+            "IA1": 7.0,
+            "KS1": 5.1,
+            "QE1": 6.5
+          }
+        },
+        {
+          "name": "SPHD-20",
+          "base": "SPHD-20",
+          "code": null,
+          "entry": 3,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 5.8,
+            "VA1": 6.1,
+            "NC1": 4.0,
+            "MN1": 6.0,
+            "IA1": 7.2,
+            "KS1": 5.2,
+            "QE1": 6.8
+          }
+        },
+        {
+          "name": "FRENZY (BYE)",
+          "base": "FRENZY",
+          "code": "BYE",
+          "entry": 25,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.6,
+            "VA1": 6.5,
+            "NC1": 6.1,
+            "MN1": 5.6,
+            "IA1": 6.3,
+            "KS1": 4.7,
+            "QE1": 5.9
+          }
+        },
+        {
+          "name": "GLADIATOR",
+          "base": "GLADIATOR",
+          "code": null,
+          "entry": 1,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.6,
+            "VA1": 5.8,
+            "NC1": 3.1,
+            "MN1": 6.3,
+            "IA1": 7.6,
+            "KS1": 5.4,
+            "QE1": 7.1
+          }
+        },
+        {
+          "name": "NAVIGATOR III (PPG-FRR 127)",
+          "base": "NAVIGATOR III",
+          "code": "PPG-FRR 127",
+          "entry": 37,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 6.3,
+            "NC1": 6.7,
+            "MN1": 5.9,
+            "IA1": 6.3,
+            "KS1": 4.4,
+            "QE1": 5.8
+          }
+        },
+        {
+          "name": "PVF-HSY+",
+          "base": "PVF-HSY+",
+          "code": null,
+          "entry": 42,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.5,
+            "NC1": 6.6,
+            "MN1": 5.6,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.7
+          }
+        },
+        {
+          "name": "5Z2",
+          "base": "5Z2",
+          "code": null,
+          "entry": 22,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.5,
+            "VA1": 6.3,
+            "NC1": 6.2,
+            "MN1": 5.4,
+            "IA1": 6.1,
+            "KS1": 4.3,
+            "QE1": 5.6
+          }
+        },
+        {
+          "name": "PVF-MVP-2020",
+          "base": "PVF-MVP-2020",
+          "code": null,
+          "entry": 43,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 5.7,
+            "MN1": 5.8,
+            "IA1": 6.3,
+            "KS1": 4.6,
+            "QE1": 5.9
+          }
+        },
+        {
+          "name": "PPG-FRR-134",
+          "base": "PPG-FRR-134",
+          "code": null,
+          "entry": 30,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.4,
+            "VA1": 6.2,
+            "NC1": 5.8,
+            "MN1": 5.5,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.8
+          }
+        },
+        {
+          "name": "BRITTANY 2",
+          "base": "BRITTANY 2",
+          "code": null,
+          "entry": 7,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.9,
+            "NC1": 5.8,
+            "MN1": 5.7,
+            "IA1": 6.2,
+            "KS1": 4.5,
+            "QE1": 5.8
+          }
+        },
+        {
+          "name": "COMPASS II",
+          "base": "COMPASS II",
+          "code": null,
+          "entry": 29,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 6.0,
+            "NC1": 5.5,
+            "MN1": 5.6,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          }
+        },
+        {
+          "name": "RADAR II (PPG-FRC 127)",
+          "base": "RADAR II",
+          "code": "PPG-FRC 127",
+          "entry": 34,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.8,
+            "NC1": 5.8,
+            "MN1": 5.8,
+            "IA1": 6.1,
+            "KS1": 4.4,
+            "QE1": 5.8
+          }
+        },
+        {
+          "name": "DLFPS-FRC-3105",
+          "base": "DLFPS-FRC-3105",
+          "code": null,
+          "entry": 32,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.9,
+            "NC1": 5.3,
+            "MN1": 5.5,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          }
+        },
+        {
+          "name": "PPG-FRC-130",
+          "base": "PPG-FRC-130",
+          "code": null,
+          "entry": 28,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.7,
+            "NC1": 4.2,
+            "MN1": 5.7,
+            "IA1": 6.5,
+            "KS1": 4.9,
+            "QE1": 6.3
+          }
+        },
+        {
+          "name": "HARBOR MR (PPG-FRR 132)",
+          "base": "HARBOR MR",
+          "code": "PPG-FRR 132",
+          "entry": 35,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.1,
+            "NC1": 6.6,
+            "MN1": 5.3,
+            "IA1": 5.8,
+            "KS1": 3.9,
+            "QE1": 5.2
+          }
+        },
+        {
+          "name": "HYPE (5Z5)",
+          "base": "HYPE",
+          "code": "5Z5",
+          "entry": 24,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 6.2,
+            "NC1": 5.3,
+            "MN1": 5.0,
+            "IA1": 6.0,
+            "KS1": 4.6,
+            "QE1": 5.6
+          }
+        },
+        {
+          "name": "BAR FRL 122",
+          "base": "BAR FRL 122",
+          "code": null,
+          "entry": 11,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.7,
+            "NC1": 4.6,
+            "MN1": 5.5,
+            "IA1": 6.3,
+            "KS1": 4.6,
+            "QE1": 6.0
+          }
+        },
+        {
+          "name": "BAR FT 132",
+          "base": "BAR FT 132",
+          "code": null,
+          "entry": 13,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.4,
+            "VA1": 5.9,
+            "NC1": 3.3,
+            "MN1": 5.1,
+            "IA1": 6.6,
+            "KS1": 5.0,
+            "QE1": 6.2
+          }
+        },
+        {
+          "name": "RESONANCE (NAI-CHU1)",
+          "base": "RESONANCE",
+          "code": "NAI-CHU1",
+          "entry": 18,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.7,
+            "NC1": 5.6,
+            "MN1": 5.5,
+            "IA1": 5.9,
+            "KS1": 4.2,
+            "QE1": 5.6
+          }
+        },
+        {
+          "name": "BAR FRC 123",
+          "base": "BAR FRC 123",
+          "code": null,
+          "entry": 9,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.7,
+            "NC1": 3.8,
+            "MN1": 5.2,
+            "IA1": 6.3,
+            "KS1": 4.8,
+            "QE1": 6.0
+          }
+        },
+        {
+          "name": "JAMESTOWN VII",
+          "base": "JAMESTOWN VII",
+          "code": null,
+          "entry": 17,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 4.9,
+            "VA1": 5.8,
+            "NC1": 5.6,
+            "MN1": 5.2,
+            "IA1": 5.8,
+            "KS1": 4.2,
+            "QE1": 5.4
+          }
+        },
+        {
+          "name": "BAR FRC 130",
+          "base": "BAR FRC 130",
+          "code": null,
+          "entry": 14,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.5,
+            "NC1": 4.1,
+            "MN1": 5.3,
+            "IA1": 6.2,
+            "KS1": 4.6,
+            "QE1": 5.9
+          }
+        },
+        {
+          "name": "MESO (STB1)",
+          "base": "MESO",
+          "code": "STB1",
+          "entry": 23,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 6.0,
+            "NC1": 5.9,
+            "MN1": 4.8,
+            "IA1": 5.5,
+            "KS1": 4.0,
+            "QE1": 5.1
+          }
+        },
+        {
+          "name": "CARDINAL II",
+          "base": "CARDINAL II",
+          "code": null,
+          "entry": 31,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.0,
+            "VA1": 5.9,
+            "NC1": 5.7,
+            "MN1": 4.8,
+            "IA1": 5.6,
+            "KS1": 3.9,
+            "QE1": 5.1
+          }
+        },
+        {
+          "name": "BLUE HORNET (PPG-FO-102)",
+          "base": "BLUE HORNET",
+          "code": "PPG-FO-102",
+          "entry": 33,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 5.6,
+            "NC1": 2.1,
+            "MN1": 4.8,
+            "IA1": 6.6,
+            "KS1": 5.1,
+            "QE1": 6.3
+          }
+        },
+        {
+          "name": "QUATRO",
+          "base": "QUATRO",
+          "code": null,
+          "entry": 5,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.3,
+            "VA1": 5.7,
+            "NC1": 2.3,
+            "MN1": 4.7,
+            "IA1": 6.5,
+            "KS1": 5.0,
+            "QE1": 6.2
+          }
+        },
+        {
+          "name": "RAD-FC59",
+          "base": "RAD-FC59",
+          "code": null,
+          "entry": 16,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.5,
+            "NC1": 4.8,
+            "MN1": 5.1,
+            "IA1": 5.8,
+            "KS1": 4.1,
+            "QE1": 5.4
+          }
+        },
+        {
+          "name": "PST-4SWTM",
+          "base": "PST-4SWTM",
+          "code": null,
+          "entry": 39,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.3,
+            "NC1": 5.0,
+            "MN1": 5.2,
+            "IA1": 5.8,
+            "KS1": 3.9,
+            "QE1": 5.4
+          }
+        },
+        {
+          "name": "SHADOW IV (PST-4SHAD)",
+          "base": "SHADOW IV",
+          "code": "PST-4SHAD",
+          "entry": 40,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 4.4,
+            "VA1": 5.4,
+            "NC1": 6.1,
+            "MN1": 5.3,
+            "IA1": 5.5,
+            "KS1": 3.5,
+            "QE1": 5.0
+          }
+        },
+        {
+          "name": "DLF-FRR-3128",
+          "base": "DLF-FRR-3128",
+          "code": null,
+          "entry": 26,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 5.9,
+            "NC1": 4.7,
+            "MN1": 4.4,
+            "IA1": 5.6,
+            "KS1": 4.2,
+            "QE1": 5.2
+          }
+        },
+        {
+          "name": "FOXFIRE 2",
+          "base": "FOXFIRE 2",
+          "code": null,
+          "entry": 8,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 4.9,
+            "MN1": 4.2,
+            "IA1": 5.4,
+            "KS1": 4.2,
+            "QE1": 5.0
+          }
+        },
+        {
+          "name": "KEVIN",
+          "base": "KEVIN",
+          "code": null,
+          "entry": 15,
+          "mean": 4.9,
+          "bySite": {
+            "MD1": 5.1,
+            "VA1": 6.0,
+            "NC1": 5.5,
+            "MN1": 4.2,
+            "IA1": 5.2,
+            "KS1": 3.8,
+            "QE1": 4.7
+          }
+        },
+        {
+          "name": "RAD-FR64",
+          "base": "RAD-FR64",
+          "code": null,
+          "entry": 21,
+          "mean": 4.9,
+          "bySite": {
+            "MD1": 5.2,
+            "VA1": 5.9,
+            "NC1": 4.6,
+            "MN1": 4.0,
+            "IA1": 5.3,
+            "KS1": 4.1,
+            "QE1": 4.9
+          }
+        },
+        {
+          "name": "BAR FO 131",
+          "base": "BAR FO 131",
+          "code": null,
+          "entry": 10,
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 4.8,
+            "VA1": 5.6,
+            "NC1": 4.0,
+            "MN1": 4.3,
+            "IA1": 5.6,
+            "KS1": 4.2,
+            "QE1": 5.2
+          }
+        },
+        {
+          "name": "SEABREEZE GT",
+          "base": "SEABREEZE GT",
+          "code": null,
+          "entry": 2,
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 4.7,
+            "VA1": 5.4,
+            "NC1": 4.3,
+            "MN1": 4.6,
+            "IA1": 5.6,
+            "KS1": 4.0,
+            "QE1": 5.2
+          }
+        },
+        {
+          "name": "BOREAL",
+          "base": "BOREAL",
+          "code": null,
+          "entry": 27,
+          "mean": 4.2,
+          "bySite": {
+            "MD1": 4.6,
+            "VA1": 5.4,
+            "NC1": 3.2,
+            "MN1": 3.1,
+            "IA1": 4.7,
+            "KS1": 3.8,
+            "QE1": 4.4
+          }
+        }
+      ],
+      "expected": 8,
+      "pages": [
+        19
+      ]
+    }
+  }
+}

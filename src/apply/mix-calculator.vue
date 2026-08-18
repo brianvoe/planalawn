@@ -91,12 +91,15 @@ export default {
     sprayUnits(): SprayUnits {
       return this.$store.getters.sprayUnits
     },
-    /** Nothing here is a weighed powder, so the dose unit follows the volume one. */
+    /** Nothing here is a weighed powder, so the dose is always a poured one. */
     measure(): MeasureUnit {
       return this.sprayUnits === 'metric' ? 'ml' : 'fl oz'
     },
+    volumeUnits(): SprayUnits {
+      return this.$store.getters.volumeUnits
+    },
     vol(): VolumeUnit {
-      return volumeUnit(this.sprayUnits)
+      return volumeUnit(this.volumeUnits)
     },
     modeSelectData(): { text: string; value: MixMode }[] {
       return [

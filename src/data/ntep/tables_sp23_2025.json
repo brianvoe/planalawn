@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "species": "seashore_paspalum",
+    "trial": "sp23",
+    "year": 2025,
+    "sourcePdf": "sp23_26-4.pdf",
+    "notes": "Parsed high-value NTEP tables only (genetic color, national mean quality)."
+  },
+  "tables": {
+    "geneticColor": {
+      "sites": [
+        "CA3",
+        "FL3",
+        "GA1",
+        "MS1"
+      ],
+      "rows": [
+        {
+          "name": "UGA 17-330",
+          "base": "UGA 17-330",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "CA3": 8.0,
+            "FL3": 7.3,
+            "GA1": 6.7,
+            "MS1": 7.0
+          }
+        },
+        {
+          "name": "UGA 16-1253",
+          "base": "UGA 16-1253",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CA3": 7.3,
+            "FL3": 8.0,
+            "GA1": 6.7,
+            "MS1": 6.3
+          }
+        },
+        {
+          "name": "MVP-DCC",
+          "base": "MVP-DCC",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CA3": 6.3,
+            "FL3": 7.3,
+            "GA1": 7.0,
+            "MS1": 6.3
+          }
+        },
+        {
+          "name": "UGP 312",
+          "base": "UGP 312",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CA3": 7.0,
+            "FL3": 7.0,
+            "GA1": 6.3,
+            "MS1": 6.3
+          }
+        },
+        {
+          "name": "SEA ISLE I",
+          "base": "SEA ISLE I",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CA3": 6.7,
+            "FL3": 7.0,
+            "GA1": 6.7,
+            "MS1": 6.0
+          }
+        },
+        {
+          "name": "UGA 16-111",
+          "base": "UGA 16-111",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CA3": 7.3,
+            "FL3": 6.7,
+            "GA1": 6.3,
+            "MS1": 6.0
+          }
+        },
+        {
+          "name": "UGP 430",
+          "base": "UGP 430",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CA3": 6.0,
+            "FL3": 7.7,
+            "GA1": 6.0,
+            "MS1": 6.3
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        14
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "FL5",
+        "CA3",
+        "FL3",
+        "GA1"
+      ],
+      "rows": [
+        {
+          "name": "UGA 16-1253",
+          "base": "UGA 16-1253",
+          "code": null,
+          "entry": 2,
+          "mean": 6.6,
+          "bySite": {
+            "FL5": 6.6,
+            "CA3": 6.5,
+            "FL3": 7.2,
+            "GA1": 6.1
+          }
+        },
+        {
+          "name": "UGA 16-111",
+          "base": "UGA 16-111",
+          "code": null,
+          "entry": 4,
+          "mean": 6.4,
+          "bySite": {
+            "FL5": 6.3,
+            "CA3": 6.3,
+            "FL3": 7.0,
+            "GA1": 5.9
+          }
+        },
+        {
+          "name": "UGP 312",
+          "base": "UGP 312",
+          "code": null,
+          "entry": 6,
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.7,
+            "CA3": 5.9,
+            "FL3": 7.0,
+            "GA1": 5.9
+          }
+        },
+        {
+          "name": "UGA 17-330",
+          "base": "UGA 17-330",
+          "code": null,
+          "entry": 3,
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.9,
+            "CA3": 5.9,
+            "FL3": 6.9,
+            "GA1": 5.8
+          }
+        },
+        {
+          "name": "SEA ISLE I",
+          "base": "SEA ISLE I",
+          "code": null,
+          "entry": 7,
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.5,
+            "CA3": 5.7,
+            "FL3": 7.0,
+            "GA1": 5.9
+          }
+        },
+        {
+          "name": "MVP-DCC",
+          "base": "MVP-DCC",
+          "code": null,
+          "entry": 1,
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 4.8,
+            "CA3": 5.3,
+            "FL3": 7.1,
+            "GA1": 6.0
+          }
+        },
+        {
+          "name": "UGP 430",
+          "base": "UGP 430",
+          "code": null,
+          "entry": 5,
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 4.7,
+            "CA3": 5.2,
+            "FL3": 7.0,
+            "GA1": 5.9
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        8
+      ]
+    }
+  }
+}

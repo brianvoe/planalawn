@@ -20,6 +20,7 @@ export interface StoreGetters {
   sprayCoverage: number
   spreaderId: string
   sprayUnits: SprayUnits
+  volumeUnits: SprayUnits
   userLocation: UserLocation | null
   hasLocation: boolean
   allBlends: Blend[]

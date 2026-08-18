@@ -1,6 +1,18 @@
 <script lang="ts">
+import { isPaidRetailer } from '../services/affiliate'
+
 export default {
   name: 'Footer',
+  computed: {
+    /**
+     * The wording Amazon's Operating Agreement requires, shown only while the
+     * program is actually live. Tied to the same tag the links read, so the
+     * footer cannot end up claiming a relationship that earns nothing.
+     */
+    amazonDisclosure(): boolean {
+      return isPaidRetailer('amazon')
+    },
+  },
 }
 </script>
 
@@ -100,6 +112,7 @@ export default {
         Soil temperature from Open-Meteo; seed scores from NTEP trial data.
       </p>
       <p>Your lawn profile stays in this browser unless you export it.</p>
+      <p v-if="amazonDisclosure">As an Amazon Associate I earn from qualifying purchases.</p>
     </div>
   </footer>
 </template>

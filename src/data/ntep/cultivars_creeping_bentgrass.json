@@ -1,0 +1,905 @@
+{
+  "meta": {
+    "species": "creeping_bentgrass",
+    "trial": "bt20f",
+    "year": 2025,
+    "sourcePdf": "bt20f_26-6.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "count": 19,
+  "cultivars": [
+    {
+      "id": "007xl",
+      "name": "007XL",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "IA1": 6.7,
+            "NJ1": 7.3,
+            "WI1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "NJ1": 7.7,
+            "VA1": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 3,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "barracuda",
+      "name": "Barracuda",
+      "aliases": [
+        "BARRACUDA"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.2,
+            "NJ1": 4.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.7,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.7,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.3,
+            "MD1": 4.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 7,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "chinook",
+      "name": "Chinook",
+      "aliases": [
+        "CHINOOK (H10G-OP)",
+        "CHINOOK",
+        "H10G-OP"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.5,
+            "NJ1": 6.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 5.7,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ1": 7.3,
+            "VA1": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 2,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "match-play",
+      "name": "Match Play",
+      "aliases": [
+        "MATCH PLAY"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.6,
+            "NJ1": 6.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 6.0,
+            "WI1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.2,
+          "bySite": {
+            "NJ1": 7.7,
+            "VA1": 8.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 10,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "musket",
+      "name": "Musket",
+      "aliases": [
+        "MUSKET"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.9,
+            "NJ1": 3.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 3.3,
+            "WI1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 4.3,
+          "bySite": {
+            "NJ1": 2.0,
+            "VA1": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 8,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "oakley",
+      "name": "Oakley",
+      "aliases": [
+        "OAKLEY (PPG-AP-MTV1)",
+        "OAKLEY",
+        "PPG-AP-MTV1"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 6.7,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.2,
+          "bySite": {
+            "NJ1": 7.3,
+            "VA1": 9.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 15,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "penncross",
+      "name": "Penncross",
+      "aliases": [
+        "PENNCROSS"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 4.7,
+            "VA1": 4.7,
+            "NJ1": 1.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.2,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 1.3,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 5.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 6.7,
+            "MD1": 3.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 1,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "piper",
+      "name": "Piper",
+      "aliases": [
+        "PIPER (PPG-AP-MTV2)",
+        "PIPER",
+        "PPG-AP-MTV2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.8,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 8.3,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.0,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 16,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "piranha",
+      "name": "Piranha",
+      "aliases": [
+        "PIRANHA"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.4,
+            "NJ1": 5.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 6.3,
+            "WI1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "NJ1": 5.7,
+            "VA1": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 6,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "prodigy",
+      "name": "Prodigy",
+      "aliases": [
+        "PRODIGY (PVF-PV-2)",
+        "PRODIGY",
+        "PVF-PV-2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.7,
+            "NJ1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.7,
+          "bySite": {
+            "IA1": 8.3,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 8.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 5.9,
+            "IA1": 7.1,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 13,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "pst-0mrn",
+      "name": "PST-0MRN",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 5.2,
+            "VA1": 5.5,
+            "NJ1": 3.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.0,
+            "WI1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "NJ1": 5.3,
+            "VA1": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "WI1": 5.9,
+            "IA1": 6.8,
+            "MD1": 4.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 17,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "pst-0r2o",
+      "name": "PST-0R2O",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.8,
+            "NJ1": 3.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.3,
+            "WI1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.0,
+            "VA1": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.2,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 18,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "pst-r0ds",
+      "name": "PST-R0DS",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.9,
+            "NJ1": 4.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "IA1": 8.3,
+            "NJ1": 5.3,
+            "WI1": 8.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ1": 5.7,
+            "VA1": 8.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.1,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 19,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "pvf-pv-1",
+      "name": "PVF-PV-1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.6,
+            "NJ1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.8,
+          "bySite": {
+            "IA1": 8.7,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "NJ1": 6.0,
+            "VA1": 8.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 12,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "s1",
+      "name": "S1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.2,
+            "NJ1": 5.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 5.7,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.3,
+            "MD1": 4.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 4,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "shark",
+      "name": "Shark",
+      "aliases": [
+        "SHARK"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.4,
+            "VA1": 5.7,
+            "NJ1": 3.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.3,
+            "NJ1": 4.7,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ1": 4.3,
+            "VA1": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.1,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 9,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "spectrum",
+      "name": "Spectrum",
+      "aliases": [
+        "SPECTRUM (LNS 19)",
+        "SPECTRUM",
+        "LNS 19"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.7,
+            "NJ1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.6,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {
+            "NJ1": 8.3,
+            "VA1": 8.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 5.8,
+            "IA1": 7.1,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 14,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "tillinghast",
+      "name": "Tillinghast",
+      "aliases": [
+        "TILLINGHAST (DLF-AP-3084)",
+        "TILLINGHAST",
+        "DLF-AP-3084"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.7,
+            "VA1": 6.3,
+            "NJ1": 5.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 5.7,
+            "WI1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.1,
+            "MD1": 4.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 11,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    },
+    {
+      "id": "tourpro",
+      "name": "Tourpro",
+      "aliases": [
+        "TOURPRO"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.4,
+            "NJ1": 5.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 6.3,
+            "WI1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.1,
+            "IA1": 7.2,
+            "MD1": 4.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 5,
+      "species": "creeping_bentgrass",
+      "trial": "bt20f"
+    }
+  ]
+}

@@ -12,18 +12,18 @@ import {
   defaultSpeciesId,
   indexForBlend,
   isNamedCultivar,
-  speciesList,
+  speciesLabel,
 } from '../data/seedDb'
 import {
   coverageLabel,
   factorBaselines,
   scoreBlendForLocation,
   scoreCultivarForLocation,
-  usesRegionalQuality,
 } from '../services/suitability'
 import { coverageTitle } from '../seeds/fit-ui'
 import type { PropType } from 'vue'
 import type {
+  BaselineKey,
   Blend,
   BlendFit,
   Conditions as Weather,
@@ -32,7 +32,6 @@ import type {
   EvaluatedTask,
   GrassType,
   Profile,
-  ScoreFactor,
 } from '../types'
 
 /** One card per place you can go, so the hero doubles as a map of the site. */
@@ -64,7 +63,7 @@ const DESTINATIONS = [
   {
     icon: ['fas', 'location-dot'],
     title: 'My lawn',
-    body: 'Size, grass type and location — kept in this browser.',
+    body: 'Size, climate and location — kept in this browser.',
     to: '/settings',
   },
 ]
@@ -76,10 +75,6 @@ const SEED_LINKS = [
   { label: 'Compare', to: '/seeds/compare' },
   { label: 'NTEP tables', to: '/seeds/ntep' },
 ]
-
-const SPECIES_LABELS: Record<string, string> = Object.fromEntries(
-  speciesList.map((s) => [s.id, s.label]),
-)
 
 const FEATURES = [
   {
@@ -129,7 +124,7 @@ const TIMING_POINTS = [
 interface BlendPick {
   blend: Blend
   fit: BlendFit
-  baselines: Partial<Record<ScoreFactor, number>>
+  baselines: Partial<Record<BaselineKey, number>>
 }
 
 const COUNT_UP_MS = 900
@@ -251,9 +246,6 @@ export default {
       if (soil == null) return 'Set your location to get live soil temperature.'
       return `Soil is ${Math.round(soil)}°F — check what’s coming up.`
     },
-    regionalQuality(): boolean {
-      return usesRegionalQuality(this.userLocation?.climateBand)
-    },
     /**
      * Every scoreable bag, best first — the same ranking the seeds page shows.
      *
@@ -262,7 +254,7 @@ export default {
      */
     rankedBlends(): BlendPick[] {
       const loc = this.userLocation
-      const baselines: Record<string, Partial<Record<ScoreFactor, number>>> = {}
+      const baselines: Record<string, Partial<Record<BaselineKey, number>>> = {}
       return this.allBlends
         .map((blend) => ({
           blend,
@@ -298,9 +290,7 @@ export default {
   methods: {
     coverageLabel,
     coverageTitle,
-    speciesLabel(id: string): string {
-      return SPECIES_LABELS[id] || id
-    },
+    speciesLabel,
     monthTitle(cell: MonthCell): string {
       if (!cell.count) return `${cell.label} — nothing typically due`
       return `${cell.label} — ${cell.count} ${cell.count === 1 ? 'job' : 'jobs'}`
@@ -1489,7 +1479,7 @@ export default {
                 {{ name }}
               </span>
             </p>
-            <FitMeters :fit="row.fit" :baselines="row.baselines" :regional="regionalQuality" />
+            <FitMeters :fit="row.fit" :baselines="row.baselines" />
             <p class="seed-card__cov" :title="coverageTitle(row.fit.coverage)">
               <font-awesome-icon icon="fa-solid fa-check" />
               Scored on {{ coverageLabel(row.fit.coverage) }}

@@ -1,21 +1,31 @@
 import { describe, expect, it } from 'vitest'
 import { getTask, tasks } from '../data/tasks'
+import { evaluateTask } from '../services/timing'
 import {
+  byUrgency,
   groupFor,
   iconFor,
   searchTextFor,
   soilGateFor,
+  statusFor,
   taskGroups,
   taskIcons,
   toolFor,
+  urgencyBands,
   windowFor,
+  windowStatusFor,
 } from './task-ui'
-import type { Task } from '../types'
+import type { Bucket, EvaluatedTask, Task } from '../types'
 
 function task(id: string): Task {
   const found = getTask(id)
   if (!found) throw new Error(`no task ${id}`)
   return found
+}
+
+/** Overseeding gates on soil 55–65°F in Sep–Oct, so it can reach every bucket. */
+function seeding(month: number, soilTempF?: number): EvaluatedTask {
+  return evaluateTask(task('overseeding'), { month, soilTempF })
 }
 
 describe('groups', () => {
@@ -72,6 +82,47 @@ describe('toolFor', () => {
     expect(toolFor(task('fertilization'))?.label).toBe('Spreader')
     expect(toolFor(task('mulch'))?.label).toBe('Bulk')
     expect(toolFor(task('aeration'))).toBeNull()
+  })
+})
+
+describe('urgency bands', () => {
+  it('names every bucket a task can land in', () => {
+    const ids = urgencyBands.map((band) => band.id).sort()
+    expect(ids).toEqual(['later', 'now', 'soon'] satisfies Bucket[])
+  })
+
+  it('only names registered icon sets', () => {
+    urgencyBands.forEach((band) => {
+      expect(['fas', 'lawn']).toContain(band.icon[0])
+    })
+  })
+})
+
+describe('statusFor', () => {
+  it('badges the two bands worth interrupting for', () => {
+    expect(statusFor(seeding(9, 60))).toEqual({ label: 'Do now', tone: 'good' })
+    expect(statusFor(seeding(9, 90))).toEqual({ label: 'Coming up', tone: 'caution' })
+  })
+
+  it('stays quiet out of season, so the open work keeps the only chips', () => {
+    expect(seeding(1).bucket).toBe('later')
+    expect(statusFor(seeding(1))).toBeNull()
+  })
+})
+
+describe('windowStatusFor', () => {
+  it('reports the kind of window when today cannot be judged', () => {
+    expect(windowStatusFor(seeding(9))).toEqual({ label: 'Primary window', tone: 'brand' })
+    expect(windowStatusFor(seeding(3))).toEqual({ label: 'Also typical', tone: 'accent' })
+  })
+})
+
+describe('byUrgency', () => {
+  it('floats what today allows above what it does not', () => {
+    const sorted = [seeding(1), seeding(9, 90), seeding(9, 60)]
+      .sort(byUrgency)
+      .map((item) => item.bucket)
+    expect(sorted).toEqual(['now', 'soon', 'later'])
   })
 })
 

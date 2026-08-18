@@ -13,9 +13,10 @@ import type { Bucket, Conditions as Weather, Product, SprayUnits } from '../type
 
 type FormFilter = 'all' | 'liquid' | 'granular'
 
+/** Only the dose. The tank keeps whatever it is marked in, set under My lawn. */
 const UNIT_CHOICES: { text: string; value: SprayUnits; title: string }[] = [
-  { text: 'fl oz', value: 'us', title: 'Show doses in fluid ounces and gallons' },
-  { text: 'ml', value: 'metric', title: 'Show doses in millilitres and litres' },
+  { text: 'fl oz', value: 'us', title: 'Measure the product in fluid ounces' },
+  { text: 'ml', value: 'metric', title: 'Measure the product in millilitres' },
 ]
 
 interface Row {
@@ -78,7 +79,7 @@ export default {
       return this.$store.getters.sprayUnits
     },
     vol(): VolumeUnit {
-      return volumeUnit(this.sprayUnits)
+      return volumeUnit(this.$store.getters.volumeUnits)
     },
     tankLabel(): string {
       return volumeText(this.tankGallons, this.vol)

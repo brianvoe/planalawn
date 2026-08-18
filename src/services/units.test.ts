@@ -5,6 +5,7 @@ import {
   measureText,
   measureUnit,
   perVolume,
+  resolveVolumeUnits,
   toGallons,
   toOunces,
   volumeText,
@@ -61,6 +62,26 @@ describe('volumes', () => {
     // 2 fl oz per gallon is 15.6 ml per litre, and a syringe reads whole ml.
     expect(measureText(perVolume(2, 'L'), 'ml')).toBe('16 ml')
     expect(perVolume(2, 'gal')).toBe(2)
+  })
+})
+
+describe('dose and tank units apart', () => {
+  it('takes a stored tank unit at face value', () => {
+    expect(resolveVolumeUnits('us', 'metric')).toBe('us')
+    expect(resolveVolumeUnits('metric', 'us')).toBe('metric')
+  })
+
+  // The pairing this whole split exists for: a gallon backpack sprayer dosed
+  // from a millilitre cup.
+  it('lets a millilitre dose sit in a gallon tank', () => {
+    expect(volumeUnit(resolveVolumeUnits('us', 'metric'))).toBe('gal')
+  })
+
+  it('falls back to the dose unit for a profile saved before the split', () => {
+    expect(resolveVolumeUnits(undefined, 'metric')).toBe('metric')
+    expect(resolveVolumeUnits(undefined, 'us')).toBe('us')
+    // Anything unrecognised in storage is treated the same way.
+    expect(resolveVolumeUnits('litres', 'metric')).toBe('metric')
   })
 })
 

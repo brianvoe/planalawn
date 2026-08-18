@@ -19,15 +19,25 @@
     "id": "perennial_ryegrass",
     "label": "Perennial ryegrass",
     "season": "cool",
-    "ntepTrials": [],
-    "status": "schema_ready"
+    "ntepTrials": [
+      "pr22"
+    ]
   },
   {
     "id": "fine_fescue",
     "label": "Fine fescue",
     "season": "cool",
-    "ntepTrials": [],
-    "status": "schema_ready"
+    "ntepTrials": [
+      "ff20"
+    ]
+  },
+  {
+    "id": "creeping_bentgrass",
+    "label": "Creeping bentgrass",
+    "season": "cool",
+    "ntepTrials": [
+      "bt20f"
+    ]
   },
   {
     "id": "bermudagrass",
@@ -36,5 +46,50 @@
     "ntepTrials": [
       "bg19"
     ]
+  },
+  {
+    "id": "zoysiagrass",
+    "label": "Zoysiagrass",
+    "season": "warm",
+    "ntepTrials": [
+      "zg19"
+    ]
+  },
+  {
+    "id": "st_augustinegrass",
+    "label": "St. Augustinegrass",
+    "season": "warm",
+    "ntepTrials": [
+      "sa23"
+    ]
+  },
+  {
+    "id": "buffalograss",
+    "label": "Buffalograss",
+    "season": "warm",
+    "ntepTrials": [],
+    "status": "no_national_trial"
+  },
+  {
+    "id": "seashore_paspalum",
+    "label": "Seashore paspalum",
+    "season": "warm",
+    "ntepTrials": [
+      "sp23"
+    ]
+  },
+  {
+    "id": "centipedegrass",
+    "label": "Centipedegrass",
+    "season": "warm",
+    "ntepTrials": [],
+    "status": "no_national_trial"
+  },
+  {
+    "id": "bahiagrass",
+    "label": "Bahiagrass",
+    "season": "warm",
+    "ntepTrials": [],
+    "status": "no_national_trial"
   }
 ]

@@ -1,0 +1,4638 @@
+{
+  "meta": {
+    "species": "perennial_ryegrass",
+    "trial": "pr22",
+    "year": 2025,
+    "sourcePdf": "pr22_26-5.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "count": 83,
+  "cultivars": [
+    {
+      "id": "20pr10",
+      "name": "20PR10",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 5.0,
+            "MN1": 4.1,
+            "NE1": 5.4,
+            "OH1": 6.6,
+            "ON1": 7.3
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 5.0,
+            "IN2": 6.7,
+            "MN1": 4.3,
+            "NE1": 6.3,
+            "ON1": 7.3,
+            "OR1": 7.3,
+            "QE1": 6.3,
+            "UT1": 4.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.3,
+          "bySite": {
+            "IN2": 4.3,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 51,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "alpha-centauri",
+      "name": "Alpha Centauri",
+      "aliases": [
+        "ALPHA CENTAURI"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 5.4,
+            "IN1": 6.6,
+            "MN1": 3.8,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 5.7,
+            "MN1": 4.0,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 79,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "apple-4sgl",
+      "name": "Apple 4SGL",
+      "aliases": [
+        "APPLE 4SGL (PPG-PR 663)",
+        "APPLE 4SGL",
+        "PPG-PR 663"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.0,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 6.8,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 38,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "aps",
+      "name": "Aps",
+      "aliases": [
+        "APS"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 6.5,
+            "MN1": 4.5,
+            "NE1": 6.3,
+            "OH1": 5.4,
+            "ON1": 7.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 66,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "aspiration",
+      "name": "Aspiration",
+      "aliases": [
+        "ASPIRATION (DLF-PR-3736)",
+        "ASPIRATION",
+        "DLF-PR-3736"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.7,
+            "IN1": 5.8,
+            "MN1": 4.4,
+            "NE1": 5.4,
+            "OH1": 6.3,
+            "ON1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 5.7,
+            "IN2": 5.7,
+            "MN1": 3.7,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.3,
+          "bySite": {
+            "IN2": 4.0,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 76,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bar-lp-22174",
+      "name": "Bar LP 22174",
+      "aliases": [
+        "BAR LP 22174"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 4.9,
+            "MN1": 4.6,
+            "NE1": 5.7,
+            "OH1": 5.0,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 4.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 6.3,
+            "ON1": 6.7,
+            "OR1": 6.3,
+            "QE1": 6.0,
+            "UT1": 5.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 4.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ2": 4.7,
+            "OR1": 5.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 57,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bar-lp-22191",
+      "name": "Bar LP 22191",
+      "aliases": [
+        "BAR LP 22191"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.3,
+            "MN1": 3.6,
+            "NE1": 5.7,
+            "OH1": 6.7,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "IN2": 5.7,
+            "MN1": 2.7,
+            "NE1": 6.3,
+            "ON1": 7.0,
+            "OR1": 6.7,
+            "QE1": 6.3,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.0,
+          "bySite": {
+            "IN2": 4.3,
+            "VA2": 5.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ2": 4.4,
+            "OR1": 5.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 53,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bar-lp-22256",
+      "name": "Bar LP 22256",
+      "aliases": [
+        "BAR LP 22256"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 4.6,
+            "MN1": 4.1,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "IN2": 5.3,
+            "MN1": 2.7,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 6.7,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.1,
+            "OR1": 5.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 54,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bar-lp-22262",
+      "name": "Bar LP 22262",
+      "aliases": [
+        "BAR LP 22262"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 4.9,
+            "MN1": 3.3,
+            "NE1": 5.9,
+            "OH1": 6.6,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 4.7,
+            "IN2": 5.7,
+            "MN1": 2.3,
+            "NE1": 6.3,
+            "ON1": 7.3,
+            "OR1": 6.3,
+            "QE1": 6.3,
+            "UT1": 4.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 55,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bar-lp-22263",
+      "name": "Bar LP 22263",
+      "aliases": [
+        "BAR LP 22263"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 4.9,
+            "MN1": 3.6,
+            "NE1": 5.4,
+            "OH1": 6.0,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 5.3,
+            "IA1": 7.0,
+            "IN1": 4.3,
+            "IN2": 5.3,
+            "MN1": 2.0,
+            "NE1": 6.3,
+            "ON1": 7.7,
+            "OR1": 6.7,
+            "QE1": 7.0,
+            "UT1": 5.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 56,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "brightstar-slt",
+      "name": "Brightstar SLT",
+      "aliases": [
+        "BRIGHTSTAR SLT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 4.7,
+            "MN1": 3.3,
+            "NE1": 5.5,
+            "OH1": 5.7,
+            "ON1": 6.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.3,
+            "IN1": 5.3,
+            "IN2": 6.0,
+            "MN1": 3.3,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 7.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 4.5,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 4.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.2,
+          "bySite": {
+            "NJ2": 3.4,
+            "OR1": 5.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 62,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "bsg-pr22",
+      "name": "BSG-PR22",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "IA1": 6.3,
+            "IN1": 4.6,
+            "MN1": 2.9,
+            "NE1": 5.8,
+            "OH1": 5.3,
+            "ON1": 6.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "IN2": 8.0,
+            "MN1": 5.3,
+            "NE1": 7.3,
+            "ON1": 9.0,
+            "OR1": 8.3,
+            "QE1": 7.7,
+            "UT1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.2,
+            "OR1": 4.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 68,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "cjp1r",
+      "name": "CJP1R",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 6.0,
+            "MN1": 4.9,
+            "NE1": 5.6,
+            "OH1": 6.2,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 7.0,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 63,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dark-matter",
+      "name": "Dark Matter",
+      "aliases": [
+        "DARK MATTER"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 5.9,
+            "IN1": 5.2,
+            "MN1": 3.2,
+            "NE1": 6.2,
+            "OH1": 4.8,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.4,
+          "bySite": {
+            "CT1": 8.0,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "IN2": 8.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 9.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "NJ2": 4.2,
+            "OR1": 5.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 69,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-lgt-3066",
+      "name": "DLF-LGT-3066",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.8,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 6.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 6.7,
+            "QE1": 6.7,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ2": 4.7,
+            "OR1": 5.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 83,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3726",
+      "name": "DLF-PR-3726",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.3,
+            "MN1": 4.5,
+            "NE1": 5.7,
+            "OH1": 6.4,
+            "ON1": 6.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "IN2": 5.3,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.3,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 70,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3727",
+      "name": "DLF-PR-3727",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.8,
+            "MN1": 4.1,
+            "NE1": 5.8,
+            "OH1": 6.2,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 6.3,
+            "OR1": 7.3,
+            "QE1": 7.3,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 71,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3728",
+      "name": "DLF-PR-3728",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MN1": 4.6,
+            "NE1": 5.9,
+            "OH1": 5.2,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "IN2": 5.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 5.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 72,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3729",
+      "name": "DLF-PR-3729",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.8,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 5.1,
+            "ON1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 6.0,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 73,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3730",
+      "name": "DLF-PR-3730",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 6.7,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 74,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3735",
+      "name": "DLF-PR-3735",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.1,
+            "MN1": 5.3,
+            "NE1": 6.3,
+            "OH1": 6.2,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 8.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ2": 5.7,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 75,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "dlf-pr-3737",
+      "name": "DLF-PR-3737",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 3.5,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 3.7,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.6,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 77,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "eminence",
+      "name": "Eminence",
+      "aliases": [
+        "EMINENCE (RC20-02O)",
+        "EMINENCE",
+        "RC20-02O"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.1,
+            "MN1": 3.8,
+            "NE1": 5.6,
+            "OH1": 6.1,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 5.3,
+            "IA1": 8.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 6.3,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 1,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "exceed",
+      "name": "Exceed",
+      "aliases": [
+        "EXCEED (PPG-PR 668)",
+        "EXCEED",
+        "PPG-PR 668"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.7,
+            "MN1": 4.4,
+            "NE1": 6.3,
+            "OH1": 6.2,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 7.0,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "NJ2": 6.8,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 43,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "fastball-4gl",
+      "name": "Fastball 4GL",
+      "aliases": [
+        "FASTBALL 4GL (PPG-PR 658)",
+        "FASTBALL 4GL",
+        "PPG-PR 658"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 6.1,
+            "MN1": 4.6,
+            "NE1": 6.1,
+            "OH1": 5.7,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.3,
+            "ON1": 8.3,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 7.7,
+            "VA2": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 35,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "flightline",
+      "name": "Flightline",
+      "aliases": [
+        "FLIGHTLINE (PST-214)",
+        "FLIGHTLINE",
+        "PST-214"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 5.0,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.3,
+            "IN2": 8.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 18,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "go-rus20",
+      "name": "Go-RUS20",
+      "aliases": [
+        "GO-RUS20"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 5.0,
+            "MN1": 4.4,
+            "NE1": 5.6,
+            "OH1": 4.7,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 6.7,
+            "OR1": 6.7,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ2": 5.2,
+            "OR1": 5.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 10,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "go-rus21",
+      "name": "Go-RUS21",
+      "aliases": [
+        "GO-RUS21"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 5.8,
+            "OH1": 5.9,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.5,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.3,
+            "QE1": 7.3,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.8,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 11,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "go-rus22",
+      "name": "Go-RUS22",
+      "aliases": [
+        "GO-RUS22"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.1,
+            "MN1": 4.6,
+            "NE1": 6.0,
+            "OH1": 5.9,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 7.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 12,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "grand-slam-g-ls",
+      "name": "Grand Slam G-LS",
+      "aliases": [
+        "GRAND SLAM G-LS (PPG-PR 637)",
+        "GRAND SLAM G-LS",
+        "PPG-PR 637"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 6.0,
+            "MN1": 4.7,
+            "NE1": 6.1,
+            "OH1": 6.1,
+            "ON1": 7.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.2,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 28,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "gray-eagle-slt",
+      "name": "Gray Eagle SLT",
+      "aliases": [
+        "GRAY EAGLE SLT (PST-2MEG)",
+        "GRAY EAGLE SLT",
+        "PST-2MEG"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.7,
+            "MN1": 4.1,
+            "NE1": 5.9,
+            "OH1": 6.0,
+            "ON1": 6.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 7.3,
+            "IN2": 7.3,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.3,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 60,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "greenback",
+      "name": "Greenback",
+      "aliases": [
+        "GREENBACK"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 4.3,
+            "MN1": 3.2,
+            "NE1": 5.9,
+            "OH1": 4.7,
+            "ON1": 6.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.2,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 4.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 3,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "high-octane",
+      "name": "High Octane",
+      "aliases": [
+        "HIGH OCTANE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 5.8,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.7,
+            "IN1": 6.0,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 47,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "homerun-g-ls",
+      "name": "Homerun G-LS",
+      "aliases": [
+        "HOMERUN G-LS (PPG-PR 644)",
+        "HOMERUN G-LS",
+        "PPG-PR 644"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 6.2,
+            "OH1": 6.8,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.7,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 8.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 32,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "homerun-ls",
+      "name": "Homerun LS",
+      "aliases": [
+        "HOMERUN LS"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.2,
+            "MN1": 3.6,
+            "NE1": 6.0,
+            "OH1": 5.0,
+            "ON1": 5.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 7.3,
+            "IN2": 7.0,
+            "MN1": 4.7,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 5.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 8,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ignition",
+      "name": "Ignition",
+      "aliases": [
+        "IGNITION (PPG-PR 647)",
+        "IGNITION",
+        "PPG-PR 647"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 5.0,
+            "NE1": 5.6,
+            "OH1": 5.7,
+            "ON1": 7.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "IN2": 6.0,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 34,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "karma",
+      "name": "Karma",
+      "aliases": [
+        "KARMA"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.1,
+            "IN1": 5.2,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.6,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 7.3,
+            "QE1": 6.3,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 78,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "lightspeed",
+      "name": "Lightspeed",
+      "aliases": [
+        "LIGHTSPEED (PST-2DRG)",
+        "LIGHTSPEED",
+        "PST-2DRG"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.0,
+            "MN1": 3.6,
+            "NE1": 5.9,
+            "OH1": 5.0,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "NJ2": 4.4,
+            "OR1": 5.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 15,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "linn",
+      "name": "Linn",
+      "aliases": [
+        "LINN"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "IA1": 5.4,
+            "IN1": 3.7,
+            "MN1": 1.1,
+            "NE1": 5.5,
+            "OH1": 5.6,
+            "ON1": 5.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 5.0,
+            "IA1": 7.3,
+            "IN1": 3.3,
+            "IN2": 4.3,
+            "MN1": 1.7,
+            "NE1": 6.3,
+            "ON1": 5.0,
+            "OR1": 4.3,
+            "QE1": 6.3,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 4.7,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 4.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 2.6,
+          "bySite": {
+            "NJ2": 1.5,
+            "OR1": 3.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 81,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ltp-nr",
+      "name": "LTP-NR",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 6.1,
+            "MN1": 4.4,
+            "NE1": 5.8,
+            "OH1": 6.0,
+            "ON1": 6.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "IN2": 6.7,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 5,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ltp-rpp4",
+      "name": "LTP-RPP4",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 4.5,
+            "NE1": 5.9,
+            "OH1": 5.2,
+            "ON1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 5.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 2,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "mrsl-pr22",
+      "name": "MRSL-PR22",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 4.7,
+            "MN1": 3.7,
+            "NE1": 5.9,
+            "OH1": 5.3,
+            "ON1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 8.0,
+            "IN2": 7.0,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.7,
+            "QE1": 7.3,
+            "UT1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.0,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 5.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.7,
+            "OR1": 5.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 49,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "patriarch",
+      "name": "Patriarch",
+      "aliases": [
+        "PATRIARCH (PPG-PR 670)",
+        "PATRIARCH",
+        "PPG-PR 670"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.1,
+            "MN1": 4.1,
+            "NE1": 6.2,
+            "OH1": 5.6,
+            "ON1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "NJ2": 6.6,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 44,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "aliases": [
+        "PERFORMANCE (NAI-PR5)",
+        "PERFORMANCE",
+        "NAI-PR5"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 6.2,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 64,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces",
+      "aliases": [
+        "PISCES (PPG-PR 664)",
+        "PISCES",
+        "PPG-PR 664"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.4,
+            "MN1": 4.3,
+            "NE1": 6.2,
+            "OH1": 6.3,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 39,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "piston",
+      "name": "Piston",
+      "aliases": [
+        "PISTON"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.6,
+            "IN1": 5.8,
+            "MN1": 4.2,
+            "NE1": 5.7,
+            "OH1": 6.2,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.3,
+            "MN1": 7.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 5.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 48,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "planetary",
+      "name": "Planetary",
+      "aliases": [
+        "PLANETARY (SGP4)",
+        "PLANETARY",
+        "SGP4"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.5,
+            "MN1": 4.5,
+            "NE1": 5.9,
+            "OH1": 5.9,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.5,
+          "bySite": {
+            "NJ2": 7.9,
+            "OR1": 7.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 46,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-606",
+      "name": "PPG-PR 606",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.9,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 6.8,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 24,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-610",
+      "name": "PPG-PR 610",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.6,
+            "MN1": 4.0,
+            "NE1": 6.6,
+            "OH1": 5.7,
+            "ON1": 6.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.5,
+          "bySite": {
+            "IN2": 7.3,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 25,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-620",
+      "name": "PPG-PR 620",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "IA1": 7.6,
+            "IN1": 6.2,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 7.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.7,
+            "NE1": 7.3,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 27,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-639",
+      "name": "PPG-PR 639",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.5,
+            "MN1": 4.6,
+            "NE1": 6.2,
+            "OH1": 5.9,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 29,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-642",
+      "name": "PPG-PR 642",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.8,
+            "MN1": 4.6,
+            "NE1": 6.3,
+            "OH1": 5.8,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 6.7,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.7,
+          "bySite": {
+            "IN2": 7.7,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 30,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-646",
+      "name": "PPG-PR 646",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.4,
+            "IN1": 6.2,
+            "MN1": 5.1,
+            "NE1": 6.3,
+            "OH1": 6.4,
+            "ON1": 6.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.0,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 6.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 33,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-661",
+      "name": "PPG-PR 661",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 6.0,
+            "MN1": 4.4,
+            "NE1": 5.8,
+            "OH1": 5.9,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 6.9,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 36,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-662",
+      "name": "PPG-PR 662",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.4,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 6.3,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 37,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-666",
+      "name": "PPG-PR 666",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 6.1,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 5.9,
+            "ON1": 7.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 6.3,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 41,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-667",
+      "name": "PPG-PR 667",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 6.0,
+            "MN1": 3.9,
+            "NE1": 6.4,
+            "OH1": 6.7,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 2.7,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.1,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 42,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ppg-pr-671",
+      "name": "PPG-PR 671",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 3.8,
+            "NE1": 5.9,
+            "OH1": 5.7,
+            "ON1": 6.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.7,
+            "OR1": 6.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 45,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "preeminent",
+      "name": "Preeminent",
+      "aliases": [
+        "PREEMINENT (SE-DK)",
+        "PREEMINENT",
+        "SE-DK"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 4.8,
+            "MN1": 3.2,
+            "NE1": 5.4,
+            "OH1": 6.0,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 7.7,
+            "IN2": 8.0,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.3,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 58,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "prominent-ii",
+      "name": "Prominent II",
+      "aliases": [
+        "PROMINENT II (TSC-CRS)",
+        "PROMINENT II",
+        "TSC-CRS"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 4.9,
+            "MN1": 3.5,
+            "NE1": 5.3,
+            "OH1": 5.6,
+            "ON1": 5.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 6.7,
+            "IN1": 7.7,
+            "IN2": 8.0,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.3,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 4.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 59,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ps4",
+      "name": "PS4",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.5,
+            "MN1": 4.9,
+            "NE1": 6.2,
+            "OH1": 5.9,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 8.0,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 4.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 52,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2ads",
+      "name": "PST-2ADS",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.8,
+            "MN1": 4.7,
+            "NE1": 6.4,
+            "OH1": 6.4,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.3,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 13,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2bgl",
+      "name": "PST-2BGL",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.9,
+            "MN1": 4.3,
+            "NE1": 5.3,
+            "OH1": 5.9,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 14,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2e6",
+      "name": "PST-2E6",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.3,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 5.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ2": 5.3,
+            "OR1": 5.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 61,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2gds",
+      "name": "PST-2GDS",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.5,
+            "MN1": 4.5,
+            "NE1": 5.7,
+            "OH1": 5.4,
+            "ON1": 6.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 4.7,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.7,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 17,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2hfm",
+      "name": "PST-2HFM",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 5.4,
+            "MN1": 4.6,
+            "NE1": 5.8,
+            "OH1": 6.0,
+            "ON1": 6.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 7.3,
+            "IN2": 7.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 20,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2mes1",
+      "name": "PST-2MES1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.5,
+            "MN1": 4.1,
+            "NE1": 6.3,
+            "OH1": 6.0,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ2": 5.3,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 21,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pst-2spf",
+      "name": "PST-2SPF",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "IA1": 6.6,
+            "IN1": 4.5,
+            "MN1": 2.7,
+            "NE1": 5.3,
+            "OH1": 4.4,
+            "ON1": 5.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "CT1": 8.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 7.7,
+            "MN1": 6.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 5.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 3.8,
+          "bySite": {
+            "NJ2": 3.0,
+            "OR1": 4.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 22,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pvf-rpp2",
+      "name": "PVF-RPP2",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.6,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 5.3,
+            "ON1": 7.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 7.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 6,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "pvf-sgs5",
+      "name": "PVF-SGS5",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 6.2,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 7.3
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.0,
+            "QE1": 6.7,
+            "UT1": 5.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 50,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "quasar",
+      "name": "Quasar",
+      "aliases": [
+        "QUASAR"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MN1": 5.5,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 7.3
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.3,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 7.3,
+            "QE1": 6.7,
+            "UT1": 5.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.1,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 80,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "relic",
+      "name": "Relic",
+      "aliases": [
+        "RELIC (PPG-PR 611)",
+        "RELIC",
+        "PPG-PR 611"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MN1": 3.6,
+            "NE1": 6.1,
+            "OH1": 6.2,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 26,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "rpp3",
+      "name": "RPP3",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MN1": 4.8,
+            "NE1": 6.2,
+            "OH1": 6.1,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 7.3,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 65,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "sepr-2013",
+      "name": "Sepr-2013",
+      "aliases": [
+        "SEPR-2013"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "IA1": 5.9,
+            "IN1": 4.4,
+            "MN1": 3.7,
+            "NE1": 5.6,
+            "OH1": 5.4,
+            "ON1": 5.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "IN2": 7.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 5.7,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.2,
+            "OR1": 4.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 67,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "siletz",
+      "name": "Siletz",
+      "aliases": [
+        "SILETZ"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MN1": 4.9,
+            "NE1": 6.6,
+            "OH1": 5.8,
+            "ON1": 7.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 7.0,
+            "NE1": 6.7,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.3,
+          "bySite": {
+            "NJ2": 7.6,
+            "OR1": 7.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 9,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "slider-sg",
+      "name": "Slider SG",
+      "aliases": [
+        "SLIDER SG (PPG-PR 602)",
+        "SLIDER SG",
+        "PPG-PR 602"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 5.5,
+            "MN1": 4.3,
+            "NE1": 6.3,
+            "OH1": 6.6,
+            "ON1": 6.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "IN2": 7.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 23,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "stellar-4gl",
+      "name": "Stellar 4GL",
+      "aliases": [
+        "STELLAR 4GL"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.7,
+            "MN1": 4.1,
+            "NE1": 5.5,
+            "OH1": 6.4,
+            "ON1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 8.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 7,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "stinger",
+      "name": "Stinger",
+      "aliases": [
+        "STINGER (PST-2EGY)",
+        "STINGER",
+        "PST-2EGY"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 5.7,
+            "ON1": 6.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 6.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 16,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "sundown",
+      "name": "Sundown",
+      "aliases": [
+        "SUNDOWN (BY-PS2)",
+        "SUNDOWN",
+        "BY-PS2"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 4.4,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 4,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "trident",
+      "name": "Trident",
+      "aliases": [
+        "TRIDENT (PPG-PR 643)",
+        "TRIDENT",
+        "PPG-PR 643"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.5,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 31,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "ultra-sport",
+      "name": "Ultra Sport",
+      "aliases": [
+        "ULTRA SPORT (PST-2HAF20)",
+        "ULTRA SPORT",
+        "PST-2HAF20"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.8,
+            "MN1": 3.8,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 19,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "vortex-srt",
+      "name": "Vortex SRT",
+      "aliases": [
+        "VORTEX SRT (PPG-PR 665)",
+        "VORTEX SRT",
+        "PPG-PR 665"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.8,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 7.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 8.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.6
+          },
+          "year": 2025
+        }
+      },
+      "entry": 40,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    },
+    {
+      "id": "wicked-cool",
+      "name": "Wicked Cool",
+      "aliases": [
+        "WICKED COOL (DLF-PR-3738)",
+        "WICKED COOL",
+        "DLF-PR-3738"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.0,
+            "MN1": 4.5,
+            "NE1": 6.2,
+            "OH1": 6.1,
+            "ON1": 7.0
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.3,
+            "NE1": 7.3,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.7
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.3,
+            "OR1": 6.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 82,
+      "species": "perennial_ryegrass",
+      "trial": "pr22"
+    }
+  ]
+}

@@ -7,23 +7,18 @@ import {
   indexForBlend,
   isNamedCultivar,
   loadedSpecies,
-  speciesList,
+  speciesLabel,
 } from '../data/seedDb'
 import {
   factorBaselines,
   scoreBlendForLocation,
-  usesRegionalQuality,
 } from '../services/suitability'
 import { fitTone } from './fit-ui'
 import type { PropType } from 'vue'
-import type { Blend, BlendComponent, BlendFit, ScoreFactor, UserLocation } from '../types'
+import type { BaselineKey, Blend, BlendComponent, BlendFit, UserLocation } from '../types'
 
 /** Stands in for a brand on blends you entered, here and in the brand filter. */
 const MY_BRAND = 'Yours'
-
-const SPECIES_LABELS: Record<string, string> = Object.fromEntries(
-  speciesList.map((s) => [s.id, s.label]),
-)
 
 interface Pick {
   id: string
@@ -125,7 +120,7 @@ export default {
       if (!blend) return null
       return scoreBlendForLocation(blend, indexForBlend(blend.species), this.userLocation)
     },
-    draftBaselines(): Partial<Record<ScoreFactor, number>> {
+    draftBaselines(): Partial<Record<BaselineKey, number>> {
       const species = this.draftSpecies
       if (!species) return {}
       return factorBaselines(cultivarsForSpecies(species), this.userLocation)
@@ -153,13 +148,10 @@ export default {
     draftSummary(): string {
       const picks = this.draftPicks
       if (!picks.length) return ''
-      const label = SPECIES_LABELS[this.draftSpecies] || this.draftSpecies
+      const label = speciesLabel(this.draftSpecies)
       const mixed = new Set(picks.map((p) => p.species)).size > 1
       const noun = picks.length === 1 ? 'cultivar' : 'cultivars'
       return `${label}${mixed ? ' mix' : ''} · ${picks.length} ${noun}`
-    },
-    regionalQuality(): boolean {
-      return usesRegionalQuality(this.userLocation?.climateBand)
     },
     canSave(): boolean {
       return Boolean(this.draft.name.trim() && this.draftPicks.length)
@@ -481,7 +473,6 @@ export default {
               v-if="draftFit.score != null"
               :fit="draftFit"
               :baselines="draftBaselines"
-              :regional="regionalQuality"
             />
           </div>
         </div>

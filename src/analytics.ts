@@ -2,6 +2,9 @@
  * Google Analytics (GA4)
  * Base snippet and config run from index.html so the tag loads immediately.
  * We only send page views on each route change (SPA).
+ *
+ * The dev server strips the tag, so window.gtag is undefined on localhost and
+ * every call here turns into a no-op.
  */
 
 declare global {

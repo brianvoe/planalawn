@@ -258,5 +258,62 @@
     "climateBand": "warm",
     "lat": 30.63,
     "lon": -96.33
+  },
+  "FL1": {
+    "name": "Gainesville, FL (shade)",
+    "state": "FL",
+    "climateBand": "warm",
+    "lat": 29.65,
+    "lon": -82.32
+  },
+  "IN2": {
+    "name": "West Lafayette, IN (fairway)",
+    "state": "IN",
+    "climateBand": "cool",
+    "lat": 40.42,
+    "lon": -86.91
+  },
+  "MI2": {
+    "name": "East Lansing, MI (no traffic)",
+    "state": "MI",
+    "climateBand": "cool",
+    "lat": 42.73,
+    "lon": -84.48
+  },
+  "OH1": {
+    "name": "Columbus, OH",
+    "state": "OH",
+    "climateBand": "cool",
+    "lat": 39.96,
+    "lon": -83.0
+  },
+  "QE1": {
+    "name": "Quebec City, QC",
+    "state": "QC",
+    "country": "CA",
+    "climateBand": "cool",
+    "lat": 46.81,
+    "lon": -71.21
+  },
+  "VA2": {
+    "name": "Blacksburg, VA (fairway)",
+    "state": "VA",
+    "climateBand": "transition",
+    "lat": 37.23,
+    "lon": -80.41
+  },
+  "WA1": {
+    "name": "Pullman, WA",
+    "state": "WA",
+    "climateBand": "cool",
+    "lat": 46.73,
+    "lon": -117.18
+  },
+  "WI1": {
+    "name": "Madison, WI",
+    "state": "WI",
+    "climateBand": "cool",
+    "lat": 43.07,
+    "lon": -89.4
   }
 }

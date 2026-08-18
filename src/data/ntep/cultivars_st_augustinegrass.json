@@ -1,0 +1,981 @@
+{
+  "meta": {
+    "species": "st_augustinegrass",
+    "trial": "sa23",
+    "year": 2025,
+    "sourcePdf": "sa23_26-3.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
+  },
+  "count": 19,
+  "cultivars": [
+    {
+      "id": "cobalt",
+      "name": "Cobalt",
+      "aliases": [
+        "COBALT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 5.5,
+            "OK1": 5.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 7.0,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.9,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 7.2,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.7,
+          "bySite": {
+            "NC1": 7.3,
+            "GA1": 7.0,
+            "FL3": 7.3,
+            "MS1": 5.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 17,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "dalsa-1910",
+      "name": "Dalsa 1910",
+      "aliases": [
+        "DALSA 1910"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.1,
+            "TX2": 5.0,
+            "OK1": 5.9
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.1,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.8,
+            "GA1": 6.9,
+            "FL3": 6.9,
+            "MS1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 18,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "dalsa-1914",
+      "name": "Dalsa 1914",
+      "aliases": [
+        "DALSA 1914"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 6.0,
+            "TX2": 5.3,
+            "OK1": 6.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 6.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 4.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 7.0,
+          "bySite": {
+            "NC1": 7.6,
+            "GA1": 7.2,
+            "FL3": 7.5,
+            "MS1": 5.5
+          },
+          "year": 2025
+        }
+      },
+      "entry": 16,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "dalsa-2301",
+      "name": "Dalsa 2301",
+      "aliases": [
+        "DALSA 2301"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 6.3,
+            "TX2": 5.6,
+            "OK1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 8.0,
+            "OK1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.2,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NC1": 6.8,
+            "GA1": 7.1,
+            "FL3": 6.8,
+            "MS1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 15,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "floratam",
+      "name": "Floratam",
+      "aliases": [
+        "FLORATAM"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "FL5": 6.4,
+            "TX2": 5.6,
+            "OK1": 4.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.7,
+          "bySite": {
+            "FL3": 8.0,
+            "GA1": 8.0,
+            "NC1": 7.7,
+            "OK1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 5.3,
+            "GA1": 7.1,
+            "FL3": 6.2,
+            "MS1": 4.7
+          },
+          "year": 2025
+        }
+      },
+      "entry": 13,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-1617",
+      "name": "Fsa 1617",
+      "aliases": [
+        "FSA 1617"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 5.2,
+            "OK1": 5.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.6,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.9,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.2,
+            "GA1": 7.0,
+            "FL3": 6.6,
+            "MS1": 5.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 10,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-1627",
+      "name": "Fsa 1627",
+      "aliases": [
+        "FSA 1627"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 5.0,
+            "OK1": 5.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.0,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.3,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.9,
+            "FL3": 6.8,
+            "MS1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 12,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-1907",
+      "name": "Fsa 1907",
+      "aliases": [
+        "FSA 1907"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "FL5": 6.6,
+            "TX2": 5.0,
+            "OK1": 4.3
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 8.3,
+          "bySite": {
+            "FL3": 8.7,
+            "GA1": 7.7,
+            "NC1": 9.0,
+            "OK1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 9.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.3,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.2,
+            "GA1": 6.9,
+            "FL3": 6.7,
+            "MS1": 5.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 8,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-2012",
+      "name": "Fsa 2012",
+      "aliases": [
+        "FSA 2012"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "FL5": 6.4,
+            "TX2": 4.9,
+            "OK1": 2.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.7,
+          "bySite": {
+            "FL3": 7.7,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 8.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.0,
+            "GA1": 6.8,
+            "FL3": 7.0,
+            "MS1": 4.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 9,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-2013",
+      "name": "Fsa 2013",
+      "aliases": [
+        "FSA 2013"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 5.1,
+            "OK1": 5.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 8.0,
+            "NC1": 7.0,
+            "OK1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.1,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 5.4,
+            "GA1": 7.0,
+            "FL3": 6.1,
+            "MS1": 4.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 7,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-2022",
+      "name": "Fsa 2022",
+      "aliases": [
+        "FSA 2022"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "FL5": 6.0,
+            "TX2": 3.1,
+            "OK1": 4.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.3,
+            "OK1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 2.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 4.9,
+            "GA1": 7.0,
+            "FL3": 6.0,
+            "MS1": 5.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 6,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-2026",
+      "name": "Fsa 2026",
+      "aliases": [
+        "FSA 2026"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 4.4,
+            "OK1": 4.8
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.3,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.4,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 4.2,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.8,
+            "FL3": 6.9,
+            "MS1": 5.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 11,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "fsa-2301",
+      "name": "Fsa 2301",
+      "aliases": [
+        "FSA 2301"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 4.9,
+            "OK1": 6.1
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.6,
+          "bySite": {
+            "FL3": 7.7,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.7
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.8,
+            "FL3": 6.6,
+            "MS1": 5.2
+          },
+          "year": 2025
+        }
+      },
+      "entry": 5,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "palmetto",
+      "name": "Palmetto",
+      "aliases": [
+        "PALMETTO"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "FL5": 6.1,
+            "TX2": 5.5,
+            "OK1": 6.5
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.7,
+            "OK1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 7.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.6,
+            "GA1": 7.2,
+            "FL3": 6.8,
+            "MS1": 5.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 19,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "raleigh",
+      "name": "Raleigh",
+      "aliases": [
+        "RALEIGH"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 5.8,
+            "TX2": 5.4,
+            "OK1": 6.6
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 6.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.6,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.4,
+            "GA1": 6.9,
+            "FL3": 6.5,
+            "MS1": 4.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 14,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "xsa-11026",
+      "name": "Xsa 11026",
+      "aliases": [
+        "XSA 11026"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 7.0,
+            "TX2": 4.6,
+            "OK1": 5.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 5.3,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.7,
+            "FL3": 6.6,
+            "MS1": 5.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 1,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "xsa-11027",
+      "name": "Xsa 11027",
+      "aliases": [
+        "XSA 11027"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 7.1,
+            "TX2": 4.7,
+            "OK1": 5.4
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 7.0
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.5,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 6.0,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.7,
+            "FL3": 6.7,
+            "MS1": 5.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 3,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "xsa-11513",
+      "name": "Xsa 11513",
+      "aliases": [
+        "XSA 11513"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "FL5": 7.0,
+            "TX2": 5.0,
+            "OK1": 6.7
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.7,
+            "OK1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 4.8,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NC1": 5.8,
+            "GA1": 7.0,
+            "FL3": 6.2,
+            "MS1": 5.3
+          },
+          "year": 2025
+        }
+      },
+      "entry": 4,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    },
+    {
+      "id": "xsa-12155",
+      "name": "Xsa 12155",
+      "aliases": [
+        "XSA 12155"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.6,
+            "TX2": 4.2,
+            "OK1": 6.2
+          },
+          "year": 2025
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "FL3": 6.0,
+            "GA1": 7.0,
+            "NC1": 7.3,
+            "OK1": 6.3
+          },
+          "year": 2025
+        },
+        "brownPatch": {
+          "mean": 8.7,
+          "bySite": {},
+          "year": 2025
+        },
+        "droughtQuality": {
+          "mean": 3.3,
+          "bySite": {},
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NC1": 5.8,
+            "GA1": 6.9,
+            "FL3": 6.3,
+            "MS1": 5.4
+          },
+          "year": 2025
+        }
+      },
+      "entry": 2,
+      "species": "st_augustinegrass",
+      "trial": "sa23"
+    }
+  ]
+}

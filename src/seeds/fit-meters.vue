@@ -2,10 +2,11 @@
 import { ratingColor } from '../charts/bars'
 import { fitMeters, fmtRating, ratingWidth } from './fit-ui'
 import type { PropType } from 'vue'
-import type { BlendFit, FitMeter, ScoreFactor } from '../types'
+import type { BaselineKey, BlendFit, FitMeter } from '../types'
 
 /**
- * The score behind a bag, as two or three bars you can read without stopping.
+ * What a bag is like to live with, as up to three bars you can read without
+ * stopping: drought, disease and colour.
  *
  * Full 1-9 scale on every bar so cards stay comparable, with a mark for the
  * trial's average entry — that mark, not the bar length, is what tells you a
@@ -16,15 +17,13 @@ export default {
   props: {
     fit: { type: Object as PropType<BlendFit | null>, default: null },
     baselines: {
-      type: Object as PropType<Partial<Record<ScoreFactor, number>>>,
+      type: Object as PropType<Partial<Record<BaselineKey, number>>>,
       default: () => ({}),
     },
-    /** True where regional quality tables apply, so the fallback row is named right. */
-    regional: { type: Boolean, default: false },
   },
   computed: {
     meters(): FitMeter[] {
-      return fitMeters(this.fit, this.baselines, this.regional)
+      return fitMeters(this.fit, this.baselines)
     },
   },
   methods: {

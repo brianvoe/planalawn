@@ -1,0 +1,2552 @@
+{
+  "meta": {
+    "species": "zoysiagrass",
+    "trial": "zg19",
+    "year": 2023,
+    "sourcePdf": "zg19_24-12f.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
+  },
+  "count": 39,
+  "cultivars": [
+    {
+      "id": "15-tz-11715",
+      "name": "15-TZ-11715",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 5.0,
+            "FL1": 5.5,
+            "FL3": 6.6,
+            "IN1": 5.8,
+            "NC1": 5.7,
+            "OK1": 5.9,
+            "TN1": 5.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.7,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.0,
+            "CA3": 6.3,
+            "FL1": 8.2,
+            "GA1": 6.7,
+            "IN1": 8.2,
+            "KS1": 6.7,
+            "NC1": 6.9,
+            "OK1": 7.3,
+            "TN1": 6.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 5.0,
+            "TN1": 5.5,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 11,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "16-tz-12783",
+      "name": "16-TZ-12783",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.6,
+            "FL1": 5.6,
+            "FL3": 6.4,
+            "IN1": 4.3,
+            "NC1": 5.7,
+            "OK1": 5.8,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 7.0,
+            "CA3": 7.3,
+            "FL1": 8.0,
+            "GA1": 6.3,
+            "IN1": 7.8,
+            "KS1": 7.7,
+            "NC1": 7.2,
+            "OK1": 7.5,
+            "TN1": 6.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.2,
+            "TN1": 5.5,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 12,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "16-tz-13463",
+      "name": "16-TZ-13463",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 6.4,
+            "CA3": 5.5,
+            "FL1": 5.2,
+            "FL3": 6.0,
+            "IN1": 5.0,
+            "NC1": 5.4,
+            "OK1": 5.6,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.2,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.2,
+            "CA3": 7.4,
+            "FL1": 8.4,
+            "GA1": 6.3,
+            "IN1": 8.3,
+            "KS1": 6.7,
+            "NC1": 7.1,
+            "OK1": 6.9,
+            "TN1": 7.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.4,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 13,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1311",
+      "name": "Dalz 1311",
+      "aliases": [
+        "DALZ 1311"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.3,
+            "FL1": 5.6,
+            "FL3": 6.7,
+            "IN1": 6.7,
+            "NC1": 6.7,
+            "OK1": 5.9,
+            "TN1": 5.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.7,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.0,
+            "CA3": 6.8,
+            "FL1": 7.3,
+            "GA1": 6.2,
+            "IN1": 7.6,
+            "KS1": 5.8,
+            "NC1": 7.0,
+            "OK1": 6.8,
+            "TN1": 7.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.3,
+            "TN1": 6.0,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 22,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1408",
+      "name": "Dalz 1408",
+      "aliases": [
+        "DALZ 1408"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 7.1,
+            "CA3": 6.0,
+            "FL1": 6.1,
+            "FL3": 5.9,
+            "IN1": 1.4,
+            "NC1": 5.0,
+            "OK1": 6.2,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 6.8,
+            "CA3": 6.8,
+            "FL1": 8.2,
+            "GA1": 6.4,
+            "IN1": 7.7,
+            "KS1": 6.4,
+            "NC1": 6.9,
+            "OK1": 7.8,
+            "TN1": 5.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.6,
+            "AL1": 5.5,
+            "TN1": 5.0,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 23,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1409",
+      "name": "Dalz 1409",
+      "aliases": [
+        "DALZ 1409"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 6.0,
+            "FL1": 5.7,
+            "FL3": 5.9,
+            "IN1": 1.2,
+            "NC1": 5.6,
+            "OK1": 6.1,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.0,
+            "CA3": 6.3,
+            "FL1": 7.7,
+            "GA1": 6.6,
+            "IN1": 7.7,
+            "KS1": 6.8,
+            "NC1": 6.7,
+            "OK1": 6.9,
+            "TN1": 7.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 5.0,
+            "TN1": 4.6,
+            "OK1": 5.6
+          },
+          "year": 2023
+        }
+      },
+      "entry": 24,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1601",
+      "name": "Dalz 1601",
+      "aliases": [
+        "DALZ 1601"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.3,
+            "FL1": 5.6,
+            "FL3": 6.5,
+            "IN1": 6.9,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "CA3": 6.9,
+            "FL1": 7.4,
+            "GA1": 6.3,
+            "IN1": 7.1,
+            "KS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.8,
+            "TN1": 7.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.2,
+            "AL1": 4.2,
+            "TN1": 5.8,
+            "OK1": 5.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 25,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1603",
+      "name": "Dalz 1603",
+      "aliases": [
+        "DALZ 1603"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.5,
+            "CA3": 5.5,
+            "FL1": 5.8,
+            "FL3": 6.5,
+            "IN1": 7.1,
+            "NC1": 6.4,
+            "OK1": 5.8,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 5.8,
+            "CA3": 6.8,
+            "FL1": 7.6,
+            "GA1": 6.7,
+            "IN1": 6.9,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.4,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.4,
+            "TN1": 6.0,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 26,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1613",
+      "name": "Dalz 1613",
+      "aliases": [
+        "DALZ 1613"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.8,
+            "FL1": 5.9,
+            "FL3": 5.9,
+            "IN1": 5.7,
+            "NC1": 5.5,
+            "OK1": 6.0,
+            "TN1": 6.1
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "CA3": 6.2,
+            "FL1": 7.3,
+            "GA1": 6.1,
+            "IN1": 7.8,
+            "KS1": 6.3,
+            "NC1": 6.6,
+            "OK1": 7.1,
+            "TN1": 7.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.3,
+            "TN1": 5.3,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 27,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1614",
+      "name": "Dalz 1614",
+      "aliases": [
+        "DALZ 1614"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 6.0,
+            "FL1": 5.4,
+            "FL3": 6.2,
+            "IN1": 6.1,
+            "NC1": 6.1,
+            "OK1": 6.0,
+            "TN1": 6.1
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.3,
+            "CA3": 6.6,
+            "FL1": 7.6,
+            "GA1": 6.2,
+            "IN1": 7.4,
+            "KS1": 5.4,
+            "NC1": 6.6,
+            "OK1": 6.8,
+            "TN1": 6.7
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.6,
+            "AL1": 5.5,
+            "TN1": 5.6,
+            "OK1": 6.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 28,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1701",
+      "name": "Dalz 1701",
+      "aliases": [
+        "DALZ 1701"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.8,
+            "FL1": 5.8,
+            "FL3": 6.6,
+            "IN1": 6.7,
+            "NC1": 6.1,
+            "OK1": 6.3,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.8,
+            "CA3": 8.0,
+            "FL1": 8.2,
+            "GA1": 6.7,
+            "IN1": 8.0,
+            "KS1": 6.9,
+            "NC1": 7.0,
+            "OK1": 7.4,
+            "TN1": 6.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.5,
+            "TN1": 5.3,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 29,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1707",
+      "name": "Dalz 1707",
+      "aliases": [
+        "DALZ 1707"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.7,
+            "CA3": 5.5,
+            "FL1": 5.0,
+            "FL3": 6.6,
+            "IN1": 7.2,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 5.8,
+            "CA3": 6.8,
+            "FL1": 6.1,
+            "GA1": 6.6,
+            "IN1": 7.9,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 7.0,
+            "TN1": 7.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.7,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 30,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1713",
+      "name": "Dalz 1713",
+      "aliases": [
+        "DALZ 1713"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 6.7,
+            "CA3": 5.3,
+            "FL1": 5.4,
+            "FL3": 6.5,
+            "IN1": 3.3,
+            "NC1": 4.6,
+            "OK1": 5.9,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 6.2,
+            "AR1": 6.8,
+            "CA3": 6.2,
+            "FL1": 7.0,
+            "GA1": 6.4,
+            "IN1": 7.8,
+            "KS1": 6.3,
+            "NC1": 6.8,
+            "OK1": 6.8,
+            "TN1": 6.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.2,
+            "TN1": 5.1,
+            "OK1": 5.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 16,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1714",
+      "name": "Dalz 1714",
+      "aliases": [
+        "DALZ 1714"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "AR1": 6.0,
+            "CA3": 5.8,
+            "FL1": 5.0,
+            "FL3": 6.5,
+            "IN1": 1.1,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 7.0,
+            "CA3": 6.2,
+            "FL1": 7.1,
+            "GA1": 6.6,
+            "IN1": 6.5,
+            "KS1": 5.3,
+            "NC1": 6.3,
+            "OK1": 6.8,
+            "TN1": 6.8
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 4.6,
+            "TN1": 4.8,
+            "OK1": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 17,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1802",
+      "name": "Dalz 1802",
+      "aliases": [
+        "DALZ 1802"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 6.4,
+            "FL1": 4.9,
+            "FL3": 6.6,
+            "IN1": 1.0,
+            "NC1": 5.6,
+            "OK1": 6.2,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.8,
+            "AR1": 7.7,
+            "CA3": 7.4,
+            "FL1": 7.7,
+            "GA1": 6.1,
+            "IN1": 1.0,
+            "KS1": 2.8,
+            "NC1": 6.9,
+            "OK1": 8.2,
+            "TN1": 7.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.0,
+            "TN1": 5.0,
+            "OK1": 5.7
+          },
+          "year": 2023
+        }
+      },
+      "entry": 18,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1806",
+      "name": "Dalz 1806",
+      "aliases": [
+        "DALZ 1806"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 6.0,
+            "FL1": 4.6,
+            "FL3": 6.2,
+            "IN1": 2.5,
+            "NC1": 4.5,
+            "OK1": 5.7,
+            "TN1": 6.1
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.2,
+            "CA3": 7.8,
+            "FL1": 8.0,
+            "GA1": 6.2,
+            "IN1": 9.0,
+            "KS1": 6.1,
+            "NC1": 6.9,
+            "OK1": 7.8,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.8,
+            "TN1": 5.1,
+            "OK1": 5.7
+          },
+          "year": 2023
+        }
+      },
+      "entry": 19,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1807",
+      "name": "Dalz 1807",
+      "aliases": [
+        "DALZ 1807"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "AR1": 5.6,
+            "CA3": 6.0,
+            "FL1": 3.8,
+            "FL3": 5.8,
+            "IN1": 1.0,
+            "NC1": 4.3,
+            "OK1": 5.1,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 7.8,
+            "CA3": 6.7,
+            "FL1": 7.2,
+            "GA1": 5.9,
+            "IN1": 1.0,
+            "KS1": 3.8,
+            "NC1": 6.7,
+            "OK1": 7.9,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "FL1": 5.4,
+            "AL1": 4.3,
+            "TN1": 4.0,
+            "OK1": 4.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 20,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "dalz-1808",
+      "name": "Dalz 1808",
+      "aliases": [
+        "DALZ 1808"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.6,
+            "FL1": 6.2,
+            "FL3": 6.1,
+            "IN1": 7.1,
+            "NC1": 5.7,
+            "OK1": 6.3,
+            "TN1": 6.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.5,
+            "CA3": 6.5,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 6.3,
+            "KS1": 5.7,
+            "NC1": 6.4,
+            "OK1": 5.8,
+            "TN1": 7.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.6,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 21,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "aliases": [
+        "EMERALD"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 5.7,
+            "FL1": 5.9,
+            "FL3": 6.6,
+            "IN1": 6.9,
+            "NC1": 5.6,
+            "OK1": 6.5,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.7,
+            "AR1": 6.7,
+            "CA3": 6.7,
+            "FL1": 7.7,
+            "GA1": 6.3,
+            "IN1": 7.4,
+            "KS1": 6.1,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "TN1": 6.6
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 6.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.5,
+            "TN1": 5.5,
+            "OK1": 6.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 2,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "empire",
+      "name": "Empire",
+      "aliases": [
+        "EMPIRE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.1,
+            "FL1": 5.1,
+            "FL3": 6.5,
+            "IN1": 6.8,
+            "NC1": 6.2,
+            "OK1": 5.8,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 5.7,
+            "CA3": 6.8,
+            "FL1": 7.9,
+            "GA1": 6.4,
+            "IN1": 7.4,
+            "KS1": 5.8,
+            "NC1": 6.9,
+            "OK1": 6.9,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.8,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 15,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "faes-1319",
+      "name": "Faes 1319",
+      "aliases": [
+        "FAES 1319"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 5.7,
+            "FL1": 6.4,
+            "FL3": 6.8,
+            "IN1": 6.8,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.5,
+            "CA3": 7.5,
+            "FL1": 7.9,
+            "GA1": 6.2,
+            "IN1": 8.0,
+            "KS1": 6.6,
+            "NC1": 7.3,
+            "OK1": 7.4,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.3,
+            "TN1": 5.9,
+            "OK1": 6.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 31,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "faes-1335",
+      "name": "Faes 1335",
+      "aliases": [
+        "FAES 1335"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "AR1": 7.0,
+            "CA3": 6.4,
+            "FL1": 5.7,
+            "FL3": 6.3,
+            "IN1": 4.1,
+            "NC1": 5.4,
+            "OK1": 6.0,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 6.8,
+            "CA3": 6.3,
+            "FL1": 8.2,
+            "GA1": 6.4,
+            "IN1": 7.4,
+            "KS1": 6.7,
+            "NC1": 6.6,
+            "OK1": 6.5,
+            "TN1": 7.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.0,
+            "TN1": 5.5,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 32,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1327",
+      "name": "FZ 1327",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.2,
+            "FL1": 5.8,
+            "FL3": 5.9,
+            "IN1": 6.5,
+            "NC1": 6.3,
+            "OK1": 6.0,
+            "TN1": 6.1
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.2,
+            "CA3": 7.3,
+            "FL1": 7.3,
+            "GA1": 6.7,
+            "IN1": 7.9,
+            "KS1": 7.0,
+            "NC1": 7.1,
+            "OK1": 7.2,
+            "TN1": 7.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.2,
+            "AL1": 4.2,
+            "TN1": 5.8,
+            "OK1": 5.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 33,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1367",
+      "name": "FZ 1367",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 5.8,
+            "FL1": 6.2,
+            "FL3": 6.2,
+            "IN1": 2.0,
+            "NC1": 5.6,
+            "OK1": 5.9,
+            "TN1": 5.6
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.6,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 6.3,
+            "CA3": 6.3,
+            "FL1": 8.1,
+            "GA1": 6.3,
+            "IN1": 7.8,
+            "KS1": 6.9,
+            "NC1": 6.8,
+            "OK1": 7.7,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.3,
+            "TN1": 5.4,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 6,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1368",
+      "name": "FZ 1368",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.6,
+            "FL1": 6.3,
+            "FL3": 6.4,
+            "IN1": 1.0,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.9,
+            "AR1": 6.5,
+            "CA3": 6.7,
+            "FL1": 7.7,
+            "GA1": 6.1,
+            "IN1": 3.0,
+            "KS1": 3.5,
+            "NC1": 6.6,
+            "OK1": 7.7,
+            "TN1": 7.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.1,
+            "OK1": 5.7
+          },
+          "year": 2023
+        }
+      },
+      "entry": 5,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1407",
+      "name": "FZ 1407",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 6.1,
+            "CA3": 5.2,
+            "FL1": 5.5,
+            "FL3": 6.5,
+            "IN1": 7.1,
+            "NC1": 6.7,
+            "OK1": 6.1,
+            "TN1": 5.9
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.3,
+            "CA3": 7.0,
+            "FL1": 7.2,
+            "GA1": 6.2,
+            "IN1": 7.4,
+            "KS1": 5.9,
+            "NC1": 6.9,
+            "OK1": 6.9,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.2,
+            "TN1": 5.9,
+            "OK1": 5.9
+          },
+          "year": 2023
+        }
+      },
+      "entry": 34,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1410",
+      "name": "FZ 1410",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.4,
+            "FL1": 5.2,
+            "FL3": 6.7,
+            "IN1": 6.8,
+            "NC1": 6.0,
+            "OK1": 5.8,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "CA3": 6.9,
+            "FL1": 7.7,
+            "GA1": 6.2,
+            "IN1": 7.6,
+            "KS1": 6.1,
+            "NC1": 6.9,
+            "OK1": 6.8,
+            "TN1": 7.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.0,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.6,
+            "TN1": 5.9,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 4,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1422",
+      "name": "FZ 1422",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.2,
+            "FL1": 6.2,
+            "FL3": 6.6,
+            "IN1": 6.9,
+            "NC1": 5.9,
+            "OK1": 6.2,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.0,
+            "CA3": 6.6,
+            "FL1": 7.1,
+            "GA1": 6.6,
+            "IN1": 7.4,
+            "KS1": 6.1,
+            "NC1": 7.1,
+            "OK1": 6.8,
+            "TN1": 7.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.4,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.0,
+            "TN1": 5.7,
+            "OK1": 6.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 8,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1436",
+      "name": "FZ 1436",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 7.4,
+            "CA3": 5.8,
+            "FL1": 5.8,
+            "FL3": 5.9,
+            "IN1": 1.7,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.5,
+            "CA3": 6.0,
+            "FL1": 7.6,
+            "GA1": 6.2,
+            "IN1": 7.8,
+            "KS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 7.3,
+            "TN1": 7.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.5,
+            "TN1": 5.4,
+            "OK1": 6.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 10,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1440",
+      "name": "FZ 1440",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 5.8,
+            "FL1": 6.1,
+            "FL3": 5.9,
+            "IN1": 3.4,
+            "NC1": 5.2,
+            "OK1": 5.9,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "CA3": 6.9,
+            "FL1": 7.9,
+            "GA1": 6.3,
+            "IN1": 8.2,
+            "KS1": 6.9,
+            "NC1": 6.7,
+            "OK1": 7.4,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 4.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.5,
+            "TN1": 5.6,
+            "OK1": 6.3
+          },
+          "year": 2023
+        }
+      },
+      "entry": 7,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1721",
+      "name": "FZ 1721",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "AR1": 5.8,
+            "CA3": 5.3,
+            "FL1": 4.4,
+            "FL3": 5.2,
+            "IN1": 1.0,
+            "NC1": 3.5,
+            "OK1": 4.9,
+            "TN1": 5.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 7.3,
+            "CA3": 6.6,
+            "FL1": 7.3,
+            "GA1": 6.4,
+            "IN1": 1.0,
+            "KS1": 5.8,
+            "NC1": 6.9,
+            "OK1": 7.2,
+            "TN1": 6.3
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 2.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 4.6,
+            "TN1": 4.7,
+            "OK1": 5.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 35,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1722",
+      "name": "FZ 1722",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.4,
+            "CA3": 6.1,
+            "FL1": 6.4,
+            "FL3": 6.5,
+            "IN1": 4.5,
+            "NC1": 6.1,
+            "OK1": 6.2,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "CA3": 6.7,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 8.0,
+            "KS1": 7.2,
+            "NC1": 6.8,
+            "OK1": 7.8,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.1,
+            "TN1": 5.7,
+            "OK1": 6.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 36,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1723",
+      "name": "FZ 1723",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 5.9,
+            "FL1": 5.8,
+            "FL3": 6.3,
+            "IN1": 5.9,
+            "NC1": 5.5,
+            "OK1": 6.2,
+            "TN1": 6.0
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 4.3,
+            "AR1": 5.8,
+            "CA3": 6.0,
+            "FL1": 7.1,
+            "GA1": 6.1,
+            "IN1": 7.7,
+            "KS1": 6.3,
+            "NC1": 6.0,
+            "OK1": 6.8,
+            "TN1": 7.1
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.8,
+            "TN1": 5.6,
+            "OK1": 6.0
+          },
+          "year": 2023
+        }
+      },
+      "entry": 37,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1727",
+      "name": "FZ 1727",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.6,
+            "CA3": 5.9,
+            "FL1": 5.8,
+            "FL3": 6.3,
+            "IN1": 5.5,
+            "NC1": 5.9,
+            "OK1": 6.1,
+            "TN1": 6.2
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 7.0,
+            "CA3": 6.8,
+            "FL1": 7.8,
+            "GA1": 6.7,
+            "IN1": 8.4,
+            "KS1": 7.7,
+            "NC1": 7.2,
+            "OK1": 7.6,
+            "TN1": 7.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.7,
+            "TN1": 5.8,
+            "OK1": 6.5
+          },
+          "year": 2023
+        }
+      },
+      "entry": 9,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1728",
+      "name": "FZ 1728",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.6,
+            "FL1": 5.4,
+            "FL3": 5.1,
+            "IN1": 3.6,
+            "NC1": 4.2,
+            "OK1": 4.8,
+            "TN1": 5.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.7,
+            "CA3": 6.2,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 8.0,
+            "KS1": 7.0,
+            "NC1": 6.9,
+            "OK1": 7.2,
+            "TN1": 6.9
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 3.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "FL1": 6.0,
+            "AL1": 4.5,
+            "TN1": 5.1,
+            "OK1": 5.6
+          },
+          "year": 2023
+        }
+      },
+      "entry": 38,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "fz-1732",
+      "name": "FZ 1732",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 6.0,
+            "FL1": 6.6,
+            "FL3": 6.5,
+            "IN1": 5.4,
+            "NC1": 5.8,
+            "OK1": 6.2,
+            "TN1": 5.7
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.7,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 6.3,
+            "CA3": 6.3,
+            "FL1": 7.8,
+            "GA1": 6.6,
+            "IN1": 7.8,
+            "KS1": 7.0,
+            "NC1": 6.8,
+            "OK1": 7.5,
+            "TN1": 6.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.5,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.1,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.8,
+            "TN1": 5.6,
+            "OK1": 6.4
+          },
+          "year": 2023
+        }
+      },
+      "entry": 39,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "meyer",
+      "name": "Meyer",
+      "aliases": [
+        "MEYER"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "AR1": 6.2,
+            "CA3": 4.1,
+            "FL1": 4.1,
+            "FL3": 5.6,
+            "IN1": 6.0,
+            "NC1": 4.4,
+            "OK1": 5.6,
+            "TN1": 5.4
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.4,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.8,
+            "CA3": 7.5,
+            "FL1": 7.4,
+            "GA1": 6.1,
+            "IN1": 7.7,
+            "KS1": 7.4,
+            "NC1": 7.3,
+            "OK1": 6.3,
+            "TN1": 7.0
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 5.6,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 2.8,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "FL1": 5.5,
+            "AL1": 3.9,
+            "TN1": 4.8,
+            "OK1": 5.1
+          },
+          "year": 2023
+        }
+      },
+      "entry": 1,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "uga-gz-17-4",
+      "name": "Uga GZ 17-4",
+      "aliases": [
+        "UGA GZ 17-4"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 6.1,
+            "FL1": 5.8,
+            "FL3": 6.2,
+            "IN1": 2.3,
+            "NC1": 5.8,
+            "OK1": 5.9,
+            "TN1": 5.3
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.3,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.7,
+            "CA3": 6.3,
+            "FL1": 7.8,
+            "GA1": 6.4,
+            "IN1": 8.2,
+            "KS1": 6.2,
+            "NC1": 6.7,
+            "OK1": 7.2,
+            "TN1": 6.2
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.2,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.7,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.0,
+            "OK1": 5.8
+          },
+          "year": 2023
+        }
+      },
+      "entry": 14,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    },
+    {
+      "id": "zeon",
+      "name": "Zeon",
+      "aliases": [
+        "ZEON"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 5.9,
+            "FL1": 5.1,
+            "FL3": 6.3,
+            "IN1": 6.9,
+            "NC1": 5.5,
+            "OK1": 6.2,
+            "TN1": 5.8
+          },
+          "year": 2023
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2023
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.5,
+            "CA3": 5.3,
+            "FL1": 7.4,
+            "GA1": 6.3,
+            "IN1": 6.8,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.4,
+            "TN1": 7.4
+          },
+          "year": 2023
+        },
+        "brownPatch": {
+          "mean": 6.3,
+          "bySite": {},
+          "year": 2023
+        },
+        "droughtQuality": {
+          "mean": 5.9,
+          "bySite": {},
+          "year": 2023
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.4,
+            "TN1": 5.6,
+            "OK1": 6.2
+          },
+          "year": 2023
+        }
+      },
+      "entry": 3,
+      "species": "zoysiagrass",
+      "trial": "zg19"
+    }
+  ]
+}

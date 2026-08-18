@@ -229,7 +229,7 @@ export default {
                 <th class="sortable" @click="toggleSort('name')">Cultivar{{ sortMark('name') }}</th>
                 <th class="sortable" @click="toggleSort('fit')">Area fit{{ sortMark('fit') }}</th>
                 <th class="sortable" @click="toggleSort('transitionQuality')">
-                  Transition{{ sortMark('transitionQuality') }}
+                  Regional{{ sortMark('transitionQuality') }}
                 </th>
                 <th>{{ nearestSiteHeader }}</th>
                 <th v-if="hasMetric('droughtQuality')" class="sortable" @click="toggleSort('droughtQuality')">
@@ -303,7 +303,7 @@ export default {
           <BarChart :data="factorChart" :options="{ leftMargin: 150, rowHeight: 34 }" />
         </div>
         <div v-if="siteChart.length" class="chart-panel">
-          <h3 class="chart-panel__title">Transition quality by site</h3>
+          <h3 class="chart-panel__title">Regional quality by site</h3>
           <p class="chart-panel__meta">{{ sourceMeta }} regional turf quality.</p>
           <BarChart :data="siteChart" :options="{ leftMargin: 130, rowHeight: 30 }" />
         </div>

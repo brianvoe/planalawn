@@ -10,11 +10,19 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run src/data/blends/catalog.test.ts src/data/products.test.ts src/services/apply.test.ts src/services/units.test.ts src/tasks/task-ui.test.ts",
+    "test": "vitest run src/data/blends/catalog.test.ts src/data/commerce/offers.test.ts src/data/products.test.ts src/data/species.test.ts src/services/apply.test.ts src/services/plan.test.ts src/services/units.test.ts src/tasks/task-ui.test.ts",
     "test:links": "vitest run src/data/blends/links.test.ts",
-    "ntep:ingest": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/tf18_24-8.pdf --out src/data/ntep",
+    "ntep:tables": ".venv/bin/python scripts/ntep/list_tables.py",
+    "ntep:ingest": "npm run ntep:ingest:fescue && npm run ntep:ingest:bluegrass && npm run ntep:ingest:bermuda && npm run ntep:ingest:ryegrass && npm run ntep:ingest:finefescue && npm run ntep:ingest:zoysia && npm run ntep:ingest:staugustine && npm run ntep:ingest:paspalum && npm run ntep:ingest:bentgrass",
+    "ntep:ingest:fescue": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/tf18_24-8.pdf --species tall_fescue --trial tf18 --year 2023 --out src/data/ntep",
+    "ntep:ingest:bluegrass": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/kb17_23-9.pdf --species kentucky_bluegrass --trial kb17 --year 2022 --out src/data/ntep",
     "ntep:ingest:bermuda": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/bg19_24-11f.pdf --species bermudagrass --trial bg19 --year 2023 --out src/data/ntep",
-    "ntep:ingest:bluegrass": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/kb17_23-9.pdf --species kentucky_bluegrass --trial kb17 --year 2022 --out src/data/ntep"
+    "ntep:ingest:ryegrass": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/pr22_26-5.pdf --species perennial_ryegrass --trial pr22 --year 2025 --out src/data/ntep",
+    "ntep:ingest:finefescue": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/ff20_25-7.pdf --species fine_fescue --trial ff20 --year 2024 --out src/data/ntep",
+    "ntep:ingest:zoysia": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/zg19_24-12f.pdf --species zoysiagrass --trial zg19 --year 2023 --out src/data/ntep",
+    "ntep:ingest:staugustine": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/sa23_26-3.pdf --species st_augustinegrass --trial sa23 --year 2025 --out src/data/ntep",
+    "ntep:ingest:paspalum": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/sp23_26-4.pdf --species seashore_paspalum --trial sp23 --year 2025 --out src/data/ntep",
+    "ntep:ingest:bentgrass": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/bt20f_26-6.pdf --species creeping_bentgrass --trial bt20f --year 2025 --out src/data/ntep"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
@@ -23,19 +31,19 @@
     "d3": "^7.9.0",
     "slim-select": "^4.0.7",
     "vue": "^3.5.13",
-    "vue-router": "^4.6.4",
+    "vue-router": "^5.2.0",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
     "@types/node": "^26.2.0",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^6.0.8",
     "eslint": "^10.8.1",
     "eslint-plugin-vue": "^10.10.0",
     "sass": "^1.85.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.67.0",
-    "vite": "^6.2.0",
+    "vite": "^8.2.1",
     "vitest": "^4.1.10",
     "vue-tsc": "^3.3.9"
   }

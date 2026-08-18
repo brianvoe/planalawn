@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "species": "seashore_paspalum",
+    "trial": "sp23",
+    "year": 2025,
+    "sourcePdf": "sp23_26-4.pdf",
+    "notes": "Parsed high-value NTEP tables only (genetic color, national mean quality)."
+  },
+  "count": 7,
+  "cultivars": [
+    {
+      "id": "mvp-dcc",
+      "name": "MVP-DCC",
+      "aliases": [],
+      "metrics": {
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CA3": 6.3,
+            "FL3": 7.3,
+            "GA1": 7.0,
+            "MS1": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 4.8,
+            "CA3": 5.3,
+            "FL3": 7.1,
+            "GA1": 6.0
+          },
+          "year": 2025
+        }
+      },
+      "entry": 1,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "sea-isle-i",
+      "name": "Sea Isle I",
+      "aliases": [
+        "SEA ISLE I"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CA3": 6.7,
+            "FL3": 7.0,
+            "GA1": 6.7,
+            "MS1": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.5,
+            "CA3": 5.7,
+            "FL3": 7.0,
+            "GA1": 5.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 7,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "uga-16-111",
+      "name": "Uga 16-111",
+      "aliases": [
+        "UGA 16-111"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CA3": 7.3,
+            "FL3": 6.7,
+            "GA1": 6.3,
+            "MS1": 6.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "FL5": 6.3,
+            "CA3": 6.3,
+            "FL3": 7.0,
+            "GA1": 5.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 4,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "uga-16-1253",
+      "name": "Uga 16-1253",
+      "aliases": [
+        "UGA 16-1253"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CA3": 7.3,
+            "FL3": 8.0,
+            "GA1": 6.7,
+            "MS1": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.6,
+          "bySite": {
+            "FL5": 6.6,
+            "CA3": 6.5,
+            "FL3": 7.2,
+            "GA1": 6.1
+          },
+          "year": 2025
+        }
+      },
+      "entry": 2,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "uga-17-330",
+      "name": "Uga 17-330",
+      "aliases": [
+        "UGA 17-330"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 7.3,
+          "bySite": {
+            "CA3": 8.0,
+            "FL3": 7.3,
+            "GA1": 6.7,
+            "MS1": 7.0
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.9,
+            "CA3": 5.9,
+            "FL3": 6.9,
+            "GA1": 5.8
+          },
+          "year": 2025
+        }
+      },
+      "entry": 3,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "ugp-312",
+      "name": "Ugp 312",
+      "aliases": [
+        "UGP 312"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CA3": 7.0,
+            "FL3": 7.0,
+            "GA1": 6.3,
+            "MS1": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 5.7,
+            "CA3": 5.9,
+            "FL3": 7.0,
+            "GA1": 5.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 6,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    },
+    {
+      "id": "ugp-430",
+      "name": "Ugp 430",
+      "aliases": [
+        "UGP 430"
+      ],
+      "metrics": {
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CA3": 6.0,
+            "FL3": 7.7,
+            "GA1": 6.0,
+            "MS1": 6.3
+          },
+          "year": 2025
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 4.7,
+            "CA3": 5.2,
+            "FL3": 7.0,
+            "GA1": 5.9
+          },
+          "year": 2025
+        }
+      },
+      "entry": 5,
+      "species": "seashore_paspalum",
+      "trial": "sp23"
+    }
+  ]
+}

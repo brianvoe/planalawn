@@ -1,0 +1,1097 @@
+{
+  "meta": {
+    "species": "st_augustinegrass",
+    "trial": "sa23",
+    "year": 2025,
+    "sourcePdf": "sa23_26-3.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "FL5",
+        "TX2",
+        "OK1"
+      ],
+      "rows": [
+        {
+          "name": "XSA 11513",
+          "base": "XSA 11513",
+          "code": null,
+          "entry": 4,
+          "mean": 6.2,
+          "bySite": {
+            "FL5": 7.0,
+            "TX2": 5.0,
+            "OK1": 6.7
+          }
+        },
+        {
+          "name": "DALSA 2301",
+          "base": "DALSA 2301",
+          "code": null,
+          "entry": 15,
+          "mean": 6.1,
+          "bySite": {
+            "FL5": 6.3,
+            "TX2": 5.6,
+            "OK1": 6.5
+          }
+        },
+        {
+          "name": "PALMETTO",
+          "base": "PALMETTO",
+          "code": null,
+          "entry": 19,
+          "mean": 6.0,
+          "bySite": {
+            "FL5": 6.1,
+            "TX2": 5.5,
+            "OK1": 6.5
+          }
+        },
+        {
+          "name": "COBALT",
+          "base": "COBALT",
+          "code": null,
+          "entry": 17,
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 5.5,
+            "OK1": 5.9
+          }
+        },
+        {
+          "name": "RALEIGH",
+          "base": "RALEIGH",
+          "code": null,
+          "entry": 14,
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 5.8,
+            "TX2": 5.4,
+            "OK1": 6.6
+          }
+        },
+        {
+          "name": "DALSA 1914",
+          "base": "DALSA 1914",
+          "code": null,
+          "entry": 16,
+          "mean": 5.9,
+          "bySite": {
+            "FL5": 6.0,
+            "TX2": 5.3,
+            "OK1": 6.4
+          }
+        },
+        {
+          "name": "FSA 2301",
+          "base": "FSA 2301",
+          "code": null,
+          "entry": 5,
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 4.9,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "XSA 11026",
+          "base": "XSA 11026",
+          "code": null,
+          "entry": 1,
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 7.0,
+            "TX2": 4.6,
+            "OK1": 5.7
+          }
+        },
+        {
+          "name": "FSA 1617",
+          "base": "FSA 1617",
+          "code": null,
+          "entry": 10,
+          "mean": 5.8,
+          "bySite": {
+            "FL5": 6.5,
+            "TX2": 5.2,
+            "OK1": 5.6
+          }
+        },
+        {
+          "name": "XSA 11027",
+          "base": "XSA 11027",
+          "code": null,
+          "entry": 3,
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 7.1,
+            "TX2": 4.7,
+            "OK1": 5.4
+          }
+        },
+        {
+          "name": "DALSA 1910",
+          "base": "DALSA 1910",
+          "code": null,
+          "entry": 18,
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.1,
+            "TX2": 5.0,
+            "OK1": 5.9
+          }
+        },
+        {
+          "name": "FSA 1627",
+          "base": "FSA 1627",
+          "code": null,
+          "entry": 12,
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 5.0,
+            "OK1": 5.8
+          }
+        },
+        {
+          "name": "XSA 12155",
+          "base": "XSA 12155",
+          "code": null,
+          "entry": 2,
+          "mean": 5.7,
+          "bySite": {
+            "FL5": 6.6,
+            "TX2": 4.2,
+            "OK1": 6.2
+          }
+        },
+        {
+          "name": "FSA 2013",
+          "base": "FSA 2013",
+          "code": null,
+          "entry": 7,
+          "mean": 5.5,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 5.1,
+            "OK1": 5.2
+          }
+        },
+        {
+          "name": "FLORATAM",
+          "base": "FLORATAM",
+          "code": null,
+          "entry": 13,
+          "mean": 5.4,
+          "bySite": {
+            "FL5": 6.4,
+            "TX2": 5.6,
+            "OK1": 4.4
+          }
+        },
+        {
+          "name": "FSA 1907",
+          "base": "FSA 1907",
+          "code": null,
+          "entry": 8,
+          "mean": 5.3,
+          "bySite": {
+            "FL5": 6.6,
+            "TX2": 5.0,
+            "OK1": 4.3
+          }
+        },
+        {
+          "name": "FSA 2026",
+          "base": "FSA 2026",
+          "code": null,
+          "entry": 11,
+          "mean": 5.1,
+          "bySite": {
+            "FL5": 6.2,
+            "TX2": 4.4,
+            "OK1": 4.8
+          }
+        },
+        {
+          "name": "FSA 2022",
+          "base": "FSA 2022",
+          "code": null,
+          "entry": 6,
+          "mean": 4.6,
+          "bySite": {
+            "FL5": 6.0,
+            "TX2": 3.1,
+            "OK1": 4.7
+          }
+        },
+        {
+          "name": "FSA 2012",
+          "base": "FSA 2012",
+          "code": null,
+          "entry": 9,
+          "mean": 4.4,
+          "bySite": {
+            "FL5": 6.4,
+            "TX2": 4.9,
+            "OK1": 2.1
+          }
+        }
+      ],
+      "expected": 4,
+      "pages": [
+        10
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "FL3",
+        "GA1",
+        "NC1",
+        "OK1"
+      ],
+      "rows": [
+        {
+          "name": "FSA 1907",
+          "base": "FSA 1907",
+          "code": null,
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "FL3": 8.7,
+            "GA1": 7.7,
+            "NC1": 9.0,
+            "OK1": 8.0
+          }
+        },
+        {
+          "name": "FLORATAM",
+          "base": "FLORATAM",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "FL3": 8.0,
+            "GA1": 8.0,
+            "NC1": 7.7,
+            "OK1": 7.0
+          }
+        },
+        {
+          "name": "FSA 2012",
+          "base": "FSA 2012",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "FL3": 7.7,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 8.0
+          }
+        },
+        {
+          "name": "FSA 2301",
+          "base": "FSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 7.6,
+          "bySite": {
+            "FL3": 7.7,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.7
+          }
+        },
+        {
+          "name": "FSA 1617",
+          "base": "FSA 1617",
+          "code": null,
+          "entry": null,
+          "mean": 7.6,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 7.7
+          }
+        },
+        {
+          "name": "DALSA 1910",
+          "base": "DALSA 1910",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.0
+          }
+        },
+        {
+          "name": "DALSA 1914",
+          "base": "DALSA 1914",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.3,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 6.7
+          }
+        },
+        {
+          "name": "FSA 1627",
+          "base": "FSA 1627",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 7.0,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 7.0
+          }
+        },
+        {
+          "name": "XSA 11026",
+          "base": "XSA 11026",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 7.3
+          }
+        },
+        {
+          "name": "COBALT",
+          "base": "COBALT",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 7.0,
+            "GA1": 7.0,
+            "NC1": 8.0,
+            "OK1": 6.7
+          }
+        },
+        {
+          "name": "DALSA 2301",
+          "base": "DALSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 8.0,
+            "OK1": 6.3
+          }
+        },
+        {
+          "name": "FSA 2022",
+          "base": "FSA 2022",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.3,
+            "OK1": 7.0
+          }
+        },
+        {
+          "name": "XSA 11027",
+          "base": "XSA 11027",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 7.0
+          }
+        },
+        {
+          "name": "FSA 2026",
+          "base": "FSA 2026",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "FL3": 6.3,
+            "GA1": 7.3,
+            "NC1": 7.7,
+            "OK1": 7.3
+          }
+        },
+        {
+          "name": "XSA 11513",
+          "base": "XSA 11513",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.7,
+            "OK1": 6.3
+          }
+        },
+        {
+          "name": "PALMETTO",
+          "base": "PALMETTO",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.7,
+            "NC1": 7.7,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "RALEIGH",
+          "base": "RALEIGH",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 7.3,
+            "NC1": 8.0,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "FSA 2013",
+          "base": "FSA 2013",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "FL3": 6.7,
+            "GA1": 8.0,
+            "NC1": 7.0,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "XSA 12155",
+          "base": "XSA 12155",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "FL3": 6.0,
+            "GA1": 7.0,
+            "NC1": 7.3,
+            "OK1": 6.3
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        16
+      ]
+    },
+    "brownPatch": {
+      "sites": [],
+      "rows": [
+        {
+          "name": "FSA 1907",
+          "base": "FSA 1907",
+          "code": null,
+          "entry": null,
+          "mean": 9.0,
+          "bySite": {}
+        },
+        {
+          "name": "COBALT",
+          "base": "COBALT",
+          "code": null,
+          "entry": null,
+          "mean": 8.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 1914",
+          "base": "DALSA 1914",
+          "code": null,
+          "entry": null,
+          "mean": 8.8,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2022",
+          "base": "FSA 2022",
+          "code": null,
+          "entry": null,
+          "mean": 8.7,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11026",
+          "base": "XSA 11026",
+          "code": null,
+          "entry": null,
+          "mean": 8.7,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11513",
+          "base": "XSA 11513",
+          "code": null,
+          "entry": null,
+          "mean": 8.7,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 12155",
+          "base": "XSA 12155",
+          "code": null,
+          "entry": null,
+          "mean": 8.7,
+          "bySite": {}
+        },
+        {
+          "name": "RALEIGH",
+          "base": "RALEIGH",
+          "code": null,
+          "entry": null,
+          "mean": 8.6,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2012",
+          "base": "FSA 2012",
+          "code": null,
+          "entry": null,
+          "mean": 8.5,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11027",
+          "base": "XSA 11027",
+          "code": null,
+          "entry": null,
+          "mean": 8.5,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2026",
+          "base": "FSA 2026",
+          "code": null,
+          "entry": null,
+          "mean": 8.4,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 1627",
+          "base": "FSA 1627",
+          "code": null,
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 2301",
+          "base": "DALSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 8.2,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 1910",
+          "base": "DALSA 1910",
+          "code": null,
+          "entry": null,
+          "mean": 8.1,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2013",
+          "base": "FSA 2013",
+          "code": null,
+          "entry": null,
+          "mean": 8.1,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 1617",
+          "base": "FSA 1617",
+          "code": null,
+          "entry": null,
+          "mean": 7.9,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2301",
+          "base": "FSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {}
+        },
+        {
+          "name": "PALMETTO",
+          "base": "PALMETTO",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {}
+        },
+        {
+          "name": "FLORATAM",
+          "base": "FLORATAM",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {}
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        34
+      ]
+    },
+    "droughtQuality": {
+      "sites": [],
+      "rows": [
+        {
+          "name": "COBALT",
+          "base": "COBALT",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11027",
+          "base": "XSA 11027",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 1910",
+          "base": "DALSA 1910",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 2301",
+          "base": "DALSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {}
+        },
+        {
+          "name": "FLORATAM",
+          "base": "FLORATAM",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 1907",
+          "base": "FSA 1907",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11026",
+          "base": "XSA 11026",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 1617",
+          "base": "FSA 1617",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 1627",
+          "base": "FSA 1627",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2013",
+          "base": "FSA 2013",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2301",
+          "base": "FSA 2301",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 11513",
+          "base": "XSA 11513",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {}
+        },
+        {
+          "name": "PALMETTO",
+          "base": "PALMETTO",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "DALSA 1914",
+          "base": "DALSA 1914",
+          "code": null,
+          "entry": null,
+          "mean": 4.5,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2026",
+          "base": "FSA 2026",
+          "code": null,
+          "entry": null,
+          "mean": 4.2,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2012",
+          "base": "FSA 2012",
+          "code": null,
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "RALEIGH",
+          "base": "RALEIGH",
+          "code": null,
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "XSA 12155",
+          "base": "XSA 12155",
+          "code": null,
+          "entry": null,
+          "mean": 3.3,
+          "bySite": {}
+        },
+        {
+          "name": "FSA 2022",
+          "base": "FSA 2022",
+          "code": null,
+          "entry": null,
+          "mean": 2.7,
+          "bySite": {}
+        }
+      ],
+      "expected": 11,
+      "pages": [
+        13,
+        14
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "NC1",
+        "GA1",
+        "FL3",
+        "MS1"
+      ],
+      "rows": [
+        {
+          "name": "DALSA 1914",
+          "base": "DALSA 1914",
+          "code": null,
+          "entry": 16,
+          "mean": 7.0,
+          "bySite": {
+            "NC1": 7.6,
+            "GA1": 7.2,
+            "FL3": 7.5,
+            "MS1": 5.5
+          }
+        },
+        {
+          "name": "COBALT",
+          "base": "COBALT",
+          "code": null,
+          "entry": 17,
+          "mean": 6.7,
+          "bySite": {
+            "NC1": 7.3,
+            "GA1": 7.0,
+            "FL3": 7.3,
+            "MS1": 5.4
+          }
+        },
+        {
+          "name": "DALSA 2301",
+          "base": "DALSA 2301",
+          "code": null,
+          "entry": 15,
+          "mean": 6.5,
+          "bySite": {
+            "NC1": 6.8,
+            "GA1": 7.1,
+            "FL3": 6.8,
+            "MS1": 5.2
+          }
+        },
+        {
+          "name": "DALSA 1910",
+          "base": "DALSA 1910",
+          "code": null,
+          "entry": 18,
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.8,
+            "GA1": 6.9,
+            "FL3": 6.9,
+            "MS1": 5.2
+          }
+        },
+        {
+          "name": "PALMETTO",
+          "base": "PALMETTO",
+          "code": null,
+          "entry": 19,
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.6,
+            "GA1": 7.2,
+            "FL3": 6.8,
+            "MS1": 5.1
+          }
+        },
+        {
+          "name": "FSA 2026",
+          "base": "FSA 2026",
+          "code": null,
+          "entry": 11,
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.8,
+            "FL3": 6.9,
+            "MS1": 5.3
+          }
+        },
+        {
+          "name": "FSA 1627",
+          "base": "FSA 1627",
+          "code": null,
+          "entry": 12,
+          "mean": 6.4,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.9,
+            "FL3": 6.8,
+            "MS1": 5.2
+          }
+        },
+        {
+          "name": "XSA 11027",
+          "base": "XSA 11027",
+          "code": null,
+          "entry": 3,
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.7,
+            "FL3": 6.7,
+            "MS1": 5.4
+          }
+        },
+        {
+          "name": "XSA 11026",
+          "base": "XSA 11026",
+          "code": null,
+          "entry": 1,
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.7,
+            "FL3": 6.6,
+            "MS1": 5.4
+          }
+        },
+        {
+          "name": "FSA 2301",
+          "base": "FSA 2301",
+          "code": null,
+          "entry": 5,
+          "mean": 6.3,
+          "bySite": {
+            "NC1": 6.5,
+            "GA1": 6.8,
+            "FL3": 6.6,
+            "MS1": 5.2
+          }
+        },
+        {
+          "name": "FSA 1617",
+          "base": "FSA 1617",
+          "code": null,
+          "entry": 10,
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.2,
+            "GA1": 7.0,
+            "FL3": 6.6,
+            "MS1": 5.1
+          }
+        },
+        {
+          "name": "FSA 1907",
+          "base": "FSA 1907",
+          "code": null,
+          "entry": 8,
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.2,
+            "GA1": 6.9,
+            "FL3": 6.7,
+            "MS1": 5.1
+          }
+        },
+        {
+          "name": "FSA 2012",
+          "base": "FSA 2012",
+          "code": null,
+          "entry": 9,
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.0,
+            "GA1": 6.8,
+            "FL3": 7.0,
+            "MS1": 4.9
+          }
+        },
+        {
+          "name": "RALEIGH",
+          "base": "RALEIGH",
+          "code": null,
+          "entry": 14,
+          "mean": 6.2,
+          "bySite": {
+            "NC1": 6.4,
+            "GA1": 6.9,
+            "FL3": 6.5,
+            "MS1": 4.8
+          }
+        },
+        {
+          "name": "XSA 12155",
+          "base": "XSA 12155",
+          "code": null,
+          "entry": 2,
+          "mean": 6.1,
+          "bySite": {
+            "NC1": 5.8,
+            "GA1": 6.9,
+            "FL3": 6.3,
+            "MS1": 5.4
+          }
+        },
+        {
+          "name": "XSA 11513",
+          "base": "XSA 11513",
+          "code": null,
+          "entry": 4,
+          "mean": 6.1,
+          "bySite": {
+            "NC1": 5.8,
+            "GA1": 7.0,
+            "FL3": 6.2,
+            "MS1": 5.3
+          }
+        },
+        {
+          "name": "FSA 2013",
+          "base": "FSA 2013",
+          "code": null,
+          "entry": 7,
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 5.4,
+            "GA1": 7.0,
+            "FL3": 6.1,
+            "MS1": 4.8
+          }
+        },
+        {
+          "name": "FLORATAM",
+          "base": "FLORATAM",
+          "code": null,
+          "entry": 13,
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 5.3,
+            "GA1": 7.1,
+            "FL3": 6.2,
+            "MS1": 4.7
+          }
+        },
+        {
+          "name": "FSA 2022",
+          "base": "FSA 2022",
+          "code": null,
+          "entry": 6,
+          "mean": 5.8,
+          "bySite": {
+            "NC1": 4.9,
+            "GA1": 7.0,
+            "FL3": 6.0,
+            "MS1": 5.3
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        9
+      ]
+    }
+  }
+}

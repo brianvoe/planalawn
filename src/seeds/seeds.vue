@@ -226,6 +226,18 @@ export default {
     min-width: 12rem;
   }
 
+  /* A toolbar dropdown that carries its own caption, so a row of selects does
+     not leave the reader guessing what each one filters. */
+  .toolbar-field {
+    display: grid;
+    flex: 1 1 10rem;
+    gap: 0.3rem;
+    min-width: 9.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
   .card {
     margin-bottom: 1rem;
   }
@@ -272,17 +284,6 @@ export default {
       font-style: normal;
       font-variant-numeric: tabular-nums;
       font-weight: 700;
-    }
-
-    &.great,
-    &.good {
-      color: var(--color-success);
-      background: var(--color-success-bg);
-    }
-
-    &.ok {
-      color: var(--color-warning);
-      background: var(--color-warning-bg);
     }
   }
 
@@ -343,11 +344,46 @@ export default {
     color: var(--color-text-muted);
     background: var(--color-bg-soft);
     border-radius: 999px;
+  }
 
-    &.great,
+  /* One ranked scale behind every score badge on these pages.
+     Four steps that differ in fill as well as hue, so the ranking survives for
+     anyone who reads green and amber the same way: only the top step is
+     filled, and each softer step carries a matching hairline. An unscored bag
+     is neutral and dashed on purpose — a missing trial must never read as a
+     bad rating, which is what the old shared gray did. */
+  .fit,
+  .fit-pill {
+    border: 1px solid transparent;
+
+    &.great {
+      color: var(--color-white);
+      background: var(--color-success);
+    }
+
     &.good {
       color: var(--color-success);
       background: var(--color-success-bg);
+      border-color: color-mix(in srgb, var(--color-success) 30%, transparent);
+    }
+
+    &.ok {
+      color: var(--color-warning);
+      background: var(--color-warning-bg);
+      border-color: color-mix(in srgb, var(--color-warning) 30%, transparent);
+    }
+
+    &.low {
+      color: var(--color-danger);
+      background: var(--color-danger-bg);
+      border-color: color-mix(in srgb, var(--color-danger) 30%, transparent);
+    }
+
+    &.unk {
+      color: var(--color-text-muted);
+      background: transparent;
+      border-style: dashed;
+      border-color: var(--color-border);
     }
   }
 

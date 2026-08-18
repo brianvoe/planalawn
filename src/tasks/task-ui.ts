@@ -1,5 +1,5 @@
 import { monthLabels, timingByTask } from '../data/timingRules'
-import type { Task } from '../types'
+import type { Bucket, EvaluatedTask, StatusTone, Task } from '../types'
 
 /**
  * How the task library presents itself: what a job belongs with, what it looks
@@ -23,6 +23,13 @@ export interface TaskGroup {
 
 /** Order is the order the page shows them in: the lawn's own season, roughly. */
 export const taskGroups: TaskGroup[] = [
+  {
+    id: 'upkeep',
+    label: 'Upkeep',
+    icon: ['fas', 'scissors'],
+    blurb: 'The weekly rhythm the one-off jobs fit around.',
+    categories: ['maintenance'],
+  },
   {
     id: 'seed',
     label: 'Seed & renovate',
@@ -72,12 +79,87 @@ export function groupFor(task: Task): TaskGroup {
   return groupByCategory[task.category] || taskGroups[0]
 }
 
+/** Chip colours available to a task badge. Brand and accent carry no urgency. */
+export type ChipTone = StatusTone | 'brand' | 'accent'
+
+export interface TaskStatus {
+  label: string
+  tone: ChipTone
+}
+
+export interface UrgencyBand {
+  id: Bucket
+  label: string
+  icon: IconRef
+  blurb: string
+}
+
+/**
+ * Urgency is the running order of both the task library and the calendar: the
+ * question every visitor arrives with is "what do I do today", so the jobs that
+ * answer it sort above the ones that don't.
+ */
+export const urgencyBands: UrgencyBand[] = [
+  {
+    id: 'now',
+    label: 'Do now',
+    icon: ['fas', 'check'],
+    blurb: 'In season and the soil agrees — this is the work in front of you.',
+  },
+  {
+    id: 'soon',
+    label: 'Coming up',
+    icon: ['fas', 'clock'],
+    blurb: 'Close, but still waiting on the calendar or on soil temperature.',
+  },
+  {
+    id: 'later',
+    label: 'Later in the year',
+    icon: ['fas', 'calendar-day'],
+    blurb: 'Out of season. Here so you know it exists and when it comes back.',
+  },
+]
+
+/**
+ * Only the two bands worth interrupting for get a badge. "Later" is the resting
+ * state of most of these jobs, and a row of grey "Later" chips would bury the
+ * two that are actually open — the month range in the meta line already says
+ * when to come back.
+ */
+const statusByBucket: Partial<Record<Bucket, TaskStatus>> = {
+  now: { label: 'Do now', tone: 'good' },
+  soon: { label: 'Coming up', tone: 'caution' },
+}
+
+export function statusFor(item: EvaluatedTask): TaskStatus | null {
+  return statusByBucket[item.bucket] || null
+}
+
+/**
+ * The badge for a month you are only browsing. Urgency needs today's soil to
+ * mean anything, so a future month reports which kind of window it is instead
+ * of pretending to know whether you can go out and do it.
+ */
+export function windowStatusFor(item: EvaluatedTask): TaskStatus {
+  return item.primary
+    ? { label: 'Primary window', tone: 'brand' }
+    : { label: 'Also typical', tone: 'accent' }
+}
+
+const bucketOrder: Record<Bucket, number> = { now: 0, soon: 1, later: 2 }
+
+/** Sorts the openable work to the top while holding catalog order inside a band. */
+export function byUrgency(a: EvaluatedTask, b: EvaluatedTask): number {
+  return bucketOrder[a.bucket] - bucketOrder[b.bucket]
+}
+
 /**
  * One icon per job. These are read at 18px in a tile, so each one has to be a
  * silhouette of the thing itself — the shield for a barrier laid before
  * germination, the leaf for broadleaf weeds, dots for aeration holes.
  */
 export const taskIcons: Record<string, IconRef> = {
+  mowing: ['fas', 'scissors'],
   'lawn-kill': ['fas', 'spray-can'],
   aeration: ['fas', 'grip'],
   overseeding: ['lawn', 'seed'],
@@ -162,7 +244,14 @@ export function soilGateFor(task: Task): string {
  * for the name we gave the job.
  */
 export function searchTextFor(task: Task): string {
-  return [task.name, task.summary, task.why, groupFor(task).label, ...task.materials]
+  return [
+    task.name,
+    task.summary,
+    task.why,
+    groupFor(task).label,
+    ...task.equipment,
+    ...task.supplies,
+  ]
     .join(' ')
     .toLowerCase()
 }

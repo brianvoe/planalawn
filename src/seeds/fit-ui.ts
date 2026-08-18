@@ -1,6 +1,6 @@
 import { NTEP } from '../charts/bars'
-import { coverageLabel } from '../services/suitability'
-import type { Blend, BlendFit, Coverage, FitMeter, ScoreFactor } from '../types'
+import { coverageLabel, fitTier } from '../services/suitability'
+import type { BaselineKey, Blend, BlendFit, Coverage, FitMeter, ScoreFactor } from '../types'
 
 export const FACTOR_LABELS: Record<ScoreFactor, string> = {
   nearest: 'Nearest trial site',
@@ -29,12 +29,16 @@ export function formOrChannelLabel(blend: Pick<Blend, 'channel' | 'curated' | 'f
   return blend.curated ? 'Curated' : 'Yours'
 }
 
+/**
+ * The class that shades a score badge, from the same ladder that words it.
+ *
+ * An unscored bag gets its own class rather than the bottom step: the pages
+ * draw it neutral and dashed, because a bag we could not score is not a bag
+ * that scored badly (README design principle 4).
+ */
 export function fitTone(score: number | null | undefined): string {
-  if (score == null) return 'unk'
-  if (score >= 6.6) return 'great'
-  if (score >= 6.2) return 'good'
-  if (score >= 5.8) return 'ok'
-  return 'low'
+  if (typeof score !== 'number' || Number.isNaN(score)) return 'unk'
+  return fitTier(score).tone
 }
 
 export function coverageTitle(coverage: Coverage | null | undefined): string {
@@ -72,65 +76,58 @@ function withBaseline(meter: FitMeter, baseline: number | undefined): FitMeter {
 }
 
 /**
- * The few numbers that answer "why this bag, here" at a glance.
+ * The three traits people actually choose a bag on: how it handles dry spells,
+ * how it handles disease, and how dark it is.
  *
- * Ordered by how much they drive the score, and each row is dropped rather
- * than zeroed when its table is missing, so an absent metric never reads as a
- * bad one. Only the site name is shortened to a city — the full name and what
- * the number means live in the row's hint.
+ * All three read from the blend's trial averages rather than from the score,
+ * so the row matches the trait chart on the detail page. Drought and brown
+ * patch are deliberately shown apart instead of as the score's combined
+ * summerStress, which would have put a number beside half of itself. A row is
+ * dropped rather than zeroed when its table is missing, so an absent metric
+ * never reads as a bad one; what each number means lives in the row's hint.
  */
 export function fitMeters(
   fit: BlendFit | null | undefined,
-  baselines: Partial<Record<ScoreFactor, number>> = {},
-  regional = false,
+  baselines: Partial<Record<BaselineKey, number>> = {},
 ): FitMeter[] {
   if (!fit || fit.score == null) return []
-  const factors = fit.factors || {}
+  const averages = fit.averages
   const meters: FitMeter[] = []
-  const site = fit.nearestSite
-  const area = factors.nearest ?? factors.region ?? factors.national
 
-  if (area != null) {
+  if (averages?.drought != null) {
     meters.push(
       withBaseline(
         {
-          key: 'area',
-          // With no site to name, say which average stood in for it rather than
-          // implying a local number we don't have.
-          label: site ? `Near ${site.name.split(',')[0]}` : regional ? 'Regional' : 'National',
-          value: area,
-          hint: site
-            ? `Turf quality at ${site.name}, the closest trial site with plots for this seed.`
-            : regional
-              ? 'Turf quality averaged over the trial sites in your climate band.'
-              : 'Turf quality averaged over every site in the trial.',
-        },
-        baselines.nearest ?? baselines.region ?? baselines.national,
-      ),
-    )
-  }
-  if (factors.summerStress != null) {
-    meters.push(
-      withBaseline(
-        {
-          key: 'summerStress',
+          key: 'drought',
           // Short enough for three columns on a phone; the hint carries the rest.
-          label: 'Summer',
-          value: factors.summerStress,
-          hint: 'Drought quality and brown patch resistance, averaged. Higher holds up better through summer.',
+          label: 'Drought',
+          value: averages.drought,
+          hint: 'Turf quality held through the trial’s drought plots. Higher stays green longer between waterings.',
         },
-        baselines.summerStress,
+        baselines.drought,
       ),
     )
   }
-  const color = factors.color ?? fit.averages?.color
-  if (color != null) {
+  if (averages?.brownPatch != null) {
+    meters.push(
+      withBaseline(
+        {
+          key: 'brownPatch',
+          label: 'Brown patch',
+          value: averages.brownPatch,
+          hint: 'Resistance to the disease its trial tracked — brown patch on fescue, large patch or spring dead spot on warm-season grasses. Higher means less damage.',
+        },
+        baselines.brownPatch,
+      ),
+    )
+  }
+  if (averages?.color != null) {
     meters.push(
       withBaseline(
         {
           key: 'color',
           label: 'Color',
-          value: color,
+          value: averages.color,
           hint: 'Genetic color rating. Higher is a darker green without extra nitrogen.',
         },
         baselines.color,

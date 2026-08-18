@@ -1,0 +1,4723 @@
+{
+  "meta": {
+    "species": "perennial_ryegrass",
+    "trial": "pr22",
+    "year": 2025,
+    "sourcePdf": "pr22_26-5.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "IA1",
+        "IN1",
+        "MN1",
+        "NE1",
+        "OH1",
+        "ON1"
+      ],
+      "rows": [
+        {
+          "name": "PPG-PR 620",
+          "base": "PPG-PR 620",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "IA1": 7.6,
+            "IN1": 6.2,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 7.6
+          }
+        },
+        {
+          "name": "APS",
+          "base": "APS",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 6.5,
+            "MN1": 4.5,
+            "NE1": 6.3,
+            "OH1": 5.4,
+            "ON1": 7.8
+          }
+        },
+        {
+          "name": "SILETZ",
+          "base": "SILETZ",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MN1": 4.9,
+            "NE1": 6.6,
+            "OH1": 5.8,
+            "ON1": 7.2
+          }
+        },
+        {
+          "name": "GRAND SLAM G-LS (PPG-PR 637)",
+          "base": "GRAND SLAM G-LS",
+          "code": "PPG-PR 637",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 6.0,
+            "MN1": 4.7,
+            "NE1": 6.1,
+            "OH1": 6.1,
+            "ON1": 7.6
+          }
+        },
+        {
+          "name": "PST-2ADS",
+          "base": "PST-2ADS",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.8,
+            "MN1": 4.7,
+            "NE1": 6.4,
+            "OH1": 6.4,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "QUASAR",
+          "base": "QUASAR",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MN1": 5.5,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 7.3
+          }
+        },
+        {
+          "name": "DLF-PR-3735",
+          "base": "DLF-PR-3735",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.1,
+            "MN1": 5.3,
+            "NE1": 6.3,
+            "OH1": 6.2,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "VORTEX SRT (PPG-PR 665)",
+          "base": "VORTEX SRT",
+          "code": "PPG-PR 665",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.8,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 7.2
+          }
+        },
+        {
+          "name": "HOMERUN G-LS (PPG-PR 644)",
+          "base": "HOMERUN G-LS",
+          "code": "PPG-PR 644",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 6.2,
+            "OH1": 6.8,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PPG-PR 606",
+          "base": "PPG-PR 606",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.9,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 6.8,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "PVF-SGS5",
+          "base": "PVF-SGS5",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 6.2,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 7.3
+          }
+        },
+        {
+          "name": "SLIDER SG (PPG-PR 602)",
+          "base": "SLIDER SG",
+          "code": "PPG-PR 602",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 5.5,
+            "MN1": 4.3,
+            "NE1": 6.3,
+            "OH1": 6.6,
+            "ON1": 6.8
+          }
+        },
+        {
+          "name": "APPLE 4SGL (PPG-PR 663)",
+          "base": "APPLE 4SGL",
+          "code": "PPG-PR 663",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.0,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 6.8,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "CJP1R",
+          "base": "CJP1R",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 6.0,
+            "MN1": 4.9,
+            "NE1": 5.6,
+            "OH1": 6.2,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PISCES (PPG-PR 664)",
+          "base": "PISCES",
+          "code": "PPG-PR 664",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.4,
+            "MN1": 4.3,
+            "NE1": 6.2,
+            "OH1": 6.3,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "PPG-PR 646",
+          "base": "PPG-PR 646",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.4,
+            "IN1": 6.2,
+            "MN1": 5.1,
+            "NE1": 6.3,
+            "OH1": 6.4,
+            "ON1": 6.4
+          }
+        },
+        {
+          "name": "PPG-PR 662",
+          "base": "PPG-PR 662",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 6.4,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 6.3,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "PPG-PR 666",
+          "base": "PPG-PR 666",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 6.1,
+            "MN1": 4.5,
+            "NE1": 6.0,
+            "OH1": 5.9,
+            "ON1": 7.1
+          }
+        },
+        {
+          "name": "ASPIRATION (DLF-PR-3736)",
+          "base": "ASPIRATION",
+          "code": "DLF-PR-3736",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.7,
+            "IN1": 5.8,
+            "MN1": 4.4,
+            "NE1": 5.4,
+            "OH1": 6.3,
+            "ON1": 7.1
+          }
+        },
+        {
+          "name": "DLF-LGT-3066",
+          "base": "DLF-LGT-3066",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.8,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 6.3,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "WICKED COOL (DLF-PR-3738)",
+          "base": "WICKED COOL",
+          "code": "DLF-PR-3738",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.0,
+            "MN1": 4.5,
+            "NE1": 6.2,
+            "OH1": 6.1,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PPG-PR 667",
+          "base": "PPG-PR 667",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 6.0,
+            "MN1": 3.9,
+            "NE1": 6.4,
+            "OH1": 6.7,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "DLF-PR-3726",
+          "base": "DLF-PR-3726",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.3,
+            "MN1": 4.5,
+            "NE1": 5.7,
+            "OH1": 6.4,
+            "ON1": 6.8
+          }
+        },
+        {
+          "name": "IGNITION (PPG-PR 647)",
+          "base": "IGNITION",
+          "code": "PPG-PR 647",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 5.0,
+            "NE1": 5.6,
+            "OH1": 5.7,
+            "ON1": 7.5
+          }
+        },
+        {
+          "name": "PLANETARY (SGP4)",
+          "base": "PLANETARY",
+          "code": "SGP4",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.5,
+            "MN1": 4.5,
+            "NE1": 5.9,
+            "OH1": 5.9,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "RPP3",
+          "base": "RPP3",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MN1": 4.8,
+            "NE1": 6.2,
+            "OH1": 6.1,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 642",
+          "base": "PPG-PR 642",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.8,
+            "MN1": 4.6,
+            "NE1": 6.3,
+            "OH1": 5.8,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "FASTBALL 4GL (PPG-PR 658)",
+          "base": "FASTBALL 4GL",
+          "code": "PPG-PR 658",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 6.1,
+            "MN1": 4.6,
+            "NE1": 6.1,
+            "OH1": 5.7,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "LTP-NR",
+          "base": "LTP-NR",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 6.1,
+            "MN1": 4.4,
+            "NE1": 5.8,
+            "OH1": 6.0,
+            "ON1": 6.8
+          }
+        },
+        {
+          "name": "DLF-PR-3730",
+          "base": "DLF-PR-3730",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3728",
+          "base": "DLF-PR-3728",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MN1": 4.6,
+            "NE1": 5.9,
+            "OH1": 5.2,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "EXCEED (PPG-PR 668)",
+          "base": "EXCEED",
+          "code": "PPG-PR 668",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.7,
+            "MN1": 4.4,
+            "NE1": 6.3,
+            "OH1": 6.2,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "PPG-PR 639",
+          "base": "PPG-PR 639",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.5,
+            "MN1": 4.6,
+            "NE1": 6.2,
+            "OH1": 5.9,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "GO-RUS21",
+          "base": "GO-RUS21",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.4,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 5.8,
+            "OH1": 5.9,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PS4",
+          "base": "PS4",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.5,
+            "MN1": 4.9,
+            "NE1": 6.2,
+            "OH1": 5.9,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "SUNDOWN (BY-PS2)",
+          "base": "SUNDOWN",
+          "code": "BY-PS2",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 4.4,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PATRIARCH (PPG-PR 670)",
+          "base": "PATRIARCH",
+          "code": "PPG-PR 670",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 6.1,
+            "MN1": 4.1,
+            "NE1": 6.2,
+            "OH1": 5.6,
+            "ON1": 7.1
+          }
+        },
+        {
+          "name": "PST-2BGL",
+          "base": "PST-2BGL",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.9,
+            "MN1": 4.3,
+            "NE1": 5.3,
+            "OH1": 5.9,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "20PR10",
+          "base": "20PR10",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 5.0,
+            "MN1": 4.1,
+            "NE1": 5.4,
+            "OH1": 6.6,
+            "ON1": 7.3
+          }
+        },
+        {
+          "name": "PERFORMANCE (NAI-PR5)",
+          "base": "PERFORMANCE",
+          "code": "NAI-PR5",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.4,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 6.2,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 661",
+          "base": "PPG-PR 661",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 6.0,
+            "MN1": 4.4,
+            "NE1": 5.8,
+            "OH1": 5.9,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "PST-2MES1",
+          "base": "PST-2MES1",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.5,
+            "MN1": 4.1,
+            "NE1": 6.3,
+            "OH1": 6.0,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "HIGH OCTANE",
+          "base": "HIGH OCTANE",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.3,
+            "IN1": 5.8,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "STELLAR 4GL",
+          "base": "STELLAR 4GL",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.7,
+            "MN1": 4.1,
+            "NE1": 5.5,
+            "OH1": 6.4,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "PISTON",
+          "base": "PISTON",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.6,
+            "IN1": 5.8,
+            "MN1": 4.2,
+            "NE1": 5.7,
+            "OH1": 6.2,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "PVF-RPP2",
+          "base": "PVF-RPP2",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.6,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 5.3,
+            "ON1": 7.4
+          }
+        },
+        {
+          "name": "LTP-RPP4",
+          "base": "LTP-RPP4",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.6,
+            "MN1": 4.5,
+            "NE1": 5.9,
+            "OH1": 5.2,
+            "ON1": 7.1
+          }
+        },
+        {
+          "name": "TRIDENT (PPG-PR 643)",
+          "base": "TRIDENT",
+          "code": "PPG-PR 643",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.5,
+            "MN1": 4.7,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "RELIC (PPG-PR 611)",
+          "base": "RELIC",
+          "code": "PPG-PR 611",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MN1": 3.6,
+            "NE1": 6.1,
+            "OH1": 6.2,
+            "ON1": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3727",
+          "base": "DLF-PR-3727",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.8,
+            "MN1": 4.1,
+            "NE1": 5.8,
+            "OH1": 6.2,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "GO-RUS22",
+          "base": "GO-RUS22",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.1,
+            "MN1": 4.6,
+            "NE1": 6.0,
+            "OH1": 5.9,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "DLF-PR-3729",
+          "base": "DLF-PR-3729",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.8,
+            "MN1": 4.5,
+            "NE1": 6.1,
+            "OH1": 5.1,
+            "ON1": 7.1
+          }
+        },
+        {
+          "name": "PPG-PR 610",
+          "base": "PPG-PR 610",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.0,
+            "IN1": 5.6,
+            "MN1": 4.0,
+            "NE1": 6.6,
+            "OH1": 5.7,
+            "ON1": 6.2
+          }
+        },
+        {
+          "name": "ULTRA SPORT (PST-2HAF20)",
+          "base": "ULTRA SPORT",
+          "code": "PST-2HAF20",
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 5.8,
+            "MN1": 3.8,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "BAR LP 22191",
+          "base": "BAR LP 22191",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.3,
+            "MN1": 3.6,
+            "NE1": 5.7,
+            "OH1": 6.7,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "PST-2HFM",
+          "base": "PST-2HFM",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 5.4,
+            "MN1": 4.6,
+            "NE1": 5.8,
+            "OH1": 6.0,
+            "ON1": 6.2
+          }
+        },
+        {
+          "name": "GRAY EAGLE SLT (PST-2MEG)",
+          "base": "GRAY EAGLE SLT",
+          "code": "PST-2MEG",
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.7,
+            "MN1": 4.1,
+            "NE1": 5.9,
+            "OH1": 6.0,
+            "ON1": 6.4
+          }
+        },
+        {
+          "name": "PST-2GDS",
+          "base": "PST-2GDS",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 5.5,
+            "MN1": 4.5,
+            "NE1": 5.7,
+            "OH1": 5.4,
+            "ON1": 6.4
+          }
+        },
+        {
+          "name": "DLF-PR-3737",
+          "base": "DLF-PR-3737",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 3.5,
+            "NE1": 6.0,
+            "OH1": 6.0,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "BAR LP 22174",
+          "base": "BAR LP 22174",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IA1": 7.5,
+            "IN1": 4.9,
+            "MN1": 4.6,
+            "NE1": 5.7,
+            "OH1": 5.0,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "ALPHA CENTAURI",
+          "base": "ALPHA CENTAURI",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 5.4,
+            "IN1": 6.6,
+            "MN1": 3.8,
+            "NE1": 6.0,
+            "OH1": 5.8,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "BAR LP 22262",
+          "base": "BAR LP 22262",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 4.9,
+            "MN1": 3.3,
+            "NE1": 5.9,
+            "OH1": 6.6,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "PST-2E6",
+          "base": "PST-2E6",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.3,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "BAR LP 22256",
+          "base": "BAR LP 22256",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 7.1,
+            "IN1": 4.6,
+            "MN1": 4.1,
+            "NE1": 6.0,
+            "OH1": 5.7,
+            "ON1": 6.8
+          }
+        },
+        {
+          "name": "KARMA",
+          "base": "KARMA",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.1,
+            "IN1": 5.2,
+            "MN1": 4.3,
+            "NE1": 6.0,
+            "OH1": 5.6,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "STINGER (PST-2EGY)",
+          "base": "STINGER",
+          "code": "PST-2EGY",
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 5.7,
+            "ON1": 6.4
+          }
+        },
+        {
+          "name": "EMINENCE (RC20-02O)",
+          "base": "EMINENCE",
+          "code": "RC20-02O",
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.1,
+            "MN1": 3.8,
+            "NE1": 5.6,
+            "OH1": 6.1,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "PPG-PR 671",
+          "base": "PPG-PR 671",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IA1": 6.9,
+            "IN1": 5.6,
+            "MN1": 3.8,
+            "NE1": 5.9,
+            "OH1": 5.7,
+            "ON1": 6.1
+          }
+        },
+        {
+          "name": "BAR LP 22263",
+          "base": "BAR LP 22263",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 4.9,
+            "MN1": 3.6,
+            "NE1": 5.4,
+            "OH1": 6.0,
+            "ON1": 6.7
+          }
+        },
+        {
+          "name": "FLIGHTLINE (PST-214)",
+          "base": "FLIGHTLINE",
+          "code": "PST-214",
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.3,
+            "MN1": 4.3,
+            "NE1": 5.9,
+            "OH1": 5.0,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "GO-RUS20",
+          "base": "GO-RUS20",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IA1": 6.7,
+            "IN1": 5.0,
+            "MN1": 4.4,
+            "NE1": 5.6,
+            "OH1": 4.7,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "BRIGHTSTAR SLT",
+          "base": "BRIGHTSTAR SLT",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IA1": 6.8,
+            "IN1": 4.7,
+            "MN1": 3.3,
+            "NE1": 5.5,
+            "OH1": 5.7,
+            "ON1": 6.8
+          }
+        },
+        {
+          "name": "HOMERUN LS",
+          "base": "HOMERUN LS",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 7.2,
+            "IN1": 5.2,
+            "MN1": 3.6,
+            "NE1": 6.0,
+            "OH1": 5.0,
+            "ON1": 5.7
+          }
+        },
+        {
+          "name": "LIGHTSPEED (PST-2DRG)",
+          "base": "LIGHTSPEED",
+          "code": "PST-2DRG",
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 5.0,
+            "MN1": 3.6,
+            "NE1": 5.9,
+            "OH1": 5.0,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "MRSL-PR22",
+          "base": "MRSL-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 4.7,
+            "MN1": 3.7,
+            "NE1": 5.9,
+            "OH1": 5.3,
+            "ON1": 6.6
+          }
+        },
+        {
+          "name": "PREEMINENT (SE-DK)",
+          "base": "PREEMINENT",
+          "code": "SE-DK",
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 4.8,
+            "MN1": 3.2,
+            "NE1": 5.4,
+            "OH1": 6.0,
+            "ON1": 6.5
+          }
+        },
+        {
+          "name": "DARK MATTER",
+          "base": "DARK MATTER",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 5.9,
+            "IN1": 5.2,
+            "MN1": 3.2,
+            "NE1": 6.2,
+            "OH1": 4.8,
+            "ON1": 6.9
+          }
+        },
+        {
+          "name": "PROMINENT II (TSC-CRS)",
+          "base": "PROMINENT II",
+          "code": "TSC-CRS",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "IA1": 6.5,
+            "IN1": 4.9,
+            "MN1": 3.5,
+            "NE1": 5.3,
+            "OH1": 5.6,
+            "ON1": 5.9
+          }
+        },
+        {
+          "name": "BSG-PR22",
+          "base": "BSG-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "IA1": 6.3,
+            "IN1": 4.6,
+            "MN1": 2.9,
+            "NE1": 5.8,
+            "OH1": 5.3,
+            "ON1": 6.0
+          }
+        },
+        {
+          "name": "GREENBACK",
+          "base": "GREENBACK",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "IA1": 6.2,
+            "IN1": 4.3,
+            "MN1": 3.2,
+            "NE1": 5.9,
+            "OH1": 4.7,
+            "ON1": 6.1
+          }
+        },
+        {
+          "name": "SEPR-2013",
+          "base": "SEPR-2013",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "IA1": 5.9,
+            "IN1": 4.4,
+            "MN1": 3.7,
+            "NE1": 5.6,
+            "OH1": 5.4,
+            "ON1": 5.4
+          }
+        },
+        {
+          "name": "PST-2SPF",
+          "base": "PST-2SPF",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {
+            "IA1": 6.6,
+            "IN1": 4.5,
+            "MN1": 2.7,
+            "NE1": 5.3,
+            "OH1": 4.4,
+            "ON1": 5.0
+          }
+        },
+        {
+          "name": "LINN",
+          "base": "LINN",
+          "code": null,
+          "entry": null,
+          "mean": 4.4,
+          "bySite": {
+            "IA1": 5.4,
+            "IN1": 3.7,
+            "MN1": 1.1,
+            "NE1": 5.5,
+            "OH1": 5.6,
+            "ON1": 5.0
+          }
+        }
+      ],
+      "expected": 7,
+      "pages": [
+        19,
+        20
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "CT1",
+        "IA1",
+        "IN1",
+        "IN2",
+        "MN1",
+        "NE1",
+        "ON1",
+        "OR1",
+        "QE1",
+        "UT1"
+      ],
+      "rows": [
+        {
+          "name": "BSG-PR22",
+          "base": "BSG-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "IN2": 8.0,
+            "MN1": 5.3,
+            "NE1": 7.3,
+            "ON1": 9.0,
+            "OR1": 8.3,
+            "QE1": 7.7,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "PROMINENT II (TSC-CRS)",
+          "base": "PROMINENT II",
+          "code": "TSC-CRS",
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 6.7,
+            "IN1": 7.7,
+            "IN2": 8.0,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.3,
+            "QE1": 7.7,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "MRSL-PR22",
+          "base": "MRSL-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 8.0,
+            "IN2": 7.0,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.7,
+            "QE1": 7.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "DARK MATTER",
+          "base": "DARK MATTER",
+          "code": null,
+          "entry": null,
+          "mean": 7.4,
+          "bySite": {
+            "CT1": 8.0,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "IN2": 8.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 9.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "PREEMINENT (SE-DK)",
+          "base": "PREEMINENT",
+          "code": "SE-DK",
+          "entry": null,
+          "mean": 7.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 7.7,
+            "IN2": 8.0,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 8.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "PST-2SPF",
+          "base": "PST-2SPF",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "CT1": 8.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 7.7,
+            "MN1": 6.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.7,
+            "QE1": 7.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "FLIGHTLINE (PST-214)",
+          "base": "FLIGHTLINE",
+          "code": "PST-214",
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.3,
+            "IN2": 8.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "PVF-RPP2",
+          "base": "PVF-RPP2",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 7.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "GRAY EAGLE SLT (PST-2MEG)",
+          "base": "GRAY EAGLE SLT",
+          "code": "PST-2MEG",
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 7.3,
+            "IN2": 7.3,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3735",
+          "base": "DLF-PR-3735",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 8.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "ULTRA SPORT (PST-2HAF20)",
+          "base": "ULTRA SPORT",
+          "code": "PST-2HAF20",
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PST-2BGL",
+          "base": "PST-2BGL",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "PPG-PR 606",
+          "base": "PPG-PR 606",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "PATRIARCH (PPG-PR 670)",
+          "base": "PATRIARCH",
+          "code": "PPG-PR 670",
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "SILETZ",
+          "base": "SILETZ",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 7.0,
+            "NE1": 6.7,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "SEPR-2013",
+          "base": "SEPR-2013",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "IN2": 7.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "WICKED COOL (DLF-PR-3738)",
+          "base": "WICKED COOL",
+          "code": "DLF-PR-3738",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.3,
+            "NE1": 7.3,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "RPP3",
+          "base": "RPP3",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 7.3,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "DLF-PR-3729",
+          "base": "DLF-PR-3729",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 6.0,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "GREENBACK",
+          "base": "GREENBACK",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "PPG-PR 620",
+          "base": "PPG-PR 620",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.7,
+            "NE1": 7.3,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "APS",
+          "base": "APS",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "LTP-RPP4",
+          "base": "LTP-RPP4",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PISTON",
+          "base": "PISTON",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.3,
+            "MN1": 7.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "HOMERUN G-LS (PPG-PR 644)",
+          "base": "HOMERUN G-LS",
+          "code": "PPG-PR 644",
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "SLIDER SG (PPG-PR 602)",
+          "base": "SLIDER SG",
+          "code": "PPG-PR 602",
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "IN2": 7.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "SUNDOWN (BY-PS2)",
+          "base": "SUNDOWN",
+          "code": "BY-PS2",
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PPG-PR 646",
+          "base": "PPG-PR 646",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.0,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 6.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PST-2HFM",
+          "base": "PST-2HFM",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 7.3,
+            "IN2": 7.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PST-2GDS",
+          "base": "PST-2GDS",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 4.7,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.3,
+            "QE1": 7.3,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PLANETARY (SGP4)",
+          "base": "PLANETARY",
+          "code": "SGP4",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "CJP1R",
+          "base": "CJP1R",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 7.0,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PPG-PR 610",
+          "base": "PPG-PR 610",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PPG-PR 639",
+          "base": "PPG-PR 639",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PISCES (PPG-PR 664)",
+          "base": "PISCES",
+          "code": "PPG-PR 664",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 5.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "FASTBALL 4GL (PPG-PR 658)",
+          "base": "FASTBALL 4GL",
+          "code": "PPG-PR 658",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.3,
+            "ON1": 8.3,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 666",
+          "base": "PPG-PR 666",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "IN2": 6.7,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 6.3,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PST-2MES1",
+          "base": "PST-2MES1",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "TRIDENT (PPG-PR 643)",
+          "base": "TRIDENT",
+          "code": "PPG-PR 643",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "PERFORMANCE (NAI-PR5)",
+          "base": "PERFORMANCE",
+          "code": "NAI-PR5",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 7.0,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 642",
+          "base": "PPG-PR 642",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 6.7,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "GO-RUS22",
+          "base": "GO-RUS22",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "IN2": 7.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.3,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "IGNITION (PPG-PR 647)",
+          "base": "IGNITION",
+          "code": "PPG-PR 647",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "IN2": 6.0,
+            "MN1": 7.0,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "DLF-PR-3730",
+          "base": "DLF-PR-3730",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 5.0,
+            "NE1": 6.7,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "GRAND SLAM G-LS (PPG-PR 637)",
+          "base": "GRAND SLAM G-LS",
+          "code": "PPG-PR 637",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "LIGHTSPEED (PST-2DRG)",
+          "base": "LIGHTSPEED",
+          "code": "PST-2DRG",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 7.0,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 661",
+          "base": "PPG-PR 661",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.7,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 671",
+          "base": "PPG-PR 671",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.3,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "STELLAR 4GL",
+          "base": "STELLAR 4GL",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "GO-RUS21",
+          "base": "GO-RUS21",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.5,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.3,
+            "QE1": 7.3,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "HIGH OCTANE",
+          "base": "HIGH OCTANE",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 5.7,
+            "IN1": 6.0,
+            "IN2": 6.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "APPLE 4SGL (PPG-PR 663)",
+          "base": "APPLE 4SGL",
+          "code": "PPG-PR 663",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "PS4",
+          "base": "PS4",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 8.0,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 4.7,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "PPG-PR 667",
+          "base": "PPG-PR 667",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 2.7,
+            "NE1": 7.0,
+            "ON1": 8.3,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "HOMERUN LS",
+          "base": "HOMERUN LS",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 7.3,
+            "IN2": 7.0,
+            "MN1": 4.7,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PPG-PR 662",
+          "base": "PPG-PR 662",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "ALPHA CENTAURI",
+          "base": "ALPHA CENTAURI",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 5.7,
+            "MN1": 4.0,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "DLF-PR-3737",
+          "base": "DLF-PR-3737",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "IN2": 6.7,
+            "MN1": 3.7,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 8.3,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "EXCEED (PPG-PR 668)",
+          "base": "EXCEED",
+          "code": "PPG-PR 668",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 7.0,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 8.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "PST-2ADS",
+          "base": "PST-2ADS",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 5.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.7,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "RELIC (PPG-PR 611)",
+          "base": "RELIC",
+          "code": "PPG-PR 611",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "LTP-NR",
+          "base": "LTP-NR",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "IN2": 6.7,
+            "MN1": 5.7,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PST-2E6",
+          "base": "PST-2E6",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "STINGER (PST-2EGY)",
+          "base": "STINGER",
+          "code": "PST-2EGY",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "IN2": 6.3,
+            "MN1": 4.3,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "VORTEX SRT (PPG-PR 665)",
+          "base": "VORTEX SRT",
+          "code": "PPG-PR 665",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "IN2": 7.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 7.7,
+            "OR1": 8.0,
+            "QE1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLF-PR-3728",
+          "base": "DLF-PR-3728",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "IN2": 5.7,
+            "MN1": 6.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 8.0,
+            "QE1": 6.3,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "KARMA",
+          "base": "KARMA",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 7.0,
+            "ON1": 7.3,
+            "OR1": 7.3,
+            "QE1": 6.3,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "QUASAR",
+          "base": "QUASAR",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 4.3,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 7.3,
+            "QE1": 6.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLF-PR-3727",
+          "base": "DLF-PR-3727",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 6.3,
+            "OR1": 7.3,
+            "QE1": 7.3,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "PVF-SGS5",
+          "base": "PVF-SGS5",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "IN2": 6.3,
+            "MN1": 6.0,
+            "NE1": 7.0,
+            "ON1": 7.0,
+            "OR1": 7.0,
+            "QE1": 6.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLF-LGT-3066",
+          "base": "DLF-LGT-3066",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 6.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 7.3,
+            "OR1": 6.7,
+            "QE1": 6.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "ASPIRATION (DLF-PR-3736)",
+          "base": "ASPIRATION",
+          "code": "DLF-PR-3736",
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 5.7,
+            "IN2": 5.7,
+            "MN1": 3.7,
+            "NE1": 6.3,
+            "ON1": 8.0,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "EMINENCE (RC20-02O)",
+          "base": "EMINENCE",
+          "code": "RC20-02O",
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 5.3,
+            "IA1": 8.3,
+            "IN1": 6.3,
+            "IN2": 6.7,
+            "MN1": 3.3,
+            "NE1": 6.3,
+            "ON1": 7.0,
+            "OR1": 8.0,
+            "QE1": 6.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "GO-RUS20",
+          "base": "GO-RUS20",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 7.0,
+            "ON1": 6.7,
+            "OR1": 6.7,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "DLF-PR-3726",
+          "base": "DLF-PR-3726",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "IN2": 5.3,
+            "MN1": 4.0,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 7.0,
+            "QE1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "20PR10",
+          "base": "20PR10",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 5.0,
+            "IN2": 6.7,
+            "MN1": 4.3,
+            "NE1": 6.3,
+            "ON1": 7.3,
+            "OR1": 7.3,
+            "QE1": 6.3,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "BRIGHTSTAR SLT",
+          "base": "BRIGHTSTAR SLT",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.3,
+            "IN1": 5.3,
+            "IN2": 6.0,
+            "MN1": 3.3,
+            "NE1": 6.7,
+            "ON1": 6.7,
+            "OR1": 7.0,
+            "QE1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "BAR LP 22256",
+          "base": "BAR LP 22256",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "IN2": 5.3,
+            "MN1": 2.7,
+            "NE1": 6.7,
+            "ON1": 7.0,
+            "OR1": 6.7,
+            "QE1": 7.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "BAR LP 22174",
+          "base": "BAR LP 22174",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 4.7,
+            "IN2": 6.0,
+            "MN1": 4.0,
+            "NE1": 6.3,
+            "ON1": 6.7,
+            "OR1": 6.3,
+            "QE1": 6.0,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "BAR LP 22191",
+          "base": "BAR LP 22191",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "IN2": 5.7,
+            "MN1": 2.7,
+            "NE1": 6.3,
+            "ON1": 7.0,
+            "OR1": 6.7,
+            "QE1": 6.3,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "BAR LP 22263",
+          "base": "BAR LP 22263",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 5.3,
+            "IA1": 7.0,
+            "IN1": 4.3,
+            "IN2": 5.3,
+            "MN1": 2.0,
+            "NE1": 6.3,
+            "ON1": 7.7,
+            "OR1": 6.7,
+            "QE1": 7.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "BAR LP 22262",
+          "base": "BAR LP 22262",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 4.7,
+            "IN2": 5.7,
+            "MN1": 2.3,
+            "NE1": 6.3,
+            "ON1": 7.3,
+            "OR1": 6.3,
+            "QE1": 6.3,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "LINN",
+          "base": "LINN",
+          "code": null,
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 5.0,
+            "IA1": 7.3,
+            "IN1": 3.3,
+            "IN2": 4.3,
+            "MN1": 1.7,
+            "NE1": 6.3,
+            "ON1": 5.0,
+            "OR1": 4.3,
+            "QE1": 6.3,
+            "UT1": 5.7
+          }
+        }
+      ],
+      "expected": 11,
+      "pages": [
+        31,
+        32
+      ]
+    },
+    "brownPatch": {
+      "sites": [
+        "IN2",
+        "VA2"
+      ],
+      "rows": [
+        {
+          "name": "HOMERUN G-LS (PPG-PR 644)",
+          "base": "HOMERUN G-LS",
+          "code": "PPG-PR 644",
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 8.3
+          }
+        },
+        {
+          "name": "PPG-PR 642",
+          "base": "PPG-PR 642",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "IN2": 7.7,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "PPG-PR 610",
+          "base": "PPG-PR 610",
+          "code": null,
+          "entry": null,
+          "mean": 7.5,
+          "bySite": {
+            "IN2": 7.3,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "DLF-PR-3726",
+          "base": "DLF-PR-3726",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "GREENBACK",
+          "base": "GREENBACK",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "WICKED COOL (DLF-PR-3738)",
+          "base": "WICKED COOL",
+          "code": "DLF-PR-3738",
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "PPG-PR 646",
+          "base": "PPG-PR 646",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PST-2ADS",
+          "base": "PST-2ADS",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "STELLAR 4GL",
+          "base": "STELLAR 4GL",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 8.0
+          }
+        },
+        {
+          "name": "TRIDENT (PPG-PR 643)",
+          "base": "TRIDENT",
+          "code": "PPG-PR 643",
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PISTON",
+          "base": "PISTON",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PPG-PR 620",
+          "base": "PPG-PR 620",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PISCES (PPG-PR 664)",
+          "base": "PISCES",
+          "code": "PPG-PR 664",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "VORTEX SRT (PPG-PR 665)",
+          "base": "VORTEX SRT",
+          "code": "PPG-PR 665",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 8.3
+          }
+        },
+        {
+          "name": "APPLE 4SGL (PPG-PR 663)",
+          "base": "APPLE 4SGL",
+          "code": "PPG-PR 663",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "FASTBALL 4GL (PPG-PR 658)",
+          "base": "FASTBALL 4GL",
+          "code": "PPG-PR 658",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 7.7,
+            "VA2": 6.0
+          }
+        },
+        {
+          "name": "LTP-NR",
+          "base": "LTP-NR",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PVF-RPP2",
+          "base": "PVF-RPP2",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PLANETARY (SGP4)",
+          "base": "PLANETARY",
+          "code": "SGP4",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 8.0
+          }
+        },
+        {
+          "name": "SUNDOWN (BY-PS2)",
+          "base": "SUNDOWN",
+          "code": "BY-PS2",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "DLF-PR-3735",
+          "base": "DLF-PR-3735",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "GO-RUS22",
+          "base": "GO-RUS22",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "GRAND SLAM G-LS (PPG-PR 637)",
+          "base": "GRAND SLAM G-LS",
+          "code": "PPG-PR 637",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PPG-PR 662",
+          "base": "PPG-PR 662",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "DLF-PR-3727",
+          "base": "DLF-PR-3727",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "SLIDER SG (PPG-PR 602)",
+          "base": "SLIDER SG",
+          "code": "PPG-PR 602",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "ALPHA CENTAURI",
+          "base": "ALPHA CENTAURI",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "BSG-PR22",
+          "base": "BSG-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "CJP1R",
+          "base": "CJP1R",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "DLF-LGT-3066",
+          "base": "DLF-LGT-3066",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 7.0,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "GO-RUS21",
+          "base": "GO-RUS21",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PERFORMANCE (NAI-PR5)",
+          "base": "PERFORMANCE",
+          "code": "NAI-PR5",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PPG-PR 639",
+          "base": "PPG-PR 639",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PPG-PR 661",
+          "base": "PPG-PR 661",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PPG-PR 671",
+          "base": "PPG-PR 671",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 8.0
+          }
+        },
+        {
+          "name": "PST-2MES1",
+          "base": "PST-2MES1",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "RELIC (PPG-PR 611)",
+          "base": "RELIC",
+          "code": "PPG-PR 611",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "ULTRA SPORT (PST-2HAF20)",
+          "base": "ULTRA SPORT",
+          "code": "PST-2HAF20",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3730",
+          "base": "DLF-PR-3730",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "FLIGHTLINE (PST-214)",
+          "base": "FLIGHTLINE",
+          "code": "PST-214",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "IGNITION (PPG-PR 647)",
+          "base": "IGNITION",
+          "code": "PPG-PR 647",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PPG-PR 666",
+          "base": "PPG-PR 666",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.7
+          }
+        },
+        {
+          "name": "PPG-PR 667",
+          "base": "PPG-PR 667",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PATRIARCH (PPG-PR 670)",
+          "base": "PATRIARCH",
+          "code": "PPG-PR 670",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "PS4",
+          "base": "PS4",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PVF-SGS5",
+          "base": "PVF-SGS5",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "QUASAR",
+          "base": "QUASAR",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "SILETZ",
+          "base": "SILETZ",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.7,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "STINGER (PST-2EGY)",
+          "base": "STINGER",
+          "code": "PST-2EGY",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "APS",
+          "base": "APS",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "DARK MATTER",
+          "base": "DARK MATTER",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "DLF-PR-3729",
+          "base": "DLF-PR-3729",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "EMINENCE (RC20-02O)",
+          "base": "EMINENCE",
+          "code": "RC20-02O",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "GRAY EAGLE SLT (PST-2MEG)",
+          "base": "GRAY EAGLE SLT",
+          "code": "PST-2MEG",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "HOMERUN LS",
+          "base": "HOMERUN LS",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "LIGHTSPEED (PST-2DRG)",
+          "base": "LIGHTSPEED",
+          "code": "PST-2DRG",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "BAR LP 22263",
+          "base": "BAR LP 22263",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.3
+          }
+        },
+        {
+          "name": "BAR LP 22262",
+          "base": "BAR LP 22262",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "EXCEED (PPG-PR 668)",
+          "base": "EXCEED",
+          "code": "PPG-PR 668",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PST-2HFM",
+          "base": "PST-2HFM",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3737",
+          "base": "DLF-PR-3737",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "GO-RUS20",
+          "base": "GO-RUS20",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "HIGH OCTANE",
+          "base": "HIGH OCTANE",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.0
+          }
+        },
+        {
+          "name": "KARMA",
+          "base": "KARMA",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "PREEMINENT (SE-DK)",
+          "base": "PREEMINENT",
+          "code": "SE-DK",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 5.7,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "PPG-PR 606",
+          "base": "PPG-PR 606",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 6.0
+          }
+        },
+        {
+          "name": "BAR LP 22256",
+          "base": "BAR LP 22256",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "PROMINENT II (TSC-CRS)",
+          "base": "PROMINENT II",
+          "code": "TSC-CRS",
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "PST-2SPF",
+          "base": "PST-2SPF",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 6.3,
+            "VA2": 5.3
+          }
+        },
+        {
+          "name": "RPP3",
+          "base": "RPP3",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "PST-2BGL",
+          "base": "PST-2BGL",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "SEPR-2013",
+          "base": "SEPR-2013",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "BAR LP 22174",
+          "base": "BAR LP 22174",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 4.0,
+            "VA2": 7.0
+          }
+        },
+        {
+          "name": "DLF-PR-3728",
+          "base": "DLF-PR-3728",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 5.7
+          }
+        },
+        {
+          "name": "LTP-RPP4",
+          "base": "LTP-RPP4",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.3,
+            "VA2": 5.7
+          }
+        },
+        {
+          "name": "PST-2E6",
+          "base": "PST-2E6",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 6.0,
+            "VA2": 5.0
+          }
+        },
+        {
+          "name": "PST-2GDS",
+          "base": "PST-2GDS",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 6.0
+          }
+        },
+        {
+          "name": "ASPIRATION (DLF-PR-3736)",
+          "base": "ASPIRATION",
+          "code": "DLF-PR-3736",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "IN2": 4.0,
+            "VA2": 6.7
+          }
+        },
+        {
+          "name": "20PR10",
+          "base": "20PR10",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "IN2": 4.3,
+            "VA2": 6.3
+          }
+        },
+        {
+          "name": "BAR LP 22191",
+          "base": "BAR LP 22191",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "IN2": 4.3,
+            "VA2": 5.7
+          }
+        },
+        {
+          "name": "MRSL-PR22",
+          "base": "MRSL-PR22",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "IN2": 4.7,
+            "VA2": 5.3
+          }
+        },
+        {
+          "name": "LINN",
+          "base": "LINN",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 4.3
+          }
+        },
+        {
+          "name": "BRIGHTSTAR SLT",
+          "base": "BRIGHTSTAR SLT",
+          "code": null,
+          "entry": null,
+          "mean": 4.5,
+          "bySite": {
+            "IN2": 5.0,
+            "VA2": 4.0
+          }
+        }
+      ],
+      "expected": 3,
+      "pages": [
+        51,
+        52
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "NJ2",
+        "OR1"
+      ],
+      "rows": [
+        {
+          "name": "PLANETARY (SGP4)",
+          "base": "PLANETARY",
+          "code": "SGP4",
+          "entry": 46,
+          "mean": 7.5,
+          "bySite": {
+            "NJ2": 7.9,
+            "OR1": 7.0
+          }
+        },
+        {
+          "name": "SILETZ",
+          "base": "SILETZ",
+          "code": null,
+          "entry": 9,
+          "mean": 7.3,
+          "bySite": {
+            "NJ2": 7.6,
+            "OR1": 7.0
+          }
+        },
+        {
+          "name": "GRAND SLAM G-LS (PPG-PR 637)",
+          "base": "GRAND SLAM G-LS",
+          "code": "PPG-PR 637",
+          "entry": 28,
+          "mean": 7.2,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.9
+          }
+        },
+        {
+          "name": "PPG-PR 667",
+          "base": "PPG-PR 667",
+          "code": null,
+          "entry": 42,
+          "mean": 7.1,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "QUASAR",
+          "base": "QUASAR",
+          "code": null,
+          "entry": 80,
+          "mean": 7.1,
+          "bySite": {
+            "NJ2": 7.4,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "PISCES (PPG-PR 664)",
+          "base": "PISCES",
+          "code": "PPG-PR 664",
+          "entry": 39,
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "WICKED COOL (DLF-PR-3738)",
+          "base": "WICKED COOL",
+          "code": "DLF-PR-3738",
+          "entry": 82,
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.3,
+            "OR1": 6.7
+          }
+        },
+        {
+          "name": "DLF-PR-3728",
+          "base": "DLF-PR-3728",
+          "code": null,
+          "entry": 72,
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "PPG-PR 646",
+          "base": "PPG-PR 646",
+          "code": null,
+          "entry": 33,
+          "mean": 7.0,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "PPG-PR 666",
+          "base": "PPG-PR 666",
+          "code": null,
+          "entry": 41,
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.7
+          }
+        },
+        {
+          "name": "LTP-RPP4",
+          "base": "LTP-RPP4",
+          "code": null,
+          "entry": 2,
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.2,
+            "OR1": 6.7
+          }
+        },
+        {
+          "name": "FASTBALL 4GL (PPG-PR 658)",
+          "base": "FASTBALL 4GL",
+          "code": "PPG-PR 658",
+          "entry": 35,
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.7
+          }
+        },
+        {
+          "name": "APS",
+          "base": "APS",
+          "code": null,
+          "entry": 66,
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.8
+          }
+        },
+        {
+          "name": "PPG-PR 642",
+          "base": "PPG-PR 642",
+          "code": null,
+          "entry": 30,
+          "mean": 6.9,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "HOMERUN G-LS (PPG-PR 644)",
+          "base": "HOMERUN G-LS",
+          "code": "PPG-PR 644",
+          "entry": 32,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.7
+          }
+        },
+        {
+          "name": "PPG-PR 662",
+          "base": "PPG-PR 662",
+          "code": null,
+          "entry": 37,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "PPG-PR 639",
+          "base": "PPG-PR 639",
+          "code": null,
+          "entry": 29,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "ALPHA CENTAURI",
+          "base": "ALPHA CENTAURI",
+          "code": null,
+          "entry": 79,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.1,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "PVF-SGS5",
+          "base": "PVF-SGS5",
+          "code": null,
+          "entry": 50,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "DLF-PR-3730",
+          "base": "DLF-PR-3730",
+          "code": null,
+          "entry": 74,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 7.0,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "PPG-PR 661",
+          "base": "PPG-PR 661",
+          "code": null,
+          "entry": 36,
+          "mean": 6.8,
+          "bySite": {
+            "NJ2": 6.9,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "EXCEED (PPG-PR 668)",
+          "base": "EXCEED",
+          "code": "PPG-PR 668",
+          "entry": 43,
+          "mean": 6.7,
+          "bySite": {
+            "NJ2": 6.8,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "PATRIARCH (PPG-PR 670)",
+          "base": "PATRIARCH",
+          "code": "PPG-PR 670",
+          "entry": 44,
+          "mean": 6.6,
+          "bySite": {
+            "NJ2": 6.6,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "VORTEX SRT (PPG-PR 665)",
+          "base": "VORTEX SRT",
+          "code": "PPG-PR 665",
+          "entry": 40,
+          "mean": 6.6,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.6
+          }
+        },
+        {
+          "name": "DLF-PR-3729",
+          "base": "DLF-PR-3729",
+          "code": null,
+          "entry": 73,
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "PPG-PR 671",
+          "base": "PPG-PR 671",
+          "code": null,
+          "entry": 45,
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.7,
+            "OR1": 6.3
+          }
+        },
+        {
+          "name": "SLIDER SG (PPG-PR 602)",
+          "base": "SLIDER SG",
+          "code": "PPG-PR 602",
+          "entry": 23,
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "APPLE 4SGL (PPG-PR 663)",
+          "base": "APPLE 4SGL",
+          "code": "PPG-PR 663",
+          "entry": 38,
+          "mean": 6.5,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "PPG-PR 620",
+          "base": "PPG-PR 620",
+          "code": null,
+          "entry": 27,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "IGNITION (PPG-PR 647)",
+          "base": "IGNITION",
+          "code": "PPG-PR 647",
+          "entry": 34,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.4
+          }
+        },
+        {
+          "name": "RELIC (PPG-PR 611)",
+          "base": "RELIC",
+          "code": "PPG-PR 611",
+          "entry": 26,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.5,
+            "OR1": 6.4
+          }
+        },
+        {
+          "name": "CJP1R",
+          "base": "CJP1R",
+          "code": null,
+          "entry": 63,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "PST-2ADS",
+          "base": "PST-2ADS",
+          "code": null,
+          "entry": 13,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.3,
+            "OR1": 6.5
+          }
+        },
+        {
+          "name": "LTP-NR",
+          "base": "LTP-NR",
+          "code": null,
+          "entry": 5,
+          "mean": 6.4,
+          "bySite": {
+            "NJ2": 6.4,
+            "OR1": 6.4
+          }
+        },
+        {
+          "name": "PPG-PR 606",
+          "base": "PPG-PR 606",
+          "code": null,
+          "entry": 24,
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.4
+          }
+        },
+        {
+          "name": "GRAY EAGLE SLT (PST-2MEG)",
+          "base": "GRAY EAGLE SLT",
+          "code": "PST-2MEG",
+          "entry": 60,
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.3,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "DLF-PR-3726",
+          "base": "DLF-PR-3726",
+          "code": null,
+          "entry": 70,
+          "mean": 6.3,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.4
+          }
+        },
+        {
+          "name": "TRIDENT (PPG-PR 643)",
+          "base": "TRIDENT",
+          "code": "PPG-PR 643",
+          "entry": 31,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.2,
+            "OR1": 6.3
+          }
+        },
+        {
+          "name": "RPP3",
+          "base": "RPP3",
+          "code": null,
+          "entry": 65,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.3
+          }
+        },
+        {
+          "name": "HIGH OCTANE",
+          "base": "HIGH OCTANE",
+          "code": null,
+          "entry": 47,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PVF-RPP2",
+          "base": "PVF-RPP2",
+          "code": null,
+          "entry": 6,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "SUNDOWN (BY-PS2)",
+          "base": "SUNDOWN",
+          "code": "BY-PS2",
+          "entry": 4,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PPG-PR 610",
+          "base": "PPG-PR 610",
+          "code": null,
+          "entry": 25,
+          "mean": 6.2,
+          "bySite": {
+            "NJ2": 6.1,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PERFORMANCE (NAI-PR5)",
+          "base": "PERFORMANCE",
+          "code": "NAI-PR5",
+          "entry": 64,
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.3
+          }
+        },
+        {
+          "name": "ASPIRATION (DLF-PR-3736)",
+          "base": "ASPIRATION",
+          "code": "DLF-PR-3736",
+          "entry": 76,
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.3
+          }
+        },
+        {
+          "name": "PS4",
+          "base": "PS4",
+          "code": null,
+          "entry": 52,
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PISTON",
+          "base": "PISTON",
+          "code": null,
+          "entry": 48,
+          "mean": 6.1,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "STINGER (PST-2EGY)",
+          "base": "STINGER",
+          "code": "PST-2EGY",
+          "entry": 16,
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 6.0,
+            "OR1": 6.1
+          }
+        },
+        {
+          "name": "STELLAR 4GL",
+          "base": "STELLAR 4GL",
+          "code": null,
+          "entry": 7,
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "DLF-PR-3727",
+          "base": "DLF-PR-3727",
+          "code": null,
+          "entry": 71,
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "GO-RUS21",
+          "base": "GO-RUS21",
+          "code": null,
+          "entry": 11,
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.8,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PST-2HFM",
+          "base": "PST-2HFM",
+          "code": null,
+          "entry": 20,
+          "mean": 6.0,
+          "bySite": {
+            "NJ2": 5.9,
+            "OR1": 6.1
+          }
+        },
+        {
+          "name": "DLF-PR-3735",
+          "base": "DLF-PR-3735",
+          "code": null,
+          "entry": 75,
+          "mean": 5.9,
+          "bySite": {
+            "NJ2": 5.7,
+            "OR1": 6.2
+          }
+        },
+        {
+          "name": "PST-2GDS",
+          "base": "PST-2GDS",
+          "code": null,
+          "entry": 17,
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.7,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "20PR10",
+          "base": "20PR10",
+          "code": null,
+          "entry": 51,
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.1
+          }
+        },
+        {
+          "name": "DLF-PR-3737",
+          "base": "DLF-PR-3737",
+          "code": null,
+          "entry": 77,
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.6,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "PST-2BGL",
+          "base": "PST-2BGL",
+          "code": null,
+          "entry": 14,
+          "mean": 5.8,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "ULTRA SPORT (PST-2HAF20)",
+          "base": "ULTRA SPORT",
+          "code": "PST-2HAF20",
+          "entry": 19,
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "GO-RUS22",
+          "base": "GO-RUS22",
+          "code": null,
+          "entry": 12,
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "HOMERUN LS",
+          "base": "HOMERUN LS",
+          "code": null,
+          "entry": 8,
+          "mean": 5.7,
+          "bySite": {
+            "NJ2": 5.5,
+            "OR1": 5.8
+          }
+        },
+        {
+          "name": "PST-2MES1",
+          "base": "PST-2MES1",
+          "code": null,
+          "entry": 21,
+          "mean": 5.6,
+          "bySite": {
+            "NJ2": 5.3,
+            "OR1": 6.0
+          }
+        },
+        {
+          "name": "PST-2E6",
+          "base": "PST-2E6",
+          "code": null,
+          "entry": 61,
+          "mean": 5.6,
+          "bySite": {
+            "NJ2": 5.3,
+            "OR1": 5.8
+          }
+        },
+        {
+          "name": "GO-RUS20",
+          "base": "GO-RUS20",
+          "code": null,
+          "entry": 10,
+          "mean": 5.4,
+          "bySite": {
+            "NJ2": 5.2,
+            "OR1": 5.7
+          }
+        },
+        {
+          "name": "EMINENCE (RC20-02O)",
+          "base": "EMINENCE",
+          "code": "RC20-02O",
+          "entry": 1,
+          "mean": 5.4,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.8
+          }
+        },
+        {
+          "name": "KARMA",
+          "base": "KARMA",
+          "code": null,
+          "entry": 78,
+          "mean": 5.3,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.6
+          }
+        },
+        {
+          "name": "FLIGHTLINE (PST-214)",
+          "base": "FLIGHTLINE",
+          "code": "PST-214",
+          "entry": 18,
+          "mean": 5.3,
+          "bySite": {
+            "NJ2": 5.0,
+            "OR1": 5.6
+          }
+        },
+        {
+          "name": "DLF-LGT-3066",
+          "base": "DLF-LGT-3066",
+          "code": null,
+          "entry": 83,
+          "mean": 5.2,
+          "bySite": {
+            "NJ2": 4.7,
+            "OR1": 5.7
+          }
+        },
+        {
+          "name": "BAR LP 22174",
+          "base": "BAR LP 22174",
+          "code": null,
+          "entry": 57,
+          "mean": 5.2,
+          "bySite": {
+            "NJ2": 4.7,
+            "OR1": 5.6
+          }
+        },
+        {
+          "name": "BAR LP 22191",
+          "base": "BAR LP 22191",
+          "code": null,
+          "entry": 53,
+          "mean": 5.0,
+          "bySite": {
+            "NJ2": 4.4,
+            "OR1": 5.6
+          }
+        },
+        {
+          "name": "LIGHTSPEED (PST-2DRG)",
+          "base": "LIGHTSPEED",
+          "code": "PST-2DRG",
+          "entry": 15,
+          "mean": 4.9,
+          "bySite": {
+            "NJ2": 4.4,
+            "OR1": 5.4
+          }
+        },
+        {
+          "name": "DARK MATTER",
+          "base": "DARK MATTER",
+          "code": null,
+          "entry": 69,
+          "mean": 4.7,
+          "bySite": {
+            "NJ2": 4.2,
+            "OR1": 5.3
+          }
+        },
+        {
+          "name": "BAR LP 22263",
+          "base": "BAR LP 22263",
+          "code": null,
+          "entry": 56,
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.2
+          }
+        },
+        {
+          "name": "BAR LP 22262",
+          "base": "BAR LP 22262",
+          "code": null,
+          "entry": 55,
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.2
+          }
+        },
+        {
+          "name": "MRSL-PR22",
+          "base": "MRSL-PR22",
+          "code": null,
+          "entry": 49,
+          "mean": 4.4,
+          "bySite": {
+            "NJ2": 3.7,
+            "OR1": 5.1
+          }
+        },
+        {
+          "name": "PREEMINENT (SE-DK)",
+          "base": "PREEMINENT",
+          "code": "SE-DK",
+          "entry": 58,
+          "mean": 4.3,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 5.0
+          }
+        },
+        {
+          "name": "PROMINENT II (TSC-CRS)",
+          "base": "PROMINENT II",
+          "code": "TSC-CRS",
+          "entry": 59,
+          "mean": 4.3,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 4.9
+          }
+        },
+        {
+          "name": "GREENBACK",
+          "base": "GREENBACK",
+          "code": null,
+          "entry": 3,
+          "mean": 4.2,
+          "bySite": {
+            "NJ2": 3.6,
+            "OR1": 4.9
+          }
+        },
+        {
+          "name": "BRIGHTSTAR SLT",
+          "base": "BRIGHTSTAR SLT",
+          "code": null,
+          "entry": 62,
+          "mean": 4.2,
+          "bySite": {
+            "NJ2": 3.4,
+            "OR1": 5.0
+          }
+        },
+        {
+          "name": "BAR LP 22256",
+          "base": "BAR LP 22256",
+          "code": null,
+          "entry": 54,
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.1,
+            "OR1": 5.0
+          }
+        },
+        {
+          "name": "BSG-PR22",
+          "base": "BSG-PR22",
+          "code": null,
+          "entry": 68,
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.2,
+            "OR1": 4.8
+          }
+        },
+        {
+          "name": "SEPR-2013",
+          "base": "SEPR-2013",
+          "code": null,
+          "entry": 67,
+          "mean": 4.0,
+          "bySite": {
+            "NJ2": 3.2,
+            "OR1": 4.8
+          }
+        },
+        {
+          "name": "PST-2SPF",
+          "base": "PST-2SPF",
+          "code": null,
+          "entry": 22,
+          "mean": 3.8,
+          "bySite": {
+            "NJ2": 3.0,
+            "OR1": 4.6
+          }
+        },
+        {
+          "name": "LINN",
+          "base": "LINN",
+          "code": null,
+          "entry": 81,
+          "mean": 2.6,
+          "bySite": {
+            "NJ2": 1.5,
+            "OR1": 3.8
+          }
+        }
+      ],
+      "expected": 3,
+      "pages": [
+        9,
+        10
+      ]
+    }
+  }
+}

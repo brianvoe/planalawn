@@ -1,16 +1,28 @@
 <script lang="ts">
 import { soilDepthLabel } from '../data/climate'
 import { formatTemp, formatUpdated } from '../services/weather'
-import { seedingWindowStatus } from '../services/timing'
 import type { PropType } from 'vue'
-import type { Conditions, UserLocation, WindowStatus } from '../types'
+import type { Conditions, UserLocation } from '../types'
 
+/**
+ * The live reading, and only the reading.
+ *
+ * It deliberately renders no verdict. What a temperature permits is a per-task
+ * judgement — the seeding band means nothing to a mulch job — so the calls live
+ * on the task cards and task pages that own them, and this stays the input they
+ * are all reading from.
+ */
 export default {
   name: 'Conditions',
   props: {
     conditions: { type: Object as PropType<Conditions | null>, default: null },
     error: { type: String, default: null },
     loading: { type: Boolean, default: false },
+    /**
+     * A single line instead of a panel, for pages where the reading is an input
+     * to what is on screen rather than the subject of it.
+     */
+    compact: { type: Boolean, default: false },
   },
   emits: ['refresh'],
   data() {
@@ -26,11 +38,16 @@ export default {
     title(): string {
       return this.userLocation?.label || this.userLocation?.city || 'Local conditions'
     },
-    seedStatus(): WindowStatus {
-      return seedingWindowStatus(this.conditions?.soilTemp6F)
+    /** Freshness matters but does not earn a line of its own in the strip. */
+    compactTitle(): string {
+      if (!this.conditions?.fetchedAt) return `Soil measured at ${soilDepthLabel}.`
+      const cached = this.conditions.fromCache ? ' (cached)' : ''
+      return `Updated ${formatUpdated(this.conditions.fetchedAt)}${cached}.`
     },
-    statusClass(): string {
-      return `tone-${this.seedStatus.tone}`
+    problem(): string {
+      if (!this.hasLocation) return 'Set your city for live soil temperature'
+      if (this.error && !this.conditions) return this.error
+      return ''
     },
   },
   methods: { formatTemp, formatUpdated },
@@ -42,43 +59,82 @@ export default {
   padding: 1.25rem 1.35rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-border);
   border-radius: calc(var(--border-radius) * 2);
   box-shadow: var(--shadow-md);
 
-  &.tone-good {
-    border-top-color: var(--color-success);
+  &.conditions--compact {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+    box-shadow: var(--shadow-sm);
+
+    .btn {
+      flex-shrink: 0;
+      margin-left: auto;
+    }
   }
 
-  &.tone-caution {
-    border-top-color: var(--color-warning);
+  /*
+   * What marks the box as the live reading. A rounded shape sits better inside
+   * a rounded card than an accent border does, which only ever meets the
+   * corner radius at an awkward angle.
+   */
+  .conditions__badge {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--color-primary-strong);
+    background: var(--color-primary-soft);
+    border-radius: 50%;
+
+    svg {
+      width: 0.85rem;
+      height: 0.85rem;
+    }
   }
 
-  &.tone-cold {
-    border-top-color: var(--color-info);
+  .conditions__reading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.1rem 0.7rem;
+    min-width: 0;
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+
+    strong {
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+
+    b {
+      font-variant-numeric: tabular-nums;
+      color: var(--color-text);
+    }
   }
 
-  &.tone-hot {
-    border-top-color: var(--color-danger);
+  .conditions__problem {
+    color: var(--color-warning);
   }
 
   .conditions__top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
   }
 
   .conditions__title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
     margin: 0;
     font-size: 1.2rem;
-  }
-
-  .conditions__sub {
-    margin: 0.25rem 0 0;
-    font-size: 0.88rem;
-    color: var(--color-text-muted);
   }
 
   .conditions__error {
@@ -92,7 +148,7 @@ export default {
 
   .conditions__grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
 
     @media (max-width: 559px) {
@@ -100,13 +156,8 @@ export default {
     }
   }
 
-  .conditions__detail {
-    margin: 0.85rem 0 0;
-    font-size: 0.9rem;
-  }
-
   .conditions__updated {
-    margin: 0.45rem 0 0;
+    margin: 0.7rem 0 0;
     font-size: 0.78rem;
     color: var(--color-text-muted);
   }
@@ -129,26 +180,41 @@ export default {
       font-variant-numeric: tabular-nums;
       line-height: 1.2;
     }
-
-    .stat__status {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 1rem;
-    }
   }
 }
 </style>
 
 <template>
-  <section class="conditions" :class="statusClass">
+  <section v-if="compact" class="conditions conditions--compact" :title="compactTitle">
+    <span class="conditions__badge">
+      <font-awesome-icon icon="fa-solid fa-temperature-half" />
+    </span>
+    <p class="conditions__reading">
+      <strong>{{ title }}</strong>
+      <span v-if="problem" class="conditions__problem">{{ problem }}</span>
+      <template v-else>
+        <span>Soil <b>{{ formatTemp(conditions?.soilTemp6F) }}</b></span>
+        <span>Air <b>{{ formatTemp(conditions?.airTempF) }}</b></span>
+      </template>
+    </p>
+    <button
+      type="button"
+      class="btn btn--sm"
+      :disabled="loading || !hasLocation"
+      @click="$emit('refresh')"
+    >
+      {{ loading ? 'Updating…' : 'Refresh' }}
+    </button>
+  </section>
+
+  <section v-else class="conditions">
     <div class="conditions__top">
-      <div>
-        <h2 class="conditions__title">{{ title }}</h2>
-        <p class="conditions__sub">
-          Soil at {{ soilDepthLabel }} drives seeding more than the calendar date.
-        </p>
-      </div>
+      <h2 class="conditions__title">
+        <span class="conditions__badge">
+          <font-awesome-icon icon="fa-solid fa-temperature-half" />
+        </span>
+        {{ title }}
+      </h2>
       <button
         type="button"
         class="btn btn--sm"
@@ -168,22 +234,14 @@ export default {
 
     <div class="conditions__grid">
       <div class="stat">
-        <span>Soil 6 cm</span>
+        <span>Soil {{ soilDepthLabel }}</span>
         <strong>{{ formatTemp(conditions?.soilTemp6F) }}</strong>
       </div>
       <div class="stat">
         <span>Air</span>
         <strong>{{ formatTemp(conditions?.airTempF) }}</strong>
       </div>
-      <div class="stat">
-        <span>Seeding window</span>
-        <strong class="stat__status">
-          <span class="status-dot" :class="`status-dot--${seedStatus.tone}`" aria-hidden="true" />
-          {{ seedStatus.label }}
-        </strong>
-      </div>
     </div>
-    <p class="conditions__detail">{{ seedStatus.detail }}</p>
     <p v-if="conditions?.fetchedAt" class="conditions__updated">
       Updated {{ formatUpdated(conditions.fetchedAt) }}
       <span v-if="conditions.fromCache"> · cached</span>

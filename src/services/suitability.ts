@@ -4,6 +4,7 @@ import type {
   Blend,
   BlendComponentFit,
   BlendFit,
+  BaselineKey,
   Coverage,
   Cultivar,
   CultivarFit,
@@ -15,6 +16,29 @@ import type {
 } from '../types'
 
 const ntepSites = sites as Record<string, NtepSite>
+
+/**
+ * The four steps a fit score is reported in, best first.
+ *
+ * One ladder for the whole app. The word on a badge and the color behind it
+ * both read from here, so a boundary can never move for the wording and leave
+ * the shading a step behind — which matters now that the color carries the
+ * ranking on its own in the cultivar table. `tone` is the class the seed pages
+ * style; a score of null is not a step here, and is handled where it arises.
+ */
+export const FIT_TIERS = [
+  { min: 6.6, word: 'Excellent', tone: 'great' },
+  { min: 6.2, word: 'Good', tone: 'good' },
+  { min: 5.8, word: 'Moderate', tone: 'ok' },
+  { min: -Infinity, word: 'Challenging', tone: 'low' },
+] as const
+
+export type FitTier = (typeof FIT_TIERS)[number]
+
+/** The step a score lands on. The last step is open-ended, so this never fails. */
+export function fitTier(score: number): FitTier {
+  return FIT_TIERS.find((tier) => score >= tier.min) ?? FIT_TIERS[FIT_TIERS.length - 1]
+}
 
 function haversineKm(aLat: number, aLon: number, bLat: number, bLon: number): number {
   const toRad = (d: number) => (d * Math.PI) / 180
@@ -176,15 +200,9 @@ export function scoreCultivarForLocation(
   const weightSum = parts.reduce((s, p) => s + p.weight, 0)
   const score = parts.reduce((s, p) => s + p.value * (p.weight / weightSum), 0)
 
-  let label = 'Fair fit'
-  if (score >= 6.6) label = 'Excellent fit'
-  else if (score >= 6.2) label = 'Good fit'
-  else if (score >= 5.8) label = 'Moderate fit'
-  else label = 'Challenging fit'
-
   return {
     score: Number(score.toFixed(2)),
-    label,
+    label: `${fitTier(score).word} fit`,
     parts,
     coverage: describeCoverage(parts),
     nearestSite: readFromSite ? nearest : null,
@@ -260,7 +278,7 @@ function sharedNearestSite(scored: ScoredComponent[]): NearbySite | null {
 export function factorBaselines(
   cultivars: Cultivar[],
   userLocation: UserLocation | null | undefined,
-): Partial<Record<ScoreFactor, number>> {
+): Partial<Record<BaselineKey, number>> {
   const sums = {} as Record<ScoreFactor, { sum: number; count: number }>
   SCORE_FACTORS.forEach((key) => {
     sums[key] = { sum: 0, count: 0 }
@@ -271,11 +289,25 @@ export function factorBaselines(
       sums[p.key].count += 1
     })
   })
-  return SCORE_FACTORS.reduce<Partial<Record<ScoreFactor, number>>>((acc, key) => {
+  const baselines = SCORE_FACTORS.reduce<Partial<Record<BaselineKey, number>>>((acc, key) => {
     const { sum, count } = sums[key]
     if (count) acc[key] = Number((sum / count).toFixed(2))
     return acc
   }, {})
+
+  // Drought and brown patch get marks of their own because the cards meter them
+  // separately. Neither is a score factor: the score averages the pair into
+  // summerStress, and that combined mark would sit in the wrong place on either.
+  ;(['droughtQuality', 'brownPatch'] as const).forEach((metric) => {
+    const values = cultivars
+      .map((c) => c.metrics?.[metric]?.mean)
+      .filter((v): v is number => typeof v === 'number')
+    if (!values.length) return
+    const key = metric === 'droughtQuality' ? 'drought' : 'brownPatch'
+    baselines[key] = Number((values.reduce((a, b) => a + b, 0) / values.length).toFixed(2))
+  })
+
+  return baselines
 }
 
 export function scoreBlendForLocation(
@@ -333,12 +365,6 @@ export function scoreBlendForLocation(
     watchouts.push('Blend includes cultivars outside this NTEP extract')
   }
 
-  let label = 'Fair fit'
-  if (score >= 6.6) label = 'Excellent for your area'
-  else if (score >= 6.2) label = 'Good for your area'
-  else if (score >= 5.8) label = 'Moderate for your area'
-  else label = 'Challenging for your area'
-
   const thinnest = scored.reduce(
     (worst, c) => (c.fit.coverage.factors < worst.factors ? c.fit.coverage : worst),
     scored[0].fit.coverage,
@@ -346,7 +372,7 @@ export function scoreBlendForLocation(
 
   return {
     score: Number(score.toFixed(2)),
-    label,
+    label: `${fitTier(score).word} for your area`,
     components,
     coverage: thinnest,
     strengths,

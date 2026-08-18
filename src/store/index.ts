@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 import { loadPersistedState, localStoragePlugin, clearPersistedState } from './persist'
 import { curatedBlendList } from '../data/seedDb'
 import { resolvedGrassType } from '../data/grass'
+import { resolveVolumeUnits } from '../services/units'
 import type {
   BackupPayload,
   Blend,
@@ -45,6 +46,7 @@ function defaultState(): RootState {
       sprayCoverageSqFtPerTank: 1000,
       spreaderId: '',
       sprayUnits: 'us',
+      volumeUnits: 'us',
     },
     rateOverrides: {},
     userBlends: [],
@@ -91,6 +93,8 @@ export default createStore<RootState>({
     // An imported or older backup can arrive without this, so US is the fallback
     // rather than whatever string happens to be in storage.
     sprayUnits: (s): SprayUnits => (s.equipment.sprayUnits === 'metric' ? 'metric' : 'us'),
+    volumeUnits: (s, getters): SprayUnits =>
+      resolveVolumeUnits(s.equipment.volumeUnits, getters.sprayUnits),
     userLocation: (s): UserLocation | null =>
       s.location?.latitude != null && s.location?.longitude != null ? s.location : null,
     hasLocation: (_s, getters) => Boolean(getters.userLocation),

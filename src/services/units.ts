@@ -34,6 +34,17 @@ export function volumeUnit(units: SprayUnits): VolumeUnit {
   return units === 'metric' ? 'L' : 'gal'
 }
 
+/**
+ * The tank's unit for a profile that may predate dose and tank being separate.
+ *
+ * Before the split, one choice drove both, so a saved 'metric' meant litres as
+ * well as millilitres. Falling back to the dose unit keeps those profiles
+ * reading exactly as they did instead of silently resetting them to gallons.
+ */
+export function resolveVolumeUnits(saved: unknown, doseUnits: SprayUnits): SprayUnits {
+  return saved === 'metric' || saved === 'us' ? saved : doseUnits
+}
+
 /** A label figure in ounces, in whatever unit is on screen. */
 export function convertMeasure(oz: number, unit: MeasureUnit): number {
   if (unit === 'ml') return oz * ML_PER_FL_OZ

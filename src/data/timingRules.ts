@@ -19,6 +19,13 @@ export const seedingSoilBand = {
 }
 
 export const timingByTask: Record<string, TimingRule> = {
+  mowing: {
+    months: [4, 5, 6, 9, 10],
+    secondaryMonths: [3, 7, 8, 11],
+    soilMinF: null,
+    soilMaxF: null,
+    note: 'Growing season, every week or so. Raise the deck through summer heat.',
+  },
   'lawn-kill': {
     months: [8, 9],
     secondaryMonths: [3, 4],
@@ -139,4 +146,20 @@ export const monthLabels = [
   'Oct',
   'Nov',
   'Dec',
+] as const
+
+/** Spelled out, for the places a month is the headline rather than a tick mark. */
+export const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ] as const

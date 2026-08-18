@@ -13,7 +13,7 @@ import type { Blend, Cultivar, CultivarPack, NtepMeta, NtepSite, SpeciesInfo } f
  * with SPECIES_CATALOG in scripts/ntep/ingest_pdf.py.
  */
 const packModules = import.meta.glob<{ default?: CultivarPack } & CultivarPack>(
-  './ntep/cultivars_{tall_fescue,kentucky_bluegrass,perennial_ryegrass,fine_fescue,bermudagrass}.json',
+  './ntep/cultivars_{tall_fescue,kentucky_bluegrass,perennial_ryegrass,fine_fescue,creeping_bentgrass,bermudagrass,zoysiagrass,st_augustinegrass,buffalograss,seashore_paspalum,centipedegrass,bahiagrass}.json',
   { eager: true },
 )
 
@@ -29,6 +29,21 @@ export const DEFAULT_SPECIES = 'tall_fescue'
 
 /** Species that actually have ingested trial data, in catalog order. */
 export const loadedSpecies = speciesListData.filter((s) => packsBySpecies[s.id])
+
+const speciesLabels: Record<string, string> = Object.fromEntries(
+  speciesListData.map((s) => [s.id, s.label]),
+)
+
+/** Display name for a species id, falling back to the raw id for unknown ones. */
+export function speciesLabel(id: string): string {
+  return speciesLabels[id] || id
+}
+
+/** Catalog position, used to sort grass menus; anything unlisted falls to the end. */
+export function speciesRank(id: string): number {
+  const i = speciesListData.findIndex((s) => s.id === id)
+  return i < 0 ? speciesListData.length : i
+}
 
 export function cultivarsForSpecies(speciesId = DEFAULT_SPECIES): Cultivar[] {
   return packsBySpecies[speciesId]?.cultivars || []
@@ -95,7 +110,7 @@ export const speciesList = speciesListData
 export const ntepSites = sites as Record<string, NtepSite>
 
 export const NTEP_METRICS = [
-  { key: 'transitionQuality', label: 'Transition quality', short: 'Transition' },
+  { key: 'transitionQuality', label: 'Regional quality', short: 'Regional' },
   { key: 'droughtQuality', label: 'Drought quality', short: 'Drought' },
   { key: 'brownPatch', label: 'Brown patch', short: 'Brown patch' },
   { key: 'geneticColor', label: 'Genetic color', short: 'Color' },

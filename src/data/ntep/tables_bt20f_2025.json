@@ -1,0 +1,955 @@
+{
+  "meta": {
+    "species": "creeping_bentgrass",
+    "trial": "bt20f",
+    "year": 2025,
+    "sourcePdf": "bt20f_26-6.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "IN1",
+        "VA1",
+        "NJ1"
+      ],
+      "rows": [
+        {
+          "name": "OAKLEY (PPG-AP-MTV1)",
+          "base": "OAKLEY",
+          "code": "PPG-AP-MTV1",
+          "entry": 15,
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.1
+          }
+        },
+        {
+          "name": "007XL",
+          "base": "007XL",
+          "code": null,
+          "entry": 3,
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "PIPER (PPG-AP-MTV2)",
+          "base": "PIPER",
+          "code": "PPG-AP-MTV2",
+          "entry": 16,
+          "mean": 6.4,
+          "bySite": {
+            "IN1": 6.0,
+            "VA1": 6.8,
+            "NJ1": 7.0
+          }
+        },
+        {
+          "name": "SPECTRUM (LNS 19)",
+          "base": "SPECTRUM",
+          "code": "LNS 19",
+          "entry": 14,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.7,
+            "NJ1": 7.1
+          }
+        },
+        {
+          "name": "PRODIGY (PVF-PV-2)",
+          "base": "PRODIGY",
+          "code": "PVF-PV-2",
+          "entry": 13,
+          "mean": 6.3,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.7,
+            "NJ1": 6.9
+          }
+        },
+        {
+          "name": "PVF-PV-1",
+          "base": "PVF-PV-1",
+          "code": null,
+          "entry": 12,
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.6,
+            "NJ1": 6.5
+          }
+        },
+        {
+          "name": "MATCH PLAY",
+          "base": "MATCH PLAY",
+          "code": null,
+          "entry": 10,
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.6,
+            "NJ1": 6.0
+          }
+        },
+        {
+          "name": "CHINOOK (H10G-OP)",
+          "base": "CHINOOK",
+          "code": "H10G-OP",
+          "entry": 2,
+          "mean": 6.2,
+          "bySite": {
+            "IN1": 5.9,
+            "VA1": 6.5,
+            "NJ1": 6.0
+          }
+        },
+        {
+          "name": "PIRANHA",
+          "base": "PIRANHA",
+          "code": null,
+          "entry": 6,
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.4,
+            "NJ1": 5.4
+          }
+        },
+        {
+          "name": "TOURPRO",
+          "base": "TOURPRO",
+          "code": null,
+          "entry": 5,
+          "mean": 6.1,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.4,
+            "NJ1": 5.6
+          }
+        },
+        {
+          "name": "BARRACUDA",
+          "base": "BARRACUDA",
+          "code": null,
+          "entry": 7,
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.2,
+            "NJ1": 4.9
+          }
+        },
+        {
+          "name": "TILLINGHAST (DLF-AP-3084)",
+          "base": "TILLINGHAST",
+          "code": "DLF-AP-3084",
+          "entry": 11,
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.7,
+            "VA1": 6.3,
+            "NJ1": 5.7
+          }
+        },
+        {
+          "name": "S1",
+          "base": "S1",
+          "code": null,
+          "entry": 4,
+          "mean": 6.0,
+          "bySite": {
+            "IN1": 5.8,
+            "VA1": 6.2,
+            "NJ1": 5.0
+          }
+        },
+        {
+          "name": "MUSKET",
+          "base": "MUSKET",
+          "code": null,
+          "entry": 8,
+          "mean": 5.7,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.9,
+            "NJ1": 3.9
+          }
+        },
+        {
+          "name": "SHARK",
+          "base": "SHARK",
+          "code": null,
+          "entry": 9,
+          "mean": 5.6,
+          "bySite": {
+            "IN1": 5.4,
+            "VA1": 5.7,
+            "NJ1": 3.7
+          }
+        },
+        {
+          "name": "PST-0MRN",
+          "base": "PST-0MRN",
+          "code": null,
+          "entry": 17,
+          "mean": 5.3,
+          "bySite": {
+            "IN1": 5.2,
+            "VA1": 5.5,
+            "NJ1": 3.8
+          }
+        },
+        {
+          "name": "PST-R0DS",
+          "base": "PST-R0DS",
+          "code": null,
+          "entry": 19,
+          "mean": 5.2,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.9,
+            "NJ1": 4.1
+          }
+        },
+        {
+          "name": "PST-0R2O",
+          "base": "PST-0R2O",
+          "code": null,
+          "entry": 18,
+          "mean": 5.0,
+          "bySite": {
+            "IN1": 5.5,
+            "VA1": 5.8,
+            "NJ1": 3.8
+          }
+        },
+        {
+          "name": "PENNCROSS",
+          "base": "PENNCROSS",
+          "code": null,
+          "entry": 1,
+          "mean": 4.7,
+          "bySite": {
+            "IN1": 4.7,
+            "VA1": 4.7,
+            "NJ1": 1.2
+          }
+        }
+      ],
+      "expected": 4,
+      "pages": [
+        10
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "IA1",
+        "NJ1",
+        "WI1"
+      ],
+      "rows": [
+        {
+          "name": "PIPER (PPG-AP-MTV2)",
+          "base": "PIPER",
+          "code": "PPG-AP-MTV2",
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 8.3,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "PVF-PV-1",
+          "base": "PVF-PV-1",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "IA1": 8.7,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          }
+        },
+        {
+          "name": "PRODIGY (PVF-PV-2)",
+          "base": "PRODIGY",
+          "code": "PVF-PV-2",
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "IA1": 8.3,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          }
+        },
+        {
+          "name": "SPECTRUM (LNS 19)",
+          "base": "SPECTRUM",
+          "code": "LNS 19",
+          "entry": null,
+          "mean": 7.6,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 7.7,
+            "WI1": 7.0
+          }
+        },
+        {
+          "name": "PST-R0DS",
+          "base": "PST-R0DS",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "IA1": 8.3,
+            "NJ1": 5.3,
+            "WI1": 8.3
+          }
+        },
+        {
+          "name": "OAKLEY (PPG-AP-MTV1)",
+          "base": "OAKLEY",
+          "code": "PPG-AP-MTV1",
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 6.7,
+            "WI1": 7.0
+          }
+        },
+        {
+          "name": "PIRANHA",
+          "base": "PIRANHA",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 6.3,
+            "WI1": 7.7
+          }
+        },
+        {
+          "name": "TOURPRO",
+          "base": "TOURPRO",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 6.3,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "007XL",
+          "base": "007XL",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "IA1": 6.7,
+            "NJ1": 7.3,
+            "WI1": 6.7
+          }
+        },
+        {
+          "name": "TILLINGHAST (DLF-AP-3084)",
+          "base": "TILLINGHAST",
+          "code": "DLF-AP-3084",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 7.7,
+            "NJ1": 5.7,
+            "WI1": 7.0
+          }
+        },
+        {
+          "name": "PST-0R2O",
+          "base": "PST-0R2O",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.3,
+            "WI1": 8.0
+          }
+        },
+        {
+          "name": "S1",
+          "base": "S1",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 5.7,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "BARRACUDA",
+          "base": "BARRACUDA",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.7,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "CHINOOK (H10G-OP)",
+          "base": "CHINOOK",
+          "code": "H10G-OP",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 5.7,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "PST-0MRN",
+          "base": "PST-0MRN",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "IA1": 8.0,
+            "NJ1": 4.0,
+            "WI1": 8.0
+          }
+        },
+        {
+          "name": "MATCH PLAY",
+          "base": "MATCH PLAY",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 6.0,
+            "WI1": 6.7
+          }
+        },
+        {
+          "name": "SHARK",
+          "base": "SHARK",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "IA1": 6.3,
+            "NJ1": 4.7,
+            "WI1": 7.3
+          }
+        },
+        {
+          "name": "MUSKET",
+          "base": "MUSKET",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "IA1": 7.0,
+            "NJ1": 3.3,
+            "WI1": 6.0
+          }
+        },
+        {
+          "name": "PENNCROSS",
+          "base": "PENNCROSS",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "IA1": 7.3,
+            "NJ1": 1.3,
+            "WI1": 7.0
+          }
+        }
+      ],
+      "expected": 4,
+      "pages": [
+        15
+      ]
+    },
+    "brownPatch": {
+      "sites": [
+        "NJ1",
+        "VA1"
+      ],
+      "rows": [
+        {
+          "name": "SPECTRUM (LNS 19)",
+          "base": "SPECTRUM",
+          "code": "LNS 19",
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "NJ1": 8.3,
+            "VA1": 8.3
+          }
+        },
+        {
+          "name": "PRODIGY (PVF-PV-2)",
+          "base": "PRODIGY",
+          "code": "PVF-PV-2",
+          "entry": null,
+          "mean": 8.3,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 8.7
+          }
+        },
+        {
+          "name": "MATCH PLAY",
+          "base": "MATCH PLAY",
+          "code": null,
+          "entry": null,
+          "mean": 8.2,
+          "bySite": {
+            "NJ1": 7.7,
+            "VA1": 8.7
+          }
+        },
+        {
+          "name": "OAKLEY (PPG-AP-MTV1)",
+          "base": "OAKLEY",
+          "code": "PPG-AP-MTV1",
+          "entry": null,
+          "mean": 8.2,
+          "bySite": {
+            "NJ1": 7.3,
+            "VA1": 9.0
+          }
+        },
+        {
+          "name": "PIPER (PPG-AP-MTV2)",
+          "base": "PIPER",
+          "code": "PPG-AP-MTV2",
+          "entry": null,
+          "mean": 8.0,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 8.0
+          }
+        },
+        {
+          "name": "007XL",
+          "base": "007XL",
+          "code": null,
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "NJ1": 7.7,
+            "VA1": 8.0
+          }
+        },
+        {
+          "name": "TILLINGHAST (DLF-AP-3084)",
+          "base": "TILLINGHAST",
+          "code": "DLF-AP-3084",
+          "entry": null,
+          "mean": 7.8,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 7.7
+          }
+        },
+        {
+          "name": "BARRACUDA",
+          "base": "BARRACUDA",
+          "code": null,
+          "entry": null,
+          "mean": 7.7,
+          "bySite": {
+            "NJ1": 8.0,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "PVF-PV-1",
+          "base": "PVF-PV-1",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "NJ1": 6.0,
+            "VA1": 8.7
+          }
+        },
+        {
+          "name": "TOURPRO",
+          "base": "TOURPRO",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 8.0
+          }
+        },
+        {
+          "name": "PST-R0DS",
+          "base": "PST-R0DS",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "NJ1": 5.7,
+            "VA1": 8.3
+          }
+        },
+        {
+          "name": "S1",
+          "base": "S1",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 7.7
+          }
+        },
+        {
+          "name": "CHINOOK (H10G-OP)",
+          "base": "CHINOOK",
+          "code": "H10G-OP",
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "NJ1": 7.3,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "PIRANHA",
+          "base": "PIRANHA",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "NJ1": 5.7,
+            "VA1": 7.7
+          }
+        },
+        {
+          "name": "PST-0MRN",
+          "base": "PST-0MRN",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "NJ1": 5.3,
+            "VA1": 8.0
+          }
+        },
+        {
+          "name": "SHARK",
+          "base": "SHARK",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "NJ1": 4.3,
+            "VA1": 8.0
+          }
+        },
+        {
+          "name": "PENNCROSS",
+          "base": "PENNCROSS",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "NJ1": 6.3,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "PST-0R2O",
+          "base": "PST-0R2O",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.0,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "MUSKET",
+          "base": "MUSKET",
+          "code": null,
+          "entry": null,
+          "mean": 4.3,
+          "bySite": {
+            "NJ1": 2.0,
+            "VA1": 6.7
+          }
+        }
+      ],
+      "expected": 3,
+      "pages": [
+        25
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "WI1",
+        "IA1",
+        "MD1"
+      ],
+      "rows": [
+        {
+          "name": "BARRACUDA",
+          "base": "BARRACUDA",
+          "code": null,
+          "entry": 7,
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.3,
+            "MD1": 4.5
+          }
+        },
+        {
+          "name": "S1",
+          "base": "S1",
+          "code": null,
+          "entry": 4,
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.3,
+            "MD1": 4.5
+          }
+        },
+        {
+          "name": "MUSKET",
+          "base": "MUSKET",
+          "code": null,
+          "entry": 8,
+          "mean": 6.8,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "PIRANHA",
+          "base": "PIRANHA",
+          "code": null,
+          "entry": 6,
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          }
+        },
+        {
+          "name": "MATCH PLAY",
+          "base": "MATCH PLAY",
+          "code": null,
+          "entry": 10,
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          }
+        },
+        {
+          "name": "CHINOOK (H10G-OP)",
+          "base": "CHINOOK",
+          "code": "H10G-OP",
+          "entry": 2,
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.3,
+            "MD1": 4.5
+          }
+        },
+        {
+          "name": "SHARK",
+          "base": "SHARK",
+          "code": null,
+          "entry": 9,
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.1,
+            "MD1": 4.3
+          }
+        },
+        {
+          "name": "TOURPRO",
+          "base": "TOURPRO",
+          "code": null,
+          "entry": 5,
+          "mean": 6.7,
+          "bySite": {
+            "WI1": 6.1,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "007XL",
+          "base": "007XL",
+          "code": null,
+          "entry": 3,
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "OAKLEY (PPG-AP-MTV1)",
+          "base": "OAKLEY",
+          "code": "PPG-AP-MTV1",
+          "entry": 15,
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "PVF-PV-1",
+          "base": "PVF-PV-1",
+          "code": null,
+          "entry": 12,
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "PIPER (PPG-AP-MTV2)",
+          "base": "PIPER",
+          "code": "PPG-AP-MTV2",
+          "entry": 16,
+          "mean": 6.6,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.2,
+            "MD1": 4.4
+          }
+        },
+        {
+          "name": "TILLINGHAST (DLF-AP-3084)",
+          "base": "TILLINGHAST",
+          "code": "DLF-AP-3084",
+          "entry": 11,
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 7.1,
+            "MD1": 4.3
+          }
+        },
+        {
+          "name": "PRODIGY (PVF-PV-2)",
+          "base": "PRODIGY",
+          "code": "PVF-PV-2",
+          "entry": 13,
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 5.9,
+            "IA1": 7.1,
+            "MD1": 4.3
+          }
+        },
+        {
+          "name": "SPECTRUM (LNS 19)",
+          "base": "SPECTRUM",
+          "code": "LNS 19",
+          "entry": 14,
+          "mean": 6.5,
+          "bySite": {
+            "WI1": 5.8,
+            "IA1": 7.1,
+            "MD1": 4.3
+          }
+        },
+        {
+          "name": "PENNCROSS",
+          "base": "PENNCROSS",
+          "code": null,
+          "entry": 1,
+          "mean": 6.4,
+          "bySite": {
+            "WI1": 6.0,
+            "IA1": 6.7,
+            "MD1": 3.8
+          }
+        },
+        {
+          "name": "PST-0MRN",
+          "base": "PST-0MRN",
+          "code": null,
+          "entry": 17,
+          "mean": 6.3,
+          "bySite": {
+            "WI1": 5.9,
+            "IA1": 6.8,
+            "MD1": 4.0
+          }
+        },
+        {
+          "name": "PST-0R2O",
+          "base": "PST-0R2O",
+          "code": null,
+          "entry": 18,
+          "mean": 5.9,
+          "bySite": {
+            "WI1": 6.3,
+            "IA1": 7.2,
+            "MD1": 4.3
+          }
+        },
+        {
+          "name": "PST-R0DS",
+          "base": "PST-R0DS",
+          "code": null,
+          "entry": 19,
+          "mean": 5.9,
+          "bySite": {
+            "WI1": 6.2,
+            "IA1": 7.1,
+            "MD1": 4.3
+          }
+        }
+      ],
+      "expected": 4,
+      "pages": [
+        9
+      ]
+    }
+  }
+}

@@ -79,7 +79,7 @@ export default {
     <span class="soil-chip__place">{{ place }}</span>
     <template v-if="hasTemp">
       <span class="soil-chip__temp">{{ tempLabel }}</span>
-      <span class="soil-chip__meta">soil 6 cm</span>
+      <span class="soil-chip__meta">soil</span>
     </template>
   </button>
 </template>

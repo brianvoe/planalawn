@@ -5,22 +5,21 @@ import FitMeters from './fit-meters.vue'
 import SlimSelect from 'slim-select/vue'
 import { ratingColor } from '../charts/bars'
 import { climateBands } from '../data/climate'
-import { cultivarsForSpecies, indexForBlend, speciesList } from '../data/seedDb'
+import { cultivarsForSpecies, indexForBlend, speciesLabel, speciesRank } from '../data/seedDb'
 import {
   coverageLabel,
   factorBaselines,
   scoreBlendForLocation,
-  usesRegionalQuality,
 } from '../services/suitability'
 import { coverageTitle, fitTone, formOrChannelLabel } from './fit-ui'
 import type { PropType } from 'vue'
 import type {
   BarDatum,
+  BaselineKey,
   Blend,
   BlendComponentFit,
   BlendFit,
   ClimateBandId,
-  ScoreFactor,
   UserLocation,
 } from '../types'
 
@@ -33,16 +32,6 @@ const ZONE_FILTERS: { id: 'all' | ClimateBandId; label: string }[] = [
 
 /** How long the entry stagger keeps growing before every later card shares a delay. */
 const STAGGER_CAP = 8
-
-const SPECIES_LABELS: Record<string, string> = Object.fromEntries(
-  speciesList.map((s) => [s.id, s.label]),
-)
-
-/** Catalog order for the grass-type filter; anything unlisted falls to the end. */
-function speciesRank(id: string): number {
-  const i = speciesList.findIndex((s) => s.id === id)
-  return i < 0 ? speciesList.length : i
-}
 
 /** North to south, so two bags that share a band read the same way. */
 const BAND_ORDER: ClimateBandId[] = ['cool', 'transition', 'warm']
@@ -74,7 +63,7 @@ interface ZoneNote {
 interface BlendRow {
   blend: Blend
   fit: BlendFit | null
-  baselines: Partial<Record<ScoreFactor, number>>
+  baselines: Partial<Record<BaselineKey, number>>
   rank: number
   stagger: number
   zone: ZoneNote | null
@@ -149,7 +138,7 @@ export default {
       speciesFilter: 'all',
       brandFilter: 'all',
       fitCache: {} as Record<string, BlendFit>,
-      baselineCache: {} as Record<string, Partial<Record<ScoreFactor, number>>>,
+      baselineCache: {} as Record<string, Partial<Record<BaselineKey, number>>>,
     }
   },
   watch: {
@@ -235,15 +224,6 @@ export default {
         }))
         .filter((d) => d.value > 0)
     },
-    traitChart(): BarDatum[] {
-      const avg = this.selectedFit?.averages
-      if (!avg) return []
-      return [
-        { label: 'Drought', value: avg.drought ?? 0, color: ratingColor(avg.drought) },
-        { label: 'Brown patch', value: avg.brownPatch ?? 0, color: ratingColor(avg.brownPatch) },
-        { label: 'Color', value: avg.color ?? 0, color: ratingColor(avg.color) },
-      ].filter((d) => d.value > 0)
-    },
     channelLabel(): string {
       return this.selectedBlend ? formOrChannelLabel(this.selectedBlend) : ''
     },
@@ -260,7 +240,7 @@ export default {
       )
       return [
         { text: `All grass types (${ids.length})`, value: 'all' },
-        ...ids.map((id) => ({ text: SPECIES_LABELS[id] || id, value: id })),
+        ...ids.map((id) => ({ text: speciesLabel(id), value: id })),
       ]
     },
     /** Bags left once the grass type is applied — what the brand list is drawn from. */
@@ -288,9 +268,6 @@ export default {
     areaLabel(): string {
       return this.userLocation?.label || this.userLocation?.city || ''
     },
-    regionalQuality(): boolean {
-      return usesRegionalQuality(this.userLocation?.climateBand)
-    },
     /** Blends you entered yourself, newest last, listed inside the blend modal. */
     myBlends(): Blend[] {
       return this.blends.filter((b) => !b.curated)
@@ -314,7 +291,7 @@ export default {
       return this.fitCache[key]
     },
     /** Trial averages for the bar marks — one pass per species and location. */
-    baselinesFor(blend: Blend): Partial<Record<ScoreFactor, number>> {
+    baselinesFor(blend: Blend): Partial<Record<BaselineKey, number>> {
       const key = `${blend.species}:${this.userLocation?.latitude}:${this.userLocation?.longitude}`
       if (!this.baselineCache[key]) {
         this.baselineCache[key] = factorBaselines(
@@ -327,9 +304,7 @@ export default {
     openForm() {
       ;(this.$refs.blendModal as InstanceType<typeof BlendModal> | undefined)?.open()
     },
-    speciesLabel(id: string): string {
-      return SPECIES_LABELS[id] || id
-    },
+    speciesLabel,
     /** Clear whatever was narrowing the list, or the new blend lands out of sight. */
     onBlendSaved(species: string) {
       if (this.speciesFilter !== 'all' && this.speciesFilter !== species) {
@@ -356,16 +331,6 @@ export default {
     align-items: flex-end;
     gap: 0.65rem;
     margin-bottom: 1rem;
-  }
-
-  .toolbar-field {
-    display: grid;
-    flex: 1 1 10rem;
-    gap: 0.3rem;
-    min-width: 9.5rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
   }
 
   .hint {
@@ -684,10 +649,6 @@ export default {
     flex: 0 0 auto;
   }
 
-  .chart-panel--stack {
-    margin-top: 1rem;
-  }
-
   .fit-box .fit-meters {
     max-width: 32rem;
     margin: 0.35rem 0 0.25rem;
@@ -844,7 +805,6 @@ export default {
             v-if="row.fit && row.fit.score != null"
             :fit="row.fit"
             :baselines="row.baselines"
-            :regional="regionalQuality"
           />
           <p v-else class="blend-card__unscored">
             No trial overlap yet — nothing here is scored against NTEP.
@@ -949,7 +909,6 @@ export default {
           v-if="selectedFit.score != null"
           :fit="selectedFit"
           :baselines="baselinesFor(selectedBlend)"
-          :regional="regionalQuality"
         />
         <ul v-if="selectedFit.strengths?.length">
           <li v-for="s in selectedFit.strengths" :key="s">{{ s }}</li>
@@ -1001,11 +960,6 @@ export default {
             <h3 class="chart-panel__title">Component fit</h3>
             <p class="chart-panel__meta">Each cultivar’s area score (1–9).</p>
             <BarChart :data="componentChart" :options="{ leftMargin: 120, rowHeight: 32 }" />
-          </div>
-          <div v-if="traitChart.length" class="chart-panel chart-panel--stack">
-            <h3 class="chart-panel__title">Blend trait averages</h3>
-            <p class="chart-panel__meta">NTEP means across cultivars that have data.</p>
-            <BarChart :data="traitChart" :options="{ leftMargin: 110, rowHeight: 36 }" />
           </div>
         </div>
       </div>

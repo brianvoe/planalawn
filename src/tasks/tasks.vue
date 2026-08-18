@@ -1,54 +1,27 @@
 <script lang="ts">
 import { tasks } from '../data/tasks'
 import { evaluateAllTasks } from '../services/timing'
-import {
-  groupFor,
-  iconFor,
-  searchTextFor,
-  soilGateFor,
-  taskGroups,
-  toolFor,
-  windowFor,
-} from './task-ui'
+import TaskCard from './task-card.vue'
+import { groupFor, searchTextFor, statusFor, taskGroups, urgencyBands } from './task-ui'
 import type { PropType } from 'vue'
-import type { IconRef, TaskGroup, TaskTool } from './task-ui'
-import type { Bucket, Conditions as Weather, StatusTone, Task } from '../types'
-
-interface Status {
-  label: string
-  tone: StatusTone
-}
-
-/**
- * Only the two buckets worth interrupting for get a chip. "Later" is the
- * default state of ten of these jobs, and a row of grey "Later" badges would
- * bury the two that are actually open — the month range in the meta line
- * already says when to come back.
- */
-const STATUS: Partial<Record<Bucket, Status>> = {
-  now: { label: 'Do now', tone: 'good' },
-  soon: { label: 'Coming up', tone: 'caution' },
-}
+import type { TaskGroup, TaskStatus, UrgencyBand } from './task-ui'
+import type { Conditions as Weather, EvaluatedTask } from '../types'
 
 interface Row {
-  task: Task
+  item: EvaluatedTask
   groupId: string
-  icon: IconRef
-  tool: TaskTool | null
-  window: string
-  soil: string
-  status: Status | null
-  reason: string
+  status: TaskStatus | null
   text: string
 }
 
 interface Section {
-  group: TaskGroup
+  band: UrgencyBand
   rows: Row[]
 }
 
 export default {
   name: 'Tasks',
+  components: { TaskCard },
   props: {
     conditions: { type: Object as PropType<Weather | null>, default: null },
   },
@@ -59,18 +32,13 @@ export default {
     }
   },
   computed: {
-    /** Catalog order is kept throughout: within a group it reads as a sequence. */
+    /** Catalog order is kept throughout: within a band it reads as a sequence. */
     rows(): Row[] {
       const timing = evaluateAllTasks({ soilTempF: this.conditions?.soilTemp6F })
       return timing.map((item) => ({
-        task: item.task,
+        item,
         groupId: groupFor(item.task).id,
-        icon: iconFor(item.task),
-        tool: toolFor(item.task),
-        window: windowFor(item.task),
-        soil: soilGateFor(item.task),
-        status: STATUS[item.bucket] || null,
-        reason: item.reason,
+        status: statusFor(item),
         text: searchTextFor(item.task),
       }))
     },
@@ -79,15 +47,20 @@ export default {
       const q = this.query.trim().toLowerCase()
       if (!q) return this.rows
       const terms = q.split(/\s+/)
-      return this.rows.filter((row) => terms.every((t) => row.text.includes(t)))
+      return this.matchTerms(terms)
     },
     visible(): Row[] {
       if (this.groupId === 'all') return this.matched
       return this.matched.filter((row) => row.groupId === this.groupId)
     },
+    /**
+     * Urgency drives the running order rather than the kind of work: the page
+     * opens on what today allows, and the type tabs above stay available for
+     * when you came looking for a specific job instead.
+     */
     sections(): Section[] {
-      return taskGroups
-        .map((group) => ({ group, rows: this.visible.filter((r) => r.groupId === group.id) }))
+      return urgencyBands
+        .map((band) => ({ band, rows: this.visible.filter((r) => r.item.bucket === band.id) }))
         .filter((section) => section.rows.length > 0)
     },
     tabs(): { group: TaskGroup; count: number }[] {
@@ -101,7 +74,7 @@ export default {
       const total = tasks.length
       const shown = this.visible.length
       const parts = [shown === total ? `${total} jobs` : `${shown} of ${total} jobs`]
-      const due = this.visible.filter((row) => row.status?.tone === 'good').length
+      const due = this.visible.filter((row) => row.item.bucket === 'now').length
       if (due) {
         parts.push(`${due} in season now${this.conditions ? '' : ' by the calendar'}`)
       }
@@ -112,6 +85,9 @@ export default {
     },
   },
   methods: {
+    matchTerms(terms: string[]): Row[] {
+      return this.rows.filter((row) => terms.every((t) => row.text.includes(t)))
+    },
     selectGroup(id: string) {
       // Clicking the group you are already in is the way back out of it.
       this.groupId = this.groupId === id ? 'all' : id
@@ -174,7 +150,7 @@ export default {
     }
   }
 
-  /* Grouping doubles as the filter: the headings you scan are the buttons you press. */
+  /* The type tabs are the filter; the headings below are the urgency. */
   .group-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -244,192 +220,9 @@ export default {
     color: var(--color-text-muted);
   }
 
-  .task-section {
-    margin-bottom: 1.75rem;
-  }
-
   /* v-if/v-else siblings collapse the whitespace the sentence needs. */
   .empty .linkish {
     margin-left: 0.35rem;
-  }
-
-  .task-section__head {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    margin: 0 0 0.75rem;
-
-    h2 {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    p {
-      margin: 0;
-      font-size: 0.82rem;
-      color: var(--color-text-muted);
-    }
-
-    svg {
-      width: 0.9rem;
-      height: 0.9rem;
-      color: var(--color-primary-strong);
-    }
-  }
-
-  .task-section__count {
-    margin-left: auto;
-    font-size: 0.78rem;
-    font-variant-numeric: tabular-nums;
-    color: var(--color-text-muted);
-    white-space: nowrap;
-  }
-
-  .task-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 0.7rem;
-
-    @media (max-width: 559px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .task-card {
-    display: flex;
-    gap: 0.75rem;
-    padding: 0.9rem 1rem;
-    color: inherit;
-    text-decoration: none;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: calc(var(--border-radius) * 1.5);
-    box-shadow: var(--shadow-sm);
-    transition:
-      border-color 0.15s ease,
-      box-shadow 0.15s ease,
-      transform 0.15s ease;
-
-    &:hover {
-      border-color: var(--color-primary);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-
-      &:hover {
-        transform: none;
-      }
-    }
-  }
-
-  .task-card__icon {
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    width: 2.2rem;
-    height: 2.2rem;
-    color: var(--color-primary-strong);
-    background: var(--color-primary-soft);
-    border-radius: 11px;
-
-    svg {
-      width: 1.05rem;
-      height: 1.05rem;
-    }
-  }
-
-  .task-card__body {
-    min-width: 0;
-  }
-
-  .task-card__top {
-    display: flex;
-    align-items: start;
-    gap: 0.5rem;
-
-    h3 {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.3;
-    }
-
-    .chip {
-      flex-shrink: 0;
-      padding: 0.2rem 0.5rem;
-      font-size: 0.68rem;
-    }
-  }
-
-  .task-card__summary {
-    margin: 0.3rem 0 0;
-    font-size: 0.86rem;
-    line-height: 1.45;
-    color: var(--color-text-muted);
-  }
-
-  /* The scan line: when, with what, and what the soil has to be doing. */
-  .task-card__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 0.7rem;
-    margin: 0.5rem 0 0;
-    font-size: 0.76rem;
-    color: var(--color-text-muted);
-
-    span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      white-space: nowrap;
-    }
-
-    svg {
-      width: 0.72rem;
-      height: 0.72rem;
-      opacity: 0.75;
-    }
-  }
-
-  .task-enter-active {
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    transition-delay: calc(30ms * var(--stagger, 0));
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
-
-  .task-enter-from {
-    opacity: 0;
-    transform: translateY(0.5rem) scale(0.985);
-  }
-
-  .task-leave-active {
-    transition:
-      opacity 0.18s ease,
-      transform 0.18s ease;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
-
-  .task-leave-to {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-
-  .task-move {
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
   }
 }
 </style>
@@ -444,8 +237,8 @@ export default {
         </p>
         <h1>Every job, with its numbers.</h1>
         <p class="lede">
-          Grouped by the kind of work it is. Each card says when it happens, what it goes down
-          with, and what the soil has to be doing.
+          Ordered by what today allows, so the open work reads first. Each card says when it
+          happens, what it goes down with, and what the soil has to be doing.
         </p>
       </header>
 
@@ -494,12 +287,17 @@ export default {
         </button>
       </p>
 
-      <section v-for="section in sections" :key="section.group.id" class="task-section">
+      <section
+        v-for="section in sections"
+        :key="section.band.id"
+        class="task-section"
+        :class="`task-section--${section.band.id}`"
+      >
         <header class="task-section__head">
-          <font-awesome-icon :icon="section.group.icon" />
+          <font-awesome-icon :icon="section.band.icon" />
           <div>
-            <h2>{{ section.group.label }}</h2>
-            <p>{{ section.group.blurb }}</p>
+            <h2>{{ section.band.label }}</h2>
+            <p>{{ section.band.blurb }}</p>
           </div>
           <span class="task-section__count">
             {{ section.rows.length }} {{ section.rows.length === 1 ? 'job' : 'jobs' }}
@@ -507,45 +305,13 @@ export default {
         </header>
 
         <TransitionGroup tag="div" class="task-grid" name="task" appear>
-          <router-link
+          <TaskCard
             v-for="(row, i) in section.rows"
-            :key="row.task.id"
-            class="task-card"
+            :key="row.item.task.id"
+            :item="row.item"
+            :status="row.status"
             :style="{ '--stagger': i }"
-            :to="`/tasks/${row.task.id}`"
-          >
-            <span class="task-card__icon">
-              <font-awesome-icon :icon="row.icon" />
-            </span>
-            <div class="task-card__body">
-              <div class="task-card__top">
-                <h3>{{ row.task.name }}</h3>
-                <span
-                  v-if="row.status"
-                  class="chip"
-                  :class="`chip--${row.status.tone}`"
-                  :title="row.reason"
-                >
-                  {{ row.status.label }}
-                </span>
-              </div>
-              <p class="task-card__summary">{{ row.task.summary }}</p>
-              <p class="task-card__meta">
-                <span :title="`Typical months: ${row.window}`">
-                  <font-awesome-icon icon="fa-solid fa-calendar-day" />
-                  {{ row.window }}
-                </span>
-                <span v-if="row.tool">
-                  <font-awesome-icon :icon="row.tool.icon" />
-                  {{ row.tool.label }}
-                </span>
-                <span v-if="row.soil">
-                  <font-awesome-icon icon="fa-solid fa-temperature-half" />
-                  {{ row.soil }}
-                </span>
-              </p>
-            </div>
-          </router-link>
+          />
         </TransitionGroup>
       </section>
 

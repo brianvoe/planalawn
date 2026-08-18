@@ -59,9 +59,13 @@ export default {
         { text: 'Mixed', value: 'mixed' },
         { text: 'Mostly shade', value: 'shade' },
       ],
-      unitChoices: [
-        { text: 'fl oz / gal', value: 'us' as SprayUnits },
-        { text: 'ml / L', value: 'metric' as SprayUnits },
+      measureChoices: [
+        { text: 'fl oz', value: 'us' as SprayUnits },
+        { text: 'ml', value: 'metric' as SprayUnits },
+      ],
+      volumeChoices: [
+        { text: 'gal', value: 'us' as SprayUnits },
+        { text: 'L', value: 'metric' as SprayUnits },
       ],
     }
   },
@@ -89,8 +93,11 @@ export default {
     sprayUnits(): SprayUnits {
       return this.$store.getters.sprayUnits
     },
+    volumeUnits(): SprayUnits {
+      return this.$store.getters.volumeUnits
+    },
     vol(): VolumeUnit {
-      return volumeUnit(this.sprayUnits)
+      return volumeUnit(this.volumeUnits)
     },
     /** The tank as it's marked on the side; gallons are what get stored. */
     tankLocal: {
@@ -204,6 +211,9 @@ export default {
   methods: {
     setUnits(units: SprayUnits) {
       this.$store.dispatch('updateEquipment', { sprayUnits: units })
+    },
+    setVolumeUnits(units: SprayUnits) {
+      this.$store.dispatch('updateEquipment', { volumeUnits: units })
     },
     async saveGeo() {
       try {
@@ -442,13 +452,15 @@ export default {
             <input v-model.number="lawnSqFtLocal" type="number" min="100" step="100" />
           </label>
           <label>
-            <span>Grass type</span>
+            <span>Climate / season</span>
             <SlimSelect
               v-model="grassTypeSelect"
               :data="grassTypeSelectData"
               :settings="{ showSearch: false, allowDeselect: false }"
             />
-            <small v-if="grassTypeSource" class="field-note">{{ grassTypeSource }}</small>
+            <small class="field-note">
+              Sets your timing windows. {{ grassTypeSource }}
+            </small>
           </label>
           <label>
             <span>Seed type</span>
@@ -498,19 +510,40 @@ export default {
         </p>
         <div class="units">
           <div>
-            <p class="units__label">Liquid units</p>
+            <p class="units__label">Product amounts</p>
             <p class="units__hint">
-              Labels are printed in fluid ounces; this only changes what you read. Lawn area and bag
-              weights stay in square feet and pounds.
+              What you measure the concentrate with — the cup in your hand, not the label. Labels
+              are printed in fluid ounces; this only changes what you read.
             </p>
           </div>
-          <div class="seg" role="group" aria-label="Units for liquid amounts">
+          <div class="seg" role="group" aria-label="Units for product amounts">
             <button
-              v-for="u in unitChoices"
+              v-for="u in measureChoices"
               :key="u.value"
               type="button"
               :class="{ active: sprayUnits === u.value }"
               @click="setUnits(u.value)"
+            >
+              {{ u.text }}
+            </button>
+          </div>
+        </div>
+        <div class="units">
+          <div>
+            <p class="units__label">Tank volume</p>
+            <p class="units__hint">
+              How your sprayer is marked. Set on its own, so a gallon backpack dosed from a
+              millilitre cup reads the way you actually mix. Lawn area and bag weights stay in
+              square feet and pounds.
+            </p>
+          </div>
+          <div class="seg" role="group" aria-label="Units for tank volume">
+            <button
+              v-for="u in volumeChoices"
+              :key="u.value"
+              type="button"
+              :class="{ active: volumeUnits === u.value }"
+              @click="setVolumeUnits(u.value)"
             >
               {{ u.text }}
             </button>
@@ -553,8 +586,8 @@ export default {
       <section class="card muted-card">
         <h2>What gets saved</h2>
         <ul>
-          <li>Lawn profile (size, grass type, seed types, soil/sun, notes)</li>
-          <li>Equipment (sprayer tank, coverage per tank, spreader, liquid units)</li>
+          <li>Lawn profile (size, climate, seed types, soil/sun, notes)</li>
+          <li>Equipment (sprayer tank, coverage per tank, spreader, product and tank units)</li>
           <li>Custom rate overrides from calculators</li>
           <li>Custom blends you add from a bag tag</li>
         </ul>

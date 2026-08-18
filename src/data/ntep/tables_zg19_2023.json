@@ -1,0 +1,2618 @@
+{
+  "meta": {
+    "species": "zoysiagrass",
+    "trial": "zg19",
+    "year": 2023,
+    "sourcePdf": "zg19_24-12f.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "AR1",
+        "CA3",
+        "FL1",
+        "FL3",
+        "IN1",
+        "NC1",
+        "OK1",
+        "TN1"
+      ],
+      "rows": [
+        {
+          "name": "FAES 1319",
+          "base": "FAES 1319",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 5.7,
+            "FL1": 6.4,
+            "FL3": 6.8,
+            "IN1": 6.8,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "EMERALD",
+          "base": "EMERALD",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 5.7,
+            "FL1": 5.9,
+            "FL3": 6.6,
+            "IN1": 6.9,
+            "NC1": 5.6,
+            "OK1": 6.5,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1701",
+          "base": "DALZ 1701",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.8,
+            "FL1": 5.8,
+            "FL3": 6.6,
+            "IN1": 6.7,
+            "NC1": 6.1,
+            "OK1": 6.3,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "FZ 1422",
+          "base": "FZ 1422",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.2,
+            "FL1": 6.2,
+            "FL3": 6.6,
+            "IN1": 6.9,
+            "NC1": 5.9,
+            "OK1": 6.2,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1707",
+          "base": "DALZ 1707",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.7,
+            "CA3": 5.5,
+            "FL1": 5.0,
+            "FL3": 6.6,
+            "IN1": 7.2,
+            "NC1": 6.3,
+            "OK1": 6.3,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "DALZ 1601",
+          "base": "DALZ 1601",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.3,
+            "FL1": 5.6,
+            "FL3": 6.5,
+            "IN1": 6.9,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1808",
+          "base": "DALZ 1808",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.6,
+            "FL1": 6.2,
+            "FL3": 6.1,
+            "IN1": 7.1,
+            "NC1": 5.7,
+            "OK1": 6.3,
+            "TN1": 6.2
+          }
+        },
+        {
+          "name": "DALZ 1603",
+          "base": "DALZ 1603",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "AR1": 6.5,
+            "CA3": 5.5,
+            "FL1": 5.8,
+            "FL3": 6.5,
+            "IN1": 7.1,
+            "NC1": 6.4,
+            "OK1": 5.8,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "FZ 1407",
+          "base": "FZ 1407",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 6.1,
+            "CA3": 5.2,
+            "FL1": 5.5,
+            "FL3": 6.5,
+            "IN1": 7.1,
+            "NC1": 6.7,
+            "OK1": 6.1,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "FZ 1732",
+          "base": "FZ 1732",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 6.0,
+            "FL1": 6.6,
+            "FL3": 6.5,
+            "IN1": 5.4,
+            "NC1": 5.8,
+            "OK1": 6.2,
+            "TN1": 5.7
+          }
+        },
+        {
+          "name": "DALZ 1311",
+          "base": "DALZ 1311",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.3,
+            "FL1": 5.6,
+            "FL3": 6.7,
+            "IN1": 6.7,
+            "NC1": 6.7,
+            "OK1": 5.9,
+            "TN1": 5.7
+          }
+        },
+        {
+          "name": "FZ 1410",
+          "base": "FZ 1410",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.4,
+            "FL1": 5.2,
+            "FL3": 6.7,
+            "IN1": 6.8,
+            "NC1": 6.0,
+            "OK1": 5.8,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "FZ 1727",
+          "base": "FZ 1727",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.6,
+            "CA3": 5.9,
+            "FL1": 5.8,
+            "FL3": 6.3,
+            "IN1": 5.5,
+            "NC1": 5.9,
+            "OK1": 6.1,
+            "TN1": 6.2
+          }
+        },
+        {
+          "name": "ZEON",
+          "base": "ZEON",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 5.9,
+            "FL1": 5.1,
+            "FL3": 6.3,
+            "IN1": 6.9,
+            "NC1": 5.5,
+            "OK1": 6.2,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1722",
+          "base": "FZ 1722",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.4,
+            "CA3": 6.1,
+            "FL1": 6.4,
+            "FL3": 6.5,
+            "IN1": 4.5,
+            "NC1": 6.1,
+            "OK1": 6.2,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1723",
+          "base": "FZ 1723",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 5.9,
+            "FL1": 5.8,
+            "FL3": 6.3,
+            "IN1": 5.9,
+            "NC1": 5.5,
+            "OK1": 6.2,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1614",
+          "base": "DALZ 1614",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 6.0,
+            "FL1": 5.4,
+            "FL3": 6.2,
+            "IN1": 6.1,
+            "NC1": 6.1,
+            "OK1": 6.0,
+            "TN1": 6.1
+          }
+        },
+        {
+          "name": "FZ 1327",
+          "base": "FZ 1327",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.2,
+            "FL1": 5.8,
+            "FL3": 5.9,
+            "IN1": 6.5,
+            "NC1": 6.3,
+            "OK1": 6.0,
+            "TN1": 6.1
+          }
+        },
+        {
+          "name": "EMPIRE",
+          "base": "EMPIRE",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.1,
+            "FL1": 5.1,
+            "FL3": 6.5,
+            "IN1": 6.8,
+            "NC1": 6.2,
+            "OK1": 5.8,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "DALZ 1613",
+          "base": "DALZ 1613",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.8,
+            "FL1": 5.9,
+            "FL3": 5.9,
+            "IN1": 5.7,
+            "NC1": 5.5,
+            "OK1": 6.0,
+            "TN1": 6.1
+          }
+        },
+        {
+          "name": "15-TZ-11715",
+          "base": "15-TZ-11715",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "AR1": 6.9,
+            "CA3": 5.0,
+            "FL1": 5.5,
+            "FL3": 6.6,
+            "IN1": 5.8,
+            "NC1": 5.7,
+            "OK1": 5.9,
+            "TN1": 5.7
+          }
+        },
+        {
+          "name": "FAES 1335",
+          "base": "FAES 1335",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AR1": 7.0,
+            "CA3": 6.4,
+            "FL1": 5.7,
+            "FL3": 6.3,
+            "IN1": 4.1,
+            "NC1": 5.4,
+            "OK1": 6.0,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "16-TZ-12783",
+          "base": "16-TZ-12783",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "AR1": 6.8,
+            "CA3": 5.6,
+            "FL1": 5.6,
+            "FL3": 6.4,
+            "IN1": 4.3,
+            "NC1": 5.7,
+            "OK1": 5.8,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1440",
+          "base": "FZ 1440",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 5.8,
+            "FL1": 6.1,
+            "FL3": 5.9,
+            "IN1": 3.4,
+            "NC1": 5.2,
+            "OK1": 5.9,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "16-TZ-13463",
+          "base": "16-TZ-13463",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 6.4,
+            "CA3": 5.5,
+            "FL1": 5.2,
+            "FL3": 6.0,
+            "IN1": 5.0,
+            "NC1": 5.4,
+            "OK1": 5.6,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "DALZ 1409",
+          "base": "DALZ 1409",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 6.0,
+            "FL1": 5.7,
+            "FL3": 5.9,
+            "IN1": 1.2,
+            "NC1": 5.6,
+            "OK1": 6.1,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "UGA GZ 17-4",
+          "base": "UGA GZ 17-4",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.5,
+            "CA3": 6.1,
+            "FL1": 5.8,
+            "FL3": 6.2,
+            "IN1": 2.3,
+            "NC1": 5.8,
+            "OK1": 5.9,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "DALZ 1802",
+          "base": "DALZ 1802",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 6.4,
+            "FL1": 4.9,
+            "FL3": 6.6,
+            "IN1": 1.0,
+            "NC1": 5.6,
+            "OK1": 6.2,
+            "TN1": 5.3
+          }
+        },
+        {
+          "name": "FZ 1367",
+          "base": "FZ 1367",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "AR1": 7.3,
+            "CA3": 5.8,
+            "FL1": 6.2,
+            "FL3": 6.2,
+            "IN1": 2.0,
+            "NC1": 5.6,
+            "OK1": 5.9,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "FZ 1368",
+          "base": "FZ 1368",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "AR1": 6.3,
+            "CA3": 5.6,
+            "FL1": 6.3,
+            "FL3": 6.4,
+            "IN1": 1.0,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "DALZ 1713",
+          "base": "DALZ 1713",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 6.7,
+            "CA3": 5.3,
+            "FL1": 5.4,
+            "FL3": 6.5,
+            "IN1": 3.3,
+            "NC1": 4.6,
+            "OK1": 5.9,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "DALZ 1408",
+          "base": "DALZ 1408",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 7.1,
+            "CA3": 6.0,
+            "FL1": 6.1,
+            "FL3": 5.9,
+            "IN1": 1.4,
+            "NC1": 5.0,
+            "OK1": 6.2,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1436",
+          "base": "FZ 1436",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "AR1": 7.4,
+            "CA3": 5.8,
+            "FL1": 5.8,
+            "FL3": 5.9,
+            "IN1": 1.7,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1714",
+          "base": "DALZ 1714",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "AR1": 6.0,
+            "CA3": 5.8,
+            "FL1": 5.0,
+            "FL3": 6.5,
+            "IN1": 1.1,
+            "NC1": 4.9,
+            "OK1": 5.9,
+            "TN1": 5.9
+          }
+        },
+        {
+          "name": "DALZ 1806",
+          "base": "DALZ 1806",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "AR1": 7.2,
+            "CA3": 6.0,
+            "FL1": 4.6,
+            "FL3": 6.2,
+            "IN1": 2.5,
+            "NC1": 4.5,
+            "OK1": 5.7,
+            "TN1": 6.1
+          }
+        },
+        {
+          "name": "MEYER",
+          "base": "MEYER",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "AR1": 6.2,
+            "CA3": 4.1,
+            "FL1": 4.1,
+            "FL3": 5.6,
+            "IN1": 6.0,
+            "NC1": 4.4,
+            "OK1": 5.6,
+            "TN1": 5.4
+          }
+        },
+        {
+          "name": "FZ 1728",
+          "base": "FZ 1728",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "AR1": 6.6,
+            "CA3": 5.6,
+            "FL1": 5.4,
+            "FL3": 5.1,
+            "IN1": 3.6,
+            "NC1": 4.2,
+            "OK1": 4.8,
+            "TN1": 5.4
+          }
+        },
+        {
+          "name": "DALZ 1807",
+          "base": "DALZ 1807",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {
+            "AR1": 5.6,
+            "CA3": 6.0,
+            "FL1": 3.8,
+            "FL3": 5.8,
+            "IN1": 1.0,
+            "NC1": 4.3,
+            "OK1": 5.1,
+            "TN1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1721",
+          "base": "FZ 1721",
+          "code": null,
+          "entry": null,
+          "mean": 4.4,
+          "bySite": {
+            "AR1": 5.8,
+            "CA3": 5.3,
+            "FL1": 4.4,
+            "FL3": 5.2,
+            "IN1": 1.0,
+            "NC1": 3.5,
+            "OK1": 4.9,
+            "TN1": 5.2
+          }
+        }
+      ],
+      "expected": 9,
+      "pages": [
+        26
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "AL1",
+        "AR1",
+        "CA3",
+        "FL1",
+        "GA1",
+        "IN1",
+        "KS1",
+        "NC1",
+        "OK1",
+        "TN1"
+      ],
+      "rows": [
+        {
+          "name": "DALZ 1701",
+          "base": "DALZ 1701",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.8,
+            "CA3": 8.0,
+            "FL1": 8.2,
+            "GA1": 6.7,
+            "IN1": 8.0,
+            "KS1": 6.9,
+            "NC1": 7.0,
+            "OK1": 7.4,
+            "TN1": 6.8
+          }
+        },
+        {
+          "name": "FZ 1727",
+          "base": "FZ 1727",
+          "code": null,
+          "entry": null,
+          "mean": 7.3,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 7.0,
+            "CA3": 6.8,
+            "FL1": 7.8,
+            "GA1": 6.7,
+            "IN1": 8.4,
+            "KS1": 7.7,
+            "NC1": 7.2,
+            "OK1": 7.6,
+            "TN1": 7.4
+          }
+        },
+        {
+          "name": "16-TZ-13463",
+          "base": "16-TZ-13463",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.2,
+            "CA3": 7.4,
+            "FL1": 8.4,
+            "GA1": 6.3,
+            "IN1": 8.3,
+            "KS1": 6.7,
+            "NC1": 7.1,
+            "OK1": 6.9,
+            "TN1": 7.1
+          }
+        },
+        {
+          "name": "16-TZ-12783",
+          "base": "16-TZ-12783",
+          "code": null,
+          "entry": null,
+          "mean": 7.2,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 7.0,
+            "CA3": 7.3,
+            "FL1": 8.0,
+            "GA1": 6.3,
+            "IN1": 7.8,
+            "KS1": 7.7,
+            "NC1": 7.2,
+            "OK1": 7.5,
+            "TN1": 6.7
+          }
+        },
+        {
+          "name": "DALZ 1806",
+          "base": "DALZ 1806",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.2,
+            "CA3": 7.8,
+            "FL1": 8.0,
+            "GA1": 6.2,
+            "IN1": 9.0,
+            "KS1": 6.1,
+            "NC1": 6.9,
+            "OK1": 7.8,
+            "TN1": 5.6
+          }
+        },
+        {
+          "name": "MEYER",
+          "base": "MEYER",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.8,
+            "CA3": 7.5,
+            "FL1": 7.4,
+            "GA1": 6.1,
+            "IN1": 7.7,
+            "KS1": 7.4,
+            "NC1": 7.3,
+            "OK1": 6.3,
+            "TN1": 7.0
+          }
+        },
+        {
+          "name": "FZ 1327",
+          "base": "FZ 1327",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.2,
+            "CA3": 7.3,
+            "FL1": 7.3,
+            "GA1": 6.7,
+            "IN1": 7.9,
+            "KS1": 7.0,
+            "NC1": 7.1,
+            "OK1": 7.2,
+            "TN1": 7.2
+          }
+        },
+        {
+          "name": "15-TZ-11715",
+          "base": "15-TZ-11715",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.0,
+            "CA3": 6.3,
+            "FL1": 8.2,
+            "GA1": 6.7,
+            "IN1": 8.2,
+            "KS1": 6.7,
+            "NC1": 6.9,
+            "OK1": 7.3,
+            "TN1": 6.8
+          }
+        },
+        {
+          "name": "FZ 1440",
+          "base": "FZ 1440",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "CA3": 6.9,
+            "FL1": 7.9,
+            "GA1": 6.3,
+            "IN1": 8.2,
+            "KS1": 6.9,
+            "NC1": 6.7,
+            "OK1": 7.4,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "FZ 1722",
+          "base": "FZ 1722",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 7.2,
+            "CA3": 6.7,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 8.0,
+            "KS1": 7.2,
+            "NC1": 6.8,
+            "OK1": 7.8,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "FAES 1319",
+          "base": "FAES 1319",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 5.8,
+            "AR1": 6.5,
+            "CA3": 7.5,
+            "FL1": 7.9,
+            "GA1": 6.2,
+            "IN1": 8.0,
+            "KS1": 6.6,
+            "NC1": 7.3,
+            "OK1": 7.4,
+            "TN1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1409",
+          "base": "DALZ 1409",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "AL1": 7.4,
+            "AR1": 7.0,
+            "CA3": 6.3,
+            "FL1": 7.7,
+            "GA1": 6.6,
+            "IN1": 7.7,
+            "KS1": 6.8,
+            "NC1": 6.7,
+            "OK1": 6.9,
+            "TN1": 7.0
+          }
+        },
+        {
+          "name": "FZ 1732",
+          "base": "FZ 1732",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 6.3,
+            "CA3": 6.3,
+            "FL1": 7.8,
+            "GA1": 6.6,
+            "IN1": 7.8,
+            "KS1": 7.0,
+            "NC1": 6.8,
+            "OK1": 7.5,
+            "TN1": 6.2
+          }
+        },
+        {
+          "name": "FZ 1422",
+          "base": "FZ 1422",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.6,
+            "AR1": 7.0,
+            "CA3": 6.6,
+            "FL1": 7.1,
+            "GA1": 6.6,
+            "IN1": 7.4,
+            "KS1": 6.1,
+            "NC1": 7.1,
+            "OK1": 6.8,
+            "TN1": 7.2
+          }
+        },
+        {
+          "name": "EMPIRE",
+          "base": "EMPIRE",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 5.7,
+            "CA3": 6.8,
+            "FL1": 7.9,
+            "GA1": 6.4,
+            "IN1": 7.4,
+            "KS1": 5.8,
+            "NC1": 6.9,
+            "OK1": 6.9,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "FZ 1367",
+          "base": "FZ 1367",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.3,
+            "AR1": 6.3,
+            "CA3": 6.3,
+            "FL1": 8.1,
+            "GA1": 6.3,
+            "IN1": 7.8,
+            "KS1": 6.9,
+            "NC1": 6.8,
+            "OK1": 7.7,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "FZ 1728",
+          "base": "FZ 1728",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.4,
+            "AR1": 6.7,
+            "CA3": 6.2,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 8.0,
+            "KS1": 7.0,
+            "NC1": 6.9,
+            "OK1": 7.2,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "FAES 1335",
+          "base": "FAES 1335",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 5.9,
+            "AR1": 6.8,
+            "CA3": 6.3,
+            "FL1": 8.2,
+            "GA1": 6.4,
+            "IN1": 7.4,
+            "KS1": 6.7,
+            "NC1": 6.6,
+            "OK1": 6.5,
+            "TN1": 7.1
+          }
+        },
+        {
+          "name": "DALZ 1408",
+          "base": "DALZ 1408",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "AL1": 6.0,
+            "AR1": 6.8,
+            "CA3": 6.8,
+            "FL1": 8.2,
+            "GA1": 6.4,
+            "IN1": 7.7,
+            "KS1": 6.4,
+            "NC1": 6.9,
+            "OK1": 7.8,
+            "TN1": 5.7
+          }
+        },
+        {
+          "name": "FZ 1410",
+          "base": "FZ 1410",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 6.2,
+            "CA3": 6.9,
+            "FL1": 7.7,
+            "GA1": 6.2,
+            "IN1": 7.6,
+            "KS1": 6.1,
+            "NC1": 6.9,
+            "OK1": 6.8,
+            "TN1": 7.2
+          }
+        },
+        {
+          "name": "DALZ 1707",
+          "base": "DALZ 1707",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.1,
+            "AR1": 5.8,
+            "CA3": 6.8,
+            "FL1": 6.1,
+            "GA1": 6.6,
+            "IN1": 7.9,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 7.0,
+            "TN1": 7.3
+          }
+        },
+        {
+          "name": "EMERALD",
+          "base": "EMERALD",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 6.7,
+            "AR1": 6.7,
+            "CA3": 6.7,
+            "FL1": 7.7,
+            "GA1": 6.3,
+            "IN1": 7.4,
+            "KS1": 6.1,
+            "NC1": 6.7,
+            "OK1": 6.2,
+            "TN1": 6.6
+          }
+        },
+        {
+          "name": "FZ 1407",
+          "base": "FZ 1407",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.6,
+            "AR1": 6.3,
+            "CA3": 7.0,
+            "FL1": 7.2,
+            "GA1": 6.2,
+            "IN1": 7.4,
+            "KS1": 5.9,
+            "NC1": 6.9,
+            "OK1": 6.9,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "UGA GZ 17-4",
+          "base": "UGA GZ 17-4",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.7,
+            "CA3": 6.3,
+            "FL1": 7.8,
+            "GA1": 6.4,
+            "IN1": 8.2,
+            "KS1": 6.2,
+            "NC1": 6.7,
+            "OK1": 7.2,
+            "TN1": 6.2
+          }
+        },
+        {
+          "name": "DALZ 1601",
+          "base": "DALZ 1601",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "CA3": 6.9,
+            "FL1": 7.4,
+            "GA1": 6.3,
+            "IN1": 7.1,
+            "KS1": 6.0,
+            "NC1": 6.7,
+            "OK1": 6.8,
+            "TN1": 7.2
+          }
+        },
+        {
+          "name": "DALZ 1311",
+          "base": "DALZ 1311",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.0,
+            "CA3": 6.8,
+            "FL1": 7.3,
+            "GA1": 6.2,
+            "IN1": 7.6,
+            "KS1": 5.8,
+            "NC1": 7.0,
+            "OK1": 6.8,
+            "TN1": 7.4
+          }
+        },
+        {
+          "name": "FZ 1436",
+          "base": "FZ 1436",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 6.5,
+            "CA3": 6.0,
+            "FL1": 7.6,
+            "GA1": 6.2,
+            "IN1": 7.8,
+            "KS1": 5.7,
+            "NC1": 6.7,
+            "OK1": 7.3,
+            "TN1": 7.0
+          }
+        },
+        {
+          "name": "DALZ 1713",
+          "base": "DALZ 1713",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 6.2,
+            "AR1": 6.8,
+            "CA3": 6.2,
+            "FL1": 7.0,
+            "GA1": 6.4,
+            "IN1": 7.8,
+            "KS1": 6.3,
+            "NC1": 6.8,
+            "OK1": 6.8,
+            "TN1": 6.6
+          }
+        },
+        {
+          "name": "DALZ 1613",
+          "base": "DALZ 1613",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.2,
+            "CA3": 6.2,
+            "FL1": 7.3,
+            "GA1": 6.1,
+            "IN1": 7.8,
+            "KS1": 6.3,
+            "NC1": 6.6,
+            "OK1": 7.1,
+            "TN1": 7.1
+          }
+        },
+        {
+          "name": "DALZ 1603",
+          "base": "DALZ 1603",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 5.7,
+            "AR1": 5.8,
+            "CA3": 6.8,
+            "FL1": 7.6,
+            "GA1": 6.7,
+            "IN1": 6.9,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.4,
+            "TN1": 6.9
+          }
+        },
+        {
+          "name": "ZEON",
+          "base": "ZEON",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 6.5,
+            "CA3": 5.3,
+            "FL1": 7.4,
+            "GA1": 6.3,
+            "IN1": 6.8,
+            "KS1": 6.0,
+            "NC1": 6.8,
+            "OK1": 6.4,
+            "TN1": 7.4
+          }
+        },
+        {
+          "name": "DALZ 1802",
+          "base": "DALZ 1802",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "AL1": 7.8,
+            "AR1": 7.7,
+            "CA3": 7.4,
+            "FL1": 7.7,
+            "GA1": 6.1,
+            "IN1": 1.0,
+            "KS1": 2.8,
+            "NC1": 6.9,
+            "OK1": 8.2,
+            "TN1": 7.0
+          }
+        },
+        {
+          "name": "DALZ 1614",
+          "base": "DALZ 1614",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 5.3,
+            "AR1": 6.3,
+            "CA3": 6.6,
+            "FL1": 7.6,
+            "GA1": 6.2,
+            "IN1": 7.4,
+            "KS1": 5.4,
+            "NC1": 6.6,
+            "OK1": 6.8,
+            "TN1": 6.7
+          }
+        },
+        {
+          "name": "DALZ 1714",
+          "base": "DALZ 1714",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 7.1,
+            "AR1": 7.0,
+            "CA3": 6.2,
+            "FL1": 7.1,
+            "GA1": 6.6,
+            "IN1": 6.5,
+            "KS1": 5.3,
+            "NC1": 6.3,
+            "OK1": 6.8,
+            "TN1": 6.8
+          }
+        },
+        {
+          "name": "FZ 1368",
+          "base": "FZ 1368",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "AL1": 6.9,
+            "AR1": 6.5,
+            "CA3": 6.7,
+            "FL1": 7.7,
+            "GA1": 6.1,
+            "IN1": 3.0,
+            "KS1": 3.5,
+            "NC1": 6.6,
+            "OK1": 7.7,
+            "TN1": 7.3
+          }
+        },
+        {
+          "name": "FZ 1723",
+          "base": "FZ 1723",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "AL1": 4.3,
+            "AR1": 5.8,
+            "CA3": 6.0,
+            "FL1": 7.1,
+            "GA1": 6.1,
+            "IN1": 7.7,
+            "KS1": 6.3,
+            "NC1": 6.0,
+            "OK1": 6.8,
+            "TN1": 7.1
+          }
+        },
+        {
+          "name": "DALZ 1808",
+          "base": "DALZ 1808",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 5.4,
+            "AR1": 5.5,
+            "CA3": 6.5,
+            "FL1": 7.3,
+            "GA1": 6.3,
+            "IN1": 6.3,
+            "KS1": 5.7,
+            "NC1": 6.4,
+            "OK1": 5.8,
+            "TN1": 7.3
+          }
+        },
+        {
+          "name": "DALZ 1807",
+          "base": "DALZ 1807",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "AL1": 7.0,
+            "AR1": 7.8,
+            "CA3": 6.7,
+            "FL1": 7.2,
+            "GA1": 5.9,
+            "IN1": 1.0,
+            "KS1": 3.8,
+            "NC1": 6.7,
+            "OK1": 7.9,
+            "TN1": 6.3
+          }
+        },
+        {
+          "name": "FZ 1721",
+          "base": "FZ 1721",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "AL1": 5.0,
+            "AR1": 7.3,
+            "CA3": 6.6,
+            "FL1": 7.3,
+            "GA1": 6.4,
+            "IN1": 1.0,
+            "KS1": 5.8,
+            "NC1": 6.9,
+            "OK1": 7.2,
+            "TN1": 6.3
+          }
+        }
+      ],
+      "expected": 11,
+      "pages": [
+        47
+      ]
+    },
+    "brownPatch": {
+      "sites": [],
+      "rows": [
+        {
+          "name": "FAES 1319",
+          "base": "FAES 1319",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1311",
+          "base": "DALZ 1311",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1410",
+          "base": "FZ 1410",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {}
+        },
+        {
+          "name": "15-TZ-11715",
+          "base": "15-TZ-11715",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1701",
+          "base": "DALZ 1701",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1707",
+          "base": "DALZ 1707",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1802",
+          "base": "DALZ 1802",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "EMERALD",
+          "base": "EMERALD",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1422",
+          "base": "FZ 1422",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1601",
+          "base": "DALZ 1601",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1603",
+          "base": "DALZ 1603",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1713",
+          "base": "DALZ 1713",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1714",
+          "base": "DALZ 1714",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "EMPIRE",
+          "base": "EMPIRE",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1407",
+          "base": "FZ 1407",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1722",
+          "base": "FZ 1722",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1732",
+          "base": "FZ 1732",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {}
+        },
+        {
+          "name": "16-TZ-12783",
+          "base": "16-TZ-12783",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1368",
+          "base": "FZ 1368",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {}
+        },
+        {
+          "name": "FAES 1335",
+          "base": "FAES 1335",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1723",
+          "base": "FZ 1723",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1727",
+          "base": "FZ 1727",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {}
+        },
+        {
+          "name": "ZEON",
+          "base": "ZEON",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1614",
+          "base": "DALZ 1614",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1806",
+          "base": "DALZ 1806",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1367",
+          "base": "FZ 1367",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {}
+        },
+        {
+          "name": "UGA GZ 17-4",
+          "base": "UGA GZ 17-4",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1808",
+          "base": "DALZ 1808",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {}
+        },
+        {
+          "name": "16-TZ-13463",
+          "base": "16-TZ-13463",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1408",
+          "base": "DALZ 1408",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1409",
+          "base": "DALZ 1409",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1613",
+          "base": "DALZ 1613",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1327",
+          "base": "FZ 1327",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1436",
+          "base": "FZ 1436",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1440",
+          "base": "FZ 1440",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1807",
+          "base": "DALZ 1807",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {}
+        },
+        {
+          "name": "MEYER",
+          "base": "MEYER",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1721",
+          "base": "FZ 1721",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1728",
+          "base": "FZ 1728",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {}
+        }
+      ],
+      "expected": 15,
+      "pages": [
+        44,
+        45,
+        46
+      ]
+    },
+    "droughtQuality": {
+      "sites": [],
+      "rows": [
+        {
+          "name": "EMERALD",
+          "base": "EMERALD",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1409",
+          "base": "DALZ 1409",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "ZEON",
+          "base": "ZEON",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1601",
+          "base": "DALZ 1601",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1713",
+          "base": "DALZ 1713",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {}
+        },
+        {
+          "name": "UGA GZ 17-4",
+          "base": "UGA GZ 17-4",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1311",
+          "base": "DALZ 1311",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1802",
+          "base": "DALZ 1802",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1807",
+          "base": "DALZ 1807",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1422",
+          "base": "FZ 1422",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1407",
+          "base": "FZ 1407",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1603",
+          "base": "DALZ 1603",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {}
+        },
+        {
+          "name": "FAES 1319",
+          "base": "FAES 1319",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1732",
+          "base": "FZ 1732",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1707",
+          "base": "DALZ 1707",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1367",
+          "base": "FZ 1367",
+          "code": null,
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1408",
+          "base": "DALZ 1408",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1436",
+          "base": "FZ 1436",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {}
+        },
+        {
+          "name": "FAES 1335",
+          "base": "FAES 1335",
+          "code": null,
+          "entry": null,
+          "mean": 4.7,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1613",
+          "base": "DALZ 1613",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1714",
+          "base": "DALZ 1714",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1808",
+          "base": "DALZ 1808",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1440",
+          "base": "FZ 1440",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1614",
+          "base": "DALZ 1614",
+          "code": null,
+          "entry": null,
+          "mean": 4.4,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1701",
+          "base": "DALZ 1701",
+          "code": null,
+          "entry": null,
+          "mean": 4.2,
+          "bySite": {}
+        },
+        {
+          "name": "EMPIRE",
+          "base": "EMPIRE",
+          "code": null,
+          "entry": null,
+          "mean": 4.1,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1410",
+          "base": "FZ 1410",
+          "code": null,
+          "entry": null,
+          "mean": 4.0,
+          "bySite": {}
+        },
+        {
+          "name": "DALZ 1806",
+          "base": "DALZ 1806",
+          "code": null,
+          "entry": null,
+          "mean": 3.9,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1368",
+          "base": "FZ 1368",
+          "code": null,
+          "entry": null,
+          "mean": 3.9,
+          "bySite": {}
+        },
+        {
+          "name": "16-TZ-12783",
+          "base": "16-TZ-12783",
+          "code": null,
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1723",
+          "base": "FZ 1723",
+          "code": null,
+          "entry": null,
+          "mean": 3.8,
+          "bySite": {}
+        },
+        {
+          "name": "15-TZ-11715",
+          "base": "15-TZ-11715",
+          "code": null,
+          "entry": null,
+          "mean": 3.7,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1722",
+          "base": "FZ 1722",
+          "code": null,
+          "entry": null,
+          "mean": 3.7,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1727",
+          "base": "FZ 1727",
+          "code": null,
+          "entry": null,
+          "mean": 3.6,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1728",
+          "base": "FZ 1728",
+          "code": null,
+          "entry": null,
+          "mean": 3.3,
+          "bySite": {}
+        },
+        {
+          "name": "16-TZ-13463",
+          "base": "16-TZ-13463",
+          "code": null,
+          "entry": null,
+          "mean": 3.2,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1327",
+          "base": "FZ 1327",
+          "code": null,
+          "entry": null,
+          "mean": 3.1,
+          "bySite": {}
+        },
+        {
+          "name": "MEYER",
+          "base": "MEYER",
+          "code": null,
+          "entry": null,
+          "mean": 2.8,
+          "bySite": {}
+        },
+        {
+          "name": "FZ 1721",
+          "base": "FZ 1721",
+          "code": null,
+          "entry": null,
+          "mean": 2.6,
+          "bySite": {}
+        }
+      ],
+      "expected": 14,
+      "pages": [
+        41
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "FL1",
+        "AL1",
+        "TN1",
+        "OK1"
+      ],
+      "rows": [
+        {
+          "name": "FZ 1727",
+          "base": "FZ 1727",
+          "code": null,
+          "entry": 9,
+          "mean": 6.2,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.7,
+            "TN1": 5.8,
+            "OK1": 6.5
+          }
+        },
+        {
+          "name": "FZ 1732",
+          "base": "FZ 1732",
+          "code": null,
+          "entry": 39,
+          "mean": 6.2,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.8,
+            "TN1": 5.6,
+            "OK1": 6.4
+          }
+        },
+        {
+          "name": "FAES 1319",
+          "base": "FAES 1319",
+          "code": null,
+          "entry": 31,
+          "mean": 6.1,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.3,
+            "TN1": 5.9,
+            "OK1": 6.4
+          }
+        },
+        {
+          "name": "FZ 1440",
+          "base": "FZ 1440",
+          "code": null,
+          "entry": 7,
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.5,
+            "TN1": 5.6,
+            "OK1": 6.3
+          }
+        },
+        {
+          "name": "DALZ 1614",
+          "base": "DALZ 1614",
+          "code": null,
+          "entry": 28,
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.6,
+            "AL1": 5.5,
+            "TN1": 5.6,
+            "OK1": 6.3
+          }
+        },
+        {
+          "name": "FZ 1436",
+          "base": "FZ 1436",
+          "code": null,
+          "entry": 10,
+          "mean": 6.0,
+          "bySite": {
+            "FL1": 6.8,
+            "AL1": 5.5,
+            "TN1": 5.4,
+            "OK1": 6.2
+          }
+        },
+        {
+          "name": "FZ 1722",
+          "base": "FZ 1722",
+          "code": null,
+          "entry": 36,
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.1,
+            "TN1": 5.7,
+            "OK1": 6.2
+          }
+        },
+        {
+          "name": "ZEON",
+          "base": "ZEON",
+          "code": null,
+          "entry": 3,
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.4,
+            "TN1": 5.6,
+            "OK1": 6.2
+          }
+        },
+        {
+          "name": "EMERALD",
+          "base": "EMERALD",
+          "code": null,
+          "entry": 2,
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.5,
+            "TN1": 5.5,
+            "OK1": 6.2
+          }
+        },
+        {
+          "name": "FZ 1367",
+          "base": "FZ 1367",
+          "code": null,
+          "entry": 6,
+          "mean": 5.9,
+          "bySite": {
+            "FL1": 6.7,
+            "AL1": 5.3,
+            "TN1": 5.4,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "16-TZ-12783",
+          "base": "16-TZ-12783",
+          "code": null,
+          "entry": 12,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.2,
+            "TN1": 5.5,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "DALZ 1701",
+          "base": "DALZ 1701",
+          "code": null,
+          "entry": 29,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.5,
+            "TN1": 5.3,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "FZ 1422",
+          "base": "FZ 1422",
+          "code": null,
+          "entry": 8,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.0,
+            "TN1": 5.7,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "DALZ 1808",
+          "base": "DALZ 1808",
+          "code": null,
+          "entry": 21,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.6,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "EMPIRE",
+          "base": "EMPIRE",
+          "code": null,
+          "entry": 15,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.8,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "DALZ 1408",
+          "base": "DALZ 1408",
+          "code": null,
+          "entry": 23,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.6,
+            "AL1": 5.5,
+            "TN1": 5.0,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "FAES 1335",
+          "base": "FAES 1335",
+          "code": null,
+          "entry": 32,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.5,
+            "AL1": 5.0,
+            "TN1": 5.5,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "FZ 1410",
+          "base": "FZ 1410",
+          "code": null,
+          "entry": 4,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.6,
+            "TN1": 5.9,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "DALZ 1613",
+          "base": "DALZ 1613",
+          "code": null,
+          "entry": 27,
+          "mean": 5.8,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.3,
+            "TN1": 5.3,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1707",
+          "base": "DALZ 1707",
+          "code": null,
+          "entry": 30,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.7,
+            "OK1": 6.1
+          }
+        },
+        {
+          "name": "16-TZ-13463",
+          "base": "16-TZ-13463",
+          "code": null,
+          "entry": 13,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.4,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1603",
+          "base": "DALZ 1603",
+          "code": null,
+          "entry": 26,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.4,
+            "TN1": 6.0,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "15-TZ-11715",
+          "base": "15-TZ-11715",
+          "code": null,
+          "entry": 11,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 5.0,
+            "TN1": 5.5,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "FZ 1723",
+          "base": "FZ 1723",
+          "code": null,
+          "entry": 37,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.8,
+            "TN1": 5.6,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1311",
+          "base": "DALZ 1311",
+          "code": null,
+          "entry": 22,
+          "mean": 5.7,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.3,
+            "TN1": 6.0,
+            "OK1": 6.0
+          }
+        },
+        {
+          "name": "DALZ 1713",
+          "base": "DALZ 1713",
+          "code": null,
+          "entry": 16,
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.2,
+            "TN1": 5.1,
+            "OK1": 5.9
+          }
+        },
+        {
+          "name": "FZ 1407",
+          "base": "FZ 1407",
+          "code": null,
+          "entry": 34,
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.2,
+            "TN1": 5.9,
+            "OK1": 5.9
+          }
+        },
+        {
+          "name": "UGA GZ 17-4",
+          "base": "UGA GZ 17-4",
+          "code": null,
+          "entry": 14,
+          "mean": 5.6,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.1,
+            "TN1": 5.0,
+            "OK1": 5.8
+          }
+        },
+        {
+          "name": "DALZ 1802",
+          "base": "DALZ 1802",
+          "code": null,
+          "entry": 18,
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 5.0,
+            "TN1": 5.0,
+            "OK1": 5.7
+          }
+        },
+        {
+          "name": "FZ 1327",
+          "base": "FZ 1327",
+          "code": null,
+          "entry": 33,
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.2,
+            "AL1": 4.2,
+            "TN1": 5.8,
+            "OK1": 5.8
+          }
+        },
+        {
+          "name": "DALZ 1601",
+          "base": "DALZ 1601",
+          "code": null,
+          "entry": 25,
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.2,
+            "AL1": 4.2,
+            "TN1": 5.8,
+            "OK1": 5.8
+          }
+        },
+        {
+          "name": "FZ 1368",
+          "base": "FZ 1368",
+          "code": null,
+          "entry": 5,
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.4,
+            "AL1": 4.8,
+            "TN1": 5.1,
+            "OK1": 5.7
+          }
+        },
+        {
+          "name": "DALZ 1806",
+          "base": "DALZ 1806",
+          "code": null,
+          "entry": 19,
+          "mean": 5.5,
+          "bySite": {
+            "FL1": 6.3,
+            "AL1": 4.8,
+            "TN1": 5.1,
+            "OK1": 5.7
+          }
+        },
+        {
+          "name": "DALZ 1409",
+          "base": "DALZ 1409",
+          "code": null,
+          "entry": 24,
+          "mean": 5.3,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 5.0,
+            "TN1": 4.6,
+            "OK1": 5.6
+          }
+        },
+        {
+          "name": "FZ 1728",
+          "base": "FZ 1728",
+          "code": null,
+          "entry": 38,
+          "mean": 5.3,
+          "bySite": {
+            "FL1": 6.0,
+            "AL1": 4.5,
+            "TN1": 5.1,
+            "OK1": 5.6
+          }
+        },
+        {
+          "name": "DALZ 1714",
+          "base": "DALZ 1714",
+          "code": null,
+          "entry": 17,
+          "mean": 5.2,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 4.6,
+            "TN1": 4.8,
+            "OK1": 5.4
+          }
+        },
+        {
+          "name": "FZ 1721",
+          "base": "FZ 1721",
+          "code": null,
+          "entry": 35,
+          "mean": 5.2,
+          "bySite": {
+            "FL1": 6.1,
+            "AL1": 4.6,
+            "TN1": 4.7,
+            "OK1": 5.4
+          }
+        },
+        {
+          "name": "MEYER",
+          "base": "MEYER",
+          "code": null,
+          "entry": 1,
+          "mean": 4.8,
+          "bySite": {
+            "FL1": 5.5,
+            "AL1": 3.9,
+            "TN1": 4.8,
+            "OK1": 5.1
+          }
+        },
+        {
+          "name": "DALZ 1807",
+          "base": "DALZ 1807",
+          "code": null,
+          "entry": 20,
+          "mean": 4.6,
+          "bySite": {
+            "FL1": 5.4,
+            "AL1": 4.3,
+            "TN1": 4.0,
+            "OK1": 4.9
+          }
+        }
+      ],
+      "expected": 5,
+      "pages": [
+        12
+      ]
+    }
+  }
+}

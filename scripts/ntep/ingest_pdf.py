@@ -214,18 +214,31 @@ def parse_table_pages(doc, page_indexes):
     if sites:
         expected = len(sites) + (1 if has_mean else 0)
     else:
-        # Table 15's columns are months, not locations. Fall back to the most
-        # common row width, which is robust because only a handful of names
-        # carry trailing digits.
+        # Some tables' columns are months or stress measures rather than
+        # locations, so the width has to come from the rows.
+        #
+        # Count only the decimal tokens. Ratings are always printed as X.Y,
+        # while the integers in a row are the entry number and the digits that
+        # belong to the cultivar's name. Counting every token instead breaks on
+        # any trial whose names mostly end in numbers — nearly all of zoysia and
+        # St. Augustine — because the mode then lands one column too wide and
+        # every "DALZ 1701" loses its number into the data.
         widths = Counter()
+        fallback = Counter()
         for text in pages:
             for line in text.splitlines():
                 m = ROW_TAIL_RE.match(line.rstrip())
-                if m and not SKIP_NAME.match(clean_name(m.group("name"))):
-                    widths[len(m.group("nums").split())] += 1
-        if not widths:
+                if not m or SKIP_NAME.match(clean_name(m.group("name"))):
+                    continue
+                tokens = m.group("nums").split()
+                fallback[len(tokens)] += 1
+                decimals = [t for t in tokens if "." in t]
+                if decimals:
+                    widths[len(decimals)] += 1
+        counts = widths or fallback
+        if not counts:
             return {"sites": [], "rows": [], "expected": 0}
-        expected = widths.most_common(1)[0][0]
+        expected = counts.most_common(1)[0][0]
 
     rows = []
     for text in pages:
@@ -370,17 +383,38 @@ def build_cultivar_index(tables: dict, warnings: list):
 RATING_MIN, RATING_MAX = 1.0, 9.0
 
 
-def expected_metrics(tables: dict) -> set[str]:
+def panel_size(tables: dict) -> int:
     """
-    The metrics this report should have produced for every cultivar.
+    How many cultivars the trial entered.
 
-    Derived from the tables that were actually parsed rather than hardcoded,
-    because reports differ in what they measure — the Kentucky bluegrass test
-    has no drought trial at all. Still strict: once a table is parsed, every
-    cultivar must carry its metric, so a merge failure is fatal as before.
+    Table 1 is the entry list, so its row count is the panel. Reports that do
+    not yield it fall back to the widest table parsed.
     """
-    metrics = {metric for metric, table_key in METRIC_SOURCES if table_key in tables}
-    if "TN1" in tables.get("transitionQuality", {}).get("sites", []):
+    if "lpiGroup1" in tables:
+        return len(tables["lpiGroup1"]["rows"])
+    counts = [len(tables[key]["rows"]) for _, key in METRIC_SOURCES if key in tables]
+    return max(counts) if counts else 0
+
+
+def expected_metrics(tables: dict, panel: int) -> set[str]:
+    """
+    The metrics every cultivar in this report must carry.
+
+    Only tables covering the whole panel qualify. Reports differ in what they
+    measure — Kentucky bluegrass runs no drought trial at all — and several
+    stress trials deliberately enter a subset, the way zoysia's large patch
+    study takes 31 of 39 entries to one site in Florida. Demanding those of
+    every cultivar would reject good data, so they are allowed to be partial
+    and the UI reports the thinner coverage. A table that covers the panel is
+    still mandatory for every cultivar, which is what catches a merge failure.
+    """
+    metrics = {
+        metric
+        for metric, table_key in METRIC_SOURCES
+        if table_key in tables and len(tables[table_key]["rows"]) == panel
+    }
+    transition = tables.get("transitionQuality")
+    if transition and "TN1" in transition["sites"] and "transitionQuality" in metrics:
         metrics.add("knoxvilleQuality")
     return metrics
 
@@ -399,22 +433,30 @@ def validate(tables: dict, cultivars: list, warnings: list):
         for _, key in METRIC_SOURCES
         if key in tables
     }
-    if len(set(counts.values())) > 1:
-        errors.append(f"table row counts disagree: {counts}")
+    panel = panel_size(tables)
 
-    expected_total = max(counts.values()) if counts else 0
-    if len(cultivars) != expected_total:
+    # More rows than the trial has entries means the parser read something that
+    # is not a cultivar, or ran two tables together off one page.
+    oversized = {k: n for k, n in counts.items() if n > panel}
+    if oversized:
+        errors.append(f"tables longer than the {panel}-entry panel: {oversized}")
+
+    if len(cultivars) != panel:
         errors.append(
-            f"{len(cultivars)} cultivars built from tables of {expected_total} rows"
+            f"{len(cultivars)} cultivars built from a {panel}-entry panel"
         )
 
-    expected = expected_metrics(tables)
-    partial = [c["name"] for c in cultivars if set(c["metrics"]) != expected]
+    expected = expected_metrics(tables, panel)
+    partial = [c["name"] for c in cultivars if not expected <= set(c["metrics"])]
     if partial:
         errors.append(
-            f"{len(partial)} cultivars missing metrics (merge failure): "
+            f"{len(partial)} cultivars missing full-panel metrics (merge failure): "
             f"{', '.join(partial[:12])}"
         )
+
+    for key, n in sorted(counts.items()):
+        if n < panel:
+            warnings.append(f"{key}: {n} of {panel} entries — subset trial, scored where present")
 
     ids = Counter(c["id"] for c in cultivars)
     dupe_ids = [i for i, n in ids.items() if n > 1]
@@ -462,7 +504,15 @@ def validate(tables: dict, cultivars: list, warnings: list):
 # Which numbered table holds which metric, per species report. The title hint
 # is required to match on the page, so a report that numbers its tables
 # differently fails loudly instead of writing the wrong metric.
+#
+# Two trials here have newer replacements that are deliberately not used yet.
+# NTEP has retired tf18 and kb17 in favor of tf24 and kb23, but those report a
+# single season (2025) of establishment data, where plot-to-plot differences
+# still swamp cultivar differences. The reports below are the last published on
+# mature stands, so they rank cultivars better despite the older date. Revisit
+# once the new trials have three years behind them.
 TABLE_LAYOUT = {
+    # 2018 National Tall Fescue Test (tf18_24-8), superseded by tf24 — see above.
     "tall_fescue": [
         ("transitionQuality", 6, "TRANSITION"),
         ("geneticColor", 17, "GENETIC COLOR"),
@@ -480,7 +530,8 @@ TABLE_LAYOUT = {
         ("droughtQuality", "23A", "DROUGHT"),
         ("lpiGroup1", "1A", "LPI"),
     ],
-    # 2017 National Kentucky Bluegrass Test (kb17_23-9). Three metrics only, and
+    # 2017 National Kentucky Bluegrass Test (kb17_23-9), superseded by kb23 —
+    # see above. Three metrics only, and
     # that is the honest ceiling for this report: it runs no drought trial, and
     # its disease tables (stem rust, dollar spot, summer patch) are printed two
     # cultivars per line, which the row parser cannot split on text alone.
@@ -490,9 +541,79 @@ TABLE_LAYOUT = {
         ("geneticColor", 12, "GENETIC COLOR"),
         ("lpiGroup1", 1, "LPI"),
     ],
+    # 2022 National Perennial Ryegrass Test (pr22_26-5). No transition-region
+    # table exists for a grass tested this far north, so the six-location North
+    # Central table is the regional one. Brown patch is measured at a single
+    # site on a fraction of the entries, so dollar spot — full panel, two sites
+    # — takes the disease slot instead.
+    "perennial_ryegrass": [
+        ("transitionQuality", 6, "NORTH CENTRAL REGION"),
+        ("geneticColor", 12, "GENETIC COLOR"),
+        ("brownPatch", 22, "DOLLAR SPOT"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
+    # 2020 National Fineleaf Fescue Test (ff20_25-7). Every metric is split by
+    # subspecies; the "A" tables are the combined fineleaf panel and the only
+    # ones covering all 43 entries. The report groups locations by LPI rather
+    # than region, so LPI group 2 supplies the second location set.
+    "fine_fescue": [
+        ("transitionQuality", "2A", "LPI"),
+        ("geneticColor", "11A", "GENETIC COLOR"),
+        ("brownPatch", "20A", "DOLLAR SPOT"),
+        ("lpiGroup1", "1A", "LPI"),
+    ],
+    # 2019 National Zoysiagrass Test final report (zg19_24-12f). Mirrors the
+    # bermuda layout: Schedule B is the broad regional table. Large patch is
+    # the disease that decides zoysia, filling the brown-patch slot on the same
+    # 1-9 scale where 9 is clean.
+    "zoysiagrass": [
+        ("transitionQuality", 15, "SCHEDULE B"),
+        ("geneticColor", 20, "GENETIC COLOR"),
+        ("brownPatch", 19, "LARGE PATCH"),
+        ("droughtQuality", "17D", "DROUGHT"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
+    # 2023 National St. Augustinegrass Test (sa23_26-3). Gray leaf spot is the
+    # disease for this species. Table 17 rates it at one site on part of the
+    # panel; table 24 covers every entry, so that is the one used.
+    "st_augustinegrass": [
+        ("transitionQuality", 2, "LPI"),
+        ("geneticColor", 6, "GENETIC COLOR"),
+        ("brownPatch", 24, "GRAY LEAF SPOT"),
+        ("droughtQuality", 4, "DROUGHT"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
+    # 2020 National Bentgrass Test, fairway/tee (bt20f_26-6). The fairway trial
+    # is used rather than the putting-green one because it is mown at a height
+    # a lawn could plausibly share. The water-use table is left out: it prints
+    # two different column sets across its pages, which the row parser reads as
+    # a double-length table rather than one trial.
+    "creeping_bentgrass": [
+        ("transitionQuality", 2, "LPI"),
+        ("geneticColor", 6, "GENETIC COLOR"),
+        ("brownPatch", 16, "BROWN PATCH"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
+    # 2023 National Seashore Paspalum Test (sp23_26-4). A seven-entry trial:
+    # quality and color are the only tables covering the full panel, so these
+    # cultivars score on two factors and the UI says so.
+    "seashore_paspalum": [
+        ("geneticColor", 5, "GENETIC COLOR"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
 }
 
 
+# Every lawn grass the site is willing to name, whether or not we hold trial
+# data for it — people have to be able to say what is already in their yard.
+#
+# Writes species.json, which is the single list behind every grass dropdown in
+# the app, so entries are ordered the way they should read in a menu: cool
+# season then warm, most common first. `status` records why a species has no
+# scores yet:
+#   schema_ready       NTEP has a current trial report we could still ingest.
+#   no_national_trial  No current trial, so the species stays label-only.
+# Adding an id here also means adding it to the glob in src/data/seedDb.ts.
 SPECIES_CATALOG = {
     "tall_fescue": {
         "id": "tall_fescue",
@@ -510,21 +631,69 @@ SPECIES_CATALOG = {
         "id": "perennial_ryegrass",
         "label": "Perennial ryegrass",
         "season": "cool",
-        "ntepTrials": [],
-        "status": "schema_ready",
+        "ntepTrials": ["pr22"],
     },
     "fine_fescue": {
         "id": "fine_fescue",
         "label": "Fine fescue",
         "season": "cool",
-        "ntepTrials": [],
-        "status": "schema_ready",
+        "ntepTrials": ["ff20"],
+    },
+    "creeping_bentgrass": {
+        "id": "creeping_bentgrass",
+        "label": "Creeping bentgrass",
+        "season": "cool",
+        "ntepTrials": ["bt20f"],
     },
     "bermudagrass": {
         "id": "bermudagrass",
         "label": "Bermudagrass",
         "season": "warm",
         "ntepTrials": ["bg19"],
+    },
+    "zoysiagrass": {
+        "id": "zoysiagrass",
+        "label": "Zoysiagrass",
+        "season": "warm",
+        "ntepTrials": ["zg19"],
+    },
+    "st_augustinegrass": {
+        "id": "st_augustinegrass",
+        "label": "St. Augustinegrass",
+        "season": "warm",
+        "ntepTrials": ["sa23"],
+    },
+    # NTEP's only buffalograss test ran in 2002 (bu02_07-12f, 2003-06 data). Its
+    # ten entries do include cultivars still sold — Bowie, Legacy, Texoka — but
+    # omit Prestige, Cody and Sundancer, which is most of what a homeowner is
+    # offered now. Scoring a third of the market on twenty-year-old ratings
+    # would read as authoritative, so the species stays selectable but unscored.
+    "buffalograss": {
+        "id": "buffalograss",
+        "label": "Buffalograss",
+        "season": "warm",
+        "ntepTrials": [],
+        "status": "no_national_trial",
+    },
+    "seashore_paspalum": {
+        "id": "seashore_paspalum",
+        "label": "Seashore paspalum",
+        "season": "warm",
+        "ntepTrials": ["sp23"],
+    },
+    "centipedegrass": {
+        "id": "centipedegrass",
+        "label": "Centipedegrass",
+        "season": "warm",
+        "ntepTrials": [],
+        "status": "no_national_trial",
+    },
+    "bahiagrass": {
+        "id": "bahiagrass",
+        "label": "Bahiagrass",
+        "season": "warm",
+        "ntepTrials": [],
+        "status": "no_national_trial",
     },
 }
 
@@ -576,6 +745,17 @@ NTEP_SITES = {
     "TN2": {"name": "Knoxville, TN (traffic)", "state": "TN", "climateBand": "transition", "lat": 35.96, "lon": -83.92},
     "TX2": {"name": "College Station, TX (drought)", "state": "TX", "climateBand": "warm", "lat": 30.63, "lon": -96.33},
     "TX3": {"name": "College Station, TX (shade)", "state": "TX", "climateBand": "warm", "lat": 30.63, "lon": -96.33},
+    # 2022 perennial ryegrass, 2020 fineleaf fescue, 2020 bentgrass and 2019
+    # zoysia additions. Suffixed codes are a second plot at a site already
+    # listed, so they share its coordinates and say what makes them different.
+    "FL1": {"name": "Gainesville, FL (shade)", "state": "FL", "climateBand": "warm", "lat": 29.65, "lon": -82.32},
+    "IN2": {"name": "West Lafayette, IN (fairway)", "state": "IN", "climateBand": "cool", "lat": 40.42, "lon": -86.91},
+    "MI2": {"name": "East Lansing, MI (no traffic)", "state": "MI", "climateBand": "cool", "lat": 42.73, "lon": -84.48},
+    "OH1": {"name": "Columbus, OH", "state": "OH", "climateBand": "cool", "lat": 39.96, "lon": -83.00},
+    "QE1": {"name": "Quebec City, QC", "state": "QC", "country": "CA", "climateBand": "cool", "lat": 46.81, "lon": -71.21},
+    "VA2": {"name": "Blacksburg, VA (fairway)", "state": "VA", "climateBand": "transition", "lat": 37.23, "lon": -80.41},
+    "WA1": {"name": "Pullman, WA", "state": "WA", "climateBand": "cool", "lat": 46.73, "lon": -117.18},
+    "WI1": {"name": "Madison, WI", "state": "WI", "climateBand": "cool", "lat": 43.07, "lon": -89.40},
 }
 
 

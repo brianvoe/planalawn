@@ -1,5 +1,6 @@
 <script lang="ts">
 import SlimSelect from 'slim-select/vue'
+import BuyLinks from './buy-links.vue'
 import Calibrate from './calibrate.vue'
 import LawnSize from '../components/lawn-size.vue'
 import { spreaderOptions } from '../data/spreaders'
@@ -39,7 +40,7 @@ const TURF_NAMES: Record<GrassType, string> = {
  */
 export default {
   name: 'ProductPlan',
-  components: { Calibrate, LawnSize, SlimSelect },
+  components: { BuyLinks, Calibrate, LawnSize, SlimSelect },
   props: {
     product: { type: Object as PropType<Product>, required: true },
   },
@@ -65,13 +66,16 @@ export default {
     sprayUnits(): SprayUnits {
       return this.$store.getters.sprayUnits
     },
+    volumeUnits(): SprayUnits {
+      return this.$store.getters.volumeUnits
+    },
     /** The unit this product's dose is shown in — ml, g, fl oz or oz wt. */
     measure(): MeasureUnit {
       return measureUnit(this.product, this.sprayUnits)
     },
     /** Gallons or litres, for the tank and the water behind the dose. */
     vol(): VolumeUnit {
-      return volumeUnit(this.sprayUnits)
+      return volumeUnit(this.volumeUnits)
     },
     volNoun(): string {
       return volumeNoun[this.vol]
@@ -444,6 +448,8 @@ export default {
         </template>
       </div>
     </div>
+
+    <BuyLinks :product-id="product.id" />
 
     <p class="plan__note">{{ rateLine }}. {{ product.notes }}</p>
     <p v-if="labelWaterNote" class="plan__note">

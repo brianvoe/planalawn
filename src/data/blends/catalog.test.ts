@@ -1,20 +1,21 @@
 import { describe, expect, it } from 'vitest'
 import curated from './curated.json'
 import { KNOWN_CULTIVAR_GAP_SET } from './knownGaps'
-import bermudaPack from '../ntep/cultivars_bermudagrass.json'
-import bluegrassPack from '../ntep/cultivars_kentucky_bluegrass.json'
-import tallFescuePack from '../ntep/cultivars_tall_fescue.json'
+import { cultivarsForSpecies, loadedSpecies } from '../seedDb'
 import { normalizeKey } from '../../services/suitability'
 import type { Blend, ClimateBandId, Cultivar } from '../../types'
 
 const ZONES: ClimateBandId[] = ['cool', 'transition', 'warm']
 const HTTPS = /^https:\/\//i
 
-const packs: Record<string, Cultivar[]> = {
-  tall_fescue: tallFescuePack.cultivars,
-  bermudagrass: bermudaPack.cultivars,
-  kentucky_bluegrass: bluegrassPack.cultivars,
-}
+/** Drawn from the loader rather than named here, so a new pack is covered. */
+const packs: Record<string, Cultivar[]> = Object.fromEntries(
+  loadedSpecies.map((s) => [s.id, cultivarsForSpecies(s.id)]),
+)
+
+const seasonOf: Record<string, string> = Object.fromEntries(
+  loadedSpecies.map((s) => [s.id, s.season]),
+)
 
 /**
  * Every key the app can resolve a component against, across all ingested
@@ -53,11 +54,16 @@ describe('curated blend catalog', () => {
     })
   })
 
-  it('only sells sod as a single vegetative variety', () => {
+  /**
+   * Sod is a single clone cut from a field, so a bag-style mixture cannot
+   * exist. Every species sold this way is warm-season: bermuda, zoysia and
+   * St. Augustine are all planted vegetatively rather than seeded.
+   */
+  it('only sells sod as a single warm-season vegetative variety', () => {
     catalog
       .filter((b) => b.form === 'sod')
       .forEach((blend) => {
-        expect(blend.species, blend.id).toBe('bermudagrass')
+        expect(seasonOf[blend.species], blend.id).toBe('warm')
         expect(blend.components.length, blend.id).toBe(1)
       })
   })
@@ -69,14 +75,17 @@ describe('curated blend catalog', () => {
     })
   })
 
-  it('maps warm-only bags to bermudagrass and cool/transition bags to tall fescue', () => {
+  /**
+   * A bag sold into a climate band has to be a grass that survives it. Warm
+   * species reach up into the transition zone and tall fescue reaches down,
+   * but nothing warm-season belongs in a cool-season listing.
+   */
+  it('sells each bag only into bands its species survives', () => {
     catalog.forEach((b) => {
-      if (b.zones?.includes('warm') && !b.zones.includes('cool')) {
-        expect(b.species, b.id).toBe('bermudagrass')
-      }
-      if (b.zones?.includes('cool') || (b.zones?.includes('transition') && b.species !== 'bermudagrass')) {
-        expect(b.species, b.id).toBe('tall_fescue')
-      }
+      const season = seasonOf[b.species]
+      expect(season, `${b.id} → unscored species ${b.species}`).toBeTruthy()
+      if (b.zones?.includes('cool')) expect(season, b.id).toBe('cool')
+      if (season === 'cool') expect(b.zones, b.id).not.toContain('warm')
     })
   })
 

@@ -82,7 +82,8 @@ export function evaluateTask(
 
   if (inCalendar && soil.ok === false) {
     bucket = 'soon'
-    reason = `In season, but ${soil.detail.toLowerCase()}`
+    // Only the leading word joins the sentence; the gate keeps its °F casing.
+    reason = `In season, but ${soil.detail.charAt(0).toLowerCase()}${soil.detail.slice(1)}`
   } else if (inCalendar && (soil.ok === true || soil.ok === null)) {
     bucket = 'now'
     reason = primary

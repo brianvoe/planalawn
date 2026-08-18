@@ -8,6 +8,17 @@ import { fmtRating } from './fit-ui'
 import type { PropType } from 'vue'
 import type { BarDatum, Cultivar, NearbySite, SpeciesInfo, UserLocation } from '../types'
 
+/**
+ * Ranking on the trial site nearest the user instead of on a metric mean.
+ *
+ * It sits in the same list as the metrics because it answers the same question
+ * the metrics do — which number is this table sorted on. Splitting it into its
+ * own dropdown meant one control had to silently disable another.
+ */
+const NEAREST_SITE = 'nearestSite'
+
+type RankKey = NtepMetricKey | typeof NEAREST_SITE
+
 export default {
   name: 'NtepPanel',
   components: { BarChart, SlimSelect },
@@ -19,15 +30,20 @@ export default {
   emits: ['update:speciesId'],
   data() {
     return {
-      metric: 'transitionQuality' as NtepMetricKey,
+      rankBy: 'transitionQuality' as RankKey,
       namedOnly: true,
-      view: 'means' as 'means' | 'sites',
       ntepMetrics: NTEP_METRICS,
     }
   },
   watch: {
-    availableMetrics(metrics: { key: NtepMetricKey }[]) {
-      if (!metrics.some((m) => m.key === this.metric)) this.metric = 'transitionQuality'
+    /**
+     * Trials differ in what they measured, so changing species can remove the
+     * column being ranked on. Falling back to the first column this species
+     * does have keeps the table populated — a fixed fallback to regional
+     * quality emptied it for trials that never ran one, such as paspalum.
+     */
+    rankableKeys(keys: RankKey[]) {
+      if (!keys.includes(this.rankBy)) this.rankBy = keys[0] || 'transitionQuality'
     },
   },
   computed: {
@@ -44,17 +60,46 @@ export default {
     pool(): Cultivar[] {
       return this.namedOnly ? this.poolBase.filter(isNamedCultivar) : this.poolBase
     },
+    /**
+     * Metrics this species' trial actually measured. The bluegrass report has no
+     * drought or single-column disease table, and offering those would hand the
+     * user an empty table with no reason given.
+     */
+    availableMetrics(): { key: NtepMetricKey; label: string; short: string }[] {
+      return this.ntepMetrics.filter((m) =>
+        this.poolBase.some((c) => c.metrics?.[m.key]?.mean != null),
+      )
+    },
+    /** Every column this trial can show, which is also everything it can sort on. */
+    columns(): { key: RankKey; label: string }[] {
+      const columns = this.availableMetrics.map((m) => ({ key: m.key as RankKey, label: m.short }))
+      if (this.nearestSite) {
+        columns.push({ key: NEAREST_SITE, label: `Nearest — ${this.nearestSite.name}` })
+      }
+      return columns
+    },
+    rankableKeys(): RankKey[] {
+      return this.columns.map((c) => c.key)
+    },
+    rankSelectData(): { text: string; value: string; disabled?: boolean }[] {
+      const options: { text: string; value: string; disabled?: boolean }[] = this.availableMetrics.map(
+        (m) => ({ text: m.label, value: m.key }),
+      )
+      options.push({
+        text: this.nearestSite
+          ? `Quality at ${this.nearestSite.name}`
+          : 'Quality at your nearest site — set a location',
+        value: NEAREST_SITE,
+        disabled: !this.nearestSite,
+      })
+      return options
+    },
+    rankLabel(): string {
+      return this.rankSelectData.find((o) => o.value === this.rankBy)?.text || this.rankBy
+    },
     ranked(): { cultivar: Cultivar; value: number }[] {
       return this.pool
-        .map((cultivar) => {
-          let value: number | null | undefined
-          if (this.view === 'sites' && this.nearestSite) {
-            value = cultivar.metrics?.transitionQuality?.bySite?.[this.nearestSite.code]
-          } else {
-            value = cultivar.metrics?.[this.metric]?.mean
-          }
-          return { cultivar, value: typeof value === 'number' ? value : null }
-        })
+        .map((cultivar) => ({ cultivar, value: this.valueFor(cultivar, this.rankBy) }))
         .filter((row): row is { cultivar: Cultivar; value: number } => row.value != null)
         .sort((a, b) => b.value - a.value)
     },
@@ -65,9 +110,9 @@ export default {
         color: ratingColor(row.value),
       }))
     },
-    metricLabel(): string {
-      if (this.view === 'sites' && this.nearestSite) return `Quality at ${this.nearestSite.name}`
-      return this.ntepMetrics.find((m) => m.key === this.metric)?.label || this.metric
+    /** Brown patch is scored so that high means healthy, which reads backwards. */
+    hasDiseaseColumn(): boolean {
+      return this.availableMetrics.some((m) => m.key === 'brownPatch')
     },
     sourceLine(): string {
       const meta = ntepMetaForSpecies(this.speciesId)
@@ -85,38 +130,41 @@ export default {
     speciesSelectData(): { text: string; value: string }[] {
       return this.speciesOptions.map((s) => ({ text: s.label, value: s.id }))
     },
-    /**
-     * Metrics this species' trial actually measured. The bluegrass report has no
-     * drought or single-column disease table, and offering those would hand the
-     * user an empty table with no reason given.
-     */
-    availableMetrics(): { key: NtepMetricKey; label: string; short: string }[] {
-      return this.ntepMetrics.filter((m) =>
-        this.poolBase.some((c) => c.metrics?.[m.key]?.mean != null),
-      )
-    },
-    metricSelectData(): { text: string; value: string }[] {
-      return this.availableMetrics.map((m) => ({ text: m.label, value: m.key }))
-    },
-    viewSelectData(): { text: string; value: string; disabled?: boolean }[] {
-      return [
-        { text: 'National / regional means', value: 'means' },
-        { text: 'Nearest trial site', value: 'sites', disabled: !this.nearestSite },
-      ]
-    },
   },
   methods: {
     fmtRating,
+    valueFor(cultivar: Cultivar, key: RankKey): number | null {
+      if (key === NEAREST_SITE) {
+        const site = this.nearestSite
+        const value = site ? cultivar.metrics?.transitionQuality?.bySite?.[site.code] : null
+        return typeof value === 'number' ? value : null
+      }
+      const value = cultivar.metrics?.[key]?.mean
+      return typeof value === 'number' ? value : null
+    },
   },
 }
 </script>
 
 <style lang="scss">
 .ntep-panel {
+  .panel-head {
+    margin-bottom: 1.1rem;
+
+    h2 {
+      margin: 0 0 0.3rem;
+      font-size: 1.4rem;
+    }
+
+    .hint {
+      max-width: 46rem;
+    }
+  }
+
   .toolbar {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     gap: 0.65rem;
     margin-bottom: 1rem;
   }
@@ -125,6 +173,7 @@ export default {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    padding-bottom: 0.7rem;
     font-size: 0.88rem;
     font-weight: 600;
   }
@@ -134,42 +183,52 @@ export default {
     overflow: auto;
     margin-top: 1.25rem;
   }
+
+  /* The sorted column, so the ranking is traceable across a wide table. */
+  .data-table {
+    th.col-active {
+      color: var(--color-text);
+      background: var(--color-bg-soft);
+    }
+
+    td.col-active {
+      font-weight: 700;
+      background: var(--color-bg-soft);
+    }
+  }
+
+  .table-note {
+    margin-top: 0.6rem;
+  }
 }
 </style>
 
 <template>
   <section class="ntep-panel">
-    <div class="card">
+    <header class="panel-head">
       <h2>NTEP explorer</h2>
       <p class="hint">{{ sourceLine }}</p>
-    </div>
+    </header>
 
     <div class="toolbar">
-      <div class="toolbar-control">
+      <label class="toolbar-field">
+        <span>Species</span>
         <SlimSelect
           v-model="speciesChoice"
           :data="speciesSelectData"
           :settings="{ showSearch: false, allowDeselect: false }"
           aria-label="Species"
         />
-      </div>
-      <div class="toolbar-control">
+      </label>
+      <label class="toolbar-field">
+        <span>Rank by</span>
         <SlimSelect
-          :key="view"
-          v-model="metric"
-          :data="metricSelectData"
-          :settings="{ showSearch: false, allowDeselect: false, disabled: view === 'sites' }"
-          aria-label="Metric"
-        />
-      </div>
-      <div class="toolbar-control">
-        <SlimSelect
-          v-model="view"
-          :data="viewSelectData"
+          v-model="rankBy"
+          :data="rankSelectData"
           :settings="{ showSearch: false, allowDeselect: false }"
-          aria-label="Table view"
+          aria-label="Rank by"
         />
-      </div>
+      </label>
       <label class="named-toggle">
         <input v-model="namedOnly" type="checkbox" />
         Named grasses only
@@ -177,38 +236,58 @@ export default {
     </div>
 
     <div v-if="chartData.length" class="chart-panel">
-      <h3 class="chart-panel__title">Top 15 — {{ metricLabel }}</h3>
-      <p class="chart-panel__meta">1–9 NTEP scale. Higher is better (including brown patch, where higher = less disease).</p>
+      <h3 class="chart-panel__title">Top 15 — {{ rankLabel }}</h3>
+      <p class="chart-panel__meta">
+        1–9 NTEP scale, higher is better<template v-if="hasDiseaseColumn">, including brown patch, where a high
+        score means less disease</template>.
+      </p>
       <BarChart :data="chartData" :options="{ leftMargin: 140, rowHeight: 30 }" />
     </div>
 
-    <div class="data-table-wrap">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Cultivar</th>
-            <th>{{ metricLabel }}</th>
-            <th>Transition</th>
-            <th>Drought</th>
-            <th>Brown patch</th>
-            <th>Color</th>
-            <th>National</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(row, i) in ranked" :key="row.cultivar.id">
-            <td class="num">{{ i + 1 }}</td>
-            <td><strong>{{ row.cultivar.name }}</strong></td>
-            <td class="num">{{ fmtRating(row.value) }}</td>
-            <td class="num">{{ fmtRating(row.cultivar.metrics?.transitionQuality?.mean) }}</td>
-            <td class="num">{{ fmtRating(row.cultivar.metrics?.droughtQuality?.mean) }}</td>
-            <td class="num">{{ fmtRating(row.cultivar.metrics?.brownPatch?.mean) }}</td>
-            <td class="num">{{ fmtRating(row.cultivar.metrics?.geneticColor?.mean) }}</td>
-            <td class="num">{{ fmtRating(row.cultivar.metrics?.nationalMeanQuality?.mean) }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p v-if="!ranked.length" class="hint table-note">
+      This trial published no ratings for {{ rankLabel }} among the grasses shown. Try another column, or uncheck
+      “Named grasses only” to include experimental entries.
+    </p>
+
+    <template v-else>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Cultivar</th>
+              <th
+                v-for="col in columns"
+                :key="col.key"
+                :class="{ 'col-active': col.key === rankBy }"
+              >
+                {{ col.label }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row, i) in ranked" :key="row.cultivar.id">
+              <td class="num">{{ i + 1 }}</td>
+              <td>
+                <strong>{{ row.cultivar.name }}</strong>
+              </td>
+              <td
+                v-for="col in columns"
+                :key="col.key"
+                class="num"
+                :class="{ 'col-active': col.key === rankBy }"
+              >
+                {{ fmtRating(valueFor(row.cultivar, col.key)) }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="hint table-note">
+        {{ ranked.length }} grasses ranked by {{ rankLabel }}, best first. A dash means the trial did not publish
+        that rating for that grass.
+      </p>
+    </template>
   </section>
 </template>

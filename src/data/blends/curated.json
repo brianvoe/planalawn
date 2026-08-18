@@ -566,5 +566,81 @@
       { "name": "Astro", "cultivarId": "astro", "percent": 100 }
     ],
     "notes": "Sod only. The trial lists Astro as a vegetative entry sponsored by the Oklahoma Sod Producers Association."
+  },
+  {
+    "id": "zeon-zoysia",
+    "name": "Zeon Zoysia",
+    "manufacturer": "The Turfgrass Group",
+    "species": "zoysiagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://www.supersod.com/products/zeon-zoysia-sod",
+    "companyUrl": "https://www.supersod.com",
+    "profile": "Fine-bladed, shade tolerant",
+    "summary": "Fine-textured zoysia that takes more shade than bermuda and was the grass used at the Masters. In the 2019 NTEP zoysia trial.",
+    "buyHint": "Super-Sod by the roll or pallet across the Southeast; elsewhere use The Turfgrass Group’s grower finder.",
+    "components": [
+      { "name": "Zeon", "cultivarId": "zeon", "percent": 100 }
+    ],
+    "notes": "Licensed sod and plugs only — there is no Zeon seed. Zoysia establishes slowly whichever way you buy it."
+  },
+  {
+    "id": "empire-zoysia",
+    "name": "EMPIRE Zoysia",
+    "manufacturer": "Sod Solutions",
+    "species": "zoysiagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://sodsolutions.com/grass-types/zoysia-grass/empire-zoysia/",
+    "companyUrl": "https://sodsolutions.com",
+    "profile": "Wide-bladed, low input",
+    "summary": "Coarser than Zeon and sold on needing less mowing and fertilizer. In the 2019 NTEP zoysia trial.",
+    "buyHint": "Sod Solutions’ farm locator covers most of the South; sold by the pallet.",
+    "components": [
+      { "name": "Empire", "cultivarId": "empire", "percent": 100 }
+    ],
+    "notes": "Sod only. Its drought rating in the trial is well below Zeon’s, so it wants irrigation through a dry summer."
+  },
+  {
+    "id": "palmetto-st-augustine",
+    "name": "Palmetto St. Augustine",
+    "manufacturer": "Sod Solutions",
+    "species": "st_augustinegrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm"],
+    "url": "https://sodsolutions.com/grass-types/st-augustine-grass/palmetto-st-augustine/",
+    "companyUrl": "https://sodsolutions.com",
+    "profile": "Shade tolerant, cold hardy",
+    "summary": "The most widely planted St. Augustine, kept for shade tolerance and holding colour later into fall. In the 2023 NTEP trial.",
+    "buyHint": "Sold by the pallet through Sod Solutions growers across the Gulf states and the Southeast.",
+    "components": [
+      { "name": "Palmetto", "cultivarId": "palmetto", "percent": 100 }
+    ],
+    "notes": "Sod and plugs only. St. Augustine is not seeded, and it will not survive a hard freeze."
+  },
+  {
+    "id": "cobalt-st-augustine",
+    "name": "CobaltSS St. Augustine",
+    "manufacturer": "Sod Solutions",
+    "species": "st_augustinegrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm"],
+    "url": "https://sodsolutions.com/grass-types/st-augustine-grass/cobalt-st-augustine/",
+    "companyUrl": "https://sodsolutions.com",
+    "profile": "Dark colour, disease resistant",
+    "summary": "Newer dark-green release that rated best in the trial for gray leaf spot, the disease that disfigures St. Augustine. In the 2023 NTEP trial.",
+    "buyHint": "Limited grower network — check the Sod Solutions locator before planning around it.",
+    "components": [
+      { "name": "Cobalt", "cultivarId": "cobalt", "percent": 100 }
+    ],
+    "notes": "Sod only. Availability is thinner than Palmetto’s, so confirm a farm near you can cut it."
   }
 ]

@@ -73,7 +73,10 @@ export interface Task {
   prerequisites: string[]
   nextTasks: string[]
   steps: string[]
-  materials: string[]
+  /** Tools you own, borrow or rent — the same list every time you do the job. */
+  equipment: string[]
+  /** What gets used up, and therefore what you have to go and buy first. */
+  supplies: string[]
   calculator: TaskCalculator | null
   caveats: string[]
 }
@@ -343,6 +346,14 @@ export interface Blend {
 
 export type ScoreFactor = 'nearest' | 'region' | 'summerStress' | 'color' | 'national'
 
+/**
+ * What a rating bar can carry a trial-average mark for.
+ *
+ * Wider than ScoreFactor because the card meters show drought and brown patch
+ * on their own, while the score folds the pair together into summerStress.
+ */
+export type BaselineKey = ScoreFactor | 'drought' | 'brownPatch'
+
 export interface ScorePart {
   key: ScoreFactor
   weight: number
@@ -416,8 +427,17 @@ export interface Equipment {
   sprayCoverageSqFtPerTank: number
   /** Which spreader's setting column to read; '' until you pick one. */
   spreaderId: string
-  /** Units for tank and dose figures — what you measure with, not what the label prints. */
+  /**
+   * What you measure the concentrate with — the cup, not the label.
+   *
+   * Separate from volumeUnits because the two rarely match in a US shed: a
+   * backpack sprayer marked in gallons, dosed from a millilitre cup, is the
+   * common setup rather than an odd one.
+   */
   sprayUnits: SprayUnits
+  /** How the sprayer tank itself is marked. Absent on profiles saved before
+   * the two were split, which is why it is read through a getter. */
+  volumeUnits?: SprayUnits
 }
 
 export interface RateOverride {

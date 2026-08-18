@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import curated from './curated.json'
+import { offersByProduct } from '../commerce/offers'
 import type { Blend } from '../../types'
 
 const UA =
@@ -52,6 +53,29 @@ describe('curated blend URLs', () => {
       if (row.mode === 'lenient') continue
       if (dead || unreachable) {
         failures.push(`${row.id} ${row.kind} → ${status || 'no response'} ${row.url}`)
+      }
+    }
+    expect(failures, failures.join('\n')).toEqual([])
+  }, 180000)
+})
+
+/**
+ * Amazon answers a bot with 403 or a CAPTCHA page whatever the User-Agent, so
+ * its listings are probed for the record but never failed on — a red run there
+ * would mean nothing. Retailers that answer honestly are held to 404/410.
+ */
+const LENIENT_RETAILERS = new Set(['amazon'])
+
+describe('product offer URLs', () => {
+  it('strict retailer listings are not 404/410', async () => {
+    const failures: string[] = []
+    for (const [productId, offers] of Object.entries(offersByProduct)) {
+      for (const offer of offers) {
+        if (LENIENT_RETAILERS.has(offer.retailer)) continue
+        const status = await probe(offer.url)
+        if (status === 404 || status === 410 || status === 0) {
+          failures.push(`${productId} ${offer.retailer} → ${status || 'no response'} ${offer.url}`)
+        }
       }
     }
     expect(failures, failures.join('\n')).toEqual([])
