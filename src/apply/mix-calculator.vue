@@ -2,11 +2,29 @@
 import LawnSize from '../components/lawn-size.vue'
 import SlimSelect from 'slim-select/vue'
 import { rateTemplates, sprayerMix } from '../data/rates'
+import {
+  convertMeasure,
+  convertVolume,
+  fromPerVolume,
+  measureAside,
+  measureText,
+  perVolume,
+  toGallons,
+  toOunces,
+  volumeText,
+  volumeUnit,
+} from '../services/units'
 import type { PropType } from 'vue'
-import type { MixMode, RateTemplate, SprayerMixResult } from '../types'
+import type { MeasureUnit, VolumeUnit } from '../services/units'
+import type { MixMode, RateTemplate, SprayerMixResult, SprayUnits } from '../types'
 
+/**
+ * The fallback calculator: a rate you type in, for a bottle the catalog
+ * doesn't carry. Product classes rather than brands, so nothing here claims
+ * to be the label for what's in your garage.
+ */
 export default {
-  name: 'Calculator',
+  name: 'MixCalculator',
   components: { LawnSize, SlimSelect },
   props: {
     rateKey: { type: String, default: 'glyphosate' },
@@ -70,18 +88,46 @@ export default {
     productSelectData(): { text: string; value: string }[] {
       return this.productOptions.map((opt) => ({ text: opt.label, value: opt.id }))
     },
+    sprayUnits(): SprayUnits {
+      return this.$store.getters.sprayUnits
+    },
+    /** Nothing here is a weighed powder, so the dose unit follows the volume one. */
+    measure(): MeasureUnit {
+      return this.sprayUnits === 'metric' ? 'ml' : 'fl oz'
+    },
+    vol(): VolumeUnit {
+      return volumeUnit(this.sprayUnits)
+    },
     modeSelectData(): { text: string; value: MixMode }[] {
       return [
-        { text: 'oz per gallon', value: 'perGallon' },
-        { text: 'oz per 1000 sq ft', value: 'per1000' },
+        { text: `${this.measure} per ${this.vol}`, value: 'perGallon' },
+        { text: `${this.measure} per 1000 sq ft`, value: 'per1000' },
       ]
     },
-    tankGallonsLocal: {
+    tankLocal: {
       get(): number {
-        return this.tankGallons
+        return Number(convertVolume(this.tankGallons, this.vol).toFixed(1))
       },
       set(v: number) {
-        this.$store.dispatch('updateEquipment', { tankGallons: Number(v) || 2 })
+        const gal = toGallons(Number(v) || 0, this.vol)
+        this.$store.dispatch('updateEquipment', { tankGallons: gal || 2 })
+      },
+    },
+    /** The typed-in rate, shown and read back in the unit on the label you hold. */
+    perVolumeLocal: {
+      get(): number {
+        return Number(convertMeasure(perVolume(this.ozPerGallon, this.vol), this.measure).toFixed(1))
+      },
+      set(v: number) {
+        this.ozPerGallon = fromPerVolume(toOunces(Number(v) || 0, this.measure), this.vol)
+      },
+    },
+    per1000Local: {
+      get(): number {
+        return Number(convertMeasure(this.ozPer1000, this.measure).toFixed(1))
+      },
+      set(v: number) {
+        this.ozPer1000 = toOunces(Number(v) || 0, this.measure)
       },
     },
     coverageLocal: {
@@ -105,18 +151,19 @@ export default {
       })
     },
   },
+  methods: { measureAside, measureText, volumeText },
 }
 </script>
 
 <style lang="scss">
-.sprayer {
+.mix-calc {
   padding: 1.15rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: calc(var(--border-radius) * 2);
   box-shadow: var(--shadow);
 
-  .sprayer__controls {
+  .mix-calc__controls {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem 1.25rem;
@@ -149,7 +196,7 @@ export default {
     }
   }
 
-  .sprayer__result {
+  .mix-calc__result {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
@@ -159,7 +206,7 @@ export default {
     }
   }
 
-  .sprayer__stat {
+  .mix-calc__stat {
     padding: 0.85rem;
     background: var(--color-surface-alt);
     border-radius: calc(var(--border-radius) * 1.5);
@@ -189,7 +236,7 @@ export default {
     }
   }
 
-  .sprayer__note {
+  .mix-calc__note {
     margin: 0.85rem 0 0;
     font-size: 0.82rem;
     color: var(--color-text-muted);
@@ -198,8 +245,8 @@ export default {
 </style>
 
 <template>
-  <div class="sprayer">
-    <div class="sprayer__controls">
+  <div class="mix-calc">
+    <div class="mix-calc__controls">
       <label v-if="productOptions.length > 1">
         <span>Product template</span>
         <SlimSelect
@@ -217,16 +264,16 @@ export default {
         />
       </label>
       <label>
-        <span>Tank size (gal)</span>
-        <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
+        <span>Tank size ({{ vol }})</span>
+        <input v-model.number="tankLocal" type="number" min="0.5" step="0.5" />
       </label>
       <label v-if="mode === 'perGallon'">
-        <span>Product (fl oz / gal)</span>
-        <input v-model.number="ozPerGallon" type="number" min="0" step="0.1" />
+        <span>Product ({{ measure }} / {{ vol }})</span>
+        <input v-model.number="perVolumeLocal" type="number" min="0" step="0.1" />
       </label>
       <label v-else>
-        <span>Product (fl oz / 1000)</span>
-        <input v-model.number="ozPer1000" type="number" min="0" step="0.1" />
+        <span>Product ({{ measure }} / 1000)</span>
+        <input v-model.number="per1000Local" type="number" min="0" step="0.1" />
       </label>
       <label>
         <span>Coverage per tank (sq ft)</span>
@@ -235,24 +282,26 @@ export default {
       <LawnSize />
     </div>
 
-    <div class="sprayer__result">
-      <div class="sprayer__stat">
+    <div class="mix-calc__result">
+      <div class="mix-calc__stat">
         <span>Per tank</span>
-        <strong>{{ result.productOzPerTank.toFixed(1) }} fl oz</strong>
-        <em>in {{ result.waterGallonsPerTank }} gal water</em>
+        <strong>{{ measureText(result.productOzPerTank, measure) }}</strong>
+        <em>in {{ volumeText(result.waterGallonsPerTank, vol) }} water</em>
       </div>
-      <div class="sprayer__stat">
+      <div class="mix-calc__stat">
         <span>Tanks for lawn</span>
         <strong>{{ result.tanksNeeded.toFixed(2) }}</strong>
       </div>
-      <div class="sprayer__stat">
+      <div class="mix-calc__stat">
         <span>Total product</span>
-        <strong>{{ result.totalProductOz.toFixed(1) }} fl oz</strong>
-        <em>{{ (result.totalProductOz / 16).toFixed(2) }} pints</em>
+        <strong>{{ measureText(result.totalProductOz, measure) }}</strong>
+        <em v-if="measureAside(result.totalProductOz, measure)">
+          {{ measureAside(result.totalProductOz, measure) }}
+        </em>
       </div>
     </div>
-    <p v-if="productNotes" class="sprayer__note">{{ productNotes }}</p>
-    <p class="sprayer__note">
+    <p v-if="productNotes" class="mix-calc__note">{{ productNotes }}</p>
+    <p class="mix-calc__note">
       Starting calculator only — confirm concentration and PPE on your product label before mixing.
       Tank size and coverage save in this browser.
     </p>

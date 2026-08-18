@@ -1,8 +1,9 @@
 <script lang="ts">
 import Conditions from '../components/conditions.vue'
 import RateCalculator from './rate-calculator.vue'
-import SprayerCalculator from '../sprayer/calculator.vue'
+import MixCalculator from '../apply/mix-calculator.vue'
 import { getTask } from '../data/tasks'
+import { products } from '../data/products'
 import { grassNoteForTask, grassTypeLabels } from '../data/grass'
 import { evaluateTask } from '../services/timing'
 import { timingByTask } from '../data/timingRules'
@@ -11,7 +12,7 @@ import type { Conditions as Weather, EvaluatedTask, GrassType, Task } from '../t
 
 export default {
   name: 'TaskDetail',
-  components: { Conditions, RateCalculator, SprayerCalculator },
+  components: { Conditions, MixCalculator, RateCalculator },
   props: {
     id: { type: String, required: true },
     conditions: { type: Object as PropType<Weather | null>, default: null },
@@ -43,6 +44,9 @@ export default {
       const label = this.grassType ? grassTypeLabels[this.grassType] : 'your lawn'
       const inferred = this.$store.getters.grassTypeIsInferred ? ' (inferred from USDA zone)' : ''
       return `${label}${inferred}: ${note}`
+    },
+    hasProducts(): boolean {
+      return products.some((p) => p.taskIds.includes(this.id))
     },
   },
   methods: {
@@ -208,7 +212,7 @@ export default {
 
       <section v-if="task.calculator" class="block">
         <h2>How much</h2>
-        <SprayerCalculator
+        <MixCalculator
           v-if="task.calculator.type === 'sprayer'"
           :rate-key="task.calculator.rateKey"
           :rate-keys="task.calculator.rateKeys"
@@ -220,6 +224,13 @@ export default {
           :alt-rate-key="task.calculator.altRateKey"
           :rate-keys="task.calculator.rateKeys"
         />
+        <p v-if="hasProducts" class="hint">
+          Bought something specific?
+          <router-link :to="{ name: 'calculate', query: { task: task.id } }">
+            Named products for this task
+          </router-link>
+          carry their own label rates and spreader settings.
+        </p>
       </section>
 
       <section v-if="task.prerequisites.length || task.nextTasks.length" class="block links">

@@ -1,0 +1,5407 @@
+{
+  "meta": {
+    "species": "kentucky_bluegrass",
+    "trial": "kb17",
+    "year": 2022,
+    "sourcePdf": "kb17_23-9.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, national mean quality)."
+  },
+  "count": 89,
+  "cultivars": [
+    {
+      "id": "a06-8",
+      "name": "A06-8",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.4,
+            "OK1": 3.9,
+            "TN1": 6.8,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 6.7,
+            "UT1": 6.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.2,
+            "NJ2": 4.9,
+            "MD1": 6.6,
+            "VA1": 6.2,
+            "NC1": 3.2,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.5,
+            "OK1": 4.9,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 78,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a10-280",
+      "name": "A10-280",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 5.3,
+            "OK1": 4.9,
+            "TN1": 6.4,
+            "VA1": 7.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 5.7,
+            "OK1": 6.0,
+            "TN1": 6.0,
+            "UT1": 6.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 6.1,
+            "NJ2": 5.0,
+            "MD1": 6.6,
+            "VA1": 6.6,
+            "NC1": 4.2,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 5.2,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 71,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a11-26",
+      "name": "A11-26",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.4,
+            "OK1": 6.0,
+            "TN1": 6.6,
+            "VA1": 7.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 7.0,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 6.0,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.7,
+            "OK1": 7.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.8,
+            "NJ2": 6.3,
+            "MD1": 6.5,
+            "VA1": 7.1,
+            "NC1": 4.9,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "OK1": 5.6,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 67,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a11-38",
+      "name": "A11-38",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 1.6,
+            "OK1": 3.6,
+            "TN1": 6.3,
+            "VA1": 5.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 3.0,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 3.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "NJ1": 2.5,
+            "NJ2": 3.9,
+            "MD1": 6.4,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 69,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a11-40",
+      "name": "A11-40",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.0,
+            "OK1": 4.9,
+            "TN1": 6.3,
+            "VA1": 6.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 6.0,
+            "ND1": 7.0,
+            "NE1": 6.3,
+            "NJ2": 7.0,
+            "OK1": 5.3,
+            "TN1": 6.3,
+            "UT1": 2.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.4,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 1,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a12-34",
+      "name": "A12-34",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.2,
+            "OK1": 5.4,
+            "TN1": 6.2,
+            "VA1": 5.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.7,
+            "OK1": 8.0,
+            "TN1": 6.0,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 4.4,
+            "MD1": 6.4,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.4,
+            "OK1": 4.6,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 66,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a13-1",
+      "name": "A13-1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.7,
+            "OK1": 4.9,
+            "TN1": 7.1,
+            "VA1": 7.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.7,
+            "MN1": 4.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 7.7,
+            "UT1": 6.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.1,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.2,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 2,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a15-6",
+      "name": "A15-6",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 4.5,
+            "OK1": 6.0,
+            "TN1": 6.6,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 7.7,
+            "OK1": 7.3,
+            "TN1": 5.7,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 5.3,
+            "MD1": 6.4,
+            "VA1": 6.5,
+            "NC1": 4.0,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 75,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a16-1",
+      "name": "A16-1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.2,
+            "OK1": 3.9,
+            "TN1": 6.6,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 7.0,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 3.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 2.0,
+            "NJ2": 4.1,
+            "MD1": 6.2,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.3,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 64,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a16-17",
+      "name": "A16-17",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.6,
+            "OK1": 5.7,
+            "TN1": 6.6,
+            "VA1": 6.9
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.7,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 3.7,
+            "NC1": 6.0,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.0,
+            "TN1": 7.0,
+            "UT1": 3.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 2.3,
+            "NJ2": 6.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.1,
+            "IN1": 5.5,
+            "MI1": 6.9,
+            "MN1": 4.2,
+            "OK1": 5.4,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 76,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a16-2",
+      "name": "A16-2",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.2,
+            "OK1": 4.3,
+            "TN1": 7.1,
+            "VA1": 6.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.3,
+            "ND1": 6.0,
+            "NE1": 5.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 4.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.2,
+            "NC1": 3.5,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 4.9,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 73,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "a16-7",
+      "name": "A16-7",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 7.3,
+            "NC1": 2.4,
+            "OK1": 5.0,
+            "TN1": 6.6,
+            "VA1": 5.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 8.0,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "NJ1": 2.6,
+            "NJ2": 4.4,
+            "MD1": 6.2,
+            "VA1": 5.8,
+            "NC1": 2.8,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.5,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 65,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "acoustic",
+      "name": "Acoustic",
+      "aliases": [
+        "ACOUSTIC (PPG-KB 1131)",
+        "ACOUSTIC",
+        "PPG-KB 1131"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 7.2,
+            "NC1": 5.1,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 7.7,
+            "OK1": 5.7,
+            "TN1": 5.7,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.7,
+            "NJ2": 5.9,
+            "MD1": 6.4,
+            "VA1": 6.9,
+            "NC1": 4.6,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.3,
+            "OK1": 5.4,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 70,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "after-midnight",
+      "name": "After Midnight",
+      "aliases": [
+        "AFTER MIDNIGHT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.2,
+            "NC1": 4.6,
+            "OK1": 5.2,
+            "TN1": 7.0,
+            "VA1": 5.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 7.0,
+            "NC1": 8.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 8.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 5.9,
+            "NJ2": 4.8,
+            "MD1": 6.6,
+            "VA1": 6.5,
+            "NC1": 4.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 5.1,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 15,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "akb3128",
+      "name": "AKB3128",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.9,
+            "NC1": 3.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 7.0,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 7.3,
+            "OK1": 7.7,
+            "TN1": 6.7,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.2,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.4,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 9,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "akb3179",
+      "name": "AKB3179",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.9,
+            "OK1": 4.8,
+            "TN1": 6.5,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 4.7,
+            "UT1": 6.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.9,
+            "MD1": 6.7,
+            "VA1": 6.3,
+            "NC1": 3.4,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.6,
+            "OK1": 5.0,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 10,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "akb3241",
+      "name": "AKB3241",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.0,
+            "OK1": 4.6,
+            "TN1": 6.9,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 7.3,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 5.3,
+            "MD1": 6.6,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.5,
+            "OK1": 5.2,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 11,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "amaze",
+      "name": "Amaze",
+      "aliases": [
+        "AMAZE (NAI-14-133)",
+        "AMAZE",
+        "NAI-14-133"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.6,
+            "OK1": 5.2,
+            "TN1": 6.4,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 5.7,
+            "TN1": 5.3,
+            "UT1": 7.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.4,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.1,
+            "NC1": 3.2,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 4.8,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 38,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "aviator-ii",
+      "name": "Aviator II",
+      "aliases": [
+        "AVIATOR II (NAI-15-84)",
+        "AVIATOR II",
+        "NAI-15-84"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.8,
+            "OK1": 4.7,
+            "TN1": 5.9,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.5,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 3.8,
+            "MD1": 6.3,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "OK1": 4.3,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 42,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "babe",
+      "name": "Babe",
+      "aliases": [
+        "BABE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.2,
+            "OK1": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 7.7,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 5.1,
+            "MD1": 6.3,
+            "VA1": 6.3,
+            "NC1": 3.7,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.2,
+            "OK1": 4.9,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 8,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-71213",
+      "name": "Bar PP 71213",
+      "aliases": [
+        "BAR PP 71213"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 5.5,
+            "NC1": 3.5,
+            "OK1": 5.2,
+            "TN1": 6.1,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 4.0,
+            "MI1": 6.0,
+            "MN1": 3.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 5.0,
+            "OK1": 6.3,
+            "TN1": 6.7,
+            "UT1": 2.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 4.3,
+            "MD1": 6.1,
+            "VA1": 5.7,
+            "NC1": 2.7,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.0,
+            "OK1": 4.4,
+            "UT1": 4.7
+          },
+          "year": 2022
+        }
+      },
+      "entry": 20,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-7236v",
+      "name": "Bar PP 7236V",
+      "aliases": [
+        "BAR PP 7236V"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.7,
+            "OK1": 6.1,
+            "TN1": 6.4,
+            "VA1": 7.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 5.3,
+            "MI1": 7.0,
+            "MN1": 4.7,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 6.0,
+            "NJ2": 7.0,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 3.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 6.1,
+            "MD1": 6.6,
+            "VA1": 7.0,
+            "NC1": 4.5,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.5,
+            "OK1": 5.5,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 25,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-7309v",
+      "name": "Bar PP 7309V",
+      "aliases": [
+        "BAR PP 7309V"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.4,
+            "OK1": 5.4,
+            "TN1": 6.4,
+            "VA1": 6.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 6.0,
+            "NJ2": 7.7,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 3.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.2,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.2,
+            "OK1": 4.9,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 21,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-79366",
+      "name": "Bar PP 79366",
+      "aliases": [
+        "BAR PP 79366"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 4.2,
+            "OK1": 4.5,
+            "TN1": 6.9,
+            "VA1": 6.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 7.7,
+            "MN1": 4.7,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.3,
+            "OK1": 6.3,
+            "TN1": 7.3,
+            "UT1": 6.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 4.8,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.6,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 22,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-79494",
+      "name": "Bar PP 79494",
+      "aliases": [
+        "BAR PP 79494"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 5.5,
+            "OK1": 5.3,
+            "TN1": 7.0,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.0,
+            "TN1": 6.3,
+            "UT1": 8.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 6.2,
+            "MD1": 6.6,
+            "VA1": 6.9,
+            "NC1": 4.3,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.4,
+            "OK1": 5.5,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 26,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bar-pp-7k426",
+      "name": "Bar PP 7K426",
+      "aliases": [
+        "BAR PP 7K426"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.6,
+            "OK1": 5.7,
+            "TN1": 6.8,
+            "VA1": 6.9
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.3,
+            "NJ2": 6.0,
+            "OK1": 6.3,
+            "TN1": 6.3,
+            "UT1": 3.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.4,
+            "MD1": 6.4,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 24,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "barserati",
+      "name": "Barserati",
+      "aliases": [
+        "BARSERATI (BAR PP 110358)",
+        "BARSERATI",
+        "BAR PP 110358"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 5.0,
+            "OK1": 6.4,
+            "TN1": 6.4,
+            "VA1": 7.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 3.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ1": 6.3,
+            "NJ2": 6.7,
+            "MD1": 6.7,
+            "VA1": 7.4,
+            "NC1": 5.3,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.9,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 27,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "barvette-hgt",
+      "name": "Barvette HGT\u00ae",
+      "aliases": [
+        "BARVETTE HGT\u00ae"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 5.8,
+            "OK1": 6.3,
+            "TN1": 6.5,
+            "VA1": 7.9
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 5.7,
+            "OK1": 6.0,
+            "TN1": 7.3,
+            "UT1": 3.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "NJ1": 5.8,
+            "NJ2": 6.8,
+            "MD1": 6.8,
+            "VA1": 7.4,
+            "NC1": 5.2,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.9,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 23,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "blue-devil",
+      "name": "Blue Devil",
+      "aliases": [
+        "BLUE DEVIL"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.7,
+            "OK1": 5.5,
+            "TN1": 6.8,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.3,
+            "TN1": 7.0,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.7,
+            "NC1": 4.2,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.3,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 44,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "blue-gem",
+      "name": "Blue Gem",
+      "aliases": [
+        "BLUE GEM (NAI-13-9)",
+        "BLUE GEM",
+        "NAI-13-9"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.2,
+            "OK1": 5.3,
+            "TN1": 7.0,
+            "VA1": 6.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 7.3,
+            "MI1": 7.3,
+            "MN1": 6.3,
+            "NC1": 7.0,
+            "ND1": 7.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 4.9,
+            "NJ2": 5.9,
+            "MD1": 6.7,
+            "VA1": 6.9,
+            "NC1": 4.4,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.6,
+            "OK1": 5.5,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 32,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "blue-knight",
+      "name": "Blue Knight",
+      "aliases": [
+        "BLUE KNIGHT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.9,
+            "OK1": 5.1,
+            "TN1": 6.2,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 7.0,
+            "OK1": 7.3,
+            "TN1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.1,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.0,
+            "OK1": 4.8,
+            "UT1": 4.7
+          },
+          "year": 2022
+        }
+      },
+      "entry": 5,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "blue-magic",
+      "name": "Blue Magic",
+      "aliases": [
+        "BLUE MAGIC (A99-2897)",
+        "BLUE MAGIC",
+        "A99-2897"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 5.0,
+            "OK1": 5.9,
+            "TN1": 6.8,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "MI1": 7.0,
+            "MN1": 6.3,
+            "NC1": 7.7,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 7.3,
+            "OK1": 7.3,
+            "TN1": 7.7,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 6.4,
+            "MD1": 6.8,
+            "VA1": 7.1,
+            "NC1": 4.4,
+            "IN1": 5.8,
+            "MI1": 7.1,
+            "MN1": 4.6,
+            "OK1": 5.6,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 3,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "bombay",
+      "name": "Bombay",
+      "aliases": [
+        "BOMBAY (GO-22B23)",
+        "BOMBAY",
+        "GO-22B23"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.7,
+            "OK1": 5.3,
+            "TN1": 6.9,
+            "VA1": 7.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "MI1": 7.0,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.0,
+            "OK1": 7.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.2,
+          "bySite": {
+            "NJ1": 6.1,
+            "NJ2": 6.1,
+            "MD1": 6.8,
+            "VA1": 7.2,
+            "NC1": 4.9,
+            "IN1": 5.7,
+            "MI1": 6.8,
+            "MN1": 4.6,
+            "OK1": 5.7,
+            "UT1": 5.4
+          },
+          "year": 2022
+        }
+      },
+      "entry": 46,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud",
+      "aliases": [
+        "CLOUD (GO-2425)",
+        "CLOUD",
+        "GO-2425"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.2,
+            "OK1": 6.0,
+            "TN1": 6.9,
+            "VA1": 7.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.5,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 6.2,
+            "MD1": 6.9,
+            "VA1": 7.2,
+            "NC1": 4.7,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.7,
+            "OK1": 5.7,
+            "UT1": 5.5
+          },
+          "year": 2022
+        }
+      },
+      "entry": 48,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "comanche",
+      "name": "Comanche",
+      "aliases": [
+        "COMANCHE (NAI-14-176)",
+        "COMANCHE",
+        "NAI-14-176"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 1.6,
+            "OK1": 4.3,
+            "TN1": 6.3,
+            "VA1": 5.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 3.3,
+            "MD1": 6.5,
+            "VA1": 5.5,
+            "NC1": 2.2,
+            "IN1": 4.8,
+            "MI1": 5.9,
+            "MN1": 4.5,
+            "OK1": 4.3,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 39,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3364",
+      "name": "DLFPS-340/3364",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.2,
+            "OK1": 5.0,
+            "TN1": 6.9,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 6.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 2.8,
+            "NJ2": 5.3,
+            "MD1": 6.2,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.0,
+            "OK1": 4.8,
+            "UT1": 4.7
+          },
+          "year": 2022
+        }
+      },
+      "entry": 49,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3438",
+      "name": "DLFPS-340/3438",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.4,
+            "OK1": 4.2,
+            "TN1": 6.9,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 6.0,
+            "OK1": 7.7,
+            "TN1": 6.0,
+            "UT1": 6.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.7,
+            "MD1": 6.3,
+            "VA1": 6.0,
+            "NC1": 3.2,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.2,
+            "OK1": 4.7,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 55,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3444",
+      "name": "DLFPS-340/3444",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.8,
+            "NC1": 3.3,
+            "OK1": 5.4,
+            "TN1": 6.2,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 5.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 4.7,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.4,
+            "NJ2": 5.1,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.1,
+            "OK1": 4.8,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 58,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3446",
+      "name": "DLFPS-340/3446",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.9,
+            "OK1": 4.4,
+            "TN1": 6.6,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "MI1": 5.7,
+            "MN1": 5.3,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 6.7,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.5,
+            "NJ2": 4.6,
+            "MD1": 6.4,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 50,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3455",
+      "name": "DLFPS-340/3455",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.7,
+            "NC1": 2.7,
+            "OK1": 4.4,
+            "TN1": 6.2,
+            "VA1": 6.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.0,
+            "IN1": 6.0,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 3.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.6,
+            "MD1": 6.2,
+            "VA1": 6.0,
+            "NC1": 3.1,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.6,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 59,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3494",
+      "name": "DLFPS-340/3494",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.9,
+            "OK1": 5.1,
+            "TN1": 6.9,
+            "VA1": 5.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 5.3,
+            "UT1": 5.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 5.5,
+            "NJ2": 3.5,
+            "MD1": 6.4,
+            "VA1": 5.8,
+            "NC1": 3.1,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.4,
+            "OK1": 4.5,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 53,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3500",
+      "name": "DLFPS-340/3500",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 4.6,
+            "OK1": 4.4,
+            "TN1": 6.8,
+            "VA1": 7.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MI1": 7.3,
+            "MN1": 5.3,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 6.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 4.5,
+            "MD1": 6.5,
+            "VA1": 6.2,
+            "NC1": 3.6,
+            "IN1": 5.1,
+            "MI1": 6.2,
+            "MN1": 4.5,
+            "OK1": 4.9,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 54,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3548",
+      "name": "DLFPS-340/3548",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.9,
+            "NC1": 2.4,
+            "OK1": 4.9,
+            "TN1": 5.6,
+            "VA1": 6.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.7,
+            "OK1": 6.7,
+            "TN1": 5.7,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 4.1,
+            "MD1": 6.2,
+            "VA1": 5.9,
+            "NC1": 3.3,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.2,
+            "OK1": 4.6,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 57,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3549",
+      "name": "DLFPS-340/3549",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.6,
+            "OK1": 4.6,
+            "TN1": 5.6,
+            "VA1": 6.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 5.0,
+            "ND1": 5.0,
+            "NE1": 5.0,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 4.6,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.5,
+            "IN1": 4.9,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.8,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 56,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3550",
+      "name": "DLFPS-340/3550",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.6,
+            "OK1": 4.0,
+            "TN1": 7.2,
+            "VA1": 6.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.2,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 8.0,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.7,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.5,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 60,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3551",
+      "name": "DLFPS-340/3551",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 4.3,
+            "OK1": 4.7,
+            "TN1": 6.3,
+            "VA1": 5.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.7,
+            "ND1": 4.0,
+            "NE1": 6.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.1,
+            "NJ2": 5.5,
+            "MD1": 6.5,
+            "VA1": 6.4,
+            "NC1": 3.6,
+            "IN1": 5.3,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 61,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3552",
+      "name": "DLFPS-340/3552",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.6,
+            "OK1": 5.5,
+            "TN1": 7.1,
+            "VA1": 6.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 5.3,
+            "NJ2": 7.3,
+            "OK1": 7.0,
+            "TN1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 3.7,
+            "NJ2": 6.2,
+            "MD1": 6.6,
+            "VA1": 6.8,
+            "NC1": 4.2,
+            "IN1": 5.5,
+            "MI1": 6.8,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 62,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3553",
+      "name": "DLFPS-340/3553",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 4.3,
+            "OK1": 5.0,
+            "TN1": 6.8,
+            "VA1": 7.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 7.7,
+            "OK1": 6.0,
+            "TN1": 7.0,
+            "UT1": 5.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 6.0,
+            "MD1": 6.5,
+            "VA1": 6.9,
+            "NC1": 4.5,
+            "IN1": 5.5,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.4,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 52,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dlfps-340-3556",
+      "name": "DLFPS-340/3556",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.3,
+            "OK1": 3.8,
+            "TN1": 6.3,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 7.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 7.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.0,
+            "NJ2": 4.5,
+            "MD1": 6.4,
+            "VA1": 6.0,
+            "NC1": 3.0,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.7,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 51,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "aliases": [
+        "DUBLIN (PST-K15-157)",
+        "DUBLIN",
+        "PST-K15-157"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.2,
+            "OK1": 5.2,
+            "TN1": 6.9,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 6.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.6,
+            "NJ2": 4.2,
+            "MD1": 6.6,
+            "VA1": 5.9,
+            "NC1": 2.7,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.6,
+            "OK1": 4.6,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 83,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "electric",
+      "name": "Electric",
+      "aliases": [
+        "ELECTRIC (PST-K11-118)",
+        "ELECTRIC",
+        "PST-K11-118"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 5.0,
+            "OK1": 5.4,
+            "TN1": 6.4,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.3,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 2.3,
+            "OK1": 5.7,
+            "TN1": 6.7,
+            "UT1": 3.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 4.9,
+            "MD1": 6.7,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.6,
+            "OK1": 5.1,
+            "UT1": 5.4
+          },
+          "year": 2022
+        }
+      },
+      "entry": 82,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "finish-line",
+      "name": "Finish Line",
+      "aliases": [
+        "FINISH LINE (NAI-14-178)",
+        "FINISH LINE",
+        "NAI-14-178"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.2,
+            "OK1": 4.7,
+            "TN1": 6.0,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 4.3,
+            "MD1": 6.5,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 4.6,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 40,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "heartland",
+      "name": "Heartland",
+      "aliases": [
+        "HEARTLAND (NAI-14-187)",
+        "HEARTLAND",
+        "NAI-14-187"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.8,
+            "OK1": 5.1,
+            "TN1": 5.8,
+            "VA1": 5.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 7.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 4.2,
+            "MD1": 6.3,
+            "VA1": 5.8,
+            "NC1": 2.9,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 41,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "j-1138",
+      "name": "J-1138",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 5.3,
+            "OK1": 5.3,
+            "TN1": 6.1,
+            "VA1": 7.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.7,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 8.3,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 7.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.3,
+          "bySite": {
+            "NJ1": 5.6,
+            "NJ2": 6.7,
+            "MD1": 6.6,
+            "VA1": 7.3,
+            "NC1": 5.1,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.4,
+            "OK1": 5.8,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 16,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "j-1319",
+      "name": "J-1319",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.5,
+            "OK1": 3.7,
+            "TN1": 5.9,
+            "VA1": 5.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.7,
+            "ND1": 4.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 5.7,
+            "TN1": 5.3,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 4.4,
+            "MD1": 6.1,
+            "VA1": 5.7,
+            "NC1": 2.7,
+            "IN1": 4.7,
+            "MI1": 5.9,
+            "MN1": 3.9,
+            "OK1": 4.4,
+            "UT1": 4.6
+          },
+          "year": 2022
+        }
+      },
+      "entry": 17,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "j-2726",
+      "name": "J-2726",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.7,
+            "OK1": 4.4,
+            "TN1": 5.9,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 4.0,
+            "NE1": 7.3,
+            "NJ2": 5.7,
+            "OK1": 5.3,
+            "TN1": 4.0,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 3.5,
+            "MD1": 6.3,
+            "VA1": 5.7,
+            "NC1": 2.9,
+            "IN1": 4.7,
+            "MI1": 5.8,
+            "MN1": 4.3,
+            "OK1": 4.4,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 18,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "jersey",
+      "name": "Jersey",
+      "aliases": [
+        "JERSEY (NAI-A16-3)",
+        "JERSEY",
+        "NAI-A16-3"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 3.6,
+            "OK1": 4.8,
+            "TN1": 5.9,
+            "VA1": 5.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 4.8,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.5,
+            "IN1": 5.1,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.9,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 29,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "kenblue",
+      "name": "Kenblue",
+      "aliases": [
+        "KENBLUE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.8,
+            "OK1": 4.6,
+            "TN1": 6.5,
+            "VA1": 5.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.0,
+            "IN1": 4.0,
+            "MI1": 5.7,
+            "MN1": 4.0,
+            "NC1": 5.7,
+            "ND1": 4.0,
+            "NE1": 4.3,
+            "NJ2": 4.0,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 3.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.1,
+            "NJ2": 4.7,
+            "MD1": 6.0,
+            "VA1": 6.0,
+            "NC1": 3.4,
+            "IN1": 4.7,
+            "MI1": 5.9,
+            "MN1": 3.8,
+            "OK1": 4.6,
+            "UT1": 4.6
+          },
+          "year": 2022
+        }
+      },
+      "entry": 79,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "kh3492",
+      "name": "KH3492",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 3.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.3,
+            "MD1": 6.6,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.1,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 13,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "aliases": [
+        "MIDNIGHT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 5.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.3,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 8.3,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.3,
+            "NJ2": 6.2,
+            "MD1": 6.7,
+            "VA1": 7.1,
+            "NC1": 4.7,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.5,
+            "OK1": 5.7,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 88,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "mvs-130",
+      "name": "MVS-130",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.7,
+            "OK1": 4.1,
+            "TN1": 7.0,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 7.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.3,
+            "MN1": 7.7,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 4.7,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 7.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 4.0,
+            "MD1": 6.5,
+            "VA1": 5.9,
+            "NC1": 2.9,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.5,
+            "OK1": 4.6,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 63,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nai-14-122",
+      "name": "Nai-14-122",
+      "aliases": [
+        "NAI-14-122"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.9,
+            "OK1": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.0,
+            "MN1": 7.3,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.6,
+            "NJ2": 4.5,
+            "MD1": 6.5,
+            "VA1": 6.1,
+            "NC1": 3.2,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 4.8,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 34,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nai-14-128",
+      "name": "Nai-14-128",
+      "aliases": [
+        "NAI-14-128"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 2.4,
+            "OK1": 5.1,
+            "TN1": 6.4,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "MI1": 6.3,
+            "MN1": 7.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 8.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 4.3,
+            "MD1": 6.6,
+            "VA1": 6.0,
+            "NC1": 3.1,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.6,
+            "OK1": 4.8,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 36,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nai-14-132",
+      "name": "Nai-14-132",
+      "aliases": [
+        "NAI-14-132"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 1.8,
+            "OK1": 4.1,
+            "TN1": 6.5,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.3,
+            "MN1": 8.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 8.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 3.8,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.5,
+            "IN1": 4.9,
+            "MI1": 6.0,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 37,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nai-15-80",
+      "name": "Nai-15-80",
+      "aliases": [
+        "NAI-15-80"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 2.6,
+            "OK1": 5.4,
+            "TN1": 6.5,
+            "VA1": 6.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.0,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 2.0,
+            "NJ2": 5.0,
+            "MD1": 6.6,
+            "VA1": 6.1,
+            "NC1": 2.9,
+            "IN1": 5.2,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 4.8,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 31,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "new-moon",
+      "name": "New Moon",
+      "aliases": [
+        "NEW MOON (PST-K15-177)",
+        "NEW MOON",
+        "PST-K15-177"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 3.2,
+            "OK1": 4.6,
+            "TN1": 6.4,
+            "VA1": 5.6
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 5.7,
+            "MN1": 6.3,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.7,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 3.3,
+            "MD1": 6.4,
+            "VA1": 5.6,
+            "NC1": 2.6,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.5,
+            "OK1": 4.4,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 86,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nk-1",
+      "name": "NK-1",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.6,
+            "OK1": 5.8,
+            "TN1": 6.3,
+            "VA1": 6.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 7.0,
+            "OK1": 7.3,
+            "TN1": 5.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 2.4,
+            "NJ2": 5.5,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.3,
+            "IN1": 5.1,
+            "MI1": 6.5,
+            "MN1": 4.1,
+            "OK1": 4.9,
+            "UT1": 4.7
+          },
+          "year": 2022
+        }
+      },
+      "entry": 12,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "nurush",
+      "name": "Nurush",
+      "aliases": [
+        "NURUSH (J-3510)",
+        "NURUSH",
+        "J-3510"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.7,
+            "OK1": 4.4,
+            "TN1": 6.5,
+            "VA1": 6.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.7,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 5.6,
+            "MD1": 6.6,
+            "VA1": 6.7,
+            "NC1": 4.0,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.5,
+            "OK1": 5.3,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 19,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "orion",
+      "name": "Orion",
+      "aliases": [
+        "ORION (PST-K13-143)",
+        "ORION",
+        "PST-K13-143"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 3.5,
+            "OK1": 5.4,
+            "TN1": 5.8,
+            "VA1": 6.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 5.0,
+            "MD1": 6.4,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 5.0,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 35,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "paloma",
+      "name": "Paloma",
+      "aliases": [
+        "PALOMA (PST-K13-139)",
+        "PALOMA",
+        "PST-K13-139"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.1,
+            "OK1": 3.9,
+            "TN1": 6.7,
+            "VA1": 5.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.7,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 6.7,
+            "UT1": 4.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 3.0,
+            "NJ2": 3.6,
+            "MD1": 6.2,
+            "VA1": 5.5,
+            "NC1": 2.4,
+            "IN1": 4.7,
+            "MI1": 5.8,
+            "MN1": 4.2,
+            "OK1": 4.2,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 80,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "pivot",
+      "name": "Pivot",
+      "aliases": [
+        "PIVOT"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 1.8,
+            "OK1": 3.8,
+            "TN1": 6.7,
+            "VA1": 5.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.7,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 5.0,
+            "OK1": 6.0,
+            "TN1": 7.3,
+            "UT1": 5.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.7,
+            "NJ2": 3.9,
+            "MD1": 6.3,
+            "VA1": 5.9,
+            "NC1": 3.1,
+            "IN1": 4.9,
+            "MI1": 5.9,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 43,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "ppg-kb-1304",
+      "name": "PPG-KB 1304",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.3,
+            "NC1": 4.0,
+            "OK1": 5.7,
+            "TN1": 5.9,
+            "VA1": 7.1
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.7,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 7.0,
+            "OK1": 7.7,
+            "TN1": 5.0,
+            "UT1": 6.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 6.5,
+            "MD1": 6.7,
+            "VA1": 7.2,
+            "NC1": 4.8,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.7,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 74,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "ppg-kb-1320",
+      "name": "PPG-KB 1320",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.7,
+            "OK1": 3.1,
+            "TN1": 5.7,
+            "VA1": 5.2
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.7,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 6.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 4.3,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 4.1,
+            "NJ2": 3.3,
+            "MD1": 6.2,
+            "VA1": 5.5,
+            "NC1": 2.5,
+            "IN1": 4.6,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "OK1": 4.2,
+            "UT1": 5.0
+          },
+          "year": 2022
+        }
+      },
+      "entry": 68,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "prosperity",
+      "name": "Prosperity",
+      "aliases": [
+        "PROSPERITY"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 2.3,
+            "OK1": 3.9,
+            "TN1": 6.5,
+            "VA1": 5.4
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 8.0,
+            "MN1": 7.0,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 8.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.4,
+            "NJ2": 3.5,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.8,
+            "IN1": 4.8,
+            "MI1": 5.9,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 77,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "pst-11-7",
+      "name": "PST-11-7",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.8,
+            "OK1": 5.6,
+            "TN1": 5.9,
+            "VA1": 5.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 5.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.3,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 6.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 6.7,
+            "NJ2": 2.4,
+            "MD1": 6.3,
+            "VA1": 5.4,
+            "NC1": 2.8,
+            "IN1": 4.5,
+            "MI1": 5.3,
+            "MN1": 4.4,
+            "OK1": 4.2,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 84,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "pst-k15-167",
+      "name": "PST-K15-167",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.3,
+            "OK1": 4.6,
+            "TN1": 6.5,
+            "VA1": 5.5
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 5.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.7,
+            "NJ2": 4.3,
+            "MD1": 6.2,
+            "VA1": 5.8,
+            "NC1": 3.0,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.1,
+            "OK1": 4.5,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 85,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "pst-k15-172",
+      "name": "PST-K15-172",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.9,
+            "OK1": 5.2,
+            "TN1": 6.4,
+            "VA1": 6.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.4,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.0,
+            "IN1": 6.0,
+            "MI1": 7.0,
+            "MN1": 5.7,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 4.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 5.6,
+            "MD1": 6.5,
+            "VA1": 6.7,
+            "NC1": 4.2,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.3,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 87,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "pst-t14-39",
+      "name": "PST-T14-39",
+      "aliases": [],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.5,
+            "OK1": 5.1,
+            "TN1": 6.3,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.0,
+            "OK1": 5.7,
+            "TN1": 5.7,
+            "UT1": 5.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 4.4,
+            "NJ2": 4.8,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.5,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.8,
+            "UT1": 4.8
+          },
+          "year": 2022
+        }
+      },
+      "entry": 89,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "rad-553",
+      "name": "Rad 553",
+      "aliases": [
+        "RAD 553"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.2,
+            "OK1": 5.1,
+            "TN1": 6.0,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.0,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 4.7,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 5.3,
+            "ND1": 5.7,
+            "NE1": 6.7,
+            "NJ2": 5.3,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 4.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 4.5,
+            "MD1": 6.3,
+            "VA1": 6.0,
+            "NC1": 3.2,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 4.7,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 6,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "rad-1776",
+      "name": "Rad-1776",
+      "aliases": [
+        "RAD-1776"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.3,
+            "OK1": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 5.0,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.7,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 4.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.1,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.6,
+            "IN1": 5.2,
+            "MI1": 6.4,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 28,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "selway",
+      "name": "Selway",
+      "aliases": [
+        "SELWAY"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.5,
+            "OK1": 5.3,
+            "TN1": 6.1,
+            "VA1": 7.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.1,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 5.0,
+            "UT1": 4.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 6.5,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.5,
+            "NC1": 4.2,
+            "IN1": 5.1,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.1
+          },
+          "year": 2022
+        }
+      },
+      "entry": 7,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "shamrock",
+      "name": "Shamrock",
+      "aliases": [
+        "SHAMROCK"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.6,
+            "OK1": 4.1,
+            "TN1": 6.5,
+            "VA1": 6.0
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 4.0,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 4.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 4.2,
+            "MD1": 6.3,
+            "VA1": 5.8,
+            "NC1": 2.8,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.5,
+            "UT1": 4.9
+          },
+          "year": 2022
+        }
+      },
+      "entry": 72,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "skye",
+      "name": "Skye",
+      "aliases": [
+        "SKYE"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 3.9,
+            "OK1": 5.9,
+            "TN1": 6.8,
+            "VA1": 7.3
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 5.0
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 6.4,
+            "MD1": 6.7,
+            "VA1": 7.2,
+            "NC1": 4.7,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.6,
+            "OK1": 5.7,
+            "UT1": 5.3
+          },
+          "year": 2022
+        }
+      },
+      "entry": 45,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "starr",
+      "name": "Starr",
+      "aliases": [
+        "STARR (GO-2628)",
+        "STARR",
+        "GO-2628"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.4,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 4.5,
+            "OK1": 6.1,
+            "TN1": 6.8,
+            "VA1": 7.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 7.3,
+            "TN1": 6.7,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 6.5,
+          "bySite": {
+            "NJ1": 6.3,
+            "NJ2": 6.7,
+            "MD1": 6.9,
+            "VA1": 7.5,
+            "NC1": 5.3,
+            "IN1": 5.9,
+            "MI1": 7.1,
+            "MN1": 4.7,
+            "OK1": 6.0,
+            "UT1": 5.5
+          },
+          "year": 2022
+        }
+      },
+      "entry": 47,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "super-moon",
+      "name": "Super Moon",
+      "aliases": [
+        "SUPER MOON (PST-K13-141)",
+        "SUPER MOON",
+        "PST-K13-141"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 3.7,
+            "OK1": 5.4,
+            "TN1": 6.9,
+            "VA1": 6.8
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.9,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 7.0,
+            "OK1": 6.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 5.3,
+            "MD1": 6.8,
+            "VA1": 6.6,
+            "NC1": 3.8,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.7,
+            "OK1": 5.3,
+            "UT1": 5.4
+          },
+          "year": 2022
+        }
+      },
+      "entry": 81,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "syrah",
+      "name": "Syrah",
+      "aliases": [
+        "SYRAH (LTP-11-41)",
+        "SYRAH",
+        "LTP-11-41"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.5,
+            "OK1": 5.9,
+            "TN1": 6.5,
+            "VA1": 7.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.5,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 7.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 6.5,
+            "MD1": 6.7,
+            "VA1": 7.1,
+            "NC1": 4.5,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.6,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 4,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "twilight",
+      "name": "Twilight",
+      "aliases": [
+        "TWILIGHT (NAI-13-132)",
+        "TWILIGHT",
+        "NAI-13-132"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.2,
+            "OK1": 4.6,
+            "TN1": 6.8,
+            "VA1": 5.9
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.8,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "MI1": 7.0,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 8.0,
+            "OK1": 5.7,
+            "TN1": 7.3,
+            "UT1": 7.7
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 4.6,
+            "NJ2": 5.1,
+            "MD1": 6.5,
+            "VA1": 6.4,
+            "NC1": 3.8,
+            "IN1": 5.3,
+            "MI1": 6.4,
+            "MN1": 4.4,
+            "OK1": 5.1,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 30,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "united",
+      "name": "United",
+      "aliases": [
+        "UNITED (NAI-13-14)",
+        "UNITED",
+        "NAI-13-14"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 4.6,
+            "OK1": 5.0,
+            "TN1": 6.6,
+            "VA1": 6.9
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.6,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.7,
+            "MN1": 6.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.0,
+            "TN1": 6.7,
+            "UT1": 7.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 4.6,
+            "NJ2": 5.9,
+            "MD1": 6.6,
+            "VA1": 6.8,
+            "NC1": 4.2,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.5,
+            "OK1": 5.4,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 33,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    },
+    {
+      "id": "yellowstone",
+      "name": "Yellowstone",
+      "aliases": [
+        "YELLOWSTONE (A12-7)",
+        "YELLOWSTONE",
+        "A12-7"
+      ],
+      "metrics": {
+        "transitionQuality": {
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 3.5,
+            "OK1": 4.7,
+            "TN1": 6.3,
+            "VA1": 5.7
+          },
+          "year": 2022
+        },
+        "knoxvilleQuality": {
+          "mean": 6.3,
+          "year": 2022
+        },
+        "geneticColor": {
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 4.0,
+            "OK1": 5.7,
+            "TN1": 5.0,
+            "UT1": 4.3
+          },
+          "year": 2022
+        },
+        "nationalMeanQuality": {
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 3.6,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.8,
+            "IN1": 4.9,
+            "MI1": 5.9,
+            "MN1": 4.5,
+            "OK1": 4.5,
+            "UT1": 5.2
+          },
+          "year": 2022
+        }
+      },
+      "entry": 14,
+      "species": "kentucky_bluegrass",
+      "trial": "kb17"
+    }
+  ]
+}

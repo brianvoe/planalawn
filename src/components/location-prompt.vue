@@ -1,14 +1,10 @@
 <script lang="ts">
-import LocationSelect from './location-select.vue'
-import { requestBrowserLocation } from '../services/geolocation'
+import LocationActions from './location-actions.vue'
 import type { UserLocation } from '../types'
 
 export default {
   name: 'LocationPrompt',
-  components: { LocationSelect },
-  data() {
-    return { busy: false, error: '' }
-  },
+  components: { LocationActions },
   computed: {
     location(): UserLocation {
       return this.$store.state.location
@@ -23,18 +19,6 @@ export default {
   methods: {
     dismiss() {
       this.$store.dispatch('dismissLocationPrompt')
-    },
-    async useGeo() {
-      this.busy = true
-      this.error = ''
-      try {
-        const loc = await requestBrowserLocation()
-        await this.$store.dispatch('setLocation', loc)
-      } catch (e) {
-        this.error = e instanceof Error ? e.message : 'Could not get location — pick a city instead'
-      } finally {
-        this.busy = false
-      }
     },
   },
 }
@@ -103,38 +87,12 @@ export default {
     }
   }
 
-  .loc-prompt__actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.55rem 0.75rem;
-
-    .location-select {
-      flex: 1 1 16rem;
-      min-width: 16rem;
-      max-width: 24rem;
-    }
-
-    .btn--ghost {
-      margin-left: auto;
-    }
+  .loc-actions .btn--ghost {
+    margin-left: auto;
 
     @media (max-width: 559px) {
-      .location-select {
-        flex: 1 1 100%;
-        min-width: 0;
-        max-width: none;
-      }
-
-      .btn--ghost {
-        margin-left: 0;
-      }
+      margin-left: 0;
     }
-  }
-
-  .err {
-    font-size: 0.85rem !important;
-    color: var(--color-danger) !important;
   }
 }
 </style>
@@ -159,22 +117,16 @@ export default {
               Timing
             </span>
             <span class="chip">
-              <font-awesome-icon icon="fa-solid fa-seedling" />
+              <font-awesome-icon :icon="['lawn', 'seed']" />
               Seed scores
             </span>
           </div>
         </div>
       </div>
 
-      <div class="loc-prompt__actions">
-        <button type="button" class="btn btn--primary" :disabled="busy" @click="useGeo">
-          <font-awesome-icon icon="fa-solid fa-location-crosshairs" />
-          {{ busy ? 'Locating…' : 'Use my location' }}
-        </button>
-        <LocationSelect />
+      <LocationActions>
         <button type="button" class="btn btn--ghost" @click="dismiss">Not now</button>
-      </div>
-      <p v-if="error" class="err">{{ error }}</p>
+      </LocationActions>
     </div>
   </section>
 </template>

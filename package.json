@@ -10,10 +10,11 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run src/data/blends/catalog.test.ts",
+    "test": "vitest run src/data/blends/catalog.test.ts src/data/products.test.ts src/services/apply.test.ts src/services/units.test.ts src/tasks/task-ui.test.ts",
     "test:links": "vitest run src/data/blends/links.test.ts",
     "ntep:ingest": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/tf18_24-8.pdf --out src/data/ntep",
-    "ntep:ingest:bermuda": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/bg19_24-11f.pdf --species bermudagrass --trial bg19 --year 2023 --out src/data/ntep"
+    "ntep:ingest:bermuda": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/bg19_24-11f.pdf --species bermudagrass --trial bg19 --year 2023 --out src/data/ntep",
+    "ntep:ingest:bluegrass": ".venv/bin/python scripts/ntep/ingest_pdf.py --pdf scripts/ntep/cache/kb17_23-9.pdf --species kentucky_bluegrass --trial kb17 --year 2022 --out src/data/ntep"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",

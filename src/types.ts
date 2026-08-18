@@ -126,6 +126,108 @@ export interface RateTemplate {
   depthInches?: number
 }
 
+export type ProductForm = 'liquid' | 'granular'
+export type WaterIn = 'yes' | 'no' | 'either'
+/** Sprayables are dosed by volume, except the dry ones that go by weight. */
+export type LiquidMeasure = 'fl oz' | 'oz wt'
+/**
+ * Which units the sprayer numbers are shown in.
+ *
+ * Labels are printed in US units and the catalog stores them that way, so this
+ * only decides what you read — plenty of people measure a tank in millilitres.
+ */
+export type SprayUnits = 'us' | 'metric'
+
+/**
+ * A spreader as the setting tables name it.
+ *
+ * Labels publish one setting per spreader family rather than per model — every
+ * Scotts rotary shares a column — so these entries mirror the columns, and
+ * `models` is there to help you find yours.
+ */
+export interface Spreader {
+  id: string
+  name: string
+  brand: string
+  type: 'rotary' | 'drop' | 'handheld'
+  /** Model names that read this column. */
+  models: string
+  /** Typical throw width, feet — a starting guess for calibration only. */
+  swathFt: number
+}
+
+/**
+ * A dial setting for one spreader, copied from a published table.
+ *
+ * Settings are never derived: dials differ between models, so a number that
+ * isn't printed for your spreader is a guess that could burn a lawn.
+ */
+export interface SpreaderSetting {
+  spreaderId: string
+  /** As printed, so '3 1/4' stays '3 1/4' rather than becoming 3.25. */
+  setting: string
+  note?: string
+}
+
+export interface ProductBag {
+  lb: number
+  coverageSqFt: number
+}
+
+/**
+ * A product you can actually buy, with the label numbers behind it.
+ *
+ * Liquids carry a broadcast dose per 1,000 sq ft (the only rate that scales to
+ * a lawn) and, where the label prints one, a spot-spray mix per gallon.
+ * Granulars carry pounds per 1,000 sq ft plus published spreader settings.
+ */
+export interface Product {
+  id: string
+  name: string
+  brand: string
+  form: ProductForm
+  /** Active ingredients with percentages, as printed. */
+  active: string
+  /** The job in plain words, e.g. 'Broadleaf weeds in an established lawn'. */
+  purpose: string
+  /** Tasks this serves, so the list can follow what's due. */
+  taskIds: string[]
+  /** Concentrate per 1,000 sq ft, broadcast. */
+  ozPer1000?: number
+  ozPer1000Range?: [number, number]
+  /** Dry concentrates (WDG, DF) are weighed, not poured. */
+  measure?: LiquidMeasure
+  /** Water the label wants behind that dose, gallons per 1,000 sq ft. */
+  waterGalPer1000?: [number, number]
+  /** Spot-spray mix, fl oz per gallon, only where the label prints one. */
+  ozPerGallon?: number
+  /** Surfactant or oil the label requires in the tank. */
+  adjuvant?: string
+  /** Pounds of product per 1,000 sq ft. */
+  lbPer1000?: number
+  lbPer1000Range?: [number, number]
+  bags?: ProductBag[]
+  settings?: SpreaderSetting[]
+  /**
+   * Spreaders the label forbids — not the same as a missing setting. Several
+   * weed-and-feeds rule out hand-helds outright, and there the answer is a
+   * different spreader rather than a calibration strip.
+   */
+  notLabeledFor?: string[]
+  waterIn?: WaterIn
+  /** Watering advice in the label's own terms, when the plain cases don't fit. */
+  waterInNote?: string
+  /** Re-entry or dry time in the label's own terms. */
+  reentry?: string
+  maxPerYear?: string
+  /** Turf this is labeled for, so a warm-season-only product can warn a cool lawn. */
+  turf?: GrassType[]
+  /** Grass restrictions worth knowing before you buy. */
+  grassNote?: string
+  notes: string
+  labelUrl?: string
+}
+
 export interface SprayerMixInput {
   mode?: MixMode
   tankGallons?: number
@@ -164,6 +266,9 @@ export interface Cultivar {
   name: string
   aliases?: string[]
   metrics?: CultivarMetrics
+  /** Set by the ingest. Needed to link a mixture's off-species component. */
+  species?: string
+  trial?: string
 }
 
 export interface NtepMeta {
@@ -209,6 +314,8 @@ export interface BlendComponent {
 
 export type BlendChannel = 'retail' | 'pro' | 'specialty' | 'amazon'
 export type UrlCheckMode = 'strict' | 'lenient'
+/** How you buy it. Some NTEP entries are patented hybrids with no seed at all. */
+export type BlendForm = 'seed' | 'sod'
 
 export interface Blend {
   id: string
@@ -221,6 +328,8 @@ export interface Blend {
   components: BlendComponent[]
   notes?: string
   channel?: BlendChannel
+  /** Defaults to seed when absent. */
+  form?: BlendForm
   buyHint?: string
   /** Product page. Required on curated blends. */
   url?: string
@@ -253,6 +362,7 @@ export interface CultivarFit {
   label: string
   parts: ScorePart[]
   coverage: Coverage
+  /** Site the nearest factor was read from — null when a mean stood in for it. */
   nearestSite: NearbySite | null
   climate: ClimateBand | null
 }
@@ -274,13 +384,28 @@ export interface BlendFit {
     brownPatch: number | null
     color: number | null
   }
+  /** Weighted mean of each score factor across the cultivars that report it. */
+  factors?: Partial<Record<ScoreFactor, number>>
+  /** Site behind the nearest factor, when every scored cultivar shares one. */
+  nearestSite?: NearbySite | null
+}
+
+/** One labelled 1-9 rating bar on a blend card or detail page. */
+export interface FitMeter {
+  key: string
+  label: string
+  value: number
+  hint: string
+  /** Mean of this factor across the trial, drawn as a reference mark. */
+  baseline?: number
 }
 
 export interface Profile {
   lawnName: string
   lawnSqFt: number
   grassType: GrassType | ''
-  preferredSeed: string
+  /** Species ids you actually grow, from the NTEP catalog; empty means no preference. */
+  seedSpecies: string[]
   soilType: string
   sunExposure: string
   notes: string
@@ -289,6 +414,10 @@ export interface Profile {
 export interface Equipment {
   tankGallons: number
   sprayCoverageSqFtPerTank: number
+  /** Which spreader's setting column to read; '' until you pick one. */
+  spreaderId: string
+  /** Units for tank and dose figures — what you measure with, not what the label prints. */
+  sprayUnits: SprayUnits
 }
 
 export interface RateOverride {

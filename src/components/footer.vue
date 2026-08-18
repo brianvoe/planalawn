@@ -89,7 +89,7 @@ export default {
         <router-link to="/calendar">Calendar</router-link>
         <router-link to="/tasks">Tasks</router-link>
         <router-link to="/seeds">Seeds</router-link>
-        <router-link to="/tools/sprayer">Sprayer</router-link>
+        <router-link to="/calculate">Calculate</router-link>
         <router-link to="/settings">My lawn</router-link>
       </nav>
     </div>

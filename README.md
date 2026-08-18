@@ -8,7 +8,7 @@ Lawn Plan Nerd helps you answer the questions that actually matter when you’re
 
 - **What should I do next** for my lawn, given the season and soil temperature?
 - **How much product** do I put down (seed, fert, peat, topsoil, herbicide)?
-- **How do I mix the sprayer** for my tank size and yard?
+- **How much SpeedZone goes in my tank**, and **what setting does my Scotts spreader need** for this bag?
 - **Which seed blend makes sense for my area**, based on real NTEP trial data—not just bag marketing?
 
 No account. No backend required. Your lawn profile, location, and custom blends stay in **your browser**.
@@ -38,7 +38,21 @@ The point is **not** to crown a single winning seed. The point is to help you un
 ## Product gameplan
 
 ### 1. Home
-A clear front door: live conditions (when location is set), “do now” actions, and paths into calendar, tasks, seeds, and settings.
+A clear front door. On a desktop the hero owns exactly one screen and centres in it, so the whole
+product is visible before any scrolling: the wordmark and pitch, a live calendar panel (the year as a
+tick per month with a dot per job, plus whatever is open today), seed intel as a one-line side note,
+and a rail into every section. A **View more** cue at the bottom fades in and nods downward — press
+it or scroll for the rest of the page. Month ticks deep-link into the calendar (`/calendar?month=9`).
+
+Before a location is set the hero asks for one in the same slot the buttons live in, so the screen
+never grows: the location banner that other pages carry is suppressed here.
+
+Motion is used to show the page working, not to decorate it. On load the wordmark takes a single
+light sweep, the stat figures tick up from zero, the month strip fills in left to right and the
+current month blooms once the scan reaches it, and the open jobs land one beat apart. Further down,
+blocks fade and rise as they arrive and the seed score bars hold at zero until their card is on
+screen, so the bars draw where they can be seen. Everything above is dropped under
+`prefers-reduced-motion`, landing straight on the final state.
 
 ### 2. Calendar / next actions
 Combine:
@@ -53,7 +67,38 @@ Buckets: **Do now · Coming up · Later**.
 Each job (kill, aerate, seed, topsoil, peat, mulch, fertilize, water) has:
 
 - Why / when / steps / materials
-- Rate or sprayer calculator tied to your lawn size
+- Rate or mix calculator tied to your lawn size
+
+The library at `/tasks` groups them by the kind of work — **seed & renovate, weeds, feed, pests, beds
+& trees** — and the group headings double as filters. Search reaches names, summaries, and materials,
+so the jug in the garage ("quinclorac") finds the job. Each card carries its own icon, the month
+range it usually happens in, the tool it goes down with, its soil gate, and a **Do now / Coming up**
+chip from live soil temperature. Groups, icons, and those labels live in `src/tasks/task-ui.ts`.
+
+### 3b. Calculate (`/calculate`)
+Named products, not just product classes. Pick the bottle or bag you actually bought and get:
+
+- Liquids: the dose for **your** tank, what that works out to per gallon (or litre), and how many tanks
+- Granulars: pounds for the lawn, bags to buy, and the **published spreader setting** for your model
+- A units switch (`fl oz / gal` or `ml / L`) in the toolbar and in Settings → Equipment. Labels are
+  stored as printed and converted for display only, so the arithmetic has one source; areas stay in
+  square feet and bags in pounds, because that's how both are sold
+- A calibration helper (catch-and-weigh) when the bag prints no setting for your spreader — settings
+  are never converted between models or invented
+- Products for whatever task is **due now** sorted to the top
+- A warning when the label doesn't cover the grass you told us you have (Celsius on fescue kills the
+  lawn), and a distinct "not this spreader" answer where the label forbids hand-helds outright
+
+Catalog rules in `src/data/products.ts`:
+
+| Case | How it's stored |
+| --- | --- |
+| Reformulated product | One entry per analysis (Turf Builder 32-0-4 and 38-0-4 both exist — the dials moved) |
+| Dry concentrate (WDG, DF) | `measure: 'oz wt'` — weighed on a scale, so the UI stops saying fl oz |
+| Rate varies by species or region | Stored at a stated default with the full label range and the split in `grassNote` |
+| Setting only on a retailer's site | Not stored — calibrate instead |
+| Label prohibits a spreader | `notLabeledFor`, which suppresses the calibration offer too |
+| Tank mix needs surfactant or oil | `adjuvant`, shown as its own line |
 
 ### 4. Seeds (the research workspace)
 Three linked datasets:
@@ -86,7 +131,9 @@ Location (GPS or ZIP), lawn size, equipment defaults, import/export backup.
 3. **Management beats genetics** when gaps are tiny.
 4. **Missing trial data ≠ bad cultivar** (e.g. a blend component not in a given NTEP cycle).
 5. **Labels win** — calculators are templates; always follow the bag you bought.
-6. **Static-first** — ship as a client-side app; grow data via ingest scripts, not a server.
+6. **No invented numbers** — a spreader setting we can't source from the label is a setting we don't
+   show. Dials aren't convertible between models, so the honest alternative is a calibration strip.
+7. **Static-first** — ship as a client-side app; grow data via ingest scripts, not a server.
 
 ---
 
@@ -94,7 +141,7 @@ Location (GPS or ZIP), lawn size, equipment defaults, import/export backup.
 
 | Area | Status |
 |------|--------|
-| Routing, calendar, tasks, sprayer | In place |
+| Routing, calendar, tasks, product rates | In place |
 | Vuex + localStorage (profile, location, user blends) | In place |
 | US location (geolocation or ZIP) + local soil temp | In place |
 | NTEP PDF → JSON ingest (Python) | In place |
@@ -154,9 +201,9 @@ Parsed JSON lands in `src/data/ntep/`. We intentionally extract **high-value hom
 |-------|---------|
 | `/` | Home — conditions, next actions, navigation |
 | `/calendar` | Do now / soon / later from season + soil temp |
-| `/tasks` · `/tasks/:id` | Job library, rates, sprayer |
+| `/tasks` · `/tasks/:id` | Job library, rates, mixes |
 | `/seeds` | Blends, cultivars, compare, NTEP coverage |
-| `/tools/sprayer` | Standalone tank mix calculator |
+| `/calculate` | Named products → tank ounces, pounds, spreader settings (`/how-much` and `/tools/sprayer` redirect here) |
 | `/settings` | Location, profile, JSON backup |
 
 ---
@@ -169,7 +216,10 @@ Parsed JSON lands in `src/data/ntep/`. We intentionally extract **high-value hom
 | `src/data/blends/curated.json` | Starter commercial blends |
 | `src/data/tasks.js` | Job catalog |
 | `src/data/timingRules.js` | Months + soil gates |
-| `src/data/rates.js` | Rate / mix templates |
+| `src/data/rates.ts` | Generic rate / mix templates by product class |
+| `src/data/products.ts` | Named products with label rates + published spreader settings |
+| `src/data/spreaders.ts` | Spreader models the setting tables name |
+| `src/services/units.ts` | US ↔ metric display conversion for doses, tanks and water |
 | `src/data/climate.js` | Climate bands for suitability |
 | `src/store/` | Persisted user state |
 

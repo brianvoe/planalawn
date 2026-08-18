@@ -59,6 +59,9 @@
   --modal-panel-shadow: 0 8px 40px color-mix(in srgb, var(--color-text) 30%, transparent);
   --speed: 0.3s;
   --input-height: 44px;
+  /* The sticky bar's height, enforced in nav.scss so the two can't drift. The
+     home hero subtracts it to fill exactly one screen. */
+  --nav-height: 3.2rem;
   --max-width: 1120px;
   --scrollbar-size: 10px;
   --scrollbar-track: var(--color-surface-alt);

@@ -12,15 +12,15 @@ const SECTIONS = [
     name: 'seed-blends',
     label: 'Blends',
     to: '/seeds/blends',
-    icon: 'seed-bag',
-    blurb: 'Bags you can buy, ranked for your climate.',
+    icon: ['lawn', 'seed-bag'],
+    blurb: 'Bags and sod you can buy, ranked for your climate.',
   },
   {
     id: 'cultivars',
     name: 'seed-cultivars',
     label: 'Cultivars',
     to: '/seeds/cultivars',
-    icon: 'fa-solid fa-leaf',
+    icon: ['lawn', 'grass'],
     blurb: 'Named grasses from NTEP, scored for your area.',
   },
   {
@@ -28,7 +28,7 @@ const SECTIONS = [
     name: 'seed-compare',
     label: 'Compare',
     to: '/seeds/compare',
-    icon: 'fa-solid fa-code-compare',
+    icon: ['fas', 'code-compare'],
     blurb: 'Put two or three blends side by side.',
   },
   {
@@ -36,7 +36,7 @@ const SECTIONS = [
     name: 'seed-ntep',
     label: 'NTEP tables',
     to: '/seeds/ntep',
-    icon: 'fa-solid fa-table',
+    icon: ['fas', 'table'],
     blurb: 'Trial charts and sortable means, not bag copy.',
   },
 ] as const
@@ -69,8 +69,18 @@ export default {
     speciesOptions() {
       return loadedSpecies
     },
+    /**
+     * The species the panels are showing.
+     *
+     * A seed type from your profile beats the climate guess — someone with
+     * bermuda in a transition zone told us so on purpose. Only species we hold
+     * trial data for can lead, since the panels have nothing to draw otherwise.
+     */
     activeSpecies(): string {
-      return this.speciesId || defaultSpeciesId(this.grassType)
+      if (this.speciesId) return this.speciesId
+      const mine: string[] = this.$store.getters.seedSpecies
+      const loaded = mine.find((id) => loadedSpecies.some((s) => s.id === id))
+      return loaded || defaultSpeciesId(this.grassType)
     },
     cultivarCount(): number {
       return cultivarCount
@@ -231,56 +241,6 @@ export default {
     }
   }
 
-  .blend-card {
-    display: block;
-    padding: 1rem 1.1rem;
-    color: inherit;
-    text-decoration: none;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: calc(var(--border-radius) * 2);
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition:
-      border-color 0.15s ease,
-      box-shadow 0.15s ease,
-      transform 0.15s ease;
-
-    &:hover {
-      border-color: var(--color-primary);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-primary);
-      outline-offset: 2px;
-    }
-
-    .blend-card__top {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-
-    h3 {
-      margin: 0 0 0.2rem;
-      font-size: 1.15rem;
-    }
-
-    .mfr,
-    p {
-      margin: 0 0 0.35rem;
-      font-size: 0.88rem;
-      color: var(--color-text-muted);
-    }
-
-    .comps {
-      font-size: 0.8rem !important;
-    }
-  }
-
   .tag {
     display: inline-flex;
     align-items: center;
@@ -410,39 +370,6 @@ export default {
     color: var(--color-text-muted);
   }
 
-  .form-grid {
-    display: grid;
-    gap: 0.75rem;
-    margin-bottom: 0.85rem;
-
-    label {
-      display: grid;
-      gap: 0.3rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--color-text-muted);
-    }
-
-    .full {
-      grid-column: 1 / -1;
-    }
-  }
-
-  .comp-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .linkish {
-    color: var(--color-primary-strong);
-    text-decoration: underline;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
   .mfr {
     margin: 0 0 0.35rem;
     font-size: 0.88rem;
@@ -456,7 +383,7 @@ export default {
     <header v-if="isHub" class="seeds-hero">
       <div class="seeds-hero__inner container">
         <p class="eyebrow">
-          <font-awesome-icon icon="fa-solid fa-seedling" />
+          <font-awesome-icon :icon="['lawn', 'seed']" />
           Seed intel
         </p>
         <h1>Seeds</h1>
@@ -479,24 +406,9 @@ export default {
       </p>
 
       <div v-if="isHub" class="dest-grid">
-        <router-link
-          v-for="s in sections"
-          :key="s.id"
-          class="feature-card dest-card"
-          :to="s.to"
-        >
+        <router-link v-for="s in sections" :key="s.id" class="feature-card dest-card" :to="s.to">
           <span class="feature-card__icon">
-            <svg
-              v-if="s.icon === 'seed-bag'"
-              viewBox="0 0 512 512"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M328 112H184l-37.3-74.5C144.9 33.9 144 29.9 144 25.9 144 11.6 155.6 0 169.9 0h172.2C356.4 0 368 11.6 368 25.9c0 4-.9 8-2.7 11.6L328 112zM169.6 160h172.8l48.7 40.6C457.6 256 496 338 496 424.5 496 472.8 456.8 512 408.5 512H103.4C55.2 512 16 472.8 16 424.5 16 338 54.4 256 120.9 200.6L169.6 160z"
-              />
-            </svg>
-            <font-awesome-icon v-else :icon="s.icon" />
+            <font-awesome-icon :icon="s.icon" />
           </span>
           <span>
             <h3>{{ s.label }}</h3>

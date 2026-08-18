@@ -12,6 +12,7 @@ import type {
   RateOverride,
   ResolvedLocation,
   RootState,
+  SprayUnits,
   UserLocation,
 } from '../types'
 
@@ -21,7 +22,7 @@ function defaultState(): RootState {
       lawnName: 'My lawn',
       lawnSqFt: 5000,
       grassType: '',
-      preferredSeed: '',
+      seedSpecies: [],
       soilType: '',
       sunExposure: '',
       notes: '',
@@ -42,6 +43,8 @@ function defaultState(): RootState {
     equipment: {
       tankGallons: 2,
       sprayCoverageSqFtPerTank: 1000,
+      spreaderId: '',
+      sprayUnits: 'us',
     },
     rateOverrides: {},
     userBlends: [],
@@ -78,11 +81,16 @@ export default createStore<RootState>({
   plugins: [localStoragePlugin],
   getters: {
     lawnSqFt: (s) => s.profile.lawnSqFt,
-    preferredSeed: (s) => s.profile.preferredSeed,
+    // A profile saved before this setting existed has no array at all.
+    seedSpecies: (s): string[] => s.profile.seedSpecies || [],
     grassType: (s): GrassType | null => resolvedGrassType(s.profile.grassType, s.location),
     grassTypeIsInferred: (s) => !s.profile.grassType && Boolean(resolvedGrassType('', s.location)),
     tankGallons: (s) => s.equipment.tankGallons,
     sprayCoverage: (s) => s.equipment.sprayCoverageSqFtPerTank,
+    spreaderId: (s) => s.equipment.spreaderId || '',
+    // An imported or older backup can arrive without this, so US is the fallback
+    // rather than whatever string happens to be in storage.
+    sprayUnits: (s): SprayUnits => (s.equipment.sprayUnits === 'metric' ? 'metric' : 'us'),
     userLocation: (s): UserLocation | null =>
       s.location?.latitude != null && s.location?.longitude != null ? s.location : null,
     hasLocation: (_s, getters) => Boolean(getters.userLocation),

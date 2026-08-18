@@ -285,6 +285,14 @@ class Identity:
 # Metric key -> parsed table key. lpiGroup1 (Table 1) is listed last because
 # it is the authoritative entry list, so its commercial names win the display
 # name once every other table has been folded in.
+METRIC_NOTE_LABELS = {
+    "transitionQuality": "regional quality",
+    "geneticColor": "genetic color",
+    "brownPatch": "disease",
+    "droughtQuality": "drought",
+    "nationalMeanQuality": "national mean quality",
+}
+
 METRIC_SOURCES = [
     ("transitionQuality", "transitionQuality"),
     ("geneticColor", "geneticColor"),
@@ -359,16 +367,22 @@ def build_cultivar_index(tables: dict, warnings: list):
     return sorted(records.values(), key=lambda x: x["name"].lower())
 
 
-EXPECTED_METRICS = {
-    "transitionQuality",
-    "knoxvilleQuality",
-    "geneticColor",
-    "brownPatch",
-    "droughtQuality",
-    "nationalMeanQuality",
-}
-
 RATING_MIN, RATING_MAX = 1.0, 9.0
+
+
+def expected_metrics(tables: dict) -> set[str]:
+    """
+    The metrics this report should have produced for every cultivar.
+
+    Derived from the tables that were actually parsed rather than hardcoded,
+    because reports differ in what they measure — the Kentucky bluegrass test
+    has no drought trial at all. Still strict: once a table is parsed, every
+    cultivar must carry its metric, so a merge failure is fatal as before.
+    """
+    metrics = {metric for metric, table_key in METRIC_SOURCES if table_key in tables}
+    if "TN1" in tables.get("transitionQuality", {}).get("sites", []):
+        metrics.add("knoxvilleQuality")
+    return metrics
 
 
 def validate(tables: dict, cultivars: list, warnings: list):
@@ -394,7 +408,8 @@ def validate(tables: dict, cultivars: list, warnings: list):
             f"{len(cultivars)} cultivars built from tables of {expected_total} rows"
         )
 
-    partial = [c["name"] for c in cultivars if set(c["metrics"]) != EXPECTED_METRICS]
+    expected = expected_metrics(tables)
+    partial = [c["name"] for c in cultivars if set(c["metrics"]) != expected]
     if partial:
         errors.append(
             f"{len(partial)} cultivars missing metrics (merge failure): "
@@ -465,6 +480,16 @@ TABLE_LAYOUT = {
         ("droughtQuality", "23A", "DROUGHT"),
         ("lpiGroup1", "1A", "LPI"),
     ],
+    # 2017 National Kentucky Bluegrass Test (kb17_23-9). Three metrics only, and
+    # that is the honest ceiling for this report: it runs no drought trial, and
+    # its disease tables (stem rust, dollar spot, summer patch) are printed two
+    # cultivars per line, which the row parser cannot split on text alone.
+    # Cultivars therefore score on 3 of 5 factors and say so in the UI.
+    "kentucky_bluegrass": [
+        ("transitionQuality", 6, "TRANSITION REGION"),
+        ("geneticColor", 12, "GENETIC COLOR"),
+        ("lpiGroup1", 1, "LPI"),
+    ],
 }
 
 
@@ -479,8 +504,7 @@ SPECIES_CATALOG = {
         "id": "kentucky_bluegrass",
         "label": "Kentucky bluegrass",
         "season": "cool",
-        "ntepTrials": [],
-        "status": "schema_ready",
+        "ntepTrials": ["kb17"],
     },
     "perennial_ryegrass": {
         "id": "perennial_ryegrass",
@@ -528,6 +552,9 @@ NTEP_SITES = {
     "MI1": {"name": "East Lansing, MI", "state": "MI", "climateBand": "cool", "lat": 42.73, "lon": -84.48},
     "NE1": {"name": "Mead, NE", "state": "NE", "climateBand": "cool", "lat": 41.23, "lon": -96.49},
     "UT1": {"name": "Logan, UT", "state": "UT", "climateBand": "cool", "lat": 41.74, "lon": -111.83},
+    # 2017 National Kentucky Bluegrass Test additions (kb17).
+    "MN1": {"name": "St. Paul, MN", "state": "MN", "climateBand": "cool", "lat": 44.98, "lon": -93.18},
+    "ND1": {"name": "Fargo, ND", "state": "ND", "climateBand": "cool", "lat": 46.88, "lon": -96.79},
     # Guelph is in Ontario, so `state` holds a province and country is explicit.
     # Distance ranking still works; only the label needs the distinction.
     "ON1": {"name": "Guelph, ON", "state": "ON", "country": "CA", "climateBand": "cool", "lat": 43.53, "lon": -80.23},
@@ -569,7 +596,9 @@ def ingest(pdf_path: Path, species: str, trial: str, year: int, out_dir: Path):
         "trial": trial,
         "year": year,
         "sourcePdf": pdf_path.name,
-        "notes": "Parsed high-value NTEP tables only (regional quality, color, disease, drought).",
+        # Filled in below from the tables that actually parsed, because reports
+        # differ in what they measure and a fixed blurb would overstate it.
+        "notes": "",
     }
 
     tables = {"meta": meta}
@@ -590,6 +619,13 @@ def ingest(pdf_path: Path, species: str, trial: str, year: int, out_dir: Path):
     for c in cultivars:
         c["species"] = species
         c["trial"] = trial
+
+    parsed = ", ".join(
+        METRIC_NOTE_LABELS[metric]
+        for metric, table_key in METRIC_SOURCES
+        if table_key in tables
+    )
+    meta["notes"] = f"Parsed high-value NTEP tables only ({parsed})."
 
     validate(tables, cultivars, warnings)
 

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import curated from './curated.json'
 import { KNOWN_CULTIVAR_GAP_SET } from './knownGaps'
 import bermudaPack from '../ntep/cultivars_bermudagrass.json'
+import bluegrassPack from '../ntep/cultivars_kentucky_bluegrass.json'
 import tallFescuePack from '../ntep/cultivars_tall_fescue.json'
 import { normalizeKey } from '../../services/suitability'
 import type { Blend, ClimateBandId, Cultivar } from '../../types'
@@ -12,15 +13,23 @@ const HTTPS = /^https:\/\//i
 const packs: Record<string, Cultivar[]> = {
   tall_fescue: tallFescuePack.cultivars,
   bermudagrass: bermudaPack.cultivars,
+  kentucky_bluegrass: bluegrassPack.cultivars,
 }
 
-function indexFor(species: string): Set<string> {
+/**
+ * Every key the app can resolve a component against, across all ingested
+ * species — mixtures put a bluegrass on a fescue tag, and the app scores those
+ * from the bluegrass trial rather than skipping them.
+ */
+function resolvableKeys(): Set<string> {
   const keys = new Set<string>()
-  ;(packs[species] || []).forEach((c) => {
-    keys.add(c.id)
-    keys.add(normalizeKey(c.name))
-    ;(c.aliases || []).forEach((a) => keys.add(normalizeKey(a)))
-  })
+  Object.values(packs)
+    .flat()
+    .forEach((c) => {
+      keys.add(c.id)
+      keys.add(normalizeKey(c.name))
+      ;(c.aliases || []).forEach((a) => keys.add(normalizeKey(a)))
+    })
   return keys
 }
 
@@ -40,7 +49,17 @@ describe('curated blend catalog', () => {
       expect(blend.zones?.length, blend.id).toBeGreaterThan(0)
       blend.zones?.forEach((z) => expect(ZONES, blend.id).toContain(z))
       expect(['retail', 'pro', 'specialty', 'amazon'], blend.id).toContain(blend.channel)
+      if (blend.form) expect(['seed', 'sod'], blend.id).toContain(blend.form)
     })
+  })
+
+  it('only sells sod as a single vegetative variety', () => {
+    catalog
+      .filter((b) => b.form === 'sod')
+      .forEach((blend) => {
+        expect(blend.species, blend.id).toBe('bermudagrass')
+        expect(blend.components.length, blend.id).toBe(1)
+      })
   })
 
   it('has at least three blends per climate band', () => {
@@ -61,9 +80,9 @@ describe('curated blend catalog', () => {
     })
   })
 
-  it('resolves every cultivarId in that species NTEP index or a known gap', () => {
+  it('resolves every cultivarId in an ingested NTEP index or a known gap', () => {
+    const index = resolvableKeys()
     catalog.forEach((blend) => {
-      const index = indexFor(blend.species)
       expect(blend.components?.length, blend.id).toBeGreaterThan(0)
       let ntepHits = 0
       blend.components.forEach((c) => {
@@ -76,5 +95,32 @@ describe('curated blend catalog', () => {
       })
       expect(ntepHits, `${blend.id} needs at least one NTEP-mapped cultivar`).toBeGreaterThan(0)
     })
+  })
+
+  /**
+   * A score is only worth showing if it describes most of the bag. Plenty of
+   * real products name every cultivar but draw them from trial cycles we do not
+   * hold, which leaves a headline number resting on a quarter of the seed —
+   * worse than saying nothing. Weighted by label percentage where published,
+   * counted evenly where not.
+   */
+  it('scores at least half of every bag from trial data', () => {
+    const index = resolvableKeys()
+    catalog.forEach((blend) => {
+      const comps = blend.components
+      const mapped = comps.filter((c) => index.has(normalizeKey(c.cultivarId || '')))
+      const pct = (list: typeof comps) => list.reduce((s, c) => s + (c.percent || 0), 0)
+      const share = comps.every((c) => typeof c.percent === 'number')
+        ? pct(mapped) / (pct(comps) || 1)
+        : mapped.length / comps.length
+      expect(share, `${blend.id} only scores ${Math.round(share * 100)}% of the bag`)
+        .toBeGreaterThanOrEqual(0.5)
+    })
+  })
+
+  it('keeps the known-gap list free of cultivars we have since ingested', () => {
+    const index = resolvableKeys()
+    const stale = [...KNOWN_CULTIVAR_GAP_SET].filter((key) => index.has(key))
+    expect(stale, `now in an NTEP pack — drop from knownGaps: ${stale.join(', ')}`).toEqual([])
   })
 })

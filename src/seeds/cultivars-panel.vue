@@ -117,6 +117,14 @@ export default {
     coverageTitle,
     fitTone,
     fmtRating,
+    /**
+     * Whether this species' trial measured a metric at all. The bluegrass test
+     * runs no drought or single-column disease table, so those columns would be
+     * a wall of dashes rather than missing data on a per-cultivar basis.
+     */
+    hasMetric(key: string): boolean {
+      return this.pool.some((c) => c.metrics?.[key]?.mean != null)
+    },
     nearestMetric(cultivar: Cultivar): number | null | undefined {
       const near = this.nearestSite
       if (!near) return cultivar.metrics?.knoxvilleQuality?.mean
@@ -224,8 +232,12 @@ export default {
                   Transition{{ sortMark('transitionQuality') }}
                 </th>
                 <th>{{ nearestSiteHeader }}</th>
-                <th class="sortable" @click="toggleSort('droughtQuality')">Drought{{ sortMark('droughtQuality') }}</th>
-                <th class="sortable" @click="toggleSort('brownPatch')">Brown patch{{ sortMark('brownPatch') }}</th>
+                <th v-if="hasMetric('droughtQuality')" class="sortable" @click="toggleSort('droughtQuality')">
+                  Drought{{ sortMark('droughtQuality') }}
+                </th>
+                <th v-if="hasMetric('brownPatch')" class="sortable" @click="toggleSort('brownPatch')">
+                  Brown patch{{ sortMark('brownPatch') }}
+                </th>
                 <th class="sortable" @click="toggleSort('geneticColor')">Color{{ sortMark('geneticColor') }}</th>
               </tr>
             </thead>
@@ -256,8 +268,12 @@ export default {
                 </td>
                 <td class="num">{{ fmtRating(row.metrics?.transitionQuality?.mean) }}</td>
                 <td class="num">{{ fmtRating(nearestMetric(row)) }}</td>
-                <td class="num">{{ fmtRating(row.metrics?.droughtQuality?.mean) }}</td>
-                <td class="num">{{ fmtRating(row.metrics?.brownPatch?.mean) }}</td>
+                <td v-if="hasMetric('droughtQuality')" class="num">
+                  {{ fmtRating(row.metrics?.droughtQuality?.mean) }}
+                </td>
+                <td v-if="hasMetric('brownPatch')" class="num">
+                  {{ fmtRating(row.metrics?.brownPatch?.mean) }}
+                </td>
                 <td class="num">{{ fmtRating(row.metrics?.geneticColor?.mean) }}</td>
               </tr>
             </tbody>

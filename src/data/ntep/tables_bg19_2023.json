@@ -4,7 +4,7 @@
     "trial": "bg19",
     "year": 2023,
     "sourcePdf": "bg19_24-11f.pdf",
-    "notes": "Parsed high-value NTEP tables only (regional quality, color, disease, drought)."
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
   },
   "tables": {
     "transitionQuality": {

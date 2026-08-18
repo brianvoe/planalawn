@@ -38,6 +38,12 @@ export default {
     gap: 0.65rem 1rem;
     padding-block: 0.7rem;
 
+    /* Held to the token the home hero measures itself against. */
+    @media (min-width: 1024px) {
+      min-height: var(--nav-height);
+      padding-block: 0;
+    }
+
     @media (max-width: 1023px) {
       display: flex;
       flex-wrap: wrap;
@@ -76,12 +82,36 @@ export default {
 
   .site-nav__links {
     display: flex;
-    gap: 0.85rem;
+    gap: 0;
     width: auto;
     margin: 0;
     padding: 0;
     list-style: none;
     justify-self: center;
+
+    /* Hairlines between sections, faint enough to read as rhythm rather than
+       as chrome — they exist to keep the pill from floating in open space.
+       A gradient rather than a border so the ends dissolve instead of stopping
+       against the bar's edges, which is what makes them read as a suggestion. */
+    li {
+      position: relative;
+    }
+
+    li + li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        color-mix(in srgb, var(--color-border) 85%, transparent) 30%,
+        color-mix(in srgb, var(--color-border) 85%, transparent) 70%,
+        transparent
+      );
+    }
 
     @media (max-width: 1023px) {
       display: none;
@@ -90,23 +120,67 @@ export default {
 
       &.open {
         display: grid;
-        gap: 0.35rem;
         padding-bottom: 0.35rem;
+      }
+
+      /* Stacked menu: the same fade, turned to match the flow. */
+      li + li::before {
+        top: 0;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          color-mix(in srgb, var(--color-border) 85%, transparent) 15%,
+          color-mix(in srgb, var(--color-border) 85%, transparent) 85%,
+          transparent
+        );
       }
     }
 
     a {
+      display: inline-block;
+      margin: 0 0.25rem;
+      padding: 0.32rem 0.7rem;
       font-size: 0.85rem;
       font-weight: 500;
       color: var(--color-text-muted);
       text-decoration: none;
+      border-radius: 999px;
+      transition:
+        color 0.15s ease,
+        background 0.15s ease;
 
-      &.router-link-active {
-        color: var(--color-text);
+      @media (max-width: 1023px) {
+        display: block;
+        margin: 0.2rem 0;
+        padding: 0.45rem 0.7rem;
       }
 
       &:hover {
         color: var(--color-text);
+        background: var(--color-bg-soft);
+      }
+
+      /* The page you're on: filled, darker and heavier, so a glance at the bar
+         answers "where am I" without reading every label. */
+      &.router-link-active {
+        font-weight: 600;
+        color: var(--color-primary-strong);
+        background: var(--color-primary-soft);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      a {
+        transition: none;
       }
     }
   }
@@ -127,23 +201,41 @@ export default {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 0.32rem 0.7rem;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--color-text-muted);
     text-decoration: none;
+    border-radius: 999px;
+    transition:
+      color 0.15s ease,
+      background 0.15s ease;
 
-    &:hover,
-    &.router-link-active {
+    &:hover {
       color: var(--color-text);
+      background: var(--color-bg-soft);
+    }
+
+    &.router-link-active {
+      font-weight: 600;
+      color: var(--color-primary-strong);
+      background: var(--color-primary-soft);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
 
     .site-nav__lawn-icon {
       display: none;
     }
 
+    /* Narrow: an icon button rather than a label, so the padding that shapes
+       the desktop pill has to come back off. */
     @media (max-width: 1023px) {
       width: 2.15rem;
       height: 2.15rem;
+      padding: 0;
       color: var(--color-primary-strong);
       background: var(--color-primary-soft);
       border-radius: 999px;
@@ -193,15 +285,27 @@ export default {
       </button>
 
       <ul id="primary-menu" class="site-nav__links" :class="{ open: menuOpen }">
-        <li><router-link to="/calendar" @click="menuOpen = false">Calendar</router-link></li>
-        <li><router-link to="/tasks" @click="menuOpen = false">Tasks</router-link></li>
-        <li><router-link to="/seeds" @click="menuOpen = false">Seeds</router-link></li>
-        <li><router-link to="/tools/sprayer" @click="menuOpen = false">Sprayer</router-link></li>
+        <li>
+          <router-link to="/calendar" @click="menuOpen = false">Calendar</router-link>
+        </li>
+        <li>
+          <router-link to="/tasks" @click="menuOpen = false">Tasks</router-link>
+        </li>
+        <li>
+          <router-link to="/seeds" @click="menuOpen = false">Seeds</router-link>
+        </li>
+        <li>
+          <router-link to="/calculate" @click="menuOpen = false">Calculate</router-link>
+        </li>
       </ul>
 
       <div class="site-nav__meta">
         <router-link to="/settings" class="site-nav__lawn" aria-label="My lawn">
-          <font-awesome-icon class="site-nav__lawn-icon" icon="fa-solid fa-pen-to-square" aria-hidden="true" />
+          <font-awesome-icon
+            class="site-nav__lawn-icon"
+            icon="fa-solid fa-pen-to-square"
+            aria-hidden="true"
+          />
           <span class="site-nav__lawn-label">My lawn</span>
         </router-link>
         <SoilTemp :conditions="conditions" @click="openLocation" />

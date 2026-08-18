@@ -21,6 +21,11 @@ export default {
       selectedMonth: new Date().getMonth() + 1,
     }
   },
+  created() {
+    // `?month=9` lets other pages link straight to a month — the home strip does.
+    const asked = Number(this.$router.currentRoute.value.query.month)
+    if (Number.isInteger(asked) && asked >= 1 && asked <= 12) this.selectedMonth = asked
+  },
   computed: {
     currentMonth(): number {
       return new Date().getMonth() + 1

@@ -25,6 +25,11 @@ export default {
       ntepMetrics: NTEP_METRICS,
     }
   },
+  watch: {
+    availableMetrics(metrics: { key: NtepMetricKey }[]) {
+      if (!metrics.some((m) => m.key === this.metric)) this.metric = 'transitionQuality'
+    },
+  },
   computed: {
     poolBase(): Cultivar[] {
       return cultivarsForSpecies(this.speciesId)
@@ -80,8 +85,18 @@ export default {
     speciesSelectData(): { text: string; value: string }[] {
       return this.speciesOptions.map((s) => ({ text: s.label, value: s.id }))
     },
+    /**
+     * Metrics this species' trial actually measured. The bluegrass report has no
+     * drought or single-column disease table, and offering those would hand the
+     * user an empty table with no reason given.
+     */
+    availableMetrics(): { key: NtepMetricKey; label: string; short: string }[] {
+      return this.ntepMetrics.filter((m) =>
+        this.poolBase.some((c) => c.metrics?.[m.key]?.mean != null),
+      )
+    },
     metricSelectData(): { text: string; value: string }[] {
-      return this.ntepMetrics.map((m) => ({ text: m.label, value: m.key }))
+      return this.availableMetrics.map((m) => ({ text: m.label, value: m.key }))
     },
     viewSelectData(): { text: string; value: string; disabled?: boolean }[] {
       return [

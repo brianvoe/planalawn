@@ -64,6 +64,26 @@ export function indexForSpecies(speciesId = DEFAULT_SPECIES): Record<string, Cul
   return indexesBySpecies[speciesId] || buildCultivarIndex(cultivarsForSpecies(speciesId))
 }
 
+/**
+ * Lookup index for a bag's components, spanning every ingested species.
+ *
+ * Plenty of real bags are mixtures — a fescue blend with 10% bluegrass in it —
+ * so resolving components against the bag's own species alone would leave those
+ * rows unscored even when we hold their trial data. The bag's own species is
+ * merged last so it wins any name collision between trials.
+ */
+const blendIndexes: Record<string, Record<string, Cultivar>> = {}
+export function indexForBlend(speciesId = DEFAULT_SPECIES): Record<string, Cultivar> {
+  if (!blendIndexes[speciesId]) {
+    const merged: Record<string, Cultivar> = {}
+    loadedSpecies
+      .filter((s) => s.id !== speciesId)
+      .forEach((s) => Object.assign(merged, indexForSpecies(s.id)))
+    blendIndexes[speciesId] = Object.assign(merged, indexForSpecies(speciesId))
+  }
+  return blendIndexes[speciesId]
+}
+
 const cultivarList = cultivarsForSpecies()
 const everyCultivar = loadedSpecies.flatMap((s) => cultivarsForSpecies(s.id))
 
@@ -85,7 +105,7 @@ export const NTEP_METRICS = [
 export type NtepMetricKey = (typeof NTEP_METRICS)[number]['key']
 
 const EXPERIMENTAL_ENTRY =
-  /(ppg-tf|pst-|dlfps-|ast\d|atf\d|rad-tf|nai-|k18-|jt[\s-]\d|nt-3|se5star|setfm|og-walk|^3b2$|^5lss$|bar[\s-]?fa|^fb[\s-]?\d|^jsc[\s-]|msb-|okc\d|oks\d)/i
+  /(ppg-|pst-|dlfps-|ast\d|atf\d|rad-|nai-|k18-|jt[\s-]\d|nt-3|se5star|setfm|og-walk|^3b2$|^5lss$|bar[\s-]?(fa|pp)|^fb[\s-]?\d|^jsc[\s-]|msb-|okc\d|oks\d|^a\d\d-\d|^akb\d|^j-\d|^kh\d|^mvs-\d|^nk-\d)/i
 
 /** Named grasses you can ask a dealer for — not experimental entry codes. */
 export function isNamedCultivar(cultivar: Pick<Cultivar, 'id' | 'name'>): boolean {

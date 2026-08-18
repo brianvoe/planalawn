@@ -5,7 +5,7 @@ import Calendar from '../calendar/calendar.vue'
 import Tasks from '../tasks/tasks.vue'
 import TaskDetail from '../tasks/task-detail.vue'
 import Seeds from '../seeds/seeds.vue'
-import Sprayer from '../sprayer/sprayer.vue'
+import Apply from '../apply/apply.vue'
 import Settings from '../settings/settings.vue'
 
 function seedsProps(route: RouteLocationNormalized) {
@@ -59,7 +59,10 @@ const router = createRouter({
       props: seedsProps,
     },
     { path: '/seeds/:id', redirect: (to) => `/seeds/blends/${to.params.id}` },
-    { path: '/tools/sprayer', name: 'sprayer', component: Sprayer },
+    { path: '/calculate', name: 'calculate', component: Apply },
+    // The tool started life as a sprayer-only calculator; keep old links alive.
+    { path: '/tools/sprayer', redirect: '/calculate' },
+    { path: '/how-much', redirect: '/calculate' },
     { path: '/settings', name: 'settings', component: Settings },
   ],
   scrollBehavior() {

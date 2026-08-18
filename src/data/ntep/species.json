@@ -11,8 +11,9 @@
     "id": "kentucky_bluegrass",
     "label": "Kentucky bluegrass",
     "season": "cool",
-    "ntepTrials": [],
-    "status": "schema_ready"
+    "ntepTrials": [
+      "kb17"
+    ]
   },
   {
     "id": "perennial_ryegrass",

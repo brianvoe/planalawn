@@ -22,3 +22,103 @@
 
   --ss-border-radius: var(--border-radius);
 }
+
+/**
+ * Selected values on a multi-select, matched to `.chip--brand`.
+ *
+ * SlimSelect's own value is a solid primary block with a full-height delete
+ * button beside it, which at this font size reads as a button bar rather than a
+ * tag. Soft fill and a quiet × keeps the emphasis on the field.
+ */
+.ss-main .ss-values .ss-value {
+  color: var(--color-primary-strong);
+  background: var(--color-primary-soft);
+  border-radius: 999px;
+
+  .ss-value-text {
+    padding: 0.3rem 0.15rem 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .ss-value-delete {
+    width: 0.55rem;
+    height: 0.55rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.35rem;
+    border-left: 0;
+    opacity: 0.55;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 0.55rem;
+      height: 0.55rem;
+
+      path {
+        stroke: currentcolor;
+      }
+    }
+  }
+}
+
+/* A caveat on an option row, e.g. a species with no trial data behind it. */
+.opt-note {
+  margin-left: 0.4rem;
+  font-size: 0.78em;
+  color: var(--color-text-muted);
+}
+
+.ss-option:hover .opt-note,
+.ss-option.ss-highlighted .opt-note,
+.ss-option.ss-selected .opt-note {
+  color: inherit;
+  opacity: 0.75;
+}
+
+/**
+ * Two-line spreader rows: the name, then the models that read the same setting
+ * column on the bag.
+ *
+ * SlimSelect renders the chosen option's own markup into the closed control, so
+ * the sub-line is dropped there — the box only has room for one short line, and
+ * the model list is only useful while you're picking.
+ */
+.spreader-opt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.spreader-opt__models {
+  font-size: 0.78em;
+  color: var(--color-text-muted);
+}
+
+/* On a highlighted row the muted grey would drop out against the fill. */
+.ss-option:hover .spreader-opt__models,
+.ss-option.ss-highlighted .spreader-opt__models,
+.ss-option.ss-selected .spreader-opt__models {
+  color: inherit;
+  opacity: 0.75;
+}
+
+.ss-single .spreader-opt__models {
+  display: none;
+}
+
+/**
+ * The open list gets its own width, since it otherwise inherits the control's —
+ * and the control can sit in a narrow column, where the model names wrap to a
+ * ragged third line. Above 768px only: below that SlimSelect shows the list in
+ * its own centred dialog, which sizes itself.
+ */
+@media (min-width: 768px) {
+  .ss-content:has(.spreader-opt) {
+    min-width: 20rem;
+  }
+}

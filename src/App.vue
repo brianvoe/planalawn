@@ -39,6 +39,13 @@ export default {
     hasLocation(): boolean {
       return this.$store.getters.hasLocation
     },
+    /**
+     * Everywhere but home. The home hero is sized to one screen and asks for a
+     * location itself, so a banner above it would only push the page off-screen.
+     */
+    showLocationPrompt(): boolean {
+      return this.$router.currentRoute.value.name !== 'home'
+    },
   },
   methods: {
     async loadWeather(force: boolean) {
@@ -73,7 +80,7 @@ export default {
   <div class="app-shell">
     <Nav :conditions="conditions" />
     <main class="app-shell__main">
-      <LocationPrompt />
+      <LocationPrompt v-if="showLocationPrompt" />
       <router-view v-slot="{ Component }">
         <component
           :is="Component"

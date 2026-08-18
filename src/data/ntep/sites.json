@@ -125,6 +125,20 @@
     "lat": 41.74,
     "lon": -111.83
   },
+  "MN1": {
+    "name": "St. Paul, MN",
+    "state": "MN",
+    "climateBand": "cool",
+    "lat": 44.98,
+    "lon": -93.18
+  },
+  "ND1": {
+    "name": "Fargo, ND",
+    "state": "ND",
+    "climateBand": "cool",
+    "lat": 46.88,
+    "lon": -96.79
+  },
   "ON1": {
     "name": "Guelph, ON",
     "state": "ON",

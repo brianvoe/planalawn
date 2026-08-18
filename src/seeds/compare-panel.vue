@@ -2,7 +2,7 @@
 import BarChart from '../components/bar-chart.vue'
 import SlimSelect from 'slim-select/vue'
 import { ratingColor } from '../charts/bars'
-import { indexForSpecies } from '../data/seedDb'
+import { indexForBlend } from '../data/seedDb'
 import { scoreBlendForLocation } from '../services/suitability'
 import { fitTone } from './fit-ui'
 import type { PropType } from 'vue'
@@ -62,7 +62,7 @@ export default {
       if (!this.fitCache[key]) {
         this.fitCache[key] = scoreBlendForLocation(
           blend,
-          indexForSpecies(blend.species),
+          indexForBlend(blend.species),
           this.userLocation,
         )
       }

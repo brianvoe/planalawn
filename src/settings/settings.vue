@@ -2,13 +2,30 @@
 import LocationSelect from '../components/location-select.vue'
 import SlimSelect from 'slim-select/vue'
 import { zoneLine } from '../data/climate'
-import { grassTypeLabels, grassTypeOptions, inferGrassType } from '../data/grass'
+import { grassTypeOptions } from '../data/grass'
+import { loadedSpecies, speciesList } from '../data/seedDb'
+import { spreaderOptions } from '../data/spreaders'
 import { requestBrowserLocation } from '../services/geolocation'
+import { convertVolume, toGallons, volumeUnit } from '../services/units'
+import type { SpreaderOption } from '../data/spreaders'
+import type { VolumeUnit } from '../services/units'
 import type { AppStore } from '../store/types'
-import type { BackupPayload, GrassType, Profile, UserLocation } from '../types'
+import type {
+  BackupPayload,
+  GrassType,
+  Profile,
+  SpeciesInfo,
+  SprayUnits,
+  UserLocation,
+} from '../types'
 
 interface StoreThis {
   $store: AppStore
+}
+
+interface SeedSpeciesGroup {
+  label: string
+  options: { text: string; html: string; value: string }[]
 }
 
 function bindProfile<K extends keyof Profile>(field: K) {
@@ -30,11 +47,6 @@ export default {
       status: '',
       locStatus: '',
       grassTypeOptions,
-      preferredSeedSelectData: [
-        { text: 'Not set', value: 'none' },
-        { text: 'Calypsow', value: 'calypsow' },
-        { text: 'Resilience II', value: 'resilience' },
-      ],
       soilTypeSelectData: [
         { text: 'Unknown', value: 'none' },
         { text: 'Clay', value: 'clay' },
@@ -47,6 +59,10 @@ export default {
         { text: 'Mixed', value: 'mixed' },
         { text: 'Mostly shade', value: 'shade' },
       ],
+      unitChoices: [
+        { text: 'fl oz / gal', value: 'us' as SprayUnits },
+        { text: 'ml / L', value: 'metric' as SprayUnits },
+      ],
     }
   },
   computed: {
@@ -56,14 +72,8 @@ export default {
     zoneLabel(): string {
       return zoneLine(this.location)
     },
-    inferredGrassLabel(): string {
-      const inferred = inferGrassType(this.location)
-      if (!inferred) return ''
-      const zone = this.location.usdaZone ? `USDA ${this.location.usdaZone}` : 'your climate'
-      return `${grassTypeLabels[inferred]} (from ${zone})`
-    },
     lawnName: bindProfile('lawnName'),
-    preferredSeed: bindProfile('preferredSeed'),
+    seedSpecies: bindProfile('seedSpecies'),
     grassType: bindProfile('grassType'),
     soilType: bindProfile('soilType'),
     sunExposure: bindProfile('sunExposure'),
@@ -76,12 +86,20 @@ export default {
         this.$store.dispatch('updateProfile', { lawnSqFt: v })
       },
     },
-    tankGallonsLocal: {
+    sprayUnits(): SprayUnits {
+      return this.$store.getters.sprayUnits
+    },
+    vol(): VolumeUnit {
+      return volumeUnit(this.sprayUnits)
+    },
+    /** The tank as it's marked on the side; gallons are what get stored. */
+    tankLocal: {
       get(): number {
-        return this.$store.getters.tankGallons
+        return Number(convertVolume(this.$store.getters.tankGallons, this.vol).toFixed(1))
       },
       set(v: number) {
-        this.$store.dispatch('updateEquipment', { tankGallons: v })
+        const gal = toGallons(Number(v) || 0, this.vol)
+        this.$store.dispatch('updateEquipment', { tankGallons: gal || 2 })
       },
     },
     coverageLocal: {
@@ -92,27 +110,79 @@ export default {
         this.$store.dispatch('updateEquipment', { sprayCoverageSqFtPerTank: v })
       },
     },
-    grassTypeSelect: {
+    spreaderLocal: {
       get(): string {
-        return this.grassType || 'auto'
+        return this.$store.getters.spreaderId
       },
       set(v: string) {
-        this.grassType = v === 'auto' ? '' : (v as GrassType)
+        this.$store.dispatch('updateEquipment', { spreaderId: v })
+      },
+    },
+    spreaderOptions(): SpreaderOption[] {
+      return spreaderOptions('Not set')
+    },
+    /**
+     * The three zones, with your climate already picked for you.
+     *
+     * There's no "auto" row: an unset profile still reads from the location, so
+     * the select shows what the rest of the site is already using. Transition is
+     * the fallback before there's a city, being the zone that has to think about
+     * both cool- and warm-season grass.
+     */
+    grassTypeSelect: {
+      get(): GrassType {
+        return this.$store.getters.grassType || 'mixed'
+      },
+      set(v: string) {
+        this.grassType = v as GrassType
       },
     },
     grassTypeSelectData(): { text: string; value: string }[] {
-      return [
-        { text: `Auto — ${this.inferredGrassLabel || 'set a city first'}`, value: 'auto' },
-        ...this.grassTypeOptions.map((opt) => ({ text: opt.label, value: opt.id })),
-      ]
+      return this.grassTypeOptions.map((opt) => ({ text: opt.label, value: opt.id }))
     },
-    preferredSeedSelect: {
-      get(): string {
-        return this.preferredSeed || 'none'
+    /** Where a zone you never chose came from, so it isn't a mystery. */
+    grassTypeSource(): string {
+      if (!this.$store.getters.grassTypeIsInferred) return ''
+      return this.location.usdaZone
+        ? `From USDA ${this.location.usdaZone} — change it if you know better.`
+        : ''
+    },
+    /** The grasses you grow, which can be more than one on a real lawn. */
+    seedSpeciesSelect: {
+      get(): string[] {
+        return this.$store.getters.seedSpecies
       },
-      set(v: string) {
-        this.preferredSeed = v === 'none' ? '' : v
+      set(v: string[]) {
+        this.seedSpecies = (Array.isArray(v) ? v : [v]).filter(Boolean)
       },
+    },
+    /**
+     * Grouped by season, because that's the split that decides everything else.
+     *
+     * Species we haven't ingested trials for are still listed — people grow them
+     * — but say so in the row. The marker lives in `html` only, so the chip in
+     * the closed field stays just the name.
+     */
+    seedSpeciesSelectData(): SeedSpeciesGroup[] {
+      const groups: { id: SpeciesInfo['season']; label: string }[] = [
+        { id: 'cool', label: 'Cool-season' },
+        { id: 'warm', label: 'Warm-season' },
+      ]
+      return groups
+        .map((g) => ({
+          label: g.label,
+          options: speciesList
+            .filter((s) => s.season === g.id)
+            .map((s) => {
+              const scored = loadedSpecies.some((l) => l.id === s.id)
+              return {
+                text: s.label,
+                html: scored ? s.label : `${s.label} <span class="opt-note">no trial data yet</span>`,
+                value: s.id,
+              }
+            }),
+        }))
+        .filter((g) => g.options.length > 0)
     },
     soilTypeSelect: {
       get(): string {
@@ -132,6 +202,9 @@ export default {
     },
   },
   methods: {
+    setUnits(units: SprayUnits) {
+      this.$store.dispatch('updateEquipment', { sprayUnits: units })
+    },
     async saveGeo() {
       try {
         const loc = await requestBrowserLocation()
@@ -204,6 +277,29 @@ export default {
     color: var(--color-text-muted);
   }
 
+  .units {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem 1rem;
+    margin-bottom: 1rem;
+
+    .units__label {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+
+    .units__hint {
+      max-width: 30rem;
+      margin: 0.2rem 0 0;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+  }
+
   .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -215,6 +311,8 @@ export default {
 
     label {
       display: grid;
+      /* Top-aligned so a note under one field doesn't slide its neighbour down. */
+      align-content: start;
       gap: 0.3rem;
       font-size: 0.8rem;
       font-weight: 600;
@@ -244,6 +342,13 @@ export default {
 
     textarea {
       resize: vertical;
+    }
+
+    .field-note {
+      font-size: 0.78rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--color-text-muted);
     }
   }
 
@@ -343,14 +448,23 @@ export default {
               :data="grassTypeSelectData"
               :settings="{ showSearch: false, allowDeselect: false }"
             />
+            <small v-if="grassTypeSource" class="field-note">{{ grassTypeSource }}</small>
           </label>
           <label>
-            <span>Preferred seed</span>
+            <span>Seed type</span>
             <SlimSelect
-              v-model="preferredSeedSelect"
-              :data="preferredSeedSelectData"
-              :settings="{ showSearch: false, allowDeselect: false }"
+              v-model="seedSpeciesSelect"
+              :data="seedSpeciesSelectData"
+              multiple
+              :settings="{
+                showSearch: false,
+                keepOrder: true,
+                placeholderText: 'Any — pick one or more',
+              }"
             />
+            <small class="field-note">
+              Pick every grass you grow. The Seeds section opens on the first one.
+            </small>
           </label>
           <label>
             <span>Soil type</span>
@@ -376,15 +490,48 @@ export default {
       </section>
 
       <section class="card">
-        <h2>Sprayer defaults</h2>
+        <h2>Equipment</h2>
+        <p class="hint">
+          What the rate calculators assume you're carrying. Coverage per tank is how much ground one
+          full tank actually wets at your walking pace — the
+          <router-link to="/calculate">Calculate</router-link> page can help you measure it.
+        </p>
+        <div class="units">
+          <div>
+            <p class="units__label">Liquid units</p>
+            <p class="units__hint">
+              Labels are printed in fluid ounces; this only changes what you read. Lawn area and bag
+              weights stay in square feet and pounds.
+            </p>
+          </div>
+          <div class="seg" role="group" aria-label="Units for liquid amounts">
+            <button
+              v-for="u in unitChoices"
+              :key="u.value"
+              type="button"
+              :class="{ active: sprayUnits === u.value }"
+              @click="setUnits(u.value)"
+            >
+              {{ u.text }}
+            </button>
+          </div>
+        </div>
         <div class="form-grid">
           <label>
-            <span>Tank size (gal)</span>
-            <input v-model.number="tankGallonsLocal" type="number" min="0.5" step="0.5" />
+            <span>Tank size ({{ vol }})</span>
+            <input v-model.number="tankLocal" type="number" min="0.5" step="0.5" />
           </label>
           <label>
             <span>Coverage per tank (sq ft)</span>
             <input v-model.number="coverageLocal" type="number" min="50" step="50" />
+          </label>
+          <label class="full">
+            <span>Spreader</span>
+            <SlimSelect
+              v-model="spreaderLocal"
+              :data="spreaderOptions"
+              :settings="{ showSearch: false, allowDeselect: false }"
+            />
           </label>
         </div>
       </section>
@@ -406,8 +553,8 @@ export default {
       <section class="card muted-card">
         <h2>What gets saved</h2>
         <ul>
-          <li>Lawn profile (size, grass type, seed choice, soil/sun, notes)</li>
-          <li>Sprayer tank + coverage habits</li>
+          <li>Lawn profile (size, grass type, seed types, soil/sun, notes)</li>
+          <li>Equipment (sprayer tank, coverage per tank, spreader, liquid units)</li>
           <li>Custom rate overrides from calculators</li>
           <li>Custom blends you add from a bag tag</li>
         </ul>

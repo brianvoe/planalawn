@@ -1,0 +1,4877 @@
+{
+  "meta": {
+    "species": "kentucky_bluegrass",
+    "trial": "kb17",
+    "year": 2022,
+    "sourcePdf": "kb17_23-9.pdf",
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, national mean quality)."
+  },
+  "tables": {
+    "transitionQuality": {
+      "sites": [
+        "MD1",
+        "NC1",
+        "OK1",
+        "TN1",
+        "VA1"
+      ],
+      "rows": [
+        {
+          "name": "BARVETTE HGT\u00ae",
+          "base": "BARVETTE HGT\u00ae",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 5.8,
+            "OK1": 6.3,
+            "TN1": 6.5,
+            "VA1": 7.9
+          }
+        },
+        {
+          "name": "BARSERATI (BAR PP 110358)",
+          "base": "BARSERATI",
+          "code": "BAR PP 110358",
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 5.0,
+            "OK1": 6.4,
+            "TN1": 6.4,
+            "VA1": 7.5
+          }
+        },
+        {
+          "name": "STARR (GO-2628)",
+          "base": "STARR",
+          "code": "GO-2628",
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 4.5,
+            "OK1": 6.1,
+            "TN1": 6.8,
+            "VA1": 7.8
+          }
+        },
+        {
+          "name": "BAR PP 79494",
+          "base": "BAR PP 79494",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 5.5,
+            "OK1": 5.3,
+            "TN1": 7.0,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "BLUE MAGIC (A99-2897)",
+          "base": "BLUE MAGIC",
+          "code": "A99-2897",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 5.0,
+            "OK1": 5.9,
+            "TN1": 6.8,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "CLOUD (GO-2425)",
+          "base": "CLOUD",
+          "code": "GO-2425",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.2,
+            "OK1": 6.0,
+            "TN1": 6.9,
+            "VA1": 7.2
+          }
+        },
+        {
+          "name": "BAR PP 7236V",
+          "base": "BAR PP 7236V",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.7,
+            "OK1": 6.1,
+            "TN1": 6.4,
+            "VA1": 7.5
+          }
+        },
+        {
+          "name": "ACOUSTIC (PPG-KB 1131)",
+          "base": "ACOUSTIC",
+          "code": "PPG-KB 1131",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 7.2,
+            "NC1": 5.1,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "J-1138",
+          "base": "J-1138",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 5.3,
+            "OK1": 5.3,
+            "TN1": 6.1,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "SKYE",
+          "base": "SKYE",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 3.9,
+            "OK1": 5.9,
+            "TN1": 6.8,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "A11-26",
+          "base": "A11-26",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.4,
+            "OK1": 6.0,
+            "TN1": 6.6,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "MIDNIGHT",
+          "base": "MIDNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 5.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "ELECTRIC (PST-K11-118)",
+          "base": "ELECTRIC",
+          "code": "PST-K11-118",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 5.0,
+            "OK1": 5.4,
+            "TN1": 6.4,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "SYRAH (LTP-11-41)",
+          "base": "SYRAH",
+          "code": "LTP-11-41",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.5,
+            "OK1": 5.9,
+            "TN1": 6.5,
+            "VA1": 7.7
+          }
+        },
+        {
+          "name": "BLUE GEM (NAI-13-9)",
+          "base": "BLUE GEM",
+          "code": "NAI-13-9",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.2,
+            "OK1": 5.3,
+            "TN1": 7.0,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "PPG-KB 1304",
+          "base": "PPG-KB 1304",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.3,
+            "NC1": 4.0,
+            "OK1": 5.7,
+            "TN1": 5.9,
+            "VA1": 7.1
+          }
+        },
+        {
+          "name": "A10-280",
+          "base": "A10-280",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 5.3,
+            "OK1": 4.9,
+            "TN1": 6.4,
+            "VA1": 7.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3552",
+          "base": "DLFPS-340/3552",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.6,
+            "OK1": 5.5,
+            "TN1": 7.1,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "BOMBAY (GO-22B23)",
+          "base": "BOMBAY",
+          "code": "GO-22B23",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.7,
+            "OK1": 5.3,
+            "TN1": 6.9,
+            "VA1": 7.5
+          }
+        },
+        {
+          "name": "DLFPS-340/3500",
+          "base": "DLFPS-340/3500",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 4.6,
+            "OK1": 4.4,
+            "TN1": 6.8,
+            "VA1": 7.4
+          }
+        },
+        {
+          "name": "AFTER MIDNIGHT",
+          "base": "AFTER MIDNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "MD1": 7.2,
+            "NC1": 4.6,
+            "OK1": 5.2,
+            "TN1": 7.0,
+            "VA1": 5.8
+          }
+        },
+        {
+          "name": "UNITED (NAI-13-14)",
+          "base": "UNITED",
+          "code": "NAI-13-14",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 4.6,
+            "OK1": 5.0,
+            "TN1": 6.6,
+            "VA1": 6.9
+          }
+        },
+        {
+          "name": "DLFPS-340/3553",
+          "base": "DLFPS-340/3553",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 4.3,
+            "OK1": 5.0,
+            "TN1": 6.8,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "A16-17",
+          "base": "A16-17",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.6,
+            "OK1": 5.7,
+            "TN1": 6.6,
+            "VA1": 6.9
+          }
+        },
+        {
+          "name": "A15-6",
+          "base": "A15-6",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 4.5,
+            "OK1": 6.0,
+            "TN1": 6.6,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "SUPER MOON (PST-K13-141)",
+          "base": "SUPER MOON",
+          "code": "PST-K13-141",
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 3.7,
+            "OK1": 5.4,
+            "TN1": 6.9,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "BAR PP 7K426",
+          "base": "BAR PP 7K426",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.6,
+            "OK1": 5.7,
+            "TN1": 6.8,
+            "VA1": 6.9
+          }
+        },
+        {
+          "name": "A13-1",
+          "base": "A13-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.7,
+            "OK1": 4.9,
+            "TN1": 7.1,
+            "VA1": 7.1
+          }
+        },
+        {
+          "name": "BAR PP 79366",
+          "base": "BAR PP 79366",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 4.2,
+            "OK1": 4.5,
+            "TN1": 6.9,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "DLFPS-340/3550",
+          "base": "DLFPS-340/3550",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.6,
+            "OK1": 4.0,
+            "TN1": 7.2,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "AKB3241",
+          "base": "AKB3241",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 4.0,
+            "OK1": 4.6,
+            "TN1": 6.9,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "BAR PP 7309V",
+          "base": "BAR PP 7309V",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.4,
+            "OK1": 5.4,
+            "TN1": 6.4,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "DLFPS-340/3364",
+          "base": "DLFPS-340/3364",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 4.2,
+            "OK1": 5.0,
+            "TN1": 6.9,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "BLUE DEVIL",
+          "base": "BLUE DEVIL",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.7,
+            "OK1": 5.5,
+            "TN1": 6.8,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "A11-40",
+          "base": "A11-40",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 7.0,
+            "NC1": 4.0,
+            "OK1": 4.9,
+            "TN1": 6.3,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "RAD-1776",
+          "base": "RAD-1776",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.3,
+            "OK1": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.7
+          }
+        },
+        {
+          "name": "PST-K15-172",
+          "base": "PST-K15-172",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.9,
+            "OK1": 5.2,
+            "TN1": 6.4,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "SELWAY",
+          "base": "SELWAY",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.5,
+            "OK1": 5.3,
+            "TN1": 6.1,
+            "VA1": 7.0
+          }
+        },
+        {
+          "name": "AKB3128",
+          "base": "AKB3128",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 5.9,
+            "NC1": 3.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "NK-1",
+          "base": "NK-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.6,
+            "OK1": 5.8,
+            "TN1": 6.3,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "KH3492",
+          "base": "KH3492",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 3.5,
+            "OK1": 5.1,
+            "TN1": 6.8,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "PST-T14-39",
+          "base": "PST-T14-39",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.5,
+            "OK1": 5.1,
+            "TN1": 6.3,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "DUBLIN (PST-K15-157)",
+          "base": "DUBLIN",
+          "code": "PST-K15-157",
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 3.2,
+            "OK1": 5.2,
+            "TN1": 6.9,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "NURUSH (J-3510)",
+          "base": "NURUSH",
+          "code": "J-3510",
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.7,
+            "OK1": 4.4,
+            "TN1": 6.5,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "NAI-14-122",
+          "base": "NAI-14-122",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.9,
+            "OK1": 5.3,
+            "TN1": 6.5,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "BLUE KNIGHT",
+          "base": "BLUE KNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.9,
+            "OK1": 5.1,
+            "TN1": 6.2,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "ORION (PST-K13-143)",
+          "base": "ORION",
+          "code": "PST-K13-143",
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 3.5,
+            "OK1": 5.4,
+            "TN1": 5.8,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "NAI-15-80",
+          "base": "NAI-15-80",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 2.6,
+            "OK1": 5.4,
+            "TN1": 6.5,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "TWILIGHT (NAI-13-132)",
+          "base": "TWILIGHT",
+          "code": "NAI-13-132",
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 4.2,
+            "OK1": 4.6,
+            "TN1": 6.8,
+            "VA1": 5.9
+          }
+        },
+        {
+          "name": "AMAZE (NAI-14-133)",
+          "base": "AMAZE",
+          "code": "NAI-14-133",
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.6,
+            "OK1": 5.2,
+            "TN1": 6.4,
+            "VA1": 6.8
+          }
+        },
+        {
+          "name": "A16-2",
+          "base": "A16-2",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.2,
+            "OK1": 4.3,
+            "TN1": 7.1,
+            "VA1": 6.4
+          }
+        },
+        {
+          "name": "BABE",
+          "base": "BABE",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 3.2,
+            "OK1": 4.7,
+            "TN1": 6.2,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "DLFPS-340/3494",
+          "base": "DLFPS-340/3494",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.9,
+            "OK1": 5.1,
+            "TN1": 6.9,
+            "VA1": 5.2
+          }
+        },
+        {
+          "name": "A06-8",
+          "base": "A06-8",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.4,
+            "OK1": 3.9,
+            "TN1": 6.8,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "DLFPS-340/3444",
+          "base": "DLFPS-340/3444",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 5.8,
+            "NC1": 3.3,
+            "OK1": 5.4,
+            "TN1": 6.2,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "A16-7",
+          "base": "A16-7",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 7.3,
+            "NC1": 2.4,
+            "OK1": 5.0,
+            "TN1": 6.6,
+            "VA1": 5.6
+          }
+        },
+        {
+          "name": "DLFPS-340/3551",
+          "base": "DLFPS-340/3551",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 4.3,
+            "OK1": 4.7,
+            "TN1": 6.3,
+            "VA1": 5.4
+          }
+        },
+        {
+          "name": "KENBLUE",
+          "base": "KENBLUE",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 3.8,
+            "OK1": 4.6,
+            "TN1": 6.5,
+            "VA1": 5.6
+          }
+        },
+        {
+          "name": "RAD 553",
+          "base": "RAD 553",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 3.2,
+            "OK1": 5.1,
+            "TN1": 6.0,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "NEW MOON (PST-K15-177)",
+          "base": "NEW MOON",
+          "code": "PST-K15-177",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.9,
+            "NC1": 3.2,
+            "OK1": 4.6,
+            "TN1": 6.4,
+            "VA1": 5.6
+          }
+        },
+        {
+          "name": "YELLOWSTONE (A12-7)",
+          "base": "YELLOWSTONE",
+          "code": "A12-7",
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 3.5,
+            "OK1": 4.7,
+            "TN1": 6.3,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3438",
+          "base": "DLFPS-340/3438",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.4,
+            "OK1": 4.2,
+            "TN1": 6.9,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "AKB3179",
+          "base": "AKB3179",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.9,
+            "OK1": 4.8,
+            "TN1": 6.5,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "NAI-14-128",
+          "base": "NAI-14-128",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.7,
+            "NC1": 2.4,
+            "OK1": 5.1,
+            "TN1": 6.4,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "BAR PP 71213",
+          "base": "BAR PP 71213",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 5.5,
+            "NC1": 3.5,
+            "OK1": 5.2,
+            "TN1": 6.1,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "MVS-130",
+          "base": "MVS-130",
+          "code": null,
+          "entry": null,
+          "mean": 5.3,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.7,
+            "OK1": 4.1,
+            "TN1": 7.0,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "SHAMROCK",
+          "base": "SHAMROCK",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 3.6,
+            "OK1": 4.1,
+            "TN1": 6.5,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "PST-K15-167",
+          "base": "PST-K15-167",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.3,
+            "OK1": 4.6,
+            "TN1": 6.5,
+            "VA1": 5.5
+          }
+        },
+        {
+          "name": "A12-34",
+          "base": "A12-34",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.2,
+            "OK1": 5.4,
+            "TN1": 6.2,
+            "VA1": 5.6
+          }
+        },
+        {
+          "name": "JERSEY (NAI-A16-3)",
+          "base": "JERSEY",
+          "code": "NAI-A16-3",
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.1,
+            "NC1": 3.6,
+            "OK1": 4.8,
+            "TN1": 5.9,
+            "VA1": 5.5
+          }
+        },
+        {
+          "name": "DLFPS-340/3446",
+          "base": "DLFPS-340/3446",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.3,
+            "NC1": 2.9,
+            "OK1": 4.4,
+            "TN1": 6.6,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "PST-11-7",
+          "base": "PST-11-7",
+          "code": null,
+          "entry": null,
+          "mean": 5.2,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.8,
+            "OK1": 5.6,
+            "TN1": 5.9,
+            "VA1": 5.3
+          }
+        },
+        {
+          "name": "AVIATOR II (NAI-15-84)",
+          "base": "AVIATOR II",
+          "code": "NAI-15-84",
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.8,
+            "OK1": 4.7,
+            "TN1": 5.9,
+            "VA1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3455",
+          "base": "DLFPS-340/3455",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 5.7,
+            "NC1": 2.7,
+            "OK1": 4.4,
+            "TN1": 6.2,
+            "VA1": 6.6
+          }
+        },
+        {
+          "name": "DLFPS-340/3549",
+          "base": "DLFPS-340/3549",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.6,
+            "OK1": 4.6,
+            "TN1": 5.6,
+            "VA1": 6.3
+          }
+        },
+        {
+          "name": "J-2726",
+          "base": "J-2726",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.7,
+            "OK1": 4.4,
+            "TN1": 5.9,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "A16-1",
+          "base": "A16-1",
+          "code": null,
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 2.2,
+            "OK1": 3.9,
+            "TN1": 6.6,
+            "VA1": 6.2
+          }
+        },
+        {
+          "name": "HEARTLAND (NAI-14-187)",
+          "base": "HEARTLAND",
+          "code": "NAI-14-187",
+          "entry": null,
+          "mean": 5.1,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.8,
+            "OK1": 5.1,
+            "TN1": 5.8,
+            "VA1": 5.2
+          }
+        },
+        {
+          "name": "DLFPS-340/3548",
+          "base": "DLFPS-340/3548",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 5.9,
+            "NC1": 2.4,
+            "OK1": 4.9,
+            "TN1": 5.6,
+            "VA1": 6.5
+          }
+        },
+        {
+          "name": "J-1319",
+          "base": "J-1319",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.2,
+            "NC1": 3.5,
+            "OK1": 3.7,
+            "TN1": 5.9,
+            "VA1": 5.8
+          }
+        },
+        {
+          "name": "NAI-14-132",
+          "base": "NAI-14-132",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.4,
+            "NC1": 1.8,
+            "OK1": 4.1,
+            "TN1": 6.5,
+            "VA1": 6.1
+          }
+        },
+        {
+          "name": "FINISH LINE (NAI-14-178)",
+          "base": "FINISH LINE",
+          "code": "NAI-14-178",
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.2,
+            "OK1": 4.7,
+            "TN1": 6.0,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3556",
+          "base": "DLFPS-340/3556",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.3,
+            "OK1": 3.8,
+            "TN1": 6.3,
+            "VA1": 6.0
+          }
+        },
+        {
+          "name": "PROSPERITY",
+          "base": "PROSPERITY",
+          "code": null,
+          "entry": null,
+          "mean": 5.0,
+          "bySite": {
+            "MD1": 6.6,
+            "NC1": 2.3,
+            "OK1": 3.9,
+            "TN1": 6.5,
+            "VA1": 5.4
+          }
+        },
+        {
+          "name": "PIVOT",
+          "base": "PIVOT",
+          "code": null,
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.8,
+            "NC1": 1.8,
+            "OK1": 3.8,
+            "TN1": 6.7,
+            "VA1": 5.3
+          }
+        },
+        {
+          "name": "COMANCHE (NAI-14-176)",
+          "base": "COMANCHE",
+          "code": "NAI-14-176",
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 1.6,
+            "OK1": 4.3,
+            "TN1": 6.3,
+            "VA1": 5.5
+          }
+        },
+        {
+          "name": "PALOMA (PST-K13-139)",
+          "base": "PALOMA",
+          "code": "PST-K13-139",
+          "entry": null,
+          "mean": 4.8,
+          "bySite": {
+            "MD1": 6.0,
+            "NC1": 2.1,
+            "OK1": 3.9,
+            "TN1": 6.7,
+            "VA1": 5.5
+          }
+        },
+        {
+          "name": "PPG-KB 1320",
+          "base": "PPG-KB 1320",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 2.7,
+            "OK1": 3.1,
+            "TN1": 5.7,
+            "VA1": 5.2
+          }
+        },
+        {
+          "name": "A11-38",
+          "base": "A11-38",
+          "code": null,
+          "entry": null,
+          "mean": 4.6,
+          "bySite": {
+            "MD1": 6.5,
+            "NC1": 1.6,
+            "OK1": 3.6,
+            "TN1": 6.3,
+            "VA1": 5.1
+          }
+        }
+      ],
+      "expected": 6,
+      "pages": [
+        21,
+        22
+      ]
+    },
+    "geneticColor": {
+      "sites": [
+        "CT1",
+        "IA1",
+        "IN1",
+        "MI1",
+        "MN1",
+        "NC1",
+        "ND1",
+        "NE1",
+        "NJ2",
+        "OK1",
+        "TN1",
+        "UT1"
+      ],
+      "rows": [
+        {
+          "name": "BLUE GEM (NAI-13-9)",
+          "base": "BLUE GEM",
+          "code": "NAI-13-9",
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 7.3,
+            "MI1": 7.3,
+            "MN1": 6.3,
+            "NC1": 7.0,
+            "ND1": 7.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "J-1138",
+          "base": "J-1138",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.7,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 8.3,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "AFTER MIDNIGHT",
+          "base": "AFTER MIDNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 7.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 8.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 7.0,
+            "NC1": 8.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 8.3
+          }
+        },
+        {
+          "name": "BLUE MAGIC (A99-2897)",
+          "base": "BLUE MAGIC",
+          "code": "A99-2897",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 7.3,
+            "MI1": 7.0,
+            "MN1": 6.3,
+            "NC1": 7.7,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 7.3,
+            "OK1": 7.3,
+            "TN1": 7.7,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "MIDNIGHT",
+          "base": "MIDNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.3,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 6.7,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 8.3,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "TWILIGHT (NAI-13-132)",
+          "base": "TWILIGHT",
+          "code": "NAI-13-132",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.0,
+            "IN1": 7.0,
+            "MI1": 7.0,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 8.0,
+            "OK1": 5.7,
+            "TN1": 7.3,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "NURUSH (J-3510)",
+          "base": "NURUSH",
+          "code": "J-3510",
+          "entry": null,
+          "mean": 7.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.7,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "UNITED (NAI-13-14)",
+          "base": "UNITED",
+          "code": "NAI-13-14",
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.7,
+            "MN1": 6.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.0,
+            "TN1": 6.7,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "NAI-14-122",
+          "base": "NAI-14-122",
+          "code": null,
+          "entry": null,
+          "mean": 6.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.0,
+            "MN1": 7.3,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "MVS-130",
+          "base": "MVS-130",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.3,
+            "MN1": 7.7,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 4.7,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "BAR PP 79494",
+          "base": "BAR PP 79494",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.0,
+            "TN1": 6.3,
+            "UT1": 8.3
+          }
+        },
+        {
+          "name": "NAI-14-132",
+          "base": "NAI-14-132",
+          "code": null,
+          "entry": null,
+          "mean": 6.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.3,
+            "MN1": 8.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 8.3
+          }
+        },
+        {
+          "name": "ACOUSTIC (PPG-KB 1131)",
+          "base": "ACOUSTIC",
+          "code": "PPG-KB 1131",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 7.7,
+            "OK1": 5.7,
+            "TN1": 5.7,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "BLUE DEVIL",
+          "base": "BLUE DEVIL",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 8.0,
+            "OK1": 6.3,
+            "TN1": 7.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "DUBLIN (PST-K15-157)",
+          "base": "DUBLIN",
+          "code": "PST-K15-157",
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 7.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "NAI-14-128",
+          "base": "NAI-14-128",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "MI1": 6.3,
+            "MN1": 7.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 8.3
+          }
+        },
+        {
+          "name": "A12-34",
+          "base": "A12-34",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.7,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.7,
+            "OK1": 8.0,
+            "TN1": 6.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "A13-1",
+          "base": "A13-1",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 7.7,
+            "MN1": 4.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 8.0,
+            "OK1": 6.7,
+            "TN1": 7.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "PPG-KB 1304",
+          "base": "PPG-KB 1304",
+          "code": null,
+          "entry": null,
+          "mean": 6.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 7.7,
+            "MN1": 6.3,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 7.0,
+            "OK1": 7.7,
+            "TN1": 5.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "COMANCHE (NAI-14-176)",
+          "base": "COMANCHE",
+          "code": "NAI-14-176",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "HEARTLAND (NAI-14-187)",
+          "base": "HEARTLAND",
+          "code": "NAI-14-187",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 6.3,
+            "NC1": 7.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 6.7,
+            "TN1": 6.3,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "PROSPERITY",
+          "base": "PROSPERITY",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 8.0,
+            "MN1": 7.0,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.0,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3550",
+          "base": "DLFPS-340/3550",
+          "code": null,
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 8.0,
+            "OK1": 7.0,
+            "TN1": 6.7,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "AMAZE (NAI-14-133)",
+          "base": "AMAZE",
+          "code": "NAI-14-133",
+          "entry": null,
+          "mean": 6.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.3,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 5.7,
+            "TN1": 5.3,
+            "UT1": 7.7
+          }
+        },
+        {
+          "name": "BLUE KNIGHT",
+          "base": "BLUE KNIGHT",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 7.0,
+            "OK1": 7.3,
+            "TN1": 6.7,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "NEW MOON (PST-K15-177)",
+          "base": "NEW MOON",
+          "code": "PST-K15-177",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 6.7,
+            "MI1": 5.7,
+            "MN1": 6.3,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.3,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "PPG-KB 1320",
+          "base": "PPG-KB 1320",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 8.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 6.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 4.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "A16-7",
+          "base": "A16-7",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 7.0,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 8.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "AKB3128",
+          "base": "AKB3128",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 7.0,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 7.3,
+            "OK1": 7.7,
+            "TN1": 6.7,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "BOMBAY (GO-22B23)",
+          "base": "BOMBAY",
+          "code": "GO-22B23",
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.7,
+            "MI1": 7.0,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.0,
+            "OK1": 7.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "J-1319",
+          "base": "J-1319",
+          "code": null,
+          "entry": null,
+          "mean": 6.5,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 7.0,
+            "NC1": 7.7,
+            "ND1": 4.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 5.7,
+            "TN1": 5.3,
+            "UT1": 8.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3556",
+          "base": "DLFPS-340/3556",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 6.3,
+            "MI1": 7.0,
+            "MN1": 5.3,
+            "NC1": 7.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "AKB3241",
+          "base": "AKB3241",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 7.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 7.3,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3548",
+          "base": "DLFPS-340/3548",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.7,
+            "OK1": 6.7,
+            "TN1": 5.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3553",
+          "base": "DLFPS-340/3553",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.7,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 7.7,
+            "OK1": 6.0,
+            "TN1": 7.0,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "A11-26",
+          "base": "A11-26",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 7.0,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 6.0,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.7,
+            "OK1": 7.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "A15-6",
+          "base": "A15-6",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 7.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 7.7,
+            "OK1": 7.3,
+            "TN1": 5.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "STARR (GO-2628)",
+          "base": "STARR",
+          "code": "GO-2628",
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 7.3,
+            "TN1": 6.7,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "A06-8",
+          "base": "A06-8",
+          "code": null,
+          "entry": null,
+          "mean": 6.4,
+          "bySite": {
+            "CT1": 5.7,
+            "IA1": 7.0,
+            "IN1": 6.7,
+            "MI1": 6.7,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 6.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "CLOUD (GO-2425)",
+          "base": "CLOUD",
+          "code": "GO-2425",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.7,
+            "IN1": 6.5,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3364",
+          "base": "DLFPS-340/3364",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "PIVOT",
+          "base": "PIVOT",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 5.0,
+            "OK1": 6.0,
+            "TN1": 7.3,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "SKYE",
+          "base": "SKYE",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 6.3,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3552",
+          "base": "DLFPS-340/3552",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 4.7,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 5.3,
+            "NJ2": 7.3,
+            "OK1": 7.0,
+            "TN1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3500",
+          "base": "DLFPS-340/3500",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MI1": 7.3,
+            "MN1": 5.3,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "AVIATOR II (NAI-15-84)",
+          "base": "AVIATOR II",
+          "code": "NAI-15-84",
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 6.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 5.3,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 7.0
+          }
+        },
+        {
+          "name": "PST-K15-172",
+          "base": "PST-K15-172",
+          "code": null,
+          "entry": null,
+          "mean": 6.3,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 8.0,
+            "IN1": 6.0,
+            "MI1": 7.0,
+            "MN1": 5.7,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "A10-280",
+          "base": "A10-280",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 5.7,
+            "OK1": 6.0,
+            "TN1": 6.0,
+            "UT1": 6.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3446",
+          "base": "DLFPS-340/3446",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 7.0,
+            "MI1": 5.7,
+            "MN1": 5.3,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 6.7,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "NAI-15-80",
+          "base": "NAI-15-80",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.0,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "J-2726",
+          "base": "J-2726",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 7.7,
+            "IA1": 7.0,
+            "IN1": 6.5,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 7.0,
+            "ND1": 4.0,
+            "NE1": 7.3,
+            "NJ2": 5.7,
+            "OK1": 5.3,
+            "TN1": 4.0,
+            "UT1": 7.3
+          }
+        },
+        {
+          "name": "SUPER MOON (PST-K13-141)",
+          "base": "SUPER MOON",
+          "code": "PST-K13-141",
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 5.7,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 7.0,
+            "OK1": 6.3,
+            "TN1": 7.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3494",
+          "base": "DLFPS-340/3494",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 5.3,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "PST-T14-39",
+          "base": "PST-T14-39",
+          "code": null,
+          "entry": null,
+          "mean": 6.2,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.3,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 6.0,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 7.3,
+            "NJ2": 6.0,
+            "OK1": 5.7,
+            "TN1": 5.7,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "AKB3179",
+          "base": "AKB3179",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 4.7,
+            "UT1": 6.7
+          }
+        },
+        {
+          "name": "ORION (PST-K13-143)",
+          "base": "ORION",
+          "code": "PST-K13-143",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 6.0,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "SYRAH (LTP-11-41)",
+          "base": "SYRAH",
+          "code": "LTP-11-41",
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 6.7,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 7.3,
+            "TN1": 6.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3438",
+          "base": "DLFPS-340/3438",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 6.0,
+            "OK1": 7.7,
+            "TN1": 6.0,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "BAR PP 79366",
+          "base": "BAR PP 79366",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 7.7,
+            "MN1": 4.7,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.3,
+            "OK1": 6.3,
+            "TN1": 7.3,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "PST-11-7",
+          "base": "PST-11-7",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 7.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.3,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 6.0
+          }
+        },
+        {
+          "name": "NK-1",
+          "base": "NK-1",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 4.0,
+            "NC1": 6.7,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 7.0,
+            "OK1": 7.3,
+            "TN1": 5.0,
+            "UT1": 5.7
+          }
+        },
+        {
+          "name": "KH3492",
+          "base": "KH3492",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.0,
+            "OK1": 7.0,
+            "TN1": 6.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "PST-K15-167",
+          "base": "PST-K15-167",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.3,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 6.3,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3551",
+          "base": "DLFPS-340/3551",
+          "code": null,
+          "entry": null,
+          "mean": 6.1,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.0,
+            "NC1": 6.7,
+            "ND1": 4.0,
+            "NE1": 6.7,
+            "NJ2": 7.0,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "A16-2",
+          "base": "A16-2",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.3,
+            "ND1": 6.0,
+            "NE1": 5.3,
+            "NJ2": 6.3,
+            "OK1": 6.7,
+            "TN1": 7.0,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "A16-1",
+          "base": "A16-1",
+          "code": null,
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 7.0,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 3.7
+          }
+        },
+        {
+          "name": "FINISH LINE (NAI-14-178)",
+          "base": "FINISH LINE",
+          "code": "NAI-14-178",
+          "entry": null,
+          "mean": 6.0,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "BAR PP 7309V",
+          "base": "BAR PP 7309V",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 6.0,
+            "NJ2": 7.7,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 3.3
+          }
+        },
+        {
+          "name": "BARVETTE HGT\u00ae",
+          "base": "BARVETTE HGT\u00ae",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 7.0,
+            "NJ2": 5.7,
+            "OK1": 6.0,
+            "TN1": 7.3,
+            "UT1": 3.3
+          }
+        },
+        {
+          "name": "PALOMA (PST-K13-139)",
+          "base": "PALOMA",
+          "code": "PST-K13-139",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 5.7,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 6.7,
+            "UT1": 4.3
+          }
+        },
+        {
+          "name": "BABE",
+          "base": "BABE",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 7.7,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "BARSERATI (BAR PP 110358)",
+          "base": "BARSERATI",
+          "code": "BAR PP 110358",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.0,
+            "IN1": 6.0,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 5.7,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 5.7,
+            "TN1": 6.3,
+            "UT1": 3.7
+          }
+        },
+        {
+          "name": "A11-40",
+          "base": "A11-40",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 6.0,
+            "ND1": 7.0,
+            "NE1": 6.3,
+            "NJ2": 7.0,
+            "OK1": 5.3,
+            "TN1": 6.3,
+            "UT1": 2.7
+          }
+        },
+        {
+          "name": "RAD-1776",
+          "base": "RAD-1776",
+          "code": null,
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 5.0,
+            "MI1": 6.0,
+            "MN1": 5.0,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.7,
+            "NJ2": 5.7,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 4.3
+          }
+        },
+        {
+          "name": "YELLOWSTONE (A12-7)",
+          "base": "YELLOWSTONE",
+          "code": "A12-7",
+          "entry": null,
+          "mean": 5.9,
+          "bySite": {
+            "CT1": 7.0,
+            "IA1": 6.7,
+            "IN1": 6.3,
+            "MI1": 6.7,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 7.0,
+            "NJ2": 4.0,
+            "OK1": 5.7,
+            "TN1": 5.0,
+            "UT1": 4.3
+          }
+        },
+        {
+          "name": "BAR PP 7K426",
+          "base": "BAR PP 7K426",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.3,
+            "NJ2": 6.0,
+            "OK1": 6.3,
+            "TN1": 6.3,
+            "UT1": 3.0
+          }
+        },
+        {
+          "name": "JERSEY (NAI-A16-3)",
+          "base": "JERSEY",
+          "code": "NAI-A16-3",
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.3,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 6.3,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "BAR PP 7236V",
+          "base": "BAR PP 7236V",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 5.3,
+            "MI1": 7.0,
+            "MN1": 4.7,
+            "NC1": 5.3,
+            "ND1": 7.0,
+            "NE1": 6.0,
+            "NJ2": 7.0,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 3.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3455",
+          "base": "DLFPS-340/3455",
+          "code": null,
+          "entry": null,
+          "mean": 5.8,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.0,
+            "IN1": 6.0,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "NC1": 5.7,
+            "ND1": 7.0,
+            "NE1": 6.7,
+            "NJ2": 6.7,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 3.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3444",
+          "base": "DLFPS-340/3444",
+          "code": null,
+          "entry": null,
+          "mean": 5.7,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 7.0,
+            "IN1": 5.0,
+            "MI1": 6.0,
+            "MN1": 5.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 4.7,
+            "OK1": 6.0,
+            "TN1": 5.7,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "A16-17",
+          "base": "A16-17",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 7.7,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 3.7,
+            "NC1": 6.0,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.0,
+            "TN1": 7.0,
+            "UT1": 3.7
+          }
+        },
+        {
+          "name": "RAD 553",
+          "base": "RAD 553",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.3,
+            "IN1": 4.7,
+            "MI1": 5.7,
+            "MN1": 4.7,
+            "NC1": 5.3,
+            "ND1": 5.7,
+            "NE1": 6.7,
+            "NJ2": 5.3,
+            "OK1": 6.7,
+            "TN1": 6.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "SHAMROCK",
+          "base": "SHAMROCK",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 5.7,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 4.0,
+            "OK1": 6.3,
+            "TN1": 6.0,
+            "UT1": 4.3
+          }
+        },
+        {
+          "name": "SELWAY",
+          "base": "SELWAY",
+          "code": null,
+          "entry": null,
+          "mean": 5.6,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "MI1": 6.0,
+            "MN1": 4.7,
+            "NC1": 6.3,
+            "ND1": 5.0,
+            "NE1": 6.3,
+            "NJ2": 4.7,
+            "OK1": 6.7,
+            "TN1": 5.0,
+            "UT1": 4.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3549",
+          "base": "DLFPS-340/3549",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.3,
+            "IN1": 5.7,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 5.0,
+            "ND1": 5.0,
+            "NE1": 5.0,
+            "NJ2": 5.7,
+            "OK1": 7.0,
+            "TN1": 5.0,
+            "UT1": 4.0
+          }
+        },
+        {
+          "name": "A11-38",
+          "base": "A11-38",
+          "code": null,
+          "entry": null,
+          "mean": 5.5,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.7,
+            "IN1": 6.0,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "NC1": 6.0,
+            "ND1": 6.0,
+            "NE1": 6.0,
+            "NJ2": 3.0,
+            "OK1": 6.0,
+            "TN1": 5.0,
+            "UT1": 3.7
+          }
+        },
+        {
+          "name": "BAR PP 71213",
+          "base": "BAR PP 71213",
+          "code": null,
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.7,
+            "IA1": 6.0,
+            "IN1": 4.0,
+            "MI1": 6.0,
+            "MN1": 3.7,
+            "NC1": 6.3,
+            "ND1": 6.0,
+            "NE1": 6.3,
+            "NJ2": 5.0,
+            "OK1": 6.3,
+            "TN1": 6.7,
+            "UT1": 2.3
+          }
+        },
+        {
+          "name": "ELECTRIC (PST-K11-118)",
+          "base": "ELECTRIC",
+          "code": "PST-K11-118",
+          "entry": null,
+          "mean": 5.4,
+          "bySite": {
+            "CT1": 6.3,
+            "IA1": 6.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 5.0,
+            "NC1": 5.3,
+            "ND1": 5.0,
+            "NE1": 7.0,
+            "NJ2": 2.3,
+            "OK1": 5.7,
+            "TN1": 6.7,
+            "UT1": 3.3
+          }
+        },
+        {
+          "name": "KENBLUE",
+          "base": "KENBLUE",
+          "code": null,
+          "entry": null,
+          "mean": 4.9,
+          "bySite": {
+            "CT1": 6.0,
+            "IA1": 6.0,
+            "IN1": 4.0,
+            "MI1": 5.7,
+            "MN1": 4.0,
+            "NC1": 5.7,
+            "ND1": 4.0,
+            "NE1": 4.3,
+            "NJ2": 4.0,
+            "OK1": 6.3,
+            "TN1": 5.7,
+            "UT1": 3.0
+          }
+        }
+      ],
+      "expected": 13,
+      "pages": [
+        38,
+        39
+      ]
+    },
+    "lpiGroup1": {
+      "sites": [
+        "NJ1",
+        "NJ2",
+        "MD1",
+        "VA1",
+        "NC1",
+        "IN1",
+        "MI1",
+        "MN1",
+        "OK1",
+        "UT1"
+      ],
+      "rows": [
+        {
+          "name": "STARR (GO-2628)",
+          "base": "STARR",
+          "code": "GO-2628",
+          "entry": 47,
+          "mean": 6.5,
+          "bySite": {
+            "NJ1": 6.3,
+            "NJ2": 6.7,
+            "MD1": 6.9,
+            "VA1": 7.5,
+            "NC1": 5.3,
+            "IN1": 5.9,
+            "MI1": 7.1,
+            "MN1": 4.7,
+            "OK1": 6.0,
+            "UT1": 5.5
+          }
+        },
+        {
+          "name": "BARSERATI (BAR PP 110358)",
+          "base": "BARSERATI",
+          "code": "BAR PP 110358",
+          "entry": 27,
+          "mean": 6.5,
+          "bySite": {
+            "NJ1": 6.3,
+            "NJ2": 6.7,
+            "MD1": 6.7,
+            "VA1": 7.4,
+            "NC1": 5.3,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.9,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "BARVETTE HGT\u00ae",
+          "base": "BARVETTE HGT\u00ae",
+          "code": null,
+          "entry": 23,
+          "mean": 6.4,
+          "bySite": {
+            "NJ1": 5.8,
+            "NJ2": 6.8,
+            "MD1": 6.8,
+            "VA1": 7.4,
+            "NC1": 5.2,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.9,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "J-1138",
+          "base": "J-1138",
+          "code": null,
+          "entry": 16,
+          "mean": 6.3,
+          "bySite": {
+            "NJ1": 5.6,
+            "NJ2": 6.7,
+            "MD1": 6.6,
+            "VA1": 7.3,
+            "NC1": 5.1,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.4,
+            "OK1": 5.8,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BOMBAY (GO-22B23)",
+          "base": "BOMBAY",
+          "code": "GO-22B23",
+          "entry": 46,
+          "mean": 6.2,
+          "bySite": {
+            "NJ1": 6.1,
+            "NJ2": 6.1,
+            "MD1": 6.8,
+            "VA1": 7.2,
+            "NC1": 4.9,
+            "IN1": 5.7,
+            "MI1": 6.8,
+            "MN1": 4.6,
+            "OK1": 5.7,
+            "UT1": 5.4
+          }
+        },
+        {
+          "name": "CLOUD (GO-2425)",
+          "base": "CLOUD",
+          "code": "GO-2425",
+          "entry": 48,
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 6.2,
+            "MD1": 6.9,
+            "VA1": 7.2,
+            "NC1": 4.7,
+            "IN1": 5.8,
+            "MI1": 7.0,
+            "MN1": 4.7,
+            "OK1": 5.7,
+            "UT1": 5.5
+          }
+        },
+        {
+          "name": "PPG-KB 1304",
+          "base": "PPG-KB 1304",
+          "code": null,
+          "entry": 74,
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 6.5,
+            "MD1": 6.7,
+            "VA1": 7.2,
+            "NC1": 4.8,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "SKYE",
+          "base": "SKYE",
+          "code": null,
+          "entry": 45,
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 6.4,
+            "MD1": 6.7,
+            "VA1": 7.2,
+            "NC1": 4.7,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.6,
+            "OK1": 5.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "MIDNIGHT",
+          "base": "MIDNIGHT",
+          "code": null,
+          "entry": 88,
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.3,
+            "NJ2": 6.2,
+            "MD1": 6.7,
+            "VA1": 7.1,
+            "NC1": 4.7,
+            "IN1": 5.7,
+            "MI1": 6.9,
+            "MN1": 4.5,
+            "OK1": 5.7,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "A11-26",
+          "base": "A11-26",
+          "code": null,
+          "entry": 67,
+          "mean": 6.1,
+          "bySite": {
+            "NJ1": 5.8,
+            "NJ2": 6.3,
+            "MD1": 6.5,
+            "VA1": 7.1,
+            "NC1": 4.9,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.3,
+            "OK1": 5.6,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "SYRAH (LTP-11-41)",
+          "base": "SYRAH",
+          "code": "LTP-11-41",
+          "entry": 4,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 6.5,
+            "MD1": 6.7,
+            "VA1": 7.1,
+            "NC1": 4.5,
+            "IN1": 5.7,
+            "MI1": 7.0,
+            "MN1": 4.5,
+            "OK1": 5.6,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BAR PP 7236V",
+          "base": "BAR PP 7236V",
+          "code": null,
+          "entry": 25,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 6.1,
+            "MD1": 6.6,
+            "VA1": 7.0,
+            "NC1": 4.5,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.5,
+            "OK1": 5.5,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "ACOUSTIC (PPG-KB 1131)",
+          "base": "ACOUSTIC",
+          "code": "PPG-KB 1131",
+          "entry": 70,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.7,
+            "NJ2": 5.9,
+            "MD1": 6.4,
+            "VA1": 6.9,
+            "NC1": 4.6,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.3,
+            "OK1": 5.4,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "BLUE MAGIC (A99-2897)",
+          "base": "BLUE MAGIC",
+          "code": "A99-2897",
+          "entry": 3,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 6.4,
+            "MD1": 6.8,
+            "VA1": 7.1,
+            "NC1": 4.4,
+            "IN1": 5.8,
+            "MI1": 7.1,
+            "MN1": 4.6,
+            "OK1": 5.6,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3550",
+          "base": "DLFPS-340/3550",
+          "code": null,
+          "entry": 60,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.7,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.5,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BLUE GEM (NAI-13-9)",
+          "base": "BLUE GEM",
+          "code": "NAI-13-9",
+          "entry": 32,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 4.9,
+            "NJ2": 5.9,
+            "MD1": 6.7,
+            "VA1": 6.9,
+            "NC1": 4.4,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.6,
+            "OK1": 5.5,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "DLFPS-340/3553",
+          "base": "DLFPS-340/3553",
+          "code": null,
+          "entry": 52,
+          "mean": 5.9,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 6.0,
+            "MD1": 6.5,
+            "VA1": 6.9,
+            "NC1": 4.5,
+            "IN1": 5.5,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.4,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "A11-40",
+          "base": "A11-40",
+          "code": null,
+          "entry": 1,
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.4,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "BAR PP 79494",
+          "base": "BAR PP 79494",
+          "code": null,
+          "entry": 26,
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 6.2,
+            "MD1": 6.6,
+            "VA1": 6.9,
+            "NC1": 4.3,
+            "IN1": 5.6,
+            "MI1": 6.8,
+            "MN1": 4.4,
+            "OK1": 5.5,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "UNITED (NAI-13-14)",
+          "base": "UNITED",
+          "code": "NAI-13-14",
+          "entry": 33,
+          "mean": 5.8,
+          "bySite": {
+            "NJ1": 4.6,
+            "NJ2": 5.9,
+            "MD1": 6.6,
+            "VA1": 6.8,
+            "NC1": 4.2,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.5,
+            "OK1": 5.4,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "A10-280",
+          "base": "A10-280",
+          "code": null,
+          "entry": 71,
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 6.1,
+            "NJ2": 5.0,
+            "MD1": 6.6,
+            "VA1": 6.6,
+            "NC1": 4.2,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 5.2,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "PST-K15-172",
+          "base": "PST-K15-172",
+          "code": null,
+          "entry": 87,
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 5.6,
+            "MD1": 6.5,
+            "VA1": 6.7,
+            "NC1": 4.2,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.3,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DLFPS-340/3552",
+          "base": "DLFPS-340/3552",
+          "code": null,
+          "entry": 62,
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 3.7,
+            "NJ2": 6.2,
+            "MD1": 6.6,
+            "VA1": 6.8,
+            "NC1": 4.2,
+            "IN1": 5.5,
+            "MI1": 6.8,
+            "MN1": 4.4,
+            "OK1": 5.4,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "BLUE DEVIL",
+          "base": "BLUE DEVIL",
+          "code": null,
+          "entry": 44,
+          "mean": 5.7,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.7,
+            "NC1": 4.2,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.3,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "NURUSH (J-3510)",
+          "base": "NURUSH",
+          "code": "J-3510",
+          "entry": 19,
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 5.6,
+            "MD1": 6.6,
+            "VA1": 6.7,
+            "NC1": 4.0,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.5,
+            "OK1": 5.3,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "SELWAY",
+          "base": "SELWAY",
+          "code": null,
+          "entry": 7,
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 6.5,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.5,
+            "NC1": 4.2,
+            "IN1": 5.1,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "AFTER MIDNIGHT",
+          "base": "AFTER MIDNIGHT",
+          "code": null,
+          "entry": 15,
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 5.9,
+            "NJ2": 4.8,
+            "MD1": 6.6,
+            "VA1": 6.5,
+            "NC1": 4.0,
+            "IN1": 5.3,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 5.1,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "SUPER MOON (PST-K13-141)",
+          "base": "SUPER MOON",
+          "code": "PST-K13-141",
+          "entry": 81,
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 5.3,
+            "MD1": 6.8,
+            "VA1": 6.6,
+            "NC1": 3.8,
+            "IN1": 5.5,
+            "MI1": 6.7,
+            "MN1": 4.7,
+            "OK1": 5.3,
+            "UT1": 5.4
+          }
+        },
+        {
+          "name": "A16-17",
+          "base": "A16-17",
+          "code": null,
+          "entry": 76,
+          "mean": 5.6,
+          "bySite": {
+            "NJ1": 2.3,
+            "NJ2": 6.8,
+            "MD1": 6.5,
+            "VA1": 6.8,
+            "NC1": 4.1,
+            "IN1": 5.5,
+            "MI1": 6.9,
+            "MN1": 4.2,
+            "OK1": 5.4,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "A15-6",
+          "base": "A15-6",
+          "code": null,
+          "entry": 75,
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 5.1,
+            "NJ2": 5.3,
+            "MD1": 6.4,
+            "VA1": 6.5,
+            "NC1": 4.0,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "ELECTRIC (PST-K11-118)",
+          "base": "ELECTRIC",
+          "code": "PST-K11-118",
+          "entry": 82,
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 4.9,
+            "MD1": 6.7,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.5,
+            "MN1": 4.6,
+            "OK1": 5.1,
+            "UT1": 5.4
+          }
+        },
+        {
+          "name": "AKB3241",
+          "base": "AKB3241",
+          "code": null,
+          "entry": 11,
+          "mean": 5.5,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 5.3,
+            "MD1": 6.6,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.5,
+            "OK1": 5.2,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "TWILIGHT (NAI-13-132)",
+          "base": "TWILIGHT",
+          "code": "NAI-13-132",
+          "entry": 30,
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 4.6,
+            "NJ2": 5.1,
+            "MD1": 6.5,
+            "VA1": 6.4,
+            "NC1": 3.8,
+            "IN1": 5.3,
+            "MI1": 6.4,
+            "MN1": 4.4,
+            "OK1": 5.1,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "A13-1",
+          "base": "A13-1",
+          "code": null,
+          "entry": 2,
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.1,
+            "NJ2": 5.8,
+            "MD1": 6.5,
+            "VA1": 6.5,
+            "NC1": 3.7,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.2,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "KH3492",
+          "base": "KH3492",
+          "code": null,
+          "entry": 13,
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.3,
+            "MD1": 6.6,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.1,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "BAR PP 7K426",
+          "base": "BAR PP 7K426",
+          "code": null,
+          "entry": 24,
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.4,
+            "MD1": 6.4,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "ORION (PST-K13-143)",
+          "base": "ORION",
+          "code": "PST-K13-143",
+          "entry": 35,
+          "mean": 5.4,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 5.0,
+            "MD1": 6.4,
+            "VA1": 6.4,
+            "NC1": 3.7,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 5.0,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DLFPS-340/3500",
+          "base": "DLFPS-340/3500",
+          "code": null,
+          "entry": 54,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 5.0,
+            "NJ2": 4.5,
+            "MD1": 6.5,
+            "VA1": 6.2,
+            "NC1": 3.6,
+            "IN1": 5.1,
+            "MI1": 6.2,
+            "MN1": 4.5,
+            "OK1": 4.9,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BAR PP 79366",
+          "base": "BAR PP 79366",
+          "code": null,
+          "entry": 22,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 4.5,
+            "NJ2": 4.8,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.6,
+            "IN1": 5.2,
+            "MI1": 6.3,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "RAD-1776",
+          "base": "RAD-1776",
+          "code": null,
+          "entry": 28,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 5.1,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.6,
+            "IN1": 5.2,
+            "MI1": 6.4,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "BABE",
+          "base": "BABE",
+          "code": null,
+          "entry": 8,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 5.1,
+            "MD1": 6.3,
+            "VA1": 6.3,
+            "NC1": 3.7,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.2,
+            "OK1": 4.9,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "DLFPS-340/3551",
+          "base": "DLFPS-340/3551",
+          "code": null,
+          "entry": 61,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.1,
+            "NJ2": 5.5,
+            "MD1": 6.5,
+            "VA1": 6.4,
+            "NC1": 3.6,
+            "IN1": 5.3,
+            "MI1": 6.6,
+            "MN1": 4.3,
+            "OK1": 5.1,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "AKB3179",
+          "base": "AKB3179",
+          "code": null,
+          "entry": 10,
+          "mean": 5.3,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.9,
+            "MD1": 6.7,
+            "VA1": 6.3,
+            "NC1": 3.4,
+            "IN1": 5.4,
+            "MI1": 6.6,
+            "MN1": 4.6,
+            "OK1": 5.0,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "AKB3128",
+          "base": "AKB3128",
+          "code": null,
+          "entry": 9,
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.2,
+            "MD1": 6.5,
+            "VA1": 6.3,
+            "NC1": 3.4,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 5.0,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "JERSEY (NAI-A16-3)",
+          "base": "JERSEY",
+          "code": "NAI-A16-3",
+          "entry": 29,
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 4.8,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.5,
+            "IN1": 5.1,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.9,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "A16-2",
+          "base": "A16-2",
+          "code": null,
+          "entry": 73,
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.2,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.2,
+            "NC1": 3.5,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 4.9,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3549",
+          "base": "DLFPS-340/3549",
+          "code": null,
+          "entry": 56,
+          "mean": 5.2,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 4.6,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.5,
+            "IN1": 4.9,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.8,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "PST-T14-39",
+          "base": "PST-T14-39",
+          "code": null,
+          "entry": 89,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 4.4,
+            "NJ2": 4.8,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.5,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.8,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "A06-8",
+          "base": "A06-8",
+          "code": null,
+          "entry": 78,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.2,
+            "NJ2": 4.9,
+            "MD1": 6.6,
+            "VA1": 6.2,
+            "NC1": 3.2,
+            "IN1": 5.3,
+            "MI1": 6.5,
+            "MN1": 4.5,
+            "OK1": 4.9,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BAR PP 7309V",
+          "base": "BAR PP 7309V",
+          "code": null,
+          "entry": 21,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.2,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.2,
+            "OK1": 4.9,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "DLFPS-340/3444",
+          "base": "DLFPS-340/3444",
+          "code": null,
+          "entry": 58,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.4,
+            "NJ2": 5.1,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.1,
+            "OK1": 4.8,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "NAI-14-122",
+          "base": "NAI-14-122",
+          "code": null,
+          "entry": 34,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 3.6,
+            "NJ2": 4.5,
+            "MD1": 6.5,
+            "VA1": 6.1,
+            "NC1": 3.2,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 4.8,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DLFPS-340/3548",
+          "base": "DLFPS-340/3548",
+          "code": null,
+          "entry": 57,
+          "mean": 5.1,
+          "bySite": {
+            "NJ1": 5.2,
+            "NJ2": 4.1,
+            "MD1": 6.2,
+            "VA1": 5.9,
+            "NC1": 3.3,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.2,
+            "OK1": 4.6,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "AMAZE (NAI-14-133)",
+          "base": "AMAZE",
+          "code": "NAI-14-133",
+          "entry": 38,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.4,
+            "NJ2": 4.8,
+            "MD1": 6.4,
+            "VA1": 6.1,
+            "NC1": 3.2,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.3,
+            "OK1": 4.8,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "NK-1",
+          "base": "NK-1",
+          "code": null,
+          "entry": 12,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 2.4,
+            "NJ2": 5.5,
+            "MD1": 6.3,
+            "VA1": 6.2,
+            "NC1": 3.3,
+            "IN1": 5.1,
+            "MI1": 6.5,
+            "MN1": 4.1,
+            "OK1": 4.9,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "NAI-14-128",
+          "base": "NAI-14-128",
+          "code": null,
+          "entry": 36,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 4.3,
+            "MD1": 6.6,
+            "VA1": 6.0,
+            "NC1": 3.1,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.6,
+            "OK1": 4.8,
+            "UT1": 5.3
+          }
+        },
+        {
+          "name": "BLUE KNIGHT",
+          "base": "BLUE KNIGHT",
+          "code": null,
+          "entry": 5,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 5.1,
+            "MD1": 6.2,
+            "VA1": 6.1,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.0,
+            "OK1": 4.8,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3364",
+          "base": "DLFPS-340/3364",
+          "code": null,
+          "entry": 49,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 2.8,
+            "NJ2": 5.3,
+            "MD1": 6.2,
+            "VA1": 6.2,
+            "NC1": 3.4,
+            "IN1": 5.0,
+            "MI1": 6.3,
+            "MN1": 4.0,
+            "OK1": 4.8,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "DLFPS-340/3494",
+          "base": "DLFPS-340/3494",
+          "code": null,
+          "entry": 53,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 5.5,
+            "NJ2": 3.5,
+            "MD1": 6.4,
+            "VA1": 5.8,
+            "NC1": 3.1,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.4,
+            "OK1": 4.5,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "RAD 553",
+          "base": "RAD 553",
+          "code": null,
+          "entry": 6,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.8,
+            "NJ2": 4.5,
+            "MD1": 6.3,
+            "VA1": 6.0,
+            "NC1": 3.2,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 4.7,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "PIVOT",
+          "base": "PIVOT",
+          "code": null,
+          "entry": 43,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.7,
+            "NJ2": 3.9,
+            "MD1": 6.3,
+            "VA1": 5.9,
+            "NC1": 3.1,
+            "IN1": 4.9,
+            "MI1": 5.9,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DLFPS-340/3438",
+          "base": "DLFPS-340/3438",
+          "code": null,
+          "entry": 55,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.7,
+            "MD1": 6.3,
+            "VA1": 6.0,
+            "NC1": 3.2,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.2,
+            "OK1": 4.7,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "KENBLUE",
+          "base": "KENBLUE",
+          "code": null,
+          "entry": 79,
+          "mean": 5.0,
+          "bySite": {
+            "NJ1": 4.1,
+            "NJ2": 4.7,
+            "MD1": 6.0,
+            "VA1": 6.0,
+            "NC1": 3.4,
+            "IN1": 4.7,
+            "MI1": 5.9,
+            "MN1": 3.8,
+            "OK1": 4.6,
+            "UT1": 4.6
+          }
+        },
+        {
+          "name": "NAI-15-80",
+          "base": "NAI-15-80",
+          "code": null,
+          "entry": 31,
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 2.0,
+            "NJ2": 5.0,
+            "MD1": 6.6,
+            "VA1": 6.1,
+            "NC1": 2.9,
+            "IN1": 5.2,
+            "MI1": 6.5,
+            "MN1": 4.4,
+            "OK1": 4.8,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "DLFPS-340/3455",
+          "base": "DLFPS-340/3455",
+          "code": null,
+          "entry": 59,
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.5,
+            "NJ2": 4.6,
+            "MD1": 6.2,
+            "VA1": 6.0,
+            "NC1": 3.1,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.6,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "MVS-130",
+          "base": "MVS-130",
+          "code": null,
+          "entry": 63,
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.9,
+            "NJ2": 4.0,
+            "MD1": 6.5,
+            "VA1": 5.9,
+            "NC1": 2.9,
+            "IN1": 5.0,
+            "MI1": 6.1,
+            "MN1": 4.5,
+            "OK1": 4.6,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DLFPS-340/3556",
+          "base": "DLFPS-340/3556",
+          "code": null,
+          "entry": 51,
+          "mean": 4.9,
+          "bySite": {
+            "NJ1": 3.0,
+            "NJ2": 4.5,
+            "MD1": 6.4,
+            "VA1": 6.0,
+            "NC1": 3.0,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.7,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "FINISH LINE (NAI-14-178)",
+          "base": "FINISH LINE",
+          "code": "NAI-14-178",
+          "entry": 40,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 4.3,
+            "MD1": 6.5,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.5,
+            "OK1": 4.6,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "YELLOWSTONE (A12-7)",
+          "base": "YELLOWSTONE",
+          "code": "A12-7",
+          "entry": 14,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 3.6,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.8,
+            "IN1": 4.9,
+            "MI1": 5.9,
+            "MN1": 4.5,
+            "OK1": 4.5,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "A12-34",
+          "base": "A12-34",
+          "code": null,
+          "entry": 66,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 4.4,
+            "MD1": 6.4,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.4,
+            "OK1": 4.6,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "J-2726",
+          "base": "J-2726",
+          "code": null,
+          "entry": 18,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.8,
+            "NJ2": 3.5,
+            "MD1": 6.3,
+            "VA1": 5.7,
+            "NC1": 2.9,
+            "IN1": 4.7,
+            "MI1": 5.8,
+            "MN1": 4.3,
+            "OK1": 4.4,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "PST-K15-167",
+          "base": "PST-K15-167",
+          "code": null,
+          "entry": 85,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.7,
+            "NJ2": 4.3,
+            "MD1": 6.2,
+            "VA1": 5.8,
+            "NC1": 3.0,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.1,
+            "OK1": 4.5,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "HEARTLAND (NAI-14-187)",
+          "base": "HEARTLAND",
+          "code": "NAI-14-187",
+          "entry": 41,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 4.2,
+            "MD1": 6.3,
+            "VA1": 5.8,
+            "NC1": 2.9,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "PROSPERITY",
+          "base": "PROSPERITY",
+          "code": null,
+          "entry": 77,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 4.4,
+            "NJ2": 3.5,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.8,
+            "IN1": 4.8,
+            "MI1": 5.9,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.1
+          }
+        },
+        {
+          "name": "DUBLIN (PST-K15-157)",
+          "base": "DUBLIN",
+          "code": "PST-K15-157",
+          "entry": 83,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.6,
+            "NJ2": 4.2,
+            "MD1": 6.6,
+            "VA1": 5.9,
+            "NC1": 2.7,
+            "IN1": 5.1,
+            "MI1": 6.3,
+            "MN1": 4.6,
+            "OK1": 4.6,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "PST-11-7",
+          "base": "PST-11-7",
+          "code": null,
+          "entry": 84,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 6.7,
+            "NJ2": 2.4,
+            "MD1": 6.3,
+            "VA1": 5.4,
+            "NC1": 2.8,
+            "IN1": 4.5,
+            "MI1": 5.3,
+            "MN1": 4.4,
+            "OK1": 4.2,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "DLFPS-340/3446",
+          "base": "DLFPS-340/3446",
+          "code": null,
+          "entry": 50,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 2.5,
+            "NJ2": 4.6,
+            "MD1": 6.4,
+            "VA1": 5.9,
+            "NC1": 2.8,
+            "IN1": 5.0,
+            "MI1": 6.2,
+            "MN1": 4.3,
+            "OK1": 4.6,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "SHAMROCK",
+          "base": "SHAMROCK",
+          "code": null,
+          "entry": 72,
+          "mean": 4.8,
+          "bySite": {
+            "NJ1": 3.3,
+            "NJ2": 4.2,
+            "MD1": 6.3,
+            "VA1": 5.8,
+            "NC1": 2.8,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.5,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "A16-7",
+          "base": "A16-7",
+          "code": null,
+          "entry": 65,
+          "mean": 4.7,
+          "bySite": {
+            "NJ1": 2.6,
+            "NJ2": 4.4,
+            "MD1": 6.2,
+            "VA1": 5.8,
+            "NC1": 2.8,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.1,
+            "OK1": 4.5,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "NEW MOON (PST-K15-177)",
+          "base": "NEW MOON",
+          "code": "PST-K15-177",
+          "entry": 86,
+          "mean": 4.7,
+          "bySite": {
+            "NJ1": 4.3,
+            "NJ2": 3.3,
+            "MD1": 6.4,
+            "VA1": 5.6,
+            "NC1": 2.6,
+            "IN1": 4.8,
+            "MI1": 5.8,
+            "MN1": 4.5,
+            "OK1": 4.4,
+            "UT1": 5.2
+          }
+        },
+        {
+          "name": "BAR PP 71213",
+          "base": "BAR PP 71213",
+          "code": null,
+          "entry": 20,
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 4.3,
+            "MD1": 6.1,
+            "VA1": 5.7,
+            "NC1": 2.7,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.0,
+            "OK1": 4.4,
+            "UT1": 4.7
+          }
+        },
+        {
+          "name": "J-1319",
+          "base": "J-1319",
+          "code": null,
+          "entry": 17,
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 4.4,
+            "MD1": 6.1,
+            "VA1": 5.7,
+            "NC1": 2.7,
+            "IN1": 4.7,
+            "MI1": 5.9,
+            "MN1": 3.9,
+            "OK1": 4.4,
+            "UT1": 4.6
+          }
+        },
+        {
+          "name": "NAI-14-132",
+          "base": "NAI-14-132",
+          "code": null,
+          "entry": 37,
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 3.8,
+            "MD1": 6.4,
+            "VA1": 5.7,
+            "NC1": 2.5,
+            "IN1": 4.9,
+            "MI1": 6.0,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "PPG-KB 1320",
+          "base": "PPG-KB 1320",
+          "code": null,
+          "entry": 68,
+          "mean": 4.6,
+          "bySite": {
+            "NJ1": 4.1,
+            "NJ2": 3.3,
+            "MD1": 6.2,
+            "VA1": 5.5,
+            "NC1": 2.5,
+            "IN1": 4.6,
+            "MI1": 5.7,
+            "MN1": 4.3,
+            "OK1": 4.2,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "A11-38",
+          "base": "A11-38",
+          "code": null,
+          "entry": 69,
+          "mean": 4.5,
+          "bySite": {
+            "NJ1": 2.5,
+            "NJ2": 3.9,
+            "MD1": 6.4,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.9,
+            "MI1": 6.1,
+            "MN1": 4.4,
+            "OK1": 4.4,
+            "UT1": 5.0
+          }
+        },
+        {
+          "name": "AVIATOR II (NAI-15-84)",
+          "base": "AVIATOR II",
+          "code": "NAI-15-84",
+          "entry": 42,
+          "mean": 4.5,
+          "bySite": {
+            "NJ1": 2.7,
+            "NJ2": 3.8,
+            "MD1": 6.3,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.3,
+            "OK1": 4.3,
+            "UT1": 4.9
+          }
+        },
+        {
+          "name": "PALOMA (PST-K13-139)",
+          "base": "PALOMA",
+          "code": "PST-K13-139",
+          "entry": 80,
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 3.0,
+            "NJ2": 3.6,
+            "MD1": 6.2,
+            "VA1": 5.5,
+            "NC1": 2.4,
+            "IN1": 4.7,
+            "MI1": 5.8,
+            "MN1": 4.2,
+            "OK1": 4.2,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "A16-1",
+          "base": "A16-1",
+          "code": null,
+          "entry": 64,
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 2.0,
+            "NJ2": 4.1,
+            "MD1": 6.2,
+            "VA1": 5.6,
+            "NC1": 2.4,
+            "IN1": 4.8,
+            "MI1": 6.0,
+            "MN1": 4.2,
+            "OK1": 4.3,
+            "UT1": 4.8
+          }
+        },
+        {
+          "name": "COMANCHE (NAI-14-176)",
+          "base": "COMANCHE",
+          "code": "NAI-14-176",
+          "entry": 39,
+          "mean": 4.4,
+          "bySite": {
+            "NJ1": 2.9,
+            "NJ2": 3.3,
+            "MD1": 6.5,
+            "VA1": 5.5,
+            "NC1": 2.2,
+            "IN1": 4.8,
+            "MI1": 5.9,
+            "MN1": 4.5,
+            "OK1": 4.3,
+            "UT1": 5.1
+          }
+        }
+      ],
+      "expected": 11,
+      "pages": [
+        11,
+        12
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
     "trial": "tf18",
     "year": 2023,
     "sourcePdf": "tf18_24-8.pdf",
-    "notes": "Parsed high-value NTEP tables only (regional quality, color, disease, drought)."
+    "notes": "Parsed high-value NTEP tables only (regional quality, genetic color, disease, drought, national mean quality)."
   },
   "count": 132,
   "cultivars": [

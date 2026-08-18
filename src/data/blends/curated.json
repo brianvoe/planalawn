@@ -108,6 +108,262 @@
     "notes": "Published Lawn Synergy cultivar list. Remainder is inert matter."
   },
   {
+    "id": "resilience-after-dark",
+    "name": "Resilience ‘After Dark’",
+    "manufacturer": "Twin City Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://twincityseed.com/product/resilience-after-dark-lawn-seed-mixture/",
+    "companyUrl": "https://twincityseed.com",
+    "profile": "Darkest genetic color",
+    "summary": "Three-way picked on NTEP genetic color ratings, with lateral spread from rhizomes and tillering.",
+    "buyHint": "Twin City Seed direct in 5, 10, 25, and 50 lb bags.",
+    "components": [
+      { "name": "Rover", "cultivarId": "rover", "percent": 40 },
+      { "name": "Triad", "cultivarId": "triad", "percent": 30 },
+      { "name": "Xanadu", "cultivarId": "xanadu", "percent": 30 }
+    ],
+    "notes": "Published tag percentages. All three cultivars are in the 2018 trial, so the score covers the whole bag."
+  },
+  {
+    "id": "blue-resilience",
+    "name": "Blue Resilience",
+    "manufacturer": "Twin City Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool"],
+    "url": "https://twincityseed.com/product/blue-resilience-tall-fescue-kentucky-bluegrass-mixture/",
+    "companyUrl": "https://twincityseed.com",
+    "profile": "Fescue plus bluegrass",
+    "summary": "The five Resilience II fescues at 18% each plus 10% bluegrass, added because bluegrass takes ice cover better.",
+    "buyHint": "Twin City Seed direct in 5, 10, 25, and 50 lb bags.",
+    "components": [
+      { "name": "Daybreak", "cultivarId": "daybreak", "percent": 18 },
+      { "name": "4th Millennium SRP", "cultivarId": "4th-millennium-srp", "percent": 18 },
+      { "name": "Titan GLX", "cultivarId": "titan-glx", "percent": 18 },
+      { "name": "Xanadu", "cultivarId": "xanadu", "percent": 18 },
+      { "name": "Expanse", "cultivarId": "expanse", "percent": 18 },
+      { "name": "Blue Gem Kentucky bluegrass", "cultivarId": "blue-gem", "percent": 10 }
+    ],
+    "notes": "The one mixture here scored end to end: the fescues come from the 2018 fescue trial and Blue Gem from the 2017 bluegrass trial, weighted by label percentage. 4th Millennium SRP is the only part sitting outside a trial we hold."
+  },
+  {
+    "id": "gci-tall-fescue",
+    "name": "GCI Turf Type Tall Fescue",
+    "manufacturer": "GCI Turf Academy",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://gciturfacademy.com/products/gci-turf-type-tall-fescue-grass-seed",
+    "companyUrl": "https://gciturfacademy.com",
+    "profile": "Blue-tag A-LIST three-way",
+    "summary": "Blue-tag certified three-way of A-LIST cultivars, sold at 0% weed seed and 0% other crop.",
+    "buyHint": "gciturfacademy.com in 10, 25, and 45 lb bags.",
+    "components": [
+      { "name": "Avenger III", "cultivarId": "avenger-iii", "percent": null },
+      { "name": "Firecracker G-LS", "cultivarId": "firecracker-g-ls", "percent": null },
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": null }
+    ],
+    "notes": "GCI names the cultivars but not bag percentages, so the score weights the three equally."
+  },
+  {
+    "id": "crown-jewel-elite",
+    "name": "Crown Jewel Elite",
+    "manufacturer": "Green Diamond",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://lawnsynergy.com/products/crown-jewel-elite-tall-fescue-grass-seed-50-lbs",
+    "companyUrl": "https://lawnsynergy.com",
+    "profile": "Poa-free four-way",
+    "summary": "Four-way tall fescue with the label printed on the page: 0% weed seed, 0% other crop, tested Poa free.",
+    "buyHint": "Lawn Synergy, 50 lb bags only.",
+    "components": [
+      { "name": "Spyder 2LS", "cultivarId": "spyder-2ls", "percent": 29.45 },
+      { "name": "Rendition RX", "cultivarId": "rendition-rx", "percent": 28.6 },
+      { "name": "Daybreak", "cultivarId": "daybreak", "percent": 25.65 },
+      { "name": "Honeymoon", "cultivarId": "honeymoon", "percent": 14.85 }
+    ],
+    "notes": "Label percentages as published. Rendition RX and Honeymoon aren’t in the 2018 trial, so the score leans on Spyder 2LS and Daybreak."
+  },
+  {
+    "id": "turf-saver-rtf",
+    "name": "Turf Saver RTF",
+    "manufacturer": "Barenbrug",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "pro",
+    "zones": ["cool", "transition"],
+    "url": "https://www.barusa.com/turf/products/turf-saver-rtf",
+    "companyUrl": "https://www.barusa.com",
+    "profile": "Self-repairing rhizomes",
+    "summary": "Barenbrug’s patented rhizomatous tall fescue, built to fill its own damaged spots instead of waiting on overseeding.",
+    "buyHint": "Barenbrug distributors, plus the ‘Buy Now Online’ link on their product page.",
+    "components": [
+      { "name": "Bonfire", "cultivarId": "bonfire", "percent": null },
+      { "name": "Zion", "cultivarId": "zion", "percent": null }
+    ],
+    "notes": "Barenbrug names Bonfire and Zion as the A-LIST varieties inside but doesn’t publish the full tag, so treat this score as covering the named portion."
+  },
+  {
+    "id": "titan-glx-straight",
+    "name": "Titan GLX",
+    "manufacturer": "Smith Seed Services",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://twincityseed.com/product/titan-glx-turf-type-tall-fescue/",
+    "companyUrl": "https://twincityseed.com",
+    "profile": "Single variety, gray leaf spot",
+    "summary": "Fifth-generation Titan sold as a straight variety, with gray leaf spot resistance added to the line.",
+    "buyHint": "Twin City Seed in 5–50 lb bags. Blue tag rides along only on the unopened 50 lb bag.",
+    "components": [
+      { "name": "Titan GLX", "cultivarId": "titan-glx", "percent": 100 }
+    ],
+    "notes": "One cultivar, so the score is that cultivar’s trial data with nothing averaged in."
+  },
+  {
+    "id": "xanadu-straight",
+    "name": "Xanadu",
+    "manufacturer": "Twin City Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://twincityseed.com/product/xanadu-turf-type-tall-fescue/",
+    "companyUrl": "https://twincityseed.com",
+    "profile": "Single variety, brown patch",
+    "summary": "Straight Xanadu — fine texture and dark color, bred toward brown patch resistance.",
+    "buyHint": "Twin City Seed in 5–50 lb bags.",
+    "components": [
+      { "name": "Xanadu", "cultivarId": "xanadu", "percent": 100 }
+    ],
+    "notes": "One cultivar, so the score is that cultivar’s trial data with nothing averaged in."
+  },
+  {
+    "id": "firecracker-straight",
+    "name": "Firecracker G-LS",
+    "manufacturer": "Mountain View Seeds",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://unitedseeds.com/products/firecracker-gls-tall-fescue",
+    "companyUrl": "https://unitedseeds.com",
+    "profile": "Single variety, lateral spread",
+    "summary": "Straight Firecracker G-LS, a Lateral Spread cultivar carrying gray leaf spot resistance.",
+    "buyHint": "United Seeds in 10, 25, and 50 lb bags.",
+    "components": [
+      { "name": "Firecracker G-LS", "cultivarId": "firecracker-g-ls", "percent": 100 }
+    ],
+    "notes": "One cultivar, so the score is that cultivar’s trial data with nothing averaged in."
+  },
+  {
+    "id": "bonfire-straight",
+    "name": "Bonfire",
+    "manufacturer": "Jacklin Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://unitedseeds.com/products/bonfire-tall-fescue",
+    "companyUrl": "https://unitedseeds.com",
+    "profile": "Single variety, seedling vigor",
+    "summary": "Straight Bonfire from the Jacklin line, sold on establishment speed and disease tolerance.",
+    "buyHint": "United Seeds in 10, 25, and 50 lb bags.",
+    "components": [
+      { "name": "Bonfire", "cultivarId": "bonfire", "percent": 100 }
+    ],
+    "notes": "Same cultivar Barenbrug names inside Turf Saver RTF, here as a straight bag."
+  },
+  {
+    "id": "double-dark-green",
+    "name": "Premium Double Dark Green",
+    "manufacturer": "MySoil",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://yardmastery.com/products/diy-premium-double-dark-green-turf-type-tall-fescue",
+    "companyUrl": "https://yardmastery.com",
+    "profile": "Three-way, dark color",
+    "summary": "Blue-tag certified three-way of Summer, Zion, and Bonfire, sold on color and striping.",
+    "buyHint": "Yard Mastery in 6, 12, 25, and 45 lb bags. The same bag also shows up under Lawn Care Nut, Golf Course Lawn Store, and MySoil’s own store.",
+    "components": [
+      { "name": "Summer", "cultivarId": "summer", "percent": null },
+      { "name": "Zion", "cultivarId": "zion", "percent": null },
+      { "name": "Bonfire", "cultivarId": "bonfire", "percent": null }
+    ],
+    "notes": "Cultivars named but not weighted, so the score splits them evenly. Summer sat out the 2018 trial; Zion and Bonfire carry the score."
+  },
+  {
+    "id": "gci-cool-blue",
+    "name": "Cool Blue",
+    "manufacturer": "GCI Turf Academy",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://yardmastery.com/products/gci-turf-cool-blue-turf-type-tall-fescue-kentucky-bluegrass-grass-seed",
+    "companyUrl": "https://yardmastery.com",
+    "profile": "Fescue plus bluegrass",
+    "summary": "85% tall fescue and 15% Kentucky bluegrass, blue-tag certified, with the bluegrass there to spread into thin spots.",
+    "buyHint": "Yard Mastery in 25 and 45 lb bags. GCI sells the same seed, but only the Yard Mastery listing names the bluegrass.",
+    "components": [
+      { "name": "Avenger III", "cultivarId": "avenger-iii", "percent": null },
+      { "name": "Firecracker G-LS", "cultivarId": "firecracker-g-ls", "percent": null },
+      { "name": "Titanium G-LS", "cultivarId": "titanium-g-ls", "percent": null },
+      { "name": "Midnight Kentucky bluegrass", "cultivarId": "midnight", "percent": null }
+    ],
+    "notes": "Every cultivar here sits in a trial we hold — the three fescues in the 2018 fescue test, Midnight in the 2017 bluegrass test. Only the 85/15 species split is published, not per-cultivar percentages, so the four score evenly."
+  },
+  {
+    "id": "landzie-tall-fescue",
+    "name": "Landzie Tall Fescue",
+    "manufacturer": "Landzie",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "specialty",
+    "zones": ["cool", "transition"],
+    "url": "https://landzie.com/product/landzie-tall-fescue-grass-seed-25lb/",
+    "companyUrl": "https://landzie.com",
+    "profile": "Low-water three-way",
+    "summary": "Three-way of GLX Aced, Saltillo, and Lifeguard, sold on all three carrying TWCA drought qualification.",
+    "buyHint": "Landzie direct in 25 lb bags.",
+    "components": [
+      { "name": "GLX Aced", "cultivarId": "glx-aced", "percent": null },
+      { "name": "Saltillo", "cultivarId": "saltillo", "percent": null },
+      { "name": "Lifeguard", "cultivarId": "lifeguard", "percent": null }
+    ],
+    "notes": "No percentages published, so the score splits them evenly. Saltillo isn’t in the 2018 trial; GLX Aced and Lifeguard carry the score."
+  },
+  {
+    "id": "merit-select",
+    "name": "Merit Select Lawn Mix",
+    "manufacturer": "Merit Seed",
+    "species": "tall_fescue",
+    "curated": true,
+    "channel": "pro",
+    "zones": ["cool", "transition"],
+    "url": "https://meritseed.com/product/merit-select-lawn-seed-mix/",
+    "companyUrl": "https://meritseed.com",
+    "profile": "Midwest fescue mix",
+    "summary": "Three named fescues at 30% each plus 10% Kentucky bluegrass, from an Ohio seed house.",
+    "buyHint": "Merit Seed in 6, 12, 25, and 50 lb bags.",
+    "components": [
+      { "name": "Lafayette", "cultivarId": "lafayette", "percent": 30 },
+      { "name": "Providence", "cultivarId": "providence", "percent": 30 },
+      { "name": "Wichita", "cultivarId": "wichita", "percent": 30 }
+    ],
+    "notes": "The label’s last 10% is listed as plain Kentucky bluegrass with no cultivar named, so it isn’t shown or scored. Wichita sat out the 2018 trial, leaving Lafayette and Providence to carry the score."
+  },
+  {
     "id": "kentucky-31",
     "name": "Kentucky 31",
     "manufacturer": "Pennington",
@@ -196,5 +452,119 @@
       { "name": "Sun Queen", "cultivarId": "sun-queen", "percent": 100 }
     ],
     "notes": "Single named cultivar from the bg19 trial."
+  },
+  {
+    "id": "tiftuf",
+    "name": "TifTuf Bermudagrass",
+    "manufacturer": "The Turfgrass Group",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://www.supersod.com/products/tiftuf-bermuda-sod-1",
+    "companyUrl": "https://www.supersod.com",
+    "profile": "Drought-tested hybrid",
+    "summary": "University of Georgia hybrid known for holding up on less water. In the 2019 NTEP bermuda trial.",
+    "buyHint": "Super-Sod by the roll or pallet in AL, GA, NC, SC, TN, and TX; elsewhere use The Turfgrass Group’s grower finder.",
+    "components": [
+      { "name": "TifTuf", "cultivarId": "tiftuf", "percent": 100 }
+    ],
+    "notes": "Patented hybrid — it is licensed sod and sprigs only, so no seed exists to compare against. Trial data is real either way."
+  },
+  {
+    "id": "tahoma-31",
+    "name": "Tahoma 31 Bermudagrass",
+    "manufacturer": "Sod Production Services",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://riversideturf.com/our-grass-varieties/tahoma-31-bermudagrass/",
+    "companyUrl": "https://riversideturf.com",
+    "profile": "Cold-hardy hybrid",
+    "summary": "Oklahoma State hybrid bred for cold tolerance, which pushes bermuda further north than most. In the 2019 NTEP bermuda trial.",
+    "buyHint": "Licensed sod farms — Riverside Turf ships and does farm pickup in Virginia.",
+    "components": [
+      { "name": "Tahoma 31", "cultivarId": "tahoma-31", "percent": 100 }
+    ],
+    "notes": "Licensed vegetative variety: sod or large-batch sprigs only, no plugs and no seed."
+  },
+  {
+    "id": "latitude-36",
+    "name": "Latitude 36 Bermudagrass",
+    "manufacturer": "Sod Solutions",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://sodsolutions.com/shop/plugs/bermudagrass-plugs/latitude-36-bermudagrass-grass-plugs/",
+    "companyUrl": "https://sodsolutions.com",
+    "profile": "Cold-hardy hybrid",
+    "summary": "Oklahoma State hybrid sold for southern and transition-zone lawns. In the 2019 NTEP bermuda trial.",
+    "buyHint": "Plug trays ship direct from Sod Solutions; full lawns come from their licensed sod farms.",
+    "components": [
+      { "name": "Latitude 36", "cultivarId": "latitude-36", "percent": 100 }
+    ],
+    "notes": "Vegetative only — plugs for patching, sod for a whole lawn. There is no Latitude 36 seed."
+  },
+  {
+    "id": "celebration",
+    "name": "Celebration Bermudagrass",
+    "manufacturer": "Sod Solutions",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm"],
+    "url": "https://sodsolutions.com/shop/plugs/bermudagrass-plugs/celebration-bermudagrass-plugs/",
+    "companyUrl": "https://sodsolutions.com",
+    "profile": "Shade-tolerant hybrid",
+    "summary": "Blue-green hybrid with better shade tolerance than most bermudas. Ran in the 2019 NTEP trial as Celebration Hybrid.",
+    "buyHint": "Plug trays direct from Sod Solutions, or a licensed farm for pallets.",
+    "components": [
+      { "name": "Celebration", "cultivarId": "celebration-hybrid", "percent": 100 }
+    ],
+    "notes": "Vegetative only. Entered the trial under its breeding code MSB-1017, which is why the tables show ‘Celebration Hybrid’."
+  },
+  {
+    "id": "tifway-419",
+    "name": "Tifway 419 Bermudagrass",
+    "manufacturer": "Super-Sod",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://www.supersod.com/products/tifway-419-bermuda-sod-grass",
+    "companyUrl": "https://www.supersod.com",
+    "profile": "The old standard",
+    "summary": "The fine-textured Tifton hybrid that has been the default sod bermuda for decades, and the trial’s standard entry.",
+    "buyHint": "Most sod farms in the South carry it. Super-Sod sells it in AL, NC, SC, and TN.",
+    "components": [
+      { "name": "Tifway", "cultivarId": "tifway", "percent": 100 }
+    ],
+    "notes": "Hybrid, so it can’t be grown from seed. Useful as the baseline the newer hybrids are measured against."
+  },
+  {
+    "id": "astro",
+    "name": "Astro Bermudagrass",
+    "manufacturer": "Heartland Sod Farm",
+    "species": "bermudagrass",
+    "curated": true,
+    "channel": "specialty",
+    "form": "sod",
+    "zones": ["warm", "transition"],
+    "url": "https://heartlandsodfarm.com/astro-bermuda/",
+    "companyUrl": "https://heartlandsodfarm.com",
+    "profile": "Oklahoma lawn standard",
+    "summary": "Medium-bladed hybrid that is the everyday lawn bermuda across Oklahoma. In the 2019 NTEP bermuda trial.",
+    "buyHint": "Oklahoma sod farms by the pallet — Heartland in El Reno, Green Acre around Tulsa.",
+    "components": [
+      { "name": "Astro", "cultivarId": "astro", "percent": 100 }
+    ],
+    "notes": "Sod only. The trial lists Astro as a vegetative entry sponsored by the Oklahoma Sod Producers Association."
   }
 ]
