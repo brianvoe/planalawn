@@ -14,7 +14,8 @@ declare global {
   }
 }
 
-const GOOGLE_ANALYTICS_ID = 'G-RGP6ZH42QM'
+/** Must match the id configured in index.html, or route changes go nowhere. */
+const GOOGLE_ANALYTICS_ID = 'G-28VS9N8XDM'
 
 /** Send a page view (call on each router navigation; GA4 records it via config with page_path). */
 export function trackPageView(path: string): void {
