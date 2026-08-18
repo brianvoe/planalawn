@@ -10,8 +10,9 @@ import type { Offer, Retailer } from '../data/commerce/offers'
  * site never claims a commercial relationship it does not have.
  */
 const PARTNER_TAGS: Partial<Record<Retailer, string>> = {
-  // Paste the Associates tracking ID here once the account is approved.
-  amazon: '',
+  // The Associates tracking ID for the amazon.com store. Public by nature —
+  // it rides in every affiliate URL — so it belongs in the repo, not an env var.
+  amazon: 'planalawn-20',
 }
 
 export const RETAILER_LABELS: Record<Retailer, string> = {
