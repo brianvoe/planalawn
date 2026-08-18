@@ -1,5 +1,5 @@
 """
-NTEP PDF → JSON ingest for Lawn Plan Nerd.
+NTEP PDF → JSON ingest for Plan a Lawn.
 
 Focuses on high-value homeowner metrics (not every ancillary table):
 - Transition / regional turf quality (incl. TN1 Knoxville when present)

@@ -270,7 +270,7 @@ export default {
     <div class="site-nav__inner container">
       <router-link class="site-nav__brand" to="/">
         <img class="site-nav__mark" src="/favicon.svg" alt="" width="28" height="28" />
-        Lawn Plan Nerd
+        Plan a Lawn
       </router-link>
 
       <button

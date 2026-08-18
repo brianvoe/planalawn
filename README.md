@@ -1,10 +1,10 @@
-# Lawn Plan Nerd
+# Plan a Lawn
 
 **A personal lawn operations planner for homeowners across the US.**
 
-Live at [lawnplannerd.com](https://lawnplannerd.com).
+Live at [planalawn.com](https://planalawn.com).
 
-Lawn Plan Nerd helps you answer the questions that actually matter when you’re working on grass:
+Plan a Lawn helps you answer the questions that actually matter when you’re working on grass:
 
 - **What should I do next** for my lawn, given the season and soil temperature?
 - **How much product** do I put down (seed, fert, peat, topsoil, herbicide)?
@@ -175,7 +175,7 @@ npm run build
 
 1. In the repo: **Settings → Pages → Source → Deploy from a branch**
 2. Branch `master`, folder `/docs`
-3. Custom domain is `lawnplannerd.com` (`public/CNAME`, copied into `docs/`). Point DNS at GitHub Pages, then add the same domain under **Settings → Pages**.
+3. Custom domain is `planalawn.com` (`public/CNAME`, copied into `docs/`). Point DNS at GitHub Pages, then add the same domain under **Settings → Pages**.
 
 Commit the `docs/` output after you build so Pages can serve it. The build also copies `index.html` to `404.html` so Vue Router history URLs work.
 

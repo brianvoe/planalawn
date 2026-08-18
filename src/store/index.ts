@@ -212,7 +212,7 @@ export default createStore<RootState>({
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `lawn-plan-nerd-${new Date().toISOString().slice(0, 10)}.json`
+      a.download = `plan-a-lawn-${new Date().toISOString().slice(0, 10)}.json`
       a.click()
       URL.revokeObjectURL(url)
     },

@@ -80,9 +80,9 @@ export default {
   <footer class="site-footer on-dark">
     <div class="site-footer__inner container">
       <div class="site-footer__brand">
-        <strong>Lawn Plan Nerd</strong>
+        <strong>Plan a Lawn</strong>
         <p>Soil-temp-aware lawn timing, rates and seed data for the US.</p>
-        <p class="site-footer__domain">lawnplannerd.com</p>
+        <p class="site-footer__domain">planalawn.com</p>
       </div>
 
       <nav class="site-footer__nav" aria-label="Footer">

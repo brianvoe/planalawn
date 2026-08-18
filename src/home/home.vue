@@ -1280,7 +1280,7 @@ export default {
         <div class="hero__copy">
           <h1 v-reveal class="wordmark">
             <img class="wordmark__mark" src="/favicon.svg" alt="" width="64" height="64" />
-            <span class="wordmark__text">Lawn Plan Nerd</span>
+            <span class="wordmark__text">Plan a Lawn</span>
           </h1>
           <p v-reveal="1" class="hero__tagline">
             Lawn timing, product rates and seed picks — from the soil temperature at your address.
