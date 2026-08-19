@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# /settings carries a noindex tag instead of being disallowed here. A crawler
+# told not to fetch a page never sees the tag on it.
+
+Sitemap: https://planalawn.com/sitemap.xml

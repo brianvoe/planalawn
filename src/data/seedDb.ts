@@ -1,4 +1,4 @@
-import curatedBlends from '../data/blends/curated.json'
+import { curatedBlendList } from './blends/curated'
 import species from '../data/ntep/species.json'
 import sites from '../data/ntep/sites.json'
 import { normalizeKey } from '../services/suitability'
@@ -105,7 +105,7 @@ const everyCultivar = loadedSpecies.flatMap((s) => cultivarsForSpecies(s.id))
 export const ntepMeta = ntepMetaForSpecies()
 export const allCultivars = cultivarList
 export const cultivarCount = everyCultivar.length
-export const curatedBlendList = curatedBlends as Blend[]
+export { curatedBlendList }
 export const speciesList = speciesListData
 export const ntepSites = sites as Record<string, NtepSite>
 

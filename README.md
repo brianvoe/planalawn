@@ -170,19 +170,45 @@ Location (GPS or ZIP), lawn size, equipment defaults, import/export backup.
 
 ```bash
 npm install
-npm run dev    # http://localhost:5050
-npm run build
+npm run dev             # http://localhost:5050
+npm run build           # bundle, then prerender every route
+npm run preview:static  # serve docs/ the way GitHub Pages does
 ```
+
+### Build output
+
+`npm run build` runs in two halves:
+
+| Step | Does |
+|---|---|
+| `build:app` | `vite build` → bundle into `docs/`, copy `index.html` to `404.html` |
+| `build:static` | render each route in headless Chromium into its own HTML file, then write `sitemap.xml` |
+
+Prerendering means a crawler gets finished markup with the right title and
+description on the first byte, instead of an empty `<div id="app">`. Routes come
+from `src/router/paths.ts`, which also feeds the sitemap so the two cannot
+drift. Pages are written flat — `/tasks/mowing` is `docs/tasks/mowing.html` —
+because GitHub Pages serves that at the extensionless URL, while a directory
+would redirect to a trailing slash the canonical tags do not use.
+
+The rendered HTML is the fresh-browser view: no saved location, no lawn size.
+The app replaces it with whatever that visitor has in `localStorage` as soon as
+it boots.
+
+URLs that cannot be known at build time — the `user-` blends someone typed in
+from a bag tag — fall back to `404.html`, which is the plain SPA shell.
+
+`npm run preview:static` exists because `vite preview` rewrites every unmatched
+path to `index.html`, so a broken deep link looks fine there and 404s in
+production.
 
 ### GitHub Pages
 
-`npm run build` writes the static site to `docs/` (GitHub Pages **Deploy from a branch → `/docs`**).
+Built and deployed by `.github/workflows/deploy.yml` on every push to `master`;
+`docs/` is gitignored.
 
-1. In the repo: **Settings → Pages → Source → Deploy from a branch**
-2. Branch `master`, folder `/docs`
-3. Custom domain is `planalawn.com` (`public/CNAME`, copied into `docs/`). Point DNS at GitHub Pages, then add the same domain under **Settings → Pages**.
-
-Commit the `docs/` output after you build so Pages can serve it. The build also copies `index.html` to `404.html` so Vue Router history URLs work.
+1. In the repo: **Settings → Pages → Source → GitHub Actions**
+2. Custom domain is `planalawn.com` (`public/CNAME`, copied into `docs/`). Point DNS at GitHub Pages, then add the same domain under **Settings → Pages**.
 
 ### NTEP ingest
 

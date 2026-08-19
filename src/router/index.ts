@@ -1,12 +1,21 @@
 import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 import { trackPageView } from '../analytics'
-import Home from '../home/home.vue'
-import Calendar from '../calendar/calendar.vue'
-import Tasks from '../tasks/tasks.vue'
-import TaskDetail from '../tasks/task-detail.vue'
-import Seeds from '../seeds/seeds.vue'
-import Apply from '../apply/apply.vue'
-import Settings from '../settings/settings.vue'
+import { applyPageMeta } from './head'
+import { metaForRoute } from './meta'
+/**
+ * Routes load their own chunk on demand.
+ *
+ * The seed pages carry the NTEP trial data with them, which is most of what
+ * this app weighs. Importing them statically meant every visitor downloaded
+ * all of it to read a mowing playbook.
+ */
+const Home = () => import('../home/home.vue')
+const Calendar = () => import('../calendar/calendar.vue')
+const Tasks = () => import('../tasks/tasks.vue')
+const TaskDetail = () => import('../tasks/task-detail.vue')
+const Seeds = () => import('../seeds/seeds.vue')
+const Apply = () => import('../apply/apply.vue')
+const Settings = () => import('../settings/settings.vue')
 
 function seedsProps(route: RouteLocationNormalized) {
   const raw = route.params.id
@@ -71,6 +80,9 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
+  // Before the page view, so GA4 reads the title of the page we just moved to
+  // rather than the one we left.
+  applyPageMeta(metaForRoute(String(to.name ?? ''), to.params), to.path)
   trackPageView(to.fullPath)
 })
 

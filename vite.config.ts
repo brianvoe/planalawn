@@ -3,11 +3,19 @@ import path from 'node:path'
 import { defineConfig, type Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-/** GitHub Pages has no SPA rewrite — unknown paths serve 404.html. */
+/**
+ * GitHub Pages has no SPA rewrite — unknown paths serve 404.html.
+ *
+ * Build-only, and not merely as an optimisation. Vite fires closeBundle when a
+ * dev or preview server shuts down too, and the prerender and sitemap scripts
+ * both start one after the HTML has been generated. Left applying to serve,
+ * this would copy a finished page over the shell every time one of them exited.
+ */
 function githubPagesSpa(): Plugin {
   let outDir = 'docs'
   return {
     name: 'github-pages-spa',
+    apply: 'build',
     configResolved(config) {
       outDir = config.build.outDir
     },

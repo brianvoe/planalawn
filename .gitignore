@@ -1,6 +1,11 @@
 node_modules
 dist
 .DS_Store
+
+# Build output. GitHub Actions builds and deploys this now, so committing it
+# would only add sixty generated HTML files to every diff.
+docs/
+
 *.local
 .npmrc
 .vscode/*

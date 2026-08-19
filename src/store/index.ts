@@ -1,7 +1,7 @@
 import './types'
 import { createStore } from 'vuex'
 import { loadPersistedState, localStoragePlugin, clearPersistedState } from './persist'
-import { curatedBlendList } from '../data/seedDb'
+import { curatedBlendList } from '../data/blends/curated'
 import { resolvedGrassType } from '../data/grass'
 import { resolveVolumeUnits } from '../services/units'
 import type {
