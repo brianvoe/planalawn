@@ -15,6 +15,7 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest run src/data/blends/catalog.test.ts src/data/commerce/offers.test.ts src/data/products.test.ts src/data/species.test.ts src/services/apply.test.ts src/services/plan.test.ts src/services/units.test.ts src/tasks/task-ui.test.ts",
     "test:links": "vitest run src/data/blends/links.test.ts",
+    "fonts": "node scripts/fonts.mjs",
     "logo": "npm run logo:mark && npm run logo:icons",
     "logo:mark": "node scripts/logo-mark.mjs",
     "logo:icons": ".venv/bin/python scripts/logo-icons.py",

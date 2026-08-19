@@ -29,11 +29,21 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Three tufts of grass growing on a mound of soil." />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      The two cuts that draw the first screen: body text and the headings above
+      it. Started here so they are in flight before the stylesheet that asks for
+      them has been parsed. The @font-face rules are generated into the bundle
+      by scripts/fonts.mjs; these files are served unhashed so this stays true
+      across builds. crossorigin is required on font preloads even same-origin,
+      and without it the file is fetched a second time.
+    -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-latin.woff2" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/plus-jakarta-sans-latin.woff2"
+      crossorigin
     />
 
     <!-- analytics:start -->

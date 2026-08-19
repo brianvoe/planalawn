@@ -30,16 +30,10 @@ const OUT = 'docs'
  *
  * Analytics is the one that matters: without this, every build fires a page
  * view for all sixty-odd routes and the reports fill up with traffic nobody
- * made. The fonts are blocked only because waiting on them is time spent for
- * markup that does not change.
+ * made. The weather call is blocked because its answer depends on a location
+ * the rendering browser does not have.
  */
-const BLOCKED = [
-  'googletagmanager.com',
-  'google-analytics.com',
-  'fonts.googleapis.com',
-  'fonts.gstatic.com',
-  'api.open-meteo.com',
-]
+const BLOCKED = ['googletagmanager.com', 'google-analytics.com', 'api.open-meteo.com']
 
 /**
  * `/tasks/mowing` is written as tasks/mowing.html, not tasks/mowing/index.html.
