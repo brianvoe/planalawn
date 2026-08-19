@@ -23,6 +23,10 @@ export default {
 
 <style lang="scss">
 .site-nav {
+  /* Shared, because the collapsing menu has to pay one of these back. */
+  --nav-row-gap: 0.65rem;
+  --nav-pad-y: 0.7rem;
+
   position: sticky;
   top: 0;
   z-index: 50;
@@ -35,8 +39,8 @@ export default {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 0.65rem 1rem;
-    padding-block: 0.7rem;
+    gap: var(--nav-row-gap) 1rem;
+    padding-block: var(--nav-pad-y);
 
     /* Held to the token the home hero measures itself against. */
     @media (min-width: 1024px) {
@@ -47,6 +51,25 @@ export default {
     @media (max-width: 1023px) {
       display: flex;
       flex-wrap: wrap;
+
+      /*
+       * A shut menu is still a flex line, and a flex line is still charged the
+       * bar's row gap even at zero height — a negative margin on it won't help,
+       * because the line clamps to nothing and the gap is levied either way.
+       * So the bar pays for it out of its own bottom padding while shut, and
+       * puts it back as the menu opens. The space below the last thing on
+       * screen is the same either way; only the row it belongs to changes.
+       */
+      padding-bottom: calc(var(--nav-pad-y) - var(--nav-row-gap));
+      transition: padding-bottom 0.24s ease;
+
+      &--open {
+        padding-bottom: var(--nav-pad-y);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
   }
 
@@ -77,6 +100,46 @@ export default {
     @media (max-width: 1023px) {
       display: inline-flex;
       margin-left: auto;
+    }
+  }
+
+  /*
+   * A wrapper that exists only so the menu can open on narrow screens.
+   *
+   * Sliding to a height nobody has measured needs a parent track to run from
+   * 0fr to 1fr — the display: none it replaces cannot be transitioned at all,
+   * and a max-height guess either clips a longer menu or coasts through empty
+   * space on a short one. On desktop it steps out of the layout entirely, so
+   * the list stays a direct grid item of the bar and keeps its centre column.
+   */
+  .site-nav__panel {
+    display: contents;
+
+    @media (max-width: 1023px) {
+      display: grid;
+      grid-template-rows: 0fr;
+      width: 100%;
+      order: 3;
+      transition: grid-template-rows 0.24s ease;
+
+      &.open {
+        grid-template-rows: 1fr;
+      }
+
+      /* Written from the panel rather than as a parent selector on the list:
+         nesting it there would compile the bar's own class into the middle of
+         the chain, giving a selector nothing can match. */
+      &.open .site-nav__links {
+        opacity: 1;
+        visibility: visible;
+        transition:
+          opacity 0.24s ease,
+          visibility 0s;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
   }
 
@@ -114,12 +177,30 @@ export default {
     }
 
     @media (max-width: 1023px) {
-      display: none;
+      display: grid;
       width: 100%;
-      order: 3;
+      min-height: 0;
+      /* What the collapsing row actually crops. */
+      overflow: hidden;
+      opacity: 0;
+      /* Held back until the slide finishes, so a closed menu cannot be tabbed
+         into — the row has no height but its links are still in the document. */
+      visibility: hidden;
+      transition:
+        opacity 0.18s ease,
+        visibility 0s linear 0.24s;
 
-      &.open {
-        display: grid;
+      /* Centred, and each row is its own line, so the pill on the page you're
+         on hugs its label the way it does in the desktop bar. */
+      li {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Breathing room before the bar's edge, carried by the last row rather
+         than as padding on the list: padding sits outside the box the row
+         collapses, so it would leave a sliver of the menu behind when shut. */
+      li:last-child {
         padding-bottom: 0.35rem;
       }
 
@@ -153,10 +234,11 @@ export default {
         color 0.15s ease,
         background 0.15s ease;
 
+      /* Wider than the desktop pill to keep the tap target honest now that it
+         hugs the label instead of spanning the row. */
       @media (max-width: 1023px) {
-        display: block;
         margin: 0.2rem 0;
-        padding: 0.45rem 0.7rem;
+        padding: 0.5rem 1.3rem;
       }
 
       &:hover {
@@ -267,7 +349,7 @@ export default {
 
 <template>
   <nav class="site-nav" aria-label="Primary">
-    <div class="site-nav__inner container">
+    <div class="site-nav__inner container" :class="{ 'site-nav__inner--open': menuOpen }">
       <router-link class="site-nav__brand" to="/">
         <img class="site-nav__mark" src="/favicon.svg" alt="" width="28" height="28" />
         Plan a Lawn
@@ -284,20 +366,22 @@ export default {
         {{ menuOpen ? 'Close' : 'Menu' }}
       </button>
 
-      <ul id="primary-menu" class="site-nav__links" :class="{ open: menuOpen }">
-        <li>
-          <router-link to="/calendar" @click="menuOpen = false">Calendar</router-link>
-        </li>
-        <li>
-          <router-link to="/tasks" @click="menuOpen = false">Tasks</router-link>
-        </li>
-        <li>
-          <router-link to="/seeds" @click="menuOpen = false">Seeds</router-link>
-        </li>
-        <li>
-          <router-link to="/calculate" @click="menuOpen = false">Calculate</router-link>
-        </li>
-      </ul>
+      <div class="site-nav__panel" :class="{ open: menuOpen }">
+        <ul id="primary-menu" class="site-nav__links">
+          <li>
+            <router-link to="/calendar" @click="menuOpen = false">Calendar</router-link>
+          </li>
+          <li>
+            <router-link to="/tasks" @click="menuOpen = false">Tasks</router-link>
+          </li>
+          <li>
+            <router-link to="/seeds" @click="menuOpen = false">Seeds</router-link>
+          </li>
+          <li>
+            <router-link to="/calculate" @click="menuOpen = false">Calculate</router-link>
+          </li>
+        </ul>
+      </div>
 
       <div class="site-nav__meta">
         <router-link to="/settings" class="site-nav__lawn" aria-label="My lawn">
