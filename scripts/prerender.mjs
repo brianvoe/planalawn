@@ -54,6 +54,26 @@ function fileFor(route) {
   return path.join(OUT, route === '/' ? 'index.html' : `${route}.html`)
 }
 
+/**
+ * Takes the preview server's origin back out of the markup.
+ *
+ * When a lazy route's chunk loads, Vite adds a <link> for its stylesheet and
+ * its script, and those come out absolute against whichever host served the
+ * page. Captured as-is, every deployed page tells the visitor's browser to
+ * fetch http://localhost:4180/assets/… — which is not merely wrong but blocked,
+ * being plain http on an https page. The route's stylesheet then never arrives
+ * until the app boots and asks for it properly, so the first paint is missing
+ * its styles and the page jumps when they land.
+ *
+ * Emptying the origin leaves them root-absolute, which is what the same links
+ * look like when Vite writes them itself.
+ */
+function scrub(html, origin) {
+  return html.replaceAll(origin, '')
+}
+
+const LOOPBACK = /https?:\/\/(?:localhost|127\.0\.0\.1|\[::1\])(?::\d+)?/g
+
 async function main() {
   const { PRERENDER_PATHS } = await loadPaths()
 
@@ -95,7 +115,7 @@ async function main() {
       continue
     }
 
-    const html = await page.content()
+    const html = scrub(await page.content(), origin)
     captured.set(route, html)
     console.log(`${route.padEnd(34)} ${String(Math.round(html.length / 1024)).padStart(4)} KB  ${title}`)
   }
@@ -106,6 +126,19 @@ async function main() {
   if (failures.length) {
     console.error(`\nprerender failed on ${failures.length} route(s):`)
     failures.forEach(f => console.error(`  ${f}`))
+    process.exit(1)
+  }
+
+  // A build that quietly points the public site at a machine that is not on the
+  // internet is worse than one that stops, and this is not visible by reading
+  // the page — it looks fine until you check where the styles came from.
+  const leaked = [...captured]
+    .map(([route, html]) => [route, [...new Set(html.match(LOOPBACK) ?? [])]])
+    .filter(([, hits]) => hits.length)
+
+  if (leaked.length) {
+    console.error(`\n${leaked.length} route(s) still reference the build machine:`)
+    leaked.forEach(([route, hits]) => console.error(`  ${route}  ${hits.join(' ')}`))
     process.exit(1)
   }
 
