@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 import { trackPageView } from '../analytics'
-import { applyPageMeta } from './head'
+import { applyPageMeta, applyPageSchema } from './head'
 import { metaForRoute } from './meta'
+import { schemaForRoute } from './schema'
 /**
  * Routes load their own chunk on demand.
  *
@@ -82,7 +83,9 @@ const router = createRouter({
 router.afterEach((to) => {
   // Before the page view, so GA4 reads the title of the page we just moved to
   // rather than the one we left.
-  applyPageMeta(metaForRoute(String(to.name ?? ''), to.params), to.path)
+  const name = String(to.name ?? '')
+  applyPageMeta(metaForRoute(name, to.params), to.path)
+  applyPageSchema(schemaForRoute(name, to.params))
   trackPageView(to.fullPath)
 })
 

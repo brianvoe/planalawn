@@ -48,3 +48,24 @@ export function applyPageMeta(page: PageMeta, path: string): void {
   // tag says nothing, and removing it would mean re-adding it on the way back.
   meta('name', 'robots', page.noindex ? 'noindex, follow' : 'index, follow')
 }
+
+const SCHEMA_SELECTOR = 'script[type="application/ld+json"]'
+
+/**
+ * Unlike the meta tags, this one is removed when a page has nothing to say.
+ * An empty or stale ld+json block is a parse error to anything reading it,
+ * so leaving the tag behind to be refilled later is not an option here.
+ */
+export function applyPageSchema(nodes: Record<string, unknown>[]): void {
+  if (!nodes.length) {
+    document.head.querySelector(SCHEMA_SELECTOR)?.remove()
+    return
+  }
+
+  const script = element(
+    'script',
+    SCHEMA_SELECTOR,
+    el => (el.type = 'application/ld+json'),
+  )
+  script.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': nodes })
+}
