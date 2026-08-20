@@ -52,12 +52,17 @@ export default {
     background: color-mix(in srgb, var(--color-primary-soft) 70%, var(--color-primary) 12%);
   }
 
+  /*
+   * The two muted spans stop at 0.9. Below that the green fails contrast
+   * against the chip it sits on: 0.85 measures 4.45 and 0.75 measures 3.62,
+   * where 12px text needs 4.5. The label reads as secondary either way.
+   */
   .soil-chip__place {
     max-width: 7rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    opacity: 0.85;
+    opacity: 0.9;
   }
 
   .soil-chip__temp {
@@ -69,7 +74,7 @@ export default {
     font-size: 0.65rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    opacity: 0.75;
+    opacity: 0.9;
   }
 }
 </style>

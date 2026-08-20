@@ -6,6 +6,16 @@ name: Deploy to Pages
 on:
   push:
     branches: [master]
+
+  # The prerendered pages are a snapshot of a particular day: the home page
+  # names the current month and counts the jobs open in it, and the calendar
+  # marks where the season has got to. Built only on push, that snapshot is as
+  # old as the last commit — a quiet September would leave every visitor and
+  # every crawler reading August until the app booted and corrected it.
+  # Rebuilding each morning keeps the static copy no more than a day behind.
+  schedule:
+    - cron: '17 9 * * *'
+
   workflow_dispatch:
 
 permissions:
